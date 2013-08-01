@@ -8,10 +8,10 @@
   background-attachment: scroll;
   background-clip: border-box;
   background-color: #323232;
-  background-image: url("/images/heroBack.jpg");
+  background-image: url("/images/P1010366sp.jpg");
   background-origin: padding-box;
-  background-position: 0 0;
-  background-repeat: repeat;
+  background-position: 0px -50px;
+  background-repeat: no-repeat;
   background-size: auto auto;
   margin: 0px;
   padding: 75px;
@@ -21,14 +21,16 @@
 #hero-inner {
   font-family: 'Cantarell', sans-serif;
   margin-top: 50px;
+  color: #FFFFFF;
+  text-shadow: -2px -2px 2px #000000, 2px 2px 2px #000000;
 }
 #hero-inner h1 {
   font-size: 60px;
 }
 #hero-inner em {
   font-style: normal;
-  color: #99CDE3;
-  text-shadow: -1px -1px 2px #FAFAFA, 1px 1px 2px #070707;
+  color: #FFFFFF;
+  text-shadow: -2px -2px 2px #000000, 2px 2px 2px #000000;
 }
 body {
   background-attachment: scroll;
@@ -61,7 +63,7 @@ article h1 {
 }
 #front-wrapper {
   background-color: #F1F1F1;
-  margin-top: 500px;
+  margin-top: 300px;
   border-top-color: white;
   border-top-style: solid;
   border-top-width: 1px;
@@ -80,14 +82,14 @@ article h1 {
 }
 .wrapper_single {
   background-color: #F1F1F1;
-  background-image: url("/images/heroBack.jpg");
+  background-image: url("/images/P1010366sp.jpg");
   background-attachment: fixed;
   padding-top: 75px;
   padding-bottom: 75px;
   border-bottom-color: white;
   border-bottom-style: solid;
   border-bottom-width: 1px;
-  min-height: 500px;
+  min-height: 550px;
 }
 .single_article {
   margin: 25px;
@@ -143,12 +145,14 @@ article h1 {
 }
 dt .social_icon {
   margin-left: 5px;
+  margin-right: 5px;
 }
 .dl-horizontal dd {
   margin-bottom: 5px;
 }
 .dl-horizontal dt {
   margin-bottom: 5px;
+  margin-right: 5px;
 }
 .article-format {
   padding: 2em;
@@ -215,11 +219,15 @@ table code {
   word-break: initial;
 }
 .tooltip.top.home {
-  margin-top: -503px;
+  margin-top: -303px;
 }
 p {
   line-height: 1.7;
   margin: 0 0 20px;
+}
+#about_blurb {
+  line-height: 1.4;
+  font-size: 14px;
 }
 .recent_posts {
   list-style-type: disc;
