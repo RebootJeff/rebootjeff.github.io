@@ -13,10 +13,23 @@
   <div class="span3">
     {% include custom/asides/instagram.html %}
   </div>
+  <!-- DISABLE Twitter and Found On footer widgets for now
   <div class="span4">
+    {% if false %}
     {% include asides/twitter.html %}
+    {% endif %}
   </div>
   <div class="span2">
+    {% if false %}
     {% include custom/asides/found_on.html %}
+    {% endif %}
+  -->
+  <div class="span6" id="footer_notes">
+    <p>
+      <a href="{{ root_url }}/">{{ site.title }}</a> - Copyright &copy; {{ site.time | date: "%Y" }} - {{ site.author }}
+    </p>
+    <p>
+      Powered by <a href="http://octopress.org/">Octopress</a>. Made pretty with Foxslide theme by <a href="http://www.AdrianArtiles.com">Adrian Artiles</a>. Theme heavily tweaked by me. It took forever T.T
+    </p>
   </div>
 </div>

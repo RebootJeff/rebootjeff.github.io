@@ -1,4 +1,17 @@
-<h2>Found On</h2>
+<h2>Navigation</h2>
+<table id="nav_on_home" width="100%"><tr width="100%">
+	<td width="50%">
+		<a href="{{ root_url }}/projects">About</a>
+		<a href="{{ root_url }}/projects">Projects</a>
+		<a href="{{ root_url }}/videos">Videos</a>
+	</td>
+	<td width="50%">
+		<a href="{{ root_url }}/blog/archives">Archives</a>
+		<br/><a href="{{ site.subscribe_rss }}" rel="subscribe-rss" title="subscribe via RSS">RSS</a>
+	</td>
+</tr></table>
+
+<h2>Find Me On</h2>
 {% if site.github_user %}
 <a href="https://github.com/{{site.github_user}}/" rel="tooltip" title="Github"><img class="social_icon" title="Github" alt="github icon" src="{{ root_url }}/images/glyphicons_381_github.png"></a>
 {% endif %}
