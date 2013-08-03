@@ -21,8 +21,6 @@ var length = hello.length;
 // This is a block of javascript code
 ```
 
-![](http://ubuntugenius.files.wordpress.com/2012/06/pdf-open-with.png?w=500)
-
 in line `code` here
 
 **I wish block quotes, code blocks, etc. didn't look so dark and blue. How can I change these colors/styles?**
