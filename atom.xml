@@ -4,7 +4,7 @@
   <title><![CDATA[Jeff: Rebooted]]></title>
   <link href="http://RebootJeff.github.io/atom.xml" rel="self"/>
   <link href="http://RebootJeff.github.io/"/>
-  <updated>2013-08-02T18:51:29-07:00</updated>
+  <updated>2013-08-03T01:10:29-07:00</updated>
   <id>http://RebootJeff.github.io/</id>
   <author>
     <name><![CDATA[Jeff Lee]]></name>
@@ -18,7 +18,31 @@
     <link href="http://RebootJeff.github.io/blog/2013/08/02/ready-set-octopress/"/>
     <updated>2013-08-02T17:40:00-07:00</updated>
     <id>http://RebootJeff.github.io/blog/2013/08/02/ready-set-octopress</id>
-    <content type="html"><![CDATA[
+    <content type="html"><![CDATA[<h1>Test</h1>
+
+<pre><code>1. This is a list.
+    a. Hello
+    b. Bye
+</code></pre>
+
+<blockquote><p>block quote
+stuff</p></blockquote>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">hello</span> <span class="o">=</span> <span class="s2">&quot;hello&quot;</span><span class="p">;</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">length</span> <span class="o">=</span> <span class="nx">hello</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>
+</span><span class='line'><span class="c1">// This is a block of javascript code</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><img src="http://ubuntugenius.files.wordpress.com/2012/06/pdf-open-with.png?w=500" alt="" /></p>
+
+<p>in line <code>code</code> here</p>
+
+<p><strong>I wish block quotes, code blocks, etc. didn&rsquo;t look so dark and blue. How can I change these colors/styles?</strong>
+Changing from rdiscount to redcarpet markdown engine has helped with block quotes. The list and code block styles still clash with my blog&rsquo;s style. I tried to use the redcarpet2_markdown.rb plugin, but it causes <code>rake generate</code> to throw a fit.</p>
 ]]></content>
   </entry>
   
