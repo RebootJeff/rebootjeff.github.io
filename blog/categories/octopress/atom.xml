@@ -4,7 +4,7 @@
   <title><![CDATA[Category: octopress | Jeff: Rebooted]]></title>
   <link href="http://RebootJeff.github.io/blog/categories/octopress/atom.xml" rel="self"/>
   <link href="http://RebootJeff.github.io/"/>
-  <updated>2013-08-03T01:20:00-07:00</updated>
+  <updated>2013-08-03T01:23:00-07:00</updated>
   <id>http://RebootJeff.github.io/</id>
   <author>
     <name><![CDATA[Jeff Lee]]></name>
@@ -33,8 +33,6 @@ var hello = "hello";
 var length = hello.length;
 // This is a block of javascript code
 </code></p>
-
-<p><img src="http://ubuntugenius.files.wordpress.com/2012/06/pdf-open-with.png?w=500" alt="" /></p>
 
 <p>in line <code>code</code> here</p>
 
