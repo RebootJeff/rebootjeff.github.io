@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: octopress, | Jeff: Rebooted]]></title>
+  <link href="http://www.rebootjeff.com/blog/categories/octopress/atom.xml" rel="self"/>
+  <link href="http://www.rebootjeff.com/"/>
+  <updated>2013-08-02T18:17:24-07:00</updated>
+  <id>http://www.rebootjeff.com/</id>
+  <author>
+    <name><![CDATA[Jeff Lee]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Ready. Set. Octopress.]]></title>
+    <link href="http://www.rebootjeff.com/blog/2013/08/02/ready-set-octopress/"/>
+    <updated>2013-08-02T17:40:00-07:00</updated>
+    <id>http://www.rebootjeff.com/blog/2013/08/02/ready-set-octopress</id>
+    <content type="html"><![CDATA[
+]]></content>
+  </entry>
+  
+</feed>
