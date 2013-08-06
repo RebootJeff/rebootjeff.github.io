@@ -7,7 +7,7 @@ categories: octopress blogging about markdown
 ---
 
 #Here We Go
-Dammit. I've made so many tweaks and adjustments, but I still haven't gotten this blog looking quite right. I'm about to get geeky, so [jump down](#whats-next).
+Dammit. I've made so many tweaks and adjustments, but I still haven't gotten this blog looking quite right. I'm about to get nerdy, so [jump down](#whats-next) if you have no sympathy for programmer growing pains.
 
 FYI, I'm using [Octopress](http://octopress.org) to create this blog, [github](https://github.com/RebootJeff) to host, and I write posts/pages in a little language called [Markdown](http://daringfireball.net/projects/Markdown/). Maybe I should've just created a wordpress blog, but I admit I fell victim to Octopress's tagline: "A blogging framework for hackers."
 
