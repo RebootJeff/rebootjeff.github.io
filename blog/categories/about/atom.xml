@@ -4,7 +4,7 @@
   <title><![CDATA[Category: about | Jeff: Rebooted]]></title>
   <link href="http://RebootJeff.github.io/blog/categories/about/atom.xml" rel="self"/>
   <link href="http://RebootJeff.github.io/"/>
-  <updated>2013-08-05T22:19:12-07:00</updated>
+  <updated>2013-08-06T00:06:57-07:00</updated>
   <id>http://RebootJeff.github.io/</id>
   <author>
     <name><![CDATA[Jeff Lee]]></name>
@@ -20,7 +20,7 @@
     <id>http://RebootJeff.github.io/blog/2013/08/02/ready-set-octopress</id>
     <content type="html"><![CDATA[<h1>Here We Go</h1>
 
-<p>Dammit. I&rsquo;ve made so many tweaks and adjustments, but I still haven&rsquo;t gotten this blog looking quite right. I&rsquo;m about to get geeky, so <a href="#whats-next">jump down</a>.</p>
+<p>Dammit. I&rsquo;ve made so many tweaks and adjustments, but I still haven&rsquo;t gotten this blog looking quite right. I&rsquo;m about to get nerdy, so <a href="#whats-next">jump down</a> if you have no sympathy for programmer growing pains.</p>
 
 <p>FYI, I&rsquo;m using <a href="http://octopress.org">Octopress</a> to create this blog, <a href="https://github.com/RebootJeff">github</a> to host, and I write posts/pages in a little language called <a href="http://daringfireball.net/projects/Markdown/">Markdown</a>. Maybe I should&rsquo;ve just created a wordpress blog, but I admit I fell victim to Octopress&rsquo;s tagline: &ldquo;A blogging framework for hackers.&rdquo;</p>
 
