@@ -27,3 +27,13 @@ article.archive-article-format { box-shadow: none; padding: 0; }
 
 // Add a little horizontal space in dt elements
 .dl-horizontal dt { width: 135px; }
+
+// Green links
+a {
+  color: #26BB01;
+  text-decoration: none;
+}
+a:hover {
+  color: #229C04;
+  text-decoration: underline;
+}

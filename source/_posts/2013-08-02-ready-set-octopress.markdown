@@ -18,17 +18,24 @@ I began customizing this blog by adding a lovely Octopress theme. I then tweaked
 
 The customization process was tough because I had never seen a [Liquid](https://github.com/Shopify/liquid/wiki/Liquid-for-Designers) setup before. Also, I'm fairly new to git, Ruby, and the other bits involved in an Octopress-powered blog. I had to delete, re-install, and re-clone more times than I care to disclose.
 
-But I'm still not done. I still need to tweak the colors and the background image. I want a green theme because I think green is under-used. Unfortunately, it clashes with certain Markdown parts. I switched my blog's Markdown engine to [Redcarpet](https://github.com/vmg/redcarpet), but I still get gross code blocks and lists. I tried using [a plugin](https://github.com/nono/Jekyll-plugins/blob/master/redcarpet2_markdown.rb), but that threw errors during the `rake generation` process.
+But I'm still not done. I still need to tweak the colors and the background image. I want a green theme because I think green is under-used. Unfortunately, it clashes with certain Markdown parts. I switched my blog's Markdown engine to [Redcarpet](https://github.com/vmg/redcarpet), but I still get gross code blocks and lists. I tried using [a plugin](https://github.com/nono/Jekyll-plugins/blob/master/redcarpet2_markdown.rb), but that threw errors during the `rake generate` process. I tried [kramdown](http://blog.alestanis.com/2013/02/04/octopress-and-the-twilight-color-scheme/) with a sweet [CodeRay theme](https://github.com/danielpietzsch/CodeRay-GitHub-Theme). That setup completely ignored code blocks, block quotes, etc. I need help!
 
 Here are a few examples of the grossness I'm talking about:
 	1. Why is this list
 	2. such a clashy color?
+		a. Why does it have
+		b. a background anyway?
 and
 ```javascript
 if thisCodeBlock == "ugly" then{
 	console.log("dammit");
 }
 ```
+and
+>quote
+>>nested quote
+
+>These quotes actually aren't too gaudy.
 
 #TL;DR
 I'm whining about how difficult it can be to use a DIY path, but it's really helped me learn a lot. So it's all good.
