@@ -4,7 +4,7 @@
   <title><![CDATA[Category: blogging | Jeff: Rebooted]]></title>
   <link href="http://RebootJeff.github.io/blog/categories/blogging/atom.xml" rel="self"/>
   <link href="http://RebootJeff.github.io/"/>
-  <updated>2013-08-05T20:57:08-07:00</updated>
+  <updated>2013-08-05T22:19:12-07:00</updated>
   <id>http://RebootJeff.github.io/</id>
   <author>
     <name><![CDATA[Jeff Lee]]></name>
@@ -32,12 +32,14 @@
 
 <p>The customization process was tough because I had never seen a <a href="https://github.com/Shopify/liquid/wiki/Liquid-for-Designers">Liquid</a> setup before. Also, I&rsquo;m fairly new to git, Ruby, and the other bits involved in an Octopress-powered blog. I had to delete, re-install, and re-clone more times than I care to disclose.</p>
 
-<p>But I&rsquo;m still not done. I still need to tweak the colors and the background image. I want a green theme because I think green is under-used. Unfortunately, it clashes with certain Markdown parts. I switched my blog&rsquo;s Markdown engine to <a href="https://github.com/vmg/redcarpet">Redcarpet</a>, but I still get gross code blocks and lists. I tried using <a href="https://github.com/nono/Jekyll-plugins/blob/master/redcarpet2_markdown.rb">a plugin</a>, but that threw errors during the <code>rake generation</code> process.</p>
+<p>But I&rsquo;m still not done. I still need to tweak the colors and the background image. I want a green theme because I think green is under-used. Unfortunately, it clashes with certain Markdown parts. I switched my blog&rsquo;s Markdown engine to <a href="https://github.com/vmg/redcarpet">Redcarpet</a>, but I still get gross code blocks and lists. I tried using <a href="https://github.com/nono/Jekyll-plugins/blob/master/redcarpet2_markdown.rb">a plugin</a>, but that threw errors during the <code>rake generate</code> process. I tried <a href="http://blog.alestanis.com/2013/02/04/octopress-and-the-twilight-color-scheme/">kramdown</a> with a sweet <a href="https://github.com/danielpietzsch/CodeRay-GitHub-Theme">CodeRay theme</a>. That setup completely ignored code blocks, block quotes, etc. I need help!</p>
 
 <p>Here are a few examples of the grossness I&rsquo;m talking about:</p>
 
 <pre><code>1. Why is this list
 2. such a clashy color?
+    a. Why does it have
+    b. a background anyway?
 </code></pre>
 
 <p>and
@@ -48,7 +50,14 @@ if thisCodeBlock == &ldquo;ugly&rdquo; then{</p>
 </code></pre>
 
 <p>}
-```</p>
+```
+and</p>
+
+<blockquote><p>quote</p>
+
+<blockquote><p>nested quote</p></blockquote>
+
+<p>These quotes actually aren&rsquo;t too gaudy.</p></blockquote>
 
 <h1>TL;DR</h1>
 
