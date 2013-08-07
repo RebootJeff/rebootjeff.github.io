@@ -1,26 +1,22 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
-        <loc>http://RebootJeff.github.io/blog/2013/07/31/first-post/</loc>
-        <lastmod>2013-08-02T18:36:54-07:00</lastmod>
-    </url>
-    <url>
         <loc>http://RebootJeff.github.io/blog/2013/08/02/ready-set-octopress/</loc>
-        <lastmod>2013-08-06T17:07:14-07:00</lastmod>
+        <lastmod>2013-08-07T01:05:31-07:00</lastmod>
     </url>
     <url>
         <loc>
-            http://RebootJeff.github.io/blog/2013/08/06/video-by-me-wandering-around-bits-of-sf/
+            http://RebootJeff.github.io/blog/2013/08/06/video-by-me-sf-hill-are-good-for-video/
         </loc>
-        <lastmod>2013-08-07T00:36:43-07:00</lastmod>
+        <lastmod>2013-08-07T01:31:41-07:00</lastmod>
     </url>
     <url>
         <loc>http://RebootJeff.github.io/blog/archives/</loc>
-        <lastmod>2013-08-07T00:36:43-07:00</lastmod>
+        <lastmod>2013-08-07T01:31:41-07:00</lastmod>
     </url>
     <url>
         <loc>http://RebootJeff.github.io/</loc>
-        <lastmod>2013-08-07T00:36:43-07:00</lastmod>
+        <lastmod>2013-08-07T01:31:41-07:00</lastmod>
     </url>
     <url>
         <loc>http://RebootJeff.github.io/about/</loc>
@@ -28,6 +24,6 @@
     </url>
     <url>
         <loc>http://RebootJeff.github.io/projects/</loc>
-        <lastmod>2013-08-02T18:36:54-07:00</lastmod>
+        <lastmod>2013-08-07T01:36:37-07:00</lastmod>
     </url>
 </urlset>

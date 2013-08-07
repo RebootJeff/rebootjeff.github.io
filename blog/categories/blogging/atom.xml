@@ -4,7 +4,7 @@
   <title><![CDATA[Category: blogging | Jeff: Rebooted]]></title>
   <link href="http://RebootJeff.github.io/blog/categories/blogging/atom.xml" rel="self"/>
   <link href="http://RebootJeff.github.io/"/>
-  <updated>2013-08-07T00:53:34-07:00</updated>
+  <updated>2013-08-07T01:38:35-07:00</updated>
   <id>http://RebootJeff.github.io/</id>
   <author>
     <name><![CDATA[Jeff Lee]]></name>
@@ -18,7 +18,8 @@
     <link href="http://RebootJeff.github.io/blog/2013/08/02/ready-set-octopress/"/>
     <updated>2013-08-02T17:40:00-07:00</updated>
     <id>http://RebootJeff.github.io/blog/2013/08/02/ready-set-octopress</id>
-    <content type="html"><![CDATA[<p><em>Last updated: Aug 3rd, 2013</em></p>
+    <content type="html"><![CDATA[<p class="last-updated">Last updated: Aug 3rd, 2013</p>
+
 
 <h1>Here We Go</h1>
 
