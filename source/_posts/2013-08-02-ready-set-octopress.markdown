@@ -6,7 +6,7 @@ comments: true
 categories: octopress blogging about markdown
 ---
 
-_Last updated: Aug 3rd, 2013_
+<p class="last-updated">Last updated: Aug 3rd, 2013</p>
 
 #Here We Go
 Dammit. I've made so many tweaks and adjustments, but I still haven't gotten this blog looking quite right. I'm about to get nerdy, so [jump down](#whats-next) if you have no sympathy for programmer growing pains.
