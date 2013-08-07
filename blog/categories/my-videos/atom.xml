@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: my videos | Jeff: Rebooted]]></title>
+  <link href="http://RebootJeff.github.io/blog/categories/my-videos/atom.xml" rel="self"/>
+  <link href="http://RebootJeff.github.io/"/>
+  <updated>2013-08-06T23:56:50-07:00</updated>
+  <id>http://RebootJeff.github.io/</id>
+  <author>
+    <name><![CDATA[Jeff Lee]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[[Video by Me] Wandering Around Bits of SF]]></title>
+    <link href="http://RebootJeff.github.io/blog/2013/08/06/video-by-me-wandering-around-bits-of-sf/"/>
+    <updated>2013-08-06T23:14:00-07:00</updated>
+    <id>http://RebootJeff.github.io/blog/2013/08/06/video-by-me-wandering-around-bits-of-sf</id>
+    <content type="html"><![CDATA[<p><a href="https://vimeo.com/71790058"><img src="/images/stills/wandering_around_bits_of_SF.png" alt="video still" /></a></p>
+
+<h2>Link</h2>
+
+<p><a href="https://vimeo.com/71790058">https://vimeo.com/71790058</a></p>
+
+<h2>Description</h2>
+
+<p>Soon after I moved from the east coast, I set aside an afternoon to simply roam around downtown San Francisco. I was really excited to grab my crummy-yet-trusty point-and-shoot Panasonic Lumix TS-1, and just be a tourist.</p>
+
+<p>To my delight, I discovered that the hilly nature of the city lends itself to providing fantastic views. Also, being short helps me conquer hills.</p>
+
+<p>I compiled some of those views into a brief clip because I think I can do a better job of sharing vistas through my point-and-shoot camera&rsquo;s video recording than through my camera&rsquo;s photo capturing &hellip;and because I like adding music to visuals.</p>
+]]></content>
+  </entry>
+  
+</feed>

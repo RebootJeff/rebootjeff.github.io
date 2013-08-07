@@ -4,7 +4,7 @@
   <title><![CDATA[Category: blogging | Jeff: Rebooted]]></title>
   <link href="http://RebootJeff.github.io/blog/categories/blogging/atom.xml" rel="self"/>
   <link href="http://RebootJeff.github.io/"/>
-  <updated>2013-08-06T00:06:57-07:00</updated>
+  <updated>2013-08-06T23:56:50-07:00</updated>
   <id>http://RebootJeff.github.io/</id>
   <author>
     <name><![CDATA[Jeff Lee]]></name>
@@ -18,21 +18,23 @@
     <link href="http://RebootJeff.github.io/blog/2013/08/02/ready-set-octopress/"/>
     <updated>2013-08-02T17:40:00-07:00</updated>
     <id>http://RebootJeff.github.io/blog/2013/08/02/ready-set-octopress</id>
-    <content type="html"><![CDATA[<h1>Here We Go</h1>
+    <content type="html"><![CDATA[<p><em>Last updated: Aug 3rd, 2013</em></p>
+
+<h1>Here We Go</h1>
 
 <p>Dammit. I&rsquo;ve made so many tweaks and adjustments, but I still haven&rsquo;t gotten this blog looking quite right. I&rsquo;m about to get nerdy, so <a href="#whats-next">jump down</a> if you have no sympathy for programmer growing pains.</p>
 
-<p>FYI, I&rsquo;m using <a href="http://octopress.org">Octopress</a> to create this blog, <a href="https://github.com/RebootJeff">github</a> to host, and I write posts/pages in a little language called <a href="http://daringfireball.net/projects/Markdown/">Markdown</a>. Maybe I should&rsquo;ve just created a wordpress blog, but I admit I fell victim to Octopress&rsquo;s tagline: &ldquo;A blogging framework for hackers.&rdquo;</p>
+<p>FYI, I&rsquo;m using <a href="http://octopress.org">Octopress</a> to create this blog, <a href="https://github.com/RebootJeff">github</a> to host, and I write posts/pages in a little language called <a href="http://daringfireball.net/projects/Markdown/">Markdown</a>. Maybe I should&rsquo;ve just created a WordPress blog, but I admit I fell victim to Octopress&rsquo;s tagline: &ldquo;A blogging framework for hackers.&rdquo;</p>
 
-<p>Some of you non-tech geeks may raise an eyebrow at the term &ldquo;<a href="http://www.paulgraham.com/gba.html">hacker</a>,&rdquo; but it&rsquo;s really not as evil as you think. The word embodies a more jargon-y connotation as well as the archetype portrayed in the media. In this case, Octopress is appealing to the techy DIY folks who like to have a lot of control over their creations (even at the expense of convenience&hellip;as is definitely the case for me).</p>
+<p>Some of you non-tech geeks may raise an eyebrow at the term &ldquo;hacker,&rdquo; but it&rsquo;s really <a href="http://www.paulgraham.com/gba.html">not as evil as you think</a>. The word embodies a more jargon-y connotation as well as the archetype portrayed in the media. In this case, Octopress is appealing to the techy DIY folks who like to have a lot of control over their creations (even at the expense of convenience&hellip;as is definitely the case for me).</p>
 
 <h2>The Tweaks Never End</h2>
 
-<p>I began customizing this blog by adding a lovely Octopress theme. I then tweaked the hell out of it. You can compare and contrast by checking out the theme&rsquo;s <a href="http://www.adrianartiles.com/">original implementation</a>. Changes include changing the color scheme, the background image, the size of the hero (i.e., cover photo area), the Twitter widget, the footer, navigation links, etc.</p>
+<p>I began customizing this blog by adding a lovely Octopress theme. I then tweaked the hell out of it. You can compare and contrast by checking out the theme&rsquo;s <a href="http://www.adrianartiles.com/">original implementation</a>. My changes customized the color scheme, the background image, the size of the hero (i.e., cover photo area on the home page), the Twitter widget, the footer, navigation links, etc.</p>
 
 <p>The customization process was tough because I had never seen a <a href="https://github.com/Shopify/liquid/wiki/Liquid-for-Designers">Liquid</a> setup before. Also, I&rsquo;m fairly new to git, Ruby, and the other bits involved in an Octopress-powered blog. I had to delete, re-install, and re-clone more times than I care to disclose.</p>
 
-<p>But I&rsquo;m still not done. I still need to tweak the colors and the background image. I want a green theme because I think green is under-used. Unfortunately, it clashes with certain Markdown parts. I switched my blog&rsquo;s Markdown engine to <a href="https://github.com/vmg/redcarpet">Redcarpet</a>, but I still get gross code blocks and lists. I tried using <a href="https://github.com/nono/Jekyll-plugins/blob/master/redcarpet2_markdown.rb">a plugin</a>, but that threw errors during the <code>rake generate</code> process. I tried <a href="http://blog.alestanis.com/2013/02/04/octopress-and-the-twilight-color-scheme/">kramdown</a> with a sweet <a href="https://github.com/danielpietzsch/CodeRay-GitHub-Theme">CodeRay theme</a>. That setup completely ignored code blocks, block quotes, etc. I need help!</p>
+<p>But I&rsquo;m still not done. I still need to tweak the colors and the background image. I want a green theme because I think green is under-used. Unfortunately, it clashes with certain Markdown parts. I switched my blog&rsquo;s Markdown engine to <a href="https://github.com/vmg/redcarpet">Redcarpet</a>, but I still get gross code blocks and lists. I tried using <a href="https://github.com/nono/Jekyll-plugins/blob/master/redcarpet2_markdown.rb">a Redcarpet plugin</a>, but that threw errors during the <code>rake generate</code> process. I tried <a href="http://blog.alestanis.com/2013/02/04/octopress-and-the-twilight-color-scheme/">kramdown</a> with a sweet <a href="https://github.com/danielpietzsch/CodeRay-GitHub-Theme">CodeRay theme</a>, but that setup completely ignored code blocks, block quotes, etc. I need help!</p>
 
 <p>Here are a few examples of the grossness I&rsquo;m talking about:</p>
 
