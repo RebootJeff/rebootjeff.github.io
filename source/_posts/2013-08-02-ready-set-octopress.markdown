@@ -9,7 +9,7 @@ categories: octopress blogging about markdown
 <p class="last-updated">Last updated: Aug 3rd, 2013</p>
 
 #Here We Go
-Dammit. I've made so many tweaks and adjustments, but I still haven't gotten this blog looking quite right. I'm about to get nerdy, so [jump down](#whats-next) if you have no sympathy for programmer growing pains.
+Dammit. I've made so many tweaks and adjustments, but I still haven't gotten this blog looking quite right. I'm about to get nerdy, so [jump down](#jump_whats-next) if you have no sympathy for programmer growing pains.
 
 FYI, I'm using [Octopress](http://octopress.org) to create this blog, [github](https://github.com/RebootJeff) to host, and I write posts/pages in a little language called [Markdown](http://daringfireball.net/projects/Markdown/). Maybe I should've just created a WordPress blog, but I admit I fell victim to Octopress's tagline: "A blogging framework for hackers."
 
@@ -42,7 +42,7 @@ and
 #TL;DR
 I'm whining about how difficult it can be to use a DIY path, but it's really helped me learn a lot. So it's all good.
 
-##What's Next?<a id="whats-next"></a>
+##What's Next?<a id="jump_whats-next"></a>
 So what can you expect on this blog other than sentences that probably shouldn't start with the word "so"?
 
 ###Past

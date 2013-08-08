@@ -37,3 +37,17 @@ a:hover {
   color: #229C04;
   text-decoration: underline;
 }
+
+// New class for "last updated: blah blah blah" text
+.last-updated {
+  color: gray;
+  font-size: 12px;
+  font-style: italic;
+}
+
+// Change top nav bar to flat GUI
+.navbar-inner {
+	border-radius: 0px;
+	border: 0px;
+	background-image: none;
+}
