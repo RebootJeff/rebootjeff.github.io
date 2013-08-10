@@ -41,6 +41,6 @@ _link to blog post that explains how I customized this blog_
 
 **Goals:** master the art of Sublime Text
 
-**Random Awesome Photographer:** [Ella Ling](http://www.ellaling.com). I love the fact that she is a white woman with an Asian-sounding last name. She is a walking anti-stereotype. Oh, and she takes nice tennis photographs.
+**Random Awesome Photographer:** [Ella Ling](http://www.ellaling.com).
 
 ##To Do List<a id="jump_to-do"></a>
