@@ -38,6 +38,21 @@ a:hover {
   text-decoration: underline;
 }
 
+// my basic p
+p {
+  font-size: 14px;
+  line-height: 1.4;
+  margin-bottom: 14px;
+}
+
+// my added classes, IDs, etc.
+.about_blurb {
+  line-height: 1.3;
+  font-size: 14px;
+}
+#footer_notes{
+  margin-top: 15px;
+}
 // New class for "last updated: blah blah blah" text
 .last-updated {
   color: gray;
