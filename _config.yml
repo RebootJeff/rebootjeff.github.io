@@ -33,12 +33,19 @@ destination: public
 plugins: plugins
 code_dir: downloads/code
 category_dir: blog/categories
-markdown: rdiscount
-rdiscount:
-  extensions:
-    - autolink
-    - footnotes
-    - smart
+# markdown: rdiscount
+# rdiscount:
+#   extensions:
+#     - autolink
+#     - footnotes
+#     - smart
+markdown: kramdown
+kramdown:
+  auto_ids: true
+  use_coderay: true
+  coderay:
+    coderay_line_numbers: inline
+    coderay_css: class
 
 pygments: false # default python pygments have been replaced by pygments.rb
 

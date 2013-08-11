@@ -6,6 +6,9 @@ group :development do
 
   gem 'rdiscount', '~> 2.0.7'
   
+  gem 'kramdown'
+  gem 'coderay'
+
   gem 'pygments.rb', '~> 0.3.4'
   gem 'RedCloth', '~> 4.2.9'
   gem 'haml', '~> 3.1.7'

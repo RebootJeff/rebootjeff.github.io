@@ -28,6 +28,23 @@ article.archive-article-format { box-shadow: none; padding: 0; }
 // Add a little horizontal space in dt elements
 .dl-horizontal dt { width: 135px; }
 
+// For coderay from http://blog.codebykat.com/2013/05/23/gorgeous-octopress-codeblocks-with-coderay/
+@import "coderay-github";
+/* overrides of the lousy styles from _syntax.scss */
+.CodeRay pre {
+  background: none;
+  color: #000;
+  /* added from http://html5devgal.com/blog/2013/06/08/octopress-toc-and-coderay-codeblocks/*/
+  overflow: auto;
+  white-space: pre;
+  word-wrap: break-word;
+  word-break: normal;
+}
+/* fixes issue where the whole line wouldn't get colored in a diff */
+.CodeRay span.insert, .CodeRay span.change, .CodeRay span.delete {
+        width: auto;
+}
+
 // Green links
 a {
   color: #26BB01;
@@ -38,11 +55,32 @@ a:hover {
   text-decoration: underline;
 }
 
-// my basic p
-p {
+// my basics
+.entry-content p {
   font-size: 14px;
   line-height: 1.4;
   margin-bottom: 14px;
+}
+.entry-content h1 {
+  text-align: center;
+  margin-top: 12px;
+}
+.entry-content h1:after {
+  // modified from http://css-tricks.com/examples/hrs/
+  content: " ";
+  display: block;
+  height: 1px;
+  margin: 6px 0px 6px 0px;
+  background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+  background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+  background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+  background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+}
+.entry-content h3, h4, h5, h6 {
+  margin: 0px 0px 0px 0px;
+}
+.entry-content ul li, .entry-content ol li {
+  padding-bottom: 0px;
 }
 
 // my added classes, IDs, etc.
@@ -65,4 +103,16 @@ p {
 	border-radius: 0px;
 	border: 0px;
 	background-image: none;
+}
+
+// Get rid of styling for lists
+pre {
+  background: none;
+  color: #000;
+  margin: 0px 0px 8px 0px;
+  padding: 0px 0px 0px 0px;
+  border: 0px;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
 }
