@@ -16,7 +16,8 @@ _insert blurb here_
 1. [My Mission](#my-mission)
 2. [About the blog](#about-this-blog)
 3. [Fun Facts](#fun-facts)
-4. [To Do List](#to-do)
+4. [Goals](#goals)
+5. [To Do List](#to-do)
 
 ##My Mission<a id="my-mission"></a>
 _blurb about moving cross-country and starting a new career_
@@ -25,11 +26,11 @@ _blurb about moving cross-country and starting a new career_
 If you're wondering how I put together this blog, check out [my first post](/blog/2013/08/02/ready-set-octopress/) and any posts tagged with the "[blog customization](/blog/categories/blog-customization/)" category.
 
 ##Fun Facts<a id="fun-facts"></a>
-![Bastion OST cover art](http://pending)
+![Bastion OST cover art](/images/about/bastion_OST_cover_sp.jpg)
 
 **Current Theme Song:** "Reboot the Mission" by The Wallflowers (too obvious?)
 
-![Picture of blue car](http://pending)
+![blue car](/images/about/autocross_sp.jpg)
 
 **Favorite Color:** not green actually
 
@@ -39,7 +40,8 @@ If you're wondering how I put together this blog, check out [my first post](/blo
 
 ![pending](http://pending)
 
-**Goals:** master the art of Sublime Text
+##Goals
+- master the art of Sublime Text
 
 **Random Awesome Photographer:** [Ella Ling](http://www.ellaling.com).
 
