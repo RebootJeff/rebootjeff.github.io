@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: blog customization | Jeff: Rebooted]]></title>
+  <link href="http://RebootJeff.github.io/blog/categories/blog-customization/atom.xml" rel="self"/>
+  <link href="http://RebootJeff.github.io/"/>
+  <updated>2013-08-16T12:18:09-07:00</updated>
+  <id>http://RebootJeff.github.io/</id>
+  <author>
+    <name><![CDATA[Jeff Lee]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[New Awesomeness Added: Auto HR after H1]]></title>
+    <link href="http://RebootJeff.github.io/blog/2013/08/15/auto-hr-after-h1/"/>
+    <updated>2013-08-15T12:02:00-07:00</updated>
+    <id>http://RebootJeff.github.io/blog/2013/08/15/auto-hr-after-h1</id>
+    <content type="html"><![CDATA[<p>I wasn’t happy with the style of my standard <code>&lt;h1&gt;</code> header. I wanted to spice things up. After some aimless browsing, I learned that there is an <code>:after</code> selector in CSS. Inspired by this new selector, I wanted to find a way to add an <code>&lt;hr/&gt;</code> element “after” my <code>&lt;h1&gt;</code> headers. </p>
+
+<h1 id="check-out-this-sweet-hr-dude">Check Out This Sweet HR, Dude</h1>
+
+<p>Apparently, it doesn’t quite work the way I expected, but that’s ok because I eventually found <a href="http://css-tricks.com/examples/hrs/">this sweet compilation of horizontal rules</a>!</p>
+
+<p>I entered the following CSS code into my <strong>sass/custom/_styles.scss</strong> file:</p>
+
+<div><div class="CodeRay">
+  <div class="code"><pre><span class="class">.entry-content</span> <span class="type">h1</span> {
+  <span class="key">text-align</span>: <span class="value">center</span>;
+  <span class="key">margin-top</span>: <span class="float">12px</span>;
+}
+<span class="class">.entry-content</span> <span class="type">h1</span><span class="pseudo-class">:after</span> {
+  <span class="key">content</span>: <span class="string"><span class="delimiter">&quot;</span><span class="content"> </span><span class="delimiter">&quot;</span></span>;
+  <span class="key">display</span>: <span class="value">block</span>;
+  <span class="key">height</span>: <span class="float">1px</span>;
+  <span class="key">margin</span>: <span class="float">6px</span> <span class="float">0px</span> <span class="float">6px</span> <span class="float">0px</span>;
+  <span class="key">background-image</span>: <span class="error">-</span><span class="error">w</span><span class="error">e</span><span class="error">b</span><span class="error">k</span><span class="error">i</span><span class="error">t</span><span class="error">-</span><span class="error">l</span><span class="error">i</span><span class="error">n</span><span class="error">e</span><span class="error">a</span><span class="error">r</span><span class="error">-</span><span class="error">g</span><span class="error">r</span><span class="error">a</span><span class="error">d</span><span class="error">i</span><span class="error">e</span><span class="error">n</span><span class="error">t</span>(<span class="value">left</span>, <span class="color">rgba(0,0,0,0)</span>, <span class="color">rgba(0,0,0,0.75)</span>, <span class="color">rgba(0,0,0,0)</span>); 
+  <span class="key">background-image</span>:    <span class="error">-</span><span class="error">m</span><span class="error">o</span><span class="error">z</span><span class="error">-</span><span class="error">l</span><span class="error">i</span><span class="error">n</span><span class="error">e</span><span class="error">a</span><span class="error">r</span><span class="error">-</span><span class="error">g</span><span class="error">r</span><span class="error">a</span><span class="error">d</span><span class="error">i</span><span class="error">e</span><span class="error">n</span><span class="error">t</span>(<span class="value">left</span>, <span class="color">rgba(0,0,0,0)</span>, <span class="color">rgba(0,0,0,0.75)</span>, <span class="color">rgba(0,0,0,0)</span>); 
+  <span class="key">background-image</span>:     <span class="error">-</span><span class="error">m</span><span class="error">s</span><span class="error">-</span><span class="error">l</span><span class="error">i</span><span class="error">n</span><span class="error">e</span><span class="error">a</span><span class="error">r</span><span class="error">-</span><span class="error">g</span><span class="error">r</span><span class="error">a</span><span class="error">d</span><span class="error">i</span><span class="error">e</span><span class="error">n</span><span class="error">t</span>(<span class="value">left</span>, <span class="color">rgba(0,0,0,0)</span>, <span class="color">rgba(0,0,0,0.75)</span>, <span class="color">rgba(0,0,0,0)</span>); 
+  <span class="key">background-image</span>:      <span class="error">-</span><span class="error">o</span><span class="error">-</span><span class="error">l</span><span class="error">i</span><span class="error">n</span><span class="error">e</span><span class="error">a</span><span class="error">r</span><span class="error">-</span><span class="error">g</span><span class="error">r</span><span class="error">a</span><span class="error">d</span><span class="error">i</span><span class="error">e</span><span class="error">n</span><span class="error">t</span>(<span class="value">left</span>, <span class="color">rgba(0,0,0,0)</span>, <span class="color">rgba(0,0,0,0.75)</span>, <span class="color">rgba(0,0,0,0)</span>); 
+}
+</pre></div>
+</div>
+</div>
+
+<p>So instead of adding <code>&lt;hr/&gt;</code>s after my <code>&lt;h1&gt;</code>s, I added gradients inside of very thin background images. It’s more complicated than what I had originally envisioned, but it looks way nicer.</p>
+
+<p>Unfortunately, in the process of writing this blog post, I discovered that my codeblocks (powered by CodeRay) aren’t as responsive as I had hoped. I mentioned my CodeRay configuration in <a href="/blog/2013/08/02/ready-set-octopress/#update-aug-10-2013">my first post</a>. The configuration involves picking a codeblock format Octopress <strong>_config.yml</strong> file.</p>
+
+<p>I chose <code>coderay_line_numbers: table</code> at first, because I want line numbers, and I want them to be separated from the code. The problem is that CodeRay codeblock tables are apparently unresponsive to browser size. Consequently, the codeblocks were wider than the <code>&lt;div&gt;</code>s that contained them whenever they were viewed on a smartphone or even on a PC looking at this blog’s front page. The front page automatically narrows my posts quite a bit, and that made the codeblock tables very unhappy. It was very annoying.</p>
+
+<p>I haven’t found a true solution despite diving into the CSS. All the relevant CSS selectors already have <code>width: 100%</code> so I don’t know what else to do. I experimented with some <code>overflow</code> properties, but to no avail. For now, I have resorted to turning off line numbers entirely. Dammit.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Ready. Set. Octopress.]]></title>
+    <link href="http://RebootJeff.github.io/blog/2013/08/02/ready-set-octopress/"/>
+    <updated>2013-08-02T17:40:00-07:00</updated>
+    <id>http://RebootJeff.github.io/blog/2013/08/02/ready-set-octopress</id>
+    <content type="html"><![CDATA[<p class="last-updated">Last updated: Aug 10th, 2013</p>
+
+<h1 id="here-we-go">Here We Go</h1>
+<p>Dammit. I’ve made so many tweaks and adjustments, but I still haven’t gotten this blog looking quite right. I’m about to get nerdy, so <a href="#whats-next">jump down</a> if you have no sympathy for programmer growing pains.</p>
+
+<p>FYI, I’m using <a href="http://octopress.org">Octopress</a> to create this blog, <a href="https://github.com/RebootJeff">github</a> to host, and I write posts/pages in a little language called <a href="http://daringfireball.net/projects/Markdown/">Markdown</a>. Maybe I should’ve just created a WordPress blog, but I admit I fell victim to Octopress’s tagline: “A blogging framework for hackers.”</p>
+
+<p>Some of you non-tech geeks may raise an eyebrow at the term “hacker,” but it’s really <a href="http://www.paulgraham.com/gba.html">not as evil as you think</a>. The word embodies a more jargon-y connotation as well as the archetype portrayed in the media. In this case, Octopress is appealing to the techy DIY folks who like to have a lot of control over their creations (even at the expense of convenience…as is definitely the case for me).</p>
+
+<h2 id="the-tweaks-never-end">The Tweaks Never End</h2>
+<p>I began customizing this blog by adding a lovely Octopress theme. I then tweaked the hell out of it. You can compare and contrast by checking out the theme’s <a href="http://www.adrianartiles.com/">original implementation</a>. My changes customized the color scheme, the background image, the size of the hero (i.e., cover photo area on the home page), the Twitter widget, the footer, navigation links, etc.</p>
+
+<p>The customization process was tough because I had never seen a <a href="https://github.com/Shopify/liquid/wiki/Liquid-for-Designers">Liquid</a> setup before. Also, I’m fairly new to git, Ruby, and the other bits involved in an Octopress-powered blog. I had to delete, re-install, and re-clone more times than I care to disclose.</p>
+
+<p><del>But I’m still not done. I still need to tweak the colors and the background image. I want a green theme because I think green is under-used. Unfortunately, it clashes with certain Markdown parts. I switched my blog’s Markdown engine to <a href="https://github.com/vmg/redcarpet">Redcarpet</a>, but I still get gross code blocks and lists. I tried using <a href="https://github.com/nono/Jekyll-plugins/blob/master/redcarpet2_markdown.rb">a Redcarpet plugin</a>, but that threw errors during the <code>rake generate</code> process. I tried <a href="http://blog.alestanis.com/2013/02/04/octopress-and-the-twilight-color-scheme/">kramdown</a> with a sweet <a href="https://github.com/danielpietzsch/CodeRay-GitHub-Theme">CodeRay theme</a>, but that setup completely ignored code blocks, block quotes, etc. I need help!</del></p>
+
+<h3 id="update-aug-10-2013">Update! (Aug 10, 2013)</h3>
+<p>I used <a href="http://html5devgal.com/blog/2013/06/08/octopress-toc-and-coderay-codeblocks/">HTML5 Dev Gal</a>’s helpful instructions and links to finally implement the alliterative combo of Kramdown and CodeRay. I also realized how to add custom CSS to specifically address lists created via the Markdown engine.</p>
+
+<p>So hooray! Lists and Code blocks are no longer given a ridiculous dark blue background! And why were lists given a background anyway?</p>
+
+<p>Sadly, <a href="http://kramdown.rubyforge.org/converter/html.html#toc">automatic TOCs</a> don’t seem to work. I also still need to figure out how to add autolinking, which works in stock Octopress, but once modified to use kramdown, shit’s broken?</p>
+
+<h1 id="tldr">TL;DR</h1>
+<p>I’m whining about how difficult it can be to use a DIY path, but it’s really helped me learn a lot. So it’s all good.</p>
+
+<h2 id="whats-next">What’s Next?</h2>
+<p>So what can you expect on this blog other than sentences that probably shouldn’t start with the word “so”?</p>
+
+<h3 id="past">Past</h3>
+<ul>
+  <li>Difficulties of my cross-country move</li>
+</ul>
+
+<h3 id="present">Present</h3>
+<ul>
+  <li>Chronicles of my career change</li>
+  <li>Short reviews</li>
+  <li>Compilations of cool links I’ve found</li>
+</ul>
+
+<h3 id="future">Future</h3>
+<ul>
+  <li>My goals, targets, milestones</li>
+  <li>My thoughts on the future of tech, cars, gaming, music, tennis, and more</li>
+</ul>
+]]></content>
+  </entry>
+  
+</feed>

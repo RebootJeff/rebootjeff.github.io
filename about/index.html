@@ -13,10 +13,8 @@
   
     
   
-  <meta name="description" content="Proper About Me page is still under construction. I am ~~Iron Man~~ Jeff
-insert blurb here List of Contents
-1. [My Mission](#jump_my-mission)
-2. [ &hellip;">
+  <meta name="description" content="Proper About Me page is still under construction. I am Iron Man Jeff
+insert blurb here List of Contents My Mission About the blog Fun Facts Goals To &hellip;">
   
   <!-- http://t.co/dKP3o1e -->
   <meta name="HandheldFriendly" content="True">
@@ -32,10 +30,8 @@ insert blurb here List of Contents
   <meta name="og:type" content="website" />
   <meta name="og:site_name" content="Jeff: Rebooted" />
   <meta name="og:title" content="about" />
-  <meta name="og:description" content="Proper About Me page is still under construction. I am ~~Iron Man~~ Jeff
-insert blurb here List of Contents
-1. [My Mission](#jump_my-mission)
-2. [ &hellip;" />
+  <meta name="og:description" content="Proper About Me page is still under construction. I am Iron Man Jeff
+insert blurb here List of Contents My Mission About the blog Fun Facts Goals To &hellip;" />
   <meta name="og:url" content="http://RebootJeff.github.io/about/index.html"/>
   <meta name="url" content="http://RebootJeff.github.io/about/index.html">
   
@@ -55,7 +51,7 @@ insert blurb here List of Contents
       <li><a href="/">Home</a></li>
       <!-- BEGIN custom nav here because importing custom/navigation.html at the bottom (by default) shows up looking weird -->
       <li><a href="/about">About</a></li>
-      <li><a href="/projects">Projects</a></li>
+      <li><a href="/portfolio">Portfolio</a></li>
       <li><a href="/blog/categories/my-media">Media</a></li>
       <li><a href="/blog/archives">Archives</a></li>
     </ul>
@@ -71,7 +67,7 @@ insert blurb here List of Contents
       </fieldset>
     </form>
       
-    
+    <!-- I have customized the navigation.html file OUTSIDE of the custom folder because the part I wanted to customize comes BEFORE the `include` statement that invokes the custom/navigation.html file (aka the file you're reading now). -->
   </div>
 </div>
 </nav>
@@ -99,28 +95,30 @@ insert blurb here List of Contents
         
         <p><strong>Proper <em>About Me</em> page is still under construction.</strong></p>
 
-<h1 id="i-am-iron-man-jeff">I am ~~Iron Man~~ Jeff</h1>
+<h1 id="i-am-deliron-mandel-jeff">I am <del>Iron Man</del> Jeff</h1>
 <p><em>insert blurb here</em></p>
 
 <h2 id="list-of-contents">List of Contents</h2>
-<pre><code>1. [My Mission](#jump_my-mission)
-2. [About the blog](#jump_about-this-blog)
-3. [Fun Facts](#jump_fun-facts)
-4. [To Do List](#jump_to-do)
-</code></pre>
+<ol>
+  <li><a href="#my-mission">My Mission</a></li>
+  <li><a href="#about-this-blog">About the blog</a></li>
+  <li><a href="#fun-facts">Fun Facts</a></li>
+  <li><a href="#goals">Goals</a></li>
+  <li><a href="#to-do">To Do List</a></li>
+</ol>
 
-<h2 id="my-missiona-idjumpmy-missiona">My Mission<a id="jump_my-mission"></a></h2>
+<h2 id="my-missiona-idmy-missiona">My Mission<a id="my-mission"></a></h2>
 <p><em>blurb about moving cross-country and starting a new career</em></p>
 
-<h2 id="about-this-bloga-idjumpabout-this-bloga">About This Blog<a id="jump_about-this-blog"></a></h2>
-<p><em>link to blog post that explains how I customized this blog</em></p>
+<h2 id="about-this-bloga-idabout-this-bloga">About This Blog<a id="about-this-blog"></a></h2>
+<p>If you’re wondering how I put together this blog, check out <a href="/blog/2013/08/02/ready-set-octopress/">my first post</a> and any posts tagged with the “<a href="/blog/categories/blog-customization/">blog customization</a>” category.</p>
 
-<h2 id="fun-factsa-idjumpfun-factsa">Fun Facts<a id="jump_fun-facts"></a></h2>
-<p><img src="http://pending" alt="Bastion OST cover art" /></p>
+<h2 id="fun-factsa-idfun-factsa">Fun Facts<a id="fun-facts"></a></h2>
+<p><img src="/images/about/bastion_OST_cover_sp.jpg" alt="Bastion OST cover art" /></p>
 
 <p><strong>Current Theme Song:</strong> “Reboot the Mission” by The Wallflowers (too obvious?)</p>
 
-<p><img src="http://pending" alt="Picture of blue car" /></p>
+<p><img src="/images/about/autocross_sp.jpg" alt="blue car" /></p>
 
 <p><strong>Favorite Color:</strong> not green actually</p>
 
@@ -130,11 +128,14 @@ insert blurb here List of Contents
 
 <p><img src="http://pending" alt="pending" /></p>
 
-<p><strong>Goals:</strong> master the art of Sublime Text</p>
+<h2 id="goals">Goals</h2>
+<ul>
+  <li>master the art of Sublime Text</li>
+</ul>
 
 <p><strong>Random Awesome Photographer:</strong> <a href="http://www.ellaling.com">Ella Ling</a>.</p>
 
-<h2 id="to-do-lista-idjumpto-doa">To Do List<a id="jump_to-do"></a></h2>
+<h2 id="to-do-lista-idto-doa">To Do List<a id="to-do"></a></h2>
 
         
           <footer>
@@ -170,11 +171,19 @@ insert blurb here List of Contents
     <ul class="recent_posts">
       
         <li>
+          <a href="/blog/2013/08/16/article-review-80-plates-are-unnecessary/">[Article Review] $80 Plates Are Unnecessary? How Insightful</a>
+        </li>
+      
+        <li>
+          <a href="/blog/2013/08/15/auto-hr-after-h1/">New Awesomeness Added: Auto HR after H1</a>
+        </li>
+      
+        <li>
           <a href="/blog/2013/08/10/event-review-intro-to-ux-at-general-assembly/">[Event Review] Intro to UX and Subpar Acoustics at General Assembly</a>
         </li>
       
         <li>
-          <a href="/blog/2013/08/06/video-by-me-sf-hill-are-good-for-video/">[Video by Me] SF Hills Are Good For Video</a>
+          <a href="/blog/2013/08/06/video-by-me-sf-hill-are-great-for-video/">[Video] SF Hills Are Great ...For Video</a>
         </li>
       
         <li>

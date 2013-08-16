@@ -1,0 +1,310 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>New Awesomeness Added: Auto HR after H1 - Jeff: Rebooted</title>
+  <meta name="author" content="Jeff Lee">
+  <link rel="author" href="humans.txt">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  
+    
+  
+  <meta name="description" content="I wasn’t happy with the style of my standard &lt;h1&gt; header. I wanted to spice things up. After some aimless browsing, I learned that there is an &hellip;">
+  
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://RebootJeff.github.io/blog/2013/08/15/auto-hr-after-h1/">
+  <link href="/favicon.png" rel="icon">
+  <link href='http://fonts.googleapis.com/css?family=Cantarell' rel='stylesheet' type='text/css'>
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Jeff: Rebooted" type="application/atom+xml">
+  <meta name="og:type" content="website" />
+  <meta name="og:site_name" content="Jeff: Rebooted" />
+  <meta name="og:title" content="New Awesomeness Added: Auto HR after H1" />
+  <meta name="og:description" content="I wasn’t happy with the style of my standard &lt;h1&gt; header. I wanted to spice things up. After some aimless browsing, I learned that there is an &hellip;" />
+  <meta name="og:url" content="http://RebootJeff.github.io/blog/2013/08/15/auto-hr-after-h1/"/>
+  <meta name="url" content="http://RebootJeff.github.io/blog/2013/08/15/auto-hr-after-h1/">
+  
+  <meta name="subject" content="CSSTILblog customizationmarkdown"/>
+  <meta name="category" content="CSSTILblog customizationmarkdown"/>
+  
+  <meta name="distribution" content="global">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <nav role="navigation"><div class="navbar">
+  <div class="navbar-inner">
+    <a class="brand" href="/">Jeff: Rebooted</a>
+    <ul class="nav">
+      <li><a href="/">Home</a></li>
+      <!-- BEGIN custom nav here because importing custom/navigation.html at the bottom (by default) shows up looking weird -->
+      <li><a href="/about">About</a></li>
+      <li><a href="/portfolio">Portfolio</a></li>
+      <li><a href="/blog/categories/my-media">Media</a></li>
+      <li><a href="/blog/archives">Archives</a></li>
+    </ul>
+    <ul class="nav" data-subscription="rss">
+      <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+      
+    </ul>
+      
+    <form class="navbar-form" action="http://google.com/search" method="get">
+      <fieldset role="search">
+        <input type="hidden" name="q" value="site:RebootJeff.github.io" />
+        <input class="span2" type="text" name="q" results="0" placeholder="Search"/>
+      </fieldset>
+    </form>
+      
+    <!-- I have customized the navigation.html file OUTSIDE of the custom folder because the part I wanted to customize comes BEFORE the `include` statement that invokes the custom/navigation.html file (aka the file you're reading now). -->
+  </div>
+</div>
+</nav>
+  <div class="wrapper_single">
+    <div class="container">
+      <article class="span8 offset2" role="article">
+        <div class="article-format">
+
+  <header>
+    
+      <h1 class="entry-title">New Awesomeness Added: Auto HR After H1</h1>
+    
+    
+      <p class="meta">
+        
+  
+
+
+  
+    <span class="byline author vcard">by <span class="fn">Jeff Lee</span></span>
+  
+
+ - 
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-08-15T12:02:00-07:00" pubdate data-updated="true">Aug 15<span>th</span>, 2013</time> - 
+        
+
+posted in
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/css/'>CSS</a>, <a class='category' href='/blog/categories/til/'>TIL</a>, <a class='category' href='/blog/categories/blog-customization/'>blog customization</a>, <a class='category' href='/blog/categories/markdown/'>markdown</a>
+  
+</span>
+
+
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I wasn’t happy with the style of my standard <code>&lt;h1&gt;</code> header. I wanted to spice things up. After some aimless browsing, I learned that there is an <code>:after</code> selector in CSS. Inspired by this new selector, I wanted to find a way to add an <code>&lt;hr/&gt;</code> element “after” my <code>&lt;h1&gt;</code> headers. </p>
+
+<h1 id="check-out-this-sweet-hr-dude">Check Out This Sweet HR, Dude</h1>
+
+<p>Apparently, it doesn’t quite work the way I expected, but that’s ok because I eventually found <a href="http://css-tricks.com/examples/hrs/">this sweet compilation of horizontal rules</a>!</p>
+
+<p>I entered the following CSS code into my <strong>sass/custom/_styles.scss</strong> file:</p>
+
+<div><div class="CodeRay">
+  <div class="code"><pre><span class="class">.entry-content</span> <span class="type">h1</span> {
+  <span class="key">text-align</span>: <span class="value">center</span>;
+  <span class="key">margin-top</span>: <span class="float">12px</span>;
+}
+<span class="class">.entry-content</span> <span class="type">h1</span><span class="pseudo-class">:after</span> {
+  <span class="key">content</span>: <span class="string"><span class="delimiter">&quot;</span><span class="content"> </span><span class="delimiter">&quot;</span></span>;
+  <span class="key">display</span>: <span class="value">block</span>;
+  <span class="key">height</span>: <span class="float">1px</span>;
+  <span class="key">margin</span>: <span class="float">6px</span> <span class="float">0px</span> <span class="float">6px</span> <span class="float">0px</span>;
+  <span class="key">background-image</span>: <span class="error">-</span><span class="error">w</span><span class="error">e</span><span class="error">b</span><span class="error">k</span><span class="error">i</span><span class="error">t</span><span class="error">-</span><span class="error">l</span><span class="error">i</span><span class="error">n</span><span class="error">e</span><span class="error">a</span><span class="error">r</span><span class="error">-</span><span class="error">g</span><span class="error">r</span><span class="error">a</span><span class="error">d</span><span class="error">i</span><span class="error">e</span><span class="error">n</span><span class="error">t</span>(<span class="value">left</span>, <span class="color">rgba(0,0,0,0)</span>, <span class="color">rgba(0,0,0,0.75)</span>, <span class="color">rgba(0,0,0,0)</span>); 
+  <span class="key">background-image</span>:    <span class="error">-</span><span class="error">m</span><span class="error">o</span><span class="error">z</span><span class="error">-</span><span class="error">l</span><span class="error">i</span><span class="error">n</span><span class="error">e</span><span class="error">a</span><span class="error">r</span><span class="error">-</span><span class="error">g</span><span class="error">r</span><span class="error">a</span><span class="error">d</span><span class="error">i</span><span class="error">e</span><span class="error">n</span><span class="error">t</span>(<span class="value">left</span>, <span class="color">rgba(0,0,0,0)</span>, <span class="color">rgba(0,0,0,0.75)</span>, <span class="color">rgba(0,0,0,0)</span>); 
+  <span class="key">background-image</span>:     <span class="error">-</span><span class="error">m</span><span class="error">s</span><span class="error">-</span><span class="error">l</span><span class="error">i</span><span class="error">n</span><span class="error">e</span><span class="error">a</span><span class="error">r</span><span class="error">-</span><span class="error">g</span><span class="error">r</span><span class="error">a</span><span class="error">d</span><span class="error">i</span><span class="error">e</span><span class="error">n</span><span class="error">t</span>(<span class="value">left</span>, <span class="color">rgba(0,0,0,0)</span>, <span class="color">rgba(0,0,0,0.75)</span>, <span class="color">rgba(0,0,0,0)</span>); 
+  <span class="key">background-image</span>:      <span class="error">-</span><span class="error">o</span><span class="error">-</span><span class="error">l</span><span class="error">i</span><span class="error">n</span><span class="error">e</span><span class="error">a</span><span class="error">r</span><span class="error">-</span><span class="error">g</span><span class="error">r</span><span class="error">a</span><span class="error">d</span><span class="error">i</span><span class="error">e</span><span class="error">n</span><span class="error">t</span>(<span class="value">left</span>, <span class="color">rgba(0,0,0,0)</span>, <span class="color">rgba(0,0,0,0.75)</span>, <span class="color">rgba(0,0,0,0)</span>); 
+}
+</pre></div>
+</div>
+</div>
+
+<p>So instead of adding <code>&lt;hr/&gt;</code>s after my <code>&lt;h1&gt;</code>s, I added gradients inside of very thin background images. It’s more complicated than what I had originally envisioned, but it looks way nicer.</p>
+
+<p>Unfortunately, in the process of writing this blog post, I discovered that my codeblocks (powered by CodeRay) aren’t as responsive as I had hoped. I mentioned my CodeRay configuration in <a href="/blog/2013/08/02/ready-set-octopress/#update-aug-10-2013">my first post</a>. The configuration involves picking a codeblock format Octopress <strong>_config.yml</strong> file.</p>
+
+<p>I chose <code>coderay_line_numbers: table</code> at first, because I want line numbers, and I want them to be separated from the code. The problem is that CodeRay codeblock tables are apparently unresponsive to browser size. Consequently, the codeblocks were wider than the <code>&lt;div&gt;</code>s that contained them whenever they were viewed on a smartphone or even on a PC looking at this blog’s front page. The front page automatically narrows my posts quite a bit, and that made the codeblock tables very unhappy. It was very annoying.</p>
+
+<p>I haven’t found a true solution despite diving into the CSS. All the relevant CSS selectors already have <code>width: 100%</code> so I don’t know what else to do. I experimented with some <code>overflow</code> properties, but to no avail. For now, I have resorted to turning off line numbers entirely. Dammit.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+
+  
+    <span class="byline author vcard">by <span class="fn">Jeff Lee</span></span>
+  
+
+ - 
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-08-15T12:02:00-07:00" pubdate data-updated="true">Aug 15<span>th</span>, 2013</time> - 
+      
+
+posted in
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/css/'>CSS</a>, <a class='category' href='/blog/categories/til/'>TIL</a>, <a class='category' href='/blog/categories/blog-customization/'>blog customization</a>, <a class='category' href='/blog/categories/markdown/'>markdown</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://RebootJeff.github.io/blog/2013/08/15/auto-hr-after-h1/" data-via="rebootjeff" data-counturl="http://RebootJeff.github.io/blog/2013/08/15/auto-hr-after-h1/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    
+      <a class="pull-left" href="/blog/2013/08/10/event-review-intro-to-ux-at-general-assembly/" title="Previous Post: [Event Review] Intro to UX and Subpar Acoustics at General Assembly">&laquo; [Event Review] Intro to UX and Subpar Acoustics at General Assembly</a>
+    
+    
+      <a class="pull-right" href="/blog/2013/08/16/article-review-80-plates-are-unnecessary/" title="Next Post: [Article Review] $80 Plates Are Unnecessary? How Insightful">[Article Review] $80 Plates Are Unnecessary? How Insightful &raquo;</a>
+    
+  </footer>
+
+</div>
+
+        
+      </article>
+    </div>
+  </div>
+  <div id="footer-widgets">
+  <div class="container">
+    <div class="row">
+  <div class="span3">
+    <h2>Recent Posts</h2>
+    <ul class="recent_posts">
+      
+        <li>
+          <a href="/blog/2013/08/16/article-review-80-plates-are-unnecessary/">[Article Review] $80 Plates Are Unnecessary? How Insightful</a>
+        </li>
+      
+        <li>
+          <a href="/blog/2013/08/15/auto-hr-after-h1/">New Awesomeness Added: Auto HR after H1</a>
+        </li>
+      
+        <li>
+          <a href="/blog/2013/08/10/event-review-intro-to-ux-at-general-assembly/">[Event Review] Intro to UX and Subpar Acoustics at General Assembly</a>
+        </li>
+      
+        <li>
+          <a href="/blog/2013/08/06/video-by-me-sf-hill-are-great-for-video/">[Video] SF Hills Are Great ...For Video</a>
+        </li>
+      
+        <li>
+          <a href="/blog/2013/08/02/ready-set-octopress/">Ready. Set. Octopress.</a>
+        </li>
+      
+    </ul>
+    <h2><a href="/blog/archives">Archives</a></h2>
+  </div>
+  <div class="span3">
+    
+
+  </div>
+  <!-- DISABLE Twitter and Found On footer widgets for now
+  <div class="span4">
+    
+  </div>
+  <div class="span2">
+    
+  -->
+  <div class="span6" id="footer_notes">
+    <p>
+      <a href="/">Jeff: Rebooted</a> - Copyright &copy; 2013 - Jeff Lee
+    </p>
+    <p>
+      Powered by <a href="http://octopress.org/">Octopress</a>. Made pretty with Foxslide theme by <a href="http://www.AdrianArtiles.com">Adrian Artiles</a>. Theme heavily tweaked by me. It took forever T.T
+    </p>
+  </div>
+</div>
+
+  </div>
+</div>
+<!-- DISABLE footer beyond footer-widgets
+<footer class="footer">
+  <div class="container">
+  	
+  </div>
+</footer>
+-->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+<script>window.jQuery || document.write('<script src="/javascripts/libs/jquery-1.7.2.min.js" type="text/javascript"><\/script>')</script>
+<script src="/javascripts/libs/bootstrap.min.js" type="text/javascript"></script>
+<script src="/javascripts/jquery.tweet.js" type="text/javascript"></script>
+<script src="/javascripts/jquery.instagram.js" type="text/javascript"></script>
+<script src="/javascripts/libs/jquery.masonry.min.js" type="text/javascript"></script>
+<script src="/javascripts/custom.js" type="text/javascript"></script>
+
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+</body>
+</html>
