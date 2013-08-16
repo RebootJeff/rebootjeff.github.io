@@ -9,22 +9,22 @@ footer: true
 
 **Proper _About Me_ page is still under construction.**
 
-#I am ~~Iron Man~~ Jeff
+#I am <del>Iron Man</del> Jeff
 _insert blurb here_
 
 ##List of Contents
-    1. [My Mission](#jump_my-mission)
-    2. [About the blog](#jump_about-this-blog)
-    3. [Fun Facts](#jump_fun-facts)
-    4. [To Do List](#jump_to-do)
+1. [My Mission](#my-mission)
+2. [About the blog](#about-this-blog)
+3. [Fun Facts](#fun-facts)
+4. [To Do List](#to-do)
 
-##My Mission<a id="jump_my-mission"></a>
+##My Mission<a id="my-mission"></a>
 _blurb about moving cross-country and starting a new career_
 
-##About This Blog<a id="jump_about-this-blog"></a>
-_link to blog post that explains how I customized this blog_
+##About This Blog<a id="about-this-blog"></a>
+If you're wondering how I put together this blog, check out [my first post](/blog/2013/08/02/ready-set-octopress/) and any posts tagged with the "[blog customization](/blog/categories/blog-customization/)" category.
 
-##Fun Facts<a id="jump_fun-facts"></a>
+##Fun Facts<a id="fun-facts"></a>
 ![Bastion OST cover art](http://pending)
 
 **Current Theme Song:** "Reboot the Mission" by The Wallflowers (too obvious?)
@@ -43,4 +43,4 @@ _link to blog post that explains how I customized this blog_
 
 **Random Awesome Photographer:** [Ella Ling](http://www.ellaling.com).
 
-##To Do List<a id="jump_to-do"></a>
+##To Do List<a id="to-do"></a>

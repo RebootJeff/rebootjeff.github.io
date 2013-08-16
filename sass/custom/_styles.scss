@@ -35,7 +35,7 @@ article.archive-article-format { box-shadow: none; padding: 0; }
   background: none;
   color: #000;
   /* added from http://html5devgal.com/blog/2013/06/08/octopress-toc-and-coderay-codeblocks/*/
-  overflow: auto;
+  overflow: scroll;
   white-space: pre;
   word-wrap: break-word;
   word-break: normal;
@@ -44,6 +44,11 @@ article.archive-article-format { box-shadow: none; padding: 0; }
 .CodeRay span.insert, .CodeRay span.change, .CodeRay span.delete {
         width: auto;
 }
+// My coderay fixes
+table.CodeRay { background-color: #F3FFF0; }
+.CodeRay .line-numbers, .CodeRay .no { background-color: #E3FFDB; }
+.CodeRay .line-numbers a { color: #26BB01; }
+table.CodeRay td { padding: 0px 0px 0px 0px; }
 
 // Green links
 a {
@@ -58,7 +63,7 @@ a:hover {
 // my basics
 .entry-content p {
   font-size: 14px;
-  line-height: 1.4;
+  line-height: 1.5;
   margin-bottom: 14px;
 }
 .entry-content h1 {
@@ -81,6 +86,9 @@ a:hover {
 }
 .entry-content ul li, .entry-content ol li {
   padding-bottom: 0px;
+}
+.entry-content p code, .entry-content li code{
+  font-size: 0.9em;
 }
 
 // my added classes, IDs, etc.
@@ -105,7 +113,7 @@ a:hover {
 	background-image: none;
 }
 
-// Get rid of styling for lists
+// Get rid of styling for indented lists
 pre {
   background: none;
   color: #000;

@@ -3,7 +3,7 @@ layout: post
 title: "Ready. Set. Octopress."
 date: 2013-08-02 17:40
 comments: true
-categories: octopress blogging about markdown
+categories: ['octopress','blogging','about','markdown','blog customization']
 ---
 
 <p class="last-updated">Last updated: Aug 10th, 2013</p>

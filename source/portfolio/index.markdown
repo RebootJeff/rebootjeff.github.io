@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "projects"
+title: "portfolio"
 date: 2013-08-02 17:50
 comments: true
 sharing: true

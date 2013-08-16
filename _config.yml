@@ -7,7 +7,7 @@ title: "Jeff: Rebooted"
 subtitle: "Quarter-life crisis detected. Reboot in progress."
 author: Jeff Lee
 simple_search: http://google.com/search
-description: blog for Jeff Lee to describe his journey to becoming a web developer
+description: Blog for Jeff Lee to describe his journey to become a web developer
 
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
 # You can customize the format as defined in
@@ -44,12 +44,12 @@ kramdown:
   auto_ids: true
   use_coderay: true
   coderay:
-    coderay_line_numbers: inline
+    coderay_line_numbers: nil
     coderay_css: class
 
 pygments: false # default python pygments have been replaced by pygments.rb
 
-paginate: 10          # Posts per page on the blog index
+paginate: 6          # Posts per page on the blog index
 pagination_dir: blog  # Directory base for pagination URLs eg. /blog/page/2/
 recent_posts: 5       # Posts in the sidebar Recent Posts section
 excerpt_link: "Read on &rarr;"  # "Continue reading" link text at the bottom of excerpted articles
