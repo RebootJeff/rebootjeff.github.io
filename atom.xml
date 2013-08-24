@@ -4,7 +4,7 @@
   <title><![CDATA[Jeff: Rebooted]]></title>
   <link href="http://RebootJeff.github.io/atom.xml" rel="self"/>
   <link href="http://RebootJeff.github.io/"/>
-  <updated>2013-08-24T15:36:32-07:00</updated>
+  <updated>2013-08-24T15:39:26-07:00</updated>
   <id>http://RebootJeff.github.io/</id>
   <author>
     <name><![CDATA[Jeff Lee]]></name>
@@ -53,7 +53,7 @@
 <h2 id="my-reinterpretation-of-the-12-steps">My (re)interpretation of the 12 steps</h2>
 <p>I think a lot of Gregg Pollack’s steps are good, a few are great, but a lot are poorly worded. Ok, they’re not “poorly worded” per se, but some seem a tad cryptic. It’s almost as if Pollack picked partially enigmatic titles on purpose, allowing him to turn a 12-step list into a 1-hour presentation. Almost.</p>
 
-<p>To be fair, I don’t think he has nefarious intentions, but I disagree with the wording of the 12 steps enough so as to motivate me to re-present them with different diction.</p>
+<p>To be fair, I don’t think he has nefarious intentions, but I disagree with the wording of the 12 steps enough to motivate me to re-present them with different diction.</p>
 
 <h3 id="pay-more-attention-to-communicating-expectations">1. Pay more attention to communicating <em>expectations</em></h3>
 <p>Everyone knows communication is important. Pollack takes the time to suggest you spend more attention on communication with clients with a focus on expectations. Pollack posits that you think about some failed projects and consider that a possible (perhaps probable?) cause of failure was mismatched expectations.</p>
@@ -86,33 +86,33 @@
 
 <p>As a sometimes smartass-y skeptic, I take issue with his guesstimates. More importantly, I’d like to point out that the 15 minutes spent on getting coffee is probably considered as a break that employees enjoy. They will likely find a new way to take a break if you shorten the amount of time it takes to get their caffeine buzz. To be fair, this is something that Pollack acknowledges (somewhat) in a later section of his talk, so I shall holster my quick-draw revolver named Wise Guy.</p>
 
-<h3 id="remember-extracurriculars-do-them">5. Remember extracurriculars? Do them.</h3>
+<h3 id="remember-extracurriculars-do-them">5. Remember <em>extracurriculars</em>? Do them.</h3>
 <p>This is a two-parter. First, Pollack highly recommends attending meetups, seminars, talks, conferences, etc. that are relevant to software development. He also recommended further academic learning through resources like Code School	 of course. Second, your company should foster internal knowledge transfer via internal brown bags, “What I’m Working On Now” presentations, retrospectives, book clubs, planned pair programming, and even just eating meals together.</p>
 
 <p>One tidbit that I found interesting was that Pollack said it’s worth mentioning to hiring managers and bosses that you like attending meetups and whatnot. Bonus points!</p>
 
-<h3 id="embrace-challenging-tasks-avoid-embracing-trite-crap">6. Embrace challenging tasks; avoid embracing trite crap</h3>
+<h3 id="embrace-challenging-tasks-avoid-embracing-trite-crap">6. Embrace <em>challenging</em> tasks; avoid embracing trite crap</h3>
 <p>Pollack claimed that human nature causes us to embrace easy-to-accomplish goals and tasks such as responding to work emails. This can lead to traps where you feel productive by doing a lot of small, low-value tasks. To avoid these traps, plan your day around addressing the big challenges first –don’t procrastinate by scheduling the tough stuff after the easy stuff.</p>
 
 <p>On a higher level, it’s important to embrace tough challenges for the sake of keeping your brain fit, keeping your skills up-to-date, accomplishing meaningful work, etc.</p>
 
-<h3 id="nurture-friendships-with-co-workers">7. Nurture friendships with co-workers</h3>
+<h3 id="nurture-friendships-with-co-workers">7. Nurture <em>friendships</em> with co-workers</h3>
 <p>Many forget that one way to make the developer community better is to make friends in the community. One way to make workplace collaboration better is to become better friends with co-workers.</p>
 
 <p>At this point, Pollack quickly discussed introversion/shyness (as an audience member later pointed out, introversion != shyness). He provided some social skill tips like establishing personal goals to meet 5 new people per meetup, for example. When meeting new people, Pollack’s main tactic is to ask them about themselves. I think we’ve all heard that advice before. My take on it is that it works, but it still feels awkward until the conversation gets through the first few minutes of chilliness.</p>
 
-<h3 id="ask-for-help-sooner-than-later">8. Ask for help sooner than later</h3>
+<h3 id="ask-for-help-sooner-than-later">8. Ask for help <em>sooner</em> than later</h3>
 <p>We’ve all heard it before: if you don’t ask for help now, you’ll struggle with your issue for much longer by going solo. Pollack’s rule of thumb is to ask for help after trying to tackle a bug, obstacle, etc. on your own for 30 minutes. If a small problem is taking you more than 30 minutes to solve, it probably means you’re using the wrong approach anyway (i.e., you’re digging yourself into a deeper hole).</p>
 
-<h3 id="take-breaks-and-avoid-synchronous-communication">9. Take breaks and avoid synchronous communication</h3>
+<h3 id="take-breaks-and-avoid-synchronous-communication">9. Take <em>breaks</em> and avoid synchronous communication</h3>
 <p>I like Pollacks claim that optimal work hours are 80% productive and 20% (unproductive) fun. Companies should embrace breaks and create a work environment that acknowledges employees’ “need” to check Facebook at work. But employees shouldn’t just take breaks while at the office, they should take breaks <em>from</em> the office by working at alternative locations such as coffee shops.</p>
 
 <p>In step 9, Pollack also talked about abandoning synchronous communication like IM for asynchornous communications like email. He said IM can be a problem because it interrupts your train of thought whenever someone contacts you. Upon interruption, you’ll be tempted to check email or do other less intellectual work. It’s a bit weird to me that Pollack basically grouped “avoid distractions” with “take breaks” in step 9. They seem unrelated enough to warrant separation, but oh well.</p>
 
-<h3 id="make-sure-you-dont-over-engineer-your-software">10. Make sure you don’t over-engineer your software</h3>
+<h3 id="make-sure-you-dont-over-engineer-your-software">10. Make sure you don’t <em>over-engineer</em> your software</h3>
 <p>It’s easy to get stuck spending lots of time on optimization, worrying about handling heavy load, predicting future requirements, and expanding “just in case” feature sets. Pollack went so far as to suggest not worrying about optimization or heavy loads until your software starts buckling under the pressure of intense usage. Do I agree? I’m afraid I’m too ignorant at this point to really have an opinion.</p>
 
-<h3 id="use-visual-communication-not-just-text-based-comms">11. Use visual communication, not just text-based comms</h3>
+<h3 id="use-visual-communication-not-just-text-based-comms">11. Use <em>visual</em> communication, not just text-based comms</h3>
 <p>You might love email. Your client might love email. But sometimes, it’s hard to really describe a feature, a bug, etc. through text alone. Pollack is in love with the idea of not only attaching annotated screenshots, but also sending screencasts.</p>
 
 <p>I had never really thought about screencasting as a form of regular, commonplace communication, but it makes a ton of sense. The key is to limit yourself to 5-minute videos recorded in a single take. Such screencasts may be rough around the edges, but they can still drive a point home faster and harder than a simple email.</p>
