@@ -4,7 +4,7 @@
   <title><![CDATA[Category: self-improvement | Jeff: Rebooted]]></title>
   <link href="http://RebootJeff.github.io/blog/categories/self-improvement/atom.xml" rel="self"/>
   <link href="http://RebootJeff.github.io/"/>
-  <updated>2013-08-24T15:39:26-07:00</updated>
+  <updated>2013-08-24T15:48:20-07:00</updated>
   <id>http://RebootJeff.github.io/</id>
   <author>
     <name><![CDATA[Jeff Lee]]></name>
@@ -77,7 +77,7 @@
 <h3 id="delegate-work-pretty-straightforward-stuff">4. Delegate work (pretty straightforward stuff)</h3>
 <p>Everyone is familiar with cautionary tales about over-burdening oneself. Everyone knows you need to hire people to prevent you from tasking too many multis (so to speak). Everyone knows about the significance of delegation.</p>
 
-<p>But section 4 of this talk was not wholly uninsightful. He provided an example of “doing the math” by talking about framing delegation in terms of hours saved. His example involved a snazzy company that hired a full-time barista to take care of coffee for everyone else. After guesstimating some numbers, Pollack posited that the 8-hour barista saved the company 20 hours for a net gain of 12 hours of productivity.</p>
+<p>But section 4 of this talk was not wholly uninsightful. He provided an example of “doing the math” by talking about framing delegation in terms of hours saved. His example involved a snazzy company that hired a full-time barista to take care of coffee for everyone else. After guesstimating some numbers, Pollack posited that the 8-hour barista added 20 hours of development productivity at the relatively low cost of a barista’s wages.</p>
 
 <blockquote>
   <p>WITHOUT barista: 80 employees x 1 cup of coffee per employee x 15 minutes of time used to get each cup of coffee = 20 hours per day spent on coffee
@@ -113,7 +113,7 @@
 <p>It’s easy to get stuck spending lots of time on optimization, worrying about handling heavy load, predicting future requirements, and expanding “just in case” feature sets. Pollack went so far as to suggest not worrying about optimization or heavy loads until your software starts buckling under the pressure of intense usage. Do I agree? I’m afraid I’m too ignorant at this point to really have an opinion.</p>
 
 <h3 id="use-visual-communication-not-just-text-based-comms">11. Use <em>visual</em> communication, not just text-based comms</h3>
-<p>You might love email. Your client might love email. But sometimes, it’s hard to really describe a feature, a bug, etc. through text alone. Pollack is in love with the idea of not only attaching annotated screenshots, but also sending screencasts.</p>
+<p>You might love email. Your client might love email. But sometimes, it’s hard to really describe a feature or a bug through text alone. Pollack is in love with the idea of not only attaching annotated screenshots, but also sending screencasts.</p>
 
 <p>I had never really thought about screencasting as a form of regular, commonplace communication, but it makes a ton of sense. The key is to limit yourself to 5-minute videos recorded in a single take. Such screencasts may be rough around the edges, but they can still drive a point home faster and harder than a simple email.</p>
 
@@ -137,7 +137,7 @@
 <p>As you can tell from my re-interpretation of the 12 steps, I didn’t like some of Pollack’s wording, but I admit that I’m oddly particular about such things. I also didn’t like that some of the advice was just common sense. Maybe it’s unfair, but I tend to expect a lot of insight from advice-giving presentations so I feel let down when I’m presented with advice that is not only familiar, but derived from the same common sense I already possess.</p>
 
 <h2 id="speaker">Speaker</h2>
-<p>Pollack’s filler word is “right?” (with upward inflection). I find this to be a little annoying. It’s not the first time an otherwise awesome speaker has used “right?” this often. I think it bothers me because I perceive it as a subtle form of pandering.</p>
+<p>Pollack’s filler word is “right?” (with upward inflection). I find this to be a little annoying. It’s not the first time an otherwise awesome speaker has used “right?” this often. I think it bothers me because I perceive it to be slightly patronizing …like a subtle form of pandering.</p>
 
 <p>That said, I really like Pollack’s relatability. He seems be a down-to-earth guy, making his speaking style easy to follow. Well done, Mr. Pollack.</p>
 
