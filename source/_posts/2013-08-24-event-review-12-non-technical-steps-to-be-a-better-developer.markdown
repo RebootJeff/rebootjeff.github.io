@@ -19,7 +19,7 @@ The talk Pollack provided was not very technical in nature. He mostly focused on
 <div style="clear:both;"></div>
 
 # What I Learned
-I didn't plan to going into as much detail as I did in my [previous event review](/blog/2013/08/10/event-review-intro-to-ux-at-general-assembly/) because you can check out the presentation for yourself in the penxy link I already provided. However, the penxy recording failed to capture the last 2 out of 12 steps. It also missed the conclusion. I also like to ramble.
+I didn't plan on going into as much detail as I did in my [previous event review](/blog/2013/08/10/event-review-intro-to-ux-at-general-assembly/) because you can check out the presentation for yourself in the penxy link I already provided. However, the penxy recording failed to capture the last 2 out of 12 steps. It also missed the conclusion. I also like to ramble.
 
 ## The 12 steps to be a better developer
 
