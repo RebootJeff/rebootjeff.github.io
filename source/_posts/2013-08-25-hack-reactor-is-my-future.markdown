@@ -57,7 +57,7 @@ Not to mention, my family has that traditional Asian risk-aversion baked into it
 ## The curriculum begins now
 There are a few tasks to accomplish prior to the first day of class other than making HackR rich(er). The bootcamp's pre-course work requires about 90 hours of dedication (about 50 hours mandatory + about 40 hours optional). I've been instructed to...
 
-1. Complete a lot of [Code School](http://codeschool.com) tutorials (which is a bit of a bummer because I'm tired of online tutorials --but at least a (tiny) part of my tuition goes towards the cost of Code School subscription).
+1. Complete a lot of [Code School](http://codeschool.com) tutorials (which is a bit of a bummer because I'm tired of online tutorials).
 
 2. Learn more JavaScript through some TDD challenges using Jasmine and Mocha (I don't know what these are if they're not hot beverages).
 
