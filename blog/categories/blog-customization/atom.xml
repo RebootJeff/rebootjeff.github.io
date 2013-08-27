@@ -4,7 +4,7 @@
   <title><![CDATA[Category: blog customization | Jeff: Rebooted]]></title>
   <link href="http://RebootJeff.github.io/blog/categories/blog-customization/atom.xml" rel="self"/>
   <link href="http://RebootJeff.github.io/"/>
-  <updated>2013-08-25T17:17:26-07:00</updated>
+  <updated>2013-08-26T17:09:11-07:00</updated>
   <id>http://RebootJeff.github.io/</id>
   <author>
     <name><![CDATA[Jeff Lee]]></name>
@@ -47,6 +47,7 @@
 
 <p>So instead of adding <code>&lt;hr/&gt;</code>s after my <code>&lt;h1&gt;</code>s, I added gradients inside of very thin background images. It’s more complicated than what I had originally envisioned, but it looks way nicer.</p>
 
+<h1 id="codeblock-the-party-pooper">Codeblock, the Party Pooper</h1>
 <p>Unfortunately, in the process of writing this blog post, I discovered that my codeblocks (powered by CodeRay) aren’t as responsive as I had hoped. I mentioned my CodeRay configuration in <a href="/blog/2013/08/02/ready-set-octopress/#update-aug-10-2013">my first post</a>. The configuration involves picking a codeblock format Octopress <strong>_config.yml</strong> file.</p>
 
 <p>I chose <code>coderay_line_numbers: table</code> at first, because I want line numbers, and I want them to be separated from the code. The problem is that CodeRay codeblock tables are apparently unresponsive to browser size. Consequently, the codeblocks were wider than the <code>&lt;div&gt;</code>s that contained them whenever they were viewed on a smartphone or even on a PC looking at this blog’s front page. The front page automatically narrows my posts quite a bit, and that made the codeblock tables very unhappy. It was very annoying.</p>

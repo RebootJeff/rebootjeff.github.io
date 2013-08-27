@@ -4,7 +4,7 @@
   <title><![CDATA[Category: coding bootcamps | Jeff: Rebooted]]></title>
   <link href="http://RebootJeff.github.io/blog/categories/coding-bootcamps/atom.xml" rel="self"/>
   <link href="http://RebootJeff.github.io/"/>
-  <updated>2013-08-25T17:17:26-07:00</updated>
+  <updated>2013-08-26T17:09:11-07:00</updated>
   <id>http://RebootJeff.github.io/</id>
   <author>
     <name><![CDATA[Jeff Lee]]></name>
@@ -28,6 +28,10 @@
 <p>Bootcamps are a great option for people who want to switch from a non-computer science career to a programming-heavy career. That said, there will be some CS grads in some bootcamps because college often neglects to teach relevant hard skills like how to use git.</p>
 
 <p>Coding bootcamps are also called programming bootcamps, developer/dev bootcamps, etc. The term “bootcamp” is sometimes replaced with “immersive course” or just “immersive.”</p>
+
+<p>Check out this video to get a sense of the Hack Reactor vibe:</p>
+
+<iframe width="300" height="169" src="http://RebootJeff.github.io//www.youtube.com/embed/ko9bXImNirE" frameborder="0" allowfullscreen=""></iframe>
 
 <h1 id="why-pick-hack-reactor">Why pick Hack Reactor?</h1>
 <p>In the coming days and weeks, I am going to extensively blog about my experience researching different bootcamps in a series unsurprisingly entitled <a href="/blog/categories/bootcamp-research/">Coding Bootcamp Research</a>. The series will cover all the ins and outs of how I examined my options, the admissions processes, and my decision to choose HackR over its competitors.</p>
@@ -60,7 +64,7 @@
   <p>OMG @RebootJeff just paradoxed himself #WTF #ICallBS #hypocrisy</p>
 </blockquote>
 
-<p>Shut up and listen. You can posit that I’m merely rationlizing a money-grubbing stance, and I know that’s what it looks like, but, I hold myself obligated to meet the same standards and expectations when I’m finally a parent. In this case, the expectation I’m talking about is the responsibility (and deep desire) to help my child <del>become a Neil deGrasse Tyson badass</del> get really awesome education.</p>
+<p>Shut up and listen. You can posit that I’m merely rationlizing a money-grubbing stance, and I know that’s what it looks like, but I hold myself obligated to meet the same standards and expectations when I’m finally a parent. In this case, the expectation I’m talking about is the responsibility (and deep desire) to help my child <del>become a Neil deGrasse Tyson badass</del> get really awesome education.</p>
 
 <p>Not to mention, my family has that traditional Asian risk-aversion baked into its collective mind. However, as my mom pointed out, pursuing fantastic educational opportunities shouldn’t be considered a (financial) risk to avoid if the parent can help out.</p>
 
@@ -96,6 +100,9 @@
   </li>
   <li>
     <p>Consider PAYING for Sublime Text to get rid of the money-begging feature</p>
+  </li>
+  <li>
+    <p>Figure out regex</p>
   </li>
   <li>
     <p>Get intimate with that scary thingamabob known as <a href="http://linuxcommand.org/lc3_learning_the_shell.php">Linux shell</a></p>
