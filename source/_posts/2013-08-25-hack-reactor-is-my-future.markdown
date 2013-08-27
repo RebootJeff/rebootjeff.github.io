@@ -17,6 +17,10 @@ Bootcamps are a great option for people who want to switch from a non-computer s
 
 Coding bootcamps are also called programming bootcamps, developer/dev bootcamps, etc. The term "bootcamp" is sometimes replaced with "immersive course" or just "immersive."
 
+Check out this video to get a sense of the Hack Reactor vibe:
+
+<iframe width="300" height="169" src="//www.youtube.com/embed/ko9bXImNirE" frameborder="0" allowfullscreen></iframe>
+
 # Why pick Hack Reactor?
 In the coming days and weeks, I am going to extensively blog about my experience researching different bootcamps in a series unsurprisingly entitled [Coding Bootcamp Research](/blog/categories/bootcamp-research/). The series will cover all the ins and outs of how I examined my options, the admissions processes, and my decision to choose HackR over its competitors.
 
@@ -46,7 +50,7 @@ As I thought about things from the view of my hypothetical, futuristic, child-re
 
 >OMG @RebootJeff just paradoxed himself \#WTF \#ICallBS \#hypocrisy
 
-Shut up and listen. You can posit that I'm merely rationlizing a money-grubbing stance, and I know that's what it looks like, but, I hold myself obligated to meet the same standards and expectations when I'm finally a parent. In this case, the expectation I'm talking about is the responsibility (and deep desire) to help my child <del>become a Neil deGrasse Tyson badass</del> get really awesome education.
+Shut up and listen. You can posit that I'm merely rationlizing a money-grubbing stance, and I know that's what it looks like, but I hold myself obligated to meet the same standards and expectations when I'm finally a parent. In this case, the expectation I'm talking about is the responsibility (and deep desire) to help my child <del>become a Neil deGrasse Tyson badass</del> get really awesome education.
 
 Not to mention, my family has that traditional Asian risk-aversion baked into its collective mind. However, as my mom pointed out, pursuing fantastic educational opportunities shouldn't be considered a (financial) risk to avoid if the parent can help out.
 
@@ -71,6 +75,8 @@ I plan on completing most of the optional pre-course work (in addition to the ma
 - Watch videos re: [Sublime Text wizadry](https://tutsplus.com/course/improve-workflow-in-sublime-text-2/)
 
 - Consider PAYING for Sublime Text to get rid of the money-begging feature
+
+- Figure out regex
 
 - Get intimate with that scary thingamabob known as [Linux shell](http://linuxcommand.org/lc3_learning_the_shell.php)
 

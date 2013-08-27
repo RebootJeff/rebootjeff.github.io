@@ -123,9 +123,9 @@ I'm also partial to Pollack's claim that writing skills are a good way to differ
 As you can tell from my re-interpretation of the 12 steps, I didn't like some of Pollack's wording, but I admit that I'm oddly particular about such things. I also didn't like that some of the advice was just common sense. Maybe it's unfair, but I tend to expect a lot of insight from advice-giving presentations so I feel let down when I'm presented with advice that is not only familiar, but derived from the same common sense I already possess.
 
 ## Speaker
-Pollack's filler word is "right?" (with upward inflection). I find this to be a little annoying. It's not the first time an otherwise awesome speaker has used "right?" this often. I think it bothers me because I perceive it to be slightly patronizing ...like a subtle form of pandering.
+Pollack's filler word is "right?" (with upward inflection). I find this to be a little annoying. It's not the first time an otherwise awesome speaker has used "right?" this often. I think it bothers me because I perceive it to be slightly patronizing ...or maybe a subtle form of pandering.
 
-That said, I really like Pollack's relatability. He seems be a down-to-earth guy, making his speaking style easy to follow. Well done, Mr. Pollack.
+That said, I really like Pollack's relatability. He seems to be a down-to-earth guy, making his speaking style easy to follow. Well done, Mr. Pollack.
 
 ## Venue
 Chartboost had tons of free beer, great pizza (not just some Pizza Hut banality\*), tons of free soft drinks, good mic setup for the speaker, and friendly staff on hand. After the presentation, they encouraged audience members to stick around and mingle, consume more pizza and beer, and use their company ping pong table. Sweet.

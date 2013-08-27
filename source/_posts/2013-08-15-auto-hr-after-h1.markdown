@@ -34,6 +34,7 @@ I entered the following CSS code into my **sass/custom/\_styles.scss** file:
 
 So instead of adding `<hr/>`s after my `<h1>`s, I added gradients inside of very thin background images. It's more complicated than what I had originally envisioned, but it looks way nicer.
 
+# Codeblock, the Party Pooper
 Unfortunately, in the process of writing this blog post, I discovered that my codeblocks (powered by CodeRay) aren't as responsive as I had hoped. I mentioned my CodeRay configuration in [my first post](/blog/2013/08/02/ready-set-octopress/#update-aug-10-2013). The configuration involves picking a codeblock format Octopress **\_config.yml** file.
 
 I chose `coderay_line_numbers: table` at first, because I want line numbers, and I want them to be separated from the code. The problem is that CodeRay codeblock tables are apparently unresponsive to browser size. Consequently, the codeblocks were wider than the `<div>`s that contained them whenever they were viewed on a smartphone or even on a PC looking at this blog's front page. The front page automatically narrows my posts quite a bit, and that made the codeblock tables very unhappy. It was very annoying.
