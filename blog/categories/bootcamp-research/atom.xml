@@ -4,7 +4,7 @@
   <title><![CDATA[Category: bootcamp research | Jeff: Rebooted]]></title>
   <link href="http://RebootJeff.github.io/blog/categories/bootcamp-research/atom.xml" rel="self"/>
   <link href="http://RebootJeff.github.io/"/>
-  <updated>2013-08-26T18:42:17-07:00</updated>
+  <updated>2013-08-26T18:43:24-07:00</updated>
   <id>http://RebootJeff.github.io/</id>
   <author>
     <name><![CDATA[Jeff Lee]]></name>
@@ -73,7 +73,7 @@
 
 <ol>
   <li>
-    <p>Complete a lot of <a href="http://codeschool.com">Code School</a> tutorials (which is a bit of a bummer because I’m tired of online tutorials –but at least a (tiny) part of my tuition goes towards the cost of Code School subscription).</p>
+    <p>Complete a lot of <a href="http://codeschool.com">Code School</a> tutorials (which is a bit of a bummer because I’m tired of online tutorials).</p>
   </li>
   <li>
     <p>Learn more JavaScript through some TDD challenges using Jasmine and Mocha (I don’t know what these are if they’re not hot beverages).</p>
