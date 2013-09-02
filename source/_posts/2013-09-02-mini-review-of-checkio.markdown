@@ -11,6 +11,8 @@ categories: ['review','learn to code']
 
 The creators have quite a bit of hype behind them. They have received hundreds of thousands of dollars in funding. They have cultivated a thriving community of users. So yeah, my interest was piqued.
 
+<iframe width="300" height="169" src="//www.youtube-nocookie.com/embed/kWoW6RgH04g" frameborder="0" allowfullscreen></iframe>
+
 Side note: The site doesn't seem to use secure HTTPS. It lets you log in with your other social media and developer community accounts (Facebook, Twitter, WordPress, GitHub, Stack Exchange, etc) so does that mean it's safer to log in with a Twitter account rather than with a native CheckiO account?
 
 ## Disclaimer
