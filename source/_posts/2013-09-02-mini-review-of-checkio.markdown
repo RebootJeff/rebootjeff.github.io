@@ -33,7 +33,7 @@ The bulk of the experience is not something that could be described as "gameplay
 
 Despite its attempts to the contrary, CheckiO is just another site full of coding challenges. The challenges are fun for people who already enjoy programming, but the site just doesn't live up to its potential to reach out to a new, bigger, untapped audience. The user experience really needs to be remade to properly engage users quickly. Instead, it leaves you a bit confused because it looks like a site full of features and gamification, but you can't quite figure out how to enjoy the benefits.
 
-Given the current success earned by CheckiO, I have a feeling more patient yields more rewards when using the site, but I still have a hard time imagining that "coding on CheckiO" could ever be described as "playing CheckiO."
+Given the current success earned by CheckiO, I have a feeling more patient yields more rewards when using the site, but I still have a hard time imagining that "coding on CheckiO" could ever be described as "playing CheckiO." I feel bad to give CheckiO a thumbs down because they're the type of underdog with the type of good intentions that I want to support.
 
 ## Woo!
 - Thriving international community
