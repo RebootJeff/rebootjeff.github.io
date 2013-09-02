@@ -4,7 +4,7 @@
   <title><![CDATA[Category: review | Jeff: Rebooted]]></title>
   <link href="http://RebootJeff.github.io/blog/categories/review/atom.xml" rel="self"/>
   <link href="http://RebootJeff.github.io/"/>
-  <updated>2013-09-02T13:45:55-07:00</updated>
+  <updated>2013-09-02T13:50:18-07:00</updated>
   <id>http://RebootJeff.github.io/</id>
   <author>
     <name><![CDATA[Jeff Lee]]></name>
@@ -23,6 +23,8 @@
 <p><a href="http://www.checkio.org/">CheckiO</a> is a website that aims to teach programming by providing an online gaming world with some social features heavily emphasized. CheckiO is meant for beginners and experts alike, but all coding challenges must be completed in Python.</p>
 
 <p>The creators have quite a bit of hype behind them. They have received hundreds of thousands of dollars in funding. They have cultivated a thriving community of users. So yeah, my interest was piqued.</p>
+
+<iframe width="300" height="169" src="http://RebootJeff.github.io//www.youtube-nocookie.com/embed/kWoW6RgH04g" frameborder="0" allowfullscreen=""></iframe>
 
 <p>Side note: The site doesn’t seem to use secure HTTPS. It lets you log in with your other social media and developer community accounts (Facebook, Twitter, WordPress, GitHub, Stack Exchange, etc) so does that mean it’s safer to log in with a Twitter account rather than with a native CheckiO account?</p>
 
