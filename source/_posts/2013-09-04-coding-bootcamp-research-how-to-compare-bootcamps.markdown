@@ -51,7 +51,7 @@ Other factors might actually surprise you once you dig into them. For example, i
 
 (For the record, I like the idea of mandatory yoga, but I've seen [negative reactions](http://qr.ae/IL5Mc) to the fact.)
 
-I will try to explore the question of "how do you prioritize factors?" in much greater details in upcoming blog posts that focus on a few factors at a time.
+I will try to explore the question of "how do you prioritize factors?" in much greater detail in upcoming blog posts that focus on a few factors at a time.
 
 # How do you gather info?
 
