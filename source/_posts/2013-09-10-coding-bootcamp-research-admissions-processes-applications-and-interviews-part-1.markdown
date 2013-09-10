@@ -6,7 +6,7 @@ comments: true
 categories: ['bootcamp research','coding bootcamps','Hack Reactor','General Assembly','RocketU','Coding Dojo','App Academy','Dev Bootcamp']
 ---
 
-In this blog post, I'm going to cover some basic info and tips about applications and interviews for coding bootcamps. The bootcamps are selective programs. They exclude a ton of applicants, so how do you make sure you're maximizing your chances for acceptance?
+In this blog post, I'm going to cover some basic info and tips about applications and interviews for coding bootcamps. The bootcamps are selective programs. Read on if you're curious about the application process and/or if you need some help preparing for interviews.
 
 I can only provide my thoughts based on applying to Coding Dojo, Hack Reactor, RocketU, General Assemby, and App Academy. This blog post won't be very bootcamp-specific, but in part 2 of 2, I will write detailed descriptions of my personal application and interview experiences.
 
@@ -24,7 +24,7 @@ That reminds me: you should check to see what dates are available. Unfortunately
 
 Note: These examples will probably be out-dated within a year or so. I imagine these companies will change their websites in due time.
 
-[Dev Bootcamp](http://apply.devbootcamp.com/) - Their website doesn't tell you their sold out for 6 months until you reach their application page, which you probably won't do until you've read a lot of the other pages on their site.
+[Dev Bootcamp](http://apply.devbootcamp.com/) - Their website doesn't tell you they're sold out for 6 months until you reach their application page, which you probably won't do until you've read a lot of the other pages on their site.
 
 [Hack Reactor](http://hackreactor.com/) - You have to scroll down about 33% of their single-page website before you find their start dates in a section entitled *The Program*. When I was just skimming, I missed these dates because my eyes were naturally drawn to the big jQuery, HTML5, etc. logos displayed just below the dates.
 
