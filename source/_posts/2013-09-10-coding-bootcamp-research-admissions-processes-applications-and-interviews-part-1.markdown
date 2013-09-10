@@ -44,7 +44,7 @@ If you don't hear back from a bootcamp right away, keep in mind that they're flo
 
 # Interviews
 
-It's important to consider that **the interview process is as much an opportunity for them to wow you as it is a time for you to impress them.** This is why I looked forward to each interview. I couldn't wait to be wowed. This is also why I was disappointed when App Academy put another challenge in my path towards an interview.
+It's important to consider that **the interview process is as much an opportunity for them to wow you as it is a time for you to impress them.** This is why I looked forward to each interview. I couldn't wait to be wowed.
 
 Before each interview, I reviewed my research on the particular bootcamp. I re-visited the bootcamp's website and their blog to find nuggets of info worth asking them about. A lot of my questions probed for elaboration on something very specific to the bootcamp in question.
 
@@ -55,13 +55,15 @@ I had handful of standard questions about logistics, a few questions comparing t
 - Write down a ton of questions to ask for the final half/third of your interview. Asking a lot of questions makes you look AWESOME.
 	- Ask questions that show you're planning ahead (i.e., questions about logistics).
 	- Ask questions that show you're serious (i.e., very specific/thoughtful questions).
-- Be prepared to answer basic questions that you already answered in your applications forms. Examples:
+- Be prepared to answer basic questions that you already answered in your application forms. Examples:
 	- Why do you want to do a bootcamp?
 	- How did you hear about us?
 	- Why do you want to learn to code?
 	- Can you handle the intensity of our program? Are you sure? Are you sure you're sure?
 	- What prior programming experience do you have?
 - Do NOT panic during the technical portion of the interviews. If you don't know something, just admit it. They don't expect you to be an expert; they just want to see how much you know so far by asking progressively harder questions until they get to topics beyond your current experience.
+
+I panicked a bit in my Hack Reactor and RocketU interviews. In both cases, the interviewer was nice and helped me out. In both cases, I walked out with positive vibes.
 
 # Interview questions for YOU to ask
 
