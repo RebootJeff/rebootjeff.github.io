@@ -4,7 +4,7 @@
   <title><![CDATA[Category: bootcamp research | Jeff: Rebooted]]></title>
   <link href="http://RebootJeff.github.io/blog/categories/bootcamp-research/atom.xml" rel="self"/>
   <link href="http://RebootJeff.github.io/"/>
-  <updated>2013-09-04T01:26:04-07:00</updated>
+  <updated>2013-09-10T14:32:30-07:00</updated>
   <id>http://RebootJeff.github.io/</id>
   <author>
     <name><![CDATA[Jeff Lee]]></name>
@@ -12,6 +12,174 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[[Coding Bootcamp Research] Admissions Processes: Applications and Interviews (Part 1 of 2)]]></title>
+    <link href="http://RebootJeff.github.io/blog/2013/09/10/coding-bootcamp-research-admissions-processes-applications-and-interviews-part-1/"/>
+    <updated>2013-09-10T14:25:00-07:00</updated>
+    <id>http://RebootJeff.github.io/blog/2013/09/10/coding-bootcamp-research-admissions-processes-applications-and-interviews-part-1</id>
+    <content type="html"><![CDATA[<p>In this blog post, I’m going to cover some basic info and tips about applications and interviews for coding bootcamps. The bootcamps are selective programs. They exclude a ton of applicants, so how do you make sure you’re maximizing your chances for acceptance?</p>
+
+<p>I can only provide my thoughts based on applying to Coding Dojo, Hack Reactor, RocketU, General Assemby, and App Academy. This blog post won’t be very bootcamp-specific, but in part 2 of 2, I will write detailed descriptions of my personal application and interview experiences.</p>
+
+<h1 id="applications">Applications</h1>
+
+<p>I filled out applications for RocketU and Coding Dojo first. Then I submitted applications for Hack Reactor, General Assembly, and App Academy. All applications consisted of web forms that were fairly straightforward, but some included interesting mini-essays. You can visit their respective websites and find the forms yourself, but I just want to mention that they aren’t too time-consuming.</p>
+
+<p>On the other hand, I heard Dev Bootcamp’s application asks you to make a video of yourself so they can check out your personality. That might be a bit more time consuming. I didn’t bother applying to Dev Bootcamp because I wanted to enroll in a bootcamp program ASAP, but Dev Bootcamp’s application page shows their classes are sold out for the next 6 months!</p>
+
+<h2 id="check-for-dates">Check for dates</h2>
+
+<p>That reminds me: you should check to see what dates are available. Unfortunately, not all sites make it crystal clear. You might waste a lot of time reading a website only to find out later that their next open enrollment is too late for you.</p>
+
+<h3 id="examples">Examples</h3>
+
+<p>Note: These examples will probably be out-dated within a year or so. I imagine these companies will change their websites in due time.</p>
+
+<p><a href="http://apply.devbootcamp.com/">Dev Bootcamp</a> - Their website doesn’t tell you their sold out for 6 months until you reach their application page, which you probably won’t do until you’ve read a lot of the other pages on their site.</p>
+
+<p><a href="http://hackreactor.com/">Hack Reactor</a> - You have to scroll down about 33% of their single-page website before you find their start dates in a section entitled <em>The Program</em>. When I was just skimming, I missed these dates because my eyes were naturally drawn to the big jQuery, HTML5, etc. logos displayed just below the dates.</p>
+
+<p><a href="http://codingdojo.co/">Coding Dojo</a> - They actually show their next start date right away. The first thing you read on their website is when, where, and how much does it cost. Good job, Dojo!</p>
+
+<p><a href="https://generalassemb.ly/education/web-development-immersive/san-francisco">General Assembly</a> - A navigation bar at the top helps you skip to the <em>Schedule</em> list of available dates.</p>
+
+<p><a href="http://rocket-space.com/rocketu/#bootcamp">RocketU</a> - The RocketU single-page website shows info about their non-bootcamp programs before getting to the bootcamp overview. They provide a navigation link to jump to the bootcamp info, and that’s when you’re greeted with next available start date and tuition cost. Not bad.</p>
+
+<p><a href="http://www.appacademy.io/applications/new">App Academy</a> - Their navigation bar at the top of the page includes a link to dates. Their application allows you to appy to multiple dates. Nice touch! I don’t remember if any other applications have that ability.</p>
+
+<h2 id="dont-fret-for-about-one-week">Don’t fret for about one week</h2>
+
+<p>Also, you should relax after submitting an application because <strong>it took 2-7 days for the bootcamps to respond to my applications.</strong> I think some bootcamps provided automatic confirmation emails to let me know they got my application, but if I recall correctly, at least one bootcamp didn’t give me any sanity-fostering confirmation email.</p>
+
+<p>If you don’t hear back from a bootcamp right away, keep in mind that they’re flooded with applications. I suggest waiting a week for them to respond to you before sending any followup emails.</p>
+
+<h1 id="interviews">Interviews</h1>
+
+<p>It’s important to consider that <strong>the interview process is as much an opportunity for them to wow you as it is a time for you to impress them.</strong> This is why I looked forward to each interview. I couldn’t wait to be wowed. This is also why I was disappointed when App Academy put another challenge in my path towards an interview.</p>
+
+<p>Before each interview, I reviewed my research on the particular bootcamp. I re-visited the bootcamp’s website and their blog to find nuggets of info worth asking them about. A lot of my questions probed for elaboration on something very specific to the bootcamp in question.</p>
+
+<p>I had handful of standard questions about logistics, a few questions comparing them against their competitors, questions about curriculae, etc. You can find a list of questions at the end of this blog post. I didn’t ask all my prepared questions though. Sometimes, you need to evaluate how your interview conversations are flowing. I can’t say I flawlessly navigated these conversations, but I made conscious decisions to ask or not ask certain questions as the circumstances required.</p>
+
+<h2 id="my-interviewing-advice">My interviewing advice</h2>
+
+<ul>
+  <li>Write down a ton of questions to ask for the final half/third of your interview. Asking a lot of questions makes you look AWESOME.
+    <ul>
+      <li>Ask questions that show you’re planning ahead (i.e., questions about logistics).</li>
+      <li>Ask questions that show you’re serious (i.e., very specific/thoughtful questions).</li>
+    </ul>
+  </li>
+  <li>Be prepared to answer basic questions that you already answered in your applications forms. Examples:
+    <ul>
+      <li>Why do you want to do a bootcamp?</li>
+      <li>How did you hear about us?</li>
+      <li>Why do you want to learn to code?</li>
+      <li>Can you handle the intensity of our program? Are you sure? Are you sure you’re sure?</li>
+      <li>What prior programming experience do you have?</li>
+    </ul>
+  </li>
+  <li>Do NOT panic during the technical portion of the interviews. If you don’t know something, just admit it. They don’t expect you to be an expert; they just want to see how much you know so far by asking progressively harder questions until they get to topics beyond your current experience.</li>
+</ul>
+
+<h1 id="interview-questions-for-you-to-ask">Interview questions for YOU to ask</h1>
+
+<p>You might think it’s hard to come up with interesting questions. I used to think that way, but then I stopped being cynical for 2 seconds so then my mind could do some brainstorming. Here are a few ideas for finding inspiration:</p>
+
+<h2 id="question-topics">Question Topics</h2>
+
+<ul>
+  <li>Ask questions about something interesting mentioned on the bootcamp’s blog.</li>
+  <li>Ask questions about specific topics covered by their curriculum.</li>
+  <li>Find the interviewer’s LinkedIn profile or Twitter feed. You might find something cool to ask about.</li>
+  <li>Ask for examples of something they brag about (e.g., if they brag about guest speakers or networking events ask more about those).</li>
+  <li>Check out <a href="/blog/2013/09/04/coding-bootcamp-research-how-to-compare-bootcamps/">my list of factors</a>. Formulate questions about them.</li>
+</ul>
+
+<h2 id="examples-1">Examples</h2>
+
+<h3 id="logistics">Logistics</h3>
+
+<ul>
+  <li>What are the exact start and end* dates for the cohort that starts in (INSERT MONTH HERE)?
+    <ul>
+      <li>*Note: Some bootcamps don’t provide end dates on their websites.</li>
+      <li>Are there any holidays or breaks?</li>
+    </ul>
+  </li>
+  <li>How many students and teachers are there?</li>
+  <li>Does the bootcamp use a rolling cohort system?</li>
+  <li>What are a typical day’s hours?
+    <ul>
+      <li>What percentage of students stay extra late?</li>
+    </ul>
+  </li>
+  <li>What are your payment plans/options?
+    <ul>
+      <li>Do you have a refund policy?</li>
+    </ul>
+  </li>
+  <li>Are there any special requirements?
+    <ul>
+      <li>Do I need a Mac/Linux?</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="qualifications">Qualifications</h3>
+<ul>
+  <li>What kind of industry experience do the faculty have?</li>
+  <li>How do you help students find jobs?</li>
+  <li>How often do students find jobs after graduation?</li>
+  <li>Do you have any hiring/company partners?</li>
+  <li>Do you conduct any alumni outreach?
+    <ul>
+      <li>What kind of support do you provide to alumni?</li>
+    </ul>
+  </li>
+  <li>What are the roles of the various faculty/staff members?
+    <ul>
+      <li>How much attention will I get from lead instructors versus part-time instructors versus junior assistants?</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="technical">Technical</h3>
+<ul>
+  <li>Why did you choose to cover language X instead of language Y?</li>
+  <li>How much of the curriculum features group projects versus individual projects versus quick assignments?</li>
+</ul>
+
+<h3 id="personalityculturevision">Personality/Culture/Vision</h3>
+<ul>
+  <li>What’s your favorite bootcamp-hosted event?
+    <ul>
+      <li>E.g., fire-side chat, guest speaker, social event, networking event, etc.</li>
+    </ul>
+  </li>
+  <li>Why did you decide to work for the bootcamp?</li>
+  <li>What is your favorite part (aka sprint) of the curriculum?</li>
+  <li>What personality traits do your students have in common?
+    <ul>
+      <li>How much experience do your students have before starting the course?</li>
+    </ul>
+  </li>
+  <li>Do you ever kick out students? (You may want to re-phrase this question to be less blunt)
+    <ul>
+      <li>How do you help struggling students?</li>
+      <li>How do you ensure no students fall behind?</li>
+    </ul>
+  </li>
+  <li>What are you doing to improve the bootcamp?
+    <ul>
+      <li>Are you hiring more teachers? Extra staff? Specialized staff (e.g., job hunting, alumni outreach, etc)?</li>
+      <li>Are you expanding into other cities/locations?</li>
+    </ul>
+  </li>
+</ul>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[[Coding Bootcamp Research] How to Compare Bootcamps]]></title>
