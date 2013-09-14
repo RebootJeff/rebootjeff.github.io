@@ -4,7 +4,7 @@
   <title><![CDATA[Jeff: Rebooted]]></title>
   <link href="http://RebootJeff.github.io/atom.xml" rel="self"/>
   <link href="http://RebootJeff.github.io/"/>
-  <updated>2013-09-13T16:38:55-07:00</updated>
+  <updated>2013-09-14T13:19:29-07:00</updated>
   <id>http://RebootJeff.github.io/</id>
   <author>
     <name><![CDATA[Jeff Lee]]></name>
@@ -18,9 +18,13 @@
     <link href="http://RebootJeff.github.io/blog/2013/09/13/how-not-to-rescue-a-baby-snake/"/>
     <updated>2013-09-13T10:04:00-07:00</updated>
     <id>http://RebootJeff.github.io/blog/2013/09/13/how-not-to-rescue-a-baby-snake</id>
-    <content type="html"><![CDATA[<h1 id="supah-random-time">Supah Random Time</h1>
+    <content type="html"><![CDATA[<p><img src="http://RebootJeff.github.io/images/20130913/gopher_snake_SP.jpg" alt="a gopher snake" /></p>
 
-<p>I recently moved a baby snake from my parking garage. I did it for two reasons: (1.) Save the baby! (2.) Play with a snake!</p>
+<p class="my-caption">A gopher snake - Photo Credit: <a href="http://naturemappingfoundation.org/natmap/facts/gopher_snake_712.html">NatureMapping Animal Facts</a></p>
+
+<h1 id="supah-random-time">Supah Random Time</h1>
+
+<p>I recently moved a baby snake from my parking garage. I did it for two reasons: (1) Save the baby! (2) Play with a snake!</p>
 
 <p>I then did something much more random. I wrote up a detailed email about the mini-adventure, and I sent it to my apartment’s building manager…because why not? Actually, there’s a good reason to not do this: it’s weird. Then again, I don’t do this type of writing very often, so it was fun. Below, you can find a relevant YouTube video. Below that, you can find an slightly edited version (<em>emphasis added</em>) of the email I sent to a stranger.</p>
 
@@ -77,7 +81,11 @@
     <link href="http://RebootJeff.github.io/blog/2013/09/10/coding-bootcamp-research-admissions-processes-applications-and-interviews-part-1/"/>
     <updated>2013-09-10T14:25:00-07:00</updated>
     <id>http://RebootJeff.github.io/blog/2013/09/10/coding-bootcamp-research-admissions-processes-applications-and-interviews-part-1</id>
-    <content type="html"><![CDATA[<p>In this blog post, I’m going to cover some basic info and tips about applications and interviews for coding bootcamps. The bootcamps are selective programs. Read on if you’re curious about the application process and/or if you need some help preparing for interviews.</p>
+    <content type="html"><![CDATA[<p><img src="http://RebootJeff.github.io/images/mycodingbootcamplogo_SP.png" alt="my coding bootcamp logo" /></p>
+
+<p class="my-caption">Credits: original boot by <a href="http://store.militaryspot.com/v/vspfiles/photos/BV390%20DES-2T.jpg">MilitarySpot.com</a>; ridiculous editing by me</p>
+
+<p>In this blog post, I’m going to cover some basic info and tips about applications and interviews for coding bootcamps. The bootcamps are selective programs. Read on if you’re curious about the application process and/or if you need some help preparing for interviews.</p>
 
 <p>I can only provide my thoughts based on applying to Coding Dojo, Hack Reactor, RocketU, General Assemby, and App Academy. This blog post won’t be very bootcamp-specific, but in part 2 of 2, I will write detailed descriptions of my personal application and interview experiences.</p>
 
@@ -247,7 +255,11 @@
     <link href="http://RebootJeff.github.io/blog/2013/09/04/coding-bootcamp-research-how-to-compare-bootcamps/"/>
     <updated>2013-09-04T01:12:00-07:00</updated>
     <id>http://RebootJeff.github.io/blog/2013/09/04/coding-bootcamp-research-how-to-compare-bootcamps</id>
-    <content type="html"><![CDATA[<h1 id="how-do-you-research-bootcamps">How do you research bootcamps?</h1>
+    <content type="html"><![CDATA[<p><img src="http://RebootJeff.github.io/images/mycodingbootcamplogo_SP.png" alt="my coding bootcamp logo" /></p>
+
+<p class="my-caption">Credits: original boot by <a href="http://store.militaryspot.com/v/vspfiles/photos/BV390%20DES-2T.jpg">MilitarySpot.com</a>; ridiculous editing by me</p>
+
+<h1 id="how-do-you-research-bootcamps">How do you research bootcamps?</h1>
 <p>When you’re about to buy a car, you gather relevant data by going to KBB, Edmunds, and other sites. You read editorial reviews and watch video reviews. You can investigate possible issues by searching forums and recall databases.</p>
 
 <p>When comparing cars, you consider fuel economy, reliability, style, and niceties. When comparing any big expenditure, you consider price and value. As for determining which aspects of a car really matter to you the most, it’s pretty intuitive to just think about your daily life.</p>
@@ -388,7 +400,11 @@
     <link href="http://RebootJeff.github.io/blog/2013/08/25/hack-reactor-is-my-future/"/>
     <updated>2013-08-25T15:58:00-07:00</updated>
     <id>http://RebootJeff.github.io/blog/2013/08/25/hack-reactor-is-my-future</id>
-    <content type="html"><![CDATA[<p>I have enrolled in the September 23, 2013 cohort of <a href="http://hackreactor.com">Hack Reactor</a> (aka HackR), which is a 12-week coding bootcamp (or “academy” as they say) located in downtown San Francisco. I will pay them thousands of dollars so I can spend about 72-80 hours/week training, learning, and exploring –all in an attempt to gain the skills of a software developer (with a focus on web tech).</p>
+    <content type="html"><![CDATA[<p><img src="http://RebootJeff.github.io/images/hackreactorlogo_SP.png" alt="Hack Reactor logo" /></p>
+
+<p class="my-caption">Image Credits:  <a href="https://hackreactor.eventbrite.com/">Hack Reactor</a></p>
+
+<p>I have enrolled in the September 23, 2013 cohort of <a href="http://hackreactor.com">Hack Reactor</a> (aka HackR), which is a 12-week coding bootcamp (or “academy” as they say) located in downtown San Francisco. I will pay them thousands of dollars so I can spend about 72-80 hours/week training, learning, and exploring –all in an attempt to gain the skills of a software developer (with a focus on web tech).</p>
 
 <h1 id="hold-up-whats-a-coding-bootcamp">Hold up. What’s a coding bootcamp?</h1>
 <p>Coding bootcamps are training courses that teach students the fundamentals needed to become immediately employable in some field of programming (generally web development, but some bootcamps focus on smartphone apps). Most bootcamps require full-time commitment (you must quit your job) and are pretty intense. Students generally “work” for more than 40 hours per week.</p>
@@ -539,8 +555,6 @@
 <p><strong><em>The slides + audio recording can be found here: <a href="http://penxy.com/qeh">http://penxy.com/qeh</a></em></strong></p>
 
 <p>The talk Pollack provided was not very technical in nature. He mostly focused on general productivity, communication, and other soft skills rather than discussing hard skills. Therefore, the talk had a self-help or self-improvement vibe –as opposed to an academic one.</p>
-
-<div style="clear:both;"></div>
 
 <h1 id="what-i-learned">What I Learned</h1>
 <p>I didn’t plan on going into as much detail as I did in my <a href="http://RebootJeff.github.io/blog/2013/08/10/event-review-intro-to-ux-at-general-assembly/">previous event review</a> because you can check out the presentation for yourself in the penxy link I already provided. However, the penxy recording failed to capture the last 2 out of 12 steps. It also missed the conclusion. I also like to ramble.</p>

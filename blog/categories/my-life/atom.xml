@@ -4,7 +4,7 @@
   <title><![CDATA[Category: my life | Jeff: Rebooted]]></title>
   <link href="http://RebootJeff.github.io/blog/categories/my-life/atom.xml" rel="self"/>
   <link href="http://RebootJeff.github.io/"/>
-  <updated>2013-09-13T16:38:55-07:00</updated>
+  <updated>2013-09-14T13:19:29-07:00</updated>
   <id>http://RebootJeff.github.io/</id>
   <author>
     <name><![CDATA[Jeff Lee]]></name>
@@ -18,7 +18,11 @@
     <link href="http://RebootJeff.github.io/blog/2013/08/25/hack-reactor-is-my-future/"/>
     <updated>2013-08-25T15:58:00-07:00</updated>
     <id>http://RebootJeff.github.io/blog/2013/08/25/hack-reactor-is-my-future</id>
-    <content type="html"><![CDATA[<p>I have enrolled in the September 23, 2013 cohort of <a href="http://hackreactor.com">Hack Reactor</a> (aka HackR), which is a 12-week coding bootcamp (or “academy” as they say) located in downtown San Francisco. I will pay them thousands of dollars so I can spend about 72-80 hours/week training, learning, and exploring –all in an attempt to gain the skills of a software developer (with a focus on web tech).</p>
+    <content type="html"><![CDATA[<p><img src="/images/hackreactorlogo_SP.png" alt="Hack Reactor logo" /></p>
+
+<p class="my-caption">Image Credits:  <a href="https://hackreactor.eventbrite.com/">Hack Reactor</a></p>
+
+<p>I have enrolled in the September 23, 2013 cohort of <a href="http://hackreactor.com">Hack Reactor</a> (aka HackR), which is a 12-week coding bootcamp (or “academy” as they say) located in downtown San Francisco. I will pay them thousands of dollars so I can spend about 72-80 hours/week training, learning, and exploring –all in an attempt to gain the skills of a software developer (with a focus on web tech).</p>
 
 <h1 id="hold-up-whats-a-coding-bootcamp">Hold up. What’s a coding bootcamp?</h1>
 <p>Coding bootcamps are training courses that teach students the fundamentals needed to become immediately employable in some field of programming (generally web development, but some bootcamps focus on smartphone apps). Most bootcamps require full-time commitment (you must quit your job) and are pretty intense. Students generally “work” for more than 40 hours per week.</p>
