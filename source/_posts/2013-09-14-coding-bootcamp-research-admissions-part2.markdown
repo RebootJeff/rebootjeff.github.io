@@ -1,0 +1,189 @@
+---
+layout: post
+title: "[Coding Bootcamp Research] Admissions Processes: My Experiences (Part 2 of 2)"
+date: 2013-09-14 17:17
+comments: true
+categories: ['bootcamp research','coding bootcamps','App Academy','Coding Dojo','Dev Bootcamp','General Assembly','Hack Reactor','RocketU']
+---
+![my coding bootcamp logo](/images/mycodingbootcamplogo_SP.png)
+
+<p class='my-caption'>Credits: original boot by <a href='http://store.militaryspot.com/v/vspfiles/photos/BV390%20DES-2T.jpg'>MilitarySpot.com</a>; ridiculous editing by me</p>
+
+In [part 1](/blog/2013/09/10/coding-bootcamp-research-admissions-processes-applications-and-interviews-part-1/), I gave tips on tackling the admissions processes for coding bootcamps. In this article, I shall recap my personal experiences (all taking place in August 2013) with App Academy, Coding Dojo, Dev Bootcamp, General Assembly, Hack Reactor, and RocketU ...in alphabetical order? Sure, why not.
+
+I won't be covering answers to questions I asked at these interviews. I will cover some coding challenges and questions interviewers asked me. I will redact names. Originally, I wanted to include names, but for the sake of writing more openly, I decided to do some Find and Replace. If you apply to the bootcamps mentioned below, you'll probably end up discovering a few of the names I've redacted anyway.
+
+In a future [Coding Bootcamp Research](/blog/categories/bootcamp-research/) blog post, I will provide all the info I gleaned from my interviews.
+
+# App Academy weeds people out ASAP
+
+## Format
+
+1. 45-minute online quiz in Ruby
+2. Another 45-minute online quiz in Ruby
+3. ???
+
+## TL;DR
+
+BUZZKILL ALERT: I put a lot of time/effort into studying for their pre-interview Ruby quiz only to find out I had to do a 2nd quiz to get an interview. At that point, I was already interviewing with the other bootcamps, and I wasn't motivated to contine with my App Academy admissions process. I really believe that interviews help show me how awesome a given bootcamp is --so **2 pre-interview quizzes is like 2 obstacles to accessing a sales pitch I actually WANT.**
+
+## Full Recap
+
+I don't remember if the response was immediate or took a few days to come my way, but soon after I submitted my App Academy application, I got an email telling me that I had to complete a 45-minute Ruby quiz before my admissions process could continue.
+
+The quiz came with instructions to help me study/prepare. It did not come with a deadline, and there was no countdown timer even though I was told I only had 45 minutes to finish. The quiz just involved implementing some functions. I completed the challenges in about 20-30 minutes. I then spend another 15 minutes refactoring the code. I'm not too familiar with Ruby, but I did learn a lot of fun things about the language that makes it possible to write incredibly concise code. **It was a great quiz (what a weird thing to say).**
+
+A day after I submitted my quiz, I got an email telling me to do yet another quiz. At this point, I was not happy. Clearly, App Academy wants to really weed people out of their admissions. I understand that, but I very badly wanted to start the interview process sooner than later. A second quiz meant I'd have to spend more time studying Ruby when I was already busy with applying to other bootcamps and preparing for their interviews.
+
+Maybe I should've given them a chance, but I was already less interested in App Academy because they didn't seem to stand out in any major way other than their deferred payment plan. So I ended up abandoning my App Academy application, and I never got an interview with them.
+
+Originally, I was intrigued by App Academy because it has a reputation for being tougher, putting it at the same high-caliber level as Hack Reactor. However, Hack Reactor seemed to put a lot more effort into community outreach, Quora posting, and just putting out more good vibes to get me excited about their program. In other words, **App Academy's marketing was over-shadowed by Hack Reactor's marketing.** I know that probably sounds really lame, but it's the truth for my personal experience. As for the other bootcamps, they intrigued me by differentiating themselves in other ways.
+
+# Coding Dojo is simple
+
+## Format
+
+1. Non-technical interview
+2. Profit.
+3. ???
+
+## TL;DR
+
+Dojo only put me through 1 non-technical interview. The interview gave me a positive impression of the bootcamp culture, but other factors (like a weird pre-interview video) left me raising an eyebrow.
+
+## Full Recap
+
+Before my interview with Coding Dojo, **I was emailed a link to a private pre-interview video.** I was excited about what it could possibly cover. I was disappointed to learn it was a FAQs video. I won't reveal the link or password, but I will give a quick overview of the contents.
+
+The video was a mediocre-quality recording of [CD guy1] talking to the camera. It was unedited, and just didn't feel very professional. The whole time I watched him answer some FAQs, **I kept wondering why the answers weren't on the FAQ page of the Coding Dojo website.** Why were these questions and answers password-protected?
+
+Maybe it's because [CD guy1] answered questions re: comparing Coding Dojo to its competitors by admitting that their hiring network was smaller than most. The only reassurance provided was along the lines of "don't worry, we're working on it."
+
+My first bootcamp interview was a phone call with [CD guy2], a Coding Dojo graduate-turned-teaching-assistant (aka Hacker-in-Residence or Developer-in-Residence). He was incredibly nice, and I dug his personality. He didn't ask me any technical questions. He only asked me questions to help set my expectations and gauge my motivation.
+
+He made me feel better about Coding Dojo, but I still figured the other bootcamps would probably do a better job of impressing me.
+
+About 6 days after the interview, I was emailed an offer to enroll in Coding Dojo's September cohort.
+
+# Dev Bootcamp -- I didn't actually apply
+
+I wanted to join a bootcamp ASAP. DBC's website says they're sold out for the next 6 months, so I didn't bother applying to their program.
+
+A few days ago, I met someone currently in Dev Bootcamp. She said that **DBC is actually flexible in cohort placement.** In fact, she was able to enter a sold out cohort.
+
+# General Assembly is all HTML/CSS
+
+## Format
+
+1. Non-technical interview
+2. Online tutorial about HTML/CSS and jQuery
+3. HTML/CSS challenge done (make an About Me webpage)
+4. Semi-technical interview about your About Me page
+
+## TL;DR
+
+I may have done a few things that screwed up my relationship with GA. Other than that, their admissions process was easy and fun.
+
+## Full Recap
+
+There's some relevant backstory I need to tell you first. It all started BEFORE I cared about bootcamps. I enrolled in GA's Front-End Web Development (FEWD) course. It's 9 hours per class x 1 class per week x 10 weeks ...for $3,000 (or maybe it was $3.5k; I don't quite remember). I was really excited about the course, but I was worried it covered too many of the basics I already taught myself. I also worried that it wouldn't really help me get a job due to lack of rigor.
+
+Eventually, I became way more interested in bootcamps, which provide much more learning per dollar spent. Furthermore, the GA FEWD course was clearly aimed at weekend warriors. I'm unemployed, so I may as well invest in a more immersive experience.
+
+Ok...enough excuses. The point is that I eventually canceled my enrollment a few days before the course started. This left a bad impression on GA. [GA guy1] was very patient with me, but I could tell he wasn't happy with me. He agreed to begin my admissions process for GA's bootcamp after a phone call (which turned out to be my first interview). The phone call was scheduled after I sent an email to GA asking why my bootcamp application hadn't gotten a response. *Awkward.* [GA guy1] even told me he thinks I'd be better served by GA's FEWD rather than GA's WDI (Web Development Immersive, which is what they call their bootcamp). I didn't express it, but I kind of took his comment as an insult. Please forgive my arrogance.
+
+### Back to the actual GA bootcamp admissions process
+
+Via email, I was instructed to do a GA onine tutorial using their system called Dash. It was a pretty good-looking tutorial, but it covered really basic HTML/CSS + jQuery material. I was underwhelmed. I also had to create a simple About Me webpage (offline --no need to host it on the web). They made it clear that their expectations were low. They didn't even expect me to use any jQuery even though their tutorial included it.
+
+There's a [relevant Quora answer](http://qr.ae/NvpkG) written by a GA official (whom I never talked to). He talks about how **GA's admissions process is supposed to be less technical for the sake of preventing discrimination against applicants with less programming experience.**
+
+My second interview with GA was held at their offices in SF. Sadly, I got there late. I was a sweaty mess because I took the BART to get into the city, but apparently GA's offices are about 1 mile from the nearest BART station. I should've used the Caltrain. I'm a fool.
+
+[GA guy1] greeted me as if I hadn't ruined his life through my FEWD course cancellation, so things started off great. He sent me to an empty classroom where I could be interviewed by [GA gal], a Developer-in-Residence. She asked me to talk about my About Me page. She asked me what challenges I faced, what resources I used for help, what I thought, etc.
+
+Then she asked me general questions about my background, motivation, living arrangements + commute, etc. I was a bit befuddled by [GA gal]. It wasn't her line of questioning that made me think something was wrong, it was her communication style.
+
+She didn't give off that aura of excitement that other interviewers had. She also seem taken aback by my conversational interview style as if she had expected me to take a more passive role. I think I talked too much? [insert joke about how I write blog posts that are too wordy]
+
+I guess what I'm trying to say is that [GA gal] made me think the interview was about me impressing GA rather than GA impressing me. As I've stated before, I believe all interviews are about 2-way impressing.
+
+Luckily, [GA guy2] took [GA gal]'s place. Apparently she had been sent to interview me in his stead because he got caught up with work. This probably explains her demeanor, so I shouldn't be so critical of her. She wasn't prepared to conduct an interview.
+
+[GA guy2] is also a Developer-in-Residence, but he carried himself with the confident vibes of a true pro. **I liked this guy a lot. He made me feel excited about GA.** I had to re-answer a lot of the same questions [GA gal] asked me, but I got much more of a response out of [GA guy2] whereas [GA gal] just sorted nodded dismissively as I spoke.
+
+Unfortunately, our time was **very** limited (likely my fault for being late). There was barely any room for me to ask questions. [GA guy2] left and [GA guy1] re-entered. I asked [GA guy1] some questions from [my giant list](/blog/2013/09/10/coding-bootcamp-research-admissions-processes-applications-and-interviews-part-1/#interview-questions-for-you-to-ask), but at that point, I didn't have my laptop in front of me, which sucked because I didn't memorize many questions.
+
+I left the building feeling very confident. **I never heard back from them.** Bummer. I wonder if they checked out my blog, where I announced my enrollment at Hack Reactor less than a week after my final GA interview.
+
+# Hack Reactor wants to kick your pathetic ass!
+
+## Format
+
+1. Technical interview on basic JavaScript
+2. AJAX + jQuery challenge done at home
+3. Technical interview on Functional (wtf!) JavaScript
+
+## TL;DR
+
+Holy crap! The admissions process was so friggin' tough!
+
+## Full Recap
+
+Before my first HackR interview, I was emailed a big list of things to study. The list included a lot of JavaScript's built-in Array and String functions. Right off the bat, I felt a bit intimidated.
+
+I was interviewed in person by [HackR staff] and [HackR X], a Hacker-in-Residence. Quick aside: HackR's office space is really friggin' warm so dress appropriately. I was sweating even before I got nervous.
+
+[HackR X] asked me to do some live coding, which was so easy (basic looping, arrays, etc. in JS) that I got over-confident. I made some *really* careless mistakes (off-by-1 bug, overly-complicated algorithm, etc). Woops.
+
+It's all good though. [HackR staff] seemed intimidating at first by just focusing on his own laptop the whole time as if he was just there to casually judge me. However, [HackR staff] and [HackR X] eventually helped me edit my code.
+
+Then, they asked me some questions. At the end of the interview, [HackR staff] did a quick recap, explaining that HackR has three objectives for first-round interviews:
+
+	1. Set my expectations - They wanted to make sure I knew that their program is no joke; it's seriously intense
+	2. Gauge my motivation/drive - They wanted to see how much self-teaching I've done
+	3. Check my financial situation - They wanted to hear how I planned to pay the high tuition
+
+My first HackR interview was scheduled for 1 hour, but it lasted for at least 1.5 hours because I asked a crapload of questions. By the time I interviewed with them, I was already extra excited about them because of [their thoughtful responses to Quora questions](http://www.quora.com/Hack-Reactor) and [student/alumni blogs](http://kevinhamiltonsmith.com/hack-reactor-student-blogs/). So I put in extra effort into preparing my questions. [HackR staff] showed more interest in my candidacy-for-HackR-student when I started asking a lot of good questions that [HackR X] couldn't answer.
+
+Side note: [HackR staff] appeared surprised when I asked him about their refund policy. That's ironic when you consider that [their own blog suggests you ask all bootcamps about refunds](http://hackreactor.com/developer-bootcamp-contracts).
+
+After the first interview, I was told to complete a coding challenge at home before my second interview. I was full of confidence and empty of any commitments, so I scheduled my second interview to take place a few days after my first interview. That didn't leave me with much time, but [HackR staff] assured me that it would only take about 8 hours to complete.
+
+### Here comes the pain
+
+It took me *at least* 8 hours. I was instructed to go through [Code School's tutorial on Google Chrome dev tools](http://discover-devtools.codeschool.com/). The challenge was quirky. It's hard to explain, but it's certainly unique in its presentation. You'll have to explore it yourself. However, I'm not entirely praising it because the instructions felt somewhat vague even after reading the additional tips they provided. I remember reading a student blog that claimed **HackR purposefully makes certain instructions vague or certain code buggy just to keep you on your toes.** Too bad I forgot the name of the blog, so I can't give you a link.
+
+Anyway, I had to teach myself basic AJAX. I already taught myself basic jQuery, which was a required technology for the challenge. Unfortunately, I didn't have a very good understanding of AJAX. I got my code to work, but one particular feature worked after some guesswork. I didn't truly know how that feature worked. Moreover, I could sense my app was only about 95% correct. **My brain told me this was ok, but my heart told me to go cry like the weakling that I am.**
+
+My second-round interview was a somewhat disjointed experience. At first, I was interviewed by Hacker-in-Residence [HackR Y]. Once again, I felt like I had over-stepped my bounds. When [HackR Y] asked me about my experience with the AJAX + jQuery challenge, I interpreted the moment as an opportunity to ask him to help me get my code 100% correct. We spent more than a few minutes on it before he decided it was time to move on. As it turned out, the interview was supposed to focus on new challenges, not the AJAX + jQuery challenge.
+
+I began programming solutions to the new challenges, which involved pretty simple functions. However, throughout the interview, [HackR Y] would leave to deal with a phone call. He described it as "the most important phone call of my life" so the man was not investing much attention into my interview. I didn't hold it against him.
+
+Eventually, [HackR Z], another Hacker-in-Residence took over [HackR Y]'s interviewing duties. **This is where I got my ass beat.** [HackR Z] asked me to rewrite the functions I had just completed in a way that reused one after the other. Not only that, but the rewrite challenge also required the functions to accept functions as parameters. All of this can be described as Functional Programming, a computer science concept I had never heard of before.
+
+I managed to make a function that called another function while passing it a function. Hot damn. Then I was told to go another layer deeper. **My brain basically said, "[DO NOT WANT](http://knowyourmeme.com/memes/do-want-do-not-want)."** I was abandoned by my own brain. I guess most people would call it "panic" but it just felt like I couldn't think. It could almost be described as ignorant bliss if not for the soul-crushing disappointment that accompanied it.
+
+[HackR Z] was cool about it. He guided me through a solution, then he brought me to a <del>beautiful backyard under false pretenses to put me out of my misery</del> conference room so we could talk more. I proceeded to ask him a ton of questions, some of which I had already asked [HackR X] to answer (I wanted to get multiple perspectives for certain questions). **I got the impression that [HackR Z] was not just cool, he was chill as fuck.**
+
+Not only was [HackR Z] chill, but he also did something particularly considerate. The first thing he did upon closing the conference room door behind us was give me immediate feedback. He straight-up told me not to worry about my brain fart during the live coding session because he felt the whole ordeal qualified as a great interview.
+
+I don't casually throw around the word "epic" like many of my peers do, but [HackR Z] basically **excorcised the feeling of dread from my mind.** And it felt epic. The feeling of dread felt epic, and the feeling of that toxicity evaporating felt even more epic. Epic, epic, *EPIC!*
+
+# RocketU is new and eager
+
+## Format
+1. Non-technical interview
+2. Semi-technical interview on HTML/CSS + programming concepts
+
+## TL;DR
+
+RocketU really felt extra eager to me. The new bootcamp in town really wanted to impress, but the technical questions were definitely not easy.
+
+## Full Recap
+
+The first interview was a typical test of personality fit. The second interview had some very specific quiz-like questions, but no live coding. I loved the second interviewer.
+
+# For the record
+
+I did not send followup emails or thank you emails after my interviews. I know you're supposed to do that for job interviews, but I wasn't sure what to do for bootcamp interviews. Looking back on it, I wish I had at least sent thank you emails even though everything worked out in the end.

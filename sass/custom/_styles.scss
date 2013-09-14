@@ -69,6 +69,7 @@ a:hover {
 .entry-content h1 {
   text-align: center;
   margin-top: 12px;
+  clear: both;
 }
 .entry-content h1:after {
   // modified from http://css-tricks.com/examples/hrs/
@@ -100,11 +101,23 @@ a:hover {
 #footer_notes{
   margin-top: 15px;
 }
-// New class for "last updated: blah blah blah" text
+// New class for "Last Updated: blah blah blah" text
 .last-updated {
   color: gray;
-  font-size: 12px;
+  font-size: 0.85em;
   font-style: italic;
+}
+// New class for picture captions
+.my-caption {
+  margin: 0em 0em 1em 0em;
+  color: gray;
+  font-size: 0.85em;
+  font-style: italic;
+  text-align: center;
+}
+// New class for removing margin-bottom from any element
+.my-no-margin-bottom {
+  margin-bottom: 0px;
 }
 
 // Change top nav bar to flat GUI

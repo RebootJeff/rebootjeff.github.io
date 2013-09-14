@@ -5,9 +5,13 @@ date: 2013-09-13 10:04
 comments: true
 categories: ['story time','random']
 ---
+![a gopher snake](/images/20130913/gopher_snake_SP.jpg)
+
+<p class='my-caption'>A gopher snake - Photo Credit: <a href='http://naturemappingfoundation.org/natmap/facts/gopher_snake_712.html'>NatureMapping Animal Facts</a></p>
+
 # Supah Random Time
 
-I recently moved a baby snake from my parking garage. I did it for two reasons: (1.) Save the baby! (2.) Play with a snake!
+I recently moved a baby snake from my parking garage. I did it for two reasons: (1) Save the baby! (2) Play with a snake!
 
 I then did something much more random. I wrote up a detailed email about the mini-adventure, and I sent it to my apartment's building manager...because why not? Actually, there's a good reason to not do this: it's weird. Then again, I don't do this type of writing very often, so it was fun. Below, you can find a relevant YouTube video. Below that, you can find an slightly edited version (*emphasis added*) of the email I sent to a stranger.
 

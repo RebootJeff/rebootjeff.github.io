@@ -5,6 +5,10 @@ date: 2013-08-25 15:58
 comments: true
 categories: ['Hack Reactor','my life','coding bootcamps','bootcamp research']
 ---
+![Hack Reactor logo](/images/hackreactorlogo_SP.png)
+
+<p class='my-caption'>Image Credits:  <a href='https://hackreactor.eventbrite.com/'>Hack Reactor</a></p>
+
 
 I have enrolled in the September 23, 2013 cohort of [Hack Reactor](http://hackreactor.com) (aka HackR), which is a 12-week coding bootcamp (or "academy" as they say) located in downtown San Francisco. I will pay them thousands of dollars so I can spend about 72-80 hours/week training, learning, and exploring --all in an attempt to gain the skills of a software developer (with a focus on web tech).
 

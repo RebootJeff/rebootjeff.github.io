@@ -5,6 +5,9 @@ date: 2013-09-10 14:25
 comments: true
 categories: ['bootcamp research','coding bootcamps','Hack Reactor','General Assembly','RocketU','Coding Dojo','App Academy','Dev Bootcamp']
 ---
+![my coding bootcamp logo](/images/mycodingbootcamplogo_SP.png)
+
+<p class='my-caption'>Credits: original boot by <a href='http://store.militaryspot.com/v/vspfiles/photos/BV390%20DES-2T.jpg'>MilitarySpot.com</a>; ridiculous editing by me</p>
 
 In this blog post, I'm going to cover some basic info and tips about applications and interviews for coding bootcamps. The bootcamps are selective programs. Read on if you're curious about the application process and/or if you need some help preparing for interviews.
 

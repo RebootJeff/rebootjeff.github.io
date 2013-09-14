@@ -16,8 +16,6 @@ Yesterday, [Chartboost](https://chartboost.com) hosted a presentation by [Gregg 
 
 The talk Pollack provided was not very technical in nature. He mostly focused on general productivity, communication, and other soft skills rather than discussing hard skills. Therefore, the talk had a self-help or self-improvement vibe --as opposed to an academic one.
 
-<div style="clear:both;"></div>
-
 # What I Learned
 I didn't plan on going into as much detail as I did in my [previous event review](/blog/2013/08/10/event-review-intro-to-ux-at-general-assembly/) because you can check out the presentation for yourself in the penxy link I already provided. However, the penxy recording failed to capture the last 2 out of 12 steps. It also missed the conclusion. I also like to ramble.
 
