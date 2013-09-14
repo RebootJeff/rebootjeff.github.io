@@ -39,7 +39,7 @@ Maybe I should've given them a chance, but I was already less interested in App 
 
 Originally, I was intrigued by App Academy because it has a reputation for being tougher, putting it at the same high-caliber level as Hack Reactor. However, Hack Reactor seemed to put a lot more effort into community outreach, Quora posting, and just putting out more good vibes to get me excited about their program. In other words, **App Academy's marketing was over-shadowed by Hack Reactor's marketing.** I know that probably sounds really lame, but it's the truth for my personal experience. As for the other bootcamps, they intrigued me by differentiating themselves in other ways.
 
-# Coding Dojo is simple
+# Coding Dojo keeps it simple
 
 ## Format
 
@@ -59,11 +59,9 @@ The video was a mediocre-quality recording of [CD guy1] talking to the camera. I
 
 Maybe it's because [CD guy1] answered questions re: comparing Coding Dojo to its competitors by admitting that their hiring network was smaller than most. The only reassurance provided was along the lines of "don't worry, we're working on it."
 
-My first bootcamp interview was a phone call with [CD guy2], a Coding Dojo graduate-turned-teaching-assistant (aka Hacker-in-Residence or Developer-in-Residence). He was incredibly nice, and I dug his personality. He didn't ask me any technical questions. He only asked me questions to help set my expectations and gauge my motivation.
+My first bootcamp interview was a phone call with [CD guy2], a Coding Dojo graduate-turned-teaching-assistant (aka Hacker-in-Residence or Developer-in-Residence). He was incredibly nice, and I dug his personality. He didn't ask me any technical questions. He only asked me questions about myself to help set my expectations and gauge my motivation levels. He made me feel better about Coding Dojo, but I still figured the other bootcamps would probably do a better job of impressing me.
 
-He made me feel better about Coding Dojo, but I still figured the other bootcamps would probably do a better job of impressing me.
-
-About 6 days after the interview, I was emailed an offer to enroll in Coding Dojo's September cohort.
+About 6 days after the interview, I was emailed an offer to enroll in Coding Dojo's September cohort. After about a week, I declined their offer.
 
 # Dev Bootcamp -- I didn't actually apply
 
@@ -71,7 +69,7 @@ I wanted to join a bootcamp ASAP. DBC's website says they're sold out for the ne
 
 A few days ago, I met someone currently in Dev Bootcamp. She said that **DBC is actually flexible in cohort placement.** In fact, she was able to enter a sold out cohort.
 
-# General Assembly is all HTML/CSS
+# General Assembly likes HTML/CSS
 
 ## Format
 
