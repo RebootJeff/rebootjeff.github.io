@@ -100,11 +100,11 @@ My second interview with GA was held at their offices in SF. Sadly, I got there 
 
 [GA guy1] greeted me as if I hadn't ruined his life through my FEWD course cancellation, so things started off great. He sent me to an empty classroom where I could be interviewed by [GA gal], a Developer-in-Residence. She asked me to talk about my About Me page. She asked me what challenges I faced, what resources I used for help, what I thought, etc.
 
-Then she asked me general questions about my background, motivation, living arrangements + commute, etc. I was a bit befuddled by [GA gal]. It wasn't her line of questioning that made me think something was wrong, it was her communication style.
+Then she asked me general questions about my background, motivation, living arrangements + commute, etc. As I answered these typical questions, I was a bit befuddled by [GA gal]. It wasn't her line of questioning that made me think something was wrong, it was her communication style.
 
-She didn't give off that aura of excitement that other interviewers had. She also seem taken aback by my conversational interview style as if she had expected me to take a more passive role. I think I talked too much? [insert joke about how I write blog posts that are too wordy]
+She didn't give off that aura of excitement that other interviewers had. She also seemed taken aback by my conversational interview style as if she had expected me to take a more passive role. I think I talked too much? [insert joke about how I write blog posts that are too wordy]
 
-I guess what I'm trying to say is that [GA gal] made me think the interview was about me impressing GA rather than GA impressing me. As I've stated before, I believe all interviews are about 2-way impressing.
+I guess what I'm trying to say is that [GA gal] made me think the interview was about me impressing GA rather than GA impressing me. As I've stated before, I believe all interviews are two-way streets.
 
 Luckily, [GA guy2] took [GA gal]'s place. Apparently she had been sent to interview me in his stead because he got caught up with work. This probably explains her demeanor, so I shouldn't be so critical of her. She wasn't prepared to conduct an interview.
 
@@ -112,7 +112,7 @@ Luckily, [GA guy2] took [GA gal]'s place. Apparently she had been sent to interv
 
 Unfortunately, our time was **very** limited (likely my fault for being late). There was barely any room for me to ask questions. [GA guy2] left and [GA guy1] re-entered. I asked [GA guy1] some questions from [my giant list](/blog/2013/09/10/coding-bootcamp-research-admissions-processes-applications-and-interviews-part-1/#interview-questions-for-you-to-ask), but at that point, I didn't have my laptop in front of me, which sucked because I didn't memorize many questions.
 
-I left the building feeling very confident. **I never heard back from them.** Bummer. I wonder if they checked out my blog, where I announced my enrollment at Hack Reactor less than a week after my final GA interview.
+I left the building feeling very confident, but **I never heard back from them.** Not to sound too full of myself, but I wonder if they checked out my blog after I announced my enrollment at Hack Reactor. It probably takes them awhile to decide which applicants to accept, but I uploaded [my announcement post](/blog/2013/08/25/hack-reactor-is-my-future/) less than a week after my final GA interview.
 
 # Hack Reactor wants to kick your pathetic ass!
 
@@ -120,7 +120,7 @@ I left the building feeling very confident. **I never heard back from them.** Bu
 
 1. Technical interview on basic JavaScript
 2. AJAX + jQuery challenge done at home
-3. Technical interview on Functional (wtf!) JavaScript
+3. Technical interview on Functional JavaScript (wtf!)
 
 ## TL;DR
 
@@ -128,9 +128,9 @@ Holy crap! The admissions process was so friggin' tough!
 
 ## Full Recap
 
-Before my first HackR interview, I was emailed a big list of things to study. The list included a lot of JavaScript's built-in Array and String functions. Right off the bat, I felt a bit intimidated.
+Before my first HackR interview, I was emailed a big list of things to study. The list included a lot of JavaScript's built-in Array and String functions. Right off the bat, I felt a bit intimidated because although the material looked easy, the length of the pre-interview to-do list was exceptional.
 
-I was interviewed in person by [HackR staff] and [HackR X], a Hacker-in-Residence. Quick aside: HackR's office space is really friggin' warm so dress appropriately. I was sweating even before I got nervous.
+I was interviewed in person by [HackR staff] and [HackR X], a Hacker-in-Residence. Quick aside: HackR's office space is really friggin' warm so you should dress appropriately. I was sweating even before I got nervous.
 
 [HackR X] asked me to do some live coding, which was so easy (basic looping, arrays, etc. in JS) that I got over-confident. I made some *really* careless mistakes (off-by-1 bug, overly-complicated algorithm, etc). Woops.
 
@@ -138,35 +138,35 @@ It's all good though. [HackR staff] seemed intimidating at first by just focusin
 
 Then, they asked me some questions. At the end of the interview, [HackR staff] did a quick recap, explaining that HackR has three objectives for first-round interviews:
 
-	1. Set my expectations - They wanted to make sure I knew that their program is no joke; it's seriously intense
-	2. Gauge my motivation/drive - They wanted to see how much self-teaching I've done
-	3. Check my financial situation - They wanted to hear how I planned to pay the high tuition
+1. Set my expectations - They wanted to make sure I knew that their program is no joke; it's seriously intense
+2. Gauge my motivation/drive - They wanted to see how much self-teaching I've done
+3. Check my financial situation - They wanted to hear how I planned to pay the high tuition
 
-My first HackR interview was scheduled for 1 hour, but it lasted for at least 1.5 hours because I asked a crapload of questions. By the time I interviewed with them, I was already extra excited about them because of [their thoughtful responses to Quora questions](http://www.quora.com/Hack-Reactor) and [student/alumni blogs](http://kevinhamiltonsmith.com/hack-reactor-student-blogs/). So I put in extra effort into preparing my questions. [HackR staff] showed more interest in my candidacy-for-HackR-student when I started asking a lot of good questions that [HackR X] couldn't answer.
+My first HackR interview was scheduled for 1 hour, but it lasted for at least 1.5 hours because I asked a crapload of questions. Before I interviewed with them, I was already extra excited about them because of some hype from [student/alumni blogs](http://kevinhamiltonsmith.com/hack-reactor-student-blogs/) and [their thoughtful responses to Quora questions](http://www.quora.com/Hack-Reactor). So I put in extra effort into preparing my questions. [HackR staff] showed more interest in my candidacy-for-HackR-student when I started asking a lot of good questions that [HackR X] couldn't answer.
 
 Side note: [HackR staff] appeared surprised when I asked him about their refund policy. That's ironic when you consider that [their own blog suggests you ask all bootcamps about refunds](http://hackreactor.com/developer-bootcamp-contracts).
 
-After the first interview, I was told to complete a coding challenge at home before my second interview. I was full of confidence and empty of any commitments, so I scheduled my second interview to take place a few days after my first interview. That didn't leave me with much time, but [HackR staff] assured me that it would only take about 8 hours to complete.
+After the first interview, I was told to complete a coding challenge at home before my second interview. I was full of confidence and empty of any commitments, so I scheduled my second interview to take place four days after my first interview. That didn't leave me with much time, but [HackR staff] assured me that it would only take about 8 hours to complete.
 
 ### Here comes the pain
 
-It took me *at least* 8 hours. I was instructed to go through [Code School's tutorial on Google Chrome dev tools](http://discover-devtools.codeschool.com/). The challenge was quirky. It's hard to explain, but it's certainly unique in its presentation. You'll have to explore it yourself. However, I'm not entirely praising it because the instructions felt somewhat vague even after reading the additional tips they provided. I remember reading a student blog that claimed **HackR purposefully makes certain instructions vague or certain code buggy just to keep you on your toes.** Too bad I forgot the name of the blog, so I can't give you a link.
+It took me *at least* 8 hours. First, I was instructed to go through [Code School's tutorial on Google Chrome dev tools](http://discover-devtools.codeschool.com/). Then, things got quirky. It's hard to explain, but the challenge included some unique presentation. You'll have to explore it yourself. However, I'm not entirely praising it because the instructions felt somewhat vague even after reading the additional tips they provided. I remember reading a student blog that claimed **HackR purposefully makes certain instructions vague or certain code buggy just to keep you on your toes.** Too bad I forgot the name of the blog, so I can't give you a link.
 
-Anyway, I had to teach myself basic AJAX. I already taught myself basic jQuery, which was a required technology for the challenge. Unfortunately, I didn't have a very good understanding of AJAX. I got my code to work, but one particular feature worked after some guesswork. I didn't truly know how that feature worked. Moreover, I could sense my app was only about 95% correct. **My brain told me this was ok, but my heart told me to go cry like the weakling that I am.**
+Anyway, I had to teach myself basic AJAX. I already taught myself basic jQuery, which was also a required technology for the challenge. Unfortunately, I didn't have a very good understanding of AJAX. I got my code to work, but one particular feature functioned only after some guesswork. I didn't truly know how that feature worked. Moreover, I could sense my app was only about 98% correct. **My brain told me this was ok, but my heart told me to go cry like the weakling that I am.**
 
-My second-round interview was a somewhat disjointed experience. At first, I was interviewed by Hacker-in-Residence [HackR Y]. Once again, I felt like I had over-stepped my bounds. When [HackR Y] asked me about my experience with the AJAX + jQuery challenge, I interpreted the moment as an opportunity to ask him to help me get my code 100% correct. We spent more than a few minutes on it before he decided it was time to move on. As it turned out, the interview was supposed to focus on new challenges, not the AJAX + jQuery challenge.
+My second-round interview was a somewhat disjointed experience. At first, I was interviewed by Hacker-in-Residence [HackR Y]. Once again, I felt like I had over-stepped my bounds. When [HackR Y] asked me about my experience with the AJAX + jQuery challenge, I interpreted the moment as an opportunity to ask him to help me get my code 100% correct. We spent more than a few minutes on it before he decided it was time to move on. As it turned out, the interview was supposed to focus on new challenges, not the AJAX + jQuery challenge. That was an unpleasant surprise (considering the effort I spent overcoming its difficulties).
 
-I began programming solutions to the new challenges, which involved pretty simple functions. However, throughout the interview, [HackR Y] would leave to deal with a phone call. He described it as "the most important phone call of my life" so the man was not investing much attention into my interview. I didn't hold it against him.
+I began programming solutions to the new challenges, which involved pretty simple functions. However, throughout the interview, [HackR Y] randomly left to deal with a phone call. He described it as "the most important phone call of my life" so the man was not investing much attention into my interview. I didn't hold it against him.
 
 Eventually, [HackR Z], another Hacker-in-Residence took over [HackR Y]'s interviewing duties. **This is where I got my ass beat.** [HackR Z] asked me to rewrite the functions I had just completed in a way that reused one after the other. Not only that, but the rewrite challenge also required the functions to accept functions as parameters. All of this can be described as Functional Programming, a computer science concept I had never heard of before.
 
-I managed to make a function that called another function while passing it a function. Hot damn. Then I was told to go another layer deeper. **My brain basically said, "[DO NOT WANT](http://knowyourmeme.com/memes/do-want-do-not-want)."** I was abandoned by my own brain. I guess most people would call it "panic" but it just felt like I couldn't think. It could almost be described as ignorant bliss if not for the soul-crushing disappointment that accompanied it.
+I managed to make a function that called another function while passing it a function. Hot damn. Then I was told to go another layer deeper. **My brain replied, "[DO NOT WANT](http://knowyourmeme.com/memes/do-want-do-not-want)."** I was abandoned by my own brain. I guess most people would call it "panic" but it just felt like I couldn't think. It could almost be described as ignorant bliss if not for the soul-crushing disappointment that accompanied it.
 
-[HackR Z] was cool about it. He guided me through a solution, then he brought me to a <del>beautiful backyard under false pretenses to put me out of my misery</del> conference room so we could talk more. I proceeded to ask him a ton of questions, some of which I had already asked [HackR X] to answer (I wanted to get multiple perspectives for certain questions). **I got the impression that [HackR Z] was not just cool, he was chill as fuck.**
+[HackR Z] was cool about it. He guided me through a solution, then he brought me to a <del>beautiful backyard under false pretenses to put me out of my misery</del> conference room so we could talk more. I proceeded to ask him a ton of questions, some of which I had already asked [HackR X] to answer (I wanted to get multiple perspectives for certain questions). **I got the impression that [HackR Z] was not just cool, he was chill as shiiit.**
 
 Not only was [HackR Z] chill, but he also did something particularly considerate. The first thing he did upon closing the conference room door behind us was give me immediate feedback. He straight-up told me not to worry about my brain fart during the live coding session because he felt the whole ordeal qualified as a great interview.
 
-I don't casually throw around the word "epic" like many of my peers do, but [HackR Z] basically **excorcised the feeling of dread from my mind.** And it felt epic. The feeling of dread felt epic, and the feeling of that toxicity evaporating felt even more epic. Epic, epic, *EPIC!*
+I don't casually throw around the word "epic" like many of my peers do, but [HackR Z] basically **excorcised the feeling of dread from my mind.** And it felt epic. The feeling of dread felt epic, and the feeling of that toxicity evaporating felt even more epic. Epic, epic, *EPIC!* Actually, now I feel weird about the word "epic" again.
 
 # RocketU is new and eager
 
@@ -176,7 +176,7 @@ I don't casually throw around the word "epic" like many of my peers do, but [Hac
 
 ## TL;DR
 
-RocketU really felt extra eager to me. The new bootcamp in town really wanted to impress, but the technical questions were definitely not easy.
+RocketU really felt extra eager to me. The new bootcamp in town really wanted to impress. The technical questions were tickier than they should've been due to some miscommunication.
 
 ## Full Recap
 
