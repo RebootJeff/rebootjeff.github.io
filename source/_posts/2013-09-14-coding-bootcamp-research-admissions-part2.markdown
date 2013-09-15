@@ -7,7 +7,7 @@ categories: ['bootcamp research','coding bootcamps','App Academy','Coding Dojo',
 ---
 ![my coding bootcamp logo](/images/mycodingbootcamplogo_SP.png)
 
-<p class='my-caption'>Credits: original boot by <a href='http://store.militaryspot.com/v/vspfiles/photos/BV390%20DES-2T.jpg'>MilitarySpot.com</a>; ridiculous editing by me</p>
+<p class='my-caption'>Image Credits: original boot by MilitarySpot.com; ridiculous editing by me</p>
 
 In [part 1](/blog/2013/09/10/coding-bootcamp-research-admissions-processes-applications-and-interviews-part-1/), I gave tips on tackling the admissions processes for coding bootcamps. In this article, I shall recap my personal experiences (all taking place in August 2013) with App Academy, Coding Dojo, Dev Bootcamp, General Assembly, Hack Reactor, and RocketU ...in alphabetical order? Sure, why not.
 

@@ -7,7 +7,7 @@ categories: ['bootcamp research','coding bootcamps']
 ---
 ![my coding bootcamp logo](/images/mycodingbootcamplogo_SP.png)
 
-<p class='my-caption'>Credits: original boot by <a href='http://store.militaryspot.com/v/vspfiles/photos/BV390%20DES-2T.jpg'>MilitarySpot.com</a>; ridiculous editing by me</p>
+<p class='my-caption'>Image Credits: original boot by MilitarySpot.com; ridiculous editing by me</p>
 
 # How do you research bootcamps?
 When you're about to buy a car, you gather relevant data by going to KBB, Edmunds, and other sites. You read editorial reviews and watch video reviews. You can investigate possible issues by searching forums and recall databases.

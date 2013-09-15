@@ -7,7 +7,7 @@ categories: ['story time','random']
 ---
 ![a gopher snake](/images/20130913/gopher_snake_SP.jpg)
 
-<p class='my-caption'>A gopher snake - Photo Credit: <a href='http://naturemappingfoundation.org/natmap/facts/gopher_snake_712.html'>NatureMapping Animal Facts</a></p>
+<p class='my-caption'>A gopher snake - Image Credits: <a href='http://naturemappingfoundation.org/natmap/facts/gopher_snake_712.html'>NatureMapping Animal Facts</a></p>
 
 # Supah Random Time
 
