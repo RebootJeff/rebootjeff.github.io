@@ -112,7 +112,7 @@ Luckily, [GA person 3] took [GA person 2]'s place. Apparently she had been sent 
 
 Unfortunately, our time was **very** limited (likely my fault for being late). There was barely any room for me to ask questions. [GA person 3] left and [GA person 1] re-entered. I asked [GA person 1] some questions from [my giant list](/blog/2013/09/10/coding-bootcamp-research-admissions-processes-applications-and-interviews-part-1/#interview-questions-for-you-to-ask), but at that point, I didn't have my laptop in front of me, which sucked because I didn't memorize many questions.
 
-I left the building feeling very confident, but **I never heard back from them.** Not to sound too full of myself, but I wonder if they checked out my blog after I announced my enrollment at Hack Reactor. It probably takes them awhile to decide which applicants to accept, but I uploaded [my announcement post](/blog/2013/08/25/hack-reactor-is-my-future/) less than a week after my final GA interview.
+I left the building feeling very confident, but **I never heard back from them.** Not to sound too full of myself, but maybe they checked out my blog soon after I published [my announcement](/blog/2013/08/25/hack-reactor-is-my-future/) about my enrollment at Hack Reactor.
 
 # Hack Reactor wants to kick your ass!
 
