@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "[Coding Bootcamp Research] Admissions Processes: My Experiences (Part 2 of 2)"
-date: 2013-09-14 17:17
+date: 2013-09-15 18:40
 comments: true
 categories: ['bootcamp research','coding bootcamps','App Academy','Coding Dojo','Dev Bootcamp','General Assembly','Hack Reactor','RocketU']
 ---
@@ -114,7 +114,7 @@ Unfortunately, our time was **very** limited (likely my fault for being late). T
 
 I left the building feeling very confident, but **I never heard back from them.** Not to sound too full of myself, but I wonder if they checked out my blog after I announced my enrollment at Hack Reactor. It probably takes them awhile to decide which applicants to accept, but I uploaded [my announcement post](/blog/2013/08/25/hack-reactor-is-my-future/) less than a week after my final GA interview.
 
-# Hack Reactor wants to kick your pathetic ass!
+# Hack Reactor wants to kick your ass!
 
 ## Format
 
@@ -154,19 +154,21 @@ It took me *at least* 8 hours. First, I was instructed to go through [Code Schoo
 
 Anyway, I had to teach myself basic AJAX. I already taught myself basic jQuery, which was also a required technology for the challenge. Unfortunately, I didn't have a very good understanding of AJAX. I got my code to work, but one particular feature functioned only after some guesswork. I didn't truly know how that feature worked. Moreover, I could sense my app was only about 98% correct. **My brain told me this was ok, but my heart told me to go cry like the weakling that I am.**
 
+I should mention that Hack Reactor lets you ask for their help via email. So I did. Twice. The first time, I got a response within a few hours. The second time, I never got a response. So if you're trying to get through the coding challenge, keep in mind that **you cannot rely on their email help.** Doh.
+
 My second-round interview was a somewhat disjointed experience. At first, I was interviewed by Hacker-in-Residence [HackR Y]. Once again, I felt like I had over-stepped my bounds. When [HackR Y] asked me about my experience with the AJAX + jQuery challenge, I interpreted the moment as an opportunity to ask him to help me get my code 100% correct. We spent more than a few minutes on it before he decided it was time to move on. As it turned out, the interview was supposed to focus on new challenges, not the AJAX + jQuery challenge. That was an unpleasant surprise (considering the effort I spent overcoming its difficulties).
 
-I began programming solutions to the new challenges, which involved pretty simple functions. However, throughout the interview, [HackR Y] randomly left to deal with a phone call. He described it as "the most important phone call of my life" so the man was not investing much attention into my interview. I didn't hold it against him.
+I began programming solutions to the new challenges, which involved pretty simple functions. However, throughout the interview, [HackR Y] randomly left to deal with a phone call. He described it as "the most important phone call of my life" so the man was not investing much attention into my interview. I didn't hold it against him because he assured me my interview time would be extended as necessary, and I didn't have any other plans that day.
 
-Eventually, [HackR Z], another Hacker-in-Residence took over [HackR Y]'s interviewing duties. **This is where I got my ass beat.** [HackR Z] asked me to rewrite the functions I had just completed in a way that reused one after the other. Not only that, but the rewrite challenge also required the functions to accept functions as parameters. All of this can be described as Functional Programming, a computer science concept I had never heard of before.
+Eventually, [HackR Z], another Hacker-in-Residence took over [HackR Y]'s interviewing duties. **This is where I got my ass beat.** [HackR Z] asked me to rewrite the functions I had just completed in a way that reused one after the other. Not only that, but the rewrite challenge also required the functions to accept functions as parameters. I believe all of this can be described as Functional Programming, a computer science concept I had never heard of before.
 
-I managed to make a function that called another function while passing it a function. Hot damn. Then I was told to go another layer deeper. **My brain replied, "[DO NOT WANT](http://knowyourmeme.com/memes/do-want-do-not-want)."** I was abandoned by my own brain. I guess most people would call it "panic" but it just felt like I couldn't think. It could almost be described as ignorant bliss if not for the soul-crushing disappointment that accompanied it.
+I managed to make a function that called another function while passing it a function. Hot damn. Then I was told to go another layer deeper. **My brain replied, "DO NOT WANT."** I was abandoned by my own brain. I guess most people would call it "panic" but it just felt like I couldn't think. It could almost be described as ignorant bliss if not for the soul-crushing self-disappointment that accompanied it.
 
-[HackR Z] was cool about it. He guided me through a solution, then he brought me to a <del>beautiful backyard under false pretenses to put me out of my misery</del> conference room so we could talk more. I proceeded to ask him a ton of questions, some of which I had already asked [HackR X] to answer (I wanted to get multiple perspectives for certain questions). **I got the impression that [HackR Z] was not just cool, he was chill as shiiit.**
+[HackR Z] was cool about it. He guided me through a solution, then he brought me to a <del>beautiful backyard under false pretenses to put me out of my misery</del> conference room so we could talk more. I proceeded to ask him a bunch of questions, some of which I had already asked [HackR X] to answer (I wanted to get multiple perspectives for certain questions). **I got the impression that [HackR Z] was not just cool, he was superbly chill.**
 
-Not only was [HackR Z] chill, but he also did something particularly considerate. The first thing he did upon closing the conference room door behind us was give me immediate feedback. He straight-up told me not to worry about my brain fart during the live coding session because he felt the whole ordeal qualified as a great interview.
+Plus, but he did something particularly considerate. The first thing he did upon closing the conference room door behind us was give me immediate feedback. He straight-up told me not to worry about my brain fart during the live coding session because he felt the whole ordeal qualified as a great interview.
 
-I don't casually throw around the word "epic" like many of my peers do, but [HackR Z] basically **excorcised the feeling of dread from my mind.** And it felt epic. The feeling of dread felt epic, and the feeling of that toxicity evaporating felt even more epic. Epic, epic, *EPIC!* Actually, now I feel weird about the word "epic" again.
+I don't casually throw around the word "epic" like many of my peers do, but [HackR Z] basically **excorcised the demon of self-doubt from my mind.** And it felt epic. The feeling of doubt felt epic, and the feeling of that toxicity evaporating felt even more epic. Epic, epic, *EPIC!*
 
 # RocketU is new and eager
 
@@ -176,11 +178,23 @@ I don't casually throw around the word "epic" like many of my peers do, but [Hac
 
 ## TL;DR
 
-RocketU really felt extra eager to me. The new bootcamp in town really wanted to impress. The technical questions were tickier than they should've been due to some miscommunication.
+RocketU really felt extra eager to me. The new bootcamp in town really wanted to impress. The technical questions were trickier than they should've been due to some miscommunication.
 
 ## Full Recap
 
-The first interview was a typical test of personality fit. The second interview had some very specific quiz-like questions, but no live coding. I loved the second interviewer.
+The first interview was a typical test of personality fit. I spoke with [RU gal] over the phone for the first interview. It was a typical non-technical conversation about my background and expectations. She tried to talk up RocketU's awesomeness by describing how amazing the instructors are, but for whatever reason, I started worrying about RocketU's lack of cool factor. Other bootcamps feel like families or clubs. RocketU was missing that vibe (more on this a few paragraphs below).
+
+The second interview had some very specific quiz-like questions, but no live coding. I loved the second interviewer. [RU guy] is an instructor with a solid background in teaching technical material. He asked me questions about HTML/CSS. He then asked me how I would solve a very particular problem. After he gave me some hints, I realized that I completely misunderstood the problem when he first described it.
+
+I actually ended up misunderstanding him TWICE, so it took me awhile to solve the problem, which is sad because the problem really wasn't that difficult. It was just a re-phrased version of a classic algorithm problem/concept.
+
+I wish [RU guy] could've showed me around RocketSpace a bit more because I never even got to see the part of the office the RocketU students use. I only got to check out a portion of the main RocketSpace floor.
+
+However, the real bummer is that the whole experience felt a bit more corporate (for lack of a better word) and a bit less start-uppy than the other bootcamps. This is pretty ironic considering that RocketU is part of a startup accelerator called RocketSpace.
+
+There are a few reasons for the "corporate" feel: The office space felt less fun and energetic (it's less intimate; it's less open due to the presence of many small dividers), RocketU doesn't have its own blog filled with stories to get you pumped up, and RocketU is too young to have a promo video showing off its cool students. Plus, RocketU is run by people with experience in corporate training. So like I said earlier, the vibe I got from RocketU was very different from the vibe I got from its competitors.
+
+That said, I wouldn't be surprised if my impressions are just plain wrong because RocketU doesn't have as much outreach/marketing and my interviews weren't particularly long.
 
 # For the record
 

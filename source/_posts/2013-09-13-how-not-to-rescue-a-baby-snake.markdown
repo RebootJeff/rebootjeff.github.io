@@ -3,7 +3,7 @@ layout: post
 title: "How Not to Rescue a Baby Snake"
 date: 2013-09-13 10:04
 comments: true
-categories: ['story time','random']
+categories: ['storytime','random']
 ---
 ![a gopher snake](/images/20130913/gopher_snake_SP.jpg)
 
