@@ -130,7 +130,7 @@ Holy crap! The admissions process was so friggin' tough!
 
 Before my first HackR interview, I was emailed a big list of things to study. The list included a lot of JavaScript's built-in Array and String functions. Right off the bat, I felt a bit intimidated because although the material looked easy, the length of the pre-interview to-do list was exceptional.
 
-I was interviewed in person by [HackR staff] and [HackR X], a Hacker-in-Residence. Quick aside: HackR's office space is really friggin' warm so you should dress appropriately. I was sweating even before I got nervous.
+I was interviewed in person by a Hacker-in-Residence named [HackR X] and a co-founder named [HackR staff]. Quick aside: HackR's office space is really friggin' warm so you should dress appropriately. I was sweating even before I got nervous.
 
 [HackR X] asked me to do some live coding, which was so easy (basic looping, arrays, etc. in JS) that I got over-confident. I made some *really* careless mistakes (off-by-1 bug, overly-complicated algorithm, etc). Woops.
 
