@@ -75,7 +75,7 @@ A few days ago, I met someone currently in Dev Bootcamp. She said that **DBC is 
 
 1. Non-technical interview
 2. Online tutorial about HTML/CSS and jQuery
-3. HTML/CSS challenge done (make an About Me webpage)
+3. HTML/CSS challenge done at home (make an About Me webpage)
 4. Semi-technical interview about your About Me page
 
 ## TL;DR
@@ -94,7 +94,7 @@ Ok...enough excuses. The point is that I eventually canceled my enrollment a few
 
 Via email, I was instructed to do a GA onine tutorial using their system called Dash. It was a pretty good-looking tutorial, but it covered really basic HTML/CSS + jQuery material. I was underwhelmed. I also had to create a simple About Me webpage (offline --no need to host it on the web). They made it clear that their expectations were low. They didn't even expect me to use any jQuery even though their tutorial included it.
 
-There's a [relevant Quora answer](http://qr.ae/NvpkG) written by a GA official (whom I never talked to). He talks about how **GA's admissions process is supposed to be less technical for the sake of preventing discrimination against applicants with less programming experience.**
+There's a [relevant Quora answer](http://qr.ae/NvpkG) that explains how **GA's admissions process is supposed to be less technical for the sake of preventing discrimination against applicants with less programming experience.** This is similar to Coding Dojo's view on applicants. This is the opposite of how App Academy and Hack Reactor approach applicants.
 
 My second interview with GA was held at their offices in SF. Sadly, I got there late. I was a sweaty mess because I took the BART to get into the city, but apparently GA's offices are about 1 mile from the nearest BART station. I should've used the Caltrain. I'm a fool.
 
