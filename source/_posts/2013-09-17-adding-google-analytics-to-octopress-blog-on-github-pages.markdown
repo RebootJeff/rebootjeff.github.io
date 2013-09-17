@@ -7,7 +7,7 @@ categories: ['TIL','blog customization','Octopress','Google Analytics','Github P
 ---
 I wanted a way to count visitors for my blog. Easy enough, right? Just sign up for a free Google Analytics account, obtain a tracking ID from the account, and add the tracking ID to Octopress config file...right?
 
-Wrong. Maybe I was doing something else incorrectly, but I didn't get things working until I did [what a guy named Stefan Alfbo wrote about](stefanalfbo.github.io/blog/2013/04/17/octopress-google-analytics-github-pages/). I found his blog post via Google, which reminds me that my own blog's Google-powered search doesn't seem to work **:(**.
+Wrong. Maybe I was doing something else incorrectly, but I didn't get things working until I did [what a guy named Stefan Alfbo wrote about](http://stefanalfbo.github.io/blog/2013/04/17/octopress-google-analytics-github-pages/). I found his blog post via Google, which reminds me that my own blog's Google-powered search doesn't seem to work **:(**.
 
 ## Problem solved
 
