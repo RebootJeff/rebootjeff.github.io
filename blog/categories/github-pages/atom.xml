@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Github Pages | RebootJeff.com]]></title>
   <link href="http://RebootJeff.github.io/blog/categories/github-pages/atom.xml" rel="self"/>
   <link href="http://RebootJeff.github.io/"/>
-  <updated>2013-09-17T13:42:55-07:00</updated>
+  <updated>2013-09-17T13:45:43-07:00</updated>
   <id>http://RebootJeff.github.io/</id>
   <author>
     <name><![CDATA[Jeff Lee]]></name>
@@ -20,7 +20,7 @@
     <id>http://RebootJeff.github.io/blog/2013/09/17/adding-google-analytics-to-octopress-blog-on-github-pages</id>
     <content type="html"><![CDATA[<p>I wanted a way to count visitors for my blog. Easy enough, right? Just sign up for a free Google Analytics account, obtain a tracking ID from the account, and add the tracking ID to Octopress config file…right?</p>
 
-<p>Wrong. Maybe I was doing something else incorrectly, but I didn’t get things working until I did <a href="stefanalfbo.github.io/blog/2013/04/17/octopress-google-analytics-github-pages/">what a guy named Stefan Alfbo wrote about</a>. I found his blog post via Google, which reminds me that my own blog’s Google-powered search doesn’t seem to work <strong>:(</strong>.</p>
+<p>Wrong. Maybe I was doing something else incorrectly, but I didn’t get things working until I did <a href="http://stefanalfbo.github.io/blog/2013/04/17/octopress-google-analytics-github-pages/">what a guy named Stefan Alfbo wrote about</a>. I found his blog post via Google, which reminds me that my own blog’s Google-powered search doesn’t seem to work <strong>:(</strong>.</p>
 
 <h2 id="problem-solved">Problem solved</h2>
 
