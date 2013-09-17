@@ -3,7 +3,7 @@
 # ----------------------- #
 
 url: http://RebootJeff.github.io
-title: "Jeff: Rebooted"
+title: "RebootJeff.com"
 subtitle: "Quarter-life crisis detected. Reboot in progress."
 author: Jeff Lee
 simple_search: http://google.com/search
@@ -108,7 +108,7 @@ disqus_short_name: rebootjeff
 disqus_show_comment_count: true
 
 # Google Analytics
-google_analytics_tracking_id:
+google_analytics_tracking_id: UA-44084259-1
 
 # Facebook Like
 facebook_like: false
