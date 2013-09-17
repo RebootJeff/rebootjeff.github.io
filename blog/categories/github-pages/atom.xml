@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Github Pages | RebootJeff.com]]></title>
+  <link href="http://RebootJeff.github.io/blog/categories/github-pages/atom.xml" rel="self"/>
+  <link href="http://RebootJeff.github.io/"/>
+  <updated>2013-09-17T13:42:55-07:00</updated>
+  <id>http://RebootJeff.github.io/</id>
+  <author>
+    <name><![CDATA[Jeff Lee]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Adding Google Analytics to Octopress blog on Github Pages]]></title>
+    <link href="http://RebootJeff.github.io/blog/2013/09/17/adding-google-analytics-to-octopress-blog-on-github-pages/"/>
+    <updated>2013-09-17T13:22:00-07:00</updated>
+    <id>http://RebootJeff.github.io/blog/2013/09/17/adding-google-analytics-to-octopress-blog-on-github-pages</id>
+    <content type="html"><![CDATA[<p>I wanted a way to count visitors for my blog. Easy enough, right? Just sign up for a free Google Analytics account, obtain a tracking ID from the account, and add the tracking ID to Octopress config file…right?</p>
+
+<p>Wrong. Maybe I was doing something else incorrectly, but I didn’t get things working until I did <a href="stefanalfbo.github.io/blog/2013/04/17/octopress-google-analytics-github-pages/">what a guy named Stefan Alfbo wrote about</a>. I found his blog post via Google, which reminds me that my own blog’s Google-powered search doesn’t seem to work <strong>:(</strong>.</p>
+
+<h2 id="problem-solved">Problem solved</h2>
+
+<p>Here’s the trick for getting Google Analytics working on an Octopress blog hosted on Github: open up the <strong>source/_includes/google_analytics.html</strong> file and add…</p>
+
+<div><div class="CodeRay">
+  <div class="code"><pre><span class="comment">// add this line to the series of _gaq pushes already in the code</span>
+_gaq.push([<span class="string"><span class="delimiter">'</span><span class="content">_setDomainName</span><span class="delimiter">'</span></span>,<span class="string"><span class="delimiter">'</span><span class="content">github.io</span><span class="delimiter">'</span></span>]);
+</pre></div>
+</div>
+</div>
+
+<h2 id="questions-remain">Questions remain</h2>
+
+<p>Alfbo recommends putting this new line of code in between the 2 existing <code>_gaq.push</code> statements. I’m not sure if the order of the <code>_gaq</code> array really matters, but I didn’t want to chance it, so I followed his recommendation. However, this left me wondering, “What is the <code>_gaq</code> array anyway? How is it used? And why does it need special attention to get it working with Github hosting?”</p>
+]]></content>
+  </entry>
+  
+</feed>

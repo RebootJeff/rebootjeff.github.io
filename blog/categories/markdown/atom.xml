@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: markdown | RebootJeff.com]]></title>
+  <title><![CDATA[Category: Markdown | RebootJeff.com]]></title>
   <link href="http://RebootJeff.github.io/blog/categories/markdown/atom.xml" rel="self"/>
   <link href="http://RebootJeff.github.io/"/>
-  <updated>2013-09-17T13:11:54-07:00</updated>
+  <updated>2013-09-17T13:42:55-07:00</updated>
   <id>http://RebootJeff.github.io/</id>
   <author>
     <name><![CDATA[Jeff Lee]]></name>
@@ -12,49 +12,6 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
-  
-  <entry>
-    <title type="html"><![CDATA[New Awesomeness Added: Auto HR after H1]]></title>
-    <link href="http://RebootJeff.github.io/blog/2013/08/15/auto-hr-after-h1/"/>
-    <updated>2013-08-15T12:02:00-07:00</updated>
-    <id>http://RebootJeff.github.io/blog/2013/08/15/auto-hr-after-h1</id>
-    <content type="html"><![CDATA[<p>I wasn’t happy with the style of my standard <code>&lt;h1&gt;</code> header. I wanted to spice things up. After some aimless browsing, I learned that there is an <code>:after</code> selector in CSS. Inspired by this new selector, I wanted to find a way to add an <code>&lt;hr/&gt;</code> element “after” my <code>&lt;h1&gt;</code> headers. </p>
-
-<h1 id="check-out-this-sweet-hr-man">Check Out This Sweet HR, Man</h1>
-
-<p>Apparently, it doesn’t quite work the way I expected, but that’s ok because I eventually found <a href="http://css-tricks.com/examples/hrs/">this sweet compilation of horizontal rules</a>!</p>
-
-<p>I entered the following CSS code into my <strong>sass/custom/_styles.scss</strong> file:</p>
-
-<div><div class="CodeRay">
-  <div class="code"><pre><span class="class">.entry-content</span> <span class="type">h1</span> {
-  <span class="key">text-align</span>: <span class="value">center</span>;
-  <span class="key">margin-top</span>: <span class="float">12px</span>;
-}
-<span class="class">.entry-content</span> <span class="type">h1</span><span class="pseudo-class">:after</span> {
-  <span class="key">content</span>: <span class="string"><span class="delimiter">&quot;</span><span class="content"> </span><span class="delimiter">&quot;</span></span>;
-  <span class="key">display</span>: <span class="value">block</span>;
-  <span class="key">height</span>: <span class="float">1px</span>;
-  <span class="key">margin</span>: <span class="float">6px</span> <span class="float">0px</span> <span class="float">6px</span> <span class="float">0px</span>;
-  <span class="key">background-image</span>: <span class="error">-</span><span class="error">w</span><span class="error">e</span><span class="error">b</span><span class="error">k</span><span class="error">i</span><span class="error">t</span><span class="error">-</span><span class="error">l</span><span class="error">i</span><span class="error">n</span><span class="error">e</span><span class="error">a</span><span class="error">r</span><span class="error">-</span><span class="error">g</span><span class="error">r</span><span class="error">a</span><span class="error">d</span><span class="error">i</span><span class="error">e</span><span class="error">n</span><span class="error">t</span>(<span class="value">left</span>, <span class="color">rgba(0,0,0,0)</span>, <span class="color">rgba(0,0,0,0.75)</span>, <span class="color">rgba(0,0,0,0)</span>); 
-  <span class="key">background-image</span>:    <span class="error">-</span><span class="error">m</span><span class="error">o</span><span class="error">z</span><span class="error">-</span><span class="error">l</span><span class="error">i</span><span class="error">n</span><span class="error">e</span><span class="error">a</span><span class="error">r</span><span class="error">-</span><span class="error">g</span><span class="error">r</span><span class="error">a</span><span class="error">d</span><span class="error">i</span><span class="error">e</span><span class="error">n</span><span class="error">t</span>(<span class="value">left</span>, <span class="color">rgba(0,0,0,0)</span>, <span class="color">rgba(0,0,0,0.75)</span>, <span class="color">rgba(0,0,0,0)</span>); 
-  <span class="key">background-image</span>:     <span class="error">-</span><span class="error">m</span><span class="error">s</span><span class="error">-</span><span class="error">l</span><span class="error">i</span><span class="error">n</span><span class="error">e</span><span class="error">a</span><span class="error">r</span><span class="error">-</span><span class="error">g</span><span class="error">r</span><span class="error">a</span><span class="error">d</span><span class="error">i</span><span class="error">e</span><span class="error">n</span><span class="error">t</span>(<span class="value">left</span>, <span class="color">rgba(0,0,0,0)</span>, <span class="color">rgba(0,0,0,0.75)</span>, <span class="color">rgba(0,0,0,0)</span>); 
-  <span class="key">background-image</span>:      <span class="error">-</span><span class="error">o</span><span class="error">-</span><span class="error">l</span><span class="error">i</span><span class="error">n</span><span class="error">e</span><span class="error">a</span><span class="error">r</span><span class="error">-</span><span class="error">g</span><span class="error">r</span><span class="error">a</span><span class="error">d</span><span class="error">i</span><span class="error">e</span><span class="error">n</span><span class="error">t</span>(<span class="value">left</span>, <span class="color">rgba(0,0,0,0)</span>, <span class="color">rgba(0,0,0,0.75)</span>, <span class="color">rgba(0,0,0,0)</span>); 
-}
-</pre></div>
-</div>
-</div>
-
-<p>So instead of adding <code>&lt;hr/&gt;</code>s after my <code>&lt;h1&gt;</code>s, I added gradients inside of very thin background images. It’s more complicated than what I had originally envisioned, but it looks way nicer.</p>
-
-<h1 id="codeblock-the-party-pooper">Codeblock, the Party Pooper</h1>
-<p>Unfortunately, in the process of writing this blog post, I discovered that my codeblocks (powered by CodeRay) aren’t as responsive as I had hoped. I mentioned my CodeRay configuration in <a href="/blog/2013/08/02/ready-set-octopress/#update-aug-10-2013">my first post</a>. The configuration involves picking a codeblock format Octopress <strong>_config.yml</strong> file.</p>
-
-<p>I chose <code>coderay_line_numbers: table</code> at first, because I want line numbers, and I want them to be separated from the code. The problem is that CodeRay codeblock tables are apparently unresponsive to browser size. Consequently, the codeblocks were wider than the <code>&lt;div&gt;</code>s that contained them whenever they were viewed on a smartphone or even on a PC looking at this blog’s front page. The front page automatically narrows my posts quite a bit, and that made the codeblock tables very unhappy. It was very annoying.</p>
-
-<p>I haven’t found a true solution despite diving into the CSS. All the relevant CSS selectors already have <code>width: 100%</code> so I don’t know what else to do. I experimented with some <code>overflow</code> properties, but to no avail. For now, I have resorted to turning off line numbers entirely. Dammit.</p>
-]]></content>
-  </entry>
   
   <entry>
     <title type="html"><![CDATA[Ready. Set. Octopress.]]></title>
