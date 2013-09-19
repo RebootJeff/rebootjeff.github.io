@@ -46,7 +46,7 @@ I need to deal with tuition. $2,000 down. $15,780 to go. In the word of the grea
 
 I like being independent in many ways. Financial independence is one of those ways.
 
-I often question what my mom thinks rather than just accepting her ideas at face value. I changed my mind about her offer by using a thought process I use whenever I encounter this questioning that routinely visits my mind. The process is simple. I ask myself, **"How would I feel if I were the parent?"** Obviously, I easily consider what happens when I'm the child. So when I consider the parent perspective, I can be imagine being a parent considering the child perspective too.
+I often question what my mom thinks rather than just accepting her ideas at face value. I changed my mind about her offer by using a thought process I use whenever I encounter this questioning that routinely visits my mind. The process is simple. I ask myself, **"How would I feel if I were the parent?"** Obviously, I easily consider what happens when I'm the child. So when I consider the parent perspective, I can imagine being a parent considering the child perspective too.
 
 But let's not get too cyclical/meta because I was telling a story that actually has an ending.
 
