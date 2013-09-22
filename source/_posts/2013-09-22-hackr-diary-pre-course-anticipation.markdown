@@ -7,7 +7,7 @@ categories: ['Hack Reactor','HackR Diary','coding bootcamps','Code School']
 ---
 ![Thumbnail of my twittler](/images/20130922/mytwittler.png)
 
-<p class='my-caption'>Thumbnail of one of my Twitter clone assignment</a></p>
+<p class='my-caption'>Thumbnail of my Twitter clone assignment</a></p>
 
 Tomorrow is a huge day for me. Tomorrow is when [I start attending Hack Reactor](/blog/2013/08/25/hack-reactor-is-my-future/). I'm about to go from funemployment (going to bed at 4am; waking up at 12pm) to immersive student life (spending 80 hours/week on "campus").
 
