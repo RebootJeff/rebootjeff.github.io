@@ -34,6 +34,8 @@ I studied Backbone.js a bit more, I read about JavaScript best practices, and I 
 
 The Code School tutorial on the Fundamentals of Design was pretty awesome actually. It's the only tutorial that doesn't require coding, but it imparted quite a few cool nuggets of knowledge about how to choose fonts, colors, and layouts. The layouts part wasn't as insightful (I wish they had you actually implement a grid with some coding), but learning about font characteristics and what defines a good color scheme was sweeeet. Hopefully I'll get around to blogging about the basics of fonts and colors one day. It's just some very simple stuff that can help a lot.
 
+Overall, I didn't as much studying on my own as I should have. I suck at independent study. Bahumbug.
+
 # I'm so friggin' nervous!
 Although the pre-course check-in meeting left me feeling optimistic about my future success at Hack Reactor, I no longer feel quite so confident.
 
