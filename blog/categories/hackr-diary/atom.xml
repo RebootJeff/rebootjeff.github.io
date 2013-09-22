@@ -4,7 +4,7 @@
   <title><![CDATA[Category: HackR Diary | RebootJeff.com]]></title>
   <link href="http://RebootJeff.github.io/blog/categories/hackr-diary/atom.xml" rel="self"/>
   <link href="http://RebootJeff.github.io/"/>
-  <updated>2013-09-22T16:23:10-07:00</updated>
+  <updated>2013-09-22T16:27:45-07:00</updated>
   <id>http://RebootJeff.github.io/</id>
   <author>
     <name><![CDATA[Jeff Lee]]></name>
@@ -20,7 +20,7 @@
     <id>http://RebootJeff.github.io/blog/2013/09/22/hackr-diary-pre-course-anticipation</id>
     <content type="html"><![CDATA[<p><img src="/images/20130922/mytwittler.png" alt="Thumbnail of my twittler" /></p>
 
-<p class="my-caption">Thumbnail of one of my Twitter clone assignment</p>
+<p class="my-caption">Thumbnail of my Twitter clone assignment</p>
 
 <p>Tomorrow is a huge day for me. Tomorrow is when <a href="/blog/2013/08/25/hack-reactor-is-my-future/">I start attending Hack Reactor</a>. I’m about to go from funemployment (going to bed at 4am; waking up at 12pm) to immersive student life (spending 80 hours/week on “campus”).</p>
 
@@ -46,6 +46,8 @@
 <p>I studied Backbone.js a bit more, I read about JavaScript best practices, and I spent a lot of time doing more Code School tutorials. Some are better than others. I mostly looked at HTML/CSS stuff, which sounds easy, but I just wanted to make sure there weren’t too many gaps in my fundamental knowledge (<code>position</code> and <code>display</code> properties still slap me around sometimes).</p>
 
 <p>The Code School tutorial on the Fundamentals of Design was pretty awesome actually. It’s the only tutorial that doesn’t require coding, but it imparted quite a few cool nuggets of knowledge about how to choose fonts, colors, and layouts. The layouts part wasn’t as insightful (I wish they had you actually implement a grid with some coding), but learning about font characteristics and what defines a good color scheme was sweeeet. Hopefully I’ll get around to blogging about the basics of fonts and colors one day. It’s just some very simple stuff that can help a lot.</p>
+
+<p>Overall, I didn’t as much studying on my own as I should have. I suck at independent study. Bahumbug.</p>
 
 <h1 id="im-so-friggin-nervous">I’m so friggin’ nervous!</h1>
 <p>Although the pre-course check-in meeting left me feeling optimistic about my future success at Hack Reactor, I no longer feel quite so confident.</p>
