@@ -13,7 +13,7 @@ It's the end of day #3. I don't have much time to write, so this blog post is a 
 ## Recap
 
 - Day 1 and 2 are just review days covering topics and challenges covered by the pre-course work. Day 1 covered ettiquette, expectations, and recursion. Day 2 covered passing functions, a lot of JS fundamentals, and awesome advice for being successful (e.g., we talked about impostor syndrome, Hack Reactor's motivations, some job-hunting advice, etc).
-- Day 3 covered paired programming, object-oriented programming (OOP), and classes.
+- Day 3 covered paired programming, object-oriented programming (OOP), and classes (e.g., functional instantiation vs. prototypal instantiation vs. psuedoclassical instantiation).
 
 ## Logistics
 
