@@ -46,10 +46,6 @@ In less formal terms, you might work for a tiny startup on something you truly c
 
 ## JavaScript Nuggets
 
-### Null vs. Undefined
-
-`null` is a keyword, but `undefined` is just an identifier. It's like a variable that stores the value of `undefined`. This means you could write `undefined = 1;` and use it like any other variable, but things could get really messy if you do this.
-
 ### Guard operator
 
 Marcus, the primary instructor, warned us that some devs dislike the guard operator, but it's really concise (which is cool to him). The guard operator is a logical-AND that "guards" a small bit of code the same way an `if` statement would guard it. For example:
