@@ -4,7 +4,7 @@
   <title><![CDATA[Category: TIL | RebootJeff.com]]></title>
   <link href="http://RebootJeff.github.io/blog/categories/til/atom.xml" rel="self"/>
   <link href="http://RebootJeff.github.io/"/>
-  <updated>2013-09-25T21:13:01-07:00</updated>
+  <updated>2013-09-25T21:16:08-07:00</updated>
   <id>http://RebootJeff.github.io/</id>
   <author>
     <name><![CDATA[Jeff Lee]]></name>
@@ -63,10 +63,6 @@
 <p>In less formal terms, you might work for a tiny startup on something you truly care about, but the startup could easily be too small or too young to provide an environment with superiors/peers that can help you develop your programming skills (or any job-related skills).</p>
 
 <h2 id="javascript-nuggets">JavaScript Nuggets</h2>
-
-<h3 id="null-vs-undefined">Null vs. Undefined</h3>
-
-<p><code>null</code> is a keyword, but <code>undefined</code> is just an identifier. It’s like a variable that stores the value of <code>undefined</code>. This means you could write <code>undefined = 1;</code> and use it like any other variable, but things could get really messy if you do this.</p>
 
 <h3 id="guard-operator">Guard operator</h3>
 
