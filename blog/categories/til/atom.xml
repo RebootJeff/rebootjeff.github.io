@@ -4,7 +4,7 @@
   <title><![CDATA[Category: TIL | RebootJeff.com]]></title>
   <link href="http://RebootJeff.github.io/blog/categories/til/atom.xml" rel="self"/>
   <link href="http://RebootJeff.github.io/"/>
-  <updated>2013-09-25T21:05:34-07:00</updated>
+  <updated>2013-09-25T21:13:01-07:00</updated>
   <id>http://RebootJeff.github.io/</id>
   <author>
     <name><![CDATA[Jeff Lee]]></name>
@@ -88,20 +88,6 @@ goodStudent &amp;&amp; candy++;
 <div><div class="CodeRay">
   <div class="code"><pre><span class="comment">// Let's say you want to only call a function with an array if the array is NOT undefined (i.e., you want to guard against a scenario where you pass an undefined argument to a function).</span>
 arg &amp;&amp; myFunction(arg);
-</pre></div>
-</div>
-</div>
-
-<h3 id="adding-undefined-might-yield-a-string">Adding undefined might yield a string</h3>
-
-<p>When the <code>+</code> operator is used with <code>undefined</code>, then the <code>+</code> will act like a concatenation rather than addition. So if you try to add two variables, but you forgot to define one of them, you will get the following:</p>
-
-<div><div class="CodeRay">
-  <div class="code"><pre><span class="keyword">var</span> num1 = <span class="integer">3</span>;
-<span class="keyword">var</span> num2;    <span class="comment">// num2 is undefined</span>
-<span class="keyword">var</span> sum = num1 + num2;    <span class="comment">// num2 has been declared, so no error is thrown</span>
-console.log(num1 + num2);
-<span class="comment">// prints '3undefined' (which is a string) to the console</span>
 </pre></div>
 </div>
 </div>
