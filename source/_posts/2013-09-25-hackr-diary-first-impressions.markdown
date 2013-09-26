@@ -71,16 +71,3 @@ The following is a more practical example:
 arg && myFunction(arg);
 ~~~
 {:lang="javascript"}
-
-### Adding undefined might yield a string
-
-When the `+` operator is used with `undefined`, then the `+` will act like a concatenation rather than addition. So if you try to add two variables, but you forgot to define one of them, you will get the following:
-
-~~~
-var num1 = 3;
-var num2;	// num2 is undefined
-var sum = num1 + num2;	// num2 has been declared, so no error is thrown
-console.log(num1 + num2);
-// prints '3undefined' (which is a string) to the console
-~~~
-{:lang="javascript"}
