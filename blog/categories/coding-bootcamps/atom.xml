@@ -4,7 +4,7 @@
   <title><![CDATA[Category: coding bootcamps | RebootJeff.com]]></title>
   <link href="http://RebootJeff.github.io/blog/categories/coding-bootcamps/atom.xml" rel="self"/>
   <link href="http://RebootJeff.github.io/"/>
-  <updated>2013-09-22T21:06:36-07:00</updated>
+  <updated>2013-09-25T21:05:34-07:00</updated>
   <id>http://RebootJeff.github.io/</id>
   <author>
     <name><![CDATA[Jeff Lee]]></name>
@@ -12,6 +12,101 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[[HackR Diary] First Impressions]]></title>
+    <link href="http://RebootJeff.github.io/blog/2013/09/25/hackr-diary-first-impressions/"/>
+    <updated>2013-09-25T21:23:00-07:00</updated>
+    <id>http://RebootJeff.github.io/blog/2013/09/25/hackr-diary-first-impressions</id>
+    <content type="html"><![CDATA[<p>It’s the end of day #3. I don’t have much time to write, so this blog post is a smattering of thoughts from a fresh Hack Reactor student.</p>
+
+<h1 id="initial-observations">Initial Observations</h1>
+
+<h2 id="recap">Recap</h2>
+
+<ul>
+  <li>Day 1 and 2 are just review days covering topics and challenges covered by the pre-course work. Day 1 covered ettiquette, expectations, and recursion. Day 2 covered passing functions, a lot of JS fundamentals, and awesome advice for being successful (e.g., we talked about impostor syndrome, Hack Reactor’s motivations, some job-hunting advice, etc).</li>
+  <li>Day 3 covered paired programming, object-oriented programming (OOP), and classes.</li>
+</ul>
+
+<h2 id="logistics">Logistics</h2>
+
+<ul>
+  <li>Week 1 is full of lectures. Each day is about 50% lectures, 50% coding.</li>
+  <li>The first 6 weeks will have plenty of lectures and structured challenges. Then there is an interim week where you work on a project from home, which gives you the flexibility to travel, but the Hack Reactor staff will be offline (they basically get a 1-week vacation every 7 weeks). After the interim week is more time for your individual project, time for a group project, and time for job prep.</li>
+</ul>
+
+<h2 id="nuances">Nuances</h2>
+
+<ul>
+  <li>Lunch breaks and dinner breaks are often cut short due to lectures running long.</li>
+  <li>Lectures run long due to people asking questions.</li>
+  <li>All teachers advocate for students to ask questions. At Hack Reactor, the students ask a TON of questions because the class atmosphere is very comfortable.</li>
+  <li>The students are really nice. Everyone’s excited to meet new people (even the quiet ones are clearly motivated to be social).</li>
+  <li>I’ve heard stories of students of other bootcamps going out at night to hang out and have fun. I could be wrong, but so far it seems like there’s no time/energy left for going out at night.</li>
+  <li>That said, students don’t stay here that late (so far). A lot of us leave by 9pm. I thought it’d be common to leave no earlier than 10pm, but there aren’t even that many students from the senior cohort by the time the clock strikes 9:20pm (which is the latest I’ve stayed). I have a feeling this will change in a few weeks (beause that will be crunch time for the senior cohort).</li>
+  <li>Nothing’s perfect. Some equipment is broken, some chairs are shitty, some online resources are buggy, etc. None of these issues have been big issues.</li>
+</ul>
+
+<h1 id="nuggets-of-knowledge">Nuggets of Knowledge</h1>
+
+<h2 id="life-nuggets">Life Nuggets</h2>
+
+<h3 id="re-education">Re: <strong>Education</strong></h3>
+
+<p>Passive learning is deceptively similar to true understanding. When you just observe a correct solution, it can give you the illusion that you learned more than you really did. For example, you might watch someone code up a good solution. When you walk away, you’ll think you understand everything necessary to solve the problem, but all you learned was some code without its meaning.</p>
+
+<h3 id="re-starting-a-new-tech-career">Re: <strong>Starting a new tech career</strong></h3>
+
+<p>Everyone thinks starting a new tech career with a tiny startup is really exciting. That might be true, but people tend to forget an important caveat: less structure could lead to a less efficient roadmap to individual success.</p>
+
+<p>In less formal terms, you might work for a tiny startup on something you truly care about, but the startup could easily be too small or too young to provide an environment with superiors/peers that can help you develop your programming skills (or any job-related skills).</p>
+
+<h2 id="javascript-nuggets">JavaScript Nuggets</h2>
+
+<h3 id="null-vs-undefined">Null vs. Undefined</h3>
+
+<p><code>null</code> is a keyword, but <code>undefined</code> is just an identifier. It’s like a variable that stores the value of <code>undefined</code>. This means you could write <code>undefined = 1;</code> and use it like any other variable, but things could get really messy if you do this.</p>
+
+<h3 id="guard-operator">Guard operator</h3>
+
+<p>Marcus, the primary instructor, warned us that some devs dislike the guard operator, but it’s really concise (which is cool to him). The guard operator is a logical-AND that “guards” a small bit of code the same way an <code>if</code> statement would guard it. For example:</p>
+
+<div><div class="CodeRay">
+  <div class="code"><pre><span class="keyword">if</span>(goodStudent === <span class="predefined-constant">true</span>){
+    candy++;
+}
+
+<span class="comment">// The above code could be refactored into the following:</span>
+goodStudent &amp;&amp; candy++;
+</pre></div>
+</div>
+</div>
+
+<p>The following is a more practical example:</p>
+
+<div><div class="CodeRay">
+  <div class="code"><pre><span class="comment">// Let's say you want to only call a function with an array if the array is NOT undefined (i.e., you want to guard against a scenario where you pass an undefined argument to a function).</span>
+arg &amp;&amp; myFunction(arg);
+</pre></div>
+</div>
+</div>
+
+<h3 id="adding-undefined-might-yield-a-string">Adding undefined might yield a string</h3>
+
+<p>When the <code>+</code> operator is used with <code>undefined</code>, then the <code>+</code> will act like a concatenation rather than addition. So if you try to add two variables, but you forgot to define one of them, you will get the following:</p>
+
+<div><div class="CodeRay">
+  <div class="code"><pre><span class="keyword">var</span> num1 = <span class="integer">3</span>;
+<span class="keyword">var</span> num2;    <span class="comment">// num2 is undefined</span>
+<span class="keyword">var</span> sum = num1 + num2;    <span class="comment">// num2 has been declared, so no error is thrown</span>
+console.log(num1 + num2);
+<span class="comment">// prints '3undefined' (which is a string) to the console</span>
+</pre></div>
+</div>
+</div>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[[HackR Diary] Pre-Course Anticipation]]></title>
@@ -541,151 +636,6 @@
 </ul>
 
 <p>You can also find press coverage of bootcamps, but I’ve found that they generally fail to give you much insight. Most articles are just explaining what a coding bootcamp is. Some press coverage involves video interviews and whatnot. Those are worth watching because even though they’re edited fluff pieces, they still give a glimpse into personalities and facilities.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Hack Reactor is my future]]></title>
-    <link href="http://RebootJeff.github.io/blog/2013/08/25/hack-reactor-is-my-future/"/>
-    <updated>2013-08-25T15:58:00-07:00</updated>
-    <id>http://RebootJeff.github.io/blog/2013/08/25/hack-reactor-is-my-future</id>
-    <content type="html"><![CDATA[<p><img src="/images/hackreactorlogo_SP.png" alt="Hack Reactor logo" /></p>
-
-<p class="my-caption">Image Credits:  <a href="https://hackreactor.eventbrite.com/">Hack Reactor</a></p>
-
-<p>I have enrolled in the September 23, 2013 cohort of <a href="http://hackreactor.com">Hack Reactor</a> (aka HackR), which is a 12-week coding bootcamp (or “academy” as they say) located in downtown San Francisco. I will pay them thousands of dollars so I can spend about 72-80 hours/week training, learning, and exploring –all in an attempt to gain the skills of a software developer (with a focus on web tech).</p>
-
-<h1 id="hold-up-whats-a-coding-bootcamp">Hold up. What’s a coding bootcamp?</h1>
-<p>Coding bootcamps are training courses that teach students the fundamentals needed to become immediately employable in some field of programming (generally web development, but some bootcamps focus on smartphone apps). Most bootcamps require full-time commitment (you must quit your job) and are pretty intense. Students generally “work” for more than 40 hours per week.</p>
-
-<p>I put “work” in quotes because it in this case, I’m using the word to cover many different things that happen in a typical day at a bootcamp. Students listen to lectures by faculty and guest speakers. Students program in pairs. Students study and complete assignments. Most importantly, students get a ton of hands-on learning experience. Bootcamp curriculae typically involve projects that help students establish a portfolio of apps.</p>
-
-<p>Bootcamps are a great option for people who want to switch from a non-computer science career to a programming-heavy career. That said, there will be some CS grads in some bootcamps because college often neglects to teach relevant hard skills like how to use git.</p>
-
-<p>Coding bootcamps are also called programming bootcamps, developer/dev bootcamps, etc. The term “bootcamp” is sometimes replaced with “immersive course” or just “immersive.”</p>
-
-<p>Check out this video to get a sense of the Hack Reactor vibe:</p>
-
-<iframe width="300" height="169" src="http://RebootJeff.github.io//www.youtube.com/embed/ko9bXImNirE" frameborder="0" allowfullscreen=""></iframe>
-
-<h1 id="why-pick-hack-reactor">Why pick Hack Reactor?</h1>
-<p>In the coming days and weeks, I am going to extensively blog about my experience researching different bootcamps in a series unsurprisingly entitled <a href="/blog/categories/bootcamp-research/">Coding Bootcamp Research</a>. The series will cover all the ins and outs of how I examined my options, the admissions processes, and my decision to choose HackR over its competitors.</p>
-
-<p>To give you the gist of it, I chose HackR because it seems to produce the smartest bootcamp “grads” through a combination of high quality faculty/curriculum and lots of time. What I mean by “lots of time” is that faculty are on the clock from 9am-8pm x 6 days/week instead of the typical 9am-6pm x 5 days/week found at other bootcamps.</p>
-
-<p>The claim that HackR has the best grads is backed up by…more claims. They claim that 100% of their grads find a developer job within 3 months after graduation. They claim that the average starting salary of their alumni is somewhere around $100,000 (I don’t remember the exact dollar amount because the raw amount matters less than how high it ranks). No other bootcamps claim to have such high levels of success.</p>
-
-<p>Why should I believe Hack Reactor? Because I trust them. And I would normally litter such claims in my blog with relevant links, but the previous few paragraphs lack links because I will simply discuss these things in much greater detail in future blog posts.</p>
-
-<p>I have a lot to say regarding HackR’s pros and cons. I have a lot to say about the pros and cons of App Academy, Coding Dojo, General Assembly, Dev Bootcamp, and the brand new RocketU as well. So stay tuned.</p>
-
-<h1 id="so-what-now">So… what now?</h1>
-<p>I have about a month of funemployment left before HackR dominates my life. During that time, I have to deal with financial concerns, HackR introductory homework, and my own personal goals.</p>
-
-<h2 id="money-money-money-moneyey">Money, money, money (moneyey!)</h2>
-<p>This is about to get a bit personal, so prepare thyself.</p>
-
-<p>I need to deal with tuition. $2,000 down. $15,780 to go. In the word of the great philosopher, Bart Simpson: “Eep.” Luckily, my mom has offered to cover my tuition. At first, I was reluctant to accept. After all, I have the money…sort of (most of my money is in stocks). I wouldn’t have much left over if I paid tuition myself, but the real reason I hesitated to accept my mom’s generosity was based on principle.</p>
-
-<p>I like being independent in many ways. Financial independence is one of those ways.</p>
-
-<p>I often question what my mom thinks rather than just accepting her ideas at face value. I changed my mind about her offer by using a thought process I use whenever I encounter this questioning that routinely visits my mind. The process is simple. I ask myself, <strong>“How would I feel if I were the parent?”</strong> Obviously, I easily consider what happens when I’m the child. So when I consider the parent perspective, I can imagine being a parent considering the child perspective too.</p>
-
-<p>But let’s not get too cyclical/meta because I was telling a story that actually has an ending.</p>
-
-<p>As I thought about things from the view of my hypothetical, futuristic, child-rearing mind, I realized that if I were in my mom’s shoes, I would very much want my son to accept my money. The reason? Principle.</p>
-
-<blockquote>
-  <p>OMG @RebootJeff just paradoxed himself #WTF #ICallBS #hypocrisy</p>
-</blockquote>
-
-<p>Shut up and listen. You can posit that I’m merely rationlizing a money-grubbing stance, and I know that’s what it looks like, but I hold myself obligated to meet the same standards and expectations when I’m finally a parent. In this case, the expectation I’m talking about is the responsibility (and deep desire) to help my child <del>become a Neil deGrasse Tyson badass</del> get really awesome education.</p>
-
-<p>Not to mention, my family has that traditional Asian risk-aversion baked into its collective mind. However, as my mom pointed out, pursuing fantastic educational opportunities shouldn’t be considered a (financial) risk to avoid if the parent can help out.</p>
-
-<h2 id="the-curriculum-begins-now">The curriculum begins now</h2>
-<p>There are a few tasks to accomplish prior to the first day of class other than making HackR rich(er). The bootcamp’s pre-course work requires about 90 hours of dedication (about 50 hours mandatory + about 40 hours optional). I’ve been instructed to…</p>
-
-<ol>
-  <li>
-    <p>Complete a lot of <a href="http://codeschool.com">Code School</a> tutorials (which is a bit of a bummer because I’m tired of online tutorials).</p>
-  </li>
-  <li>
-    <p>Learn more JavaScript through some TDD challenges using Jasmine and Mocha (I don’t know what these are if they’re not hot beverages).</p>
-  </li>
-  <li>
-    <p>Learn about git via various videos and tutorials (which should be easy because I already know some git).</p>
-  </li>
-  <li>
-    <p>Build a basic Twitter clone (which sounds so difficult that I can’t wait to do it –what an odd feeling).</p>
-  </li>
-  <li>
-    <p>Check out a list of optional online resources.</p>
-  </li>
-</ol>
-
-<h2 id="my-own-pre-course-to-do-list">My own pre-course to-do list</h2>
-<p>I plan on completing most of the optional pre-course work (in addition to the mandatory parts), but I also hope to make time for some other pre-course goals of mine. Maybe some are covered by the pre-course work, but here’s a comprehensive list:</p>
-
-<h3 id="relevant">Relevant</h3>
-
-<ul>
-  <li>
-    <p>Watch videos re: <a href="https://tutsplus.com/course/improve-workflow-in-sublime-text-2/">Sublime Text wizadry</a></p>
-  </li>
-  <li>
-    <p>Consider PAYING for Sublime Text to get rid of the money-begging feature</p>
-  </li>
-  <li>
-    <p>Figure out regex</p>
-  </li>
-  <li>
-    <p>Get intimate with that scary thingamabob known as <a href="http://linuxcommand.org/lc3_learning_the_shell.php">Linux shell</a></p>
-  </li>
-  <li>
-    <p>Buy a notebook that is made of something called “paper”</p>
-  </li>
-  <li>
-    <p>Conform to a proper sleep schedule (makes me cry just thinking about it)</p>
-  </li>
-  <li>
-    <p>Watch more lectures from Berkeley’s <a href="http://www.youtube.com/watch?v=Fr-B4xHZRzY">CS169: Software as a Service</a></p>
-  </li>
-  <li>
-    <p>Buy tons of snacks/drinks because I won’t have much time for grocery shopping during bootcamp weeks</p>
-  </li>
-  <li>
-    <p>Attend lots of dev meetups, especially <a href="http://www.theodinproject.com/">Odin Project</a> meetups</p>
-  </li>
-  <li>
-    <p>Think of how I want to make my own HackR vlog</p>
-  </li>
-</ul>
-
-<h3 id="not-so-relevant">Not-so-relevant</h3>
-
-<ul>
-  <li>
-    <p>Take one last hit of that <a href="http://www.sfr-solo.org/solo2/cgi-bin/schedaction.cgi?autox&amp;where=all&amp;Next_three_months">autocross</a> high</p>
-  </li>
-  <li>
-    <p>Finish reading some rather <a href="http://www.amazon.com/Batman-Robin-Vol-Must-Die/dp/1401235085">disturbing-but-amazing Batman</a> comic books</p>
-  </li>
-  <li>
-    <p>Deactivate my online dating profiles because I won’t have time for that crap (although it’s not like I was a total playa to begin with)</p>
-  </li>
-  <li>
-    <p>Help a roommate build a new PC (he’s never built one before)</p>
-  </li>
-  <li>
-    <p>Make at least 1 more faux vlog episode</p>
-  </li>
-  <li>
-    <p>Make at least 1 music recording</p>
-  </li>
-</ul>
-
-<p>Most of all, I want to write up a LOT of blog posts documenting all the research I did when investigating coding bootcamps.</p>
 ]]></content>
   </entry>
   

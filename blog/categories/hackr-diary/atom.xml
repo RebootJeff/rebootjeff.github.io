@@ -4,7 +4,7 @@
   <title><![CDATA[Category: HackR Diary | RebootJeff.com]]></title>
   <link href="http://RebootJeff.github.io/blog/categories/hackr-diary/atom.xml" rel="self"/>
   <link href="http://RebootJeff.github.io/"/>
-  <updated>2013-09-22T21:06:36-07:00</updated>
+  <updated>2013-09-25T21:05:34-07:00</updated>
   <id>http://RebootJeff.github.io/</id>
   <author>
     <name><![CDATA[Jeff Lee]]></name>
@@ -12,6 +12,101 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[[HackR Diary] First Impressions]]></title>
+    <link href="http://RebootJeff.github.io/blog/2013/09/25/hackr-diary-first-impressions/"/>
+    <updated>2013-09-25T21:23:00-07:00</updated>
+    <id>http://RebootJeff.github.io/blog/2013/09/25/hackr-diary-first-impressions</id>
+    <content type="html"><![CDATA[<p>It’s the end of day #3. I don’t have much time to write, so this blog post is a smattering of thoughts from a fresh Hack Reactor student.</p>
+
+<h1 id="initial-observations">Initial Observations</h1>
+
+<h2 id="recap">Recap</h2>
+
+<ul>
+  <li>Day 1 and 2 are just review days covering topics and challenges covered by the pre-course work. Day 1 covered ettiquette, expectations, and recursion. Day 2 covered passing functions, a lot of JS fundamentals, and awesome advice for being successful (e.g., we talked about impostor syndrome, Hack Reactor’s motivations, some job-hunting advice, etc).</li>
+  <li>Day 3 covered paired programming, object-oriented programming (OOP), and classes.</li>
+</ul>
+
+<h2 id="logistics">Logistics</h2>
+
+<ul>
+  <li>Week 1 is full of lectures. Each day is about 50% lectures, 50% coding.</li>
+  <li>The first 6 weeks will have plenty of lectures and structured challenges. Then there is an interim week where you work on a project from home, which gives you the flexibility to travel, but the Hack Reactor staff will be offline (they basically get a 1-week vacation every 7 weeks). After the interim week is more time for your individual project, time for a group project, and time for job prep.</li>
+</ul>
+
+<h2 id="nuances">Nuances</h2>
+
+<ul>
+  <li>Lunch breaks and dinner breaks are often cut short due to lectures running long.</li>
+  <li>Lectures run long due to people asking questions.</li>
+  <li>All teachers advocate for students to ask questions. At Hack Reactor, the students ask a TON of questions because the class atmosphere is very comfortable.</li>
+  <li>The students are really nice. Everyone’s excited to meet new people (even the quiet ones are clearly motivated to be social).</li>
+  <li>I’ve heard stories of students of other bootcamps going out at night to hang out and have fun. I could be wrong, but so far it seems like there’s no time/energy left for going out at night.</li>
+  <li>That said, students don’t stay here that late (so far). A lot of us leave by 9pm. I thought it’d be common to leave no earlier than 10pm, but there aren’t even that many students from the senior cohort by the time the clock strikes 9:20pm (which is the latest I’ve stayed). I have a feeling this will change in a few weeks (beause that will be crunch time for the senior cohort).</li>
+  <li>Nothing’s perfect. Some equipment is broken, some chairs are shitty, some online resources are buggy, etc. None of these issues have been big issues.</li>
+</ul>
+
+<h1 id="nuggets-of-knowledge">Nuggets of Knowledge</h1>
+
+<h2 id="life-nuggets">Life Nuggets</h2>
+
+<h3 id="re-education">Re: <strong>Education</strong></h3>
+
+<p>Passive learning is deceptively similar to true understanding. When you just observe a correct solution, it can give you the illusion that you learned more than you really did. For example, you might watch someone code up a good solution. When you walk away, you’ll think you understand everything necessary to solve the problem, but all you learned was some code without its meaning.</p>
+
+<h3 id="re-starting-a-new-tech-career">Re: <strong>Starting a new tech career</strong></h3>
+
+<p>Everyone thinks starting a new tech career with a tiny startup is really exciting. That might be true, but people tend to forget an important caveat: less structure could lead to a less efficient roadmap to individual success.</p>
+
+<p>In less formal terms, you might work for a tiny startup on something you truly care about, but the startup could easily be too small or too young to provide an environment with superiors/peers that can help you develop your programming skills (or any job-related skills).</p>
+
+<h2 id="javascript-nuggets">JavaScript Nuggets</h2>
+
+<h3 id="null-vs-undefined">Null vs. Undefined</h3>
+
+<p><code>null</code> is a keyword, but <code>undefined</code> is just an identifier. It’s like a variable that stores the value of <code>undefined</code>. This means you could write <code>undefined = 1;</code> and use it like any other variable, but things could get really messy if you do this.</p>
+
+<h3 id="guard-operator">Guard operator</h3>
+
+<p>Marcus, the primary instructor, warned us that some devs dislike the guard operator, but it’s really concise (which is cool to him). The guard operator is a logical-AND that “guards” a small bit of code the same way an <code>if</code> statement would guard it. For example:</p>
+
+<div><div class="CodeRay">
+  <div class="code"><pre><span class="keyword">if</span>(goodStudent === <span class="predefined-constant">true</span>){
+    candy++;
+}
+
+<span class="comment">// The above code could be refactored into the following:</span>
+goodStudent &amp;&amp; candy++;
+</pre></div>
+</div>
+</div>
+
+<p>The following is a more practical example:</p>
+
+<div><div class="CodeRay">
+  <div class="code"><pre><span class="comment">// Let's say you want to only call a function with an array if the array is NOT undefined (i.e., you want to guard against a scenario where you pass an undefined argument to a function).</span>
+arg &amp;&amp; myFunction(arg);
+</pre></div>
+</div>
+</div>
+
+<h3 id="adding-undefined-might-yield-a-string">Adding undefined might yield a string</h3>
+
+<p>When the <code>+</code> operator is used with <code>undefined</code>, then the <code>+</code> will act like a concatenation rather than addition. So if you try to add two variables, but you forgot to define one of them, you will get the following:</p>
+
+<div><div class="CodeRay">
+  <div class="code"><pre><span class="keyword">var</span> num1 = <span class="integer">3</span>;
+<span class="keyword">var</span> num2;    <span class="comment">// num2 is undefined</span>
+<span class="keyword">var</span> sum = num1 + num2;    <span class="comment">// num2 has been declared, so no error is thrown</span>
+console.log(num1 + num2);
+<span class="comment">// prints '3undefined' (which is a string) to the console</span>
+</pre></div>
+</div>
+</div>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[[HackR Diary] Pre-Course Anticipation]]></title>
