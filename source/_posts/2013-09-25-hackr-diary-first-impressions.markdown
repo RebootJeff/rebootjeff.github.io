@@ -32,6 +32,8 @@ It's the end of day #3. I don't have much time to write, so this blog post is a 
 
 # Nuggets of Knowledge
 
+I've picked up a lot of cool (and oftentimes valuable) advice/facts in just 3 days.
+
 ## Life Nuggets
 
 ### Re: **Education**
