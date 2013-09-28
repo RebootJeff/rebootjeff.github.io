@@ -6,6 +6,8 @@ comments: true
 categories: ['HackR Diary','Hack Reactor','coding bootcamps','TIL','JavaScript']
 ---
 
+<p class="last-updated">Last updated on Sep 28, 2013 to edit section on guard operator.</p>
+
 It's the end of day #3. I don't have much time to write, so this blog post is a smattering of thoughts from a fresh Hack Reactor student.
 
 # Initial Observations
@@ -50,11 +52,11 @@ In less formal terms, you might work for a tiny startup on something you truly c
 
 ### Guard operator
 
-Marcus, the primary instructor, warned us that some devs dislike the guard operator, but it's really concise (which is cool to him). The guard operator is a logical-AND that "guards" a small bit of code the same way an `if` statement would guard it. For example:
+Marcus, the primary instructor, warned us that some devs dislike the guard operator, but it's really concise (which is cool to him). The guard operator is a logical-AND or logical-OR that "guards" a small bit of code the same way an `if` statement would guard it. For example:
 
 ~~~
 if(goodStudent === true){
-	candy++;
+    candy++;
 }
 
 // The above code could be refactored into the following:
@@ -67,5 +69,25 @@ The following is a more practical example:
 ~~~
 // Let's say you want to only call a function with an array if the array is NOT undefined (i.e., you want to guard against a scenario where you pass an undefined argument to a function).
 arg && myFunction(arg);
+~~~
+{:lang="javascript"}
+
+You can also use a logical-OR in a guard-like fashion. This is sometimes called the **default operator** rather than a guard operator.
+
+~~~
+// if no name was passed into the function, just give the name variable a default value of 'friend'
+
+var sayHello = function(name){
+  if(name === undefined){
+    name = 'friend';
+  }
+  console.log('Hello, ' + name + '!');
+}
+
+// the function above could be refactored to use the OR-guard as follows:
+var sayHello = function(name){
+  name = name || 'friend';
+  console.log('Hello, ' + name + '!');
+}
 ~~~
 {:lang="javascript"}
