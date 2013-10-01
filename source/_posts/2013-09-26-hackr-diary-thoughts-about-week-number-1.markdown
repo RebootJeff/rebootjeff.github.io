@@ -8,7 +8,7 @@ categories: ['HackR Diary','Hack Reactor','coding bootcamps']
 <blockquote class="twitter-tweet"><p>Good way to start week 2 at <a href="https://twitter.com/HackReactor">@HackReactor</a> <a href="http://t.co/6pB80gQKCO">pic.twitter.com/6pB80gQKCO</a></p>&mdash; Jeff Lee (@RebootJeff) <a href="https://twitter.com/RebootJeff/statuses/384728991359176704">September 30, 2013</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-It's a bit late, but it can be hard to find time to write up a thorough blog post when I'm studying at Hack Reactor for 70-80 hours/week. During my free time, it's tempting to just play [Hawken](http://www.hawken.com) or catch up on YouTube (yes, I subscribe to some damn good channels).
+This post is a bit late, but it can be hard to find time to write up a thorough blog post when I'm studying at Hack Reactor for 70-80 hours/week. During my free time, it's tempting to just play [Hawken](http://www.hawken.com) or catch up on YouTube (yes, I subscribe to some damn good channels).
 
 In my last HackR Diary entry, I said that the staff gets a 1-week vacation every 7 weeks (6 weeks of work followed by a 1-week break). This isn't entirely true. The interim week can be used as vacation, but staff also use it to make changes to Hack Reactor. For example, the most recent interim week was used by staff to rearrange the lecture room, which involved installing a new projector screen.
 
