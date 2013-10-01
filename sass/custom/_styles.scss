@@ -119,7 +119,13 @@ a:visited {
   font-style: italic;
   text-align: center;
 }
-
+// New class for table formatting
+.myTable td, .myTable th {
+  padding: 1em 1em;
+}
+.myTable th {
+  font-weight: bold;
+}
 // Change top nav bar to flat GUI
 .navbar-inner {
 	border-radius: 0px;
