@@ -13,7 +13,7 @@
   
     
   
-  <meta name="description" content="It’s the end of day #3. I don’t have much time to write, so this blog post is a smattering of thoughts from a fresh Hack Reactor student. Initial &hellip;">
+  <meta name="description" content="Last updated on Sep 28, 2013 to edit section on guard operator. It’s the end of day #3. I don’t have much time to write, so this blog post is a &hellip;">
   
   <!-- http://t.co/dKP3o1e -->
   <meta name="HandheldFriendly" content="True">
@@ -29,7 +29,7 @@
   <meta name="og:type" content="website" />
   <meta name="og:site_name" content="RebootJeff.com" />
   <meta name="og:title" content="[HackR Diary] First Impressions" />
-  <meta name="og:description" content="It’s the end of day #3. I don’t have much time to write, so this blog post is a smattering of thoughts from a fresh Hack Reactor student. Initial &hellip;" />
+  <meta name="og:description" content="Last updated on Sep 28, 2013 to edit section on guard operator. It’s the end of day #3. I don’t have much time to write, so this blog post is a &hellip;" />
   <meta name="og:url" content="http://RebootJeff.github.io/blog/2013/09/25/hackr-diary-first-impressions/"/>
   <meta name="url" content="http://RebootJeff.github.io/blog/2013/09/25/hackr-diary-first-impressions/">
   
@@ -137,7 +137,9 @@ posted in
   </header>
 
 
-  <div class="entry-content"><p>It’s the end of day #3. I don’t have much time to write, so this blog post is a smattering of thoughts from a fresh Hack Reactor student.</p>
+  <div class="entry-content"><p class="last-updated">Last updated on Sep 28, 2013 to edit section on guard operator.</p>
+
+<p>It’s the end of day #3. I don’t have much time to write, so this blog post is a smattering of thoughts from a fresh Hack Reactor student.</p>
 
 <h1 id="initial-observations">Initial Observations</h1>
 
@@ -187,7 +189,7 @@ posted in
 
 <h3 id="guard-operator">Guard operator</h3>
 
-<p>Marcus, the primary instructor, warned us that some devs dislike the guard operator, but it’s really concise (which is cool to him). The guard operator is a logical-AND that “guards” a small bit of code the same way an <code>if</code> statement would guard it. For example:</p>
+<p>Marcus, the primary instructor, warned us that some devs dislike the guard operator, but it’s really concise (which is cool to him). The guard operator is a logical-AND or logical-OR that “guards” a small bit of code the same way an <code>if</code> statement would guard it. For example:</p>
 
 <div><div class="CodeRay">
   <div class="code"><pre><span class="keyword">if</span>(goodStudent === <span class="predefined-constant">true</span>){
@@ -205,6 +207,27 @@ goodStudent &amp;&amp; candy++;
 <div><div class="CodeRay">
   <div class="code"><pre><span class="comment">// Let's say you want to only call a function with an array if the array is NOT undefined (i.e., you want to guard against a scenario where you pass an undefined argument to a function).</span>
 arg &amp;&amp; myFunction(arg);
+</pre></div>
+</div>
+</div>
+
+<p>You can also use a logical-OR in a guard-like fashion. This is sometimes called the <strong>default operator</strong> rather than a guard operator.</p>
+
+<div><div class="CodeRay">
+  <div class="code"><pre><span class="comment">// if no name was passed into the function, just give the name variable a default value of 'friend'</span>
+
+<span class="keyword">var</span> <span class="function">sayHello</span> = <span class="keyword">function</span>(name){
+  <span class="keyword">if</span>(name === <span class="predefined-constant">undefined</span>){
+    name = <span class="string"><span class="delimiter">'</span><span class="content">friend</span><span class="delimiter">'</span></span>;
+  }
+  console.log(<span class="string"><span class="delimiter">'</span><span class="content">Hello, </span><span class="delimiter">'</span></span> + name + <span class="string"><span class="delimiter">'</span><span class="content">!</span><span class="delimiter">'</span></span>);
+}
+
+<span class="comment">// the function above could be refactored to use the OR-guard as follows:</span>
+<span class="keyword">var</span> <span class="function">sayHello</span> = <span class="keyword">function</span>(name){
+  name = name || <span class="string"><span class="delimiter">'</span><span class="content">friend</span><span class="delimiter">'</span></span>;
+  console.log(<span class="string"><span class="delimiter">'</span><span class="content">Hello, </span><span class="delimiter">'</span></span> + name + <span class="string"><span class="delimiter">'</span><span class="content">!</span><span class="delimiter">'</span></span>);
+}
 </pre></div>
 </div>
 </div>
@@ -260,6 +283,8 @@ posted in
       <a class="pull-left" href="/blog/2013/09/22/hackr-diary-pre-course-anticipation/" title="Previous Post: [HackR Diary] Pre-Course Anticipation">&laquo; [HackR Diary] Pre-Course Anticipation</a>
     
     
+      <a class="pull-right" href="/blog/2013/09/29/hackr-diary-thoughts-about-week-number-1/" title="Next Post: [HackR Diary] Thoughts about Week #1">[HackR Diary] Thoughts about Week #1 &raquo;</a>
+    
   </footer>
 
 </div>
@@ -282,6 +307,10 @@ posted in
     <ul class="recent_posts">
       
         <li>
+          <a href="/blog/2013/09/29/hackr-diary-thoughts-about-week-number-1/">[HackR Diary] Thoughts about Week #1</a>
+        </li>
+      
+        <li>
           <a href="/blog/2013/09/25/hackr-diary-first-impressions/">[HackR Diary] First Impressions</a>
         </li>
       
@@ -295,10 +324,6 @@ posted in
       
         <li>
           <a href="/blog/2013/09/15/coding-bootcamp-research-admissions-part2/">[Coding Bootcamp Research] Admissions Processes: My Experiences (Part 2 of 2)</a>
-        </li>
-      
-        <li>
-          <a href="/blog/2013/09/13/how-not-to-rescue-a-baby-snake/">How Not to Rescue a Baby Snake</a>
         </li>
       
     </ul>

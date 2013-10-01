@@ -4,7 +4,7 @@
   <title><![CDATA[Category: TIL | RebootJeff.com]]></title>
   <link href="http://RebootJeff.github.io/blog/categories/til/atom.xml" rel="self"/>
   <link href="http://RebootJeff.github.io/"/>
-  <updated>2013-09-25T21:21:17-07:00</updated>
+  <updated>2013-10-01T14:05:56-07:00</updated>
   <id>http://RebootJeff.github.io/</id>
   <author>
     <name><![CDATA[Jeff Lee]]></name>
@@ -18,7 +18,9 @@
     <link href="http://RebootJeff.github.io/blog/2013/09/25/hackr-diary-first-impressions/"/>
     <updated>2013-09-25T21:23:00-07:00</updated>
     <id>http://RebootJeff.github.io/blog/2013/09/25/hackr-diary-first-impressions</id>
-    <content type="html"><![CDATA[<p>It’s the end of day #3. I don’t have much time to write, so this blog post is a smattering of thoughts from a fresh Hack Reactor student.</p>
+    <content type="html"><![CDATA[<p class="last-updated">Last updated on Sep 28, 2013 to edit section on guard operator.</p>
+
+<p>It’s the end of day #3. I don’t have much time to write, so this blog post is a smattering of thoughts from a fresh Hack Reactor student.</p>
 
 <h1 id="initial-observations">Initial Observations</h1>
 
@@ -68,7 +70,7 @@
 
 <h3 id="guard-operator">Guard operator</h3>
 
-<p>Marcus, the primary instructor, warned us that some devs dislike the guard operator, but it’s really concise (which is cool to him). The guard operator is a logical-AND that “guards” a small bit of code the same way an <code>if</code> statement would guard it. For example:</p>
+<p>Marcus, the primary instructor, warned us that some devs dislike the guard operator, but it’s really concise (which is cool to him). The guard operator is a logical-AND or logical-OR that “guards” a small bit of code the same way an <code>if</code> statement would guard it. For example:</p>
 
 <div><div class="CodeRay">
   <div class="code"><pre><span class="keyword">if</span>(goodStudent === <span class="predefined-constant">true</span>){
@@ -86,6 +88,27 @@ goodStudent &amp;&amp; candy++;
 <div><div class="CodeRay">
   <div class="code"><pre><span class="comment">// Let's say you want to only call a function with an array if the array is NOT undefined (i.e., you want to guard against a scenario where you pass an undefined argument to a function).</span>
 arg &amp;&amp; myFunction(arg);
+</pre></div>
+</div>
+</div>
+
+<p>You can also use a logical-OR in a guard-like fashion. This is sometimes called the <strong>default operator</strong> rather than a guard operator.</p>
+
+<div><div class="CodeRay">
+  <div class="code"><pre><span class="comment">// if no name was passed into the function, just give the name variable a default value of 'friend'</span>
+
+<span class="keyword">var</span> <span class="function">sayHello</span> = <span class="keyword">function</span>(name){
+  <span class="keyword">if</span>(name === <span class="predefined-constant">undefined</span>){
+    name = <span class="string"><span class="delimiter">'</span><span class="content">friend</span><span class="delimiter">'</span></span>;
+  }
+  console.log(<span class="string"><span class="delimiter">'</span><span class="content">Hello, </span><span class="delimiter">'</span></span> + name + <span class="string"><span class="delimiter">'</span><span class="content">!</span><span class="delimiter">'</span></span>);
+}
+
+<span class="comment">// the function above could be refactored to use the OR-guard as follows:</span>
+<span class="keyword">var</span> <span class="function">sayHello</span> = <span class="keyword">function</span>(name){
+  name = name || <span class="string"><span class="delimiter">'</span><span class="content">friend</span><span class="delimiter">'</span></span>;
+  console.log(<span class="string"><span class="delimiter">'</span><span class="content">Hello, </span><span class="delimiter">'</span></span> + name + <span class="string"><span class="delimiter">'</span><span class="content">!</span><span class="delimiter">'</span></span>);
+}
 </pre></div>
 </div>
 </div>
