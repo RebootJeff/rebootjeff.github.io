@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "[HackR Diary] Thoughts about Week #1"
-date: 2013-10-01 14:37
+date: 2013-09-29 14:37
 comments: true
 categories: ['HackR Diary','Hack Reactor','coding bootcamps']
 ---
