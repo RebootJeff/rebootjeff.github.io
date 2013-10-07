@@ -6,7 +6,7 @@ comments: true
 categories: ['HackR Diary','Hack Reactor','coding bootcamps']
 ---
 
-I don't know if [my summary of week #1](blog/2013/09/29/hackr-diary-thoughts-about-week-number-1/) made it clear or not, but my first six days at Hack Reactor were tough, but I didn't exactly struggle with any of the material. This is probably because the pre-course work was [incredibly difficult](/blog/2013/09/22/hackr-diary-pre-course-anticipation/), thereby infusing me with helpful knowledge while also shaping my expectations.
+I don't know if [my summary of week #1](blog/2013/09/29/hackr-diary-thoughts-about-week-number-1/) made it clear or not, but although my first six days at Hack Reactor were tough, I didn't exactly struggle with any of the material. This is probably because the pre-course work was [incredibly difficult](/blog/2013/09/22/hackr-diary-pre-course-anticipation/), thereby infusing me with helpful knowledge while also shaping my expectations.
 
 Well guess what? Week 1 was an anomaly. It was a week filled with more lectures and less hands-on programming. I knew this ahead of time, but week 2 still caught me off guard. There was quite a bit more learning with minimal guidance. Also, the joys/stresses of pair programming are turned up a few notches as a result of the additional programming time created by reducing the amount of lecture time.
 
