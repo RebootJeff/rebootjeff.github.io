@@ -60,6 +60,6 @@ The difficulty lies in getting the syntax just right and understanding hierarchy
 
 #### D3 (library)
 
-[D3.js](http://d3js.org/) is a JavaScript library creating data-driven visuals inside HTML documents. I thought jQuery was cool, but now I think D3 takes the cake. It's much harder to learn D3, but there is tremendous power to be had from familiarizing yourself with it.
+[D3.js](http://d3js.org/) is a JavaScript library for creating data-driven visuals inside HTML documents. I thought jQuery was cool, but now I think D3 takes the cake. It's much harder to learn D3, but there is tremendous power to be had from familiarizing yourself with it.
 
 That said, the D3 assignment left me mentally tired as hell. Like jQuery, you can easily select DOM elements, but the rest of the D3 syntax isn't so straightforward, and the general concepts for using D3 properly will feel rather foreign at first. I hope to spend more time on my own to master D3 ...when I'm not so damn tired. The key is to understand the [general update pattern](http://bl.ocks.org/mbostock/3808218).
