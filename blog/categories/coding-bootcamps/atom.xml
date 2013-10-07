@@ -4,7 +4,7 @@
   <title><![CDATA[Category: coding bootcamps | RebootJeff.com]]></title>
   <link href="http://RebootJeff.github.io/blog/categories/coding-bootcamps/atom.xml" rel="self"/>
   <link href="http://RebootJeff.github.io/"/>
-  <updated>2013-10-07T10:47:15-07:00</updated>
+  <updated>2013-10-07T12:20:21-07:00</updated>
   <id>http://RebootJeff.github.io/</id>
   <author>
     <name><![CDATA[Jeff Lee]]></name>
@@ -40,7 +40,7 @@
 
 <h4 id="special-event-airbnb-presentation">Special Event: AirBnB Presentation</h4>
 
-<p>Lead devs from <strong><a href="https://twitter.com/Airbnb">AirBnB</a></strong> presented a ton of info about their tech stack, their work environment, <a href="http://nerds.airbnb.com/weve-open-sourced-rendr-run-your-backbonejs-a/">their open source project</a>, dev career advice, startup advice, etc. There was a post-presentation panel for answering a several questions. Then there was a post-panel meet-and-greet session. It was a truly fantastic event.</p>
+<p>Lead devs from <a href="https://twitter.com/Airbnb">AirBnB</a> presented a ton of info about their tech stack, their work environment, <a href="http://nerds.airbnb.com/weve-open-sourced-rendr-run-your-backbonejs-a/">their open source project</a>, dev career advice, startup advice, etc. There was a post-presentation panel for answering a several questions. Then there was a post-panel meet-and-greet session. It was a truly fantastic event.</p>
 
 <h4 id="saturday-social-night">Saturday Social Night</h4>
 
@@ -58,9 +58,9 @@
 
 <p>The algorithms sprint was a fantastic challenge, but there was no specific set of knowledge to learn. It felt like the main goal of the sprint was to get students’ minds thinking in more computer-oriented ways. We were taught some basics about time complexity, but we didn’t go into much depth about Big-O notation. We briefly described actions (e.g., deleting data from an array) and algorithms (e.g., solutions to the <a href="http://en.wikipedia.org/wiki/Eight_queens_puzzle#Related_problems">n-queens puzzle</a>) as constant, linear, quadratic, polynomial, and exponential (as opposed to discussing the nuances of O(c), O(n), O(n^2), O(n^c), O(c^n), etc).</p>
 
-<p>The main takeaway was that we should worry more about macro-optimizations (storing data in variables in a way that allows for constant-time lookup) rather than micro-optimizations (improving a <code>for</code> loop so then it loops fewer times). Micro-optimizations are good, but they aren’t as valuable when just creating prototypes, minimum viable products, etc.</p>
+<p>The main takeaway was that we should worry more about macro optimizations (storing data in variables in a way that allows for constant-time lookup) rather than micro optimizations (improving a <code>for</code> loop so then it loops fewer times). <strong>Micro optimizations are good, but they aren’t very valuable when you’re just creating prototypes, minimum viable products, etc.</strong></p>
 
-<p>I’m somewhat disappointed that we weren’t taught specific algorithms such as quicksort, binary search, etc. I’m under the assumption that all software developers need to know the “greatest hits” of algorithms (although, I’m also under the assumption that such knowledge is more useful in tech interviews than in day-to-day coding).</p>
+<p>I’m somewhat disappointed that we weren’t taught specific algorithms such as quicksort, binary search, etc. I’m under the assumption that all software developers need to know the “greatest hits” of algorithms. Although, I’m also under the assumption that such knowledge is more useful in tech interviews than in day-to-day coding.</p>
 
 <h4 id="layoutpositioning-htmlcss">Layout/Positioning (HTML/CSS)</h4>
 
@@ -74,7 +74,7 @@
 
 <p><a href="http://d3js.org/">D3.js</a> is a JavaScript library creating data-driven visuals inside HTML documents. I thought jQuery was cool, but now I think D3 takes the cake. It’s much harder to learn D3, but there is tremendous power to be had from familiarizing yourself with it.</p>
 
-<p>That said, the D3 assignment left me mentally tired as hell. Like jQuery, you can easily select DOM elements, but the rest of the D3 syntax isn’t so straightforward, and the general concepts for using D3 properly will feel rather foreign at first. I hope to spend more time on my own to master D3 …when I’m not so damn tired.</p>
+<p>That said, the D3 assignment left me mentally tired as hell. Like jQuery, you can easily select DOM elements, but the rest of the D3 syntax isn’t so straightforward, and the general concepts for using D3 properly will feel rather foreign at first. I hope to spend more time on my own to master D3 …when I’m not so damn tired. The key is to understand the <a href="http://bl.ocks.org/mbostock/3808218">general update pattern</a>.</p>
 ]]></content>
   </entry>
   
