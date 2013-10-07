@@ -28,7 +28,7 @@ This week, us juniors also started attending weekly(?) tapouts. Tapouts are like
 
 #### Special Event: AirBnB Presentation
 
-Lead devs from **[AirBnB](https://twitter.com/Airbnb)** presented a ton of info about their tech stack, their work environment, [their open source project](http://nerds.airbnb.com/weve-open-sourced-rendr-run-your-backbonejs-a/), dev career advice, startup advice, etc. There was a post-presentation panel for answering a several questions. Then there was a post-panel meet-and-greet session. It was a truly fantastic event.
+Lead devs from [AirBnB](https://twitter.com/Airbnb) presented a ton of info about their tech stack, their work environment, [their open source project](http://nerds.airbnb.com/weve-open-sourced-rendr-run-your-backbonejs-a/), dev career advice, startup advice, etc. There was a post-presentation panel for answering a several questions. Then there was a post-panel meet-and-greet session. It was a truly fantastic event.
 
 #### Saturday Social Night
 
@@ -46,9 +46,9 @@ Upon wrapping one's brain around `this` (and the `.call()`/`.apply()` methods), 
 
 The algorithms sprint was a fantastic challenge, but there was no specific set of knowledge to learn. It felt like the main goal of the sprint was to get students' minds thinking in more computer-oriented ways. We were taught some basics about time complexity, but we didn't go into much depth about Big-O notation. We briefly described actions (e.g., deleting data from an array) and algorithms (e.g., solutions to the [n-queens puzzle](http://en.wikipedia.org/wiki/Eight_queens_puzzle#Related_problems)) as constant, linear, quadratic, polynomial, and exponential (as opposed to discussing the nuances of O(c), O(n), O(n^2), O(n^c), O(c^n), etc).
 
-The main takeaway was that we should worry more about macro-optimizations (storing data in variables in a way that allows for constant-time lookup) rather than micro-optimizations (improving a `for` loop so then it loops fewer times). Micro-optimizations are good, but they aren't as valuable when just creating prototypes, minimum viable products, etc.
+The main takeaway was that we should worry more about macro optimizations (storing data in variables in a way that allows for constant-time lookup) rather than micro optimizations (improving a `for` loop so then it loops fewer times). **Micro optimizations are good, but they aren't very valuable when you're just creating prototypes, minimum viable products, etc.**
 
-I'm somewhat disappointed that we weren't taught specific algorithms such as quicksort, binary search, etc. I'm under the assumption that all software developers need to know the "greatest hits" of algorithms (although, I'm also under the assumption that such knowledge is more useful in tech interviews than in day-to-day coding).
+I'm somewhat disappointed that we weren't taught specific algorithms such as quicksort, binary search, etc. I'm under the assumption that all software developers need to know the "greatest hits" of algorithms. Although, I'm also under the assumption that such knowledge is more useful in tech interviews than in day-to-day coding.
 
 #### Layout/Positioning (HTML/CSS)
 
@@ -62,4 +62,4 @@ The difficulty lies in getting the syntax just right and understanding hierarchy
 
 [D3.js](http://d3js.org/) is a JavaScript library creating data-driven visuals inside HTML documents. I thought jQuery was cool, but now I think D3 takes the cake. It's much harder to learn D3, but there is tremendous power to be had from familiarizing yourself with it.
 
-That said, the D3 assignment left me mentally tired as hell. Like jQuery, you can easily select DOM elements, but the rest of the D3 syntax isn't so straightforward, and the general concepts for using D3 properly will feel rather foreign at first. I hope to spend more time on my own to master D3 ...when I'm not so damn tired.
+That said, the D3 assignment left me mentally tired as hell. Like jQuery, you can easily select DOM elements, but the rest of the D3 syntax isn't so straightforward, and the general concepts for using D3 properly will feel rather foreign at first. I hope to spend more time on my own to master D3 ...when I'm not so damn tired. The key is to understand the [general update pattern](http://bl.ocks.org/mbostock/3808218).
