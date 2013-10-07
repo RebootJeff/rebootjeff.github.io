@@ -28,7 +28,7 @@ This week, us juniors also started attending weekly(?) **tapouts**. Tapouts are 
 
 #### Special Event: AirBnB Presentation
 
-Lead devs from **[AirBnB](https://twitter.com/Airbnb)** presented a ton of info about their tech stack, their work environment, their open source project, dev career advice, startup advice, etc. There was a post-presentation panel for answering a several questions. Then there was a post-panel meet-and-greet session. It was a truly fantastic event.
+Lead devs from **[AirBnB](https://twitter.com/Airbnb)** presented a ton of info about their tech stack, their work environment, [their open source project](http://nerds.airbnb.com/weve-open-sourced-rendr-run-your-backbonejs-a/), dev career advice, startup advice, etc. There was a post-presentation panel for answering a several questions. Then there was a post-panel meet-and-greet session. It was a truly fantastic event.
 
 #### Saturday Social Night
 
