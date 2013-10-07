@@ -20,11 +20,11 @@ I want to write more about student life at Hack Reactor, but I think I'll just s
 
 #### Toy Problems
 
-This week, my cohort, the junior students, started solving (almost) daily **toy problems**, which are small coding challenges designed to get us used to the type of timed problems that will be thrown our way at tech interviews. We have to complete these problems individually. We have 30-60 minutes to think of a solution, code the solution, and submit pull requests to have an automated tester give us feedback that we can use to help fix our solutions as necessary.
+This week, my cohort, the junior students, started solving (almost) daily toy problems, which are small coding challenges designed to get us used to the type of timed problems that will be thrown our way at tech interviews. We have to complete these problems individually. We have 30-60 minutes to think of a solution, code the solution, and submit pull requests to have an automated tester give us feedback that we can use to help fix our solutions as necessary.
 
 #### Tapouts
 
-This week, us juniors also started attending weekly(?) **tapouts**. Tapouts are like small group therapy sessions where five students voice their opinions of Hack Reactor to an alumnus. She will send anonimized feedback up the chain while also providing us with advice for any struggles we care to talk about. 
+This week, us juniors also started attending weekly(?) tapouts. Tapouts are like small group therapy sessions where five students voice their opinions of Hack Reactor to an alumnus. She will send anonimized feedback up the chain while also providing us with advice for any struggles we care to talk about. 
 
 #### Special Event: AirBnB Presentation
 
