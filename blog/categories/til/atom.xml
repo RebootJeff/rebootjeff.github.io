@@ -4,7 +4,7 @@
   <title><![CDATA[Category: TIL | RebootJeff.com]]></title>
   <link href="http://RebootJeff.github.io/blog/categories/til/atom.xml" rel="self"/>
   <link href="http://RebootJeff.github.io/"/>
-  <updated>2013-10-07T00:26:39-07:00</updated>
+  <updated>2013-10-07T00:28:01-07:00</updated>
   <id>http://RebootJeff.github.io/</id>
   <author>
     <name><![CDATA[Jeff Lee]]></name>
@@ -12,240 +12,6 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
-  
-  <entry>
-    <title type="html"><![CDATA[Queues &amp; Stacks with JavaScript Class Patterns (and Batman)]]></title>
-    <link href="http://RebootJeff.github.io/blog/2013/09/29/queues-and-stacks-with-javascript-class-patterns/"/>
-    <updated>2013-09-29T14:54:00-07:00</updated>
-    <id>http://RebootJeff.github.io/blog/2013/09/29/queues-and-stacks-with-javascript-class-patterns</id>
-    <content type="html"><![CDATA[<p>As expected, I’ve learned a lot in my first week at Hack Reactor. As unexpected, I’ve learned a lot of <em>computer science</em> goodness in week #1.</p>
-
-<p>Students are enouraged to blog about their newly equipped knowledge and wisdom. I volunteered to write a little somethin’, somethin’ about introductory data structures created with four different class patterns.</p>
-
-<h1 id="whats-a-stack">What’s a Stack?</h1>
-
-<p>A stack is a collection of items (pieces of data) that follow a particular rule: the last item to join the collection is the first one to leave.</p>
-
-<ul>
-  <li>The <strong>L</strong>ast data <strong>I</strong>n is the <strong>F</strong>irst data <strong>O</strong>ut (<strong>LIFO</strong>)</li>
-  <li>Add data: <strong>push</strong></li>
-  <li>Remove data: <strong>pop</strong></li>
-  <li>Data enters and exits at the same end of the stack (at the <strong>top</strong>)</li>
-</ul>
-
-<h2 id="ridiculous-analogy">Ridiculous analogy:</h2>
-
-<p>Imagine you’ve found an old, abandoned well. You think to yourself, “Bruce Wayne fell down a well when he was a kid, and I wanna be just like the Batman, so I’m gonna fall down this sweet well!” But you hesitate because it’s a deep well.</p>
-
-<p>Your arch-nemesis is walking her pet hyena. She spots you, and quickly runs over to shove you into the well. She then hides and waits for more people to walk near the well so she can <strong>push</strong> them too.</p>
-
-<p>It just so happens that this well has the diameter of a single person. When someone is pushed into the well, they land on top of the last person who fell in before them. This creates a <strong>stack</strong> of people, and some rather pronounced discomfort. Eventually, there are 5 people in this deep-yet-thin well, and you decide it’s time to call for help to get rescued.</p>
-
-<p>To your disappointment, the not-so-dark knight named Superman arrives to pull you well-dwellers out (one at a time). The last one to get pushed in is the first to <strong>pop</strong> out. <del>YOLO</del> LIFO.</p>
-
-<p><blockquote><p>Why do we fall?<br/>So we can simulate the data structure known as a stack. Duh.</p><footer><strong>Dexter Pennyworth (Alfred’s programmer cousin)</strong></footer></blockquote></p>
-
-<h1 id="whats-a-queue">What’s a Queue?</h1>
-
-<ul>
-  <li>The <strong>F</strong>irst data <strong>I</strong>n is the <strong>F</strong>irst data <strong>O</strong>ut (<strong>FIFO</strong>)</li>
-  <li>Add data: <strong>enqueue</strong></li>
-  <li>Remove data: <strong>dequeue</strong></li>
-  <li>Data exits at the: <strong>head</strong> of the queue</li>
-  <li>Data enters at the: <strong>tail</strong> of the queue</li>
-</ul>
-
-<h2 id="ridiculous-analogy-1">Ridiculous analogy:</h2>
-
-<p>Batman decides to do some in-the-field combat training. He drops into the middle of a gang meeting and yells, “I’ve sent your buddies to jail. I know you want revenge. Catch me if you can.” We all know Batman is a smart dude, and sure enough, he has a clever plan. He lures the baddies who are running after him in a narrow alley.</p>
-
-<p>The gangsters can only approach Batman one at a time to fit in the narrow alley, so they form a line (aka <strong>queue</strong>). The gangster at the front of the line is the first gangster knocked out (aka <strong>dequeued</strong>) by Batman (<strong>first in; first out</strong>). You might even say that Batman’s fists aim for the <strong>head</strong> of the queue and foolish gangsters enter the line of doom at the <strong>tail</strong> of the queue.</p>
-
-<h1 id="class-patterns">Class Patterns</h1>
-
-<h3 id="functional-instantiation">Functional Instantiation</h3>
-
-<p>The simplest way to implement classes is with a “maker” function that creates a new instance of the class and returns that instance so it can be stored as a variable. The new instance is just like any other JavaScript object. It can have properties that store relevant information about the instance (e.g., with a <code>Car</code> class, instances might have a <code>color</code> property). It can also have properties that store functions. These functions serve as <strong>methods</strong> because they are tightly associated with the instance.</p>
-
-<h4 id="characteristics">Characteristics</h4>
-
-<ul>
-  <li>Creates new copies of the same functions when creating a new instance of the same class. This lack of reuse takes up more memory.</li>
-  <li>Modifying the class does not modify instances of the class.</li>
-  <li>Private variables can be created/used by implementing closure scope techniques.</li>
-  <li>If you understand JavaScript functions and objects, then you can understand classes implemented via functional instantiation (other instantiation techniques require more knowledge to understand).</li>
-</ul>
-
-<h4 id="example-code">Example code:</h4>
-<div><div class="CodeRay">
-  <div class="code"><pre><span class="keyword">var</span> <span class="function">makeStack</span> = <span class="keyword">function</span>(){
-  <span class="comment">// Provide private variables in closure scope.</span>
-  <span class="keyword">var</span> size = <span class="integer">0</span>;
-  <span class="keyword">var</span> storage = {};
-
-  <span class="comment">// Create instance of Stack class.</span>
-  <span class="keyword">var</span> instance = {};
-
-  <span class="comment">// Add functions to the instance to serve as methods.</span>
-  <span class="comment">// Methods will provide an interface to the stack's storage.</span>
-  instance.<span class="function">push</span> = <span class="keyword">function</span>(data){
-    size++;
-    storage[size] = data;
-  };
-
-  instance.<span class="function">pop</span> = <span class="keyword">function</span>(){
-    <span class="comment">// Only perform pop actions if the stack has data</span>
-    <span class="keyword">if</span>(size &gt; <span class="integer">0</span>){
-      <span class="keyword">var</span> data = storage[size];
-
-      <span class="comment">// Don't forget to delete from storage to prevent memory leaks!</span>
-      <span class="keyword">delete</span> storage[size];
-      size--;
-      <span class="keyword">return</span> data;
-    }
-  };
-
-  instance.<span class="function">size</span> = <span class="keyword">function</span>(){
-    <span class="keyword">return</span> size;
-  }
-
-  <span class="keyword">return</span> instance;
-};
-</pre></div>
-</div>
-</div>
-
-<h3 id="functional-instantiation-with-shared-methods">Functional Instantiation with Shared Methods</h3>
-
-<h4 id="adding-methods">Adding Methods</h4>
-
-<p>Reuses functions by getting function references from something like <code>_.extend(instance,methods)</code>.</p>
-
-<h4 id="example-code-1">Example code:</h4>
-<div><div class="CodeRay">
-  <div class="code"><pre><span class="keyword">var</span> <span class="function">makeCar</span> = <span class="keyword">function</span>(carOwner, carColor, carEngine){
-  <span class="keyword">var</span> instance = {
-    <span class="key">owner</span>: carOwner,
-    <span class="key">color</span>: carColor,
-    <span class="key">engine</span>: carEngine
-  };
-  _.extend(myCar, sharedMethods); <span class="comment">// _.extend() is provided by Underscore.js</span>
-  <span class="keyword">return</span> instance;
-}
-
-<span class="comment">// The object below stores a bunch of methods that might be nice to add to a future class (e.g., Motorcycle class)</span>
-<span class="keyword">var</span> sharedMethods = {
-  <span class="function">horn</span>: <span class="keyword">function</span>(){
-    console.log(<span class="string"><span class="delimiter">'</span><span class="content">honk!</span><span class="delimiter">'</span></span>);
-  },
-  <span class="function">rev</span>: <span class="keyword">function</span>(){
-    console.log(<span class="string"><span class="delimiter">'</span><span class="content">vroom!</span><span class="delimiter">'</span></span>);
-  }
-};
-
-<span class="comment">// create an instance of the Car class:</span>
-<span class="keyword">var</span> car1 = makeCar(<span class="string"><span class="delimiter">'</span><span class="content">Jeff</span><span class="delimiter">'</span></span>, <span class="string"><span class="delimiter">'</span><span class="content">blue</span><span class="delimiter">'</span></span>, <span class="string"><span class="delimiter">'</span><span class="content">V6</span><span class="delimiter">'</span></span>);
-</pre></div>
-</div>
-</div>
-
-<h3 id="prototypal-instantiation">Prototypal Instantiation</h3>
-
-<h4 id="adding-methods-1">Adding Methods</h4>
-
-<p>Reuses functions via <code>Object.create(blah.prototype)</code>.</p>
-
-<h4 id="example-code-2">Example code:</h4>
-<div><div class="CodeRay">
-  <div class="code"><pre><span class="keyword">var</span> <span class="function">makeCar</span> = <span class="keyword">function</span>(){}
-  <span class="keyword">var</span> instance = Object.create(sharedMethods);
-  instance.owner = carOwner;
-  instance.color = carColor;
-  instance.engine = carEngine;
-
-  <span class="keyword">return</span> instance;
-}
-
-<span class="comment">// The object below stores a bunch of methods that might be nice to add to a future class (e.g., Motorcycle class)</span>
-<span class="keyword">var</span> sharedMethods = {
-  <span class="function">horn</span>: <span class="keyword">function</span>(){
-    console.log(<span class="string"><span class="delimiter">'</span><span class="content">honk!</span><span class="delimiter">'</span></span>);
-  },
-  <span class="function">rev</span>: <span class="keyword">function</span>(){
-    console.log(<span class="string"><span class="delimiter">'</span><span class="content">vroom!</span><span class="delimiter">'</span></span>);
-  }
-};
-
-<span class="comment">// create an instance of the Car class:</span>
-<span class="keyword">var</span> car1 = makeCar(<span class="string"><span class="delimiter">'</span><span class="content">Jeff</span><span class="delimiter">'</span></span>, <span class="string"><span class="delimiter">'</span><span class="content">blue</span><span class="delimiter">'</span></span>, <span class="string"><span class="delimiter">'</span><span class="content">V6</span><span class="delimiter">'</span></span>);
-</pre></div>
-</div>
-</div>
-
-<h3 id="pseudoclassical-instantiation">Pseudoclassical Instantiation</h3>
-
-<h4 id="adding-methods-2">Adding Methods</h4>
-
-<p>Same as prototypal: <code>Object.create(blah.prototype)</code>.</p>
-
-<h4 id="example-code-3">Example code:</h4>
-<div><div class="CodeRay">
-  <div class="code"><pre><span class="comment">// notice the use of 'this'</span>
-<span class="keyword">var</span> <span class="function">Car</span> = <span class="keyword">function</span>(carOwner, carColor, carEngine){ 
-  <span class="local-variable">this</span>.owner = carOwner;
-  <span class="local-variable">this</span>.color = carColor;
-  <span class="local-variable">this</span>.engine = carEngine;
-};
-
-<span class="comment">// notice the use of 'prototype'</span>
-Car.prototype.<span class="function">horn</span> = <span class="keyword">function</span>(){
-  console.log(<span class="string"><span class="delimiter">'</span><span class="content">honk!</span><span class="delimiter">'</span></span>);
-};
-Car.prototype.<span class="function">rev</span> = <span class="keyword">function</span>(){
-  console.log(<span class="string"><span class="delimiter">'</span><span class="content">vroom!</span><span class="delimiter">'</span></span>);
-};
-
-<span class="comment">// create an instance of the Car class with the 'new' keyword:</span>
-<span class="keyword">var</span> car1 = <span class="keyword">new</span> makeCar(<span class="string"><span class="delimiter">'</span><span class="content">Jeff</span><span class="delimiter">'</span></span>, <span class="string"><span class="delimiter">'</span><span class="content">blue</span><span class="delimiter">'</span></span>, <span class="string"><span class="delimiter">'</span><span class="content">V6</span><span class="delimiter">'</span></span>);
-</pre></div>
-</div>
-</div>
-
-<h1 id="make-em-dance">Make ‘em Dance</h1>
-
-<h2 id="implement-a-stack">Implement a Stack</h2>
-
-<h3 id="stack-class-using-functional-instantiation">Stack class using functional instantiation</h3>
-
-<div><div class="CodeRay">
-  <div class="code"><pre></pre></div>
-</div>
-</div>
-
-<h3 id="stack-class-using-functional-instantiation-wshared-methods">Stack class using functional instantiation w/Shared Methods</h3>
-
-<div><div class="CodeRay">
-  <div class="code"><pre></pre></div>
-</div>
-</div>
-
-<h2 id="implement-a-queue">Implement a Queue</h2>
-
-<h3 id="queue-class-using-prototypal-instantiation">Queue class using prototypal instantiation</h3>
-
-<div><div class="CodeRay">
-  <div class="code"><pre></pre></div>
-</div>
-</div>
-
-<h3 id="queue-class-using-pseudoclassical-instantiation">Queue class using pseudoclassical instantiation</h3>
-
-<div><div class="CodeRay">
-  <div class="code"><pre></pre></div>
-</div>
-</div>
-]]></content>
-  </entry>
   
   <entry>
     <title type="html"><![CDATA[[HackR Diary] First Impressions]]></title>
@@ -553,6 +319,106 @@ _gaq.push([<span class="string"><span class="delimiter">'</span><span class="con
 <p>I chose <code>coderay_line_numbers: table</code> at first, because I want line numbers, and I want them to be separated from the code. The problem is that CodeRay codeblock tables are apparently unresponsive to browser size. Consequently, the codeblocks were wider than the <code>&lt;div&gt;</code>s that contained them whenever they were viewed on a smartphone or even on a PC looking at this blog’s front page. The front page automatically narrows my posts quite a bit, and that made the codeblock tables very unhappy. It was very annoying.</p>
 
 <p>I haven’t found a true solution despite diving into the CSS. All the relevant CSS selectors already have <code>width: 100%</code> so I don’t know what else to do. I experimented with some <code>overflow</code> properties, but to no avail. For now, I have resorted to turning off line numbers entirely. Dammit.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[[Event Review] Intro to UX and Subpar Acoustics at General Assembly]]></title>
+    <link href="http://RebootJeff.github.io/blog/2013/08/10/event-review-intro-to-ux-at-general-assembly/"/>
+    <updated>2013-08-10T13:31:00-07:00</updated>
+    <id>http://RebootJeff.github.io/blog/2013/08/10/event-review-intro-to-ux-at-general-assembly</id>
+    <content type="html"><![CDATA[<p><img src="/images/ga_logo_sp.jpg" alt="General Assembly logo" /></p>
+
+<p>Last Thursday, <a href="https://generalassemb.ly/">General Assembly</a> hosted a presentation by <a href="http://bluelikeanorange.net">Jenny Tsai</a> (nice URL, by the way). Tsai is a pro UX designer, but her talk was meant for UX noobs. So instead of focusing on <em>how</em> to be a great UX designer, <strong>she focused on <em>what</em> is a UX designer.</strong> I’m not looking to become a UX designer, but the event was free, and I like hearing about the various roles involved in modern tech startups. Besides, I think all wannabe web developers such as myself wonder what differences separate UX design and web development.</p>
+
+<p>Unfortunately, I was a fool, so I didn’t bring a laptop or padfolio for taking notes, so I’m just going to relay the short bits I jotted down in my smartphone.</p>
+
+<h1 id="what-i-learned">What I Learned</h1>
+<p>Note: Tsai didn’t present this info in a DOs vs DON’Ts fashion. She didn’t do a “What’s the deal with wireframes” slide. I’m presenting the info my way, not her way.</p>
+
+<h2 id="general">General</h2>
+<p><strong>What is UX design?</strong> Designer is to developer as architect is to engineer.</p>
+
+<p><strong>What do UX designers do on any given day?</strong> Draw wireframes and mockups, draft user personas, create task flows, and get user input.</p>
+
+<p><strong>What’s the deal with “wireframes” and “pixel perfect mockups”?</strong> Wireframe is to mockup as sketch is to painting. It’s all about fidelity. Both are generally non-functional, but sometimes functional mockups are created just to demonstrate animations, screen changes, and general navigation. You want to use wireframes for quickly iterating on an idea. You should save mockups for later because they use a lot of time, which is equivalent to money. And I hear money is expensive these days.</p>
+
+<p><strong>What are user personas?</strong> Looks more like a marketing thing to me, but it’s basically creating profiles of target demographics. For I’mPregnantNowWhat.com, a user persona is going to be a profile of a young woman whose tech savviness is at level X. She cares about A, B, and C. And so on. I zoned out for a bit here, so I could be wrong.</p>
+
+<p><strong>What are task flows?</strong> Flow charts on how users interact with the website/app.</p>
+
+<p><strong>Who do UX designers interact with on a daily basis?</strong> Product managers, marketing peeps, customer service folks, developers, and other designers. PMs have the vision, marketing cares about the branding, customer service gives you customer feedback, and developers are the engineering for your architecting.</p>
+
+<p><strong>What is information architecture?</strong> Figuring out how relevant info is organized. For example, a shopping website could display products based on price, color, size, etc. For example, with Amazon.com, IA also involves deciding what product categories/options are displayed to the user so they can browse based on those categories/options. I imagine this is where the battle between overwhelming a user with too many choices and underwhelming the user with not enough info unfolds.</p>
+
+<p><strong>What software is used by UX designers?</strong> Wireframing software (there are a ton to choose from), collections of pre-made buttons and other GUI elements (especially common for smartphone apps where you can drag and drop stuff like on-screen keyboards into the mockup), and Adobe Creative Suite for pixel perfect mockups and assets (such as logos or new buttons).</p>
+
+<p><strong>What does it take to be a UX designer?</strong> Yes, you need some artistic skills. Tsai was an art student. However, you need a lot of logic, not just artistry. Logic helps you solve the problem of meeting user needs through UI design, interaction design, IA, etc.</p>
+
+<h2 id="users">Users</h2>
+<p>UX design juggles a lot of objectives, but in the end, it’s all about merging the product’s objectives with the user’s needs. The example Tsai kept using was Amazon. Amazon’s objective is to sell stuff. The user wants to buy stuff. To do that, a user needs to be able to easily browse, search, etc.</p>
+
+<p>So how do you know what users need? You interview them. Regarding user feedback, Tsai mentioned the following:</p>
+<table>
+	<colgroup>
+		<col span="1" style="width: 50%;" />
+		<col span="1" style="width: 50%;" />
+	</colgroup>
+	<tbody>
+		<tr>
+			<td style="vertical-align: top; padding: 5px;">DO tap into your colleague's friends and family. She emphasized the importance of that one degree of separation --it's a bias killer, apparently.</td>
+			<td style="vertical-align: top; padding: 5px;">DON'T interview friends and family who might be biased or afraid to hurt your precious feelings.</td>
+		</tr><tr>
+			<td style="vertical-align: top; padding: 5px;">DO ask users what apps they currently love. Try to find out what their general preferences/habits are. Find out how they interact with existing products (and how much they like it). Users are less likely to guess or unintentionally lie during an interview if you ask them about their current behavior rather than hypothetical behavior.</td>
+			<td style="vertical-align: top; padding: 5px;">DON'T ask users what they think about a hypothetical work flow, interaction, process, product change, etc. Users don't always understand the hypothetical impacts of hypothetical designs.</td>
+		</tr><tr>
+			<td style="vertical-align: top; padding: 5px;">DO find interviewees via Task Rabbit, Craigslist, or even Facebook.</td>
+			<td style="vertical-align: top; padding: 5px;">DON'T be afraid to "cast a wide net" to get faster responses to your quest for feedback.</td>
+	</tr></tbody></table>
+
+<h1 id="what-i-thought">What I Thought</h1>
+<p><strong>Tsai did a pretty great job. 9/10.</strong> Some of her presentation slides included small, hard-to-read text. It would’ve been fine for a smaller conference room, but I sat in the last row of chairs, and I couldn’t read a lot of the text. Other than that, she spoke well, the slides looked visually appealing, and she answered all questions easily.</p>
+
+<p>I could do without the intro slide where she sighs over the fantastic view of the Bay Bridge she gets to enjoy on her daily walk to work. Then again, maybe I’m just cold-hearted; maybe other people loved that part of her talk.</p>
+
+<p>I arrived 5 minutes late, but judging by the post-presentation Q&amp;A session, she neglected to describe her own career path at the beginning of her presentation. That’s a big oversight because this is an introductory talk! Of course audience members want to hear how you got your start! You can check out her LinkedIn by going to her website in case you’re wondering about her career history.</p>
+
+<p>As for the content, after the one hour session, I definitely have a clearer picture of not just the roles of UX designers, but also the roles of those who interact with UX designers. <strong>The talk also gave noobs like me a better understanding of what it takes to make a web/mobile app.</strong></p>
+
+<p><strong>The only real bummer was the acoustics.</strong> I’m going to whine a lot here, so skip to the <a href="#followup">followup</a> if you get bored. The General Assembly (GA) building is pretty nice. It has a few classrooms and conference rooms, but like all cool beans, GA uses a relatively open floor plan. Tsai’s presentation was held not in a classroom, but in an open area on the second floor. When I arrived, there were a handful of people working at nearby computers. They were chatting, as you’d expect, but that’s a distraction for audience members.</p>
+
+<p>On top of that, the air conditioning system popped on during the last segment of the event, and it spooked Tsai. Everyone thought it was some annoying truck or something, but the sound didn’t go away. It really bothered Tsai. After she inquired, the GA staffer explained it was just the AC. Damn that was an annoying AC.</p>
+
+<p>By the way, just like everyone else, I think exposed walls/ceilings, glass conference rooms, and open floor plans are slick as hell (especially compared to the drab corporate offices in DC). However, it’s <em>pretty obvious</em> that the recipe for office hawtness is also a recipe for poor acoustics. I’m surprised GA hosts presentations in the middle of an open floor of such a building. <strong>I give GA a score of 6/10.</strong> Yes, I’m sure my scores change the world.</p>
+
+<p>Side note: When using folding chairs, is it possible to stagger the rows so then the columns don’t line up? This would help short folks like me see through the heads of taller people rather than staring at the back of the head of the tall guy sitting directly in front of me. I’m sure staggering rows would be less space-efficient, but if you’ve got a lot of rows, then the people in the back could sure use some help seeing the presenter and the projector screen.</p>
+
+<h1 id="followup">Followup</h1>
+<p>GA did a good job of following up with attendees. We were emailed a survey (in which I notified them of their crappy acoustics), a blurb about GA’s other UX classes, and two lists of resources, which you can see for yourself below.</p>
+
+<h2 id="ux-website-reading-list">UX website reading list:</h2>
+<ul>
+  <li>http://www.uxbooth.com/</li>
+  <li>http://boxesandarrows.com/</li>
+  <li>http://www.uie.com/</li>
+  <li>http://uxmag.com/</li>
+  <li>http://www.uxnewsfeed.com/</li>
+  <li>http://www.inspireux.com/</li>
+  <li>http://uxdesign.smashingmagazine.com/</li>
+  <li>http://www.nngroup.com/reports/</li>
+  <li>http://techcrunch.com/</li>
+  <li>http://bx.businessweek.com/user-experience-ux/news/</li>
+  <li>http://hbr.org/</li>
+</ul>
+
+<h2 id="ux-book-reading-list">UX book reading list:</h2>
+<ul>
+  <li>Design of Everyday Things</li>
+  <li>The Elements of User Experience Design (by Jesse James Garrett, who Tsai referenced)</li>
+  <li>Don’t Make Me Think</li>
+  <li>A Project Guide to UX</li>
+  <li>The Inmates are Running the Asylum</li>
+</ul>
 ]]></content>
   </entry>
   
