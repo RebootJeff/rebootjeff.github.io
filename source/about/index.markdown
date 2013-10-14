@@ -36,10 +36,9 @@ If you're wondering how I put together this blog, check out [my first post](/blo
 
 # I am thinking of things other than code
 ![blue car](/images/about/autocross_sp.jpg)
-**Favorite Color:** not green actually
 
-**Current Theme Song:** "Reboot the Mission" by The Wallflowers
-
-**Expertise:** common grammar mistake's
-
-**Random Awesome Photographer:** [Ella Ling](http://www.ellaling.com)
+- **Favorite Color:** not green actually
+- **Theme Song:** "Reboot the Mission" by The Wallflowers
+- **Inner Conflict:** I like cars and the environment :'(
+- **Expertise:** comman grammer/spelling mistake's
+- **Favorite Photographer:** [Ella Ling](http://www.ellaling.com)
