@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Hack Reactor | RebootJeff.com]]></title>
   <link href="http://RebootJeff.github.io/blog/categories/hack-reactor/atom.xml" rel="self"/>
   <link href="http://RebootJeff.github.io/"/>
-  <updated>2013-10-07T12:21:27-07:00</updated>
+  <updated>2013-10-14T00:18:25-07:00</updated>
   <id>http://RebootJeff.github.io/</id>
   <author>
     <name><![CDATA[Jeff Lee]]></name>
@@ -14,11 +14,80 @@
 
   
   <entry>
+    <title type="html"><![CDATA[[HackR Diary] Week 3: Order in the Code]]></title>
+    <link href="http://RebootJeff.github.io/blog/2013/10/14/hackr-diary-week-3-backbone/"/>
+    <updated>2013-10-14T00:22:00-07:00</updated>
+    <id>http://RebootJeff.github.io/blog/2013/10/14/hackr-diary-week-3-backbone</id>
+    <content type="html"><![CDATA[<p><img src="/images/20131014/logos.png" alt="logos" /></p>
+
+<p class="my-caption">Tech from the previous week: Bower, Backbone, and CoffeeScript</p>
+
+<p>It’s funny how time perception is so easily manipulated. After 3 weeks of immersive education, I forget what day of the week it is. My fellow students also think time is passing by really quickly despite how many hours per day we spend in one (big) room.</p>
+
+<p>Weekends are limited to Sundays due to the 6-days-per-week schedule, so Fridays don’t feel like Fridays (so to speak). However, I should note that Saturdays at Hack Reactor are less intense than other days because the weekly social nights replace the final few hours of the daily classwork with entertainment. Social nights are optional, and plenty of students decide to spend that time working.</p>
+
+<h2 id="more-varied-thoughts-from-week-3">More varied thoughts from week 3</h2>
+
+<ul>
+  <li>I’ve stopped using pen + paper. I probably didn’t need to buy notebook for this course, and I’m just not a fan of paper. Hopefully my lack of note-taking won’t bite me later. Hack Reactor provides some good online notes, diagrams, etc, but I’m not sure they’ll be enough when it comes time to study for job interviews. That said, I’m not too worried.</li>
+  <li>Gym time is limited. Students get 2-hour lunch breaks every other day, but it takes at least 10 minutes to walk to the gym, a few minutes to change clothes, a few minutes to shower, 5-10 minutes to buy lunch afterwards, etc. Actual workout time is roughly 45-60 minutes max. A lot of us have ended up eating during the post-lunch lecture, so I guess it’s all good.</li>
+  <li>Hack Reactor hosts <a href="http://www.meetup.com/hackreactor/">various meetups</a> throughout the week (Coursera study group, general JS meetups, etc). I think that’s a pretty cool way for them to help out the greater dev community.</li>
+  <li><strong>Burnout watch:</strong> I still feel pretty excited to go to Hack Reactor 6 days per week, but I definitely look forward to relaxing on Sundays. In <a href="/blog/2013/10/06/hackr-diary-week-2/">my previous blog post</a>, I lamented about spending free my limited free time to write substantive blog posts, but now I think they really help me exercise my memory to prevent that “it was all a blur” feeling.</li>
+</ul>
+
+<h1 id="recap-of-events">Recap of Events</h1>
+
+<h3 id="industry-event-firebase">Industry Event: Firebase</h3>
+
+<p>Sadly, I didn’t attend the <a href="https://www.firebase.com/">Firebase</a> meetup hosted at Hack Reactor HQ. I heard from fellow students that the Firebase tech is pretty sweet. Firebase devs gave a demo that impressed many with promises of data syncing hotness.</p>
+
+<p>Why didn’t I attend the event? My pair programming partner and I decided we couldn’t spare any time for the event because we were more concerned with Backbone. Firebase just happened to come around at a bad time for me.</p>
+
+<h3 id="social-night-movie-theater">Social Night: Movie Theater</h3>
+
+<p>Yesterday, many students went to see <em>Gravity</em> (in 3D IMAX format). It was pretty friggin’ fantastic. Afterwards, some of us went our separate ways, some went back to studying/working, and some went out to partake in beverage consumption.</p>
+
+<h1 id="what-i-learned">What I Learned</h1>
+
+<p><strong>Quick tip:</strong> I learned a tactic for dealing with low brain energy. When I’m tired of analyzing software architecture decisions or concocting algorithms, I can give myself a productive break by switching to CSS work. Changing gears from program development to applying styles and designing layouts works wonders to give certain parts of my brain a rest while exercising others.</p>
+
+<p>Most Hack Reactor assignements come with some pre-written code, but they often come devoid of any interesting visuals so that you can practice CSS skills.</p>
+
+<h3 id="bower">Bower</h3>
+
+<p>Not much to say here. Students got a very brief lecture about <a href="http://bower.io/">Bower</a>, but it didn’t take much time to convince me to use it. Easily manage libraries/dependencies with a few terminal commands? Nice. <code>bower install</code> = woot!</p>
+
+<h3 id="inner-workings-of-the-web-httpajax-full-stack-overview">Inner workings of the web (HTTP/AJAX, full stack overview)</h3>
+
+<p>Students have yet to write any server-side code, but we’ve dealt with programming small client-side apps that interact with servers. We were taught some AJAX skills and some general HTTP knowledge. One lecture covered the overall system architecture that describes client-server interaction. <strong>There were so. Many. Terms:</strong> local storage, sockets, page requests, asset requests, client vs server MVC, content delivery networks (CDNs), object-relational mapping (ORM) –good times.</p>
+
+<h3 id="backbone">Backbone</h3>
+
+<p>Most of the week 3 assignemnts involved <a href="http://backbonejs.org/">Backbone</a>, which forced us students to really change the way we think about <em>designing</em> software. Developing with Backbone means organizing code to follow paradigms involving models, views, and collections (not quite MVC –which is “model view <em>controller</em>”).</p>
+
+<p>Before Backbone (a JavaScript framework for providing web apps with structure) our code was a like a stream of consciousness. With Backbone, our code was given order, structure, and rules to follow. It was a tough, but rewarding adjustment. Students were struggling with the process when initially exposed to Backbone. <strong>It’s funny because we were all questioning the effectiveness of Hack Reactor’s curriculum at first, but by the end of the week, most of us feel much more comfy with the framework.</strong></p>
+
+<p>Imagine you could only teach via stream-of-consciousness statements. Content would be expressed, but it would be messy as hell. Now imagine you were forced to teach by writing a well-structured, well-organized textbook. The difference is staggering. Suddenly you need to think about organizing concepts into topics, sequencing topics, connecting topics, etc. Making the leap from using no framework to using Backbone isn’t quite as drastic, but it’s still a tough contrast to get comfortable with in just a few days –even if those days involve ~12 hours of learning.</p>
+
+<h3 id="coffeescript">CoffeeScript</h3>
+
+<p>Before my time at Hack Reactor began, I was open to the idea of learning <a href="http://coffeescript.org/">CoffeeScript</a> (a more expressive, human-readable programming language that compiles into JavaScript, allowing you to write JavaScript with a very different syntax) because it looked friendly in the same way Ruby looks friendly. After a couple of weeks of writing lots of JavaScript code, I was far less open-minded about spending time learning a drastically different syntax. Imagine being told you were going to take a break from learning intermediate Spanish so you could learn beginner Portugese. You’d say, “No thank you, crazy person.” </p>
+
+<p>After finishing the CoffeeScript sprint, I remain somewhat ambivalent. I don’t love it, but I don’t hate it. <strong>The whole experience taught me that learning new syntax isn’t so bad.</strong></p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[[HackR Diary] Week 2: Now Exiting My Comfort Zone]]></title>
     <link href="http://RebootJeff.github.io/blog/2013/10/06/hackr-diary-week-2/"/>
     <updated>2013-10-06T22:17:00-07:00</updated>
     <id>http://RebootJeff.github.io/blog/2013/10/06/hackr-diary-week-2</id>
-    <content type="html"><![CDATA[<p>I don’t know if <a href="blog/2013/09/29/hackr-diary-thoughts-about-week-number-1/">my summary of week #1</a> made it clear or not, but although my first six days at Hack Reactor were tough, I didn’t exactly struggle with any of the material. This is probably because the pre-course work was <a href="/blog/2013/09/22/hackr-diary-pre-course-anticipation/">incredibly difficult</a>, thereby infusing me with helpful knowledge while also shaping my expectations.</p>
+    <content type="html"><![CDATA[<p class="last-updated">Last updated on Oct 13, 2013 to fix a typo and embedded a tweet.</p>
+
+<blockquote class="twitter-tweet"><p>Awesome of the <a href="https://twitter.com/Airbnb">@Airbnb</a> team to visit <a href="https://twitter.com/HackReactor">@HackReactor</a>. Picture of them talking about their tech stack. <a href="http://t.co/AYVDYA3JaT">pic.twitter.com/AYVDYA3JaT</a></p>&mdash; Ben Martin (@HealthfulHacker) <a href="https://twitter.com/HealthfulHacker/statuses/385258134677106689">October 2, 2013</a></blockquote>
+<script async="" src="http://RebootJeff.github.io//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<p>I don’t know if <a href="blog/2013/09/29/hackr-diary-thoughts-about-week-number-1/">my summary of week #1</a> made it clear or not, but although my first six days at Hack Reactor were tough, I didn’t exactly struggle with any of the material. This is probably because the pre-course work was <a href="/blog/2013/09/22/hackr-diary-pre-course-anticipation/">incredibly difficult</a>, thereby infusing me with helpful knowledge while also shaping my expectations.</p>
 
 <p>Well guess what? Week 1 was an anomaly. It was a week filled with more lectures and less hands-on programming. I knew this ahead of time, but week 2 still caught me off guard. There was quite a bit more learning with minimal guidance. Also, the joys/stresses of pair programming are turned up a few notches as a result of the additional programming time created by reducing the amount of lecture time.</p>
 
@@ -40,7 +109,7 @@
 
 <h4 id="special-event-airbnb-presentation">Special Event: AirBnB Presentation</h4>
 
-<p>Lead devs from <a href="https://twitter.com/Airbnb">AirBnB</a> presented a ton of info about their tech stack, their work environment, <a href="http://nerds.airbnb.com/weve-open-sourced-rendr-run-your-backbonejs-a/">their open source project</a>, dev career advice, startup advice, etc. There was a post-presentation panel for answering a several questions. Then there was a post-panel meet-and-greet session. It was a truly fantastic event.</p>
+<p>Lead devs from <a href="https://twitter.com/Airbnb">AirBnB</a> presented a ton of info about their tech stack, their work environment, <a href="http://nerds.airbnb.com/weve-open-sourced-rendr-run-your-backbonejs-a/">their open source project</a>, dev career advice, startup advice, etc. There was a post-presentation panel for answering several questions. Then there was a post-panel meet-and-greet session. It was a truly fantastic event.</p>
 
 <h4 id="saturday-social-night">Saturday Social Night</h4>
 
@@ -68,7 +137,7 @@
 
 <p>The difficulty lies in getting the syntax just right and understanding hierarchy. Some students didn’t learn much HTML/CSS before joining Hack Reactor, and so they had a lot to learn (box model, DOM hierarchy, CSS selectors, etc.) in a very short amount of time.</p>
 
-<p><strong>If you’re thinking of joining Hack Reactor as a student, I highly recommend you teach yourself HTML/CSS</strong> ahead of time. HTML/CSS isn’t tought to learn on your own, but it can be time-consuming even if you’ve got pros helping you. You may as well prepare yourself so then you can spend less time at Hack Reactor worrying about HTML/CSS and more time worrying about other technologies and concepts.</p>
+<p><strong>If you’re thinking of joining Hack Reactor as a student, I highly recommend you teach yourself HTML/CSS</strong> ahead of time. HTML/CSS isn’t tough to learn on your own, but it can be time-consuming even if you’ve got pros helping you. You may as well prepare yourself so then you can spend less time at Hack Reactor worrying about HTML/CSS and more time worrying about other technologies and concepts.</p>
 
 <h4 id="d3-library">D3 (library)</h4>
 
@@ -316,220 +385,6 @@ arg &amp;&amp; myFunction(arg);
 <p>Considering that I will be busier than I have ever been in my entire life(?), I probably won’t have much time for blogging, but I am determined to do a fair amount of blogging anyway!</p>
 
 <p>I still have plenty of <a href="/blog/categories/bootcamp-research/">coding bootcamp research</a> to blog about, but I will give my HackR Diary a higher priority. I’ve set a goal to blog about my experience at Hack Reactor at least once per week. Each diary entry will include a quick recap of topics taught by HackR staff, observational knowledge nuggets I picked up myself, and my personal evaluation of myself and the bootcamp.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[[Coding Bootcamp Research] Admissions Processes: My Experiences (Part 2 of 2)]]></title>
-    <link href="http://RebootJeff.github.io/blog/2013/09/15/coding-bootcamp-research-admissions-part2/"/>
-    <updated>2013-09-15T18:40:00-07:00</updated>
-    <id>http://RebootJeff.github.io/blog/2013/09/15/coding-bootcamp-research-admissions-part2</id>
-    <content type="html"><![CDATA[<p><img src="/images/mycodingbootcamplogo_SP.png" alt="my coding bootcamp logo" /></p>
-
-<p class="my-caption">Image Credits: original boot by MilitarySpot.com; ridiculous editing by me</p>
-
-<p>In <a href="/blog/2013/09/10/coding-bootcamp-research-admissions-processes-applications-and-interviews-part-1/">part 1</a>, I gave tips on tackling the admissions processes for coding bootcamps. In this article, I shall recap my personal experiences (all taking place in August 2013) with App Academy, Coding Dojo, Dev Bootcamp, General Assembly, Hack Reactor, and RocketU …in alphabetical order? Sure, why not.</p>
-
-<p>I won’t be covering answers to questions I asked at these interviews. I will cover some coding challenges and questions interviewers asked me. I will redact names. Originally, I wanted to include names, but for the sake of writing more openly, I decided to do some Find and Replace. If you apply to the bootcamps mentioned below, you’ll probably end up discovering a few of the names I’ve redacted anyway.</p>
-
-<p>In a future <a href="/blog/categories/bootcamp-research/">Coding Bootcamp Research</a> blog post, I will provide all the info I gleaned from my interviews.</p>
-
-<h1 id="app-academy-weeds-people-out-asap">App Academy weeds people out ASAP</h1>
-
-<h2 id="format">Format</h2>
-
-<ol>
-  <li>45-minute online quiz in Ruby</li>
-  <li>Another 45-minute online quiz in Ruby</li>
-  <li>???</li>
-</ol>
-
-<h2 id="tldr">TL;DR</h2>
-
-<p>BUZZKILL ALERT: I put a lot of time/effort into studying for their pre-interview Ruby quiz only to find out I had to do a 2nd quiz to get an interview. At that point, I was already interviewing with the other bootcamps, and I wasn’t motivated to contine with my App Academy admissions process. I really believe that interviews help show me how awesome a given bootcamp is –so <strong>2 pre-interview quizzes is like 2 obstacles to accessing a sales pitch I actually WANT.</strong></p>
-
-<h2 id="full-recap">Full Recap</h2>
-
-<p>I don’t remember if the response was immediate or took a few days to come my way, but soon after I submitted my App Academy application, I got an email telling me that I had to complete a 45-minute Ruby quiz before my admissions process could continue.</p>
-
-<p>The quiz came with instructions to help me study/prepare. It did not come with a deadline, and there was no countdown timer even though I was told I only had 45 minutes to finish. The quiz just involved implementing some functions. I completed the challenges in about 20-30 minutes. I then spend another 15 minutes refactoring the code. I’m not too familiar with Ruby, but I did learn a lot of fun things about the language that makes it possible to write incredibly concise code. <strong>It was a great quiz (what a weird thing to say).</strong></p>
-
-<p>A day after I submitted my quiz, I got an email telling me to do yet another quiz. At this point, I was not happy. Clearly, App Academy wants to really weed people out of their admissions. I understand that, but I very badly wanted to start the interview process sooner than later. A second quiz meant I’d have to spend more time studying Ruby when I was already busy with applying to other bootcamps and preparing for their interviews.</p>
-
-<p>Maybe I should’ve given them a chance, but I was already less interested in App Academy because they didn’t seem to stand out in any major way other than their deferred payment plan. So I ended up abandoning my App Academy application, and I never got an interview with them.</p>
-
-<p>Originally, I was intrigued by App Academy because it has a reputation for being tougher, putting it at the same high-caliber level as Hack Reactor. However, Hack Reactor seemed to put a lot more effort into community outreach, Quora posting, and just putting out more good vibes to get me excited about their program. In other words, <strong>App Academy’s marketing was over-shadowed by Hack Reactor’s marketing.</strong> I know that probably sounds really lame, but it’s the truth for my personal experience. As for the other bootcamps, they intrigued me by differentiating themselves in other ways.</p>
-
-<h1 id="coding-dojo-keeps-it-simple">Coding Dojo keeps it simple</h1>
-
-<h2 id="format-1">Format</h2>
-
-<ol>
-  <li>Non-technical interview</li>
-  <li>Profit.</li>
-  <li>???</li>
-</ol>
-
-<h2 id="tldr-1">TL;DR</h2>
-
-<p>Dojo only put me through 1 non-technical interview. The interview gave me a positive impression of the bootcamp culture, but other factors (like a weird pre-interview video) left me raising an eyebrow.</p>
-
-<h2 id="full-recap-1">Full Recap</h2>
-
-<p>Before my interview with Coding Dojo, <strong>I was emailed a link to a private pre-interview video.</strong> I was excited about what it could possibly cover. I was disappointed to learn it was a FAQs video. I won’t reveal the link or password, but I will give a quick overview of the contents.</p>
-
-<p>The video was a mediocre-quality recording of [CD person 1] talking to the camera. It was unedited, and just didn’t feel very professional. The whole time I watched him answer some FAQs, <strong>I kept wondering why the answers weren’t on the FAQ page of the Coding Dojo website.</strong> Why were these questions and answers password-protected?</p>
-
-<p>Maybe it’s because [CD person 1] answered questions re: comparing Coding Dojo to its competitors by admitting that their hiring network was smaller than most. The only reassurance provided was along the lines of “don’t worry, we’re working on it.”</p>
-
-<p>My first bootcamp interview was a phone call with [CD person 2], a Coding Dojo graduate-turned-teaching-assistant (aka Hacker-in-Residence or Developer-in-Residence). He was incredibly nice, and I dug his personality. He didn’t ask me any technical questions. He only asked me questions about myself to help set my expectations and gauge my motivation levels. He made me feel better about Coding Dojo, but I still figured the other bootcamps would probably do a better job of impressing me.</p>
-
-<p>About 6 days after the interview, I was emailed an offer to enroll in Coding Dojo’s September cohort. After about a week, I declined their offer.</p>
-
-<h1 id="dev-bootcamp----i-didnt-actually-apply">Dev Bootcamp – I didn’t actually apply</h1>
-
-<p>I wanted to join a bootcamp ASAP. DBC’s website says they’re sold out for the next 6 months, so I didn’t bother applying to their program.</p>
-
-<p>A few days ago, I met someone currently in Dev Bootcamp. She said that <strong>DBC is actually flexible in cohort placement.</strong> In fact, she was able to enter a sold out cohort.</p>
-
-<h1 id="general-assembly-likes-htmlcss">General Assembly likes HTML/CSS</h1>
-
-<h2 id="format-2">Format</h2>
-
-<ol>
-  <li>Non-technical interview</li>
-  <li>Online tutorial about HTML/CSS and jQuery</li>
-  <li>HTML/CSS challenge done at home (make an About Me webpage)</li>
-  <li>Semi-technical interview about your About Me page</li>
-</ol>
-
-<h2 id="tldr-2">TL;DR</h2>
-
-<p>I may have done a few things that screwed up my relationship with GA. Other than that, their admissions process was easy and fun.</p>
-
-<h2 id="full-recap-2">Full Recap</h2>
-
-<p>There’s some relevant backstory I need to tell you first. It all started BEFORE I cared about bootcamps. I enrolled in GA’s Front-End Web Development (FEWD) course. It’s 9 hours per class x 1 class per week x 10 weeks …for $3,000 (or maybe it was $3.5k; I don’t quite remember). I was really excited about the course, but I was worried it covered too many of the basics I already taught myself. I also worried that it wouldn’t really help me get a job due to lack of rigor.</p>
-
-<p>Eventually, I became way more interested in bootcamps, which provide much more learning per dollar spent. Furthermore, the GA FEWD course was clearly aimed at weekend warriors. I’m unemployed, so I may as well invest in a more immersive experience.</p>
-
-<p>Ok…enough excuses. The point is that I eventually canceled my enrollment a few days before the course started. This left a bad impression on GA. [GA person 1] was very patient with me, but I could tell he wasn’t happy with me. He agreed to begin my admissions process for GA’s bootcamp after a phone call (which turned out to be my first interview). The phone call was scheduled after I sent an email to GA asking why my bootcamp application hadn’t gotten a response. <em>Awkward.</em> [GA person 1] even told me he thinks I’d be better served by GA’s FEWD rather than GA’s WDI (Web Development Immersive, which is what they call their bootcamp). I didn’t express it, but I kind of took his comment as an insult. Please forgive my arrogance.</p>
-
-<h3 id="back-to-the-actual-ga-bootcamp-admissions-process">Back to the actual GA bootcamp admissions process</h3>
-
-<p>Via email, I was instructed to do a GA onine tutorial using their system called Dash. It was a pretty good-looking tutorial, but it covered really basic HTML/CSS + jQuery material. I was underwhelmed. I also had to create a simple About Me webpage (offline –no need to host it on the web). They made it clear that their expectations were low. They didn’t even expect me to use any jQuery even though their tutorial included it.</p>
-
-<p>There’s a <a href="http://qr.ae/NvpkG">relevant Quora answer</a> that explains how <strong>GA’s admissions process is supposed to be less technical for the sake of preventing discrimination against applicants with less programming experience.</strong> This is similar to Coding Dojo’s view on applicants. This is the opposite of how App Academy and Hack Reactor approach applicants.</p>
-
-<p>My second interview with GA was held at their offices in SF. I got there late. I was a sweaty mess because I took the BART to get into the city, but apparently GA’s offices are about 1 mile from the nearest BART station. I should’ve used the Caltrain. I’m a fool.</p>
-
-<p>[GA person 1] greeted me as if I hadn’t ruined his life through my FEWD course cancellation, so things started off great. He sent me to an empty classroom where I could be interviewed by [GA person 2], a Developer-in-Residence. She asked me to talk about my About Me page. She asked me what challenges I faced, what resources I used for help, what I thought, etc.</p>
-
-<p>Then she asked me general questions about my background, motivation, living arrangements + commute, etc. As I answered these typical questions, I was a bit befuddled by [GA person 2]. It wasn’t her line of questioning that made me think something was wrong, it was her communication style.</p>
-
-<p>She didn’t give off that aura of excitement that other interviewers had. She also seemed taken aback by my conversational interview style as if she had expected me to take a more passive role. I think I talked too much? [insert joke about how I write blog posts that are too wordy]</p>
-
-<p>I guess what I’m trying to say is that [GA person 2] made me think the interview was about me impressing GA rather than GA impressing me. As I’ve stated before, I believe all interviews are two-way streets.</p>
-
-<p>Luckily, [GA person 3] took [GA person 2]’s place. Apparently she had been sent to interview me in his stead because he got caught up with work. This probably explains her demeanor, so I shouldn’t be so critical of her. She wasn’t prepared to conduct an interview.</p>
-
-<p>[GA person 3] is also a Developer-in-Residence, but he carried himself with the confident vibes of a true pro. <strong>I liked this guy a lot. He made me feel excited about GA.</strong> I had to re-answer a lot of the same questions [GA person 2] asked me, but I got much more of a response out of [GA person 3] whereas [GA person 2] just sorted nodded dismissively as I spoke.</p>
-
-<p>Unfortunately, our time was <strong>very</strong> limited (likely my fault for being late). There was barely any room for me to ask questions. [GA person 3] left and [GA person 1] re-entered. I asked [GA person 1] some questions from <a href="/blog/2013/09/10/coding-bootcamp-research-admissions-processes-applications-and-interviews-part-1/#interview-questions-for-you-to-ask">my giant list</a>, but at that point, I didn’t have my laptop in front of me, which sucked because I didn’t memorize many questions.</p>
-
-<p>I left the building feeling very confident, but <strong>I never heard back from them.</strong> Not to sound too full of myself, but maybe they checked out my blog soon after I published <a href="/blog/2013/08/25/hack-reactor-is-my-future/">my announcement</a> about my enrollment at Hack Reactor.</p>
-
-<h1 id="hack-reactor-wants-to-kick-your-ass">Hack Reactor wants to kick your ass!</h1>
-
-<h2 id="format-3">Format</h2>
-
-<ol>
-  <li>Technical interview on basic JavaScript</li>
-  <li>AJAX + jQuery challenge done at home</li>
-  <li>Technical interview on Functional JavaScript (wtf!)</li>
-</ol>
-
-<h2 id="tldr-3">TL;DR</h2>
-
-<p>Holy crap! The admissions process was so friggin’ tough!</p>
-
-<h2 id="full-recap-3">Full Recap</h2>
-
-<p>Before my first HackR interview, I was emailed a big list of things to study. The list included a lot of JavaScript’s built-in Array and String functions. Right off the bat, I felt a bit intimidated because although the material looked easy, the length of the pre-interview to-do list was exceptional.</p>
-
-<p>I was interviewed in person by a Hacker-in-Residence named [HackR X] and a co-founder named [HackR staff]. Quick aside: HackR’s office space is really friggin’ warm so you should dress appropriately. I was sweating even before I got nervous.</p>
-
-<p>[HackR X] asked me to do some live coding, which was so easy (basic looping, arrays, etc. in JS) that I got over-confident. I made some <em>really</em> careless mistakes (off-by-1 bug, overly-complicated algorithm, etc). Woops.</p>
-
-<p>It’s all good though. [HackR staff] seemed intimidating at first by just focusing on his own laptop the whole time as if he was just there to casually judge me. However, [HackR staff] and [HackR X] eventually helped me edit my code.</p>
-
-<p>Then, they asked me some questions. At the end of the interview, [HackR staff] did a quick recap, explaining that HackR has three objectives for first-round interviews:</p>
-
-<ol>
-  <li>Set my expectations - They wanted to make sure I knew that their program is no joke; it’s seriously intense</li>
-  <li>Gauge my motivation/drive - They wanted to see how much self-teaching I’ve done</li>
-  <li>Check my financial situation - They wanted to hear how I planned to pay the high tuition</li>
-</ol>
-
-<p>My first HackR interview was scheduled for 1 hour, but it lasted for at least 1.5 hours because I asked a crapload of questions. Before I interviewed with them, I was already extra excited about them because of some hype from <a href="http://kevinhamiltonsmith.com/hack-reactor-student-blogs/">student/alumni blogs</a> and <a href="http://www.quora.com/Hack-Reactor">their thoughtful responses to Quora questions</a>. So I put in extra effort into preparing my questions. [HackR staff] showed more interest in my candidacy-for-HackR-student when I started asking a lot of good questions that [HackR X] couldn’t answer.</p>
-
-<p>Side note: [HackR staff] appeared surprised when I asked him about their refund policy. That’s ironic when you consider that <a href="http://hackreactor.com/developer-bootcamp-contracts">their own blog suggests you ask all bootcamps about refunds</a>.</p>
-
-<p>After the first interview, I was told to complete a coding challenge at home before my second interview. I was full of confidence and empty of any commitments, so I scheduled my second interview to take place four days after my first interview. That didn’t leave me with much time, but [HackR staff] assured me that it would only take about 8 hours to complete.</p>
-
-<h3 id="here-comes-the-pain">Here comes the pain</h3>
-
-<p>It took me <em>at least</em> 8 hours. First, I was instructed to go through <a href="http://discover-devtools.codeschool.com/">Code School’s tutorial on Google Chrome dev tools</a>. Then, things got quirky. It’s hard to explain, but the challenge included some unique presentation. You’ll have to explore it yourself. However, I’m not entirely praising it because the instructions felt somewhat vague even after reading the additional tips they provided. I remember reading a student blog that claimed <strong>HackR purposefully makes certain instructions vague or certain code buggy just to keep you on your toes.</strong> Too bad I forgot the name of the blog, so I can’t give you a link.</p>
-
-<p>Anyway, I had to teach myself basic AJAX. I already taught myself basic jQuery, which was also a required technology for the challenge. Unfortunately, I didn’t have a very good understanding of AJAX. I got my code to work, but one particular feature functioned only after some guesswork. I didn’t truly know how that feature worked. Moreover, I could sense my app was only about 98% correct. <strong>My brain told me this was ok, but my heart told me to go cry like the weakling that I am.</strong></p>
-
-<p>I should mention that Hack Reactor lets you ask for their help via email. So I did. Twice. The first time, I got a response within a few hours. The second time, I never got a response. So if you’re trying to get through the coding challenge, keep in mind that <strong>you cannot rely on their email help.</strong> Doh.</p>
-
-<p>My second-round interview was a somewhat disjointed experience. At first, I was interviewed by Hacker-in-Residence [HackR Y]. Once again, I felt like I had over-stepped my bounds. When [HackR Y] asked me about my experience with the AJAX + jQuery challenge, I interpreted the moment as an opportunity to ask him to help me get my code 100% correct. We spent more than a few minutes on it before he decided it was time to move on. As it turned out, the interview was supposed to focus on new challenges, not the AJAX + jQuery challenge. That was an unpleasant surprise (considering the effort I spent overcoming its difficulties).</p>
-
-<p>I began programming solutions to the new challenges, which involved pretty simple functions. However, throughout the interview, [HackR Y] randomly left to deal with a phone call. He described it as “the most important phone call of my life” so the man was not investing much attention into my interview. I didn’t hold it against him because he assured me my interview time would be extended as necessary, and I didn’t have any other plans that day.</p>
-
-<p>Eventually, [HackR Z], another Hacker-in-Residence took over [HackR Y]’s interviewing duties. <strong>This is where I got my ass beat.</strong> [HackR Z] asked me to rewrite the functions I had just completed in a way that reused one after the other. Not only that, but the rewrite challenge also required the functions to accept functions as parameters. I believe all of this can be described as Functional Programming, a computer science concept I had never heard of before.</p>
-
-<p>I managed to make a function that called another function while passing it a function. Hot damn. Then I was told to go another layer deeper. <strong>My brain replied, “DO NOT WANT.”</strong> I was abandoned by my own brain. I guess most people would call it “panic” but it just felt like I couldn’t think. It could almost be described as ignorant bliss if not for the soul-crushing self-disappointment that accompanied it.</p>
-
-<p>[HackR Z] was cool about it. He guided me through a solution, then he brought me to a <del>beautiful backyard under false pretenses to put me out of my misery</del> conference room so we could talk more. I proceeded to ask him a bunch of questions, some of which I had already asked [HackR X] to answer (I wanted to get multiple perspectives for certain questions). <strong>I got the impression that [HackR Z] was not just cool, he was superbly chill.</strong></p>
-
-<p>Plus, but he did something particularly considerate. The first thing he did upon closing the conference room door behind us was give me immediate feedback. He straight-up told me not to worry about my brain fart during the live coding session because he felt the whole ordeal qualified as a great interview.</p>
-
-<p>I don’t casually throw around the word “epic” like many of my peers do, but [HackR Z] basically <strong>excorcised the demon of self-doubt from my mind.</strong> And it felt epic. The feeling of doubt felt epic, and the feeling of that toxicity evaporating felt even more epic. Epic, epic, <em>EPIC!</em></p>
-
-<h1 id="rocketu-is-new-and-eager">RocketU is new and eager</h1>
-
-<h2 id="format-4">Format</h2>
-<ol>
-  <li>Non-technical interview</li>
-  <li>Semi-technical interview on HTML/CSS + programming concepts</li>
-</ol>
-
-<h2 id="tldr-4">TL;DR</h2>
-
-<p>RocketU really felt extra eager to me. The new bootcamp in town really wanted to impress. The technical questions were trickier than they should’ve been due to some miscommunication.</p>
-
-<h2 id="full-recap-4">Full Recap</h2>
-
-<p>The first interview was a typical test of personality fit. I spoke with [RU person 1] over the phone for the first interview. It was a typical non-technical conversation about my background and expectations. She tried to talk up RocketU’s awesomeness by describing how amazing the instructors are, but for whatever reason, I started worrying about RocketU’s lack of cool factor. Other bootcamps feel like families or clubs. RocketU was missing that vibe (more on this a few paragraphs below).</p>
-
-<p>The second interview had some very specific quiz-like questions, but no live coding. I loved the second interviewer. [RU person 2] is an instructor with a solid background in teaching technical material. He asked me questions about HTML/CSS. He then asked me how I would solve a very particular problem. After he gave me some hints, I realized that I completely misunderstood the problem when he first described it.</p>
-
-<p>I actually ended up misunderstanding him TWICE, so it took me awhile to solve the problem, which is sad because the problem really wasn’t that difficult. It was just a re-phrased version of a classic algorithm problem/concept.</p>
-
-<p>I wish [RU person 2] could’ve showed me around RocketSpace a bit more because I never even got to see the part of the office the RocketU students use. I only got to check out a portion of the main RocketSpace floor.</p>
-
-<p>However, the real bummer is that the whole experience felt a bit more corporate (for lack of a better word) and a bit less start-uppy than the other bootcamps. This is pretty ironic considering that RocketU is part of a startup accelerator called RocketSpace.</p>
-
-<p>There are a few reasons for the “corporate” feel: The office space felt less fun and energetic (it’s less intimate; it’s less open due to the presence of many small dividers), RocketU doesn’t have its own blog filled with stories to get you pumped up, and RocketU is too young to have a promo video showing off its cool students. Plus, RocketU is run by people with experience in corporate training. So like I said earlier, the vibe I got from RocketU was very different from the vibe I got from its competitors.</p>
-
-<p>That said, I wouldn’t be surprised if my impressions are just plain wrong because RocketU doesn’t have as much outreach/marketing and my interviews weren’t particularly long.</p>
-
-<h1 id="for-the-record">For the record</h1>
-
-<p>I did not send followup emails or thank you emails after my interviews. I know you’re supposed to do that for job interviews, but I wasn’t sure what to do for bootcamp interviews. Looking back on it, I wish I had at least sent thank you emails even though everything worked out in the end.</p>
 ]]></content>
   </entry>
   
