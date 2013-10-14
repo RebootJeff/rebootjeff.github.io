@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "[HackR Diary] Week 3: Order in the Code"
-date: 2013-10-13 14:22
+date: 2013-10-14 00:22
 comments: true
 categories: ['HackR Diary','Hack Reactor','coding bootcamps','dev tools','Bower','Backbone','CoffeeScript','Firebase']
 ---
