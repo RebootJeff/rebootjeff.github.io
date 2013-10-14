@@ -49,6 +49,26 @@ table.CodeRay { background-color: #F3FFF0; }
 .CodeRay .line-numbers, .CodeRay .no { background-color: #E3FFDB; }
 .CodeRay .line-numbers a { color: #26BB01; }
 table.CodeRay td { padding: 0px 0px 0px 0px; }
+figure.code figcaption {
+  background-color: #A0EB8D;
+  background-image: none;
+  font-weight: bold;
+  text-shadow: none;
+  border: 0;
+  border-radius: 2px;
+}
+figure.code figcaption a {
+  font-weight: normal;
+  text-shadow: none;
+}
+div.CodeRay {
+  border-radius: 2px;
+}
+
+// Images
+img {
+  margin-bottom: 0;
+}
 
 // Green links
 a {

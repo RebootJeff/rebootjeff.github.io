@@ -6,6 +6,11 @@ comments: true
 categories: ['HackR Diary','Hack Reactor','coding bootcamps']
 ---
 
+<p class="last-updated">Last updated on Oct 13, 2013 to fix a typo and embedded a tweet.</p>
+
+<blockquote class="twitter-tweet"><p>Awesome of the <a href="https://twitter.com/Airbnb">@Airbnb</a> team to visit <a href="https://twitter.com/HackReactor">@HackReactor</a>. Picture of them talking about their tech stack. <a href="http://t.co/AYVDYA3JaT">pic.twitter.com/AYVDYA3JaT</a></p>&mdash; Ben Martin (@HealthfulHacker) <a href="https://twitter.com/HealthfulHacker/statuses/385258134677106689">October 2, 2013</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 I don't know if [my summary of week #1](blog/2013/09/29/hackr-diary-thoughts-about-week-number-1/) made it clear or not, but although my first six days at Hack Reactor were tough, I didn't exactly struggle with any of the material. This is probably because the pre-course work was [incredibly difficult](/blog/2013/09/22/hackr-diary-pre-course-anticipation/), thereby infusing me with helpful knowledge while also shaping my expectations.
 
 Well guess what? Week 1 was an anomaly. It was a week filled with more lectures and less hands-on programming. I knew this ahead of time, but week 2 still caught me off guard. There was quite a bit more learning with minimal guidance. Also, the joys/stresses of pair programming are turned up a few notches as a result of the additional programming time created by reducing the amount of lecture time.
@@ -28,7 +33,7 @@ This week, us juniors also started attending weekly(?) tapouts. Tapouts are like
 
 #### Special Event: AirBnB Presentation
 
-Lead devs from [AirBnB](https://twitter.com/Airbnb) presented a ton of info about their tech stack, their work environment, [their open source project](http://nerds.airbnb.com/weve-open-sourced-rendr-run-your-backbonejs-a/), dev career advice, startup advice, etc. There was a post-presentation panel for answering a several questions. Then there was a post-panel meet-and-greet session. It was a truly fantastic event.
+Lead devs from [AirBnB](https://twitter.com/Airbnb) presented a ton of info about their tech stack, their work environment, [their open source project](http://nerds.airbnb.com/weve-open-sourced-rendr-run-your-backbonejs-a/), dev career advice, startup advice, etc. There was a post-presentation panel for answering several questions. Then there was a post-panel meet-and-greet session. It was a truly fantastic event.
 
 #### Saturday Social Night
 
@@ -56,7 +61,7 @@ I taught myself a decent amount of HTML/CSS before my cohort's start date, so I 
 
 The difficulty lies in getting the syntax just right and understanding hierarchy. Some students didn't learn much HTML/CSS before joining Hack Reactor, and so they had a lot to learn (box model, DOM hierarchy, CSS selectors, etc.) in a very short amount of time.
 
-**If you're thinking of joining Hack Reactor as a student, I highly recommend you teach yourself HTML/CSS** ahead of time. HTML/CSS isn't tought to learn on your own, but it can be time-consuming even if you've got pros helping you. You may as well prepare yourself so then you can spend less time at Hack Reactor worrying about HTML/CSS and more time worrying about other technologies and concepts.
+**If you're thinking of joining Hack Reactor as a student, I highly recommend you teach yourself HTML/CSS** ahead of time. HTML/CSS isn't tough to learn on your own, but it can be time-consuming even if you've got pros helping you. You may as well prepare yourself so then you can spend less time at Hack Reactor worrying about HTML/CSS and more time worrying about other technologies and concepts.
 
 #### D3 (library)
 
