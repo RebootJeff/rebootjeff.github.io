@@ -39,9 +39,9 @@ Last Monday, the Hack Reactor students were treated to [a Backbone presentation]
 
 Pamela used to work for Coursera. She drew from her experiences with that company to provide a lot of context and real-world examples for the arguments she put forth in her presentation.
 
-- To address SEO concerns associated with single-page web apps, Coursera used Just-in-Time rendering. Coursera would detect whether or not a visitor was a search/social engine bot crawling the sit. Upon identifying the bot, Coursera servers would respond by firing up a rendered instance of the web app using Selenium. The bot would then be directed to the code produced by the rendering. This prevents the bot from crawling an HTML file that has nothing but `<script>` tags pulling in Backbone code. Side note: Google is not cool with the just-in-time technique. Coursera had to use a different technique for Google, but that was not disclosed during Pamela's talk :(
+- To address SEO concerns associated with single-page web apps, Coursera used **Just-in-Time rendering**. Coursera would detect whether or not a visitor was a search/social engine bot crawling the sit. Upon identifying the bot, Coursera servers would respond by firing up a rendered instance of the web app using Selenium. The bot would then be directed to the code produced by the rendering. This prevents the bot from crawling an HTML file that has nothing but `<script>` tags pulling in Backbone code. Side note: Google is not cool with the just-in-time technique. Coursera had to use a different technique for Google, but that was not disclosed during Pamela's talk :(
 
-- It's not the most organized (in my opinion), but you can find a lot of Coursera code on Github here: https://github.com/coursera/forum-js-snapshot (open source, baby!)
+- It's not the most organized (in my opinion), but you can find a lot of Coursera [code on Github](https://github.com/coursera/forum-js-snapshot) (open source, baby!)
 
 - When viewing their source code with your browser, you'll see mostly `<script>` tags. There is very little `<body>` HTML. That's due to extensive use of Backbone.
 
