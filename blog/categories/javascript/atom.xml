@@ -4,7 +4,7 @@
   <title><![CDATA[Category: JavaScript | RebootJeff.com]]></title>
   <link href="http://RebootJeff.github.io/blog/categories/javascript/atom.xml" rel="self"/>
   <link href="http://RebootJeff.github.io/"/>
-  <updated>2013-10-15T21:18:07-07:00</updated>
+  <updated>2013-10-15T21:20:12-07:00</updated>
   <id>http://RebootJeff.github.io/</id>
   <author>
     <name><![CDATA[Jeff Lee]]></name>
@@ -29,7 +29,7 @@
 
 <ul>
   <li>
-    <p>Region management (which you can “outsource” to the likes of <a href="http://chaplinjs.org/">Chaplin</a> or <a href="http://marionettejs.com/s">Marionette</a>) is worth checking out. Apparently, they help you limit the amount of rendering you need to do by allowing you to target specific regions of the web page.</p>
+    <p>Region management (which you can “outsource” to the likes of <a href="http://chaplinjs.org/">Chaplin</a> or <a href="http://marionettejs.com/s">Marionette</a>) is worth checking out. Apparently, it helps limit the amount of rendering you need to do by allowing you to target specific regions of the web page.</p>
   </li>
   <li>
     <p>Not all Backbone libraries are created equal! Some provide sweet functionality at the cost of depressing performance losses. The Backbone ecosystem is cool, but not entirely safe. Pamela once removed a library from Coursera’s codebase that was responsible for a <em>full second</em> of page load time.</p>
