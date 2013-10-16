@@ -25,7 +25,7 @@ Last Monday, the Hack Reactor students were treated to [a Backbone presentation]
 
 ## General Code-Related Nuggets
 
-- Don't optimize prematurely. Performant code is harder to read. Making code harder to read early on can be annoying.
+- Don't optimize prematurely. Performant code is harder to read. Making code harder to read early on can be annoying. I wonder if Pamela is pro-[guard operator](/blog/2013/09/25/hackr-diary-first-impressions/#guard-operator) or anti-guard operator.
 
 - [RequireJS](http://requirejs.org/) kills your foolish usage of global vars. Perhaps I should use it.
 
