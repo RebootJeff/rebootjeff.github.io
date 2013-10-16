@@ -4,7 +4,7 @@
   <title><![CDATA[Category: TIL | RebootJeff.com]]></title>
   <link href="http://RebootJeff.github.io/blog/categories/til/atom.xml" rel="self"/>
   <link href="http://RebootJeff.github.io/"/>
-  <updated>2013-10-14T00:18:25-07:00</updated>
+  <updated>2013-10-15T21:18:07-07:00</updated>
   <id>http://RebootJeff.github.io/</id>
   <author>
     <name><![CDATA[Jeff Lee]]></name>
@@ -12,6 +12,77 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[[HackR Diary] Event: Pamela Fox on Backbone]]></title>
+    <link href="http://RebootJeff.github.io/blog/2013/10/16/hackr-diary-a-visit-from-pamela-fox-re-backbone/"/>
+    <updated>2013-10-16T20:13:00-07:00</updated>
+    <id>http://RebootJeff.github.io/blog/2013/10/16/hackr-diary-a-visit-from-pamela-fox-re-backbone</id>
+    <content type="html"><![CDATA[<blockquote class="twitter-tweet"><p><a href="https://twitter.com/pamelafox">@pamelafox</a> schooling <a href="https://twitter.com/HackReactor">@HackReactor</a> students on <a href="https://twitter.com/search?q=%23backbonejs&amp;src=hash">#backbonejs</a> <a href="http://t.co/1xRuxIEvKl">pic.twitter.com/1xRuxIEvKl</a></p>&mdash; andre (@AndrEvangelestA) <a href="https://twitter.com/AndrEvangelestA/statuses/389949525588062209">October 15, 2013</a></blockquote>
+<script async="" src="http://RebootJeff.github.io//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<p>Last Monday, the Hack Reactor students were treated to <a href="http://backbone-3ways.appspot.com/">a Backbone presentation</a> by <a href="http://blog.pamelafox.org/">Pamela Fox</a>. It was packed with a ton of insight. I frantically took notes on my smartphone (like a fool), so now I present to you a collection of cool cucumbers.</p>
+
+<h1 id="what-i-learned">What I Learned</h1>
+
+<h2 id="backbone-nuggets">Backbone Nuggets</h2>
+
+<ul>
+  <li>
+    <p>Region management (which you can “outsource” to the likes of <a href="http://chaplinjs.org/">Chaplin</a> or <a href="http://marionettejs.com/s">Marionette</a>) is worth checking out. Apparently, they help you limit the amount of rendering you need to do by allowing you to target specific regions of the web page.</p>
+  </li>
+  <li>
+    <p>Not all Backbone libraries are created equal! Some provide sweet functionality at the cost of depressing performance losses. The Backbone ecosystem is cool, but not entirely safe. Pamela once removed a library from Coursera’s codebase that was responsible for a <em>full second</em> of page load time.</p>
+  </li>
+  <li>
+    <p>Backbone is so flexible that you might feel like an Backbone expert one day and then feel like a noob the next day when you see someone else’s radically different and compelling usage.</p>
+  </li>
+  <li>
+    <p>Break up your views into more views. Make sibling views and nested views. No single view should be a bajillion lines of code. If you find yourself making long js files in Backbone, it’s time to split things up, my fellow noob.</p>
+  </li>
+</ul>
+
+<h2 id="general-code-related-nuggets">General Code-Related Nuggets</h2>
+
+<ul>
+  <li>
+    <p>Don’t optimize prematurely. Performant code is harder to read. Making code harder to read early on can be annoying.</p>
+  </li>
+  <li>
+    <p><a href="http://requirejs.org/">RequireJS</a> kills your foolish usage of global vars. Perhaps I should use it.</p>
+  </li>
+  <li>
+    <p>Single-page web apps can be harder to debug (than multi-page web apps?) because state gets saved across various renders. Errors can be hard to reproduce during the debugging process because there might be many user interactions that need to occur in a particular sequence to cause the error.</p>
+  </li>
+  <li>
+    <p><strong>Ask potential employers about their companies’ testing practices.</strong> How much regression testing do they do? How many tests have they created? More tests means less fear when contributing to the codebase as a fresh employee.</p>
+  </li>
+  <li>
+    <p>Making <strong>forms</strong> with Backbone (or any MV framework?) is great because forms lend themselves to the model-view-collection paradigm with ease. Forms are collections of questions, which are models, which have their own views. Each question view can draw from a set of views meant to provide a particular format (a view for a question answered by checkboxes, a view for question answered by text fields, a view for question answered by generic menu, etc). This also means Backbone is good for creating <strong>control panels</strong> for admin users (e.g., admin control panel for teacher conducting a Coursera class).</p>
+  </li>
+</ul>
+
+<h2 id="re-coursera">Re: Coursera</h2>
+
+<p>Pamela used to work for Coursera. She drew from her experiences with that company to provide a lot of context and real-world examples for the arguments she put forth in her presentation.</p>
+
+<ul>
+  <li>
+    <p>To address SEO concerns associated with single-page web apps, Coursera used Just-in-Time rendering. Coursera would detect whether or not a visitor was a search/social engine bot crawling the sit. Upon identifying the bot, Coursera servers would respond by firing up a rendered instance of the web app using Selenium. The bot would then be directed to the code produced by the rendering. This prevents the bot from crawling an HTML file that has nothing but <code>&lt;script&gt;</code> tags pulling in Backbone code. Side note: Google is not cool with the just-in-time technique. Coursera had to use a different technique for Google, but that was not disclosed during Pamela’s talk :(</p>
+  </li>
+  <li>
+    <p>It’s not the most organized (in my opinion), but you can find a lot of Coursera code on Github here: https://github.com/coursera/forum-js-snapshot (open source, baby!)</p>
+  </li>
+  <li>
+    <p>When viewing their source code with your browser, you’ll see mostly <code>&lt;script&gt;</code> tags. There is very little <code>&lt;body&gt;</code> HTML. That’s due to extensive use of Backbone.</p>
+  </li>
+</ul>
+
+<h1 id="what-i-thought">What I Thought</h1>
+
+<p>Pamela is a fantastic speaker. What I liked most about her talk was the use of real-world examples. As a student, it’s always so informative to hear about life in the wild (so to speak). Seeing as how this was a Hack Reactor event exclusively for students, it’s hard to judge it impartially, but I’m going to go ahead and claim it was awesome.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[[HackR Diary] First Impressions]]></title>
@@ -319,106 +390,6 @@ _gaq.push([<span class="string"><span class="delimiter">'</span><span class="con
 <p>I chose <code>coderay_line_numbers: table</code> at first, because I want line numbers, and I want them to be separated from the code. The problem is that CodeRay codeblock tables are apparently unresponsive to browser size. Consequently, the codeblocks were wider than the <code>&lt;div&gt;</code>s that contained them whenever they were viewed on a smartphone or even on a PC looking at this blog’s front page. The front page automatically narrows my posts quite a bit, and that made the codeblock tables very unhappy. It was very annoying.</p>
 
 <p>I haven’t found a true solution despite diving into the CSS. All the relevant CSS selectors already have <code>width: 100%</code> so I don’t know what else to do. I experimented with some <code>overflow</code> properties, but to no avail. For now, I have resorted to turning off line numbers entirely. Dammit.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[[Event Review] Intro to UX and Subpar Acoustics at General Assembly]]></title>
-    <link href="http://RebootJeff.github.io/blog/2013/08/10/event-review-intro-to-ux-at-general-assembly/"/>
-    <updated>2013-08-10T13:31:00-07:00</updated>
-    <id>http://RebootJeff.github.io/blog/2013/08/10/event-review-intro-to-ux-at-general-assembly</id>
-    <content type="html"><![CDATA[<p><img src="/images/ga_logo_sp.jpg" alt="General Assembly logo" /></p>
-
-<p>Last Thursday, <a href="https://generalassemb.ly/">General Assembly</a> hosted a presentation by <a href="http://bluelikeanorange.net">Jenny Tsai</a> (nice URL, by the way). Tsai is a pro UX designer, but her talk was meant for UX noobs. So instead of focusing on <em>how</em> to be a great UX designer, <strong>she focused on <em>what</em> is a UX designer.</strong> I’m not looking to become a UX designer, but the event was free, and I like hearing about the various roles involved in modern tech startups. Besides, I think all wannabe web developers such as myself wonder what differences separate UX design and web development.</p>
-
-<p>Unfortunately, I was a fool, so I didn’t bring a laptop or padfolio for taking notes, so I’m just going to relay the short bits I jotted down in my smartphone.</p>
-
-<h1 id="what-i-learned">What I Learned</h1>
-<p>Note: Tsai didn’t present this info in a DOs vs DON’Ts fashion. She didn’t do a “What’s the deal with wireframes” slide. I’m presenting the info my way, not her way.</p>
-
-<h2 id="general">General</h2>
-<p><strong>What is UX design?</strong> Designer is to developer as architect is to engineer.</p>
-
-<p><strong>What do UX designers do on any given day?</strong> Draw wireframes and mockups, draft user personas, create task flows, and get user input.</p>
-
-<p><strong>What’s the deal with “wireframes” and “pixel perfect mockups”?</strong> Wireframe is to mockup as sketch is to painting. It’s all about fidelity. Both are generally non-functional, but sometimes functional mockups are created just to demonstrate animations, screen changes, and general navigation. You want to use wireframes for quickly iterating on an idea. You should save mockups for later because they use a lot of time, which is equivalent to money. And I hear money is expensive these days.</p>
-
-<p><strong>What are user personas?</strong> Looks more like a marketing thing to me, but it’s basically creating profiles of target demographics. For I’mPregnantNowWhat.com, a user persona is going to be a profile of a young woman whose tech savviness is at level X. She cares about A, B, and C. And so on. I zoned out for a bit here, so I could be wrong.</p>
-
-<p><strong>What are task flows?</strong> Flow charts on how users interact with the website/app.</p>
-
-<p><strong>Who do UX designers interact with on a daily basis?</strong> Product managers, marketing peeps, customer service folks, developers, and other designers. PMs have the vision, marketing cares about the branding, customer service gives you customer feedback, and developers are the engineering for your architecting.</p>
-
-<p><strong>What is information architecture?</strong> Figuring out how relevant info is organized. For example, a shopping website could display products based on price, color, size, etc. For example, with Amazon.com, IA also involves deciding what product categories/options are displayed to the user so they can browse based on those categories/options. I imagine this is where the battle between overwhelming a user with too many choices and underwhelming the user with not enough info unfolds.</p>
-
-<p><strong>What software is used by UX designers?</strong> Wireframing software (there are a ton to choose from), collections of pre-made buttons and other GUI elements (especially common for smartphone apps where you can drag and drop stuff like on-screen keyboards into the mockup), and Adobe Creative Suite for pixel perfect mockups and assets (such as logos or new buttons).</p>
-
-<p><strong>What does it take to be a UX designer?</strong> Yes, you need some artistic skills. Tsai was an art student. However, you need a lot of logic, not just artistry. Logic helps you solve the problem of meeting user needs through UI design, interaction design, IA, etc.</p>
-
-<h2 id="users">Users</h2>
-<p>UX design juggles a lot of objectives, but in the end, it’s all about merging the product’s objectives with the user’s needs. The example Tsai kept using was Amazon. Amazon’s objective is to sell stuff. The user wants to buy stuff. To do that, a user needs to be able to easily browse, search, etc.</p>
-
-<p>So how do you know what users need? You interview them. Regarding user feedback, Tsai mentioned the following:</p>
-<table>
-	<colgroup>
-		<col span="1" style="width: 50%;" />
-		<col span="1" style="width: 50%;" />
-	</colgroup>
-	<tbody>
-		<tr>
-			<td style="vertical-align: top; padding: 5px;">DO tap into your colleague's friends and family. She emphasized the importance of that one degree of separation --it's a bias killer, apparently.</td>
-			<td style="vertical-align: top; padding: 5px;">DON'T interview friends and family who might be biased or afraid to hurt your precious feelings.</td>
-		</tr><tr>
-			<td style="vertical-align: top; padding: 5px;">DO ask users what apps they currently love. Try to find out what their general preferences/habits are. Find out how they interact with existing products (and how much they like it). Users are less likely to guess or unintentionally lie during an interview if you ask them about their current behavior rather than hypothetical behavior.</td>
-			<td style="vertical-align: top; padding: 5px;">DON'T ask users what they think about a hypothetical work flow, interaction, process, product change, etc. Users don't always understand the hypothetical impacts of hypothetical designs.</td>
-		</tr><tr>
-			<td style="vertical-align: top; padding: 5px;">DO find interviewees via Task Rabbit, Craigslist, or even Facebook.</td>
-			<td style="vertical-align: top; padding: 5px;">DON'T be afraid to "cast a wide net" to get faster responses to your quest for feedback.</td>
-	</tr></tbody></table>
-
-<h1 id="what-i-thought">What I Thought</h1>
-<p><strong>Tsai did a pretty great job. 9/10.</strong> Some of her presentation slides included small, hard-to-read text. It would’ve been fine for a smaller conference room, but I sat in the last row of chairs, and I couldn’t read a lot of the text. Other than that, she spoke well, the slides looked visually appealing, and she answered all questions easily.</p>
-
-<p>I could do without the intro slide where she sighs over the fantastic view of the Bay Bridge she gets to enjoy on her daily walk to work. Then again, maybe I’m just cold-hearted; maybe other people loved that part of her talk.</p>
-
-<p>I arrived 5 minutes late, but judging by the post-presentation Q&amp;A session, she neglected to describe her own career path at the beginning of her presentation. That’s a big oversight because this is an introductory talk! Of course audience members want to hear how you got your start! You can check out her LinkedIn by going to her website in case you’re wondering about her career history.</p>
-
-<p>As for the content, after the one hour session, I definitely have a clearer picture of not just the roles of UX designers, but also the roles of those who interact with UX designers. <strong>The talk also gave noobs like me a better understanding of what it takes to make a web/mobile app.</strong></p>
-
-<p><strong>The only real bummer was the acoustics.</strong> I’m going to whine a lot here, so skip to the <a href="#followup">followup</a> if you get bored. The General Assembly (GA) building is pretty nice. It has a few classrooms and conference rooms, but like all cool beans, GA uses a relatively open floor plan. Tsai’s presentation was held not in a classroom, but in an open area on the second floor. When I arrived, there were a handful of people working at nearby computers. They were chatting, as you’d expect, but that’s a distraction for audience members.</p>
-
-<p>On top of that, the air conditioning system popped on during the last segment of the event, and it spooked Tsai. Everyone thought it was some annoying truck or something, but the sound didn’t go away. It really bothered Tsai. After she inquired, the GA staffer explained it was just the AC. Damn that was an annoying AC.</p>
-
-<p>By the way, just like everyone else, I think exposed walls/ceilings, glass conference rooms, and open floor plans are slick as hell (especially compared to the drab corporate offices in DC). However, it’s <em>pretty obvious</em> that the recipe for office hawtness is also a recipe for poor acoustics. I’m surprised GA hosts presentations in the middle of an open floor of such a building. <strong>I give GA a score of 6/10.</strong> Yes, I’m sure my scores change the world.</p>
-
-<p>Side note: When using folding chairs, is it possible to stagger the rows so then the columns don’t line up? This would help short folks like me see through the heads of taller people rather than staring at the back of the head of the tall guy sitting directly in front of me. I’m sure staggering rows would be less space-efficient, but if you’ve got a lot of rows, then the people in the back could sure use some help seeing the presenter and the projector screen.</p>
-
-<h1 id="followup">Followup</h1>
-<p>GA did a good job of following up with attendees. We were emailed a survey (in which I notified them of their crappy acoustics), a blurb about GA’s other UX classes, and two lists of resources, which you can see for yourself below.</p>
-
-<h2 id="ux-website-reading-list">UX website reading list:</h2>
-<ul>
-  <li>http://www.uxbooth.com/</li>
-  <li>http://boxesandarrows.com/</li>
-  <li>http://www.uie.com/</li>
-  <li>http://uxmag.com/</li>
-  <li>http://www.uxnewsfeed.com/</li>
-  <li>http://www.inspireux.com/</li>
-  <li>http://uxdesign.smashingmagazine.com/</li>
-  <li>http://www.nngroup.com/reports/</li>
-  <li>http://techcrunch.com/</li>
-  <li>http://bx.businessweek.com/user-experience-ux/news/</li>
-  <li>http://hbr.org/</li>
-</ul>
-
-<h2 id="ux-book-reading-list">UX book reading list:</h2>
-<ul>
-  <li>Design of Everyday Things</li>
-  <li>The Elements of User Experience Design (by Jesse James Garrett, who Tsai referenced)</li>
-  <li>Don’t Make Me Think</li>
-  <li>A Project Guide to UX</li>
-  <li>The Inmates are Running the Asylum</li>
-</ul>
 ]]></content>
   </entry>
   

@@ -136,6 +136,128 @@
 
   <header>
     
+      <h1 class="entry-title"><a href="/blog/2013/10/16/hackr-diary-a-visit-from-pamela-fox-re-backbone/">[HackR Diary] Event: Pamela Fox on Backbone</a></h1>
+    
+    
+      <p class="meta">
+        
+  
+
+
+  
+    <span class="byline author vcard">by <span class="fn">Jeff Lee</span></span>
+  
+
+ - 
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-10-16T20:13:00-07:00" pubdate data-updated="true">Oct 16<span>th</span>, 2013</time> - 
+        
+
+posted in
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/backbone/'>Backbone</a>, <a class='category' href='/blog/categories/coursera/'>Coursera</a>, <a class='category' href='/blog/categories/hack-reactor/'>Hack Reactor</a>, <a class='category' href='/blog/categories/hackr-diary/'>HackR Diary</a>, <a class='category' href='/blog/categories/javascript/'>JavaScript</a>, <a class='category' href='/blog/categories/khan-academy/'>Khan Academy</a>, <a class='category' href='/blog/categories/til/'>TIL</a>, <a class='category' href='/blog/categories/event/'>event</a>
+  
+</span>
+
+
+        
+         | <a href="/blog/2013/10/16/hackr-diary-a-visit-from-pamela-fox-re-backbone/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><blockquote class="twitter-tweet"><p><a href="https://twitter.com/pamelafox">@pamelafox</a> schooling <a href="https://twitter.com/HackReactor">@HackReactor</a> students on <a href="https://twitter.com/search?q=%23backbonejs&amp;src=hash">#backbonejs</a> <a href="http://t.co/1xRuxIEvKl">pic.twitter.com/1xRuxIEvKl</a></p>&mdash; andre (@AndrEvangelestA) <a href="https://twitter.com/AndrEvangelestA/statuses/389949525588062209">October 15, 2013</a></blockquote>
+<script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<p>Last Monday, the Hack Reactor students were treated to <a href="http://backbone-3ways.appspot.com/">a Backbone presentation</a> by <a href="http://blog.pamelafox.org/">Pamela Fox</a>. It was packed with a ton of insight. I frantically took notes on my smartphone (like a fool), so now I present to you a collection of cool cucumbers.</p>
+
+<h1 id="what-i-learned">What I Learned</h1>
+
+<h2 id="backbone-nuggets">Backbone Nuggets</h2>
+
+<ul>
+  <li>
+    <p>Region management (which you can “outsource” to the likes of <a href="http://chaplinjs.org/">Chaplin</a> or <a href="http://marionettejs.com/s">Marionette</a>) is worth checking out. Apparently, they help you limit the amount of rendering you need to do by allowing you to target specific regions of the web page.</p>
+  </li>
+  <li>
+    <p>Not all Backbone libraries are created equal! Some provide sweet functionality at the cost of depressing performance losses. The Backbone ecosystem is cool, but not entirely safe. Pamela once removed a library from Coursera’s codebase that was responsible for a <em>full second</em> of page load time.</p>
+  </li>
+  <li>
+    <p>Backbone is so flexible that you might feel like an Backbone expert one day and then feel like a noob the next day when you see someone else’s radically different and compelling usage.</p>
+  </li>
+  <li>
+    <p>Break up your views into more views. Make sibling views and nested views. No single view should be a bajillion lines of code. If you find yourself making long js files in Backbone, it’s time to split things up, my fellow noob.</p>
+  </li>
+</ul>
+
+<h2 id="general-code-related-nuggets">General Code-Related Nuggets</h2>
+
+<ul>
+  <li>
+    <p>Don’t optimize prematurely. Performant code is harder to read. Making code harder to read early on can be annoying.</p>
+  </li>
+  <li>
+    <p><a href="http://requirejs.org/">RequireJS</a> kills your foolish usage of global vars. Perhaps I should use it.</p>
+  </li>
+  <li>
+    <p>Single-page web apps can be harder to debug (than multi-page web apps?) because state gets saved across various renders. Errors can be hard to reproduce during the debugging process because there might be many user interactions that need to occur in a particular sequence to cause the error.</p>
+  </li>
+  <li>
+    <p><strong>Ask potential employers about their companies’ testing practices.</strong> How much regression testing do they do? How many tests have they created? More tests means less fear when contributing to the codebase as a fresh employee.</p>
+  </li>
+  <li>
+    <p>Making <strong>forms</strong> with Backbone (or any MV framework?) is great because forms lend themselves to the model-view-collection paradigm with ease. Forms are collections of questions, which are models, which have their own views. Each question view can draw from a set of views meant to provide a particular format (a view for a question answered by checkboxes, a view for question answered by text fields, a view for question answered by generic menu, etc). This also means Backbone is good for creating <strong>control panels</strong> for admin users (e.g., admin control panel for teacher conducting a Coursera class).</p>
+  </li>
+</ul>
+
+<h2 id="re-coursera">Re: Coursera</h2>
+
+<p>Pamela used to work for Coursera. She drew from her experiences with that company to provide a lot of context and real-world examples for the arguments she put forth in her presentation.</p>
+
+<ul>
+  <li>
+    <p>To address SEO concerns associated with single-page web apps, Coursera used Just-in-Time rendering. Coursera would detect whether or not a visitor was a search/social engine bot crawling the sit. Upon identifying the bot, Coursera servers would respond by firing up a rendered instance of the web app using Selenium. The bot would then be directed to the code produced by the rendering. This prevents the bot from crawling an HTML file that has nothing but <code>&lt;script&gt;</code> tags pulling in Backbone code. Side note: Google is not cool with the just-in-time technique. Coursera had to use a different technique for Google, but that was not disclosed during Pamela’s talk :(</p>
+  </li>
+  <li>
+    <p>It’s not the most organized (in my opinion), but you can find a lot of Coursera code on Github here: https://github.com/coursera/forum-js-snapshot (open source, baby!)</p>
+  </li>
+  <li>
+    <p>When viewing their source code with your browser, you’ll see mostly <code>&lt;script&gt;</code> tags. There is very little <code>&lt;body&gt;</code> HTML. That’s due to extensive use of Backbone.</p>
+  </li>
+</ul>
+
+<h1 id="what-i-thought">What I Thought</h1>
+
+<p>Pamela is a fantastic speaker. What I liked most about her talk was the use of real-world examples. As a student, it’s always so informative to hear about life in the wild (so to speak). Seeing as how this was a Hack Reactor event exclusively for students, it’s hard to judge it impartially, but I’m going to go ahead and claim it was awesome.</p>
+</div>
+  
+  
+
+
+</div>
+
+      </article>
+    
+    
+      <article class="span4">
+        <div class="article-format">
+
+  <header>
+    
       <h1 class="entry-title"><a href="/blog/2013/10/14/hackr-diary-week-3-backbone/">[HackR Diary] Week 3: Order in the Code</a></h1>
     
     
@@ -760,83 +882,6 @@ posted in
 
       </article>
     
-    
-      <article class="span4">
-        <div class="article-format">
-
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/09/17/adding-google-analytics-to-octopress-blog-on-github-pages/">Adding Google Analytics to Octopress Blog on Github Pages</a></h1>
-    
-    
-      <p class="meta">
-        
-  
-
-
-  
-    <span class="byline author vcard">by <span class="fn">Jeff Lee</span></span>
-  
-
- - 
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-09-17T13:22:00-07:00" pubdate data-updated="true">Sep 17<span>th</span>, 2013</time> - 
-        
-
-posted in
-<span class="categories">
-  
-    <a class='category' href='/blog/categories/github-pages/'>Github Pages</a>, <a class='category' href='/blog/categories/google-analytics/'>Google Analytics</a>, <a class='category' href='/blog/categories/octopress/'>Octopress</a>, <a class='category' href='/blog/categories/til/'>TIL</a>, <a class='category' href='/blog/categories/blog-customization/'>blog customization</a>
-  
-</span>
-
-
-        
-         | <a href="/blog/2013/09/17/adding-google-analytics-to-octopress-blog-on-github-pages/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>I wanted a way to count visitors for my blog. Easy enough, right? Just sign up for a free Google Analytics account, obtain a tracking ID from the account, and add the tracking ID to Octopress config file…right?</p>
-
-<p>Wrong. Maybe I was doing something else incorrectly, but I didn’t get things working until I did <a href="http://stefanalfbo.github.io/blog/2013/04/17/octopress-google-analytics-github-pages/">what a guy named Stefan Alfbo wrote about</a>. I found his blog post via Google, which reminds me that my own blog’s Google-powered search doesn’t seem to work <strong>:(</strong>.</p>
-
-<h2 id="problem-solved">Problem solved</h2>
-
-<p>Here’s the trick for getting Google Analytics working on an Octopress blog hosted on Github: open up the <strong>source/_includes/google_analytics.html</strong> file and add…</p>
-
-<div><div class="CodeRay">
-  <div class="code"><pre><span class="comment">// add this line to the series of _gaq pushes already in the code</span>
-_gaq.push([<span class="string"><span class="delimiter">'</span><span class="content">_setDomainName</span><span class="delimiter">'</span></span>,<span class="string"><span class="delimiter">'</span><span class="content">github.io</span><span class="delimiter">'</span></span>]);
-</pre></div>
-</div>
-</div>
-
-<h2 id="questions-remain">Questions remain</h2>
-
-<p>Alfbo recommends putting this new line of code in between the 2 existing <code>_gaq.push</code> statements. I’m not sure if the order of the <code>_gaq</code> array really matters, but I didn’t want to chance it, so I followed his recommendation. However, this left me wondering, “What is the <code>_gaq</code> array anyway? How is it used? And why does it need special attention to get it working with Github hosting?”</p>
-</div>
-  
-  
-
-
-</div>
-
-      </article>
-    
     </div>
       <div class="row">
         <ul class="pager">
@@ -860,6 +905,10 @@ _gaq.push([<span class="string"><span class="delimiter">'</span><span class="con
     <ul class="recent_posts">
       
         <li>
+          <a href="/blog/2013/10/16/hackr-diary-a-visit-from-pamela-fox-re-backbone/">[HackR Diary] Event: Pamela Fox on Backbone</a>
+        </li>
+      
+        <li>
           <a href="/blog/2013/10/14/hackr-diary-week-3-backbone/">[HackR Diary] Week 3: Order in the Code</a>
         </li>
       
@@ -873,10 +922,6 @@ _gaq.push([<span class="string"><span class="delimiter">'</span><span class="con
       
         <li>
           <a href="/blog/2013/09/25/hackr-diary-first-impressions/">[HackR Diary] First Impressions</a>
-        </li>
-      
-        <li>
-          <a href="/blog/2013/09/22/hackr-diary-pre-course-anticipation/">[HackR Diary] Pre-Course Anticipation</a>
         </li>
       
     </ul>
