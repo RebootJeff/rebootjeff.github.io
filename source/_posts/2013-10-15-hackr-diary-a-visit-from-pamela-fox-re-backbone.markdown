@@ -15,7 +15,7 @@ Last Monday, the Hack Reactor students were treated to [a Backbone presentation]
 
 ## Backbone Nuggets
 
-- Region management (which you can "outsource" to the likes of [Chaplin](http://chaplinjs.org/) or [Marionette](http://marionettejs.com/s)) is worth checking out. Apparently, they help you limit the amount of rendering you need to do by allowing you to target specific regions of the web page.
+- Region management (which you can "outsource" to the likes of [Chaplin](http://chaplinjs.org/) or [Marionette](http://marionettejs.com/s)) is worth checking out. Apparently, it helps limit the amount of rendering you need to do by allowing you to target specific regions of the web page.
 
 - Not all Backbone libraries are created equal! Some provide sweet functionality at the cost of depressing performance losses. The Backbone ecosystem is cool, but not entirely safe. Pamela once removed a library from Coursera's codebase that was responsible for a *full second* of page load time.
 
