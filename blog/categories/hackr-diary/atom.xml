@@ -4,7 +4,7 @@
   <title><![CDATA[Category: HackR Diary | RebootJeff.com]]></title>
   <link href="http://RebootJeff.github.io/blog/categories/hackr-diary/atom.xml" rel="self"/>
   <link href="http://RebootJeff.github.io/"/>
-  <updated>2013-10-15T21:20:12-07:00</updated>
+  <updated>2013-10-15T21:22:30-07:00</updated>
   <id>http://RebootJeff.github.io/</id>
   <author>
     <name><![CDATA[Jeff Lee]]></name>
@@ -46,7 +46,7 @@
 
 <ul>
   <li>
-    <p>Don’t optimize prematurely. Performant code is harder to read. Making code harder to read early on can be annoying.</p>
+    <p>Don’t optimize prematurely. Performant code is harder to read. Making code harder to read early on can be annoying. I wonder if Pamela is pro-<a href="/blog/2013/09/25/hackr-diary-first-impressions/#guard-operator">guard operator</a> or anti-guard operator.</p>
   </li>
   <li>
     <p><a href="http://requirejs.org/">RequireJS</a> kills your foolish usage of global vars. Perhaps I should use it.</p>
