@@ -37,7 +37,7 @@ Yesterday, many students went to see *Gravity* (in 3D IMAX format). It was prett
 
 **Quick tip:** I learned a tactic for dealing with low brain energy. When I'm tired of analyzing software architecture decisions or concocting algorithms, I can give myself a productive break by switching to CSS work. Changing gears from program development to applying styles and designing layouts works wonders to give certain parts of my brain a rest while exercising others.
 
-Most Hack Reactor assignements come with some pre-written code, but they often come devoid of any interesting visuals so that you can practice CSS skills.
+Most Hack Reactor assignments come with some pre-written code, but they often come devoid of any interesting visuals so that you can practice CSS skills.
 
 ### Bower
 
@@ -49,7 +49,7 @@ Students have yet to write any server-side code, but we've dealt with programmin
 
 ### Backbone
 
-Most of the week 3 assignemnts involved [Backbone](http://backbonejs.org/), which forced us students to really change the way we think about *designing* software. Developing with Backbone means organizing code to follow paradigms involving models, views, and collections (not quite MVC --which is "model view *controller*").
+Most of the week 3 assignments involved [Backbone](http://backbonejs.org/), which forced us students to really change the way we think about *designing* software. Developing with Backbone means organizing code to follow paradigms involving models, views, and collections (not quite MVC --which is "model view *controller*").
 
 Before Backbone (a JavaScript framework for providing web apps with structure) our code was a like a stream of consciousness. With Backbone, our code was given order, structure, and rules to follow. It was a tough, but rewarding adjustment. Students were struggling with the process when initially exposed to Backbone. **It's funny because we were all questioning the effectiveness of Hack Reactor's curriculum at first, but by the end of the week, most of us feel much more comfy with the framework.**
 
