@@ -4,7 +4,7 @@
   <title><![CDATA[RebootJeff.com]]></title>
   <link href="http://RebootJeff.github.io/atom.xml" rel="self"/>
   <link href="http://RebootJeff.github.io/"/>
-  <updated>2013-10-16T10:59:20-07:00</updated>
+  <updated>2013-10-21T21:43:52-07:00</updated>
   <id>http://RebootJeff.github.io/</id>
   <author>
     <name><![CDATA[Jeff Lee]]></name>
@@ -12,6 +12,97 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[[HackR Diary] Week 4: Now Entering Callback Hell]]></title>
+    <link href="http://RebootJeff.github.io/blog/2013/10/21/hackr-diary-week-4/"/>
+    <updated>2013-10-21T21:45:00-07:00</updated>
+    <id>http://RebootJeff.github.io/blog/2013/10/21/hackr-diary-week-4</id>
+    <content type="html"><![CDATA[<p><img src="http://RebootJeff.github.io/images/20131021/joebowers_at_hackreactor.jpg" alt="photo of Joe Bowers presentation" /></p>
+
+<p class="my-caption">Joe Bowers from Mixpanel discussing tech decisions based on company culture</p>
+
+<p>Another week down, another blog post arriving a Monday rather than the planned Sunday. Woops. Week 4 ended on a more stressful note for me (more on that in the <em>What I Learned</em> section <a href="#what-i-learned">below</a>), so I really felt the need to relax and decompress yesterday rather than write up this blog post. That said, once I complete roughly 25% of a blog post, I really start enjoying the writing process.</p>
+
+<p>Because the school educates us students at such a tough pace, it’s tempting to say every week is a game changer, the most challenging week ever, the most interesting, etc. Well I’m going to induldge and say week #4 was the craziest week thus far.</p>
+
+<p>I discovered that the Hack Reactor directory contains a partially complete list of all alumni’s employers. I started looking up some of the companies during a break from work. I didn’t have much time, but what I saw really inspired me. Now I’m even more excited about my own future prospects. <em>Hooray!</em></p>
+
+<p>There were two guest speakers this week. They both were quite technical, and I took time to smell the roses by taking a moment to think to myself, “Wow I’ve learned a lot because I understand all this very technical, very specific stuff discussed by these speakers.” <em>Hooray!</em></p>
+
+<p>There were a couple of <a href="http://RebootJeff.github.io/blog/2013/10/06/hackr-diary-week-2/#toy-problems">toy problems</a> that gave me some trouble this week. Maybe I’m putting too much pressure on myself, but solving a toy problem gives me a lot of self-confidence …and failing a toy problem puts a figurative frown on the figurative face of my mood for the rest of the morning (or longer). <em>Dammit!</em></p>
+
+<p>Students are told not to worry about comparing themselves to peers, but the seniors are killing it. I feel happy for them, but sometimes their impressive projects make me second-guess myself. Can I come up with a cool idea for an app? Self-doubt is creeping in. I only have one more week to think of something. <em>Dammit!</em></p>
+
+<p>As you can tell from the previous four paragraphs, the previous week was a bit of a battle between fear and pride. The worst part was falling behind on the databases sprint. The best part was watching seniors’ presentations.</p>
+
+<h1 id="recap-of-events">Recap of Events</h1>
+
+<h3 id="guest-speaker-pamela-fox">Guest Speaker: Pamela Fox</h3>
+
+<p>On Monday, Pamela Fox (formerly Coursera, currently Khan Academy) gave a great Backbone presentation at Hack Reactor. I wrote about it <a href="http://RebootJeff.github.io/blog/2013/10/16/hackr-diary-a-visit-from-pamela-fox-re-backbone/">right here</a>.</p>
+
+<h3 id="guest-speaker-joe-bowers">Guest Speaker: Joe Bowers</h3>
+
+<p>On Thursday, Joe Bowers (pictured at the top) gave an intriguing talk about intra-company coding culture. There are a lot of decisions to make with regards to software architecture/design, and Joe explained that many decisions are made based on coding culture/philosophy. In other words, many decisions come down to subjective thinking and preferences for certain aesthetics. His primary example was about Mixpanel’s tendency to embrace code cleanliness to the point of sacrificing <a href="http://en.wikipedia.org/wiki/Don't_repeat_yourself">DRYness</a> and abstraction. Their code is very explicit, so you always know what it’s doing without having to spend hours studying various layers of abstraction or other quirks that might improve elegance at the cost of human-readability.</p>
+
+<h3 id="social-night-lit-crawl-skipped">Social Night: Lit Crawl (skipped)</h3>
+
+<p>I’m not sure what <a href="http://litcrawl.org/sf/">SF Lit Crawl</a> is, but that was the designated event for social night. I decided not to join because I felt like I needed to spend more time studying ORMs (more on that below). Spending Saturday evening at Hack Reactor is actually quite nice. There were probably 10-20 students/staff still hanging out at HackR. Sadly, I wasn’t very productive. I think my brain was just too tired from battling asychronous database queries.</p>
+
+<p>On a related note, I’ve told HackR staff that the Social Nights are not well-organized. It’s clear that they are not given a high priority (attendance is optional for students), and I think they’re missed opportunities for cohort bonding. With a class size of nearly 30 students, it’s hard to get to know everyone when you spend most of your time with one person every two days (during 2-day paired programming sprints).</p>
+
+<h3 id="seniors-group-project-presentations-practice">Seniors’ Group Project Presentations (practice)</h3>
+
+<p>So. Friggin’. Stellar.</p>
+
+<p>Just. Absolutely. Outstanding.</p>
+
+<p>I was truly blown away by the seniors’ final projects. HackR students work on two major projects during their time here. The first is an individual project, the second is a group project. Students present their projects to some Hack Reactor staff and fellow students as practice for when they have to present to employers on hiring day.</p>
+
+<p>The group projects I saw last Saturday were incredible. They only had 2-3 weeks to create something worth bragging about, and they certainly surpassed my expectations. I’m half-inspired and half-worried. What they’ve done makes me prouder to be associated with Hack Reactor, but now I definitely feel more pressure to reach a similar level of awesomeness. Here are a few highlights:</p>
+
+<ul>
+  <li>Personal website powered by <a href="http://famo.us/">Famo.us</a>: Making a personal website might not sound impressive, but don’t get the wrong idea. I’m not talking about an About.me page. The site has very sexy Twitter/Facebook feed integration. The product looks like something Feedly or Flipboard would create (pro quality). <strong>More importantly</strong>, the team behind the product is one of the first to use brand new tech called Famous. Famous is a JavaScript framework for continuously rendering webpages with the power of client GPUs rather than CPUs. It replaces typical HTML with a bunch of <code>div</code> elements that are constantly being updated (at ~60 frames per second) with new values for their properties. The Hack Reactor students not only used the new tech (which is still in <em>private</em> beta), they also <em>contributed</em> to the Famous codebase. In fact, Famous will be using the students’ product at future HTML5 conferences to demo the power of the framework!</li>
+  <li>Virtual Furniture Placement: A group of 4 (or was it 5?) made an app that takes user-uploaded photos of empty rooms and allows the user to place virtual, 3D furniture into the photos. The 3D rendering looks so good! It’s amazing what you can do with JavaScript (I believe they used <a href="http://threejs.org/">three.js</a>). This is definitely an app that every home seller and furniture seller should use.</li>
+  <li>Reddit Submission Scheduler: It’s basically <a href="http://bufferapp.com/">Buffer</a>, but it’s for Reddit instead of Twitter. The students have built a product that I imagine every marketer wants: an app that allows you to submit a post to Reddit at a future date/time. I actually wonder if Reddit will ban the app because it could potentially be abused to proliferate spam. That said, if Buffer can work for Twitter, than surely something similar can work for Reddit. The idea is simple and unglamorous, but it certainly meets a big demand. It’s easy to imagine a company willing to buy the students’ app.</li>
+</ul>
+
+<h1 id="what-i-learned">What I Learned</h1>
+
+<h2 id="nodejs-without-express">Node.js (without Express)</h2>
+
+<p>Finally! Server-side code! Up to this point, the students have been just working with client-side assignments. With the <a href="http://nodejs.org/">Node.js</a> sprint, we started sending HTTP requests back and forth between client and server. We have yet to use <a href="http://expressjs.com/">Express</a> or any other Node.js framework to make life easier. We used modules like http, fs, url, and so on. The asynchronous nature of Node.js was weird at first, but to be honest, a lot of us got around that complexity by using synchronous variants of methods (e.g., <code>fs.readFileSync()</code>in place of <code>fs.readFile()</code>).</p>
+
+<h2 id="databases">Databases</h2>
+
+<p>At first, I was excited by the idea of learning database goodness. But then the asynchronous nature of Node.js started raining on my parade. We worked with MySQL and a SQL-for-Node.js ORM called <a href="http://http://sequelizejs.com/">Sequelize</a>. ORMs are libraries that provide a way to interact with databases without having to write SQL code. In the case of Sequelize, you just write JavaScript code with the Sequelize class/methods to query the database.</p>
+
+<p>It’s not all sunshine and rainbows though. I found Sequelize to be troublesome. You can get stuck in callback hell because unlike the http module for Node.js, the Sequalize module lacks synchronous variants of methods. We have yet to explore the benefits of asynchronous/non-blocking server-side code, so it’s hard to embrace the “pyramid of doom” (aka callback hell). When I asked for help, I was told to investigate another library for adding “promises” to my code. Promises help make asynchronous code much more manageable, but I didn’t have enough time to truly learn and implement them.</p>
+
+<p>So what I’m basically saying is that last week ended on a crappy note: an unfinished assignment. I’ve been told not to worry because there will be more opportunities to learn databases when working on projects (during the 2nd half of the Hack Reactor course).</p>
+
+<h1 id="in-other-news">In other news…</h1>
+
+<h2 id="the-next-phase">The Next Phase</h2>
+
+<p>There isn’t much time! In just a couple of weeks, the individual project phase begins. I have no good ideas for what to create! In my limited spare time, I’m playing Hawken, browsing Imgur, and freaking out about the personal project phase.</p>
+
+<h2 id="nuances-of-javascript">Nuances of JavaScript</h2>
+
+<p>On a more positive note, Hack Reactor shared this YouTube video <a href="https://twitter.com/HackReactor/status/390905108105818112">via Twitter</a>:</p>
+
+<iframe width="300" height="225" src="http://RebootJeff.github.io//www.youtube-nocookie.com/embed/iSxNCYcPAFk" frameborder="0" allowfullscreen=""></iframe>
+
+<p>As I watched it, I realized that it covered material I learned in the first week or so at Hack Reactor. It felt pretty awesome. You may wonder why it took a week to learn content covered by a simple presentation on YouTube. My opinion is that the video is not meant for beginners; it’s meant for seasoned coders trying to learn JavaScript.</p>
+
+<h2 id="disclaimer">Disclaimer</h2>
+
+<p>After a few weeks of this HackR Diary blogging, I’ve noticed that I’ve missed a few things. Despite my best efforts, these posts are not as comprehensive as I originally imagined. For example, last week, I forgot to talk about learning eventing systems. Overall, I’ve been forgetting to talk about specific aspects of student life like food options, daily mini-presentations, fitness challenges, the “halp system”, volunteering for tech blogging, and so on and so forth…</p>
+
+<p>So much to write about; so little time.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[[HackR Diary] Event: Pamela Fox on Backbone]]></title>
@@ -124,7 +215,7 @@
 
 <p><strong>Quick tip:</strong> I learned a tactic for dealing with low brain energy. When I’m tired of analyzing software architecture decisions or concocting algorithms, I can give myself a productive break by switching to CSS work. Changing gears from program development to applying styles and designing layouts works wonders to give certain parts of my brain a rest while exercising others.</p>
 
-<p>Most Hack Reactor assignements come with some pre-written code, but they often come devoid of any interesting visuals so that you can practice CSS skills.</p>
+<p>Most Hack Reactor assignments come with some pre-written code, but they often come devoid of any interesting visuals so that you can practice CSS skills.</p>
 
 <h3 id="bower">Bower</h3>
 
@@ -136,7 +227,7 @@
 
 <h3 id="backbone">Backbone</h3>
 
-<p>Most of the week 3 assignemnts involved <a href="http://backbonejs.org/">Backbone</a>, which forced us students to really change the way we think about <em>designing</em> software. Developing with Backbone means organizing code to follow paradigms involving models, views, and collections (not quite MVC –which is “model view <em>controller</em>”).</p>
+<p>Most of the week 3 assignments involved <a href="http://backbonejs.org/">Backbone</a>, which forced us students to really change the way we think about <em>designing</em> software. Developing with Backbone means organizing code to follow paradigms involving models, views, and collections (not quite MVC –which is “model view <em>controller</em>”).</p>
 
 <p>Before Backbone (a JavaScript framework for providing web apps with structure) our code was a like a stream of consciousness. With Backbone, our code was given order, structure, and rules to follow. It was a tough, but rewarding adjustment. Students were struggling with the process when initially exposed to Backbone. <strong>It’s funny because we were all questioning the effectiveness of Hack Reactor’s curriculum at first, but by the end of the week, most of us feel much more comfy with the framework.</strong></p>
 
