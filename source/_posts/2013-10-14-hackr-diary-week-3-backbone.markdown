@@ -1,0 +1,62 @@
+---
+layout: post
+title: "[HackR Diary] Week 3: Order in the Code"
+date: 2013-10-14 00:22
+comments: true
+categories: ['HackR Diary','Hack Reactor','coding bootcamps','dev tools','Bower','Backbone','CoffeeScript','Firebase']
+---
+
+![logos](/images/20131014/logos.png)
+
+<p class="my-caption">Tech from the previous week: Bower, Backbone, and CoffeeScript</p>
+
+It's funny how time perception is so easily manipulated. After 3 weeks of immersive education, I forget what day of the week it is. My fellow students also think time is passing by really quickly despite how many hours per day we spend in one (big) room.
+
+Weekends are limited to Sundays due to the 6-days-per-week schedule, so Fridays don't feel like Fridays (so to speak). However, I should note that Saturdays at Hack Reactor are less intense than other days because the weekly social nights replace the final few hours of the daily classwork with entertainment. Social nights are optional, and plenty of students decide to spend that time working.
+
+## More varied thoughts from week 3
+
+- I've stopped using pen + paper. I probably didn't need to buy notebook for this course, and I'm just not a fan of paper. Hopefully my lack of note-taking won't bite me later. Hack Reactor provides some good online notes, diagrams, etc, but I'm not sure they'll be enough when it comes time to study for job interviews. That said, I'm not too worried.
+- Gym time is limited. Students get 2-hour lunch breaks every other day, but it takes at least 10 minutes to walk to the gym, a few minutes to change clothes, a few minutes to shower, 5-10 minutes to buy lunch afterwards, etc. Actual workout time is roughly 45-60 minutes max. A lot of us have ended up eating during the post-lunch lecture, so I guess it's all good.
+- Hack Reactor hosts [various meetups](http://www.meetup.com/hackreactor/) throughout the week (Coursera study group, general JS meetups, etc). I think that's a pretty cool way for them to help out the greater dev community.
+- **Burnout watch:** I still feel pretty excited to go to Hack Reactor 6 days per week, but I definitely look forward to relaxing on Sundays. In [my previous blog post](/blog/2013/10/06/hackr-diary-week-2/), I lamented about spending free my limited free time to write substantive blog posts, but now I think they really help me exercise my memory to prevent that "it was all a blur" feeling.
+
+# Recap of Events
+
+### Industry Event: Firebase
+
+Sadly, I didn't attend the [Firebase](https://www.firebase.com/) meetup hosted at Hack Reactor HQ. I heard from fellow students that the Firebase tech is pretty sweet. Firebase devs gave a demo that impressed many with promises of data syncing hotness.
+
+Why didn't I attend the event? My pair programming partner and I decided we couldn't spare any time for the event because we were more concerned with Backbone. Firebase just happened to come around at a bad time for me.
+
+### Social Night: Movie Theater
+
+Yesterday, many students went to see *Gravity* (in 3D IMAX format). It was pretty friggin' fantastic. Afterwards, some of us went our separate ways, some went back to studying/working, and some went out to partake in beverage consumption.
+
+# What I Learned
+
+**Quick tip:** I learned a tactic for dealing with low brain energy. When I'm tired of analyzing software architecture decisions or concocting algorithms, I can give myself a productive break by switching to CSS work. Changing gears from program development to applying styles and designing layouts works wonders to give certain parts of my brain a rest while exercising others.
+
+Most Hack Reactor assignments come with some pre-written code, but they often come devoid of any interesting visuals so that you can practice CSS skills.
+
+### Bower
+
+Not much to say here. Students got a very brief lecture about [Bower](http://bower.io/), but it didn't take much time to convince me to use it. Easily manage libraries/dependencies with a few terminal commands? Nice. `bower install` = woot!
+
+### Inner workings of the web (HTTP/AJAX, full stack overview)
+
+Students have yet to write any server-side code, but we've dealt with programming small client-side apps that interact with servers. We were taught some AJAX skills and some general HTTP knowledge. One lecture covered the overall system architecture that describes client-server interaction. **There were so. Many. Terms:** local storage, sockets, page requests, asset requests, client vs server MVC, content delivery networks (CDNs), object-relational mapping (ORM) --good times.
+
+### Backbone
+
+Most of the week 3 assignments involved [Backbone](http://backbonejs.org/), which forced us students to really change the way we think about *designing* software. Developing with Backbone means organizing code to follow paradigms involving models, views, and collections (not quite MVC --which is "model view *controller*").
+
+Before Backbone (a JavaScript framework for providing web apps with structure) our code was a like a stream of consciousness. With Backbone, our code was given order, structure, and rules to follow. It was a tough, but rewarding adjustment. Students were struggling with the process when initially exposed to Backbone. **It's funny because we were all questioning the effectiveness of Hack Reactor's curriculum at first, but by the end of the week, most of us feel much more comfy with the framework.**
+
+Imagine you could only teach via stream-of-consciousness statements. Content would be expressed, but it would be messy as hell. Now imagine you were forced to teach by writing a well-structured, well-organized textbook. The difference is staggering. Suddenly you need to think about organizing concepts into topics, sequencing topics, connecting topics, etc. Making the leap from using no framework to using Backbone isn't quite as drastic, but it's still a tough contrast to get comfortable with in just a few days --even if those days involve ~12 hours of learning.
+
+### CoffeeScript
+
+Before my time at Hack Reactor began, I was open to the idea of learning [CoffeeScript](http://coffeescript.org/) (a more expressive, human-readable programming language that compiles into JavaScript, allowing you to write JavaScript with a very different syntax) because it looked friendly in the same way Ruby looks friendly. After a couple of weeks of writing lots of JavaScript code, I was far less open-minded about spending time learning a drastically different syntax. Imagine being told you were going to take a break from learning intermediate Spanish so you could learn beginner Portugese. You'd say, "No thank you, crazy person." 
+
+After finishing the CoffeeScript sprint, I remain somewhat ambivalent. I don't love it, but I don't hate it. **The whole experience taught me that learning new syntax isn't so bad.**
