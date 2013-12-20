@@ -4,7 +4,7 @@
   <title><![CDATA[Category: HackR Diary | RebootJeff.com]]></title>
   <link href="http://RebootJeff.github.io/blog/categories/hackr-diary/atom.xml" rel="self"/>
   <link href="http://RebootJeff.github.io/"/>
-  <updated>2013-10-28T22:00:25-07:00</updated>
+  <updated>2013-12-19T16:02:10-08:00</updated>
   <id>http://RebootJeff.github.io/</id>
   <author>
     <name><![CDATA[Jeff Lee]]></name>
@@ -12,6 +12,104 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[[HackR Diary] My Formal Apology]]></title>
+    <link href="http://RebootJeff.github.io/blog/2013/11/19/hackr-diary-my-apology/"/>
+    <updated>2013-11-19T21:53:00-08:00</updated>
+    <id>http://RebootJeff.github.io/blog/2013/11/19/hackr-diary-my-apology</id>
+    <content type="html"><![CDATA[<p>My previous blog post was nearly 3 weeks ago. Why? What’s stopped me from posting more stories of life at Hack Reactor? For the past several days, I have been working on an individual project. I was very confident going into it, and I should eventually blog specifically about the initial stages, but as it turned out …there is a crap-ton of stuff to juggle when developing a web app. There are so many things that can go wrong in your workflow –not just in your code.</p>
+
+<h1 id="things-that-kept-me-busy">Things That Kept me Busy</h1>
+
+<ul>
+  <li>Defaut installation of node/npm on Ubuntu led to file permissions issues. Oh shit.</li>
+  <li>Figuring out Yeoman: Before <code>npm install -g yo</code>: I wonder what will happen. After <code>yo generator-angularexpress</code>: What is all this stuff?! Oh nice.</li>
+  <li>Figuring out Grunt: How can I get it to work with Stylus? Oh nice.</li>
+  <li>Easy, but time-consuming (to make sure you don’t break something that used to work)
+    <ul>
+      <li>Organizing files/folders in a professional way (inter-file <code>require</code> statements can break)</li>
+      <li>Using environment variables (typos can be devastating)</li>
+    </ul>
+  </li>
+  <li>Facebook Authorization
+    <ul>
+      <li>Making 2 FB apps (one for dev environment; one for production environment)</li>
+      <li>Figuring out the proper callback URL</li>
+    </ul>
+  </li>
+  <li>Databases
+    <ul>
+      <li>Juggling MySQL in development environment, then switching to PostgreSQL in production.</li>
+      <li>Why is the production database getting flooded? Oh there’s a random configuration setting I missed in Sequelize.</li>
+    </ul>
+  </li>
+  <li>Random Heroku hiccups (at one point, a node module provider went down, causing Heroku’s <code>npm install</code> to die).</li>
+</ul>
+
+<p>These are just a few of the little obstacles that add up. You don’t see them coming. They take quite a bit of time to hunt down.</p>
+
+<h1 id="nerdy-chuck-norris-jokes">Nerdy Chuck Norris Jokes</h1>
+
+<p>As an apology for not blogging much in the past 3 weeks, here are some jokes from <strong><a href="http://www.icndb.com/">the best API ever</a></strong>:</p>
+
+<p>All arrays Chuck Norris declares are of infinite size, because Chuck Norris knows no bounds.</p>
+
+<p>Chuck Norris doesn’t have disk latency because the hard drive knows to hurry the hell up.</p>
+
+<p>Chuck Norris can’t test for equality because he has no equal.</p>
+
+<p>Chuck Norris burst the dot com bubble.</p>
+
+<p>All browsers support the hex definitions #chuck and #norris for the colors black and blue.</p>
+
+<p>MySpace actually isn’t your space, it’s Chuck’s (he just lets you use it).</p>
+
+<p>Chuck Norris can solve the Towers of Hanoi in one move.</p>
+
+<p>Chuck Norris finished World of Warcraft.</p>
+
+<p>Chuck Norris doesn’t use web standards as the web will conform to him.</p>
+
+<p>Whiteboards are white because Chuck Norris scared them that way.</p>
+
+<p>Chuck Norris can delete the Recycling Bin.</p>
+
+<p>Chuck Norris’s beard can type 140 wpm.</p>
+
+<p>Chuck Norris can unit test entire applications with a single assert.</p>
+
+<p>Chuck Norris doesn’t need sudo, he just types “Chuck Norris” before his commands.</p>
+
+<p>Chuck Norris doesn’t need a debugger, he just stares down the code until the bug confesses.</p>
+
+<p>The class object inherits from Chuck Norris</p>
+
+<p>Chuck Norris knows the last digit of PI.</p>
+
+<p>Chuck Norris’ Internet connection is faster upstream than downstream because even data has more incentive to run from him than to him.</p>
+
+<p>Chuck Norris’s keyboard has the Any key.</p>
+
+<p>Chuck Norris can install iTunes without installing Quicktime.</p>
+
+<p>Chuck Norris’s OSI network model has only one layer - Physical.</p>
+
+<p>Chuck Norris compresses his files by doing a flying round house kick to the hard drive.</p>
+
+<p>Chuck Norris uses canvas in IE.</p>
+
+<p>Chuck Norris’s database has only one table, ‘Kick’, which he DROPs frequently.</p>
+
+<p>Chuck Norris’s brain waves are suspected to be harmful to cell phones.</p>
+
+<p>Chuck Norris sits at the stand-up.</p>
+
+<p>Chuck Norris has never registered an account. He just logs in.</p>
+
+<p>Code runs faster when Chuck Norris glares at it.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[[HackR Diary] Week 5: Final Sprints]]></title>
@@ -333,76 +431,6 @@
 <p>Before my time at Hack Reactor began, I was open to the idea of learning <a href="http://coffeescript.org/">CoffeeScript</a> (a more expressive, human-readable programming language that compiles into JavaScript, allowing you to write JavaScript with a very different syntax) because it looked friendly in the same way Ruby looks friendly. After a couple of weeks of writing lots of JavaScript code, I was far less open-minded about spending time learning a drastically different syntax. Imagine being told you were going to take a break from learning intermediate Spanish so you could learn beginner Portugese. You’d say, “No thank you, crazy person.” </p>
 
 <p>After finishing the CoffeeScript sprint, I remain somewhat ambivalent. I don’t love it, but I don’t hate it. <strong>The whole experience taught me that learning new syntax isn’t so bad.</strong></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[[HackR Diary] Week 2: Now Exiting My Comfort Zone]]></title>
-    <link href="http://RebootJeff.github.io/blog/2013/10/06/hackr-diary-week-2/"/>
-    <updated>2013-10-06T22:17:00-07:00</updated>
-    <id>http://RebootJeff.github.io/blog/2013/10/06/hackr-diary-week-2</id>
-    <content type="html"><![CDATA[<p class="last-updated">Last updated on Oct 13, 2013 to fix a typo and embedded a tweet.</p>
-
-<blockquote class="twitter-tweet"><p>Awesome of the <a href="https://twitter.com/Airbnb">@Airbnb</a> team to visit <a href="https://twitter.com/HackReactor">@HackReactor</a>. Picture of them talking about their tech stack. <a href="http://t.co/AYVDYA3JaT">pic.twitter.com/AYVDYA3JaT</a></p>&mdash; Ben Martin (@HealthfulHacker) <a href="https://twitter.com/HealthfulHacker/statuses/385258134677106689">October 2, 2013</a></blockquote>
-<script async="" src="http://RebootJeff.github.io//platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-<p>I don’t know if <a href="blog/2013/09/29/hackr-diary-thoughts-about-week-number-1/">my summary of week #1</a> made it clear or not, but although my first six days at Hack Reactor were tough, I didn’t exactly struggle with any of the material. This is probably because the pre-course work was <a href="/blog/2013/09/22/hackr-diary-pre-course-anticipation/">incredibly difficult</a>, thereby infusing me with helpful knowledge while also shaping my expectations.</p>
-
-<p>Well guess what? Week 1 was an anomaly. It was a week filled with more lectures and less hands-on programming. I knew this ahead of time, but week 2 still caught me off guard. There was quite a bit more learning with minimal guidance. Also, the joys/stresses of pair programming are turned up a few notches as a result of the additional programming time created by reducing the amount of lecture time.</p>
-
-<p>Consequently, I’ve been feeling more tired in general. Forgive me, but spending my free time to write this blog is beginning to look less and less appealing.</p>
-
-<p>I joined a nearby gym (aside: I just remembered that I need to notify Hack Reactor to get my $50 reimbursement from them!) so my energy levels should increase in a week or two. Every other lunch break is two hours long instead of just one hour long. The extra time is meant to encourage students to go exercise.</p>
-
-<p>I want to write more about student life at Hack Reactor, but I think I’ll just spread out the details in my <a href="/blog/categories/hackr-diary/">HackR Diary</a> series rather than providing every bit of info in a single, giant blog post. So for now, I cover gym time, toy problems, and tapouts. In the future, I’ll discuss the workstations, help system, student-staff interaction, food, and more.</p>
-
-<h1 id="week-in-review">Week in Review</h1>
-
-<h4 id="toy-problems">Toy Problems</h4>
-
-<p>This week, my cohort, the junior students, started solving (almost) daily toy problems, which are small coding challenges designed to get us used to the type of timed problems that will be thrown our way at tech interviews. We have to complete these problems individually. We have 30-60 minutes to think of a solution, code the solution, and submit pull requests to have an automated tester give us feedback that we can use to help fix our solutions as necessary.</p>
-
-<h4 id="tapouts">Tapouts</h4>
-
-<p>This week, us juniors also started attending weekly(?) tapouts. Tapouts are like small group therapy sessions where five students voice their opinions of Hack Reactor to an alumnus. She will send anonimized feedback up the chain while also providing us with advice for any struggles we care to talk about. </p>
-
-<h4 id="special-event-airbnb-presentation">Special Event: AirBnB Presentation</h4>
-
-<p>Lead devs from <a href="https://twitter.com/Airbnb">AirBnB</a> presented a ton of info about their tech stack, their work environment, <a href="http://nerds.airbnb.com/weve-open-sourced-rendr-run-your-backbonejs-a/">their open source project</a>, dev career advice, startup advice, etc. There was a post-presentation panel for answering several questions. Then there was a post-panel meet-and-greet session. It was a truly fantastic event.</p>
-
-<h4 id="saturday-social-night">Saturday Social Night</h4>
-
-<p>I skipped last Saturday’s social night to go to a close friend’s birthday celebration(s). Week 2’s theme for social night was board/card games.</p>
-
-<h1 id="what-i-learned--what-i-thought">What I Learned + What I Thought</h1>
-
-<h4 id="inheritancesubclassing-in-javascript">Inheritance/Subclassing in JavaScript</h4>
-
-<p>The subclassing sprint was a bit frustrating at first. It took me awhile to grasp the keyword <code>this</code> because of JavaScript’s tendency to pass functions around as parameters to other functions.</p>
-
-<p>Upon wrapping one’s brain around <code>this</code> (and the <code>.call()</code>/<code>.apply()</code> methods), there was a lot of fun to be had with the assignment that Hack Reactor gave the students. This was the first assignment involving a visual facet, and the student body reacted accordingly (with creativity galore).</p>
-
-<h4 id="algorithms">Algorithms</h4>
-
-<p>The algorithms sprint was a fantastic challenge, but there was no specific set of knowledge to learn. It felt like the main goal of the sprint was to get students’ minds thinking in more computer-oriented ways. We were taught some basics about time complexity, but we didn’t go into much depth about Big-O notation. We briefly described actions (e.g., deleting data from an array) and algorithms (e.g., solutions to the <a href="http://en.wikipedia.org/wiki/Eight_queens_puzzle#Related_problems">n-queens puzzle</a>) as constant, linear, quadratic, polynomial, and exponential (as opposed to discussing the nuances of O(c), O(n), O(n^2), O(n^c), O(c^n), etc).</p>
-
-<p>The main takeaway was that we should worry more about macro optimizations (storing data in variables in a way that allows for constant-time lookup) rather than micro optimizations (improving a <code>for</code> loop so then it loops fewer times). <strong>Micro optimizations are good, but they aren’t very valuable when you’re just creating prototypes, minimum viable products, etc.</strong></p>
-
-<p>I’m somewhat disappointed that we weren’t taught specific algorithms such as quicksort, binary search, etc. I’m under the assumption that all software developers need to know the “greatest hits” of algorithms. Although, I’m also under the assumption that such knowledge is more useful in tech interviews than in day-to-day coding.</p>
-
-<h4 id="layoutpositioning-htmlcss">Layout/Positioning (HTML/CSS)</h4>
-
-<p>I taught myself a decent amount of HTML/CSS before my cohort’s start date, so I was very comfortable with the layout assignment, but it wasn’t easy. There are still plenty of times when proper CSS positioning eludes me. That said, this topic doesn’t provide an intellectual challenge.</p>
-
-<p>The difficulty lies in getting the syntax just right and understanding hierarchy. Some students didn’t learn much HTML/CSS before joining Hack Reactor, and so they had a lot to learn (box model, DOM hierarchy, CSS selectors, etc.) in a very short amount of time.</p>
-
-<p><strong>If you’re thinking of joining Hack Reactor as a student, I highly recommend you teach yourself HTML/CSS</strong> ahead of time. HTML/CSS isn’t tough to learn on your own, but it can be time-consuming even if you’ve got pros helping you. You may as well prepare yourself so then you can spend less time at Hack Reactor worrying about HTML/CSS and more time worrying about other technologies and concepts.</p>
-
-<h4 id="d3-library">D3 (library)</h4>
-
-<p><a href="http://d3js.org/">D3.js</a> is a JavaScript library for creating data-driven visuals inside HTML documents. I thought jQuery was cool, but now I think D3 takes the cake. It’s much harder to learn D3, but there is tremendous power to be had from familiarizing yourself with it.</p>
-
-<p>That said, the D3 assignment left me mentally tired as hell. Like jQuery, you can easily select DOM elements, but the rest of the D3 syntax isn’t so straightforward, and the general concepts for using D3 properly will feel rather foreign at first. I hope to spend more time on my own to master D3 …when I’m not so damn tired. The key is to understand the <a href="http://bl.ocks.org/mbostock/3808218">general update pattern</a>.</p>
 ]]></content>
   </entry>
   

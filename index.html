@@ -14,7 +14,7 @@
   
     
   
-  <meta name="description" content=" Blog for Jeff Lee to describe his journey to become a web developer ">
+  <meta name="description" content=" Blog for Jeff Lee ">
   
   <!-- http://t.co/dKP3o1e -->
   <meta name="HandheldFriendly" content="True">
@@ -30,7 +30,7 @@
   <meta name="og:type" content="website" />
   <meta name="og:site_name" content="RebootJeff.com" />
   <meta name="og:title" content="RebootJeff.com" />
-  <meta name="og:description" content=" Blog for Jeff Lee to describe his journey to become a web developer " />
+  <meta name="og:description" content=" Blog for Jeff Lee " />
   <meta name="og:url" content="http://RebootJeff.github.io/index.html"/>
   <meta name="url" content="http://RebootJeff.github.io/index.html">
   
@@ -64,7 +64,7 @@
   <h1>
     RebootJeff.com
   </h1>
-  <h2>Quarter-life crisis detected. Reboot in progress.</h2>
+  <h2>Try. Learn. Repeat.</h2>
 </div>
 
     </div>
@@ -74,8 +74,8 @@
       <div class="row">
   <div class="span4">
     <h2>Welcome to <a href="http://rebootjeff.com">RebootJeff.com</a></h2>
-<p class="about_blurb">I&#8217;m writing about my dive into web development, but I&#8217;ll probably write about other interests too.</p>
-<p class="about_blurb">Tennis, cars, videography, photography, music, composition of the universe, aesthetics of everything, and Batman tend to be on my mind as well.</p>
+<p class="about_blurb">I&#8217;m a JavaScripter writing about web software development. I write about other interests as well.</p>
+<p class="about_blurb">Tennis, cars, videography, music, composition of the universe, the aesthetics of everything, and Batman tend to be on my mind as well.</p>
 
   </div>
   <div class="span6">
@@ -112,7 +112,7 @@
 
 
 
-<a href="http://twitter.com/rebootjeff" rel="tooltip" title="Twitter"><img class="social_icon" title="Twitter" alt="Twitter icon" src="/images/glyphicons_391_twitter_t.png"></a>
+<a href="http://twitter.com/rebootjeff" rel="tooltip" title="Twitter"><img class="social_icon" title="Twitter" alt="Twitter icon" src="/images/icon_twitter.png"></a>
 
 
 
@@ -129,6 +129,155 @@
   <div class="container">
     <div class="row" id="post-container">
     
+    
+    
+      <article class="span4">
+        <div class="article-format">
+
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/11/19/hackr-diary-my-apology/">[HackR Diary] My Formal Apology</a></h1>
+    
+    
+      <p class="meta">
+        
+  
+
+
+  
+    <span class="byline author vcard">by <span class="fn">Jeff Lee</span></span>
+  
+
+ - 
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-11-19T21:53:00-08:00" pubdate data-updated="true">Nov 19<span>th</span>, 2013</time> - 
+        
+
+posted in
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/hack-reactor/'>Hack Reactor</a>, <a class='category' href='/blog/categories/hackr-diary/'>HackR Diary</a>, <a class='category' href='/blog/categories/coding-bootcamps/'>coding bootcamps</a>, <a class='category' href='/blog/categories/software-development/'>software development</a>
+  
+</span>
+
+
+        
+         | <a href="/blog/2013/11/19/hackr-diary-my-apology/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>My previous blog post was nearly 3 weeks ago. Why? What’s stopped me from posting more stories of life at Hack Reactor? For the past several days, I have been working on an individual project. I was very confident going into it, and I should eventually blog specifically about the initial stages, but as it turned out …there is a crap-ton of stuff to juggle when developing a web app. There are so many things that can go wrong in your workflow –not just in your code.</p>
+
+<h1 id="things-that-kept-me-busy">Things That Kept me Busy</h1>
+
+<ul>
+  <li>Defaut installation of node/npm on Ubuntu led to file permissions issues. Oh shit.</li>
+  <li>Figuring out Yeoman: Before <code>npm install -g yo</code>: I wonder what will happen. After <code>yo generator-angularexpress</code>: What is all this stuff?! Oh nice.</li>
+  <li>Figuring out Grunt: How can I get it to work with Stylus? Oh nice.</li>
+  <li>Easy, but time-consuming (to make sure you don’t break something that used to work)
+    <ul>
+      <li>Organizing files/folders in a professional way (inter-file <code>require</code> statements can break)</li>
+      <li>Using environment variables (typos can be devastating)</li>
+    </ul>
+  </li>
+  <li>Facebook Authorization
+    <ul>
+      <li>Making 2 FB apps (one for dev environment; one for production environment)</li>
+      <li>Figuring out the proper callback URL</li>
+    </ul>
+  </li>
+  <li>Databases
+    <ul>
+      <li>Juggling MySQL in development environment, then switching to PostgreSQL in production.</li>
+      <li>Why is the production database getting flooded? Oh there’s a random configuration setting I missed in Sequelize.</li>
+    </ul>
+  </li>
+  <li>Random Heroku hiccups (at one point, a node module provider went down, causing Heroku’s <code>npm install</code> to die).</li>
+</ul>
+
+<p>These are just a few of the little obstacles that add up. You don’t see them coming. They take quite a bit of time to hunt down.</p>
+
+<h1 id="nerdy-chuck-norris-jokes">Nerdy Chuck Norris Jokes</h1>
+
+<p>As an apology for not blogging much in the past 3 weeks, here are some jokes from <strong><a href="http://www.icndb.com/">the best API ever</a></strong>:</p>
+
+<p>All arrays Chuck Norris declares are of infinite size, because Chuck Norris knows no bounds.</p>
+
+<p>Chuck Norris doesn’t have disk latency because the hard drive knows to hurry the hell up.</p>
+
+<p>Chuck Norris can’t test for equality because he has no equal.</p>
+
+<p>Chuck Norris burst the dot com bubble.</p>
+
+<p>All browsers support the hex definitions #chuck and #norris for the colors black and blue.</p>
+
+<p>MySpace actually isn’t your space, it’s Chuck’s (he just lets you use it).</p>
+
+<p>Chuck Norris can solve the Towers of Hanoi in one move.</p>
+
+<p>Chuck Norris finished World of Warcraft.</p>
+
+<p>Chuck Norris doesn’t use web standards as the web will conform to him.</p>
+
+<p>Whiteboards are white because Chuck Norris scared them that way.</p>
+
+<p>Chuck Norris can delete the Recycling Bin.</p>
+
+<p>Chuck Norris’s beard can type 140 wpm.</p>
+
+<p>Chuck Norris can unit test entire applications with a single assert.</p>
+
+<p>Chuck Norris doesn’t need sudo, he just types “Chuck Norris” before his commands.</p>
+
+<p>Chuck Norris doesn’t need a debugger, he just stares down the code until the bug confesses.</p>
+
+<p>The class object inherits from Chuck Norris</p>
+
+<p>Chuck Norris knows the last digit of PI.</p>
+
+<p>Chuck Norris’ Internet connection is faster upstream than downstream because even data has more incentive to run from him than to him.</p>
+
+<p>Chuck Norris’s keyboard has the Any key.</p>
+
+<p>Chuck Norris can install iTunes without installing Quicktime.</p>
+
+<p>Chuck Norris’s OSI network model has only one layer - Physical.</p>
+
+<p>Chuck Norris compresses his files by doing a flying round house kick to the hard drive.</p>
+
+<p>Chuck Norris uses canvas in IE.</p>
+
+<p>Chuck Norris’s database has only one table, ‘Kick’, which he DROPs frequently.</p>
+
+<p>Chuck Norris’s brain waves are suspected to be harmful to cell phones.</p>
+
+<p>Chuck Norris sits at the stand-up.</p>
+
+<p>Chuck Norris has never registered an account. He just logs in.</p>
+
+<p>Code runs faster when Chuck Norris glares at it.</p>
+</div>
+  
+  
+
+
+</div>
+
+      </article>
     
     
       <article class="span4">
@@ -778,146 +927,6 @@ posted in
 
       </article>
     
-    
-      <article class="span4">
-        <div class="article-format">
-
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/09/29/hackr-diary-thoughts-about-week-number-1/">[HackR Diary] Thoughts About Week #1</a></h1>
-    
-    
-      <p class="meta">
-        
-  
-
-
-  
-    <span class="byline author vcard">by <span class="fn">Jeff Lee</span></span>
-  
-
- - 
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-09-29T14:37:00-07:00" pubdate data-updated="true">Sep 29<span>th</span>, 2013</time> - 
-        
-
-posted in
-<span class="categories">
-  
-    <a class='category' href='/blog/categories/hack-reactor/'>Hack Reactor</a>, <a class='category' href='/blog/categories/hackr-diary/'>HackR Diary</a>, <a class='category' href='/blog/categories/coding-bootcamps/'>coding bootcamps</a>
-  
-</span>
-
-
-        
-         | <a href="/blog/2013/09/29/hackr-diary-thoughts-about-week-number-1/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p class="last-updated">Last updated on Oct 1, 2013 (minor edits).</p>
-
-<blockquote class="twitter-tweet"><p>Good way to start week 2 at <a href="https://twitter.com/HackReactor">@HackReactor</a> <a href="http://t.co/6pB80gQKCO">pic.twitter.com/6pB80gQKCO</a></p>&mdash; Jeff Lee (@RebootJeff) <a href="https://twitter.com/RebootJeff/statuses/384728991359176704">September 30, 2013</a></blockquote>
-<script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-<p>This post is a bit late, but it can be hard to find time to write up a thorough blog post when I’m studying at Hack Reactor for 70-80 hours/week. During my free time, it’s tempting to just play <a href="http://www.playhawken.com">Hawken</a> or catch up on YouTube (yes, I subscribe to some damn good channels).</p>
-
-<p>Quick correction: In <a href="">my previous HackR Diary entry</a>, I said that the staff gets a 1-week vacation every 7 weeks (6 weeks of work followed by a 1-week break). This isn’t entirely true. The interim week can be used as vacation, but staff also use it to make changes to Hack Reactor. For example, the most recent interim week was used by staff to rearrange the lecture room, which involved installing a new projector screen.</p>
-
-<h1 id="week-in-review">Week in Review</h1>
-
-<p>I wake up everyday Mon-Sat at 7:30am. I should really wake up earlier so then I can arrive before 8:50am. I rely on the BART (subway) to get to/from Hack Reactor. I make my subway rides more enjoyable by saving YouTube videos as .mp4 files to my phone. I generally watch documentaries on cosmology and nature featuring British narrators. The accent is key. If you’re interested in such documentaries, <strong>check out <a href="http://science-documentaries.com/">this link</a> and <a href="http://www.youtube.com/watch?v=ag0U65NkxrI&amp;feature=share&amp;list=PL300BF5A42D3C21C4">this link</a></strong>.</p>
-
-<p>Ok enough of that. You came here to read about the intersection of start-up life and student life, not BBC on YouTube. Here’s a quick recap of what I was up to last week:</p>
-
-<ul>
-  <li><strong>Learning:</strong> 2 “standard” sprints + 1 longer sprint</li>
-  <li><strong>Reflection:</strong> Provided feedback on what students did and didn’t like about week 1.</li>
-  <li><strong>Week 0 self-assessment:</strong> An ungraded quiz to force you to ask yourself how confident you are about what was taught in the pre-course work.</li>
-  <li><strong>Code Review by seniors:</strong> The “upperclassmen” took a look at our data structures solutions.</li>
-  <li><strong>Social Night:</strong> Visited <em>House of Air</em>, a sweet trampoline gym.</li>
-</ul>
-
-<h1 id="what-i-learned">What I Learned</h1>
-
-<ul>
-  <li><strong>Sprint #1:</strong> Recursion</li>
-  <li><strong>Sprint #2:</strong> Mini-clone of Underscore.js</li>
-  <li><strong>Extra #1:</strong> Advice for Success
-    <ul>
-      <li>Hack Reactor’s role in students’ success</li>
-      <li>Students’ role in our own success</li>
-    </ul>
-  </li>
-  <li><strong>Extra #2:</strong> Debugging
-    <ul>
-      <li><code>debugger;</code> statement</li>
-      <li>Sources tab in Google Chrome dev tools</li>
-      <li>Call Stack in Sources tab</li>
-    </ul>
-  </li>
-  <li><strong>Sprint #3:</strong> Instantiating Data Structures with various Class Patterns
-    <ul>
-      <li>Class Patterns
-        <ul>
-          <li>Functional (with and without shared methods)</li>
-          <li>Prototypal</li>
-          <li>Pseudoclassical</li>
-        </ul>
-      </li>
-      <li>Data Structures
-        <ul>
-          <li>Stacks</li>
-          <li>Queues</li>
-          <li>Linked Lists</li>
-          <li>Trees</li>
-          <li>Sets</li>
-          <li>Hash Tables</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-</ul>
-
-<h1 id="what-i-thought">What I Thought</h1>
-
-<h2 id="lectures">Lectures</h2>
-
-<p><strong>Week 1 is very different from most weeks</strong> due to the amount of lengthy lectures we have to sit through, but ya know what? I really liked the lectures. The main instructor for week 1 is Marcus, and he’s pretty great at teaching. Students constantly ask questions during lecture so it feels much more interactive and much less like being force-fed information.</p>
-
-<p>I like that lectures involve plenty of analogies, live coding examples, industry best practices, and “every interviewer will ask you about this” moments. You’d think students would get pretty tired of all the lectures, but they’re too good to be off-putting. Also, 5+ hours of lectures per day isn’t a lot when you consider we’re spending 12+ hours per day at the school.</p>
-
-<h2 id="paired-programming">Paired Programming</h2>
-
-<p>I generally like the idea of paired programming so long as you have a good dynamic with your partner. That said, it can be <em>really</em> tiring because you’re constantly talking as you and your partner are coding. Not only are you exhausting your brain’s cognitive abilities by working on programming challenges, but you’re also exercising verbal comm skills and listening skills. It can be tough to listen to your partner explain his/her solution when you feel like you’re on the brink of working out your own awesome solution in your head.</p>
-
-<h2 id="the-school">The School</h2>
-
-<p>Hack Reactor is a fantastic environment, and I know every student of every bootcamp says this, but it’s just so amazing to be in a school where the students and teachers are all so pumped to be there. On top of that, the students are open-minded without being naive. Basically, <strong>Hack Reactor is filled with the positive vibes that should make every college wildly jealous.</strong></p>
-
-<p>It’s also worth noting that Hack Reactor is transparent. They’re a small company, and their small size allows them to build a tighter community of teachers, students, and alumni. I love that Hack Reactor staff is very honest and genuine. When cynics look at the relatively expensive tuition, it’s tempting for them to say HackR is “in it for the money,” but check out a lecture or listen to them explain their intentions and you won’t hear a sales pitch. You’ll hear earnest intentions to educate the next generation of developers using next-generation methods.</p>
-</div>
-  
-  
-
-
-</div>
-
-      </article>
-    
     </div>
       <div class="row">
         <ul class="pager">
@@ -941,6 +950,10 @@ posted in
     <ul class="recent_posts">
       
         <li>
+          <a href="/blog/2013/11/19/hackr-diary-my-apology/">[HackR Diary] My Formal Apology</a>
+        </li>
+      
+        <li>
           <a href="/blog/2013/10/28/hackr-diary-week-5/">[HackR Diary] Week 5: Final Sprints</a>
         </li>
       
@@ -954,10 +967,6 @@ posted in
       
         <li>
           <a href="/blog/2013/10/14/hackr-diary-week-3-backbone/">[HackR Diary] Week 3: Order in the Code</a>
-        </li>
-      
-        <li>
-          <a href="/blog/2013/10/06/hackr-diary-week-2/">[HackR Diary] Week 2: Now Exiting My Comfort Zone</a>
         </li>
       
     </ul>
