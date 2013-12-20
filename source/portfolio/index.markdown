@@ -25,7 +25,7 @@ I get pretty serious about comparing products/services, so I made a vote-gatheri
 
   - Deployed: [here](http://cocompare.herokuapp.com)
   - Rather Thorough ReadMe: [here](https://github.com/RebootJeff/co-compare/blob/master/README.md)
-  - Source: [here](https://github.com/RebootJeff/co-compare)
+  - Full-Stack Source: [here](https://github.com/RebootJeff/co-compare)
 
 # Team Projects
 
