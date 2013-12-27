@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: software development | RebootJeff.com]]></title>
+  <link href="http://RebootJeff.github.io/blog/categories/software-development/atom.xml" rel="self"/>
+  <link href="http://RebootJeff.github.io/"/>
+  <updated>2013-12-19T16:32:42-08:00</updated>
+  <id>http://RebootJeff.github.io/</id>
+  <author>
+    <name><![CDATA[Jeff Lee]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[[HackR Diary] My Formal Apology]]></title>
+    <link href="http://RebootJeff.github.io/blog/2013/11/19/hackr-diary-my-apology/"/>
+    <updated>2013-11-19T21:53:00-08:00</updated>
+    <id>http://RebootJeff.github.io/blog/2013/11/19/hackr-diary-my-apology</id>
+    <content type="html"><![CDATA[<p>My previous blog post was nearly 3 weeks ago. Why? What’s stopped me from posting more stories of life at Hack Reactor? For the past several days, I have been working on an individual project. I was very confident going into it, and I should eventually blog specifically about the initial stages, but as it turned out …there is a crap-ton of stuff to juggle when developing a web app. There are so many things that can go wrong in your workflow –not just in your code.</p>
+
+<h1 id="things-that-kept-me-busy">Things That Kept me Busy</h1>
+
+<ul>
+  <li>Defaut installation of node/npm on Ubuntu led to file permissions issues. Oh shit.</li>
+  <li>Figuring out Yeoman: Before <code>npm install -g yo</code>: I wonder what will happen. After <code>yo generator-angularexpress</code>: What is all this stuff?! Oh nice.</li>
+  <li>Figuring out Grunt: How can I get it to work with Stylus? Oh nice.</li>
+  <li>Easy, but time-consuming (to make sure you don’t break something that used to work)
+    <ul>
+      <li>Organizing files/folders in a professional way (inter-file <code>require</code> statements can break)</li>
+      <li>Using environment variables (typos can be devastating)</li>
+    </ul>
+  </li>
+  <li>Facebook Authorization
+    <ul>
+      <li>Making 2 FB apps (one for dev environment; one for production environment)</li>
+      <li>Figuring out the proper callback URL</li>
+    </ul>
+  </li>
+  <li>Databases
+    <ul>
+      <li>Juggling MySQL in development environment, then switching to PostgreSQL in production.</li>
+      <li>Why is the production database getting flooded? Oh there’s a random configuration setting I missed in Sequelize.</li>
+    </ul>
+  </li>
+  <li>Random Heroku hiccups (at one point, a node module provider went down, causing Heroku’s <code>npm install</code> to die).</li>
+</ul>
+
+<p>These are just a few of the little obstacles that add up. You don’t see them coming. They take quite a bit of time to hunt down.</p>
+
+<h1 id="nerdy-chuck-norris-jokes">Nerdy Chuck Norris Jokes</h1>
+
+<p>As an apology for not blogging much in the past 3 weeks, here are some jokes from <strong><a href="http://www.icndb.com/">the best API ever</a></strong>:</p>
+
+<p>All arrays Chuck Norris declares are of infinite size, because Chuck Norris knows no bounds.</p>
+
+<p>Chuck Norris doesn’t have disk latency because the hard drive knows to hurry the hell up.</p>
+
+<p>Chuck Norris can’t test for equality because he has no equal.</p>
+
+<p>Chuck Norris burst the dot com bubble.</p>
+
+<p>All browsers support the hex definitions #chuck and #norris for the colors black and blue.</p>
+
+<p>MySpace actually isn’t your space, it’s Chuck’s (he just lets you use it).</p>
+
+<p>Chuck Norris can solve the Towers of Hanoi in one move.</p>
+
+<p>Chuck Norris finished World of Warcraft.</p>
+
+<p>Chuck Norris doesn’t use web standards as the web will conform to him.</p>
+
+<p>Whiteboards are white because Chuck Norris scared them that way.</p>
+
+<p>Chuck Norris can delete the Recycling Bin.</p>
+
+<p>Chuck Norris’s beard can type 140 wpm.</p>
+
+<p>Chuck Norris can unit test entire applications with a single assert.</p>
+
+<p>Chuck Norris doesn’t need sudo, he just types “Chuck Norris” before his commands.</p>
+
+<p>Chuck Norris doesn’t need a debugger, he just stares down the code until the bug confesses.</p>
+
+<p>The class object inherits from Chuck Norris</p>
+
+<p>Chuck Norris knows the last digit of PI.</p>
+
+<p>Chuck Norris’ Internet connection is faster upstream than downstream because even data has more incentive to run from him than to him.</p>
+
+<p>Chuck Norris’s keyboard has the Any key.</p>
+
+<p>Chuck Norris can install iTunes without installing Quicktime.</p>
+
+<p>Chuck Norris’s OSI network model has only one layer - Physical.</p>
+
+<p>Chuck Norris compresses his files by doing a flying round house kick to the hard drive.</p>
+
+<p>Chuck Norris uses canvas in IE.</p>
+
+<p>Chuck Norris’s database has only one table, ‘Kick’, which he DROPs frequently.</p>
+
+<p>Chuck Norris’s brain waves are suspected to be harmful to cell phones.</p>
+
+<p>Chuck Norris sits at the stand-up.</p>
+
+<p>Chuck Norris has never registered an account. He just logs in.</p>
+
+<p>Code runs faster when Chuck Norris glares at it.</p>
+]]></content>
+  </entry>
+  
+</feed>
