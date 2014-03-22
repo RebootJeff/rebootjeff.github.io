@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[HackR Diary] Week 6 and 7: App from Scratch"
+title: "[HackR Diary] Weeks 6 and 7: App from Scratch"
 date: 2014-03-21 17:12
 comments: true
 categories: ['HackR Diary','Hack Reactor','coding bootcamps']
