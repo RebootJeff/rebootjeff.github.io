@@ -1,0 +1,395 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Queues &amp; Stacks in JavaScript (with Batman and Superman) - RebootJeff.com</title>
+  <meta name="author" content="Jeff Lee">
+  <link rel="author" href="humans.txt">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  
+    
+  
+  <meta name="description" content="The proverbial “they” say (says?) it’s good to write technical blog posts. Blog posts that get down and dirty with the nitty gritty of low-level, in &hellip;">
+  
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://RebootJeff.github.io/blog/2013/12/26/queues-and-stacks-in-javascript/">
+  <link href="/favicon.png" rel="icon">
+  <link href='http://fonts.googleapis.com/css?family=Cantarell' rel='stylesheet' type='text/css'>
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="RebootJeff.com" type="application/atom+xml">
+  <meta name="og:type" content="website" />
+  <meta name="og:site_name" content="RebootJeff.com" />
+  <meta name="og:title" content="Queues &amp; Stacks in JavaScript (with Batman and Superman)" />
+  <meta name="og:description" content="The proverbial “they” say (says?) it’s good to write technical blog posts. Blog posts that get down and dirty with the nitty gritty of low-level, in &hellip;" />
+  <meta name="og:url" content="http://RebootJeff.github.io/blog/2013/12/26/queues-and-stacks-in-javascript/"/>
+  <meta name="url" content="http://RebootJeff.github.io/blog/2013/12/26/queues-and-stacks-in-javascript/">
+  
+  <meta name="subject" content="JavaScriptdata structurestechnical posts"/>
+  <meta name="category" content="JavaScriptdata structurestechnical posts"/>
+  
+  <meta name="distribution" content="global">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-44084259-1']);
+    _gaq.push(['_setDomainName','github.io']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <nav role="navigation"><div class="navbar">
+  <div class="navbar-inner">
+    <a class="brand" href="/">RebootJeff.com</a>
+    <ul class="nav">
+      <li><a href="/">Home</a></li>
+      <!-- BEGIN custom nav here because importing custom/navigation.html at the bottom (by default) shows up looking weird -->
+      <li><a href="/about">About</a></li>
+      <li><a href="/portfolio">Portfolio</a></li>
+      <li><a href="/blog/categories/my-media">Media</a></li>
+      <li><a href="/blog/archives">Archives</a></li>
+    </ul>
+    <ul class="nav" data-subscription="rss">
+      <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+      
+    </ul>
+      
+    <form class="navbar-form" action="http://google.com/search" method="get">
+      <fieldset role="search">
+        <input type="hidden" name="q" value="site:RebootJeff.github.io" />
+        <input class="span2" type="text" name="q" results="0" placeholder="Search"/>
+      </fieldset>
+    </form>
+      
+    <!-- I have customized the navigation.html file OUTSIDE of the custom folder because the part I wanted to customize comes BEFORE the `include` statement that invokes the custom/navigation.html file (aka the file you're reading now). -->
+  </div>
+</div>
+</nav>
+  <div class="wrapper_single">
+    <div class="container">
+      <article class="span8 offset2" role="article">
+        <div class="article-format">
+
+  <header>
+    
+      <h1 class="entry-title">Queues &amp; Stacks in JavaScript (With Batman and Superman)</h1>
+    
+    
+      <p class="meta">
+        
+  
+
+
+  
+    <span class="byline author vcard">by <span class="fn">Jeff Lee</span></span>
+  
+
+ - 
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-12-26T15:54:00-08:00" pubdate data-updated="true">Dec 26<span>th</span>, 2013</time> - 
+        
+
+posted in
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/javascript/'>JavaScript</a>, <a class='category' href='/blog/categories/data-structures/'>data structures</a>, <a class='category' href='/blog/categories/technical-posts/'>technical posts</a>
+  
+</span>
+
+
+        
+         | <a href="#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>The proverbial “they” say (says?) it’s good to write technical blog posts. Blog posts that get down and dirty with the nitty gritty of low-level, in-the-weeds details and nuances accompanied by jargon, acronyms, and name-dropping are all the rage in the dev community. More importantly, I really want to help beginners learn programming, so I may as well teach some basic concepts via my blog. (Later on, I hope to contribute more to <a href="http://www.theodinproject.com/">The Odin Project</a>, which is a free, open-source, online resource for beginners created by a very cool individual.)</p>
+
+<p>So as my first foray in technical blog posts, I present to all loveable noobs: the introductory data structures known as stacks and queues.</p>
+
+<h1 id="whats-a-stack">What’s a Stack?</h1>
+
+<p>A stack is a collection of items (or data) that follow a particular rule: the last item to join the collection is the first one to leave.</p>
+
+<ul>
+  <li>The <strong>L</strong>ast data <strong>I</strong>n is the <strong>F</strong>irst data <strong>O</strong>ut (<strong>LIFO</strong>)</li>
+  <li>Add data: <strong>push</strong></li>
+  <li>Remove data: <strong>pop</strong></li>
+  <li>Data enters and exits at the same end of the stack (at the <strong>top</strong>)</li>
+</ul>
+
+<h2 id="simple-implementation">Simple implementation</h2>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption class="code-header" style="margin-bottom:-5px;"><span>Simple Stack (array-based example)</span><a href="http://stackoverflow.com/questions/1590247/how-do-you-implement-a-stack-and-a-queue-in-javascript">Stack Overflow </a></figcaption> <div class="CodeRay">
+  <div class="code"><pre>
+<span class="keyword">var</span> stack = [];
+stack.push(<span class="integer">1</span>);  <span class="comment">// use the push method provided by the Array prototype</span>
+stack.push(<span class="integer">2</span>);
+stack.push(<span class="integer">3</span>);
+console.log(stack);  <span class="comment">// output: [1,2,3]</span>
+
+<span class="keyword">var</span> popped = stack.pop();  <span class="comment">// use the pop method provided by the Array prototype</span>
+console.log(popped);  <span class="comment">// output: 3</span>
+console.log(stack);  <span class="comment">// output: [1,2]</span>
+</pre></div>
+</div>
+ </figure></notextile></div>
+
+<h2 id="ridiculous-analogy">Ridiculous analogy</h2>
+
+<p>Imagine you’ve found an old, abandoned well. You think to yourself, “Bruce Wayne fell down a well when he was a kid, and I wanna be just like the Batman, so I’m gonna fall down this sweet well!” But you hesitate because …it’s a well, and wells are scary, ya know?</p>
+
+<p>Unbeknownst to you, <a href="http://batman.wikia.com/wiki/Harley_Quinn">your arch-nemesis</a> is out walking her <a href="http://batman.wikia.com/wiki/Bud_and_Lou">pet hyenas</a>. She spots you, and quickly runs over to shove you into the well. She giggles in delight at the sight of your plight. She then hides and waits for more people to walk near the well so she can <strong>push</strong> them too.</p>
+
+<p>It just so happens that this well has the diameter of a single person’s width. When someone is pushed into the well, they land on top of the last person who fell in before them. This creates a <strong>stack</strong> of people and some rather pronounced discomfort. Eventually, there are 5 people in this deep-yet-thin well, and you decide it’s time to call for help to get rescued.</p>
+
+<p>To your disappointment, the not-so-dark knight named Superman arrives to pull you well-dwellers out (one at a time). The last one pushed into the well is the first to <strong>pop</strong> out. <em>LIFO.</em></p>
+
+<h1 id="whats-a-queue">What’s a Queue?</h1>
+
+<p>A queue is a collection of items (or data) that follow the real-life “rules” of waiting in a line of people: the first item to join the collection is the first one to leave the collection.</p>
+
+<ul>
+  <li>The <strong>F</strong>irst data <strong>I</strong>n is the <strong>F</strong>irst data <strong>O</strong>ut (<strong>FIFO</strong>)</li>
+  <li>Add data: <strong>enqueue</strong></li>
+  <li>Remove data: <strong>dequeue</strong></li>
+  <li>Data exits at the: <strong>head</strong> of the queue</li>
+  <li>Data enters at the: <strong>tail</strong> of the queue</li>
+</ul>
+
+<h2 id="simple-implementation-1">Simple implementation</h2>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption class="code-header" style="margin-bottom:-5px;"><span>Simple Queue (array-based example)</span><a href="http://stackoverflow.com/questions/1590247/how-do-you-implement-a-stack-and-a-queue-in-javascript">Stack Overflow </a></figcaption> <div class="CodeRay">
+  <div class="code"><pre>
+<span class="keyword">var</span> queue = [];
+queue.push(<span class="integer">1</span>);  <span class="comment">// &quot;enqueue&quot;</span>
+queue.push(<span class="integer">2</span>);
+queue.push(<span class="integer">3</span>);
+console.log(queue);  <span class="comment">// output: [1,2,3]</span>
+
+<span class="keyword">var</span> dequeued = queue.shift();  <span class="comment">// &quot;dequeue&quot;</span>
+console.log(dequeued);  <span class="comment">// output: 1</span>
+console.log(queue);  <span class="comment">// output: [2,3]</span>
+</pre></div>
+</div>
+ </figure></notextile></div>
+
+<h2 id="ridiculous-analogy-1">Ridiculous analogy</h2>
+
+<p>Batman decides to do some in-the-field combat training. He drops into the middle of a gang meeting and yells, “I’ve sent your buddies to jail. I know you want revenge. Catch me if you can. P.S. I’m Batman!” Why does the cowled hero do this? We all know Batman is a smart dude, and sure enough, he has a clever plan. He lures the baddies who are running after him into a narrow alley.</p>
+
+<p>The gangsters can only approach Batman one at a time to fit in the narrow alley, so they form a line (aka <strong>queue</strong>). The gangster at the front of the line is the first gangster knocked out (aka <strong>dequeued</strong>) by Batman (<strong>first in; first out</strong>). You might even say that Batman’s fists aim for the <strong>head</strong> of the queue and foolish gangsters enter at the <strong>tail</strong> of the line of doom.</p>
+
+<h1 id="the-story-will-continue">The Story Will Continue</h1>
+
+<p>Stay tuned for more blog posts on data structures. My next technical blog post will examine how to implement stacks and queues from scratch (without arrays) to get a deeper understanding of push, pop, enqueue, and dequeue. I know you can’t wait for the moment I deliver on this promise. I can hear your panting through my WiFi, but please stay patient. I was busy working on a <a href="https://github.com/RebootJeff/cocompare">web app</a> and then a <a href="https://github.com/RebootJeff/phone-tag-phonegap">mobile app</a>. Now, I’m busy with job searching while possibly starting mini-project.</p>
+
+<p>On a mildly amusing, unrelated note: isn’t it funny to think about the phrase “stay tuned”? It’s getting rather archaic now that terrestrial, over-the-air TV and radio are losing popularity. Yes, these are the random things I think about as I write blog posts.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+
+  
+    <span class="byline author vcard">by <span class="fn">Jeff Lee</span></span>
+  
+
+ - 
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-12-26T15:54:00-08:00" pubdate data-updated="true">Dec 26<span>th</span>, 2013</time> - 
+      
+
+posted in
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/javascript/'>JavaScript</a>, <a class='category' href='/blog/categories/data-structures/'>data structures</a>, <a class='category' href='/blog/categories/technical-posts/'>technical posts</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://RebootJeff.github.io/blog/2013/12/26/queues-and-stacks-in-javascript/" data-via="rebootjeff" data-counturl="http://RebootJeff.github.io/blog/2013/12/26/queues-and-stacks-in-javascript/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    
+      <a class="pull-left" href="/blog/2013/11/19/hackr-diary-my-apology/" title="Previous Post: [HackR Diary] My Formal Apology">&laquo; [HackR Diary] My Formal Apology</a>
+    
+    
+      <a class="pull-right" href="/blog/2014/01/04/queues-stacks-javascript-class-patterns/" title="Next Post: Queues & Stacks from Scratch with JS Patterns">Queues & Stacks from Scratch with JS Patterns &raquo;</a>
+    
+  </footer>
+
+</div>
+
+        
+          <div class="article-format">
+            <h1>Comments</h1>
+            <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+          </div>
+        
+      </article>
+    </div>
+  </div>
+  <div id="footer-widgets">
+  <div class="container">
+    <div class="row">
+  <div class="span3">
+    <h2>Recent Posts</h2>
+    <ul class="recent_posts">
+      
+        <li>
+          <a href="/blog/2014/03/21/hackr-diary-week-6-and-7-making-something/">[HackR Diary] Week 6 and 7: App from Scratch</a>
+        </li>
+      
+        <li>
+          <a href="/blog/2014/01/09/questions-to-ask-dev-interviewers/">Questions to ask dev interviewers</a>
+        </li>
+      
+        <li>
+          <a href="/blog/2014/01/04/queues-stacks-javascript-class-patterns/">Queues & Stacks from Scratch with JS Patterns</a>
+        </li>
+      
+        <li>
+          <a href="/blog/2013/12/26/queues-and-stacks-in-javascript/">Queues &amp; Stacks in JavaScript (with Batman and Superman)</a>
+        </li>
+      
+        <li>
+          <a href="/blog/2013/11/19/hackr-diary-my-apology/">[HackR Diary] My Formal Apology</a>
+        </li>
+      
+    </ul>
+    <h2><a href="/blog/archives">Archives</a></h2>
+  </div>
+  <div class="span3">
+    
+
+  </div>
+  <!-- DISABLE Twitter and Found On footer widgets for now
+  <div class="span4">
+    
+  </div>
+  <div class="span2">
+    
+  -->
+  <div class="span6" id="footer_notes">
+    <p>
+      <a href="/">RebootJeff.com</a> - Copyright &copy; 2014 - Jeff Lee
+    </p>
+    <p>
+      Powered by <a href="http://octopress.org/">Octopress</a>. Made pretty with Foxslide theme by <a href="http://www.AdrianArtiles.com">Adrian Artiles</a>. Theme heavily tweaked by me. It took forever T.T
+    </p>
+  </div>
+</div>
+
+  </div>
+</div>
+<!-- DISABLE footer beyond footer-widgets
+<footer class="footer">
+  <div class="container">
+  	
+  </div>
+</footer>
+-->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+<script>window.jQuery || document.write('<script src="/javascripts/libs/jquery-1.7.2.min.js" type="text/javascript"><\/script>')</script>
+<script src="/javascripts/libs/bootstrap.min.js" type="text/javascript"></script>
+<script src="/javascripts/jquery.tweet.js" type="text/javascript"></script>
+<script src="/javascripts/jquery.instagram.js" type="text/javascript"></script>
+<script src="/javascripts/libs/jquery.masonry.min.js" type="text/javascript"></script>
+<script src="/javascripts/custom.js" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'rebootjeff';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://RebootJeff.github.io/blog/2013/12/26/queues-and-stacks-in-javascript/';
+        var disqus_url = 'http://RebootJeff.github.io/blog/2013/12/26/queues-and-stacks-in-javascript/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+</body>
+</html>

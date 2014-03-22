@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: event | RebootJeff.com]]></title>
+  <link href="http://RebootJeff.github.io/blog/categories/event/atom.xml" rel="self"/>
+  <link href="http://RebootJeff.github.io/"/>
+  <updated>2014-03-21T17:53:48-07:00</updated>
+  <id>http://RebootJeff.github.io/</id>
+  <author>
+    <name><![CDATA[Jeff Lee]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[[HackR Diary] Event: Pamela Fox on Backbone]]></title>
+    <link href="http://RebootJeff.github.io/blog/2013/10/16/hackr-diary-a-visit-from-pamela-fox-re-backbone/"/>
+    <updated>2013-10-16T07:13:00-07:00</updated>
+    <id>http://RebootJeff.github.io/blog/2013/10/16/hackr-diary-a-visit-from-pamela-fox-re-backbone</id>
+    <content type="html"><![CDATA[<p class="last-updated">Last updated on Oct 16, 2013 (see strikethrough text).</p>
+
+<blockquote class="twitter-tweet"><p><a href="https://twitter.com/pamelafox">@pamelafox</a> schooling <a href="https://twitter.com/HackReactor">@HackReactor</a> students on <a href="https://twitter.com/search?q=%23backbonejs&amp;src=hash">#backbonejs</a> <a href="http://t.co/1xRuxIEvKl">pic.twitter.com/1xRuxIEvKl</a></p>&mdash; andre (@AndrEvangelestA) <a href="https://twitter.com/AndrEvangelestA/statuses/389949525588062209">October 15, 2013</a></blockquote>
+<script async="" src="http://RebootJeff.github.io//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<p>Last Monday, the Hack Reactor students were treated to <a href="http://backbone-3ways.appspot.com/">a Backbone presentation</a> by <a href="http://blog.pamelafox.org/">Pamela Fox</a>. It was packed with a ton of insight. I frantically took notes on my smartphone (like a fool), so now I present to you a collection of cool cucumbers.</p>
+
+<h1 id="what-i-learned">What I Learned</h1>
+
+<h2 id="backbone-nuggets">Backbone Nuggets</h2>
+
+<ul>
+  <li>
+    <p>Region management (which you can “outsource” to the likes of <a href="http://chaplinjs.org/">Chaplin</a> or <a href="http://marionettejs.com/s">Marionette</a>) is worth checking out. Apparently, it helps limit the amount of rendering you need to do by allowing you to target specific regions of the web page.</p>
+  </li>
+  <li>
+    <p>Not all Backbone libraries are created equal! Some provide sweet functionality at the cost of depressing performance losses. The Backbone ecosystem is cool, but not entirely safe. Pamela once removed a library from Coursera’s codebase that was responsible for a <em>full second</em> of page load time.</p>
+  </li>
+  <li>
+    <p>Backbone is so flexible that you might feel like an Backbone expert one day and then feel like a noob the next day when you see someone else’s radically different and compelling usage.</p>
+  </li>
+  <li>
+    <p>Break up your views into more views. Make sibling views and nested views. No single view should be a bajillion lines of code. If you find yourself making long js files in Backbone, it’s time to split things up, my fellow noob.</p>
+  </li>
+</ul>
+
+<h2 id="general-code-related-nuggets">General Code-Related Nuggets</h2>
+
+<ul>
+  <li>
+    <p>Don’t optimize prematurely. Performant code is harder to read. Making code harder to read early on can be annoying. I wonder if Pamela is pro-<a href="/blog/2013/09/25/hackr-diary-first-impressions/#guard-operator">guard operator</a> or anti-guard operator.</p>
+  </li>
+  <li>
+    <p><a href="http://requirejs.org/">RequireJS</a> kills your foolish usage of global vars. Perhaps I should use it.</p>
+  </li>
+  <li>
+    <p>Single-page web apps can be harder to debug (than multi-page web apps?) because state gets saved across various renders. Errors can be hard to reproduce during the debugging process because there might be many user interactions that need to occur in a particular sequence to cause the error.</p>
+  </li>
+  <li>
+    <p><strong>Ask potential employers about their companies’ testing practices.</strong> How much regression testing do they do? How many tests have they created? More tests means less fear when contributing to the codebase as a fresh employee.</p>
+  </li>
+  <li>
+    <p>Making <strong>forms</strong> with Backbone (or any MV framework?) is great because forms lend themselves to the model-view-collection paradigm with ease. Forms are collections of questions, which are models, which have their own views. Each question view can draw from a set of views meant to provide a particular format (a view for a question answered by checkboxes, a view for question answered by text fields, a view for question answered by generic menu, etc). This also means Backbone is good for creating <strong>control panels</strong> for admin users (e.g., admin control panel for teacher conducting a Coursera class).</p>
+  </li>
+</ul>
+
+<h2 id="re-coursera">Re: Coursera</h2>
+
+<p>Pamela used to work for Coursera. She drew from her experiences with that company to provide a lot of context and real-world examples for the arguments she put forth in her presentation.</p>
+
+<ul>
+  <li>
+    <p>To address SEO concerns associated with single-page web apps, Coursera used <strong>Just-in-Time rendering</strong>. Coursera would detect whether or not a visitor was a search/social engine bot crawling the sit. Upon identifying the bot, Coursera servers would respond by firing up a rendered instance of the web app using Selenium. The bot would then be directed to the code produced by the rendering. This prevents the bot from crawling an HTML file that has nothing but <code>&lt;script&gt;</code> tags pulling in Backbone code. Side note: Google is not cool with the just-in-time technique. Coursera had to use a different technique for Google, but that was not disclosed during Pamela’s talk :(</p>
+  </li>
+  <li>
+    <p><del>It’s not the most organized</del> (nevermind –it’s split into easy-to-understand folders), but you can find a lot of Coursera <a href="https://github.com/coursera/forum-js-snapshot">code on Github</a> (open source, baby!)</p>
+  </li>
+  <li>
+    <p>When viewing their source code with your browser, you’ll see mostly <code>&lt;script&gt;</code> tags. There is very little <code>&lt;body&gt;</code> HTML. That’s due to extensive use of Backbone.</p>
+  </li>
+</ul>
+
+<h1 id="what-i-thought">What I Thought</h1>
+
+<p>Pamela is a fantastic speaker. What I liked most about her talk was the use of real-world examples. As a student, it’s always so informative to hear about life in the wild (so to speak). Seeing as how this was a Hack Reactor event exclusively for students, it’s hard to judge it impartially, but I’m going to go ahead and claim it was awesome.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[[Event Review] 12 (non-technical) Steps to be a Better Developer]]></title>
+    <link href="http://RebootJeff.github.io/blog/2013/08/24/event-review-12-non-technical-steps-to-be-a-better-developer/"/>
+    <updated>2013-08-24T15:34:00-07:00</updated>
+    <id>http://RebootJeff.github.io/blog/2013/08/24/event-review-12-non-technical-steps-to-be-a-better-developer</id>
+    <content type="html"><![CDATA[<div style="float: right; margin: 10px;">
+<blockquote class="twitter-tweet"><p>In SF for the week. Heading to the east bay Ruby group tomorrow and speaking at the SF Ruby group Thursday if you want to come say hello.</p>&mdash; Gregg Pollack (@greggpollack) <a href="https://twitter.com/greggpollack/statuses/369523580796542978">August 19, 2013</a></blockquote>
+<script async="" src="http://RebootJeff.github.io//platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+
+<p>Yesterday, <a href="https://chartboost.com">Chartboost</a> hosted a presentation by <a href="http://www.linkedin.com/in/greggpollack">Gregg Pollack</a>, founder of <a href="http://www.codeschool.com">Code School</a> and <a href="http://envylabs.com">Envy Labs</a>. I found this event by joining <a href="http://www.meetup.com/sfruby/events/131917612/">The San Francisco Ruby Meetup Group</a>.</p>
+
+<p><strong><em>The slides + audio recording can be found here: <a href="http://penxy.com/qeh">http://penxy.com/qeh</a></em></strong></p>
+
+<p>The talk Pollack provided was not very technical in nature. He mostly focused on general productivity, communication, and other soft skills rather than discussing hard skills. Therefore, the talk had a self-help or self-improvement vibe –as opposed to an academic one.</p>
+
+<h1 id="what-i-learned">What I Learned</h1>
+<p>I didn’t plan on going into as much detail as I did in my <a href="/blog/2013/08/10/event-review-intro-to-ux-at-general-assembly/">previous event review</a> because you can check out the presentation for yourself in the penxy link I already provided. However, the penxy recording failed to capture the last 2 out of 12 steps. It also missed the conclusion. I also like to ramble.</p>
+
+<h2 id="the-12-steps-to-be-a-better-developer">The 12 steps to be a better developer</h2>
+
+<pre><code>1. Set expectation
+2. Be mindful of your engineering background
+3. Software development is a craft
+4. Learn how to delegate and improve the system
+5. Continue to learn inside and outside your company
+6. Stay out of your comfort zone
+7. Make friends and build relationships
+8. Don't be afraid to ask for help
+9. Learn to eliminate distractions and get in the zone
+10. The most complex solution is rarely the best solution
+11. Communicate visually
+12. Understand what brings happiness
+</code></pre>
+
+<h2 id="my-reinterpretation-of-the-12-steps">My (re)interpretation of the 12 steps</h2>
+<p>I think a lot of Gregg Pollack’s steps are good, a few are great, but a lot are poorly worded. Ok, they’re not “poorly worded” per se, but some seem a tad cryptic. It’s almost as if Pollack picked partially enigmatic titles on purpose, allowing him to turn a 12-step list into a 1-hour presentation. Almost.</p>
+
+<p>To be fair, I don’t think he has nefarious intentions, but I disagree with the wording of the 12 steps enough to motivate me to re-present them with different diction.</p>
+
+<h3 id="pay-more-attention-to-communicating-expectations">1. Pay more attention to communicating <em>expectations</em></h3>
+<p>Everyone knows communication is important. Pollack takes the time to suggest you spend more attention on communication with clients with a focus on expectations. Pollack posits that you think about some failed projects and consider that a possible (perhaps probable?) cause of failure was mismatched expectations.</p>
+
+<p>You can preempt this problem by obtaining client feedback more often, being geographically closer to the client, and by having someone on the client’s team become part of your team (as a liason, I imagine). By the way, Pollack often frames his ideas in the context of client-consultant relationships due to his experience running a consultancy.</p>
+
+<h3 id="avoid-criticizing-people">2. Avoid <em>criticizing</em> people</h3>
+<p>Here’s another bit regarding communication: don’t forget other people don’t think like you do. Pollack specifically points out that engineers need to be cognizant of the simple fact that non-engineers think differently, and if you don’t account for the difference, then you may “kill collaboration.”</p>
+
+<p>At this point, Pollack mostly discussed the problem of “diagnosing problems” and criticizing others. I actually started reading the oft-cited <em><a href="http://en.wikipedia.org/wiki/How_to_Win_Friends_and_Influence_People">How to Win Friends and Influence People</a></em>, and the concept of criticism is covered in one of the early chapters. Lesson learned: most people simply cannot handle criticism.</p>
+
+<p>Pollack recommends rephrasing your criticism into additions to another’s ideas rather than subtractions. I think that’s a bit crazy, but what do I know? I admit my less-than-4 years of work experience don’t make me an expert in workplace communication. On one hand, I agree that cold-and-calculating communication may seem efficient to engineers, but it just sounds asshole-y to most people. In other words, learn some empathy skills and put them to use in the workplace! On the other hand, I think the technique of rephrasing criticism into “Yes, and …” statements involves too much hand holding, and you will fail to convey your points because they are too busy treating the diabeetus caused by all the sugarcoating (TIL: “sugarcoating” is only one word).</p>
+
+<p>Before moving on to the next step, Pollack briefly discussed the awesome warm-fuzzies derived from good listening skills. I concur with his thoughts on good listening.</p>
+
+<h3 id="a-good-developer-builds-what-others-want">3. A good developer builds what <em>others</em> want</h3>
+<p>Why did Pollack include this step? This step was presented more as a way to help describe the role of developers, but it doesn’t really help you become a better developer in my opinion.</p>
+
+<p>So what did Pollack say exactly? Well, he essentially said the customer’s needs come first, but he just worded it differently. He said it’s a developer’s job to take whatever canvas they’re given and make something awesome. He cited a Walt Disney quote about building things for the sake of others –not for yourself. He said a lot of things without providing examples of actions you can take to improve your quality as a developer. Boo. I guess his point is just that you should stop whining and get over yourself?</p>
+
+<h3 id="delegate-work-pretty-straightforward-stuff">4. Delegate work (pretty straightforward stuff)</h3>
+<p>Everyone is familiar with cautionary tales about over-burdening oneself. Everyone knows you need to hire people to prevent you from tasking too many multis (so to speak). Everyone knows about the significance of delegation.</p>
+
+<p>But section 4 of this talk was not wholly uninsightful. He provided an example of “doing the math” by talking about framing delegation in terms of hours saved. His example involved a snazzy company that hired a full-time barista to take care of coffee for everyone else. After guesstimating some numbers, Pollack posited that the 8-hour barista added 20 hours of development productivity at the relatively low cost of a barista’s wages.</p>
+
+<blockquote>
+  <p>WITHOUT barista: 80 employees x 1 cup of coffee per employee x 15 minutes of time used to get each cup of coffee = 20 hours per day spent on coffee
+(not an exact quote, but you get the point)</p>
+</blockquote>
+
+<p>As a sometimes smartass-y skeptic, I take issue with his guesstimates. More importantly, I’d like to point out that the 15 minutes spent on getting coffee is probably considered as a break that employees enjoy. They will likely find a new way to take a break if you shorten the amount of time it takes to get their caffeine buzz. To be fair, this is something that Pollack acknowledges (somewhat) in a later section of his talk, so I shall holster my quick-draw revolver named Wise Guy.</p>
+
+<h3 id="remember-extracurriculars-do-them">5. Remember <em>extracurriculars</em>? Do them.</h3>
+<p>This is a two-parter. First, Pollack highly recommends attending meetups, seminars, talks, conferences, etc. that are relevant to software development. He also recommended further academic learning through resources like Code School	 of course. Second, your company should foster internal knowledge transfer via internal brown bags, “What I’m Working On Now” presentations, retrospectives, book clubs, planned pair programming, and even just eating meals together.</p>
+
+<p>One tidbit that I found interesting was that Pollack said it’s worth mentioning to hiring managers and bosses that you like attending meetups and whatnot. Bonus points!</p>
+
+<h3 id="embrace-challenging-tasks-avoid-embracing-trite-crap">6. Embrace <em>challenging</em> tasks; avoid embracing trite crap</h3>
+<p>Pollack claimed that human nature causes us to embrace easy-to-accomplish goals and tasks such as responding to work emails. This can lead to traps where you feel productive by doing a lot of small, low-value tasks. To avoid these traps, plan your day around addressing the big challenges first –don’t procrastinate by scheduling the tough stuff after the easy stuff.</p>
+
+<p>On a higher level, it’s important to embrace tough challenges for the sake of keeping your brain fit, keeping your skills up-to-date, accomplishing meaningful work, etc.</p>
+
+<h3 id="nurture-friendships-with-co-workers">7. Nurture <em>friendships</em> with co-workers</h3>
+<p>Many forget that one way to make the developer community better is to make friends in the community. One way to make workplace collaboration better is to become better friends with co-workers.</p>
+
+<p>At this point, Pollack quickly discussed introversion/shyness (as an audience member later pointed out, introversion != shyness). He provided some social skill tips like establishing personal goals to meet 5 new people per meetup, for example. When meeting new people, Pollack’s main tactic is to ask them about themselves. I think we’ve all heard that advice before. My take on it is that it works, but it still feels awkward until the conversation gets through the first few minutes of chilliness.</p>
+
+<h3 id="ask-for-help-sooner-than-later">8. Ask for help <em>sooner</em> than later</h3>
+<p>We’ve all heard it before: if you don’t ask for help now, you’ll struggle with your issue for much longer by going solo. Pollack’s rule of thumb is to ask for help after trying to tackle a bug, obstacle, etc. on your own for 30 minutes. If a small problem is taking you more than 30 minutes to solve, it probably means you’re using the wrong approach anyway (i.e., you’re digging yourself into a deeper hole).</p>
+
+<h3 id="take-breaks-and-avoid-synchronous-communication">9. Take <em>breaks</em> and avoid synchronous communication</h3>
+<p>I like Pollacks claim that optimal work hours are 80% productive and 20% (unproductive) fun. Companies should embrace breaks and create a work environment that acknowledges employees’ “need” to check Facebook at work. But employees shouldn’t just take breaks while at the office, they should take breaks <em>from</em> the office by working at alternative locations such as coffee shops.</p>
+
+<p>In step 9, Pollack also talked about abandoning synchronous communication like IM for asynchornous communications like email. He said IM can be a problem because it interrupts your train of thought whenever someone contacts you. Upon interruption, you’ll be tempted to check email or do other less intellectual work. It’s a bit weird to me that Pollack basically grouped “avoid distractions” with “take breaks” in step 9. They seem unrelated enough to warrant separation, but oh well.</p>
+
+<h3 id="make-sure-you-dont-over-engineer-your-software">10. Make sure you don’t <em>over-engineer</em> your software</h3>
+<p>It’s easy to get stuck spending lots of time on optimization, worrying about handling heavy load, predicting future requirements, and expanding “just in case” feature sets. Pollack went so far as to suggest not worrying about optimization or heavy loads until your software starts buckling under the pressure of intense usage. Do I agree? I’m afraid I’m too ignorant at this point to really have an opinion.</p>
+
+<h3 id="use-visual-communication-not-just-text-based-comms">11. Use <em>visual</em> communication, not just text-based comms</h3>
+<p>You might love email. Your client might love email. But sometimes, it’s hard to really describe a feature or a bug through text alone. Pollack is in love with the idea of not only attaching annotated screenshots, but also sending screencasts.</p>
+
+<p>I had never really thought about screencasting as a form of regular, commonplace communication, but it makes a ton of sense. The key is to limit yourself to 5-minute videos recorded in a single take. Such screencasts may be rough around the edges, but they can still drive a point home faster and harder than a simple email.</p>
+
+<p>Additionally, screencasts provide other benefits such as added wow-factor for client interactions and passing along an easily shareable mini-demo to customers or the client’s stakeholders.</p>
+
+<h3 id="better-work-is-motivated-by-meaning">12. Better work is motivated by <em>meaning</em></h3>
+
+<div style="float:right;"><iframe width="300" height="168" src="http://RebootJeff.github.io//www.youtube.com/embed/u6XAPnuFjJc" frameborder="0" allowfullscreen=""></iframe></div>
+<p>The final step of Pollack’s talk doesn’t really seem like a proper step to me. Maybe I zoned out, but Pollack didn’t connect the dots.</p>
+
+<p>Perhaps he is suggesting that if you don’t think your work is meaningful, then you should find a new job, thereby increasing your productivity and output quality. In the end, Step 12 is still a good point. It will be familiar to any one who has seen <a href="http://www.youtube.com/watch?v=u6XAPnuFjJc">this animated lecture</a> about motivation.</p>
+
+<div style="clear:both;"></div>
+
+<h1 id="what-i-thought">What I Thought</h1>
+<p>This was a very solid event. I give it 8 hamster dances out of 10. Audience members were even given stickers and Code School coupons.</p>
+
+<h2 id="presentation-content">Presentation Content</h2>
+<p>I like Pollack’s style of discussing productivity problems in the context of “human nature.” The term “human nature” came up a lot, and whether or not it’s backed up by science, it certainly makes the presentation content feel more intuitive.</p>
+
+<p>I’m also partial to Pollack’s claim that writing skills are a good way to differentiate yourself from other developers. He said that if two developers are applying for the same job, and they have similar hard skills, then one of the best ways to pick a new hire is to examine their writing because better writers are better communicators.</p>
+
+<p>As you can tell from my re-interpretation of the 12 steps, I didn’t like some of Pollack’s wording, but I admit that I’m oddly particular about such things. I also didn’t like that some of the advice was just common sense. Maybe it’s unfair, but I tend to expect a lot of insight from advice-giving presentations so I feel let down when I’m presented with advice that is not only familiar, but derived from the same common sense I already possess.</p>
+
+<h2 id="speaker">Speaker</h2>
+<p>Pollack’s filler word is “right?” (with upward inflection). I find this to be a little annoying. It’s not the first time an otherwise awesome speaker has used “right?” this often. I think it bothers me because I perceive it to be slightly patronizing …or maybe a subtle form of pandering.</p>
+
+<p>That said, I really like Pollack’s relatability. He seems to be a down-to-earth guy, making his speaking style easy to follow. Well done, Mr. Pollack.</p>
+
+<h2 id="venue">Venue</h2>
+<p>Chartboost had tons of free beer, great pizza (not just some Pizza Hut banality*), tons of free soft drinks, good mic setup for the speaker, and friendly staff on hand. After the presentation, they encouraged audience members to stick around and mingle, consume more pizza and beer, and use their company ping pong table. Sweet.</p>
+
+<p>*Note: I’m not actually anti-Pizza Hut, and I’m certainly not a foodie, but even I found it refreshing to eat higher-quality pizza at a free meetup.</p>
+
+<h1 id="followup">Followup</h1>
+<p>I need to check out <a href="http://www.techsmith.com/jing.html">Jing</a>, a screencasting tool. It has limited recording time and no editing features. These limitations prevent you from spending too much time over-engineering your communique. It forces you to get to the point and be concise.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[[Event Review] Intro to UX and Subpar Acoustics at General Assembly]]></title>
+    <link href="http://RebootJeff.github.io/blog/2013/08/10/event-review-intro-to-ux-at-general-assembly/"/>
+    <updated>2013-08-10T13:31:00-07:00</updated>
+    <id>http://RebootJeff.github.io/blog/2013/08/10/event-review-intro-to-ux-at-general-assembly</id>
+    <content type="html"><![CDATA[<p><img src="/images/ga_logo_sp.jpg" alt="General Assembly logo" /></p>
+
+<p>Last Thursday, <a href="https://generalassemb.ly/">General Assembly</a> hosted a presentation by <a href="http://bluelikeanorange.net">Jenny Tsai</a> (nice URL, by the way). Tsai is a pro UX designer, but her talk was meant for UX noobs. So instead of focusing on <em>how</em> to be a great UX designer, <strong>she focused on <em>what</em> is a UX designer.</strong> I’m not looking to become a UX designer, but the event was free, and I like hearing about the various roles involved in modern tech startups. Besides, I think all wannabe web developers such as myself wonder what differences separate UX design and web development.</p>
+
+<p>Unfortunately, I was a fool, so I didn’t bring a laptop or padfolio for taking notes, so I’m just going to relay the short bits I jotted down in my smartphone.</p>
+
+<h1 id="what-i-learned">What I Learned</h1>
+<p>Note: Tsai didn’t present this info in a DOs vs DON’Ts fashion. She didn’t do a “What’s the deal with wireframes” slide. I’m presenting the info my way, not her way.</p>
+
+<h2 id="general">General</h2>
+<p><strong>What is UX design?</strong> Designer is to developer as architect is to engineer.</p>
+
+<p><strong>What do UX designers do on any given day?</strong> Draw wireframes and mockups, draft user personas, create task flows, and get user input.</p>
+
+<p><strong>What’s the deal with “wireframes” and “pixel perfect mockups”?</strong> Wireframe is to mockup as sketch is to painting. It’s all about fidelity. Both are generally non-functional, but sometimes functional mockups are created just to demonstrate animations, screen changes, and general navigation. You want to use wireframes for quickly iterating on an idea. You should save mockups for later because they use a lot of time, which is equivalent to money. And I hear money is expensive these days.</p>
+
+<p><strong>What are user personas?</strong> Looks more like a marketing thing to me, but it’s basically creating profiles of target demographics. For I’mPregnantNowWhat.com, a user persona is going to be a profile of a young woman whose tech savviness is at level X. She cares about A, B, and C. And so on. I zoned out for a bit here, so I could be wrong.</p>
+
+<p><strong>What are task flows?</strong> Flow charts on how users interact with the website/app.</p>
+
+<p><strong>Who do UX designers interact with on a daily basis?</strong> Product managers, marketing peeps, customer service folks, developers, and other designers. PMs have the vision, marketing cares about the branding, customer service gives you customer feedback, and developers are the engineering for your architecting.</p>
+
+<p><strong>What is information architecture?</strong> Figuring out how relevant info is organized. For example, a shopping website could display products based on price, color, size, etc. For example, with Amazon.com, IA also involves deciding what product categories/options are displayed to the user so they can browse based on those categories/options. I imagine this is where the battle between overwhelming a user with too many choices and underwhelming the user with not enough info unfolds.</p>
+
+<p><strong>What software is used by UX designers?</strong> Wireframing software (there are a ton to choose from), collections of pre-made buttons and other GUI elements (especially common for smartphone apps where you can drag and drop stuff like on-screen keyboards into the mockup), and Adobe Creative Suite for pixel perfect mockups and assets (such as logos or new buttons).</p>
+
+<p><strong>What does it take to be a UX designer?</strong> Yes, you need some artistic skills. Tsai was an art student. However, you need a lot of logic, not just artistry. Logic helps you solve the problem of meeting user needs through UI design, interaction design, IA, etc.</p>
+
+<h2 id="users">Users</h2>
+<p>UX design juggles a lot of objectives, but in the end, it’s all about merging the product’s objectives with the user’s needs. The example Tsai kept using was Amazon. Amazon’s objective is to sell stuff. The user wants to buy stuff. To do that, a user needs to be able to easily browse, search, etc.</p>
+
+<p>So how do you know what users need? You interview them. Regarding user feedback, Tsai mentioned the following:</p>
+<table>
+	<colgroup>
+		<col span="1" style="width: 50%;" />
+		<col span="1" style="width: 50%;" />
+	</colgroup>
+	<tbody>
+		<tr>
+			<td style="vertical-align: top; padding: 5px;">DO tap into your colleague's friends and family. She emphasized the importance of that one degree of separation --it's a bias killer, apparently.</td>
+			<td style="vertical-align: top; padding: 5px;">DON'T interview friends and family who might be biased or afraid to hurt your precious feelings.</td>
+		</tr><tr>
+			<td style="vertical-align: top; padding: 5px;">DO ask users what apps they currently love. Try to find out what their general preferences/habits are. Find out how they interact with existing products (and how much they like it). Users are less likely to guess or unintentionally lie during an interview if you ask them about their current behavior rather than hypothetical behavior.</td>
+			<td style="vertical-align: top; padding: 5px;">DON'T ask users what they think about a hypothetical work flow, interaction, process, product change, etc. Users don't always understand the hypothetical impacts of hypothetical designs.</td>
+		</tr><tr>
+			<td style="vertical-align: top; padding: 5px;">DO find interviewees via Task Rabbit, Craigslist, or even Facebook.</td>
+			<td style="vertical-align: top; padding: 5px;">DON'T be afraid to "cast a wide net" to get faster responses to your quest for feedback.</td>
+	</tr></tbody></table>
+
+<h1 id="what-i-thought">What I Thought</h1>
+<p><strong>Tsai did a pretty great job. 9/10.</strong> Some of her presentation slides included small, hard-to-read text. It would’ve been fine for a smaller conference room, but I sat in the last row of chairs, and I couldn’t read a lot of the text. Other than that, she spoke well, the slides looked visually appealing, and she answered all questions easily.</p>
+
+<p>I could do without the intro slide where she sighs over the fantastic view of the Bay Bridge she gets to enjoy on her daily walk to work. Then again, maybe I’m just cold-hearted; maybe other people loved that part of her talk.</p>
+
+<p>I arrived 5 minutes late, but judging by the post-presentation Q&amp;A session, she neglected to describe her own career path at the beginning of her presentation. That’s a big oversight because this is an introductory talk! Of course audience members want to hear how you got your start! You can check out her LinkedIn by going to her website in case you’re wondering about her career history.</p>
+
+<p>As for the content, after the one hour session, I definitely have a clearer picture of not just the roles of UX designers, but also the roles of those who interact with UX designers. <strong>The talk also gave noobs like me a better understanding of what it takes to make a web/mobile app.</strong></p>
+
+<p><strong>The only real bummer was the acoustics.</strong> I’m going to whine a lot here, so skip to the <a href="#followup">followup</a> if you get bored. The General Assembly (GA) building is pretty nice. It has a few classrooms and conference rooms, but like all cool beans, GA uses a relatively open floor plan. Tsai’s presentation was held not in a classroom, but in an open area on the second floor. When I arrived, there were a handful of people working at nearby computers. They were chatting, as you’d expect, but that’s a distraction for audience members.</p>
+
+<p>On top of that, the air conditioning system popped on during the last segment of the event, and it spooked Tsai. Everyone thought it was some annoying truck or something, but the sound didn’t go away. It really bothered Tsai. After she inquired, the GA staffer explained it was just the AC. Damn that was an annoying AC.</p>
+
+<p>By the way, just like everyone else, I think exposed walls/ceilings, glass conference rooms, and open floor plans are slick as hell (especially compared to the drab corporate offices in DC). However, it’s <em>pretty obvious</em> that the recipe for office hawtness is also a recipe for poor acoustics. I’m surprised GA hosts presentations in the middle of an open floor of such a building. <strong>I give GA a score of 6/10.</strong> Yes, I’m sure my scores change the world.</p>
+
+<p>Side note: When using folding chairs, is it possible to stagger the rows so then the columns don’t line up? This would help short folks like me see through the heads of taller people rather than staring at the back of the head of the tall guy sitting directly in front of me. I’m sure staggering rows would be less space-efficient, but if you’ve got a lot of rows, then the people in the back could sure use some help seeing the presenter and the projector screen.</p>
+
+<h1 id="followup">Followup</h1>
+<p>GA did a good job of following up with attendees. We were emailed a survey (in which I notified them of their crappy acoustics), a blurb about GA’s other UX classes, and two lists of resources, which you can see for yourself below.</p>
+
+<h2 id="ux-website-reading-list">UX website reading list:</h2>
+<ul>
+  <li>http://www.uxbooth.com/</li>
+  <li>http://boxesandarrows.com/</li>
+  <li>http://www.uie.com/</li>
+  <li>http://uxmag.com/</li>
+  <li>http://www.uxnewsfeed.com/</li>
+  <li>http://www.inspireux.com/</li>
+  <li>http://uxdesign.smashingmagazine.com/</li>
+  <li>http://www.nngroup.com/reports/</li>
+  <li>http://techcrunch.com/</li>
+  <li>http://bx.businessweek.com/user-experience-ux/news/</li>
+  <li>http://hbr.org/</li>
+</ul>
+
+<h2 id="ux-book-reading-list">UX book reading list:</h2>
+<ul>
+  <li>Design of Everyday Things</li>
+  <li>The Elements of User Experience Design (by Jesse James Garrett, who Tsai referenced)</li>
+  <li>Don’t Make Me Think</li>
+  <li>A Project Guide to UX</li>
+  <li>The Inmates are Running the Asylum</li>
+</ul>
+]]></content>
+  </entry>
+  
+</feed>

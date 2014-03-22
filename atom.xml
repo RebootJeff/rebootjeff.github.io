@@ -1,0 +1,2087 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[RebootJeff.com]]></title>
+  <link href="http://RebootJeff.github.io/atom.xml" rel="self"/>
+  <link href="http://RebootJeff.github.io/"/>
+  <updated>2014-03-21T17:53:48-07:00</updated>
+  <id>http://RebootJeff.github.io/</id>
+  <author>
+    <name><![CDATA[Jeff Lee]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[[HackR Diary] Week 6 and 7: App from Scratch]]></title>
+    <link href="http://RebootJeff.github.io/blog/2014/03/21/hackr-diary-week-6-and-7-making-something/"/>
+    <updated>2014-03-21T17:12:00-07:00</updated>
+    <id>http://RebootJeff.github.io/blog/2014/03/21/hackr-diary-week-6-and-7-making-something</id>
+    <content type="html"><![CDATA[<p><img src="http://RebootJeff.github.io/images/20140321/co-compare_presentation.jpg" alt="Personal Project presentation time" /></p>
+
+<p class="my-caption">Presenting my project, Co-Compare, to the folks of Hack Reactor</p>
+
+<h1 id="life-update">Life Update</h1>
+
+<p>I got a job! I will start using my JS skills for dolla bills on Monday. I will blog all about my rather tiring job search soon. For now, I will resume blogging about Hack Reactor from <a href="http://rebootjeff.github.io/blog/2013/10/28/hackr-diary-week-5/">where I left off</a>. During the 2nd half of the program, I didn’t do any blogging, but I took plenty of notes for the sake of blogging at a later time, so prepare to be amazed …or mildly amused. Remember, the following rollercoaster ride took place during late-October through mid-November.</p>
+
+<h1 id="recap-of-events">Recap of Events</h1>
+
+<h2 id="interim-week-different-format">Interim Week (different format)</h2>
+
+<p>The 2nd half of Hack Reactor starts with an “interim week” (aka “solo week”) where expectations are a bit cloudy. <strong>The Hack Reactor website didn’t do a good job of explaining that the injection of an interim week means that Hack Reactor is really a 13-week program.</strong> During this special week, Hack Reactor HQ is not guaranteed to be open to students. Also, students are not guaranteed any access to staff. The staff is either taking a break or working on reconfiguring the offices or other changes.</p>
+
+<p>In other words, the students are on their own for starting the first week of developing their personal projects. Students self-organize if they want to meet up at a cafe or whathaveyou to enable collaboration.</p>
+
+<h2 id="what-i-did">What I Did</h2>
+
+<ul>
+  <li>I spent most of my time working from HR HQ when it was open. I used nearby cafes when it wasn’t.</li>
+  <li>Like a few others, I used interim week to do some travelling and to catch up on sleep.</li>
+  <li>At one point (maybe after interim week?), I broke my laptop by being a Linux noob. I was one of few Ubuntu users in my cohort, and I had trouble dealing with permission/access issues. I eventually followed some StackOverflow suggestion and fucked up my permissions so badly that I had to reinstall Ubuntu. As you can imagine, my emotions are still failing to heal from that self-inflicted disaster.
+    <ul>
+      <li>FYI, my new job is giving me a Mac. Soon I will join the majority of devs in the promise land of screens that actually reproduce accurate colors, impressive battery life, and installation wonders such as homebrew.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="extras">Extras</h2>
+
+<ul>
+  <li>In my cohort, we organized a night to go to a movie theater for Ender’s Game. Good times.</li>
+  <li>A rep from <a href="http://famo.us/">Famous</a> stopped by to give a presentation about a brand new web app framework. It’s so new that even now, Famous is in beta. Back during the personal project period, it was in a closed beta (or was it alpha?), but Famous was inviting Hack Reactor students to access it! The framework renders special <code>&lt;div&gt;</code> elements in a breathtaking way. I never used it, but I will talk about it a bit more in another blog post.</li>
+</ul>
+
+<h1 id="what-i-learned">What I Learned</h1>
+
+<p>Holy. Crap. I learned so much during the personal project weeks. Admittedly, I didn’t work extra long hours until the last week or so before the deadline. By then, I was working at least 80 hours per week. In the first couple of days, I realized there was so much I had to learn that it felt quite overwhelming, and I had a difficult time starting.</p>
+
+<h2 id="tools">Tools</h2>
+
+<p>Obviously I would have to learn a lot of app concepts, engineer some solid logic, etc. But I also had to do all this while learning new tools.</p>
+
+<ul>
+  <li><strong>Balsamiq:</strong> Wireframing software. Creating wireframes really helps when trying to explain what you hope to build. To practice communication skills and project management, students had to explain their progress/goals very briefly during small stand-up meetings.</li>
+  <li><strong>Yeoman:</strong> Boilerplate/scaffold generator. I used an Angular-Express generator to help me get started making a full-stack app with boilerplate code for Angular, Node, and Express. This served as a great “starter pack” of code.</li>
+  <li><strong>Grunt:</strong> Task runner. To be honest, I used Grunt simpy because it came with Yeoman. However, gaining exposure to the tool opened my eyes to the possibilities provided by task runners like Grunt.</li>
+  <li><strong>Stylus:</strong> CSS pre-processor. I’m not sure if CSS pre-processors are part of the tech stack or “just” another set of dev tools, but for what it’s worth, I didn’t write pure CSS for Co-Compare. Instead, I wrote Stylus CSS. I like the visual design side of front-end development, and using Stylus made that facet even more fun.</li>
+  <li><strong>Heroku:</strong> Web app hosting provider. It’s easy to use because it follows a git workflow, but deployment still has challenges (re: environment configuration).</li>
+</ul>
+
+<h2 id="the-tortured-ok-not-really-birth-of-an-idea">The Tortured (ok not really) Birth of An Idea</h2>
+
+<p>I like to think my mind is superior –errr…I mean <em>creative</em>. However, it can be tough to come up with web app ideas based on constraints. Everyone worried about whether or not they could actually implement their ideas in just a few weeks (I think it amounted to only 2.5 weeks). In the end, I learned that “Just Do It” really applies. You can spend roughly 3 gajillion hours analyzing ideas, use cases, market needs, tech stacks, visual design, etc. But at some point, you need to just do it already. Just make something and see what happens. The price of failure is time spent. The gain of failure is lessons learned. A beauty of programming is the ability to quickly change, pivot, redo, etc.</p>
+
+<h3 id="from-cool-to-meh">From Cool to Meh</h3>
+
+<p>Originally, I thought my idea was too boring. I wanted to create a fantasy sports game specifically for tennis, but I couldn’t find a good way to get the data/stats from pro tennis matches, so I switched to something far less cool.</p>
+
+<p>I switched to an idea spawned by my love for analyzing/comparing products and services. In the past, I’ve spent far too much time comparing video game consoles, cars, computer parts, <em>bootcamps</em>, etc. I enjoyed it too. A lot. But I knew most people aren’t crazy in this way, so I worried that my app idea for <a href="http://cocompare.herokuapp.com">Co-Compare</a> (a web app to build comparison tables and have others vote on them) was too unsexy.</p>
+
+<h3 id="from-meh-to-oooh">From Meh to Oooh</h3>
+
+<p>It’s true that Co-Compare doesn’t have a ton of wow-factor, but it provided plenty of opportunity:</p>
+
+<ul>
+  <li><strong>Simplicity:</strong> It was the type of idea that could work with very few features (good for rapid prototyping).</li>
+  <li><strong>Exploration:</strong> But I could have fun adding more and more features as I desired. There were plenty of sub-ideas to explore and keep my brain satiated with more goodies to engineer.</li>
+  <li><strong>Fundamentals:</strong> My app requires CRUD actions. Create, Read, Update, and Delete are fundamental app actions that devs should know. It’s weird to “brag” that Co-Compare helped me learn <em>fundamentals</em>, but it’s important, and it’s not easy just because it’s “fundamental.” Engineering a CRUDy app is a great learning experience.</li>
+  <li><strong>Full-Stack:</strong> My app covered a lot of territory so it exposed me to CSS pre-processors, front-end MVC, API design, databases, user authentication, etc. This was really scary at first, but afterwards, I was truly proud of what I covered.</li>
+</ul>
+
+<p>I really believe that the full-stack nature of Co-Compare solidified my abilities as a web app developer. By creating a nice-looking front-end, my own API, and back-end models for a SQL datastore, I learned so much that it gave my confidence a tremendous boost –which is funny because I had a ton of confidence going into the personal project weeks…then I lost a lot of confidence when nothing I created worked the first time. So at the end, I regained a lot of confidence that I already had at the beginning.</p>
+
+<p>Note: Some of my classmates implemented ideas that had very bare front ends because all the impressive stuff was run on the server side. Other folks created apps that had little or no back-end logic. The number of things wrong with these paths is quite small. In fact, most experts would say the number rhymes with “hero.” Anyway, my point is that this particular “full-stack” facet of my experience is not the “best” way, but just something that I really value for myself.</p>
+
+<h2 id="dev-cycleprocess">Dev Cycle/Process</h2>
+
+<p>Hack Reactor staff helped students with their projects by giving recommendations on tech stack decisions, dev tools, deployment options, etc. And of course, they gave us debugging help, but there was no hand holding.</p>
+
+<p>The primary form of guidance came in the form of some project management structure. We formed small groups that held its members accountable for short-term goals. The staff taught us about iterative development and the concept of creating MVPs (minimal viable products) as milestones rather than aiming for creating versions that were 100% complete.</p>
+
+<p>In other words, I learned about some dev processes to help promote productivity as a software engineer.</p>
+
+<h1 id="want-to-learn-from-my-app">Want to Learn from My App?</h1>
+
+<p>You can find the code for Co-Compare on my GitHub. I took the time to write up a decent README too because for some reason, I have a good time writing English in addition to JavaScript. I suggest you <a href="https://github.com/RebootJeff/co-compare#development">check this out</a> if you’re interested in learning more about how I created an app from scratch.</p>
+
+<p>Keep in mind that you shouldn’t follow everything I do. For example, my Angular app folder structure neglects best practice. It was a popular structure at the time, but it’s actually best to name folders based on features, rather than just lumping all controllers together, all views together, etc.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Questions to ask dev interviewers]]></title>
+    <link href="http://RebootJeff.github.io/blog/2014/01/09/questions-to-ask-dev-interviewers/"/>
+    <updated>2014-01-09T20:06:00-08:00</updated>
+    <id>http://RebootJeff.github.io/blog/2014/01/09/questions-to-ask-dev-interviewers</id>
+    <content type="html"><![CDATA[<blockquote>
+  <p>Do you have any questions for me?</p>
+</blockquote>
+
+<p>When an employer/recruiter asks you this question, you should answer, “YES OF COURSE I DO.” Then you casually bombard them with the questions listed below. Although, you should keep in mind that some questions can be answered just by doing your homework (researching the company). So don’t ask <em>all the questions</em>.</p>
+
+<h1 id="company-vision">Company Vision</h1>
+
+<ul>
+  <li>Where will the company be in 2 years? (maybe “2 years” should be greater if company is older)
+    <ul>
+      <li>Will the business model remain the same? Is the business model still in flux?</li>
+      <li>How many employees will there be in X years? What many of them will be engineers?</li>
+    </ul>
+  </li>
+  <li>Does the company plan to scale up? How?
+    <ul>
+      <li>Increased marketing efforts?</li>
+      <li>Increased R&amp;D?</li>
+      <li>Growing talent?</li>
+      <li>Creating partnerships?</li>
+      <li>Business model pivot?</li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="employee-logisticsculture">Employee logistics/culture</h1>
+
+<ul>
+  <li>What are typical work hours?</li>
+  <li>
+    <p>How often do people actually take vacations?</p>
+  </li>
+  <li>What are some examples of your company’s culture in play?
+    <ul>
+      <li>e.g., It’s one thing to say the company is open and friendly, but what are examples of that happening?</li>
+    </ul>
+  </li>
+  <li>
+    <p>What aspects of your company help shape the cuture?</p>
+  </li>
+  <li>Older/bigger companies: One of the stereotypical downsides of working at a more established company is that employees don’t feel like they have a big enough impact. How do you ensure employees can make substantive contributions rather than feel like a tiny cog in a big machine?
+    <ul>
+      <li>How do you ensure that employees always get to try/learn new things?</li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="engineering-logistics">Engineering Logistics</h1>
+
+<ul>
+  <li>How many engineers does the company have?
+    <ul>
+      <li>How many back-end, how many front-end, how many full-stack?</li>
+    </ul>
+  </li>
+  <li>How big are the engineering teams?
+    <ul>
+      <li>Will team size change a lot (scaling up)?</li>
+    </ul>
+  </li>
+  <li>Do employees ever change teams/roles?</li>
+  <li>Exactly who would I be working with?
+    <ul>
+      <li>What are their roles, backgrounds, etc?</li>
+    </ul>
+  </li>
+  <li>How does user feedback ultimately end up reaching the engineers?</li>
+  <li>What kind of development cycle do they use?
+    <ul>
+      <li>What is the structure of a typical sprint?</li>
+      <li>How often do engineers deploy?</li>
+      <li>Do they use Agile SCRUM, Kanban, etc?</li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="engineering-culture">Engineering Culture</h1>
+
+<ul>
+  <li>How does the company ensure quick, painless onboarding?
+    <ul>
+      <li>(does the company ensure new hires don’t get overwhelmed by huge, existing codebase?)</li>
+      <li>(or is there no onboarding at all because the company is too tiny?)</li>
+    </ul>
+  </li>
+  <li>Does the company have strong opinions on coding aesthetics?
+    <ul>
+      <li>Does the company have a style guide?</li>
+    </ul>
+  </li>
+  <li>Mentorship?</li>
+  <li>Are there code reviews?
+    <ul>
+      <li>Are they scheduled or ad hoc? (“ad hoc” may be BS for “rarely”)</li>
+    </ul>
+  </li>
+  <li>Is there time set aside for post-mortems, reflections, retrospectives, etc?</li>
+  <li>What kind of testing is in place?
+    <ul>
+      <li>(unit testing, integration testing, e2e testing, QA engineering)?</li>
+      <li>which tools?</li>
+    </ul>
+  </li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Queues & Stacks from Scratch with JS Patterns]]></title>
+    <link href="http://RebootJeff.github.io/blog/2014/01/04/queues-stacks-javascript-class-patterns/"/>
+    <updated>2014-01-04T16:04:00-08:00</updated>
+    <id>http://RebootJeff.github.io/blog/2014/01/04/queues-stacks-javascript-class-patterns</id>
+    <content type="html"><![CDATA[<p>In my <a href="http://RebootJeff.github.io/blog/2013/12/26/queues-and-stacks-in-javascript/">previous post</a>, I began my quest to help noob programmers by introducing the basic computer science topic of data structures. I provided a quick overview of queues and stacks, so please read all about ‘em before engaging your eyeballs with this blog post. This time around, we’ll check out four different patterns for creating classes in JavaScript while learning how to build stacks and queues from scratch.</p>
+
+<p>Before we go, I should warn you that I’m going to focus on describing the class instantiation patterns rather than thoroughly explaining the implementation of the data structures. Just keep in mind that we are going to explore building stacks and queues with objects rather than arrays. More specifically, we will use a property called <code>storage</code> that is an object, not an array. Now I know what you’re pondering.</p>
+
+<blockquote>
+  <p>Why?</p>
+</blockquote>
+
+<p>That is a beautiful question. Please ask it all the time (but please don’t troll me by leaving “Why?” in the comments section of this blog post). In this case, the answer to “Why?” may be a tad disatisfying. The answer is “because we can”, but don’t worry! It’ll be fun. Now, let’s start instantiating some motherhugging classes.</p>
+
+<h1 id="functional-instantiation">1. Functional Instantiation</h1>
+
+<p>The simplest way to implement classes is with a “maker” function that creates a new instance of the class and returns that instance so it can be stored as a variable. The new instance is just like any other JavaScript object. It can have properties that store relevant information about the instance (e.g., with a <code>Car</code> class, instances might have a <code>price</code> property). It can also have properties that store functions. These functions serve as <strong>methods</strong> that are tightly associated with the instance.</p>
+
+<h4 id="characteristics">Characteristics</h4>
+
+<ul>
+  <li>Creates new copies of the same functions when creating a new instance of the same class. This lack of reuse takes up more memory and can leave an unsavory taste in some programmers’ mouths.</li>
+  <li>There is no quick way to modify all instances of the class after they’ve been created. This will become more clear after examining the other instantiation tactics.</li>
+  <li>Private variables can be created/used by harnessing <strong>closure scope</strong> superpowers, but I won’t get into that today.</li>
+  <li>If you understand JavaScript functions and objects, then you can understand classes implemented via functional instantiation (other instantiation techniques require knowledge of <code>this</code> and/or <code>new</code>).</li>
+  <li>Could be used to create callable instances (i.e., the class could return a function rather than an object filled with properties).</li>
+</ul>
+
+<h4 id="example-code">Example code:</h4>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption class="code-header" style="margin-bottom:-5px;"><span>Stack from scratch (functional instantiation) </span></figcaption>
+ <div class="CodeRay">
+  <div class="code"><pre>
+<span class="keyword">var</span> <span class="function">makeStack</span> = <span class="keyword">function</span>(comment){
+  <span class="comment">// Provide private variables in closure scope</span>
+  <span class="keyword">var</span> size = <span class="integer">0</span>;
+  <span class="keyword">var</span> storage = {};
+  <span class="keyword">var</span> instance = {};  <span class="comment">// Start building an instance of Stack class</span>
+
+  <span class="comment">// Add extra properties for the hell of it</span>
+  instance.annotation = comment;
+
+  <span class="comment">// Add functions to the instance to serve as methods</span>
+  <span class="comment">// (they will provide an interface to the stack's storage)</span>
+  instance.<span class="function">push</span> = <span class="keyword">function</span>(data){
+    storage[size] = data;
+    size++;
+  };
+
+  instance.<span class="function">pop</span> = <span class="keyword">function</span>(){
+    <span class="keyword">if</span>(size &gt; <span class="integer">0</span>){  <span class="comment">// Only perform pop actions if the stack has data</span>
+      size--;
+      <span class="keyword">var</span> data = storage[size];
+      <span class="keyword">delete</span> storage[size];  <span class="comment">// Don't forget to delete from storage!</span>
+      <span class="keyword">return</span> data;
+    }
+  };
+
+  instance.<span class="function">size</span> = <span class="keyword">function</span>(){
+    <span class="keyword">return</span> size;
+  };
+
+  <span class="keyword">return</span> instance;
+};
+
+<span class="comment">// Create and use an instance of the Stack class</span>
+<span class="keyword">var</span> myStack = makeStack(<span class="string"><span class="delimiter">&quot;</span><span class="content">I'm a stack! Whoa.</span><span class="delimiter">&quot;</span></span>);
+myStack.push(<span class="integer">1</span>);              <span class="comment">// myStack stores 1</span>
+myStack.push(<span class="string"><span class="delimiter">'</span><span class="content">b</span><span class="delimiter">'</span></span>);            <span class="comment">// myStack stores 1 and 'b'</span>
+myStack.push(<span class="integer">3</span>);              <span class="comment">// myStack stores 1, 'b', and 3</span>
+console.log(myStack.pop());   <span class="comment">// logs 3</span>
+console.log(myStack.size());  <span class="comment">// logs 2</span>
+</pre></div>
+</div>
+ </figure></notextile></div>
+
+<h1 id="functional-instantiation-wshared-methods">2. Functional Instantiation w/Shared Methods</h1>
+
+<p>By utilizing an object filled with methods, several classes can be created that have the same methods without creating new copies of said methods. The classes will use their own function references to refer to the same set of shared methods. Therefore, using shared methods eats up less memory than functional instantiation <em>without</em> shared methods.</p>
+
+<h4 id="characteristics-1">Characteristics</h4>
+
+<ul>
+  <li>Reuses functions (which conserves memory) by getting function references from a utility such as <a href="http://underscorejs.org/#extend">Underscore.js</a>’s <code>_.extend(instance,methods)</code>.</li>
+  <li>Retains the same benefits as functional instantiation <em>without</em> shared methods.</li>
+</ul>
+
+<h4 id="example-code-1">Example code:</h4>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption class="code-header" style="margin-bottom:-5px;"><span>Queue from scratch (functional instantiation with shared methods) </span></figcaption>
+ <div class="CodeRay">
+  <div class="code"><pre>
+<span class="keyword">var</span> <span class="function">makeQueue</span> = <span class="keyword">function</span>(queueName, comment){
+
+  <span class="comment">// You can use object literal notation for `instance` (instead of dot notation),</span>
+  <span class="comment">// but then we have to use `this` and we lose the privacy of closure scope</span>
+  <span class="comment">// (e.g., `storage` is no longer private), so this kind of sucks.</span>
+  <span class="keyword">var</span> instance = {
+    <span class="key">name</span>: queueName,
+    <span class="key">annotation</span>: comment,
+    <span class="key">head</span>: <span class="integer">0</span>,
+    <span class="key">tail</span>: <span class="integer">0</span>,
+    <span class="key">storage</span>: {}
+  };
+
+  <span class="comment">// The _.extend() function is provided by the Underscore.js library</span>
+  _.extend(instance, sharedQueueMethods);
+
+  <span class="keyword">return</span> instance;
+};
+
+<span class="comment">// The object below stores methods that could be shared with other classes</span>
+<span class="keyword">var</span> sharedQueueMethods = {
+  <span class="function">enqueue</span>: <span class="keyword">function</span>(data){
+    <span class="local-variable">this</span>.storage[<span class="local-variable">this</span>.tail] = data;
+    <span class="local-variable">this</span>.tail++;
+    <span class="comment">// The tail points to the next EMPTY &quot;spot&quot; for data to be stored</span>
+    <span class="comment">// it does NOT point to the last OCCUPIED &quot;spot&quot; in the storage</span>
+  },
+  <span class="function">dequeue</span>: <span class="keyword">function</span>(){
+    <span class="keyword">if</span>(<span class="local-variable">this</span>.head &lt;= <span class="local-variable">this</span>.tail){  <span class="comment">// Check the queue's size</span>
+      <span class="keyword">var</span> data = <span class="local-variable">this</span>.storage[<span class="local-variable">this</span>.head];
+
+      <span class="comment">// Deleting is even more important for queues than for stacks</span>
+      <span class="comment">// (memory leaks are a bigger threat for queues)</span>
+      <span class="keyword">delete</span> <span class="local-variable">this</span>.storage[<span class="local-variable">this</span>.head];
+      <span class="local-variable">this</span>.head++;
+      <span class="keyword">return</span> data;
+    }
+  },
+  <span class="function">size</span>: <span class="keyword">function</span>(){
+    <span class="keyword">return</span> <span class="local-variable">this</span>.tail - <span class="local-variable">this</span>.head;
+  }
+};
+
+<span class="comment">// Create and use an instance of the Queue class:</span>
+<span class="keyword">var</span> myCoolQueue = makeQueue(<span class="string"><span class="delimiter">&quot;</span><span class="content">Jeff's Queue</span><span class="delimiter">&quot;</span></span>,<span class="string"><span class="delimiter">'</span><span class="content">Hello, world!</span><span class="delimiter">'</span></span>);
+myCoolQueue.enqueue(<span class="string"><span class="delimiter">'</span><span class="content">a</span><span class="delimiter">'</span></span>);             <span class="comment">// myCoolQueue stores 'a'</span>
+myCoolQueue.enqueue(<span class="integer">2</span>);               <span class="comment">// myCoolQueue stores 'a' and 2</span>
+myCoolQueue.enqueue(<span class="string"><span class="delimiter">'</span><span class="content">c</span><span class="delimiter">'</span></span>);             <span class="comment">// myCoolQueue stores 'a', 2, and 'c'</span>
+console.log(myCoolQueue.dequeue());   <span class="comment">// output: 'a'</span>
+console.log(myCoolQueue.size());      <span class="comment">// output: 2</span>
+</pre></div>
+</div>
+ </figure></notextile></div>
+
+<h1 id="prototypal-instantiation">3. Prototypal Instantiation</h1>
+
+<p>The key to prototypal instantiation is the use of <code>Object.create()</code> to utilize shared methods. Unlike functional instantiation with shared methods, there is no need to use an <code>extend()</code> function.</p>
+
+<p>While it’s possible to use a prototype’s functions with <code>Object.create(ExampleClass.prototype);</code>, it’s also possible to (ironically) avoid the word “prototype” altogether by using <code>Object.create(sharedMethods);</code>.</p>
+
+<h4 id="characteristics-2">Characteristics</h4>
+
+<ul>
+  <li>Reuses shared functions via <code>Object.create(Example.prototype)</code> or <code>Object.create(objectOfFunctions)</code>.</li>
+  <li>Unlike functional instantiation, function references are shared. Each instance of the class does not get its own function references that point to the shared methods. This saves even more memory (although it is a very small improvement).</li>
+  <li>Unlike functional instantiation, there is no way to use closure scope to enforce privacy of variables.</li>
+  <li>Variables are stored on the returned object (aka <code>instance</code>), which means the shared stack methods need to use the keyword <code>this</code> to access the necessary data. It’s not a huge bummer, but if you’re a beginner, then <code>this</code> can be a confusing concept.</li>
+  <li>Can use prototype chains for dynamic method modification and inheritance (subclasses!).</li>
+</ul>
+
+<h4 id="example-code-2">Example code:</h4>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption class="code-header" style="margin-bottom:-5px;"><span>Stack from scratch (prototypal instantiation) </span></figcaption>
+ <div class="CodeRay">
+  <div class="code"><pre>
+<span class="keyword">var</span> <span class="function">makeStack</span> = <span class="keyword">function</span>(comment){
+  <span class="keyword">var</span> instance = Object.create(sharedStackMethods);
+  instance.annotation = comment;
+  instance.size = <span class="integer">0</span>;
+  instance.storage = {};
+
+  <span class="keyword">return</span> instance;
+};
+
+<span class="keyword">var</span> sharedStackMethods = {
+  <span class="function">push</span>: <span class="keyword">function</span>(data){
+    <span class="local-variable">this</span>.storage[<span class="local-variable">this</span>.size] = data;
+    <span class="local-variable">this</span>.size++;
+  },
+  <span class="function">pop</span>: <span class="keyword">function</span>(){
+    <span class="keyword">if</span>(<span class="local-variable">this</span>.size &gt; <span class="integer">0</span>){
+      <span class="local-variable">this</span>.size--;
+      <span class="keyword">var</span> data = <span class="local-variable">this</span>.storage[<span class="local-variable">this</span>.size];
+      <span class="keyword">delete</span> <span class="local-variable">this</span>.storage[<span class="local-variable">this</span>.size];
+      <span class="keyword">return</span> data;
+    }
+  },
+  <span class="function">size</span>: <span class="keyword">function</span>(){
+    <span class="keyword">return</span> <span class="local-variable">this</span>.size;
+  }
+};
+
+<span class="comment">// Create an instance of the Stack class:</span>
+<span class="keyword">var</span> myStack = makeStack(<span class="string"><span class="delimiter">&quot;</span><span class="content">I'm a stack! Whoa.</span><span class="delimiter">&quot;</span></span>);
+<span class="comment">// Using the instance doesn't change from one class pattern to another</span>
+myStack.push(<span class="integer">1</span>);              <span class="comment">// myStack stores 1</span>
+myStack.push(<span class="string"><span class="delimiter">'</span><span class="content">b</span><span class="delimiter">'</span></span>);            <span class="comment">// myStack stores 1 and 'b'</span>
+myStack.push(<span class="integer">3</span>);              <span class="comment">// myStack stores 1, 'b', and 3</span>
+console.log(myStack.pop());   <span class="comment">// logs 3</span>
+console.log(myStack.size());  <span class="comment">// logs 2</span>
+</pre></div>
+</div>
+ </figure></notextile></div>
+
+<h1 id="pseudoclassical-instantiation">4. Pseudoclassical Instantiation</h1>
+
+<p>This is the most commonly used class pattern. It’s also the most complicated because, in addition to using the <code>this</code> keyword, it involves two concepts that the other class patterns don’t require: the <code>new</code> keyword and prototypes. Prototypal instantiation uses prototypes via <code>Object.create()</code>, but pseudoclassical instantiation needs you to explicitly type out <code>ClassName.prototype.methodName</code>, which is just another source of confusion for beginners.</p>
+
+<p>Also, it’s the only class pattern that uses a true <a href="http://en.wikipedia.org/wiki/Constructor_(object-oriented_programming)">constructor</a> for creating new instances. Other class patterns use instantiator functions that explicitly return a new instance. The pseudoclassical class pattern does not perform such a return thanks to the <code>new</code> keyword.</p>
+
+<h4 id="characteristics-3">Characteristics</h4>
+
+<ul>
+  <li>Uses prototype chains to provide methods to instances of a class.</li>
+  <li>Allows for dynamic method modification and inheritance (subclasses!) via prototype chains.</li>
+  <li>Refers to the instance that’s being created with the <code>this</code> keyword.</li>
+  <li>Needs the <code>new</code> keyword to make an instance of a class.</li>
+  <li>Has a true constructor that is named with a noun rather than a verb. The name is capitalized.</li>
+  <li>Is the most commonly used class pattern.</li>
+</ul>
+
+<h4 id="example-code-3">Example code:</h4>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption class="code-header" style="margin-bottom:-5px;"><span>Queue from scratch (pseudoclassical instantiation) </span></figcaption>
+ <div class="CodeRay">
+  <div class="code"><pre>
+<span class="comment">// Class name is now a noun (no verb), and it starts with an upper case letter</span>
+<span class="keyword">var</span> <span class="function">Queue</span> = <span class="keyword">function</span>(queueName, comment){
+  <span class="comment">// Notice the use of 'this'</span>
+  <span class="local-variable">this</span>.name = queueName,
+  <span class="local-variable">this</span>.annotation = comment,
+  <span class="local-variable">this</span>.head: <span class="integer">0</span>,
+  <span class="local-variable">this</span>.tail: <span class="integer">0</span>,
+  <span class="local-variable">this</span>.storage: {}
+};
+
+<span class="comment">// Notice the use of 'prototype'</span>
+Queue.prototype.<span class="function">enqueue</span> = <span class="keyword">function</span>(data){
+  <span class="local-variable">this</span>.storage[<span class="local-variable">this</span>.tail] = data;
+  <span class="local-variable">this</span>.tail++;
+};
+Queue.prototype.<span class="function">dequeue</span> = <span class="keyword">function</span>(){
+  <span class="keyword">if</span>(<span class="local-variable">this</span>.head &lt;= <span class="local-variable">this</span>.tail){
+    <span class="keyword">var</span> data = <span class="local-variable">this</span>.storage[<span class="local-variable">this</span>.head];
+    <span class="keyword">delete</span> <span class="local-variable">this</span>.storage[<span class="local-variable">this</span>.head];
+    <span class="local-variable">this</span>.head++;
+    <span class="keyword">return</span> data;
+  }
+};
+Queue.prototype.<span class="function">size</span> = <span class="keyword">function</span>(){
+  <span class="keyword">return</span> <span class="local-variable">this</span>.tail - <span class="local-variable">this</span>.head;
+};
+
+<span class="comment">// Create an instance of the Stack class by using the 'new' keyword:</span>
+<span class="keyword">var</span> myCoolQueue = <span class="keyword">new</span> Queue(<span class="string"><span class="delimiter">&quot;</span><span class="content">Jeff's Queue</span><span class="delimiter">&quot;</span></span>,<span class="string"><span class="delimiter">&quot;</span><span class="content">The grass is always greener, but just as hard to mowww!</span><span class="delimiter">&quot;</span></span>);
+<span class="comment">// Use the instance just like in previous examples</span>
+myCoolQueue.enqueue(<span class="string"><span class="delimiter">'</span><span class="content">a</span><span class="delimiter">'</span></span>);             <span class="comment">// myCoolQueue stores 'a'</span>
+myCoolQueue.enqueue(<span class="integer">2</span>);               <span class="comment">// myCoolQueue stores 'a' and 2</span>
+myCoolQueue.enqueue(<span class="string"><span class="delimiter">'</span><span class="content">c</span><span class="delimiter">'</span></span>);             <span class="comment">// myCoolQueue stores 'a', 2, and 'c'</span>
+console.log(myCoolQueue.dequeue());   <span class="comment">// output: 'a'</span>
+console.log(myCoolQueue.size());      <span class="comment">// output: 2</span>
+</pre></div>
+</div>
+ </figure></notextile></div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Queues &amp; Stacks in JavaScript (with Batman and Superman)]]></title>
+    <link href="http://RebootJeff.github.io/blog/2013/12/26/queues-and-stacks-in-javascript/"/>
+    <updated>2013-12-26T15:54:00-08:00</updated>
+    <id>http://RebootJeff.github.io/blog/2013/12/26/queues-and-stacks-in-javascript</id>
+    <content type="html"><![CDATA[<p>The proverbial “they” say (says?) it’s good to write technical blog posts. Blog posts that get down and dirty with the nitty gritty of low-level, in-the-weeds details and nuances accompanied by jargon, acronyms, and name-dropping are all the rage in the dev community. More importantly, I really want to help beginners learn programming, so I may as well teach some basic concepts via my blog. (Later on, I hope to contribute more to <a href="http://www.theodinproject.com/">The Odin Project</a>, which is a free, open-source, online resource for beginners created by a very cool individual.)</p>
+
+<p>So as my first foray in technical blog posts, I present to all loveable noobs: the introductory data structures known as stacks and queues.</p>
+
+<h1 id="whats-a-stack">What’s a Stack?</h1>
+
+<p>A stack is a collection of items (or data) that follow a particular rule: the last item to join the collection is the first one to leave.</p>
+
+<ul>
+  <li>The <strong>L</strong>ast data <strong>I</strong>n is the <strong>F</strong>irst data <strong>O</strong>ut (<strong>LIFO</strong>)</li>
+  <li>Add data: <strong>push</strong></li>
+  <li>Remove data: <strong>pop</strong></li>
+  <li>Data enters and exits at the same end of the stack (at the <strong>top</strong>)</li>
+</ul>
+
+<h2 id="simple-implementation">Simple implementation</h2>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption class="code-header" style="margin-bottom:-5px;"><span>Simple Stack (array-based example)</span><a href="http://stackoverflow.com/questions/1590247/how-do-you-implement-a-stack-and-a-queue-in-javascript">Stack Overflow </a></figcaption> <div class="CodeRay">
+  <div class="code"><pre>
+<span class="keyword">var</span> stack = [];
+stack.push(<span class="integer">1</span>);  <span class="comment">// use the push method provided by the Array prototype</span>
+stack.push(<span class="integer">2</span>);
+stack.push(<span class="integer">3</span>);
+console.log(stack);  <span class="comment">// output: [1,2,3]</span>
+
+<span class="keyword">var</span> popped = stack.pop();  <span class="comment">// use the pop method provided by the Array prototype</span>
+console.log(popped);  <span class="comment">// output: 3</span>
+console.log(stack);  <span class="comment">// output: [1,2]</span>
+</pre></div>
+</div>
+ </figure></notextile></div>
+
+<h2 id="ridiculous-analogy">Ridiculous analogy</h2>
+
+<p>Imagine you’ve found an old, abandoned well. You think to yourself, “Bruce Wayne fell down a well when he was a kid, and I wanna be just like the Batman, so I’m gonna fall down this sweet well!” But you hesitate because …it’s a well, and wells are scary, ya know?</p>
+
+<p>Unbeknownst to you, <a href="http://batman.wikia.com/wiki/Harley_Quinn">your arch-nemesis</a> is out walking her <a href="http://batman.wikia.com/wiki/Bud_and_Lou">pet hyenas</a>. She spots you, and quickly runs over to shove you into the well. She giggles in delight at the sight of your plight. She then hides and waits for more people to walk near the well so she can <strong>push</strong> them too.</p>
+
+<p>It just so happens that this well has the diameter of a single person’s width. When someone is pushed into the well, they land on top of the last person who fell in before them. This creates a <strong>stack</strong> of people and some rather pronounced discomfort. Eventually, there are 5 people in this deep-yet-thin well, and you decide it’s time to call for help to get rescued.</p>
+
+<p>To your disappointment, the not-so-dark knight named Superman arrives to pull you well-dwellers out (one at a time). The last one pushed into the well is the first to <strong>pop</strong> out. <em>LIFO.</em></p>
+
+<h1 id="whats-a-queue">What’s a Queue?</h1>
+
+<p>A queue is a collection of items (or data) that follow the real-life “rules” of waiting in a line of people: the first item to join the collection is the first one to leave the collection.</p>
+
+<ul>
+  <li>The <strong>F</strong>irst data <strong>I</strong>n is the <strong>F</strong>irst data <strong>O</strong>ut (<strong>FIFO</strong>)</li>
+  <li>Add data: <strong>enqueue</strong></li>
+  <li>Remove data: <strong>dequeue</strong></li>
+  <li>Data exits at the: <strong>head</strong> of the queue</li>
+  <li>Data enters at the: <strong>tail</strong> of the queue</li>
+</ul>
+
+<h2 id="simple-implementation-1">Simple implementation</h2>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption class="code-header" style="margin-bottom:-5px;"><span>Simple Queue (array-based example)</span><a href="http://stackoverflow.com/questions/1590247/how-do-you-implement-a-stack-and-a-queue-in-javascript">Stack Overflow </a></figcaption> <div class="CodeRay">
+  <div class="code"><pre>
+<span class="keyword">var</span> queue = [];
+queue.push(<span class="integer">1</span>);  <span class="comment">// &quot;enqueue&quot;</span>
+queue.push(<span class="integer">2</span>);
+queue.push(<span class="integer">3</span>);
+console.log(queue);  <span class="comment">// output: [1,2,3]</span>
+
+<span class="keyword">var</span> dequeued = queue.shift();  <span class="comment">// &quot;dequeue&quot;</span>
+console.log(dequeued);  <span class="comment">// output: 1</span>
+console.log(queue);  <span class="comment">// output: [2,3]</span>
+</pre></div>
+</div>
+ </figure></notextile></div>
+
+<h2 id="ridiculous-analogy-1">Ridiculous analogy</h2>
+
+<p>Batman decides to do some in-the-field combat training. He drops into the middle of a gang meeting and yells, “I’ve sent your buddies to jail. I know you want revenge. Catch me if you can. P.S. I’m Batman!” Why does the cowled hero do this? We all know Batman is a smart dude, and sure enough, he has a clever plan. He lures the baddies who are running after him into a narrow alley.</p>
+
+<p>The gangsters can only approach Batman one at a time to fit in the narrow alley, so they form a line (aka <strong>queue</strong>). The gangster at the front of the line is the first gangster knocked out (aka <strong>dequeued</strong>) by Batman (<strong>first in; first out</strong>). You might even say that Batman’s fists aim for the <strong>head</strong> of the queue and foolish gangsters enter at the <strong>tail</strong> of the line of doom.</p>
+
+<h1 id="the-story-will-continue">The Story Will Continue</h1>
+
+<p>Stay tuned for more blog posts on data structures. My next technical blog post will examine how to implement stacks and queues from scratch (without arrays) to get a deeper understanding of push, pop, enqueue, and dequeue. I know you can’t wait for the moment I deliver on this promise. I can hear your panting through my WiFi, but please stay patient. I was busy working on a <a href="https://github.com/RebootJeff/cocompare">web app</a> and then a <a href="https://github.com/RebootJeff/phone-tag-phonegap">mobile app</a>. Now, I’m busy with job searching while possibly starting mini-project.</p>
+
+<p>On a mildly amusing, unrelated note: isn’t it funny to think about the phrase “stay tuned”? It’s getting rather archaic now that terrestrial, over-the-air TV and radio are losing popularity. Yes, these are the random things I think about as I write blog posts.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[[HackR Diary] My Formal Apology]]></title>
+    <link href="http://RebootJeff.github.io/blog/2013/11/19/hackr-diary-my-apology/"/>
+    <updated>2013-11-19T21:53:00-08:00</updated>
+    <id>http://RebootJeff.github.io/blog/2013/11/19/hackr-diary-my-apology</id>
+    <content type="html"><![CDATA[<p>My previous blog post was nearly 3 weeks ago. Why? What’s stopped me from posting more stories of life at Hack Reactor? For the past several days, I have been working on an individual project. I was very confident going into it, and I should eventually blog specifically about the initial stages, but as it turned out …there is a crap-ton of stuff to juggle when developing a web app. There are so many things that can go wrong in your workflow –not just in your code.</p>
+
+<h1 id="things-that-kept-me-busy">Things That Kept me Busy</h1>
+
+<ul>
+  <li>Defaut installation of node/npm on Ubuntu led to file permissions issues. Oh shit.</li>
+  <li>Figuring out Yeoman: Before <code>npm install -g yo</code>: I wonder what will happen. After <code>yo generator-angularexpress</code>: What is all this stuff?! Oh nice.</li>
+  <li>Figuring out Grunt: How can I get it to work with Stylus? Oh nice.</li>
+  <li>Easy, but time-consuming (to make sure you don’t break something that used to work)
+    <ul>
+      <li>Organizing files/folders in a professional way (inter-file <code>require</code> statements can break)</li>
+      <li>Using environment variables (typos can be devastating)</li>
+    </ul>
+  </li>
+  <li>Facebook Authorization
+    <ul>
+      <li>Making 2 FB apps (one for dev environment; one for production environment)</li>
+      <li>Figuring out the proper callback URL</li>
+    </ul>
+  </li>
+  <li>Databases
+    <ul>
+      <li>Juggling MySQL in development environment, then switching to PostgreSQL in production.</li>
+      <li>Why is the production database getting flooded? Oh there’s a random configuration setting I missed in Sequelize.</li>
+    </ul>
+  </li>
+  <li>Random Heroku hiccups (at one point, a node module provider went down, causing Heroku’s <code>npm install</code> to die).</li>
+</ul>
+
+<p>These are just a few of the little obstacles that add up. You don’t see them coming. They take quite a bit of time to hunt down.</p>
+
+<h1 id="nerdy-chuck-norris-jokes">Nerdy Chuck Norris Jokes</h1>
+
+<p>As an apology for not blogging much in the past 3 weeks, here are some jokes from <strong><a href="http://www.icndb.com/">the best API ever</a></strong>:</p>
+
+<p>All arrays Chuck Norris declares are of infinite size, because Chuck Norris knows no bounds.</p>
+
+<p>Chuck Norris doesn’t have disk latency because the hard drive knows to hurry the hell up.</p>
+
+<p>Chuck Norris can’t test for equality because he has no equal.</p>
+
+<p>Chuck Norris burst the dot com bubble.</p>
+
+<p>All browsers support the hex definitions #chuck and #norris for the colors black and blue.</p>
+
+<p>MySpace actually isn’t your space, it’s Chuck’s (he just lets you use it).</p>
+
+<p>Chuck Norris can solve the Towers of Hanoi in one move.</p>
+
+<p>Chuck Norris finished World of Warcraft.</p>
+
+<p>Chuck Norris doesn’t use web standards as the web will conform to him.</p>
+
+<p>Whiteboards are white because Chuck Norris scared them that way.</p>
+
+<p>Chuck Norris can delete the Recycling Bin.</p>
+
+<p>Chuck Norris’s beard can type 140 wpm.</p>
+
+<p>Chuck Norris can unit test entire applications with a single assert.</p>
+
+<p>Chuck Norris doesn’t need sudo, he just types “Chuck Norris” before his commands.</p>
+
+<p>Chuck Norris doesn’t need a debugger, he just stares down the code until the bug confesses.</p>
+
+<p>The class object inherits from Chuck Norris</p>
+
+<p>Chuck Norris knows the last digit of PI.</p>
+
+<p>Chuck Norris’ Internet connection is faster upstream than downstream because even data has more incentive to run from him than to him.</p>
+
+<p>Chuck Norris’s keyboard has the Any key.</p>
+
+<p>Chuck Norris can install iTunes without installing Quicktime.</p>
+
+<p>Chuck Norris’s OSI network model has only one layer - Physical.</p>
+
+<p>Chuck Norris compresses his files by doing a flying round house kick to the hard drive.</p>
+
+<p>Chuck Norris uses canvas in IE.</p>
+
+<p>Chuck Norris’s database has only one table, ‘Kick’, which he DROPs frequently.</p>
+
+<p>Chuck Norris’s brain waves are suspected to be harmful to cell phones.</p>
+
+<p>Chuck Norris sits at the stand-up.</p>
+
+<p>Chuck Norris has never registered an account. He just logs in.</p>
+
+<p>Code runs faster when Chuck Norris glares at it.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[[HackR Diary] Week 5: Final Sprints]]></title>
+    <link href="http://RebootJeff.github.io/blog/2013/10/28/hackr-diary-week-5/"/>
+    <updated>2013-10-28T22:42:00-07:00</updated>
+    <id>http://RebootJeff.github.io/blog/2013/10/28/hackr-diary-week-5</id>
+    <content type="html"><![CDATA[<p><img src="http://RebootJeff.github.io/images/20131028/caltrain.jpg" alt="caltrain" /></p>
+
+<p class="my-caption">Good morning</p>
+
+<p>No more sprints! I’m both sad and relieved. The sprints have provided enough structure to ensure a guided education thus far. They’ve equipped me with enough skill to yield the self-belief that I can actually build a complete web app …which is good because that’s exactly what I’m going to do starting this week. Looking back on week 5 makes me think I might miss the relative safety of paired programming, but I’m pumped to be diving into my own project.</p>
+
+<p>By the way, this blog post is really long. I think I’m going to split up future blog posts, and I’m going to post more frequently.</p>
+
+<h1 id="recap-of-events">Recap of Events</h1>
+
+<h3 id="alumni-panel">Alumni Panel</h3>
+
+<p>Early in the week, there was a truly invaluable guest speaker event. Six Hack Reactor alumni held a Q&amp;A session with current students. One alumnus is a Hacker-in-Residence at Hack Reactor. His role is a paid, part-time, short-term job supporting the school. There are a handful of Hacker-in-Residences at HackR at any given time. After their stints, they are put through the same job finding process that students who didn’t want to become a Resident normally go through.</p>
+
+<p>The other five alumni were from Adap.tv, Adobe, DocuSign, Edmodo, and Versal, respectively. They had a variety of roles including smartphone app development, front-end MVC engineering, internal QA, data visualization, and full-stack development. I have to admit that I was a bit judgemental about the QA role at first, but it actually sounded legit by the end of the Q&amp;A session. For what it’s worth, the Adap.tv guy was hired even though he doesn’t have a college degree! In my opinion, that’s awesome, and it really says a lot about the meritocracy found in the tech job market (…or the non-traditional, new-school nature of the Bay Area).</p>
+
+<p>There was a ton of insight gleaned from the alumni panel. Examples of advice include:</p>
+
+<ul>
+  <li>Ask employers about their onboarding process (smaller companies might not have one, and that can be a turn-off for some newbies).</li>
+  <li>Invest in social capital. Wow, that was a really buzzwordy sentence so let me translate: get to know your co-workers. “Ask them out” to coffee breaks, happy hours, lunches, etc. This may sound like basic networking at first, but I think the point is that in software development, you’re going to be asking others for help quite a lot, so it’s good to build a rapport ASAP to make asking for assistance as natural as possible. This is something I never really considered before, but after all the paired programming I’ve done at Hack Reactor, it makes a ton of sense to establish rapports that foster collaborative vibes.</li>
+  <li>Ask employers to set up a meeting between you and your potential boss. It’s ok –this is totally ok. I used to work in an industry where this would never really be possible, so I had to ask if this is ok after one alumnus mentioned how one of his prioties when job hunting was to find a cool boss. I want a cool boss too!</li>
+  <li>NEVER make the first move for salary negotiations. Let them make an offer before you start specifying any numbers.</li>
+  <li>Specific to HackR: Don’t be too eager to accept your first job offer. You will get more. Shop around. It’s tempting to accept your first or second job offer just because employment is such a major goal when deciding to join Hack Reactor in the first place. However, joining Hack Reactor isn’t something you do just to get a job –it’s something you do to get an <em>ideal</em> job.</li>
+</ul>
+
+<p>Sorry, but I forgot to take thorough notes during the alumni panel, so the list above is rather short.</p>
+
+<h3 id="more-guest-speakers">More Guest Speakers</h3>
+
+<p>Now might be a good time to point out that Hack Reactor has guest speakers at least one evening per week. Attendance is optional. Oftentimes students choose to work on their assignments/projects at the workstations rather than stay in the lecture area to listen to the guest speaker.</p>
+
+<p>What’s my point? This week was the first time I didn’t really have enough time to fully invest in the guest speakers. Rudely, I’ve forgotten that names of the speakers, but one guy spoke about databases (i.e., engineering decisions you might face when designing/creating/maintaining/scaling a database) and another guy (from Khan Academy) spoke about <a href="http://facebook.github.io/react/">React</a>, the JavaScript library written and open-sourced by Facebook. Relevant link: <a href="http://www.youtube.com/watch?v=GW0rj4sNH2w">React presented at JSConf</a></p>
+
+<h3 id="picking-personal-projects">Picking Personal Projects</h3>
+
+<p>To be honest, I wasn’t thrilled with the way HackR arranged the transition from sprints to personal projects. Students were under the impression that we’d get more support/attention for coming up with project ideas, but we weren’t given much time to brainstorm. Instead of dedicating a lecture to a guided brainstorming session, students had to come up with ideas in their spare time (which is tough when busy worrying about Ruby and Angular for the sprints).</p>
+
+<h3 id="social-night-haunted-house">Social Night: Haunted House</h3>
+
+<p>Once again, I did not attend social night. On one hand, I feel bad that my cohort has generally had low participation in the weekly social nights. On the other hand, the consensus seems to be that the social nights just don’t feel all that appealing. The first one was awesome; the others were “meh.”</p>
+
+<p>Instead of going to the Social Night event last Saturday, I went to a nice happy hour/dinner with a few other students. Afterwards, I went back to HackR to continue tackling client-side user authentication with my Angular sprint partner. We failed, but we got a lot of other stuff done during the day, so I felt ok about the sprint as a whole. Plus, my partner and I established a fun rapport so even failing to get “auth” working was a funny time.</p>
+
+<h1 id="what-i-learned">What I Learned</h1>
+
+<p>Week 5 included assignments for building a URL shortening web app to further improve students’ full-stack skills.</p>
+
+<h3 id="ruby-sinatra-activerecord-sqlite">Ruby, Sinatra, ActiveRecord, SQLite</h3>
+
+<p>Server-side code used a lot of Ruby and Sinatra. HackR chose not to teach us students Ruby on Rails (RoR) because Sinatra is simpler than Rails. It’s easy to be bummed about this, but in hindsight, I’m not worried about it. Yes, Rails is a big deal right now in Silicon Valley, but I’m under the impression that RoR was embraced because of it’s great for rapid prototyping. Times are changing though. There are now more options for rapid prototyping. More importantly, I’m at the point in my HackR-guided education where I have built up enough fundamental know-how to make me confident that I can learn RoR later.</p>
+
+<p>For now, it’s more important to learn concepts about MVC/MV* development, user authentication, databases, etc. Speaking of databases, there isn’t much for me to say about SQLite because students were harnessing ActiveRecord magic to manipulate a simple SQLite database with only two tables. We had to use <a href="https://github.com/cldwalker/tux">tux</a> to do database probing, which is slightly less convenient than using MySQL’s terminal interface (as we did in the previous week).</p>
+
+<h3 id="angular">Angular</h3>
+
+<p>The students were pretty hyped up to learn Angular as our final sprint. We’ve invested a lot of time into learning Backbone, but word on the street (a really nerdy street) is that Angular is the “new hotness” that will take over the world of front-end JavaScript for single-page web apps.</p>
+
+<p>Overall, I think the students’ reception of Angular was torn. Some love the power (Angular’s data-binding is pretty addicting); some find discomfort in the need to learn some rather bizarre syntax (Angular forces you to write HTML with “directives”).</p>
+
+<p>Here’s the low down: Backbone feels like the traditional, familiar option whereas Angular feels like the more experimental, exotic option. Yes, it took us awhile to appreciate Backbone, but once we got comfortable with it, we realized how easy it is to comprehend after you get your mind around it.</p>
+
+<p>For Angular, the learning curve is a lot less steep, but it also seems like it will be harder to master. There is more “magic” …and now I’m realizing I should explain that word.</p>
+
+<h4 id="aside-what-is-magic">Aside: What is “magic”?</h4>
+
+<p>When I say “magic,” I’m using it colloquially to refer to abstraction that feels harder to comprehend and feels less intuitive. For analogy*, a door knob abstracts mechanical bits. You may not be a locksmith, but it’s probably easy for a child to imagine how it works. Even as a child, you probably had some intuition that door knobs just have some simple mechanism for converting rotational movement of the knob into longitudinal movement of the latch On the other hand, it’s a bit hard for a child to imagine how a digital camera works. Even an old-school film-based camera feels magical at that tender age when you’re first capable of comprehending door knobs. Ahhh…those were the days, am I right?</p>
+
+<p><strong>*By the way, can we make “for analogy” a thing in the same way that “for example” is a thing?</strong></p>
+
+<p>Also, if you google “parts of a door knob,” you will see some complex diagrams, but I will defend my analogy! For the sake of argument, let’s just say door knobs use simple cams.</p>
+
+<h4 id="back-to-my-thoughts-on-angular">Back to my thoughts on Angular</h4>
+
+<p>So why does Angular seem so magical? By using Angular’s library of directives, you can have the browser display a list of items without writing DOM-manipulating code (i.e., jQuery). You can sort those items without writing a sorting function. You can filter those items without writing a sorting function. In Angular, you’re not supposed to use jQuery to change/update the HTML on the page. Angular takes care of that for you. How does it do that? Magic (directives). I haven’t even touched Angular’s feature that allows you to just create your own semantic HTML tags (e.g., <code>&lt;tab&gt;&lt;pane&gt;Content for Pane 1&lt;/pane&gt;&lt;pane&gt;Content for Pane 2&lt;/pane&gt;&lt;/tab&gt;</code>).</p>
+
+<h3 id="routers-templates-user-authentication">Routers, Templates, User Authentication</h3>
+
+<p>With MVC frameworks comes routers and templates. With web apps comes user authentication (sometimes).</p>
+
+<p>On the server-side, routing involves RESTful APIs, which are fairly tidy interfaces that allow clients to talk to servers. On the client-side, routing involves flow control and updating the URL in the browser address bar so that it looks pretty/semantic. For example, you may want to switch to an editing panel when the user clicks a button. The router changes the URL to end in <code>/edit</code> without causing the page to refresh. The router also calls a function that might do edit-related things such as rendering an editing panel.</p>
+
+<p>Templates are used to create sections of HTML that will contain dynamic content. Let’s say you want to render an unordered list (<code>&lt;ul&gt;&lt;/ul&gt;</code>), and the app will determine how many items (<code>&lt;li&gt;&lt;/li&gt;</code>) will be in the list. Templates take care of that.</p>
+
+<p>On the server-side, routing and templating is pretty easy with Sinatra. On the client-side, routing with Angular feels easier than routing with Backbone. Templates are way easier in Angular for me.</p>
+
+<p>In any case, I find user authentication isn’t very straightforward, but I haven’t tried many gems for Ruby nor <a href="http://passportjs.org/">Passport</a> for Node.js. You need to check for authentication, redirect visitors as necessary, encrypt passwords (AND usernames –don’t forget that), save login info into a database, manage sessions/cookies, etc. A surprising amount of mistakes can be made.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[[HackR Diary] Week 4: Now Entering Callback Hell]]></title>
+    <link href="http://RebootJeff.github.io/blog/2013/10/21/hackr-diary-week-4/"/>
+    <updated>2013-10-21T21:45:00-07:00</updated>
+    <id>http://RebootJeff.github.io/blog/2013/10/21/hackr-diary-week-4</id>
+    <content type="html"><![CDATA[<p><img src="http://RebootJeff.github.io/images/20131021/joebowers_at_hackreactor.jpg" alt="photo of Joe Bowers presentation" /></p>
+
+<p class="my-caption">Joe Bowers from Mixpanel discussing tech decisions based on company culture</p>
+
+<p>Another week down, another blog post arriving a Monday rather than the planned Sunday. Woops. Week 4 ended on a more stressful note for me (more on that in the <em>What I Learned</em> section <a href="#what-i-learned">below</a>), so I really felt the need to relax and decompress yesterday rather than write up this blog post. That said, once I complete roughly 25% of a blog post, I really start enjoying the writing process.</p>
+
+<p>Because the school educates us students at such a tough pace, it’s tempting to say every week is a game changer, the most challenging week ever, the most interesting, etc. Well I’m going to induldge and say week #4 was the craziest week thus far.</p>
+
+<p>I discovered that the Hack Reactor directory contains a partially complete list of all alumni’s employers. I started looking up some of the companies during a break from work. I didn’t have much time, but what I saw really inspired me. Now I’m even more excited about my own future prospects. <em>Hooray!</em></p>
+
+<p>There were two guest speakers this week. They both were quite technical, and I took time to smell the roses by taking a moment to think to myself, “Wow I’ve learned a lot because I understand all this very technical, very specific stuff discussed by these speakers.” <em>Hooray!</em></p>
+
+<p>There were a couple of <a href="http://RebootJeff.github.io/blog/2013/10/06/hackr-diary-week-2/#toy-problems">toy problems</a> that gave me some trouble this week. Maybe I’m putting too much pressure on myself, but solving a toy problem gives me a lot of self-confidence …and failing a toy problem puts a figurative frown on the figurative face of my mood for the rest of the morning (or longer). <em>Dammit!</em></p>
+
+<p>Students are told not to worry about comparing themselves to peers, but the seniors are killing it. I feel happy for them, but sometimes their impressive projects make me second-guess myself. Can I come up with a cool idea for an app? Self-doubt is creeping in. I only have one more week to think of something. <em>Dammit!</em></p>
+
+<p>As you can tell from the previous four paragraphs, the previous week was a bit of a battle between fear and pride. The worst part was falling behind on the databases sprint. The best part was watching seniors’ presentations.</p>
+
+<h1 id="recap-of-events">Recap of Events</h1>
+
+<h3 id="guest-speaker-pamela-fox">Guest Speaker: Pamela Fox</h3>
+
+<p>On Monday, Pamela Fox (formerly Coursera, currently Khan Academy) gave a great Backbone presentation at Hack Reactor. I wrote about it <a href="http://RebootJeff.github.io/blog/2013/10/16/hackr-diary-a-visit-from-pamela-fox-re-backbone/">right here</a>.</p>
+
+<h3 id="guest-speaker-joe-bowers">Guest Speaker: Joe Bowers</h3>
+
+<p>On Thursday, Joe Bowers (pictured at the top) gave an intriguing talk about intra-company coding culture. There are a lot of decisions to make with regards to software architecture/design, and Joe explained that many decisions are made based on coding culture/philosophy. In other words, many decisions come down to subjective thinking and preferences for certain aesthetics. His primary example was about Mixpanel’s tendency to embrace code cleanliness to the point of sacrificing <a href="http://en.wikipedia.org/wiki/Don't_repeat_yourself">DRYness</a> and abstraction. Their code is very explicit, so you always know what it’s doing without having to spend hours studying various layers of abstraction or other quirks that might improve elegance at the cost of human-readability.</p>
+
+<h3 id="social-night-lit-crawl-skipped">Social Night: Lit Crawl (skipped)</h3>
+
+<p>I’m not sure what <a href="http://litcrawl.org/sf/">SF Lit Crawl</a> is, but that was the designated event for social night. I decided not to join because I felt like I needed to spend more time studying ORMs (more on that below). Spending Saturday evening at Hack Reactor is actually quite nice. There were probably 10-20 students/staff still hanging out at HackR. Sadly, I wasn’t very productive. I think my brain was just too tired from battling asychronous database queries.</p>
+
+<p>On a related note, I’ve told HackR staff that the Social Nights are not well-organized. It’s clear that they are not given a high priority (attendance is optional for students), and I think they’re missed opportunities for cohort bonding. With a class size of nearly 30 students, it’s hard to get to know everyone when you spend most of your time with one person every two days (during 2-day paired programming sprints).</p>
+
+<h3 id="seniors-group-project-presentations-practice">Seniors’ Group Project Presentations (practice)</h3>
+
+<p>So. Friggin’. Stellar.</p>
+
+<p>Just. Absolutely. Outstanding.</p>
+
+<p>I was truly blown away by the seniors’ final projects. HackR students work on two major projects during their time here. The first is an individual project, the second is a group project. Students present their projects to some Hack Reactor staff and fellow students as practice for when they have to present to employers on hiring day.</p>
+
+<p>The group projects I saw last Saturday were incredible. They only had 2-3 weeks to create something worth bragging about, and they certainly surpassed my expectations. I’m half-inspired and half-worried. What they’ve done makes me prouder to be associated with Hack Reactor, but now I definitely feel more pressure to reach a similar level of awesomeness. Here are a few highlights:</p>
+
+<ul>
+  <li>Personal website powered by <a href="http://famo.us/">Famo.us</a>: Making a personal website might not sound impressive, but don’t get the wrong idea. I’m not talking about an About.me page. The site has very sexy Twitter/Facebook feed integration. The product looks like something Feedly or Flipboard would create (pro quality). <strong>More importantly</strong>, the team behind the product is one of the first to use brand new tech called Famous. Famous is a JavaScript framework for continuously rendering webpages with the power of client GPUs rather than CPUs. It replaces typical HTML with a bunch of <code>div</code> elements that are constantly being updated (at ~60 frames per second) with new values for their properties. The Hack Reactor students not only used the new tech (which is still in <em>private</em> beta), they also <em>contributed</em> to the Famous codebase. In fact, Famous will be using the students’ product at future HTML5 conferences to demo the power of the framework!</li>
+  <li>Virtual Furniture Placement: A group of 4 (or was it 5?) made an app that takes user-uploaded photos of empty rooms and allows the user to place virtual, 3D furniture into the photos. The 3D rendering looks so good! It’s amazing what you can do with JavaScript (I believe they used <a href="http://threejs.org/">three.js</a>). This is definitely an app that every home seller and furniture seller should use.</li>
+  <li>Reddit Submission Scheduler: It’s basically <a href="http://bufferapp.com/">Buffer</a>, but it’s for Reddit instead of Twitter. The students have built a product that I imagine every marketer wants: an app that allows you to submit a post to Reddit at a future date/time. I actually wonder if Reddit will ban the app because it could potentially be abused to proliferate spam. That said, if Buffer can work for Twitter, than surely something similar can work for Reddit. The idea is simple and unglamorous, but it certainly meets a big demand. It’s easy to imagine a company willing to buy the students’ app.</li>
+</ul>
+
+<h1 id="what-i-learned">What I Learned</h1>
+
+<h2 id="nodejs-without-express">Node.js (without Express)</h2>
+
+<p>Finally! Server-side code! Up to this point, the students have been just working with client-side assignments. With the <a href="http://nodejs.org/">Node.js</a> sprint, we started sending HTTP requests back and forth between client and server. We have yet to use <a href="http://expressjs.com/">Express</a> or any other Node.js framework to make life easier. We used modules like http, fs, url, and so on. The asynchronous nature of Node.js was weird at first, but to be honest, a lot of us got around that complexity by using synchronous variants of methods (e.g., <code>fs.readFileSync()</code>in place of <code>fs.readFile()</code>).</p>
+
+<h2 id="databases">Databases</h2>
+
+<p>At first, I was excited by the idea of learning database goodness. But then the asynchronous nature of Node.js started raining on my parade. We worked with MySQL and a SQL-for-Node.js ORM called <a href="http://http://sequelizejs.com/">Sequelize</a>. ORMs are libraries that provide a way to interact with databases without having to write SQL code. In the case of Sequelize, you just write JavaScript code with the Sequelize class/methods to query the database.</p>
+
+<p>It’s not all sunshine and rainbows though. I found Sequelize to be troublesome. You can get stuck in callback hell because unlike the http module for Node.js, the Sequalize module lacks synchronous variants of methods. We have yet to explore the benefits of asynchronous/non-blocking server-side code, so it’s hard to embrace the “pyramid of doom” (aka callback hell). When I asked for help, I was told to investigate another library for adding “promises” to my code. Promises help make asynchronous code much more manageable, but I didn’t have enough time to truly learn and implement them.</p>
+
+<p>So what I’m basically saying is that last week ended on a crappy note: an unfinished assignment. I’ve been told not to worry because there will be more opportunities to learn databases when working on projects (during the 2nd half of the Hack Reactor course).</p>
+
+<h1 id="in-other-news">In other news…</h1>
+
+<h2 id="the-next-phase">The Next Phase</h2>
+
+<p>There isn’t much time! In just a couple of weeks, the individual project phase begins. I have no good ideas for what to create! In my limited spare time, I’m playing Hawken, browsing Imgur, and freaking out about the personal project phase.</p>
+
+<h2 id="nuances-of-javascript">Nuances of JavaScript</h2>
+
+<p>On a more positive note, Hack Reactor shared this YouTube video <a href="https://twitter.com/HackReactor/status/390905108105818112">via Twitter</a>:</p>
+
+<iframe width="300" height="225" src="http://RebootJeff.github.io//www.youtube-nocookie.com/embed/iSxNCYcPAFk" frameborder="0" allowfullscreen=""></iframe>
+
+<p>As I watched it, I realized that it covered material I learned in the first week or so at Hack Reactor. It felt pretty awesome. You may wonder why it took a week to learn content covered by a simple presentation on YouTube. My opinion is that the video is not meant for beginners; it’s meant for seasoned coders trying to learn JavaScript.</p>
+
+<h2 id="disclaimer">Disclaimer</h2>
+
+<p>After a few weeks of this HackR Diary blogging, I’ve noticed that I’ve missed a few things. Despite my best efforts, these posts are not as comprehensive as I originally imagined. For example, last week, I forgot to talk about learning eventing systems. Overall, I’ve been forgetting to talk about specific aspects of student life like food options, daily mini-presentations, fitness challenges, the “halp system”, volunteering for tech blogging, and so on and so forth…</p>
+
+<p>So much to write about; so little time.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[[HackR Diary] Event: Pamela Fox on Backbone]]></title>
+    <link href="http://RebootJeff.github.io/blog/2013/10/16/hackr-diary-a-visit-from-pamela-fox-re-backbone/"/>
+    <updated>2013-10-16T07:13:00-07:00</updated>
+    <id>http://RebootJeff.github.io/blog/2013/10/16/hackr-diary-a-visit-from-pamela-fox-re-backbone</id>
+    <content type="html"><![CDATA[<p class="last-updated">Last updated on Oct 16, 2013 (see strikethrough text).</p>
+
+<blockquote class="twitter-tweet"><p><a href="https://twitter.com/pamelafox">@pamelafox</a> schooling <a href="https://twitter.com/HackReactor">@HackReactor</a> students on <a href="https://twitter.com/search?q=%23backbonejs&amp;src=hash">#backbonejs</a> <a href="http://t.co/1xRuxIEvKl">pic.twitter.com/1xRuxIEvKl</a></p>&mdash; andre (@AndrEvangelestA) <a href="https://twitter.com/AndrEvangelestA/statuses/389949525588062209">October 15, 2013</a></blockquote>
+<script async="" src="http://RebootJeff.github.io//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<p>Last Monday, the Hack Reactor students were treated to <a href="http://backbone-3ways.appspot.com/">a Backbone presentation</a> by <a href="http://blog.pamelafox.org/">Pamela Fox</a>. It was packed with a ton of insight. I frantically took notes on my smartphone (like a fool), so now I present to you a collection of cool cucumbers.</p>
+
+<h1 id="what-i-learned">What I Learned</h1>
+
+<h2 id="backbone-nuggets">Backbone Nuggets</h2>
+
+<ul>
+  <li>
+    <p>Region management (which you can “outsource” to the likes of <a href="http://chaplinjs.org/">Chaplin</a> or <a href="http://marionettejs.com/s">Marionette</a>) is worth checking out. Apparently, it helps limit the amount of rendering you need to do by allowing you to target specific regions of the web page.</p>
+  </li>
+  <li>
+    <p>Not all Backbone libraries are created equal! Some provide sweet functionality at the cost of depressing performance losses. The Backbone ecosystem is cool, but not entirely safe. Pamela once removed a library from Coursera’s codebase that was responsible for a <em>full second</em> of page load time.</p>
+  </li>
+  <li>
+    <p>Backbone is so flexible that you might feel like an Backbone expert one day and then feel like a noob the next day when you see someone else’s radically different and compelling usage.</p>
+  </li>
+  <li>
+    <p>Break up your views into more views. Make sibling views and nested views. No single view should be a bajillion lines of code. If you find yourself making long js files in Backbone, it’s time to split things up, my fellow noob.</p>
+  </li>
+</ul>
+
+<h2 id="general-code-related-nuggets">General Code-Related Nuggets</h2>
+
+<ul>
+  <li>
+    <p>Don’t optimize prematurely. Performant code is harder to read. Making code harder to read early on can be annoying. I wonder if Pamela is pro-<a href="http://RebootJeff.github.io/blog/2013/09/25/hackr-diary-first-impressions/#guard-operator">guard operator</a> or anti-guard operator.</p>
+  </li>
+  <li>
+    <p><a href="http://requirejs.org/">RequireJS</a> kills your foolish usage of global vars. Perhaps I should use it.</p>
+  </li>
+  <li>
+    <p>Single-page web apps can be harder to debug (than multi-page web apps?) because state gets saved across various renders. Errors can be hard to reproduce during the debugging process because there might be many user interactions that need to occur in a particular sequence to cause the error.</p>
+  </li>
+  <li>
+    <p><strong>Ask potential employers about their companies’ testing practices.</strong> How much regression testing do they do? How many tests have they created? More tests means less fear when contributing to the codebase as a fresh employee.</p>
+  </li>
+  <li>
+    <p>Making <strong>forms</strong> with Backbone (or any MV framework?) is great because forms lend themselves to the model-view-collection paradigm with ease. Forms are collections of questions, which are models, which have their own views. Each question view can draw from a set of views meant to provide a particular format (a view for a question answered by checkboxes, a view for question answered by text fields, a view for question answered by generic menu, etc). This also means Backbone is good for creating <strong>control panels</strong> for admin users (e.g., admin control panel for teacher conducting a Coursera class).</p>
+  </li>
+</ul>
+
+<h2 id="re-coursera">Re: Coursera</h2>
+
+<p>Pamela used to work for Coursera. She drew from her experiences with that company to provide a lot of context and real-world examples for the arguments she put forth in her presentation.</p>
+
+<ul>
+  <li>
+    <p>To address SEO concerns associated with single-page web apps, Coursera used <strong>Just-in-Time rendering</strong>. Coursera would detect whether or not a visitor was a search/social engine bot crawling the sit. Upon identifying the bot, Coursera servers would respond by firing up a rendered instance of the web app using Selenium. The bot would then be directed to the code produced by the rendering. This prevents the bot from crawling an HTML file that has nothing but <code>&lt;script&gt;</code> tags pulling in Backbone code. Side note: Google is not cool with the just-in-time technique. Coursera had to use a different technique for Google, but that was not disclosed during Pamela’s talk :(</p>
+  </li>
+  <li>
+    <p><del>It’s not the most organized</del> (nevermind –it’s split into easy-to-understand folders), but you can find a lot of Coursera <a href="https://github.com/coursera/forum-js-snapshot">code on Github</a> (open source, baby!)</p>
+  </li>
+  <li>
+    <p>When viewing their source code with your browser, you’ll see mostly <code>&lt;script&gt;</code> tags. There is very little <code>&lt;body&gt;</code> HTML. That’s due to extensive use of Backbone.</p>
+  </li>
+</ul>
+
+<h1 id="what-i-thought">What I Thought</h1>
+
+<p>Pamela is a fantastic speaker. What I liked most about her talk was the use of real-world examples. As a student, it’s always so informative to hear about life in the wild (so to speak). Seeing as how this was a Hack Reactor event exclusively for students, it’s hard to judge it impartially, but I’m going to go ahead and claim it was awesome.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[[HackR Diary] Week 3: Order in the Code]]></title>
+    <link href="http://RebootJeff.github.io/blog/2013/10/14/hackr-diary-week-3-backbone/"/>
+    <updated>2013-10-14T00:22:00-07:00</updated>
+    <id>http://RebootJeff.github.io/blog/2013/10/14/hackr-diary-week-3-backbone</id>
+    <content type="html"><![CDATA[<p><img src="http://RebootJeff.github.io/images/20131014/logos.png" alt="logos" /></p>
+
+<p class="my-caption">Tech from the previous week: Bower, Backbone, and CoffeeScript</p>
+
+<p>It’s funny how time perception is so easily manipulated. After 3 weeks of immersive education, I forget what day of the week it is. My fellow students also think time is passing by really quickly despite how many hours per day we spend in one (big) room.</p>
+
+<p>Weekends are limited to Sundays due to the 6-days-per-week schedule, so Fridays don’t feel like Fridays (so to speak). However, I should note that Saturdays at Hack Reactor are less intense than other days because the weekly social nights replace the final few hours of the daily classwork with entertainment. Social nights are optional, and plenty of students decide to spend that time working.</p>
+
+<h2 id="more-varied-thoughts-from-week-3">More varied thoughts from week 3</h2>
+
+<ul>
+  <li>I’ve stopped using pen + paper. I probably didn’t need to buy notebook for this course, and I’m just not a fan of paper. Hopefully my lack of note-taking won’t bite me later. Hack Reactor provides some good online notes, diagrams, etc, but I’m not sure they’ll be enough when it comes time to study for job interviews. That said, I’m not too worried.</li>
+  <li>Gym time is limited. Students get 2-hour lunch breaks every other day, but it takes at least 10 minutes to walk to the gym, a few minutes to change clothes, a few minutes to shower, 5-10 minutes to buy lunch afterwards, etc. Actual workout time is roughly 45-60 minutes max. A lot of us have ended up eating during the post-lunch lecture, so I guess it’s all good.</li>
+  <li>Hack Reactor hosts <a href="http://www.meetup.com/hackreactor/">various meetups</a> throughout the week (Coursera study group, general JS meetups, etc). I think that’s a pretty cool way for them to help out the greater dev community.</li>
+  <li><strong>Burnout watch:</strong> I still feel pretty excited to go to Hack Reactor 6 days per week, but I definitely look forward to relaxing on Sundays. In <a href="http://RebootJeff.github.io/blog/2013/10/06/hackr-diary-week-2/">my previous blog post</a>, I lamented about spending free my limited free time to write substantive blog posts, but now I think they really help me exercise my memory to prevent that “it was all a blur” feeling.</li>
+</ul>
+
+<h1 id="recap-of-events">Recap of Events</h1>
+
+<h3 id="industry-event-firebase">Industry Event: Firebase</h3>
+
+<p>Sadly, I didn’t attend the <a href="https://www.firebase.com/">Firebase</a> meetup hosted at Hack Reactor HQ. I heard from fellow students that the Firebase tech is pretty sweet. Firebase devs gave a demo that impressed many with promises of data syncing hotness.</p>
+
+<p>Why didn’t I attend the event? My pair programming partner and I decided we couldn’t spare any time for the event because we were more concerned with Backbone. Firebase just happened to come around at a bad time for me.</p>
+
+<h3 id="social-night-movie-theater">Social Night: Movie Theater</h3>
+
+<p>Yesterday, many students went to see <em>Gravity</em> (in 3D IMAX format). It was pretty friggin’ fantastic. Afterwards, some of us went our separate ways, some went back to studying/working, and some went out to partake in beverage consumption.</p>
+
+<h1 id="what-i-learned">What I Learned</h1>
+
+<p><strong>Quick tip:</strong> I learned a tactic for dealing with low brain energy. When I’m tired of analyzing software architecture decisions or concocting algorithms, I can give myself a productive break by switching to CSS work. Changing gears from program development to applying styles and designing layouts works wonders to give certain parts of my brain a rest while exercising others.</p>
+
+<p>Most Hack Reactor assignments come with some pre-written code, but they often come devoid of any interesting visuals so that you can practice CSS skills.</p>
+
+<h3 id="bower">Bower</h3>
+
+<p>Not much to say here. Students got a very brief lecture about <a href="http://bower.io/">Bower</a>, but it didn’t take much time to convince me to use it. Easily manage libraries/dependencies with a few terminal commands? Nice. <code>bower install</code> = woot!</p>
+
+<h3 id="inner-workings-of-the-web-httpajax-full-stack-overview">Inner workings of the web (HTTP/AJAX, full stack overview)</h3>
+
+<p>Students have yet to write any server-side code, but we’ve dealt with programming small client-side apps that interact with servers. We were taught some AJAX skills and some general HTTP knowledge. One lecture covered the overall system architecture that describes client-server interaction. <strong>There were so. Many. Terms:</strong> local storage, sockets, page requests, asset requests, client vs server MVC, content delivery networks (CDNs), object-relational mapping (ORM) –good times.</p>
+
+<h3 id="backbone">Backbone</h3>
+
+<p>Most of the week 3 assignments involved <a href="http://backbonejs.org/">Backbone</a>, which forced us students to really change the way we think about <em>designing</em> software. Developing with Backbone means organizing code to follow paradigms involving models, views, and collections (not quite MVC –which is “model view <em>controller</em>”).</p>
+
+<p>Before Backbone (a JavaScript framework for providing web apps with structure) our code was a like a stream of consciousness. With Backbone, our code was given order, structure, and rules to follow. It was a tough, but rewarding adjustment. Students were struggling with the process when initially exposed to Backbone. <strong>It’s funny because we were all questioning the effectiveness of Hack Reactor’s curriculum at first, but by the end of the week, most of us feel much more comfy with the framework.</strong></p>
+
+<p>Imagine you could only teach via stream-of-consciousness statements. Content would be expressed, but it would be messy as hell. Now imagine you were forced to teach by writing a well-structured, well-organized textbook. The difference is staggering. Suddenly you need to think about organizing concepts into topics, sequencing topics, connecting topics, etc. Making the leap from using no framework to using Backbone isn’t quite as drastic, but it’s still a tough contrast to get comfortable with in just a few days –even if those days involve ~12 hours of learning.</p>
+
+<h3 id="coffeescript">CoffeeScript</h3>
+
+<p>Before my time at Hack Reactor began, I was open to the idea of learning <a href="http://coffeescript.org/">CoffeeScript</a> (a more expressive, human-readable programming language that compiles into JavaScript, allowing you to write JavaScript with a very different syntax) because it looked friendly in the same way Ruby looks friendly. After a couple of weeks of writing lots of JavaScript code, I was far less open-minded about spending time learning a drastically different syntax. Imagine being told you were going to take a break from learning intermediate Spanish so you could learn beginner Portugese. You’d say, “No thank you, crazy person.” </p>
+
+<p>After finishing the CoffeeScript sprint, I remain somewhat ambivalent. I don’t love it, but I don’t hate it. <strong>The whole experience taught me that learning new syntax isn’t so bad.</strong></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[[HackR Diary] Week 2: Now Exiting My Comfort Zone]]></title>
+    <link href="http://RebootJeff.github.io/blog/2013/10/06/hackr-diary-week-2/"/>
+    <updated>2013-10-06T22:17:00-07:00</updated>
+    <id>http://RebootJeff.github.io/blog/2013/10/06/hackr-diary-week-2</id>
+    <content type="html"><![CDATA[<p class="last-updated">Last updated on Oct 13, 2013 to fix a typo and embedded a tweet.</p>
+
+<blockquote class="twitter-tweet"><p>Awesome of the <a href="https://twitter.com/Airbnb">@Airbnb</a> team to visit <a href="https://twitter.com/HackReactor">@HackReactor</a>. Picture of them talking about their tech stack. <a href="http://t.co/AYVDYA3JaT">pic.twitter.com/AYVDYA3JaT</a></p>&mdash; Ben Martin (@HealthfulHacker) <a href="https://twitter.com/HealthfulHacker/statuses/385258134677106689">October 2, 2013</a></blockquote>
+<script async="" src="http://RebootJeff.github.io//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<p>I don’t know if <a href="blog/2013/09/29/hackr-diary-thoughts-about-week-number-1/">my summary of week #1</a> made it clear or not, but although my first six days at Hack Reactor were tough, I didn’t exactly struggle with any of the material. This is probably because the pre-course work was <a href="http://RebootJeff.github.io/blog/2013/09/22/hackr-diary-pre-course-anticipation/">incredibly difficult</a>, thereby infusing me with helpful knowledge while also shaping my expectations.</p>
+
+<p>Well guess what? Week 1 was an anomaly. It was a week filled with more lectures and less hands-on programming. I knew this ahead of time, but week 2 still caught me off guard. There was quite a bit more learning with minimal guidance. Also, the joys/stresses of pair programming are turned up a few notches as a result of the additional programming time created by reducing the amount of lecture time.</p>
+
+<p>Consequently, I’ve been feeling more tired in general. Forgive me, but spending my free time to write this blog is beginning to look less and less appealing.</p>
+
+<p>I joined a nearby gym (aside: I just remembered that I need to notify Hack Reactor to get my $50 reimbursement from them!) so my energy levels should increase in a week or two. Every other lunch break is two hours long instead of just one hour long. The extra time is meant to encourage students to go exercise.</p>
+
+<p>I want to write more about student life at Hack Reactor, but I think I’ll just spread out the details in my <a href="http://RebootJeff.github.io/blog/categories/hackr-diary/">HackR Diary</a> series rather than providing every bit of info in a single, giant blog post. So for now, I cover gym time, toy problems, and tapouts. In the future, I’ll discuss the workstations, help system, student-staff interaction, food, and more.</p>
+
+<h1 id="week-in-review">Week in Review</h1>
+
+<h4 id="toy-problems">Toy Problems</h4>
+
+<p>This week, my cohort, the junior students, started solving (almost) daily toy problems, which are small coding challenges designed to get us used to the type of timed problems that will be thrown our way at tech interviews. We have to complete these problems individually. We have 30-60 minutes to think of a solution, code the solution, and submit pull requests to have an automated tester give us feedback that we can use to help fix our solutions as necessary.</p>
+
+<h4 id="tapouts">Tapouts</h4>
+
+<p>This week, us juniors also started attending weekly(?) tapouts. Tapouts are like small group therapy sessions where five students voice their opinions of Hack Reactor to an alumnus. She will send anonimized feedback up the chain while also providing us with advice for any struggles we care to talk about. </p>
+
+<h4 id="special-event-airbnb-presentation">Special Event: AirBnB Presentation</h4>
+
+<p>Lead devs from <a href="https://twitter.com/Airbnb">AirBnB</a> presented a ton of info about their tech stack, their work environment, <a href="http://nerds.airbnb.com/weve-open-sourced-rendr-run-your-backbonejs-a/">their open source project</a>, dev career advice, startup advice, etc. There was a post-presentation panel for answering several questions. Then there was a post-panel meet-and-greet session. It was a truly fantastic event.</p>
+
+<h4 id="saturday-social-night">Saturday Social Night</h4>
+
+<p>I skipped last Saturday’s social night to go to a close friend’s birthday celebration(s). Week 2’s theme for social night was board/card games.</p>
+
+<h1 id="what-i-learned--what-i-thought">What I Learned + What I Thought</h1>
+
+<h4 id="inheritancesubclassing-in-javascript">Inheritance/Subclassing in JavaScript</h4>
+
+<p>The subclassing sprint was a bit frustrating at first. It took me awhile to grasp the keyword <code>this</code> because of JavaScript’s tendency to pass functions around as parameters to other functions.</p>
+
+<p>Upon wrapping one’s brain around <code>this</code> (and the <code>.call()</code>/<code>.apply()</code> methods), there was a lot of fun to be had with the assignment that Hack Reactor gave the students. This was the first assignment involving a visual facet, and the student body reacted accordingly (with creativity galore).</p>
+
+<h4 id="algorithms">Algorithms</h4>
+
+<p>The algorithms sprint was a fantastic challenge, but there was no specific set of knowledge to learn. It felt like the main goal of the sprint was to get students’ minds thinking in more computer-oriented ways. We were taught some basics about time complexity, but we didn’t go into much depth about Big-O notation. We briefly described actions (e.g., deleting data from an array) and algorithms (e.g., solutions to the <a href="http://en.wikipedia.org/wiki/Eight_queens_puzzle#Related_problems">n-queens puzzle</a>) as constant, linear, quadratic, polynomial, and exponential (as opposed to discussing the nuances of O(c), O(n), O(n^2), O(n^c), O(c^n), etc).</p>
+
+<p>The main takeaway was that we should worry more about macro optimizations (storing data in variables in a way that allows for constant-time lookup) rather than micro optimizations (improving a <code>for</code> loop so then it loops fewer times). <strong>Micro optimizations are good, but they aren’t very valuable when you’re just creating prototypes, minimum viable products, etc.</strong></p>
+
+<p>I’m somewhat disappointed that we weren’t taught specific algorithms such as quicksort, binary search, etc. I’m under the assumption that all software developers need to know the “greatest hits” of algorithms. Although, I’m also under the assumption that such knowledge is more useful in tech interviews than in day-to-day coding.</p>
+
+<h4 id="layoutpositioning-htmlcss">Layout/Positioning (HTML/CSS)</h4>
+
+<p>I taught myself a decent amount of HTML/CSS before my cohort’s start date, so I was very comfortable with the layout assignment, but it wasn’t easy. There are still plenty of times when proper CSS positioning eludes me. That said, this topic doesn’t provide an intellectual challenge.</p>
+
+<p>The difficulty lies in getting the syntax just right and understanding hierarchy. Some students didn’t learn much HTML/CSS before joining Hack Reactor, and so they had a lot to learn (box model, DOM hierarchy, CSS selectors, etc.) in a very short amount of time.</p>
+
+<p><strong>If you’re thinking of joining Hack Reactor as a student, I highly recommend you teach yourself HTML/CSS</strong> ahead of time. HTML/CSS isn’t tough to learn on your own, but it can be time-consuming even if you’ve got pros helping you. You may as well prepare yourself so then you can spend less time at Hack Reactor worrying about HTML/CSS and more time worrying about other technologies and concepts.</p>
+
+<h4 id="d3-library">D3 (library)</h4>
+
+<p><a href="http://d3js.org/">D3.js</a> is a JavaScript library for creating data-driven visuals inside HTML documents. I thought jQuery was cool, but now I think D3 takes the cake. It’s much harder to learn D3, but there is tremendous power to be had from familiarizing yourself with it.</p>
+
+<p>That said, the D3 assignment left me mentally tired as hell. Like jQuery, you can easily select DOM elements, but the rest of the D3 syntax isn’t so straightforward, and the general concepts for using D3 properly will feel rather foreign at first. I hope to spend more time on my own to master D3 …when I’m not so damn tired. The key is to understand the <a href="http://bl.ocks.org/mbostock/3808218">general update pattern</a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[[HackR Diary] Thoughts about Week #1]]></title>
+    <link href="http://RebootJeff.github.io/blog/2013/09/29/hackr-diary-thoughts-about-week-number-1/"/>
+    <updated>2013-09-29T14:37:00-07:00</updated>
+    <id>http://RebootJeff.github.io/blog/2013/09/29/hackr-diary-thoughts-about-week-number-1</id>
+    <content type="html"><![CDATA[<p class="last-updated">Last updated on Oct 1, 2013 (minor edits).</p>
+
+<blockquote class="twitter-tweet"><p>Good way to start week 2 at <a href="https://twitter.com/HackReactor">@HackReactor</a> <a href="http://t.co/6pB80gQKCO">pic.twitter.com/6pB80gQKCO</a></p>&mdash; Jeff Lee (@RebootJeff) <a href="https://twitter.com/RebootJeff/statuses/384728991359176704">September 30, 2013</a></blockquote>
+<script async="" src="http://RebootJeff.github.io//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<p>This post is a bit late, but it can be hard to find time to write up a thorough blog post when I’m studying at Hack Reactor for 70-80 hours/week. During my free time, it’s tempting to just play <a href="http://www.playhawken.com">Hawken</a> or catch up on YouTube (yes, I subscribe to some damn good channels).</p>
+
+<p>Quick correction: In <a href="">my previous HackR Diary entry</a>, I said that the staff gets a 1-week vacation every 7 weeks (6 weeks of work followed by a 1-week break). This isn’t entirely true. The interim week can be used as vacation, but staff also use it to make changes to Hack Reactor. For example, the most recent interim week was used by staff to rearrange the lecture room, which involved installing a new projector screen.</p>
+
+<h1 id="week-in-review">Week in Review</h1>
+
+<p>I wake up everyday Mon-Sat at 7:30am. I should really wake up earlier so then I can arrive before 8:50am. I rely on the BART (subway) to get to/from Hack Reactor. I make my subway rides more enjoyable by saving YouTube videos as .mp4 files to my phone. I generally watch documentaries on cosmology and nature featuring British narrators. The accent is key. If you’re interested in such documentaries, <strong>check out <a href="http://science-documentaries.com/">this link</a> and <a href="http://www.youtube.com/watch?v=ag0U65NkxrI&amp;feature=share&amp;list=PL300BF5A42D3C21C4">this link</a></strong>.</p>
+
+<p>Ok enough of that. You came here to read about the intersection of start-up life and student life, not BBC on YouTube. Here’s a quick recap of what I was up to last week:</p>
+
+<ul>
+  <li><strong>Learning:</strong> 2 “standard” sprints + 1 longer sprint</li>
+  <li><strong>Reflection:</strong> Provided feedback on what students did and didn’t like about week 1.</li>
+  <li><strong>Week 0 self-assessment:</strong> An ungraded quiz to force you to ask yourself how confident you are about what was taught in the pre-course work.</li>
+  <li><strong>Code Review by seniors:</strong> The “upperclassmen” took a look at our data structures solutions.</li>
+  <li><strong>Social Night:</strong> Visited <em>House of Air</em>, a sweet trampoline gym.</li>
+</ul>
+
+<h1 id="what-i-learned">What I Learned</h1>
+
+<ul>
+  <li><strong>Sprint #1:</strong> Recursion</li>
+  <li><strong>Sprint #2:</strong> Mini-clone of Underscore.js</li>
+  <li><strong>Extra #1:</strong> Advice for Success
+    <ul>
+      <li>Hack Reactor’s role in students’ success</li>
+      <li>Students’ role in our own success</li>
+    </ul>
+  </li>
+  <li><strong>Extra #2:</strong> Debugging
+    <ul>
+      <li><code>debugger;</code> statement</li>
+      <li>Sources tab in Google Chrome dev tools</li>
+      <li>Call Stack in Sources tab</li>
+    </ul>
+  </li>
+  <li><strong>Sprint #3:</strong> Instantiating Data Structures with various Class Patterns
+    <ul>
+      <li>Class Patterns
+        <ul>
+          <li>Functional (with and without shared methods)</li>
+          <li>Prototypal</li>
+          <li>Pseudoclassical</li>
+        </ul>
+      </li>
+      <li>Data Structures
+        <ul>
+          <li>Stacks</li>
+          <li>Queues</li>
+          <li>Linked Lists</li>
+          <li>Trees</li>
+          <li>Sets</li>
+          <li>Hash Tables</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="what-i-thought">What I Thought</h1>
+
+<h2 id="lectures">Lectures</h2>
+
+<p><strong>Week 1 is very different from most weeks</strong> due to the amount of lengthy lectures we have to sit through, but ya know what? I really liked the lectures. The main instructor for week 1 is Marcus, and he’s pretty great at teaching. Students constantly ask questions during lecture so it feels much more interactive and much less like being force-fed information.</p>
+
+<p>I like that lectures involve plenty of analogies, live coding examples, industry best practices, and “every interviewer will ask you about this” moments. You’d think students would get pretty tired of all the lectures, but they’re too good to be off-putting. Also, 5+ hours of lectures per day isn’t a lot when you consider we’re spending 12+ hours per day at the school.</p>
+
+<h2 id="paired-programming">Paired Programming</h2>
+
+<p>I generally like the idea of paired programming so long as you have a good dynamic with your partner. That said, it can be <em>really</em> tiring because you’re constantly talking as you and your partner are coding. Not only are you exhausting your brain’s cognitive abilities by working on programming challenges, but you’re also exercising verbal comm skills and listening skills. It can be tough to listen to your partner explain his/her solution when you feel like you’re on the brink of working out your own awesome solution in your head.</p>
+
+<h2 id="the-school">The School</h2>
+
+<p>Hack Reactor is a fantastic environment, and I know every student of every bootcamp says this, but it’s just so amazing to be in a school where the students and teachers are all so pumped to be there. On top of that, the students are open-minded without being naive. Basically, <strong>Hack Reactor is filled with the positive vibes that should make every college wildly jealous.</strong></p>
+
+<p>It’s also worth noting that Hack Reactor is transparent. They’re a small company, and their small size allows them to build a tighter community of teachers, students, and alumni. I love that Hack Reactor staff is very honest and genuine. When cynics look at the relatively expensive tuition, it’s tempting for them to say HackR is “in it for the money,” but check out a lecture or listen to them explain their intentions and you won’t hear a sales pitch. You’ll hear earnest intentions to educate the next generation of developers using next-generation methods.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[[HackR Diary] First Impressions]]></title>
+    <link href="http://RebootJeff.github.io/blog/2013/09/25/hackr-diary-first-impressions/"/>
+    <updated>2013-09-25T21:23:00-07:00</updated>
+    <id>http://RebootJeff.github.io/blog/2013/09/25/hackr-diary-first-impressions</id>
+    <content type="html"><![CDATA[<p class="last-updated">Last updated on Sep 28, 2013 to edit section on guard operator.</p>
+
+<p>It’s the end of day #3. I don’t have much time to write, so this blog post is a smattering of thoughts from a fresh Hack Reactor student.</p>
+
+<h1 id="initial-observations">Initial Observations</h1>
+
+<h2 id="recap">Recap</h2>
+
+<ul>
+  <li>Day 1 and 2 are just review days covering topics and challenges covered by the pre-course work. Day 1 covered ettiquette, expectations, and recursion. Day 2 covered passing functions, a lot of JS fundamentals, and awesome advice for being successful (e.g., we talked about impostor syndrome, Hack Reactor’s motivations, some job-hunting advice, etc).</li>
+  <li>Day 3 covered paired programming, object-oriented programming (OOP), and classes (e.g., functional instantiation vs. prototypal instantiation vs. psuedoclassical instantiation).</li>
+</ul>
+
+<h2 id="logistics">Logistics</h2>
+
+<ul>
+  <li>Week 1 is full of lectures. Each day is about 50% lectures, 50% coding.</li>
+  <li>The first 6 weeks will have plenty of lectures and structured challenges. Then there is an interim week where you work on a project from home, which gives you the flexibility to travel, but the Hack Reactor staff will be offline (they basically get a 1-week vacation every 7 weeks). After the interim week is more time for your individual project, time for a group project, and time for job prep.</li>
+</ul>
+
+<h2 id="nuances">Nuances</h2>
+
+<ul>
+  <li>Lunch breaks and dinner breaks are often cut short due to lectures running long.</li>
+  <li>Lectures run long due to people asking questions.</li>
+  <li>All teachers advocate for students to ask questions. At Hack Reactor, the students ask a TON of questions because the class atmosphere is very comfortable.</li>
+  <li>The students are really nice. Everyone’s excited to meet new people (even the quiet ones are clearly motivated to be social).</li>
+  <li>I’ve heard stories of students of other bootcamps going out at night to hang out and have fun. I could be wrong, but so far it seems like there’s no time/energy left for going out at night.</li>
+  <li>That said, students don’t stay here that late (so far). A lot of us leave by 9pm. I thought it’d be common to leave no earlier than 10pm, but there aren’t even that many students from the senior cohort by the time the clock strikes 9:20pm (which is the latest I’ve stayed). I have a feeling this will change in a few weeks (beause that will be crunch time for the senior cohort).</li>
+  <li>Nothing’s perfect. Some equipment is broken, some chairs are shitty, some online resources are buggy, etc. None of these issues have been big issues.</li>
+</ul>
+
+<h1 id="nuggets-of-knowledge">Nuggets of Knowledge</h1>
+
+<p>I’ve picked up a lot of cool (and oftentimes valuable) advice/facts in just 3 days.</p>
+
+<h2 id="life-nuggets">Life Nuggets</h2>
+
+<h3 id="re-education">Re: <strong>Education</strong></h3>
+
+<p>Passive learning is deceptively similar to true understanding. When you just observe a correct solution, it can give you the illusion that you learned more than you really did. For example, you might watch someone code up a good solution. When you walk away, you’ll think you understand everything necessary to solve the problem, but all you learned was some code without its meaning.</p>
+
+<h3 id="re-starting-a-new-tech-career">Re: <strong>Starting a new tech career</strong></h3>
+
+<p>Everyone thinks starting a new tech career with a tiny startup is really exciting. That might be true, but people tend to forget an important caveat: less structure could lead to a less efficient roadmap to individual success.</p>
+
+<p>In less formal terms, you might work for a tiny startup on something you truly care about, but the startup could easily be too small or too young to provide an environment with superiors/peers that can help you develop your programming skills (or any job-related skills).</p>
+
+<h2 id="javascript-nuggets">JavaScript Nuggets</h2>
+
+<h3 id="guard-operator">Guard operator</h3>
+
+<p>Marcus, the primary instructor, warned us that some devs dislike the guard operator, but it’s really concise (which is cool to him). The guard operator is a logical-AND or logical-OR that “guards” a small bit of code the same way an <code>if</code> statement would guard it. For example:</p>
+
+<div><div class="CodeRay">
+  <div class="code"><pre><span class="keyword">if</span>(goodStudent === <span class="predefined-constant">true</span>){
+    candy++;
+}
+
+<span class="comment">// The above code could be refactored into the following:</span>
+goodStudent &amp;&amp; candy++;
+</pre></div>
+</div>
+</div>
+
+<p>The following is a more practical example:</p>
+
+<div><div class="CodeRay">
+  <div class="code"><pre><span class="comment">// Let's say you want to only call a function with an array if the array is NOT undefined (i.e., you want to guard against a scenario where you pass an undefined argument to a function).</span>
+arg &amp;&amp; myFunction(arg);
+</pre></div>
+</div>
+</div>
+
+<p>You can also use a logical-OR in a guard-like fashion. This is sometimes called the <strong>default operator</strong> rather than a guard operator.</p>
+
+<div><div class="CodeRay">
+  <div class="code"><pre><span class="comment">// if no name was passed into the function, just give the name variable a default value of 'friend'</span>
+
+<span class="keyword">var</span> <span class="function">sayHello</span> = <span class="keyword">function</span>(name){
+  <span class="keyword">if</span>(name === <span class="predefined-constant">undefined</span>){
+    name = <span class="string"><span class="delimiter">'</span><span class="content">friend</span><span class="delimiter">'</span></span>;
+  }
+  console.log(<span class="string"><span class="delimiter">'</span><span class="content">Hello, </span><span class="delimiter">'</span></span> + name + <span class="string"><span class="delimiter">'</span><span class="content">!</span><span class="delimiter">'</span></span>);
+}
+
+<span class="comment">// the function above could be refactored to use the OR-guard as follows:</span>
+<span class="keyword">var</span> <span class="function">sayHello</span> = <span class="keyword">function</span>(name){
+  name = name || <span class="string"><span class="delimiter">'</span><span class="content">friend</span><span class="delimiter">'</span></span>;
+  console.log(<span class="string"><span class="delimiter">'</span><span class="content">Hello, </span><span class="delimiter">'</span></span> + name + <span class="string"><span class="delimiter">'</span><span class="content">!</span><span class="delimiter">'</span></span>);
+}
+</pre></div>
+</div>
+</div>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[[HackR Diary] Pre-Course Anticipation]]></title>
+    <link href="http://RebootJeff.github.io/blog/2013/09/22/hackr-diary-pre-course-anticipation/"/>
+    <updated>2013-09-22T11:51:00-07:00</updated>
+    <id>http://RebootJeff.github.io/blog/2013/09/22/hackr-diary-pre-course-anticipation</id>
+    <content type="html"><![CDATA[<p><img src="http://RebootJeff.github.io/images/20130922/mytwittler.png" alt="Thumbnail of my twittler" /></p>
+
+<p class="my-caption">Thumbnail of my Twitter clone assignment</p>
+
+<p>Tomorrow is a huge day for me. Tomorrow is when <a href="http://RebootJeff.github.io/blog/2013/08/25/hack-reactor-is-my-future/">I start attending Hack Reactor</a>. I’m about to go from funemployment (going to bed at 4am; waking up at 12pm) to immersive student life (spending 80 hours/week on “campus”). I will write about my journey from amateur to trained pro in a series of blog posts called <a href="http://RebootJeff.github.io/blog/categories/hackr-diary/">HackR Diary</a>.</p>
+
+<h1 id="mandatory-pre-course-work">Mandatory Pre-Course Work</h1>
+<p>I enrolled in tomorrow’s Hack Reactor cohort back in late August. So I had a month to get through some pre-course “homework.” Some bits of the homework were harder than I expected (e.g., functional JavaScript challenges); some bits were easier than I expected (e.g., creation of simple Twitter-like front-end). The Twitter clone challenge was actually really fun for me because I like a challenge that actually includes a front-end.</p>
+
+<p>There were times I was frustrated because I felt like I would be doing a lot better with just a little bit of help (e.g., recursion challenges), but I didn’t ask for much help, so I did a lot of solo struggling. However, one of the biggest bummers was going through the Backbone.js assignment. The assignment was to simply complete the <a href="http://www.codeschool.com/courses/anatomy-of-backbonejs">Code School Backbone.js tutorials</a> (two of them). <strong>Hack Reactor provided me with a Code School membership</strong>, and I was excited to take advantage of it, but that particular set of Code School tutorials isn’t very good at teaching. I felt like I didn’t get a good grip of the concepts (models/collections, views/rendering, routers).</p>
+
+<p>I’m also a bit jaded when it comes to online tutorials. They generally do a lot of hand-holding to the point where you don’t retain much info, and if you get stuck on something, you’re a bit screwed. <strong>My low patience for tutorials is part of why I decided to enroll in a bootcamp, but there I was: doing tutorials as part of bootcamp homework!</strong> Don’t get me wrong, online tutorials are great resources in general, but I can only take so much. Eventually, I’d rather do some <a href="http://www.coderbyte.com/">Coderbyte</a> challenges instead of Code School challenges.</p>
+
+<h1 id="pre-course-check-in-meeting">Pre-Course Check-In Meeting</h1>
+<p>Hack Reactor makes incoming students meet with a Hacker-in-Residence (basically a Teaching Assitant?) to check up on the pre-course homework. I heard that some students have been weeded out of the bootcamp by the homework.</p>
+
+<p>I met with an H-in-R named <a href="http://thishackergirl.wordpress.com/">Bianca</a>. My meeting was done in person, but these check-in meetings are sometimes conducted via webcam for those who haven’t arrived in San Francisco yet.</p>
+
+<p>Before the meeting, I was pretty worried about how I stacked up compared to my peers. We’re not experts (hence the desire to enroll in a bootcamp), but we’re supposed to be much better than a typical beginner because <a href="http://RebootJeff.github.io/blog/2013/09/15/coding-bootcamp-research-admissions-part2/#hack-reactor-wants-to-kick-your-ass">the admissions process was not easy</a>. During the meeting, Bianca asked me how I felt about the three biggest parts of the pre-course homework: the functional JavaScript challenge involving test-driven development (TDD), the rudimentary Twitter front-end clone, and the JSON recursion challenges.</p>
+
+<p>I anxiously watched as Bianca scrolled through my code. After discussing some questions I had, issues I struggled with, and solutions to my few bugs, I felt a lot better. Maybe I put too much pressure on myself, but I tend to worry a lot. <strong>I walked out of the conference room feeling very positive.</strong></p>
+
+<h1 id="other-pre-course-work">Other Pre-Course Work</h1>
+<p>Hack Reactor suggests completing more tutorials and reading some resources if students have some spare time before classes start. Suggested topics include Git, Node.js, CSS, Ruby, Ruby on Rails, and CoffeeScript.</p>
+
+<p>I <a href="http://youtu.be/jM8KE_Fa6JI">studied Backbone.js</a> a bit more, I read about JavaScript <a href="http://www.codeproject.com/Articles/580165/JavaScript-Best-Practices">best</a> <a href="http://www.thinkful.com/learn/javascript-best-practices-1/">practices</a>, and I spent a lot of time doing more Code School tutorials. Some are better than others. I mostly looked at HTML/CSS stuff, which sounds easy, but I just wanted to make sure there weren’t too many gaps in my fundamental knowledge (<code>position</code> and <code>display</code> properties still slap me around sometimes).</p>
+
+<p><strong>The <a href="http://www.codeschool.com/courses/fundamentals-of-design">Code School tutorial on the Fundamentals of Design</a> was pretty awesome</strong> actually. It’s the only tutorial that doesn’t require coding, but it imparted quite a few cool nuggets of knowledge about how to choose fonts, colors, and layouts. The layouts part wasn’t as insightful (I wish they had you actually implement a grid with some coding), but learning about typeface categories (e.g., humanist vs. transitional vs. modern) and what defines a good color scheme (e.g., 60 degrees of hue separation) was sweeeet. Hopefully I’ll get around to blogging about the basics of fonts and colors one day. It’s just some very simple stuff that can help a lot.</p>
+
+<p>Overall, I didn’t do as much studying on my own as I should have. I suck at independent study. Bahumbug.</p>
+
+<h1 id="im-so-friggin-nervous">I’m so friggin’ nervous!</h1>
+<p>Although the pre-course check-in meeting left me feeling optimistic about my future success at Hack Reactor, I no longer feel quite so confident.</p>
+
+<p>This past weekend, I got access to my cohort’s Google Group. I bet that Hack Reactor nearly forgot to add me to the group. I browsed the group forum, and I saw posts dating back from July. There were some posts in August about meeting up to get to know one another before our Hack Reactor course starts. Doh! I missed those opportunities!</p>
+
+<p>There was also a thread of self-introductions. Only a handful of people introduced themselves, but damn! They sound impressive. They make me worry about how I’ll compare. What’s funny is that a lot of them are non-Asians who have lived in China. They can speak Mandarin way better than I can (i.e., I only know a few basic words). Hopefully I don’t get a lot of flak. I already get enough grief from my mom.</p>
+
+<h1 id="my-plans-for-blogging">My plans for blogging</h1>
+<p>Considering that I will be busier than I have ever been in my entire life(?), I probably won’t have much time for blogging, but I am determined to do a fair amount of blogging anyway!</p>
+
+<p>I still have plenty of <a href="http://RebootJeff.github.io/blog/categories/bootcamp-research/">coding bootcamp research</a> to blog about, but I will give my HackR Diary a higher priority. I’ve set a goal to blog about my experience at Hack Reactor at least once per week. Each diary entry will include a quick recap of topics taught by HackR staff, observational knowledge nuggets I picked up myself, and my personal evaluation of myself and the bootcamp.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Adding Google Analytics to Octopress blog on Github Pages]]></title>
+    <link href="http://RebootJeff.github.io/blog/2013/09/17/adding-google-analytics-to-octopress-blog-on-github-pages/"/>
+    <updated>2013-09-17T13:22:00-07:00</updated>
+    <id>http://RebootJeff.github.io/blog/2013/09/17/adding-google-analytics-to-octopress-blog-on-github-pages</id>
+    <content type="html"><![CDATA[<p>I wanted a way to count visitors for my blog. Easy enough, right? Just sign up for a free Google Analytics account, obtain a tracking ID from the account, and add the tracking ID to Octopress config file…right?</p>
+
+<p>Wrong. Maybe I was doing something else incorrectly, but I didn’t get things working until I did <a href="http://stefanalfbo.github.io/blog/2013/04/17/octopress-google-analytics-github-pages/">what a guy named Stefan Alfbo wrote about</a>. I found his blog post via Google, which reminds me that my own blog’s Google-powered search doesn’t seem to work <strong>:(</strong>.</p>
+
+<h2 id="problem-solved">Problem solved</h2>
+
+<p>Here’s the trick for getting Google Analytics working on an Octopress blog hosted on Github: open up the <strong>source/_includes/google_analytics.html</strong> file and add…</p>
+
+<div><div class="CodeRay">
+  <div class="code"><pre><span class="comment">// add this line to the series of _gaq pushes already in the code</span>
+_gaq.push([<span class="string"><span class="delimiter">'</span><span class="content">_setDomainName</span><span class="delimiter">'</span></span>,<span class="string"><span class="delimiter">'</span><span class="content">github.io</span><span class="delimiter">'</span></span>]);
+</pre></div>
+</div>
+</div>
+
+<h2 id="questions-remain">Questions remain</h2>
+
+<p>Alfbo recommends putting this new line of code in between the 2 existing <code>_gaq.push</code> statements. I’m not sure if the order of the <code>_gaq</code> array really matters, but I didn’t want to chance it, so I followed his recommendation. However, this left me wondering, “What is the <code>_gaq</code> array anyway? How is it used? And why does it need special attention to get it working with Github hosting?”</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[[Coding Bootcamp Research] Admissions Processes: My Experiences (Part 2 of 2)]]></title>
+    <link href="http://RebootJeff.github.io/blog/2013/09/15/coding-bootcamp-research-admissions-part2/"/>
+    <updated>2013-09-15T18:40:00-07:00</updated>
+    <id>http://RebootJeff.github.io/blog/2013/09/15/coding-bootcamp-research-admissions-part2</id>
+    <content type="html"><![CDATA[<p><img src="http://RebootJeff.github.io/images/mycodingbootcamplogo_SP.png" alt="my coding bootcamp logo" /></p>
+
+<p class="my-caption">Image Credits: original boot by MilitarySpot.com; ridiculous editing by me</p>
+
+<p>In <a href="http://RebootJeff.github.io/blog/2013/09/10/coding-bootcamp-research-admissions-processes-applications-and-interviews-part-1/">part 1</a>, I gave tips on tackling the admissions processes for coding bootcamps. In this article, I shall recap my personal experiences (all taking place in August 2013) with App Academy, Coding Dojo, Dev Bootcamp, General Assembly, Hack Reactor, and RocketU …in alphabetical order? Sure, why not.</p>
+
+<p>I won’t be covering answers to questions I asked at these interviews. I will cover some coding challenges and questions interviewers asked me. I will redact names. Originally, I wanted to include names, but for the sake of writing more openly, I decided to do some Find and Replace. If you apply to the bootcamps mentioned below, you’ll probably end up discovering a few of the names I’ve redacted anyway.</p>
+
+<p>In a future <a href="http://RebootJeff.github.io/blog/categories/bootcamp-research/">Coding Bootcamp Research</a> blog post, I will provide all the info I gleaned from my interviews.</p>
+
+<h1 id="app-academy-weeds-people-out-asap">App Academy weeds people out ASAP</h1>
+
+<h2 id="format">Format</h2>
+
+<ol>
+  <li>45-minute online quiz in Ruby</li>
+  <li>Another 45-minute online quiz in Ruby</li>
+  <li>???</li>
+</ol>
+
+<h2 id="tldr">TL;DR</h2>
+
+<p>BUZZKILL ALERT: I put a lot of time/effort into studying for their pre-interview Ruby quiz only to find out I had to do a 2nd quiz to get an interview. At that point, I was already interviewing with the other bootcamps, and I wasn’t motivated to contine with my App Academy admissions process. I really believe that interviews help show me how awesome a given bootcamp is –so <strong>2 pre-interview quizzes is like 2 obstacles to accessing a sales pitch I actually WANT.</strong></p>
+
+<h2 id="full-recap">Full Recap</h2>
+
+<p>I don’t remember if the response was immediate or took a few days to come my way, but soon after I submitted my App Academy application, I got an email telling me that I had to complete a 45-minute Ruby quiz before my admissions process could continue.</p>
+
+<p>The quiz came with instructions to help me study/prepare. It did not come with a deadline, and there was no countdown timer even though I was told I only had 45 minutes to finish. The quiz just involved implementing some functions. I completed the challenges in about 20-30 minutes. I then spend another 15 minutes refactoring the code. I’m not too familiar with Ruby, but I did learn a lot of fun things about the language that makes it possible to write incredibly concise code. <strong>It was a great quiz (what a weird thing to say).</strong></p>
+
+<p>A day after I submitted my quiz, I got an email telling me to do yet another quiz. At this point, I was not happy. Clearly, App Academy wants to really weed people out of their admissions. I understand that, but I very badly wanted to start the interview process sooner than later. A second quiz meant I’d have to spend more time studying Ruby when I was already busy with applying to other bootcamps and preparing for their interviews.</p>
+
+<p>Maybe I should’ve given them a chance, but I was already less interested in App Academy because they didn’t seem to stand out in any major way other than their deferred payment plan. So I ended up abandoning my App Academy application, and I never got an interview with them.</p>
+
+<p>Originally, I was intrigued by App Academy because it has a reputation for being tougher, putting it at the same high-caliber level as Hack Reactor. However, Hack Reactor seemed to put a lot more effort into community outreach, Quora posting, and just putting out more good vibes to get me excited about their program. In other words, <strong>App Academy’s marketing was over-shadowed by Hack Reactor’s marketing.</strong> I know that probably sounds really lame, but it’s the truth for my personal experience. As for the other bootcamps, they intrigued me by differentiating themselves in other ways.</p>
+
+<h1 id="coding-dojo-keeps-it-simple">Coding Dojo keeps it simple</h1>
+
+<h2 id="format-1">Format</h2>
+
+<ol>
+  <li>Non-technical interview</li>
+  <li>Profit.</li>
+  <li>???</li>
+</ol>
+
+<h2 id="tldr-1">TL;DR</h2>
+
+<p>Dojo only put me through 1 non-technical interview. The interview gave me a positive impression of the bootcamp culture, but other factors (like a weird pre-interview video) left me raising an eyebrow.</p>
+
+<h2 id="full-recap-1">Full Recap</h2>
+
+<p>Before my interview with Coding Dojo, <strong>I was emailed a link to a private pre-interview video.</strong> I was excited about what it could possibly cover. I was disappointed to learn it was a FAQs video. I won’t reveal the link or password, but I will give a quick overview of the contents.</p>
+
+<p>The video was a mediocre-quality recording of [CD person 1] talking to the camera. It was unedited, and just didn’t feel very professional. The whole time I watched him answer some FAQs, <strong>I kept wondering why the answers weren’t on the FAQ page of the Coding Dojo website.</strong> Why were these questions and answers password-protected?</p>
+
+<p>Maybe it’s because [CD person 1] answered questions re: comparing Coding Dojo to its competitors by admitting that their hiring network was smaller than most. The only reassurance provided was along the lines of “don’t worry, we’re working on it.”</p>
+
+<p>My first bootcamp interview was a phone call with [CD person 2], a Coding Dojo graduate-turned-teaching-assistant (aka Hacker-in-Residence or Developer-in-Residence). He was incredibly nice, and I dug his personality. He didn’t ask me any technical questions. He only asked me questions about myself to help set my expectations and gauge my motivation levels. He made me feel better about Coding Dojo, but I still figured the other bootcamps would probably do a better job of impressing me.</p>
+
+<p>About 6 days after the interview, I was emailed an offer to enroll in Coding Dojo’s September cohort. After about a week, I declined their offer.</p>
+
+<h1 id="dev-bootcamp----i-didnt-actually-apply">Dev Bootcamp – I didn’t actually apply</h1>
+
+<p>I wanted to join a bootcamp ASAP. DBC’s website says they’re sold out for the next 6 months, so I didn’t bother applying to their program.</p>
+
+<p>A few days ago, I met someone currently in Dev Bootcamp. She said that <strong>DBC is actually flexible in cohort placement.</strong> In fact, she was able to enter a sold out cohort.</p>
+
+<h1 id="general-assembly-likes-htmlcss">General Assembly likes HTML/CSS</h1>
+
+<h2 id="format-2">Format</h2>
+
+<ol>
+  <li>Non-technical interview</li>
+  <li>Online tutorial about HTML/CSS and jQuery</li>
+  <li>HTML/CSS challenge done at home (make an About Me webpage)</li>
+  <li>Semi-technical interview about your About Me page</li>
+</ol>
+
+<h2 id="tldr-2">TL;DR</h2>
+
+<p>I may have done a few things that screwed up my relationship with GA. Other than that, their admissions process was easy and fun.</p>
+
+<h2 id="full-recap-2">Full Recap</h2>
+
+<p>There’s some relevant backstory I need to tell you first. It all started BEFORE I cared about bootcamps. I enrolled in GA’s Front-End Web Development (FEWD) course. It’s 9 hours per class x 1 class per week x 10 weeks …for $3,000 (or maybe it was $3.5k; I don’t quite remember). I was really excited about the course, but I was worried it covered too many of the basics I already taught myself. I also worried that it wouldn’t really help me get a job due to lack of rigor.</p>
+
+<p>Eventually, I became way more interested in bootcamps, which provide much more learning per dollar spent. Furthermore, the GA FEWD course was clearly aimed at weekend warriors. I’m unemployed, so I may as well invest in a more immersive experience.</p>
+
+<p>Ok…enough excuses. The point is that I eventually canceled my enrollment a few days before the course started. This left a bad impression on GA. [GA person 1] was very patient with me, but I could tell he wasn’t happy with me. He agreed to begin my admissions process for GA’s bootcamp after a phone call (which turned out to be my first interview). The phone call was scheduled after I sent an email to GA asking why my bootcamp application hadn’t gotten a response. <em>Awkward.</em> [GA person 1] even told me he thinks I’d be better served by GA’s FEWD rather than GA’s WDI (Web Development Immersive, which is what they call their bootcamp). I didn’t express it, but I kind of took his comment as an insult. Please forgive my arrogance.</p>
+
+<h3 id="back-to-the-actual-ga-bootcamp-admissions-process">Back to the actual GA bootcamp admissions process</h3>
+
+<p>Via email, I was instructed to do a GA onine tutorial using their system called Dash. It was a pretty good-looking tutorial, but it covered really basic HTML/CSS + jQuery material. I was underwhelmed. I also had to create a simple About Me webpage (offline –no need to host it on the web). They made it clear that their expectations were low. They didn’t even expect me to use any jQuery even though their tutorial included it.</p>
+
+<p>There’s a <a href="http://qr.ae/NvpkG">relevant Quora answer</a> that explains how <strong>GA’s admissions process is supposed to be less technical for the sake of preventing discrimination against applicants with less programming experience.</strong> This is similar to Coding Dojo’s view on applicants. This is the opposite of how App Academy and Hack Reactor approach applicants.</p>
+
+<p>My second interview with GA was held at their offices in SF. I got there late. I was a sweaty mess because I took the BART to get into the city, but apparently GA’s offices are about 1 mile from the nearest BART station. I should’ve used the Caltrain. I’m a fool.</p>
+
+<p>[GA person 1] greeted me as if I hadn’t ruined his life through my FEWD course cancellation, so things started off great. He sent me to an empty classroom where I could be interviewed by [GA person 2], a Developer-in-Residence. She asked me to talk about my About Me page. She asked me what challenges I faced, what resources I used for help, what I thought, etc.</p>
+
+<p>Then she asked me general questions about my background, motivation, living arrangements + commute, etc. As I answered these typical questions, I was a bit befuddled by [GA person 2]. It wasn’t her line of questioning that made me think something was wrong, it was her communication style.</p>
+
+<p>She didn’t give off that aura of excitement that other interviewers had. She also seemed taken aback by my conversational interview style as if she had expected me to take a more passive role. I think I talked too much? [insert joke about how I write blog posts that are too wordy]</p>
+
+<p>I guess what I’m trying to say is that [GA person 2] made me think the interview was about me impressing GA rather than GA impressing me. As I’ve stated before, I believe all interviews are two-way streets.</p>
+
+<p>Luckily, [GA person 3] took [GA person 2]’s place. Apparently she had been sent to interview me in his stead because he got caught up with work. This probably explains her demeanor, so I shouldn’t be so critical of her. She wasn’t prepared to conduct an interview.</p>
+
+<p>[GA person 3] is also a Developer-in-Residence, but he carried himself with the confident vibes of a true pro. <strong>I liked this guy a lot. He made me feel excited about GA.</strong> I had to re-answer a lot of the same questions [GA person 2] asked me, but I got much more of a response out of [GA person 3] whereas [GA person 2] just sorted nodded dismissively as I spoke.</p>
+
+<p>Unfortunately, our time was <strong>very</strong> limited (likely my fault for being late). There was barely any room for me to ask questions. [GA person 3] left and [GA person 1] re-entered. I asked [GA person 1] some questions from <a href="http://RebootJeff.github.io/blog/2013/09/10/coding-bootcamp-research-admissions-processes-applications-and-interviews-part-1/#interview-questions-for-you-to-ask">my giant list</a>, but at that point, I didn’t have my laptop in front of me, which sucked because I didn’t memorize many questions.</p>
+
+<p>I left the building feeling very confident, but <strong>I never heard back from them.</strong> Not to sound too full of myself, but maybe they checked out my blog soon after I published <a href="http://RebootJeff.github.io/blog/2013/08/25/hack-reactor-is-my-future/">my announcement</a> about my enrollment at Hack Reactor.</p>
+
+<h1 id="hack-reactor-wants-to-kick-your-ass">Hack Reactor wants to kick your ass!</h1>
+
+<h2 id="format-3">Format</h2>
+
+<ol>
+  <li>Technical interview on basic JavaScript</li>
+  <li>AJAX + jQuery challenge done at home</li>
+  <li>Technical interview on Functional JavaScript (wtf!)</li>
+</ol>
+
+<h2 id="tldr-3">TL;DR</h2>
+
+<p>Holy crap! The admissions process was so friggin’ tough!</p>
+
+<h2 id="full-recap-3">Full Recap</h2>
+
+<p>Before my first HackR interview, I was emailed a big list of things to study. The list included a lot of JavaScript’s built-in Array and String functions. Right off the bat, I felt a bit intimidated because although the material looked easy, the length of the pre-interview to-do list was exceptional.</p>
+
+<p>I was interviewed in person by a Hacker-in-Residence named [HackR X] and a co-founder named [HackR staff]. Quick aside: HackR’s office space is really friggin’ warm so you should dress appropriately. I was sweating even before I got nervous.</p>
+
+<p>[HackR X] asked me to do some live coding, which was so easy (basic looping, arrays, etc. in JS) that I got over-confident. I made some <em>really</em> careless mistakes (off-by-1 bug, overly-complicated algorithm, etc). Woops.</p>
+
+<p>It’s all good though. [HackR staff] seemed intimidating at first by just focusing on his own laptop the whole time as if he was just there to casually judge me. However, [HackR staff] and [HackR X] eventually helped me edit my code.</p>
+
+<p>Then, they asked me some questions. At the end of the interview, [HackR staff] did a quick recap, explaining that HackR has three objectives for first-round interviews:</p>
+
+<ol>
+  <li>Set my expectations - They wanted to make sure I knew that their program is no joke; it’s seriously intense</li>
+  <li>Gauge my motivation/drive - They wanted to see how much self-teaching I’ve done</li>
+  <li>Check my financial situation - They wanted to hear how I planned to pay the high tuition</li>
+</ol>
+
+<p>My first HackR interview was scheduled for 1 hour, but it lasted for at least 1.5 hours because I asked a crapload of questions. Before I interviewed with them, I was already extra excited about them because of some hype from <a href="http://kevinhamiltonsmith.com/hack-reactor-student-blogs/">student/alumni blogs</a> and <a href="http://www.quora.com/Hack-Reactor">their thoughtful responses to Quora questions</a>. So I put in extra effort into preparing my questions. [HackR staff] showed more interest in my candidacy-for-HackR-student when I started asking a lot of good questions that [HackR X] couldn’t answer.</p>
+
+<p>Side note: [HackR staff] appeared surprised when I asked him about their refund policy. That’s ironic when you consider that <a href="http://hackreactor.com/developer-bootcamp-contracts">their own blog suggests you ask all bootcamps about refunds</a>.</p>
+
+<p>After the first interview, I was told to complete a coding challenge at home before my second interview. I was full of confidence and empty of any commitments, so I scheduled my second interview to take place four days after my first interview. That didn’t leave me with much time, but [HackR staff] assured me that it would only take about 8 hours to complete.</p>
+
+<h3 id="here-comes-the-pain">Here comes the pain</h3>
+
+<p>It took me <em>at least</em> 8 hours. First, I was instructed to go through <a href="http://discover-devtools.codeschool.com/">Code School’s tutorial on Google Chrome dev tools</a>. Then, things got quirky. It’s hard to explain, but the challenge included some unique presentation. You’ll have to explore it yourself. However, I’m not entirely praising it because the instructions felt somewhat vague even after reading the additional tips they provided. I remember reading a student blog that claimed <strong>HackR purposefully makes certain instructions vague or certain code buggy just to keep you on your toes.</strong> Too bad I forgot the name of the blog, so I can’t give you a link.</p>
+
+<p>Anyway, I had to teach myself basic AJAX. I already taught myself basic jQuery, which was also a required technology for the challenge. Unfortunately, I didn’t have a very good understanding of AJAX. I got my code to work, but one particular feature functioned only after some guesswork. I didn’t truly know how that feature worked. Moreover, I could sense my app was only about 98% correct. <strong>My brain told me this was ok, but my heart told me to go cry like the weakling that I am.</strong></p>
+
+<p>I should mention that Hack Reactor lets you ask for their help via email. So I did. Twice. The first time, I got a response within a few hours. The second time, I never got a response. So if you’re trying to get through the coding challenge, keep in mind that <strong>you cannot rely on their email help.</strong> Doh.</p>
+
+<p>My second-round interview was a somewhat disjointed experience. At first, I was interviewed by Hacker-in-Residence [HackR Y]. Once again, I felt like I had over-stepped my bounds. When [HackR Y] asked me about my experience with the AJAX + jQuery challenge, I interpreted the moment as an opportunity to ask him to help me get my code 100% correct. We spent more than a few minutes on it before he decided it was time to move on. As it turned out, the interview was supposed to focus on new challenges, not the AJAX + jQuery challenge. That was an unpleasant surprise (considering the effort I spent overcoming its difficulties).</p>
+
+<p>I began programming solutions to the new challenges, which involved pretty simple functions. However, throughout the interview, [HackR Y] randomly left to deal with a phone call. He described it as “the most important phone call of my life” so the man was not investing much attention into my interview. I didn’t hold it against him because he assured me my interview time would be extended as necessary, and I didn’t have any other plans that day.</p>
+
+<p>Eventually, [HackR Z], another Hacker-in-Residence took over [HackR Y]’s interviewing duties. <strong>This is where I got my ass beat.</strong> [HackR Z] asked me to rewrite the functions I had just completed in a way that reused one after the other. Not only that, but the rewrite challenge also required the functions to accept functions as parameters. I believe all of this can be described as Functional Programming, a computer science concept I had never heard of before.</p>
+
+<p>I managed to make a function that called another function while passing it a function. Hot damn. Then I was told to go another layer deeper. <strong>My brain replied, “DO NOT WANT.”</strong> I was abandoned by my own brain. I guess most people would call it “panic” but it just felt like I couldn’t think. It could almost be described as ignorant bliss if not for the soul-crushing self-disappointment that accompanied it.</p>
+
+<p>[HackR Z] was cool about it. He guided me through a solution, then he brought me to a <del>beautiful backyard under false pretenses to put me out of my misery</del> conference room so we could talk more. I proceeded to ask him a bunch of questions, some of which I had already asked [HackR X] to answer (I wanted to get multiple perspectives for certain questions). <strong>I got the impression that [HackR Z] was not just cool, he was superbly chill.</strong></p>
+
+<p>Plus, but he did something particularly considerate. The first thing he did upon closing the conference room door behind us was give me immediate feedback. He straight-up told me not to worry about my brain fart during the live coding session because he felt the whole ordeal qualified as a great interview.</p>
+
+<p>I don’t casually throw around the word “epic” like many of my peers do, but [HackR Z] basically <strong>excorcised the demon of self-doubt from my mind.</strong> And it felt epic. The feeling of doubt felt epic, and the feeling of that toxicity evaporating felt even more epic. Epic, epic, <em>EPIC!</em></p>
+
+<h1 id="rocketu-is-new-and-eager">RocketU is new and eager</h1>
+
+<h2 id="format-4">Format</h2>
+<ol>
+  <li>Non-technical interview</li>
+  <li>Semi-technical interview on HTML/CSS + programming concepts</li>
+</ol>
+
+<h2 id="tldr-4">TL;DR</h2>
+
+<p>RocketU really felt extra eager to me. The new bootcamp in town really wanted to impress. The technical questions were trickier than they should’ve been due to some miscommunication.</p>
+
+<h2 id="full-recap-4">Full Recap</h2>
+
+<p>The first interview was a typical test of personality fit. I spoke with [RU person 1] over the phone for the first interview. It was a typical non-technical conversation about my background and expectations. She tried to talk up RocketU’s awesomeness by describing how amazing the instructors are, but for whatever reason, I started worrying about RocketU’s lack of cool factor. Other bootcamps feel like families or clubs. RocketU was missing that vibe (more on this a few paragraphs below).</p>
+
+<p>The second interview had some very specific quiz-like questions, but no live coding. I loved the second interviewer. [RU person 2] is an instructor with a solid background in teaching technical material. He asked me questions about HTML/CSS. He then asked me how I would solve a very particular problem. After he gave me some hints, I realized that I completely misunderstood the problem when he first described it.</p>
+
+<p>I actually ended up misunderstanding him TWICE, so it took me awhile to solve the problem, which is sad because the problem really wasn’t that difficult. It was just a re-phrased version of a classic algorithm problem/concept.</p>
+
+<p>I wish [RU person 2] could’ve showed me around RocketSpace a bit more because I never even got to see the part of the office the RocketU students use. I only got to check out a portion of the main RocketSpace floor.</p>
+
+<p>However, the real bummer is that the whole experience felt a bit more corporate (for lack of a better word) and a bit less start-uppy than the other bootcamps. This is pretty ironic considering that RocketU is part of a startup accelerator called RocketSpace.</p>
+
+<p>There are a few reasons for the “corporate” feel: The office space felt less fun and energetic (it’s less intimate; it’s less open due to the presence of many small dividers), RocketU doesn’t have its own blog filled with stories to get you pumped up, and RocketU is too young to have a promo video showing off its cool students. Plus, RocketU is run by people with experience in corporate training. So like I said earlier, the vibe I got from RocketU was very different from the vibe I got from its competitors.</p>
+
+<p>That said, I wouldn’t be surprised if my impressions are just plain wrong because RocketU doesn’t have as much outreach/marketing and my interviews weren’t particularly long.</p>
+
+<h1 id="for-the-record">For the record</h1>
+
+<p>I did not send followup emails or thank you emails after my interviews. I know you’re supposed to do that for job interviews, but I wasn’t sure what to do for bootcamp interviews. Looking back on it, I wish I had at least sent thank you emails even though everything worked out in the end.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[How Not to Rescue a Baby Snake]]></title>
+    <link href="http://RebootJeff.github.io/blog/2013/09/13/how-not-to-rescue-a-baby-snake/"/>
+    <updated>2013-09-13T10:04:00-07:00</updated>
+    <id>http://RebootJeff.github.io/blog/2013/09/13/how-not-to-rescue-a-baby-snake</id>
+    <content type="html"><![CDATA[<p><img src="http://RebootJeff.github.io/images/20130913/gopher_snake_SP.jpg" alt="a gopher snake" /></p>
+
+<p class="my-caption">A gopher snake - Image Credits: <a href="http://naturemappingfoundation.org/natmap/facts/gopher_snake_712.html">NatureMapping Animal Facts</a></p>
+
+<h1 id="supah-random-time">Supah Random Time</h1>
+
+<p>I recently moved a baby snake from my parking garage. I did it for two reasons: (1) Save the baby! (2) Play with a snake!</p>
+
+<p>I then did something much more random. I wrote up a detailed email about the mini-adventure, and I sent it to my apartment’s building manager…because why not? Actually, there’s a good reason to not do this: it’s weird. Then again, I don’t do this type of writing very often, so it was fun. Below, you can find a relevant YouTube video. Below that, you can find an slightly edited version (<em>emphasis added</em>) of the email I sent to a stranger.</p>
+
+<iframe width="300" height="169" src="http://RebootJeff.github.io//www.youtube-nocookie.com/embed/vcC9qrWZQoE" frameborder="0" allowfullscreen=""></iframe>
+
+<h1 id="the-email">The Email</h1>
+
+<p>Hi [Apartment Management],</p>
+
+<p>If you are busy, don’t bother reading this email now. There is no urgency. This is just an “FYI” sort of thing.</p>
+
+<p>I feel obligated to let you know that I removed a small snake from the parking garage at [address]. I threw it outside about 100 feet from the building.</p>
+
+<p>I probably looked rather ridiculous during the whole situation. If someone alerts you to “suspicious activity” involving a short Asian man with glasses, black jacket, black gloves, brown backpack, red tennis racquet, and plain cardboard box…well…<strong>that was me.</strong></p>
+
+<p>I was walking to my car on [floor number] when I noticed the baby snake. It looked harmless, but it was hanging out in the middle of the floor, where cars were likely to run over it. In fact, I was likely to run over it. This motivated me to move it.
+[ Ed. note: wow that was a dry paragraph :( ]</p>
+
+<p>I went back to my apartment to gather some supplies. I put on a pair of batting gloves. I then put on a pair of tactical gloves <em>over</em> the batting gloves (I was not a soldier or a cop; I was given tactical gloves when interning for the Navy; they wanted the interns to move some warehouse crap so they gave us nifty SWAT gloves to make us feel special).</p>
+
+<p>I proceeded to “arm” myself with a tennis racquet and a small cardboard box. I felt quite safe…until I finally approached the snake and it started lashing out. <strong>I hope there are no security cameras that captured my fear on tape.</strong></p>
+
+<p>I began circling the snake, and I was unpleasantly surprised that its eyes/head followed my feet rather than following the racquet or the cardboard box. It seemed to know that my tools were not vulnerable. It seemed to know my feet were actually part of my body. Luckily, it had no way of knowing my feet were armored by some decently tough boots.</p>
+
+<p>After I ran around the snake a few times, it probably got dizzy because I was able to finally get behind it without its head tracking me. I slowly moved my box and racquet closer to him. With the type of bravery often associated with stupidity, I swatted the snake into the box. I was really quite proud of myself at that point.</p>
+
+<p>But of course there was a plot twist. I walked over to the garage gate, but I guess its sensors are designed to discriminate against non-machines because it would not open for me the same way it opens for my car. I went back to my car, which was still resting in its parking spot. I hit the garage opener button inside the car. Nothing happened, so I considered driving my car closer to the garage gates.</p>
+
+<p>That would require leaving my snake box on the floor or bringing the snake box into the car with me. I didn’t want to create a “suspicious package” situation, so option #1 was out of the question. I had no way of keeping the box shut other than holding it closed with my hands, so removing my hands from the box to drive seemed like a bad idea. That’s how option #2 vanished.</p>
+
+<p>I ventured into a stairwell to find an exit. To my dismay, I ended up at an exit door that recommended I do not disturb it lest it disturb the rest of the building with an emergency alarm. Faced with the facts, I had to use the elevator to go down to the lobby. By the way, is there a way to get to the lobby via stairs? Maybe I missed a door.</p>
+
+<p>I finally made it outside. I walked down the road to get to the spot where [street #1] and [street #2] split (or merge, depending on your mood). I walked about 10 feet up [a hill]. It was here that I decided to open the box and drop the snake. It was here that I probably looked the most suspicious <strong>(and awkward)</strong>. I made a motion similar to tossing water out of a bucket, but no snake was ejected from the box. I’m sure nearby drivers thought I was a lunatic had they looked my way as they drove by.</p>
+
+<p>I slowly turned the box towards my face to look inside. I didn’t completely aim the top of the box at myself because I’m not crazy, but as I peered into the box at a very acute angle (or obtuse, depending on your mood), I realized the little animal was hiding under a flap. I felt a certain sense of guilt at that point, but the baby was likely going to face <strong>death by Goodyear</strong> if I hadn’t disturbed it.</p>
+
+<p>I turned the box in a few different ways until I heard the snake fall from its hiding spot. Finally, I released the snake. It landed <strong>belly up</strong>, which made me feel like a jerk one last time.</p>
+
+<p>For the record, I did some quick online research just now. It was likely a harmless gopher snake. I watched a YouTube video of a man letting a wild gopher snake bite him because apparently those babies have no teeth. How interesting.</p>
+
+<p>Regards,</p>
+
+<p>Jeff</p>
+
+<h1 id="by-the-way">By the way</h1>
+
+<h2 id="im-an-idiot">I’m an idiot.</h2>
+<p>Sometimes.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[[Coding Bootcamp Research] Admissions Processes: Applications and Interviews (Part 1 of 2)]]></title>
+    <link href="http://RebootJeff.github.io/blog/2013/09/10/coding-bootcamp-research-admissions-processes-applications-and-interviews-part-1/"/>
+    <updated>2013-09-10T14:25:00-07:00</updated>
+    <id>http://RebootJeff.github.io/blog/2013/09/10/coding-bootcamp-research-admissions-processes-applications-and-interviews-part-1</id>
+    <content type="html"><![CDATA[<p><img src="http://RebootJeff.github.io/images/mycodingbootcamplogo_SP.png" alt="my coding bootcamp logo" /></p>
+
+<p class="my-caption">Image Credits: original boot by MilitarySpot.com; ridiculous editing by me</p>
+
+<p>In this blog post, I’m going to cover some basic info and tips about applications and interviews for coding bootcamps. The bootcamps are selective programs. Read on if you’re curious about the application process and/or if you need some help preparing for interviews.</p>
+
+<p>I can only provide my thoughts based on applying to Coding Dojo, Hack Reactor, RocketU, General Assemby, and App Academy. This blog post won’t be very bootcamp-specific, but in part 2 of 2, I will write detailed descriptions of my personal application and interview experiences.</p>
+
+<h1 id="applications">Applications</h1>
+
+<p>I filled out applications for RocketU and Coding Dojo first. Then I submitted applications for Hack Reactor, General Assembly, and App Academy. All applications consisted of web forms that were fairly straightforward, but some included interesting mini-essays. You can visit their respective websites and find the forms yourself, but I just want to mention that they aren’t too time-consuming.</p>
+
+<p>On the other hand, I heard Dev Bootcamp’s application asks you to make a video of yourself so they can check out your personality. That might be a bit more time consuming. I didn’t bother applying to Dev Bootcamp because I wanted to enroll in a bootcamp program ASAP, but Dev Bootcamp’s application page shows their classes are sold out for the next 6 months!</p>
+
+<h2 id="check-for-dates">Check for dates</h2>
+
+<p>That reminds me: you should check to see what dates are available. Unfortunately, not all sites make it crystal clear. You might waste a lot of time reading a website only to find out later that their next open enrollment is too late for you.</p>
+
+<h3 id="examples">Examples</h3>
+
+<p>Note: These examples will probably be out-dated within a year or so. I imagine these companies will change their websites in due time.</p>
+
+<p><a href="http://apply.devbootcamp.com/">Dev Bootcamp</a> - Their website doesn’t tell you they’re sold out for 6 months until you reach their application page, which you probably won’t do until you’ve read a lot of the other pages on their site.</p>
+
+<p><a href="http://hackreactor.com/">Hack Reactor</a> - You have to scroll down about 33% of their single-page website before you find their start dates in a section entitled <em>The Program</em>. When I was just skimming, I missed these dates because my eyes were naturally drawn to the big jQuery, HTML5, etc. logos displayed just below the dates.</p>
+
+<p><a href="http://codingdojo.co/">Coding Dojo</a> - They actually show their next start date right away. The first thing you read on their website is when, where, and how much does it cost. Good job, Dojo!</p>
+
+<p><a href="https://generalassemb.ly/education/web-development-immersive/san-francisco">General Assembly</a> - A navigation bar at the top helps you skip to the <em>Schedule</em> list of available dates.</p>
+
+<p><a href="http://rocket-space.com/rocketu/#bootcamp">RocketU</a> - The RocketU single-page website shows info about their non-bootcamp programs before getting to the bootcamp overview. They provide a navigation link to jump to the bootcamp info, and that’s when you’re greeted with next available start date and tuition cost. Not bad.</p>
+
+<p><a href="http://www.appacademy.io/applications/new">App Academy</a> - Their navigation bar at the top of the page includes a link to dates. Their application allows you to appy to multiple dates. Nice touch! I don’t remember if any other applications have that ability.</p>
+
+<h2 id="dont-fret-for-about-one-week">Don’t fret for about one week</h2>
+
+<p>Also, you should relax after submitting an application because <strong>it took 2-7 days for the bootcamps to respond to my applications.</strong> I think some bootcamps provided automatic confirmation emails to let me know they got my application, but if I recall correctly, at least one bootcamp didn’t give me any sanity-fostering confirmation email.</p>
+
+<p>If you don’t hear back from a bootcamp right away, keep in mind that they’re flooded with applications. I suggest waiting a week for them to respond to you before sending any followup emails.</p>
+
+<h1 id="interviews">Interviews</h1>
+
+<p>It’s important to consider that <strong>the interview process is as much an opportunity for them to wow you as it is a time for you to impress them.</strong> This is why I looked forward to each interview. I couldn’t wait to be wowed.</p>
+
+<p>Before each interview, I reviewed my research on the particular bootcamp. I re-visited the bootcamp’s website and their blog to find nuggets of info worth asking them about. A lot of my questions probed for elaboration on something very specific to the bootcamp in question.</p>
+
+<p>I had handful of standard questions about logistics, a few questions comparing them against their competitors, questions about curriculae, etc. You can find a list of questions at the end of this blog post. I didn’t ask all my prepared questions though. Sometimes, you need to evaluate how your interview conversations are flowing. I can’t say I flawlessly navigated these conversations, but I made conscious decisions to ask or not ask certain questions as the circumstances required.</p>
+
+<h2 id="my-interviewing-advice">My interviewing advice</h2>
+
+<ul>
+  <li>Write down a ton of questions to ask for the final half/third of your interview. Asking a lot of questions makes you look AWESOME.
+    <ul>
+      <li>Ask questions that show you’re planning ahead (i.e., questions about logistics).</li>
+      <li>Ask questions that show you’re serious (i.e., very specific/thoughtful questions).</li>
+    </ul>
+  </li>
+  <li>Be prepared to answer basic questions that you already answered in your application forms. Examples:
+    <ul>
+      <li>Why do you want to do a bootcamp?</li>
+      <li>How did you hear about us?</li>
+      <li>Why do you want to learn to code?</li>
+      <li>Can you handle the intensity of our program? Are you sure? Are you sure you’re sure?</li>
+      <li>What prior programming experience do you have?</li>
+    </ul>
+  </li>
+  <li>Do NOT panic during the technical portion of the interviews. If you don’t know something, just admit it. They don’t expect you to be an expert; they just want to see how much you know so far by asking progressively harder questions until they get to topics beyond your current experience.</li>
+</ul>
+
+<p>I panicked a bit in my Hack Reactor and RocketU interviews. In both cases, the interviewer was nice and helped me out. In both cases, I walked out with positive vibes.</p>
+
+<h1 id="interview-questions-for-you-to-ask">Interview questions for YOU to ask</h1>
+
+<p>You might think it’s hard to come up with interesting questions. I used to think that way, but then I stopped being cynical for 2 seconds so then my mind could do some brainstorming. Here are a few ideas for finding inspiration:</p>
+
+<h2 id="question-topics">Question Topics</h2>
+
+<ul>
+  <li>Ask questions about something interesting mentioned on the bootcamp’s blog.</li>
+  <li>Ask questions about specific topics covered by their curriculum.</li>
+  <li>Find the interviewer’s LinkedIn profile or Twitter feed. You might find something cool to ask about.</li>
+  <li>Ask for examples of something they brag about (e.g., if they brag about guest speakers or networking events ask more about those).</li>
+  <li>Check out <a href="http://RebootJeff.github.io/blog/2013/09/04/coding-bootcamp-research-how-to-compare-bootcamps/">my list of factors</a>. Formulate questions about them.</li>
+</ul>
+
+<h2 id="examples-1">Examples</h2>
+
+<h3 id="logistics">Logistics</h3>
+
+<ul>
+  <li>What are the exact start and end* dates for the cohort that starts in (INSERT MONTH HERE)?
+    <ul>
+      <li>*Note: Some bootcamps don’t provide end dates on their websites.</li>
+      <li>Are there any holidays or breaks?</li>
+    </ul>
+  </li>
+  <li>How many students and teachers are there?</li>
+  <li>Does the bootcamp use a rolling cohort system?</li>
+  <li>What are a typical day’s hours?
+    <ul>
+      <li>What percentage of students stay extra late?</li>
+    </ul>
+  </li>
+  <li>What are your payment plans/options?
+    <ul>
+      <li>Do you have a refund policy?</li>
+    </ul>
+  </li>
+  <li>Are there any special requirements?
+    <ul>
+      <li>Do I need a Mac/Linux?</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="qualifications">Qualifications</h3>
+<ul>
+  <li>What kind of industry experience do the faculty have?</li>
+  <li>How do you help students find jobs?</li>
+  <li>How often do students find jobs after graduation?</li>
+  <li>Do you have any hiring/company partners?</li>
+  <li>Do you conduct any alumni outreach?
+    <ul>
+      <li>What kind of support do you provide to alumni?</li>
+    </ul>
+  </li>
+  <li>What are the roles of the various faculty/staff members?
+    <ul>
+      <li>How much attention will I get from lead instructors versus part-time instructors versus junior assistants?</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="technical">Technical</h3>
+<ul>
+  <li>Why did you choose to cover language X instead of language Y?</li>
+  <li>How much of the curriculum features group projects versus individual projects versus quick assignments?</li>
+</ul>
+
+<h3 id="personalityculturevision">Personality/Culture/Vision</h3>
+<ul>
+  <li>What’s your favorite bootcamp-hosted event?
+    <ul>
+      <li>E.g., fire-side chat, guest speaker, social event, networking event, etc.</li>
+    </ul>
+  </li>
+  <li>Why did you decide to work for the bootcamp?</li>
+  <li>What is your favorite part (aka sprint) of the curriculum?</li>
+  <li>What personality traits do your students have in common?
+    <ul>
+      <li>How much experience do your students have before starting the course?</li>
+    </ul>
+  </li>
+  <li>Do you ever kick out students? (You may want to re-phrase this question to be less blunt)
+    <ul>
+      <li>How do you help struggling students?</li>
+      <li>How do you ensure no students fall behind?</li>
+    </ul>
+  </li>
+  <li>What are you doing to improve the bootcamp?
+    <ul>
+      <li>Are you hiring more teachers? Extra staff? Specialized staff (e.g., job hunting, alumni outreach, etc)?</li>
+      <li>Are you expanding into other cities/locations?</li>
+    </ul>
+  </li>
+</ul>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[[Coding Bootcamp Research] How to Compare Bootcamps]]></title>
+    <link href="http://RebootJeff.github.io/blog/2013/09/04/coding-bootcamp-research-how-to-compare-bootcamps/"/>
+    <updated>2013-09-04T01:12:00-07:00</updated>
+    <id>http://RebootJeff.github.io/blog/2013/09/04/coding-bootcamp-research-how-to-compare-bootcamps</id>
+    <content type="html"><![CDATA[<p><img src="http://RebootJeff.github.io/images/mycodingbootcamplogo_SP.png" alt="my coding bootcamp logo" /></p>
+
+<p class="my-caption">Image Credits: original boot by MilitarySpot.com; ridiculous editing by me</p>
+
+<h1 id="how-do-you-research-bootcamps">How do you research bootcamps?</h1>
+<p>When you’re about to buy a car, you gather relevant data by going to KBB, Edmunds, and other sites. You read editorial reviews and watch video reviews. You can investigate possible issues by searching forums and recall databases.</p>
+
+<p>When comparing cars, you consider fuel economy, reliability, style, and niceties. When comparing any big expenditure, you consider price and value. As for determining which aspects of a car really matter to you the most, it’s pretty intuitive to just think about your daily life.</p>
+
+<p>So what do you do when “shopping” for a coding bootcamp? It’s a lot like shopping for cars, choosing a university, or making any other big decision: it’s time-consuming, it can be overwhelming, and there’s a ton of info for your consideration. However, it’s pretty easy to learn how to research cars and colleges thanks to the abundance of resources out there –but bootcamps are new, so it’s no surprise that learning how to research them seems mysterious. I’m going to help you.</p>
+
+<p>When I started looking at coding bootcamps, I wasn’t sure what to do other than basic Googling and looking at compay websites. This blog post serves as an examination of how to examine bootcamps.</p>
+
+<h1 id="what-factors-should-you-consider">What factors should you consider?</h1>
+<p>I’m not claiming you need to thoroughly analyze every item in the list below. Just like any other big decision, you need to prioritize various factors based on your own preferences and needs.</p>
+
+<ul>
+  <li><strong>Curriculum:</strong> What will you learn? How will you learn it?
+    <ul>
+      <li><strong>Technical Skills:</strong>
+  Which programming languages will be taught? What tools of the trade will you learn? What about Test Driven Development (TDD)? How many frameworks will you be exposed to?</li>
+      <li><strong>Non-Tech Skills:</strong> Does the bootcamp cover job interview prep? Paired programming? Presentation experience? Resume workshops? Listening skills?</li>
+      <li><strong>Intensity:</strong> How much time is devoted to various topics? How difficult is the bootcamp relative to other bootcamps?</li>
+    </ul>
+  </li>
+  <li><strong>Faculty:</strong> How many teachers are employed by the bootcamp? What qualifies them to teach you and earn your money?</li>
+  <li><strong>Job Placement:</strong> Other than teaching you relevant skills, how can a bootcamp help you get a job?
+    <ul>
+      <li><strong>Alumni Success:</strong> What kinds of careers have previous students earned after attending the bootcamp (employment rate)?</li>
+      <li><strong>Network:</strong> How well-connected is the bootcamp? How many employers are in touch with the program?</li>
+      <li><strong>Image:</strong> What kind of reputation does course have? Are employers familiar with the brand?</li>
+      <li><strong>Initiatives:</strong> Does the bootcamp conduct a hiring day? How many employers show up to the hiring day? Does the bootcamp offer job interview training? Does the bootcamp have a staff member dedicated to helping you find a job?</li>
+    </ul>
+  </li>
+  <li><strong>Schedule:</strong> Is there any flexibility in when you work? Are there any days off? Holidays?
+    <ul>
+      <li><strong>Typical Day:</strong> Students often dedicate more than 8 hours per day, but what about faculty? Will the long hours make it difficult to commute?</li>
+      <li><strong>Start &amp; End Dates:</strong> Do you want to get started right away? If so, the start date surely matters. The end date might affect your ability to find a job ASAP. What if the end date is right around the end of employers’ fiscal years?</li>
+    </ul>
+  </li>
+  <li><strong>Cost:</strong> How does a bootcamp’s price compare to its competitors? Why did they choose a particular price?
+    <ul>
+      <li><strong>Payment Plans:</strong> What’s the initial deposit? Do you pay in chunks, or all at once upfront? Can you defer payment until after a certain date?</li>
+      <li><strong>Discounts:</strong> Are there any scholarships for minorities/females? Are there any refunds or partial refunds upon getting hired by their employer network?</li>
+      <li><strong>Value:</strong> How much faculty time do you get for your money? Does the bootcamp provide computers? Does the bootcamp provide extra nice office space?</li>
+    </ul>
+  </li>
+  <li><strong>Facilities:</strong> Speaking of office space, are the facilities boring, or do they add to the learning experience? Where are they located? Will the location involve high commute costs? How feasible is it to live in a hostel near the bootcamp?</li>
+  <li><strong>Character:</strong> Does the bootcamp feel like a startup, a corporate player, or an amateur hour?
+    <ul>
+      <li><strong>Personalities:</strong> What’s the culture like? Do they welcome total noobs, or do they demand demonstrable coding experience?</li>
+      <li><strong>Long-Term Vision:</strong> How does the bootcamp treat its alumni? Does the bootcamp plan on expanding its territory or re-investing in a single location?</li>
+      <li><strong>Extras &amp; Perks:</strong> Free wifi? Duh. Free lunch? Oh nice. Organized outings? Sports? Happy hours? Guest lectures from industry experts?</li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="how-do-you-prioritize-factors">How do you prioritize factors?</h1>
+<p>Not only do you want to know what factors to consider, but you also want to know how much you should care.</p>
+
+<p>For factors like cost and location of facilities, it’s obvious how to think about their impacts relative to your life. For factors such as curriculum and long-term vision, it can be hard to figure out what matters to you. Should you look for a bootcamp that focuses on Ruby on Rails or Python with Django? Should you believe it when people say picking a programming language doesn’t matter?</p>
+
+<p>Other factors might actually surprise you once you dig into them. For example, it might bother you to find out that some of your tuition/time is being spent on <a href="http://devbootcamp.com/2013/01/30/yoga-panic-pandas-3-things-you-might-not-expect-from-a-programming-bootcamp/">mandatory yoga</a> classes.</p>
+
+<p>(For the record, I like the idea of mandatory yoga, but I’ve seen <a href="http://qr.ae/IL5Mc">negative reactions</a> to the fact.)</p>
+
+<p>I will try to explore the question of “how do you prioritize factors?” in much greater detail in upcoming blog posts that focus on a few factors at a time.</p>
+
+<h1 id="how-do-you-gather-info">How do you gather info?</h1>
+
+<ul>
+  <li><strong>Bootcamp website:</strong> Most bootcamp websites provide an overview of curriculum, tuition, etc. They don’t always do a good job of telling you the quality of their faculty or the typical day schedule.</li>
+  <li><strong>Comparison sites:</strong> A pair of new websites have been created to help you compare bootcamps by providing spec sheets. They don’t do a good job of providing info on bootcamp culture. What’s nice is that they have reviews, but the reviews basically feel like Quora comments.
+    <ul>
+      <li><a href="http://bootcamps.in">bootcamps.in</a>: Has a few helpful articles and a big list of self-education resources.</li>
+      <li><a href="http://bootcamper.io">bootcamper.io</a>: No articles, but cleaner aesthetics and better layout.</li>
+    </ul>
+  </li>
+  <li><strong>Quora:</strong> This is a fantastic resource if you want to hear from both students and co-founders. I’ve seen a lot of posts by founders of Dev Bootcamp, RocketU, Hack Reactor, and a few non-San Francisco bootcamps. Some posts feel like advertisements, but some feel like authentic, honest nuggets of insight.</li>
+  <li><strong>Student blogs:</strong> There are a lot of blogs out there by current and former students. They often cover curriculum details. They sometimes talk about bootcamp culture. It’s nice to read success stories, but you might also find tales of unfulfilled expectations.</li>
+  <li><strong>YouTube and Vimeo:</strong> Searching for videos can help you find out more about a bootcamp’s facilities, student personalities, etc.</li>
+  <li><strong>Admissions interviews:</strong> These are going to be your best chance to get your questions answered about typical day schedule, payment options, job placement, etc. Just keep in mind that the answers are biased.</li>
+</ul>
+
+<p>You can also find press coverage of bootcamps, but I’ve found that they generally fail to give you much insight. Most articles are just explaining what a coding bootcamp is. Some press coverage involves video interviews and whatnot. Those are worth watching because even though they’re edited fluff pieces, they still give a glimpse into personalities and facilities.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Mini-Review of CheckiO]]></title>
+    <link href="http://RebootJeff.github.io/blog/2013/09/02/mini-review-of-checkio/"/>
+    <updated>2013-09-02T13:12:00-07:00</updated>
+    <id>http://RebootJeff.github.io/blog/2013/09/02/mini-review-of-checkio</id>
+    <content type="html"><![CDATA[<h1 id="overview">Overview</h1>
+
+<p><a href="http://www.checkio.org/">CheckiO</a> is a website that aims to teach programming by providing an online gaming world with some social features heavily emphasized. CheckiO is meant for beginners and experts alike, but all coding challenges must be completed in Python.</p>
+
+<p>The creators have quite a bit of hype behind them. They have received hundreds of thousands of dollars in funding. They have cultivated a thriving community of users. So yeah, my interest was piqued.</p>
+
+<iframe width="300" height="169" src="http://RebootJeff.github.io//www.youtube-nocookie.com/embed/kWoW6RgH04g" frameborder="0" allowfullscreen=""></iframe>
+
+<p>Side note: The site doesn’t seem to use secure HTTPS. It lets you log in with your other social media and developer community accounts (Facebook, Twitter, WordPress, GitHub, Stack Exchange, etc) so does that mean it’s safer to log in with a Twitter account rather than with a native CheckiO account?</p>
+
+<h2 id="disclaimer">Disclaimer</h2>
+
+<p>I did not play with CheckiO for more than a few hours, so that’s why I call this blog post a mini-review.</p>
+
+<p>I think giving it a couple of hours is enough to pass judgement considering that most users will probably give up or continue based on their initial 10 minutes on the site. But my point is that it’s possible that CheckiO is a much deeper, richer website if you’re patient enough to explore it.</p>
+
+<h1 id="what-i-thought">What I Thought</h1>
+
+<p>It looks like the CheckiO community is quite strong, but the site is designed to attract users with a visual wow factor that is misleading. The visuals don’t really tie into the actual coding experience very well. It reminds me of when I first tried Neopets. I was disappointed to find that interaction with the pets was limited to static interaction rather than real-time, animated interactions.</p>
+
+<p>Although the visuals of the CheckiO world seem to be geared towards attracting a younger crowd, that potential user base will be deterred by the detachment of said world. Try as they might, the creators of CheckiO fail to make the world, the backstory, the characters, etc. feel relevant when facing a coding challenge. It’s kind of like how some action movies and video games have plots that barely exist because the creators focused more on the action than the story. I get the sense that the creators of CheckiO are actually trying hard to make their story feel relevant, but it’s just not working for me.</p>
+
+<p>In other words, CheckiO wants to prevent users from thinking it’s just another site full of coding challenges by showering the experience with cool graphics and a backstory. They want you to think it’s an edutainment experience rather than a purely academic one. They want you to think CheckiO is a game rather than a series of assignment akin to homework, but it just doesn’t feel like a video game.</p>
+
+<p>The bulk of the experience is not something that could be described as “gameplay.” The in-browser IDE screams “boring” when compared to the home screen presented after logging in. This is a big bummer because everything you see leading up to a coding challenge makes you think you’re about to see something really cool and interactive. It actually makes me think I’m about to see a mini-game. Instead, you end up setting your eyes on a very unappealing IDE.</p>
+
+<p>Despite its attempts to the contrary, CheckiO is just another site full of coding challenges. The challenges are fun for people who already enjoy programming, but the site just doesn’t live up to its potential to reach out to a new, bigger, untapped audience. The user experience really needs to be remade to properly engage users quickly. Instead, it leaves you a bit confused because it looks like a site full of features and gamification, but you can’t quite figure out how to enjoy the benefits.</p>
+
+<p>Given the current success earned by CheckiO, I have a feeling more patient yields more rewards when using the site, but I still have a hard time imagining that “coding on CheckiO” could ever be described as “playing CheckiO.” I feel bad to give CheckiO a thumbs down because they’re the type of underdog with the type of good intentions that I want to support.</p>
+
+<h2 id="woo">Woo!</h2>
+<ul>
+  <li>Thriving international community</li>
+  <li>Fun coding challenges</li>
+</ul>
+
+<h2 id="boo">Boo!</h2>
+<ul>
+  <li>Long load times</li>
+  <li>Tangled navigation</li>
+  <li>Omg bubbly/glassy UI is so 2009 duh</li>
+  <li>Solutions not displayed for first few challenges (even after you pass them)</li>
+  <li>The weird capitalization in the brand name “CheckiO” bothers me :p</li>
+</ul>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Hack Reactor is my future]]></title>
+    <link href="http://RebootJeff.github.io/blog/2013/08/25/hack-reactor-is-my-future/"/>
+    <updated>2013-08-25T15:58:00-07:00</updated>
+    <id>http://RebootJeff.github.io/blog/2013/08/25/hack-reactor-is-my-future</id>
+    <content type="html"><![CDATA[<p><img src="http://RebootJeff.github.io/images/hackreactorlogo_SP.png" alt="Hack Reactor logo" /></p>
+
+<p class="my-caption">Image Credits:  <a href="https://hackreactor.eventbrite.com/">Hack Reactor</a></p>
+
+<p>I have enrolled in the September 23, 2013 cohort of <a href="http://hackreactor.com">Hack Reactor</a> (aka HackR), which is a 12-week coding bootcamp (or “academy” as they say) located in downtown San Francisco. I will pay them thousands of dollars so I can spend about 72-80 hours/week training, learning, and exploring –all in an attempt to gain the skills of a software developer (with a focus on web tech).</p>
+
+<h1 id="hold-up-whats-a-coding-bootcamp">Hold up. What’s a coding bootcamp?</h1>
+<p>Coding bootcamps are training courses that teach students the fundamentals needed to become immediately employable in some field of programming (generally web development, but some bootcamps focus on smartphone apps). Most bootcamps require full-time commitment (you must quit your job) and are pretty intense. Students generally “work” for more than 40 hours per week.</p>
+
+<p>I put “work” in quotes because it in this case, I’m using the word to cover many different things that happen in a typical day at a bootcamp. Students listen to lectures by faculty and guest speakers. Students program in pairs. Students study and complete assignments. Most importantly, students get a ton of hands-on learning experience. Bootcamp curriculae typically involve projects that help students establish a portfolio of apps.</p>
+
+<p>Bootcamps are a great option for people who want to switch from a non-computer science career to a programming-heavy career. That said, there will be some CS grads in some bootcamps because college often neglects to teach relevant hard skills like how to use git.</p>
+
+<p>Coding bootcamps are also called programming bootcamps, developer/dev bootcamps, etc. The term “bootcamp” is sometimes replaced with “immersive course” or just “immersive.”</p>
+
+<p>Check out this video to get a sense of the Hack Reactor vibe:</p>
+
+<iframe width="300" height="169" src="http://RebootJeff.github.io//www.youtube.com/embed/ko9bXImNirE" frameborder="0" allowfullscreen=""></iframe>
+
+<h1 id="why-pick-hack-reactor">Why pick Hack Reactor?</h1>
+<p>In the coming days and weeks, I am going to extensively blog about my experience researching different bootcamps in a series unsurprisingly entitled <a href="http://RebootJeff.github.io/blog/categories/bootcamp-research/">Coding Bootcamp Research</a>. The series will cover all the ins and outs of how I examined my options, the admissions processes, and my decision to choose HackR over its competitors.</p>
+
+<p>To give you the gist of it, I chose HackR because it seems to produce the smartest bootcamp “grads” through a combination of high quality faculty/curriculum and lots of time. What I mean by “lots of time” is that faculty are on the clock from 9am-8pm x 6 days/week instead of the typical 9am-6pm x 5 days/week found at other bootcamps.</p>
+
+<p>The claim that HackR has the best grads is backed up by…more claims. They claim that 100% of their grads find a developer job within 3 months after graduation. They claim that the average starting salary of their alumni is somewhere around $100,000 (I don’t remember the exact dollar amount because the raw amount matters less than how high it ranks). No other bootcamps claim to have such high levels of success.</p>
+
+<p>Why should I believe Hack Reactor? Because I trust them. And I would normally litter such claims in my blog with relevant links, but the previous few paragraphs lack links because I will simply discuss these things in much greater detail in future blog posts.</p>
+
+<p>I have a lot to say regarding HackR’s pros and cons. I have a lot to say about the pros and cons of App Academy, Coding Dojo, General Assembly, Dev Bootcamp, and the brand new RocketU as well. So stay tuned.</p>
+
+<h1 id="so-what-now">So… what now?</h1>
+<p>I have about a month of funemployment left before HackR dominates my life. During that time, I have to deal with financial concerns, HackR introductory homework, and my own personal goals.</p>
+
+<h2 id="money-money-money-moneyey">Money, money, money (moneyey!)</h2>
+<p>This is about to get a bit personal, so prepare thyself.</p>
+
+<p>I need to deal with tuition. $2,000 down. $15,780 to go. In the word of the great philosopher, Bart Simpson: “Eep.” Luckily, my mom has offered to cover my tuition. At first, I was reluctant to accept. After all, I have the money…sort of (most of my money is in stocks). I wouldn’t have much left over if I paid tuition myself, but the real reason I hesitated to accept my mom’s generosity was based on principle.</p>
+
+<p>I like being independent in many ways. Financial independence is one of those ways.</p>
+
+<p>I often question what my mom thinks rather than just accepting her ideas at face value. I changed my mind about her offer by using a thought process I use whenever I encounter this questioning that routinely visits my mind. The process is simple. I ask myself, <strong>“How would I feel if I were the parent?”</strong> Obviously, I easily consider what happens when I’m the child. So when I consider the parent perspective, I can imagine being a parent considering the child perspective too.</p>
+
+<p>But let’s not get too cyclical/meta because I was telling a story that actually has an ending.</p>
+
+<p>As I thought about things from the view of my hypothetical, futuristic, child-rearing mind, I realized that if I were in my mom’s shoes, I would very much want my son to accept my money. The reason? Principle.</p>
+
+<blockquote>
+  <p>OMG @RebootJeff just paradoxed himself #WTF #ICallBS #hypocrisy</p>
+</blockquote>
+
+<p>Shut up and listen. You can posit that I’m merely rationlizing a money-grubbing stance, and I know that’s what it looks like, but I hold myself obligated to meet the same standards and expectations when I’m finally a parent. In this case, the expectation I’m talking about is the responsibility (and deep desire) to help my child <del>become a Neil deGrasse Tyson badass</del> get really awesome education.</p>
+
+<p>Not to mention, my family has that traditional Asian risk-aversion baked into its collective mind. However, as my mom pointed out, pursuing fantastic educational opportunities shouldn’t be considered a (financial) risk to avoid if the parent can help out.</p>
+
+<h2 id="the-curriculum-begins-now">The curriculum begins now</h2>
+<p>There are a few tasks to accomplish prior to the first day of class other than making HackR rich(er). The bootcamp’s pre-course work requires about 90 hours of dedication (about 50 hours mandatory + about 40 hours optional). I’ve been instructed to…</p>
+
+<ol>
+  <li>
+    <p>Complete a lot of <a href="http://codeschool.com">Code School</a> tutorials (which is a bit of a bummer because I’m tired of online tutorials).</p>
+  </li>
+  <li>
+    <p>Learn more JavaScript through some TDD challenges using Jasmine and Mocha (I don’t know what these are if they’re not hot beverages).</p>
+  </li>
+  <li>
+    <p>Learn about git via various videos and tutorials (which should be easy because I already know some git).</p>
+  </li>
+  <li>
+    <p>Build a basic Twitter clone (which sounds so difficult that I can’t wait to do it –what an odd feeling).</p>
+  </li>
+  <li>
+    <p>Check out a list of optional online resources.</p>
+  </li>
+</ol>
+
+<h2 id="my-own-pre-course-to-do-list">My own pre-course to-do list</h2>
+<p>I plan on completing most of the optional pre-course work (in addition to the mandatory parts), but I also hope to make time for some other pre-course goals of mine. Maybe some are covered by the pre-course work, but here’s a comprehensive list:</p>
+
+<h3 id="relevant">Relevant</h3>
+
+<ul>
+  <li>
+    <p>Watch videos re: <a href="https://tutsplus.com/course/improve-workflow-in-sublime-text-2/">Sublime Text wizadry</a></p>
+  </li>
+  <li>
+    <p>Consider PAYING for Sublime Text to get rid of the money-begging feature</p>
+  </li>
+  <li>
+    <p>Figure out regex</p>
+  </li>
+  <li>
+    <p>Get intimate with that scary thingamabob known as <a href="http://linuxcommand.org/lc3_learning_the_shell.php">Linux shell</a></p>
+  </li>
+  <li>
+    <p>Buy a notebook that is made of something called “paper”</p>
+  </li>
+  <li>
+    <p>Conform to a proper sleep schedule (makes me cry just thinking about it)</p>
+  </li>
+  <li>
+    <p>Watch more lectures from Berkeley’s <a href="http://www.youtube.com/watch?v=Fr-B4xHZRzY">CS169: Software as a Service</a></p>
+  </li>
+  <li>
+    <p>Buy tons of snacks/drinks because I won’t have much time for grocery shopping during bootcamp weeks</p>
+  </li>
+  <li>
+    <p>Attend lots of dev meetups, especially <a href="http://www.theodinproject.com/">Odin Project</a> meetups</p>
+  </li>
+  <li>
+    <p>Think of how I want to make my own HackR vlog</p>
+  </li>
+</ul>
+
+<h3 id="not-so-relevant">Not-so-relevant</h3>
+
+<ul>
+  <li>
+    <p>Take one last hit of that <a href="http://www.sfr-solo.org/solo2/cgi-bin/schedaction.cgi?autox&amp;where=all&amp;Next_three_months">autocross</a> high</p>
+  </li>
+  <li>
+    <p>Finish reading some rather <a href="http://www.amazon.com/Batman-Robin-Vol-Must-Die/dp/1401235085">disturbing-but-amazing Batman</a> comic books</p>
+  </li>
+  <li>
+    <p>Deactivate my online dating profiles because I won’t have time for that crap (although it’s not like I was a total playa to begin with)</p>
+  </li>
+  <li>
+    <p>Help a roommate build a new PC (he’s never built one before)</p>
+  </li>
+  <li>
+    <p>Make at least 1 more faux vlog episode</p>
+  </li>
+  <li>
+    <p>Make at least 1 music recording</p>
+  </li>
+</ul>
+
+<p>Most of all, I want to write up a LOT of blog posts documenting all the research I did when investigating coding bootcamps.</p>
+]]></content>
+  </entry>
+  
+</feed>

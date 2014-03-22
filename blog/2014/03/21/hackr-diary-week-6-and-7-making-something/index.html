@@ -1,0 +1,400 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>[HackR Diary] Week 6 and 7: App from Scratch - RebootJeff.com</title>
+  <meta name="author" content="Jeff Lee">
+  <link rel="author" href="humans.txt">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  
+    
+  
+  <meta name="description" content="Presenting my project, Co-Compare, to the folks of Hack Reactor Life Update I got a job! I will start using my JS skills for dolla bills on Monday. &hellip;">
+  
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://RebootJeff.github.io/blog/2014/03/21/hackr-diary-week-6-and-7-making-something/">
+  <link href="/favicon.png" rel="icon">
+  <link href='http://fonts.googleapis.com/css?family=Cantarell' rel='stylesheet' type='text/css'>
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="RebootJeff.com" type="application/atom+xml">
+  <meta name="og:type" content="website" />
+  <meta name="og:site_name" content="RebootJeff.com" />
+  <meta name="og:title" content="[HackR Diary] Week 6 and 7: App from Scratch" />
+  <meta name="og:description" content="Presenting my project, Co-Compare, to the folks of Hack Reactor Life Update I got a job! I will start using my JS skills for dolla bills on Monday. &hellip;" />
+  <meta name="og:url" content="http://RebootJeff.github.io/blog/2014/03/21/hackr-diary-week-6-and-7-making-something/"/>
+  <meta name="url" content="http://RebootJeff.github.io/blog/2014/03/21/hackr-diary-week-6-and-7-making-something/">
+  
+  <meta name="subject" content="Hack ReactorHackR Diarycoding bootcamps"/>
+  <meta name="category" content="Hack ReactorHackR Diarycoding bootcamps"/>
+  
+  <meta name="distribution" content="global">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-44084259-1']);
+    _gaq.push(['_setDomainName','github.io']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <nav role="navigation"><div class="navbar">
+  <div class="navbar-inner">
+    <a class="brand" href="/">RebootJeff.com</a>
+    <ul class="nav">
+      <li><a href="/">Home</a></li>
+      <!-- BEGIN custom nav here because importing custom/navigation.html at the bottom (by default) shows up looking weird -->
+      <li><a href="/about">About</a></li>
+      <li><a href="/portfolio">Portfolio</a></li>
+      <li><a href="/blog/categories/my-media">Media</a></li>
+      <li><a href="/blog/archives">Archives</a></li>
+    </ul>
+    <ul class="nav" data-subscription="rss">
+      <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+      
+    </ul>
+      
+    <form class="navbar-form" action="http://google.com/search" method="get">
+      <fieldset role="search">
+        <input type="hidden" name="q" value="site:RebootJeff.github.io" />
+        <input class="span2" type="text" name="q" results="0" placeholder="Search"/>
+      </fieldset>
+    </form>
+      
+    <!-- I have customized the navigation.html file OUTSIDE of the custom folder because the part I wanted to customize comes BEFORE the `include` statement that invokes the custom/navigation.html file (aka the file you're reading now). -->
+  </div>
+</div>
+</nav>
+  <div class="wrapper_single">
+    <div class="container">
+      <article class="span8 offset2" role="article">
+        <div class="article-format">
+
+  <header>
+    
+      <h1 class="entry-title">[HackR Diary] Week 6 and 7: App From Scratch</h1>
+    
+    
+      <p class="meta">
+        
+  
+
+
+  
+    <span class="byline author vcard">by <span class="fn">Jeff Lee</span></span>
+  
+
+ - 
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-21T17:12:00-07:00" pubdate data-updated="true">Mar 21<span>st</span>, 2014</time> - 
+        
+
+posted in
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/hack-reactor/'>Hack Reactor</a>, <a class='category' href='/blog/categories/hackr-diary/'>HackR Diary</a>, <a class='category' href='/blog/categories/coding-bootcamps/'>coding bootcamps</a>
+  
+</span>
+
+
+        
+         | <a href="#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><img src="/images/20140321/co-compare_presentation.jpg" alt="Personal Project presentation time" /></p>
+
+<p class="my-caption">Presenting my project, Co-Compare, to the folks of Hack Reactor</p>
+
+<h1 id="life-update">Life Update</h1>
+
+<p>I got a job! I will start using my JS skills for dolla bills on Monday. I will blog all about my rather tiring job search soon. For now, I will resume blogging about Hack Reactor from <a href="http://rebootjeff.github.io/blog/2013/10/28/hackr-diary-week-5/">where I left off</a>. During the 2nd half of the program, I didn’t do any blogging, but I took plenty of notes for the sake of blogging at a later time, so prepare to be amazed …or mildly amused. Remember, the following rollercoaster ride took place during late-October through mid-November.</p>
+
+<h1 id="recap-of-events">Recap of Events</h1>
+
+<h2 id="interim-week-different-format">Interim Week (different format)</h2>
+
+<p>The 2nd half of Hack Reactor starts with an “interim week” (aka “solo week”) where expectations are a bit cloudy. <strong>The Hack Reactor website didn’t do a good job of explaining that the injection of an interim week means that Hack Reactor is really a 13-week program.</strong> During this special week, Hack Reactor HQ is not guaranteed to be open to students. Also, students are not guaranteed any access to staff. The staff is either taking a break or working on reconfiguring the offices or other changes.</p>
+
+<p>In other words, the students are on their own for starting the first week of developing their personal projects. Students self-organize if they want to meet up at a cafe or whathaveyou to enable collaboration.</p>
+
+<h2 id="what-i-did">What I Did</h2>
+
+<ul>
+  <li>I spent most of my time working from HR HQ when it was open. I used nearby cafes when it wasn’t.</li>
+  <li>Like a few others, I used interim week to do some travelling and to catch up on sleep.</li>
+  <li>At one point (maybe after interim week?), I broke my laptop by being a Linux noob. I was one of few Ubuntu users in my cohort, and I had trouble dealing with permission/access issues. I eventually followed some StackOverflow suggestion and fucked up my permissions so badly that I had to reinstall Ubuntu. As you can imagine, my emotions are still failing to heal from that self-inflicted disaster.
+    <ul>
+      <li>FYI, my new job is giving me a Mac. Soon I will join the majority of devs in the promise land of screens that actually reproduce accurate colors, impressive battery life, and installation wonders such as homebrew.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="extras">Extras</h2>
+
+<ul>
+  <li>In my cohort, we organized a night to go to a movie theater for Ender’s Game. Good times.</li>
+  <li>A rep from <a href="http://famo.us/">Famous</a> stopped by to give a presentation about a brand new web app framework. It’s so new that even now, Famous is in beta. Back during the personal project period, it was in a closed beta (or was it alpha?), but Famous was inviting Hack Reactor students to access it! The framework renders special <code>&lt;div&gt;</code> elements in a breathtaking way. I never used it, but I will talk about it a bit more in another blog post.</li>
+</ul>
+
+<h1 id="what-i-learned">What I Learned</h1>
+
+<p>Holy. Crap. I learned so much during the personal project weeks. Admittedly, I didn’t work extra long hours until the last week or so before the deadline. By then, I was working at least 80 hours per week. In the first couple of days, I realized there was so much I had to learn that it felt quite overwhelming, and I had a difficult time starting.</p>
+
+<h2 id="tools">Tools</h2>
+
+<p>Obviously I would have to learn a lot of app concepts, engineer some solid logic, etc. But I also had to do all this while learning new tools.</p>
+
+<ul>
+  <li><strong>Balsamiq:</strong> Wireframing software. Creating wireframes really helps when trying to explain what you hope to build. To practice communication skills and project management, students had to explain their progress/goals very briefly during small stand-up meetings.</li>
+  <li><strong>Yeoman:</strong> Boilerplate/scaffold generator. I used an Angular-Express generator to help me get started making a full-stack app with boilerplate code for Angular, Node, and Express. This served as a great “starter pack” of code.</li>
+  <li><strong>Grunt:</strong> Task runner. To be honest, I used Grunt simpy because it came with Yeoman. However, gaining exposure to the tool opened my eyes to the possibilities provided by task runners like Grunt.</li>
+  <li><strong>Stylus:</strong> CSS pre-processor. I’m not sure if CSS pre-processors are part of the tech stack or “just” another set of dev tools, but for what it’s worth, I didn’t write pure CSS for Co-Compare. Instead, I wrote Stylus CSS. I like the visual design side of front-end development, and using Stylus made that facet even more fun.</li>
+  <li><strong>Heroku:</strong> Web app hosting provider. It’s easy to use because it follows a git workflow, but deployment still has challenges (re: environment configuration).</li>
+</ul>
+
+<h2 id="the-tortured-ok-not-really-birth-of-an-idea">The Tortured (ok not really) Birth of An Idea</h2>
+
+<p>I like to think my mind is superior –errr…I mean <em>creative</em>. However, it can be tough to come up with web app ideas based on constraints. Everyone worried about whether or not they could actually implement their ideas in just a few weeks (I think it amounted to only 2.5 weeks). In the end, I learned that “Just Do It” really applies. You can spend roughly 3 gajillion hours analyzing ideas, use cases, market needs, tech stacks, visual design, etc. But at some point, you need to just do it already. Just make something and see what happens. The price of failure is time spent. The gain of failure is lessons learned. A beauty of programming is the ability to quickly change, pivot, redo, etc.</p>
+
+<h3 id="from-cool-to-meh">From Cool to Meh</h3>
+
+<p>Originally, I thought my idea was too boring. I wanted to create a fantasy sports game specifically for tennis, but I couldn’t find a good way to get the data/stats from pro tennis matches, so I switched to something far less cool.</p>
+
+<p>I switched to an idea spawned by my love for analyzing/comparing products and services. In the past, I’ve spent far too much time comparing video game consoles, cars, computer parts, <em>bootcamps</em>, etc. I enjoyed it too. A lot. But I knew most people aren’t crazy in this way, so I worried that my app idea for <a href="http://cocompare.herokuapp.com">Co-Compare</a> (a web app to build comparison tables and have others vote on them) was too unsexy.</p>
+
+<h3 id="from-meh-to-oooh">From Meh to Oooh</h3>
+
+<p>It’s true that Co-Compare doesn’t have a ton of wow-factor, but it provided plenty of opportunity:</p>
+
+<ul>
+  <li><strong>Simplicity:</strong> It was the type of idea that could work with very few features (good for rapid prototyping).</li>
+  <li><strong>Exploration:</strong> But I could have fun adding more and more features as I desired. There were plenty of sub-ideas to explore and keep my brain satiated with more goodies to engineer.</li>
+  <li><strong>Fundamentals:</strong> My app requires CRUD actions. Create, Read, Update, and Delete are fundamental app actions that devs should know. It’s weird to “brag” that Co-Compare helped me learn <em>fundamentals</em>, but it’s important, and it’s not easy just because it’s “fundamental.” Engineering a CRUDy app is a great learning experience.</li>
+  <li><strong>Full-Stack:</strong> My app covered a lot of territory so it exposed me to CSS pre-processors, front-end MVC, API design, databases, user authentication, etc. This was really scary at first, but afterwards, I was truly proud of what I covered.</li>
+</ul>
+
+<p>I really believe that the full-stack nature of Co-Compare solidified my abilities as a web app developer. By creating a nice-looking front-end, my own API, and back-end models for a SQL datastore, I learned so much that it gave my confidence a tremendous boost –which is funny because I had a ton of confidence going into the personal project weeks…then I lost a lot of confidence when nothing I created worked the first time. So at the end, I regained a lot of confidence that I already had at the beginning.</p>
+
+<p>Note: Some of my classmates implemented ideas that had very bare front ends because all the impressive stuff was run on the server side. Other folks created apps that had little or no back-end logic. The number of things wrong with these paths is quite small. In fact, most experts would say the number rhymes with “hero.” Anyway, my point is that this particular “full-stack” facet of my experience is not the “best” way, but just something that I really value for myself.</p>
+
+<h2 id="dev-cycleprocess">Dev Cycle/Process</h2>
+
+<p>Hack Reactor staff helped students with their projects by giving recommendations on tech stack decisions, dev tools, deployment options, etc. And of course, they gave us debugging help, but there was no hand holding.</p>
+
+<p>The primary form of guidance came in the form of some project management structure. We formed small groups that held its members accountable for short-term goals. The staff taught us about iterative development and the concept of creating MVPs (minimal viable products) as milestones rather than aiming for creating versions that were 100% complete.</p>
+
+<p>In other words, I learned about some dev processes to help promote productivity as a software engineer.</p>
+
+<h1 id="want-to-learn-from-my-app">Want to Learn from My App?</h1>
+
+<p>You can find the code for Co-Compare on my GitHub. I took the time to write up a decent README too because for some reason, I have a good time writing English in addition to JavaScript. I suggest you <a href="https://github.com/RebootJeff/co-compare#development">check this out</a> if you’re interested in learning more about how I created an app from scratch.</p>
+
+<p>Keep in mind that you shouldn’t follow everything I do. For example, my Angular app folder structure neglects best practice. It was a popular structure at the time, but it’s actually best to name folders based on features, rather than just lumping all controllers together, all views together, etc.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+
+  
+    <span class="byline author vcard">by <span class="fn">Jeff Lee</span></span>
+  
+
+ - 
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-21T17:12:00-07:00" pubdate data-updated="true">Mar 21<span>st</span>, 2014</time> - 
+      
+
+posted in
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/hack-reactor/'>Hack Reactor</a>, <a class='category' href='/blog/categories/hackr-diary/'>HackR Diary</a>, <a class='category' href='/blog/categories/coding-bootcamps/'>coding bootcamps</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://RebootJeff.github.io/blog/2014/03/21/hackr-diary-week-6-and-7-making-something/" data-via="rebootjeff" data-counturl="http://RebootJeff.github.io/blog/2014/03/21/hackr-diary-week-6-and-7-making-something/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    
+      <a class="pull-left" href="/blog/2014/01/09/questions-to-ask-dev-interviewers/" title="Previous Post: Questions to ask dev interviewers">&laquo; Questions to ask dev interviewers</a>
+    
+    
+  </footer>
+
+</div>
+
+        
+          <div class="article-format">
+            <h1>Comments</h1>
+            <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+          </div>
+        
+      </article>
+    </div>
+  </div>
+  <div id="footer-widgets">
+  <div class="container">
+    <div class="row">
+  <div class="span3">
+    <h2>Recent Posts</h2>
+    <ul class="recent_posts">
+      
+        <li>
+          <a href="/blog/2014/03/21/hackr-diary-week-6-and-7-making-something/">[HackR Diary] Week 6 and 7: App from Scratch</a>
+        </li>
+      
+        <li>
+          <a href="/blog/2014/01/09/questions-to-ask-dev-interviewers/">Questions to ask dev interviewers</a>
+        </li>
+      
+        <li>
+          <a href="/blog/2014/01/04/queues-stacks-javascript-class-patterns/">Queues & Stacks from Scratch with JS Patterns</a>
+        </li>
+      
+        <li>
+          <a href="/blog/2013/12/26/queues-and-stacks-in-javascript/">Queues &amp; Stacks in JavaScript (with Batman and Superman)</a>
+        </li>
+      
+        <li>
+          <a href="/blog/2013/11/19/hackr-diary-my-apology/">[HackR Diary] My Formal Apology</a>
+        </li>
+      
+    </ul>
+    <h2><a href="/blog/archives">Archives</a></h2>
+  </div>
+  <div class="span3">
+    
+
+  </div>
+  <!-- DISABLE Twitter and Found On footer widgets for now
+  <div class="span4">
+    
+  </div>
+  <div class="span2">
+    
+  -->
+  <div class="span6" id="footer_notes">
+    <p>
+      <a href="/">RebootJeff.com</a> - Copyright &copy; 2014 - Jeff Lee
+    </p>
+    <p>
+      Powered by <a href="http://octopress.org/">Octopress</a>. Made pretty with Foxslide theme by <a href="http://www.AdrianArtiles.com">Adrian Artiles</a>. Theme heavily tweaked by me. It took forever T.T
+    </p>
+  </div>
+</div>
+
+  </div>
+</div>
+<!-- DISABLE footer beyond footer-widgets
+<footer class="footer">
+  <div class="container">
+  	
+  </div>
+</footer>
+-->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+<script>window.jQuery || document.write('<script src="/javascripts/libs/jquery-1.7.2.min.js" type="text/javascript"><\/script>')</script>
+<script src="/javascripts/libs/bootstrap.min.js" type="text/javascript"></script>
+<script src="/javascripts/jquery.tweet.js" type="text/javascript"></script>
+<script src="/javascripts/jquery.instagram.js" type="text/javascript"></script>
+<script src="/javascripts/libs/jquery.masonry.min.js" type="text/javascript"></script>
+<script src="/javascripts/custom.js" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'rebootjeff';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://RebootJeff.github.io/blog/2014/03/21/hackr-diary-week-6-and-7-making-something/';
+        var disqus_url = 'http://RebootJeff.github.io/blog/2014/03/21/hackr-diary-week-6-and-7-making-something/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Backbone | RebootJeff.com]]></title>
+  <link href="http://RebootJeff.github.io/blog/categories/backbone/atom.xml" rel="self"/>
+  <link href="http://RebootJeff.github.io/"/>
+  <updated>2014-03-21T17:53:48-07:00</updated>
+  <id>http://RebootJeff.github.io/</id>
+  <author>
+    <name><![CDATA[Jeff Lee]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[[HackR Diary] Event: Pamela Fox on Backbone]]></title>
+    <link href="http://RebootJeff.github.io/blog/2013/10/16/hackr-diary-a-visit-from-pamela-fox-re-backbone/"/>
+    <updated>2013-10-16T07:13:00-07:00</updated>
+    <id>http://RebootJeff.github.io/blog/2013/10/16/hackr-diary-a-visit-from-pamela-fox-re-backbone</id>
+    <content type="html"><![CDATA[<p class="last-updated">Last updated on Oct 16, 2013 (see strikethrough text).</p>
+
+<blockquote class="twitter-tweet"><p><a href="https://twitter.com/pamelafox">@pamelafox</a> schooling <a href="https://twitter.com/HackReactor">@HackReactor</a> students on <a href="https://twitter.com/search?q=%23backbonejs&amp;src=hash">#backbonejs</a> <a href="http://t.co/1xRuxIEvKl">pic.twitter.com/1xRuxIEvKl</a></p>&mdash; andre (@AndrEvangelestA) <a href="https://twitter.com/AndrEvangelestA/statuses/389949525588062209">October 15, 2013</a></blockquote>
+<script async="" src="http://RebootJeff.github.io//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<p>Last Monday, the Hack Reactor students were treated to <a href="http://backbone-3ways.appspot.com/">a Backbone presentation</a> by <a href="http://blog.pamelafox.org/">Pamela Fox</a>. It was packed with a ton of insight. I frantically took notes on my smartphone (like a fool), so now I present to you a collection of cool cucumbers.</p>
+
+<h1 id="what-i-learned">What I Learned</h1>
+
+<h2 id="backbone-nuggets">Backbone Nuggets</h2>
+
+<ul>
+  <li>
+    <p>Region management (which you can “outsource” to the likes of <a href="http://chaplinjs.org/">Chaplin</a> or <a href="http://marionettejs.com/s">Marionette</a>) is worth checking out. Apparently, it helps limit the amount of rendering you need to do by allowing you to target specific regions of the web page.</p>
+  </li>
+  <li>
+    <p>Not all Backbone libraries are created equal! Some provide sweet functionality at the cost of depressing performance losses. The Backbone ecosystem is cool, but not entirely safe. Pamela once removed a library from Coursera’s codebase that was responsible for a <em>full second</em> of page load time.</p>
+  </li>
+  <li>
+    <p>Backbone is so flexible that you might feel like an Backbone expert one day and then feel like a noob the next day when you see someone else’s radically different and compelling usage.</p>
+  </li>
+  <li>
+    <p>Break up your views into more views. Make sibling views and nested views. No single view should be a bajillion lines of code. If you find yourself making long js files in Backbone, it’s time to split things up, my fellow noob.</p>
+  </li>
+</ul>
+
+<h2 id="general-code-related-nuggets">General Code-Related Nuggets</h2>
+
+<ul>
+  <li>
+    <p>Don’t optimize prematurely. Performant code is harder to read. Making code harder to read early on can be annoying. I wonder if Pamela is pro-<a href="/blog/2013/09/25/hackr-diary-first-impressions/#guard-operator">guard operator</a> or anti-guard operator.</p>
+  </li>
+  <li>
+    <p><a href="http://requirejs.org/">RequireJS</a> kills your foolish usage of global vars. Perhaps I should use it.</p>
+  </li>
+  <li>
+    <p>Single-page web apps can be harder to debug (than multi-page web apps?) because state gets saved across various renders. Errors can be hard to reproduce during the debugging process because there might be many user interactions that need to occur in a particular sequence to cause the error.</p>
+  </li>
+  <li>
+    <p><strong>Ask potential employers about their companies’ testing practices.</strong> How much regression testing do they do? How many tests have they created? More tests means less fear when contributing to the codebase as a fresh employee.</p>
+  </li>
+  <li>
+    <p>Making <strong>forms</strong> with Backbone (or any MV framework?) is great because forms lend themselves to the model-view-collection paradigm with ease. Forms are collections of questions, which are models, which have their own views. Each question view can draw from a set of views meant to provide a particular format (a view for a question answered by checkboxes, a view for question answered by text fields, a view for question answered by generic menu, etc). This also means Backbone is good for creating <strong>control panels</strong> for admin users (e.g., admin control panel for teacher conducting a Coursera class).</p>
+  </li>
+</ul>
+
+<h2 id="re-coursera">Re: Coursera</h2>
+
+<p>Pamela used to work for Coursera. She drew from her experiences with that company to provide a lot of context and real-world examples for the arguments she put forth in her presentation.</p>
+
+<ul>
+  <li>
+    <p>To address SEO concerns associated with single-page web apps, Coursera used <strong>Just-in-Time rendering</strong>. Coursera would detect whether or not a visitor was a search/social engine bot crawling the sit. Upon identifying the bot, Coursera servers would respond by firing up a rendered instance of the web app using Selenium. The bot would then be directed to the code produced by the rendering. This prevents the bot from crawling an HTML file that has nothing but <code>&lt;script&gt;</code> tags pulling in Backbone code. Side note: Google is not cool with the just-in-time technique. Coursera had to use a different technique for Google, but that was not disclosed during Pamela’s talk :(</p>
+  </li>
+  <li>
+    <p><del>It’s not the most organized</del> (nevermind –it’s split into easy-to-understand folders), but you can find a lot of Coursera <a href="https://github.com/coursera/forum-js-snapshot">code on Github</a> (open source, baby!)</p>
+  </li>
+  <li>
+    <p>When viewing their source code with your browser, you’ll see mostly <code>&lt;script&gt;</code> tags. There is very little <code>&lt;body&gt;</code> HTML. That’s due to extensive use of Backbone.</p>
+  </li>
+</ul>
+
+<h1 id="what-i-thought">What I Thought</h1>
+
+<p>Pamela is a fantastic speaker. What I liked most about her talk was the use of real-world examples. As a student, it’s always so informative to hear about life in the wild (so to speak). Seeing as how this was a Hack Reactor event exclusively for students, it’s hard to judge it impartially, but I’m going to go ahead and claim it was awesome.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[[HackR Diary] Week 3: Order in the Code]]></title>
+    <link href="http://RebootJeff.github.io/blog/2013/10/14/hackr-diary-week-3-backbone/"/>
+    <updated>2013-10-14T00:22:00-07:00</updated>
+    <id>http://RebootJeff.github.io/blog/2013/10/14/hackr-diary-week-3-backbone</id>
+    <content type="html"><![CDATA[<p><img src="/images/20131014/logos.png" alt="logos" /></p>
+
+<p class="my-caption">Tech from the previous week: Bower, Backbone, and CoffeeScript</p>
+
+<p>It’s funny how time perception is so easily manipulated. After 3 weeks of immersive education, I forget what day of the week it is. My fellow students also think time is passing by really quickly despite how many hours per day we spend in one (big) room.</p>
+
+<p>Weekends are limited to Sundays due to the 6-days-per-week schedule, so Fridays don’t feel like Fridays (so to speak). However, I should note that Saturdays at Hack Reactor are less intense than other days because the weekly social nights replace the final few hours of the daily classwork with entertainment. Social nights are optional, and plenty of students decide to spend that time working.</p>
+
+<h2 id="more-varied-thoughts-from-week-3">More varied thoughts from week 3</h2>
+
+<ul>
+  <li>I’ve stopped using pen + paper. I probably didn’t need to buy notebook for this course, and I’m just not a fan of paper. Hopefully my lack of note-taking won’t bite me later. Hack Reactor provides some good online notes, diagrams, etc, but I’m not sure they’ll be enough when it comes time to study for job interviews. That said, I’m not too worried.</li>
+  <li>Gym time is limited. Students get 2-hour lunch breaks every other day, but it takes at least 10 minutes to walk to the gym, a few minutes to change clothes, a few minutes to shower, 5-10 minutes to buy lunch afterwards, etc. Actual workout time is roughly 45-60 minutes max. A lot of us have ended up eating during the post-lunch lecture, so I guess it’s all good.</li>
+  <li>Hack Reactor hosts <a href="http://www.meetup.com/hackreactor/">various meetups</a> throughout the week (Coursera study group, general JS meetups, etc). I think that’s a pretty cool way for them to help out the greater dev community.</li>
+  <li><strong>Burnout watch:</strong> I still feel pretty excited to go to Hack Reactor 6 days per week, but I definitely look forward to relaxing on Sundays. In <a href="/blog/2013/10/06/hackr-diary-week-2/">my previous blog post</a>, I lamented about spending free my limited free time to write substantive blog posts, but now I think they really help me exercise my memory to prevent that “it was all a blur” feeling.</li>
+</ul>
+
+<h1 id="recap-of-events">Recap of Events</h1>
+
+<h3 id="industry-event-firebase">Industry Event: Firebase</h3>
+
+<p>Sadly, I didn’t attend the <a href="https://www.firebase.com/">Firebase</a> meetup hosted at Hack Reactor HQ. I heard from fellow students that the Firebase tech is pretty sweet. Firebase devs gave a demo that impressed many with promises of data syncing hotness.</p>
+
+<p>Why didn’t I attend the event? My pair programming partner and I decided we couldn’t spare any time for the event because we were more concerned with Backbone. Firebase just happened to come around at a bad time for me.</p>
+
+<h3 id="social-night-movie-theater">Social Night: Movie Theater</h3>
+
+<p>Yesterday, many students went to see <em>Gravity</em> (in 3D IMAX format). It was pretty friggin’ fantastic. Afterwards, some of us went our separate ways, some went back to studying/working, and some went out to partake in beverage consumption.</p>
+
+<h1 id="what-i-learned">What I Learned</h1>
+
+<p><strong>Quick tip:</strong> I learned a tactic for dealing with low brain energy. When I’m tired of analyzing software architecture decisions or concocting algorithms, I can give myself a productive break by switching to CSS work. Changing gears from program development to applying styles and designing layouts works wonders to give certain parts of my brain a rest while exercising others.</p>
+
+<p>Most Hack Reactor assignments come with some pre-written code, but they often come devoid of any interesting visuals so that you can practice CSS skills.</p>
+
+<h3 id="bower">Bower</h3>
+
+<p>Not much to say here. Students got a very brief lecture about <a href="http://bower.io/">Bower</a>, but it didn’t take much time to convince me to use it. Easily manage libraries/dependencies with a few terminal commands? Nice. <code>bower install</code> = woot!</p>
+
+<h3 id="inner-workings-of-the-web-httpajax-full-stack-overview">Inner workings of the web (HTTP/AJAX, full stack overview)</h3>
+
+<p>Students have yet to write any server-side code, but we’ve dealt with programming small client-side apps that interact with servers. We were taught some AJAX skills and some general HTTP knowledge. One lecture covered the overall system architecture that describes client-server interaction. <strong>There were so. Many. Terms:</strong> local storage, sockets, page requests, asset requests, client vs server MVC, content delivery networks (CDNs), object-relational mapping (ORM) –good times.</p>
+
+<h3 id="backbone">Backbone</h3>
+
+<p>Most of the week 3 assignments involved <a href="http://backbonejs.org/">Backbone</a>, which forced us students to really change the way we think about <em>designing</em> software. Developing with Backbone means organizing code to follow paradigms involving models, views, and collections (not quite MVC –which is “model view <em>controller</em>”).</p>
+
+<p>Before Backbone (a JavaScript framework for providing web apps with structure) our code was a like a stream of consciousness. With Backbone, our code was given order, structure, and rules to follow. It was a tough, but rewarding adjustment. Students were struggling with the process when initially exposed to Backbone. <strong>It’s funny because we were all questioning the effectiveness of Hack Reactor’s curriculum at first, but by the end of the week, most of us feel much more comfy with the framework.</strong></p>
+
+<p>Imagine you could only teach via stream-of-consciousness statements. Content would be expressed, but it would be messy as hell. Now imagine you were forced to teach by writing a well-structured, well-organized textbook. The difference is staggering. Suddenly you need to think about organizing concepts into topics, sequencing topics, connecting topics, etc. Making the leap from using no framework to using Backbone isn’t quite as drastic, but it’s still a tough contrast to get comfortable with in just a few days –even if those days involve ~12 hours of learning.</p>
+
+<h3 id="coffeescript">CoffeeScript</h3>
+
+<p>Before my time at Hack Reactor began, I was open to the idea of learning <a href="http://coffeescript.org/">CoffeeScript</a> (a more expressive, human-readable programming language that compiles into JavaScript, allowing you to write JavaScript with a very different syntax) because it looked friendly in the same way Ruby looks friendly. After a couple of weeks of writing lots of JavaScript code, I was far less open-minded about spending time learning a drastically different syntax. Imagine being told you were going to take a break from learning intermediate Spanish so you could learn beginner Portugese. You’d say, “No thank you, crazy person.” </p>
+
+<p>After finishing the CoffeeScript sprint, I remain somewhat ambivalent. I don’t love it, but I don’t hate it. <strong>The whole experience taught me that learning new syntax isn’t so bad.</strong></p>
+]]></content>
+  </entry>
+  
+</feed>

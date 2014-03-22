@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: jobs | RebootJeff.com]]></title>
+  <link href="http://RebootJeff.github.io/blog/categories/jobs/atom.xml" rel="self"/>
+  <link href="http://RebootJeff.github.io/"/>
+  <updated>2014-03-21T17:53:48-07:00</updated>
+  <id>http://RebootJeff.github.io/</id>
+  <author>
+    <name><![CDATA[Jeff Lee]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Questions to ask dev interviewers]]></title>
+    <link href="http://RebootJeff.github.io/blog/2014/01/09/questions-to-ask-dev-interviewers/"/>
+    <updated>2014-01-09T20:06:00-08:00</updated>
+    <id>http://RebootJeff.github.io/blog/2014/01/09/questions-to-ask-dev-interviewers</id>
+    <content type="html"><![CDATA[<blockquote>
+  <p>Do you have any questions for me?</p>
+</blockquote>
+
+<p>When an employer/recruiter asks you this question, you should answer, “YES OF COURSE I DO.” Then you casually bombard them with the questions listed below. Although, you should keep in mind that some questions can be answered just by doing your homework (researching the company). So don’t ask <em>all the questions</em>.</p>
+
+<h1 id="company-vision">Company Vision</h1>
+
+<ul>
+  <li>Where will the company be in 2 years? (maybe “2 years” should be greater if company is older)
+    <ul>
+      <li>Will the business model remain the same? Is the business model still in flux?</li>
+      <li>How many employees will there be in X years? What many of them will be engineers?</li>
+    </ul>
+  </li>
+  <li>Does the company plan to scale up? How?
+    <ul>
+      <li>Increased marketing efforts?</li>
+      <li>Increased R&amp;D?</li>
+      <li>Growing talent?</li>
+      <li>Creating partnerships?</li>
+      <li>Business model pivot?</li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="employee-logisticsculture">Employee logistics/culture</h1>
+
+<ul>
+  <li>What are typical work hours?</li>
+  <li>
+    <p>How often do people actually take vacations?</p>
+  </li>
+  <li>What are some examples of your company’s culture in play?
+    <ul>
+      <li>e.g., It’s one thing to say the company is open and friendly, but what are examples of that happening?</li>
+    </ul>
+  </li>
+  <li>
+    <p>What aspects of your company help shape the cuture?</p>
+  </li>
+  <li>Older/bigger companies: One of the stereotypical downsides of working at a more established company is that employees don’t feel like they have a big enough impact. How do you ensure employees can make substantive contributions rather than feel like a tiny cog in a big machine?
+    <ul>
+      <li>How do you ensure that employees always get to try/learn new things?</li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="engineering-logistics">Engineering Logistics</h1>
+
+<ul>
+  <li>How many engineers does the company have?
+    <ul>
+      <li>How many back-end, how many front-end, how many full-stack?</li>
+    </ul>
+  </li>
+  <li>How big are the engineering teams?
+    <ul>
+      <li>Will team size change a lot (scaling up)?</li>
+    </ul>
+  </li>
+  <li>Do employees ever change teams/roles?</li>
+  <li>Exactly who would I be working with?
+    <ul>
+      <li>What are their roles, backgrounds, etc?</li>
+    </ul>
+  </li>
+  <li>How does user feedback ultimately end up reaching the engineers?</li>
+  <li>What kind of development cycle do they use?
+    <ul>
+      <li>What is the structure of a typical sprint?</li>
+      <li>How often do engineers deploy?</li>
+      <li>Do they use Agile SCRUM, Kanban, etc?</li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="engineering-culture">Engineering Culture</h1>
+
+<ul>
+  <li>How does the company ensure quick, painless onboarding?
+    <ul>
+      <li>(does the company ensure new hires don’t get overwhelmed by huge, existing codebase?)</li>
+      <li>(or is there no onboarding at all because the company is too tiny?)</li>
+    </ul>
+  </li>
+  <li>Does the company have strong opinions on coding aesthetics?
+    <ul>
+      <li>Does the company have a style guide?</li>
+    </ul>
+  </li>
+  <li>Mentorship?</li>
+  <li>Are there code reviews?
+    <ul>
+      <li>Are they scheduled or ad hoc? (“ad hoc” may be BS for “rarely”)</li>
+    </ul>
+  </li>
+  <li>Is there time set aside for post-mortems, reflections, retrospectives, etc?</li>
+  <li>What kind of testing is in place?
+    <ul>
+      <li>(unit testing, integration testing, e2e testing, QA engineering)?</li>
+      <li>which tools?</li>
+    </ul>
+  </li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>

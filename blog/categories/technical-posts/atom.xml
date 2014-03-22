@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: technical posts | RebootJeff.com]]></title>
+  <link href="http://RebootJeff.github.io/blog/categories/technical-posts/atom.xml" rel="self"/>
+  <link href="http://RebootJeff.github.io/"/>
+  <updated>2014-03-21T17:53:48-07:00</updated>
+  <id>http://RebootJeff.github.io/</id>
+  <author>
+    <name><![CDATA[Jeff Lee]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Queues & Stacks from Scratch with JS Patterns]]></title>
+    <link href="http://RebootJeff.github.io/blog/2014/01/04/queues-stacks-javascript-class-patterns/"/>
+    <updated>2014-01-04T16:04:00-08:00</updated>
+    <id>http://RebootJeff.github.io/blog/2014/01/04/queues-stacks-javascript-class-patterns</id>
+    <content type="html"><![CDATA[<p>In my <a href="/blog/2013/12/26/queues-and-stacks-in-javascript/">previous post</a>, I began my quest to help noob programmers by introducing the basic computer science topic of data structures. I provided a quick overview of queues and stacks, so please read all about ‘em before engaging your eyeballs with this blog post. This time around, we’ll check out four different patterns for creating classes in JavaScript while learning how to build stacks and queues from scratch.</p>
+
+<p>Before we go, I should warn you that I’m going to focus on describing the class instantiation patterns rather than thoroughly explaining the implementation of the data structures. Just keep in mind that we are going to explore building stacks and queues with objects rather than arrays. More specifically, we will use a property called <code>storage</code> that is an object, not an array. Now I know what you’re pondering.</p>
+
+<blockquote>
+  <p>Why?</p>
+</blockquote>
+
+<p>That is a beautiful question. Please ask it all the time (but please don’t troll me by leaving “Why?” in the comments section of this blog post). In this case, the answer to “Why?” may be a tad disatisfying. The answer is “because we can”, but don’t worry! It’ll be fun. Now, let’s start instantiating some motherhugging classes.</p>
+
+<h1 id="functional-instantiation">1. Functional Instantiation</h1>
+
+<p>The simplest way to implement classes is with a “maker” function that creates a new instance of the class and returns that instance so it can be stored as a variable. The new instance is just like any other JavaScript object. It can have properties that store relevant information about the instance (e.g., with a <code>Car</code> class, instances might have a <code>price</code> property). It can also have properties that store functions. These functions serve as <strong>methods</strong> that are tightly associated with the instance.</p>
+
+<h4 id="characteristics">Characteristics</h4>
+
+<ul>
+  <li>Creates new copies of the same functions when creating a new instance of the same class. This lack of reuse takes up more memory and can leave an unsavory taste in some programmers’ mouths.</li>
+  <li>There is no quick way to modify all instances of the class after they’ve been created. This will become more clear after examining the other instantiation tactics.</li>
+  <li>Private variables can be created/used by harnessing <strong>closure scope</strong> superpowers, but I won’t get into that today.</li>
+  <li>If you understand JavaScript functions and objects, then you can understand classes implemented via functional instantiation (other instantiation techniques require knowledge of <code>this</code> and/or <code>new</code>).</li>
+  <li>Could be used to create callable instances (i.e., the class could return a function rather than an object filled with properties).</li>
+</ul>
+
+<h4 id="example-code">Example code:</h4>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption class='code-header' style='margin-bottom:-5px;'><span>Stack from scratch (functional instantiation) </span></figcaption>
+ <div class="CodeRay">
+  <div class="code"><pre>
+<span class="keyword">var</span> <span class="function">makeStack</span> = <span class="keyword">function</span>(comment){
+  <span class="comment">// Provide private variables in closure scope</span>
+  <span class="keyword">var</span> size = <span class="integer">0</span>;
+  <span class="keyword">var</span> storage = {};
+  <span class="keyword">var</span> instance = {};  <span class="comment">// Start building an instance of Stack class&lt;/p&gt;</span>
+
+<span class="tag">&lt;p&gt;</span>// Add extra properties for the hell of it
+  instance.annotation = comment;<span class="tag">&lt;/p&gt;</span>
+
+<span class="tag">&lt;p&gt;</span>// Add functions to the instance to serve as methods
+  // (they will provide an interface to the stack’s storage)
+  instance.push = function(data){
+    storage[size] = data;
+    size++;
+  };<span class="tag">&lt;/p&gt;</span>
+
+<span class="tag">&lt;p&gt;</span>instance.pop = function(){
+    if(size <span class="entity">&amp;gt;</span> 0){  // Only perform pop actions if the stack has data
+      size–;
+      var data = storage[size];
+      delete storage[size];  // Don’t forget to delete from storage!
+      return data;
+    }
+  };<span class="tag">&lt;/p&gt;</span>
+
+<span class="tag">&lt;p&gt;</span>instance.size = function(){
+    return size;
+  };<span class="tag">&lt;/p&gt;</span>
+
+<span class="tag">&lt;p&gt;</span>return instance;
+};<span class="tag">&lt;/p&gt;</span>
+
+&lt;p&gt;<span class="comment">// Create and use an instance of the Stack class</span>
+<span class="keyword">var</span> myStack = makeStack(<span class="error">“</span>I<span class="error">’</span>m a stack! Whoa.<span class="error">”</span>);
+myStack.push(<span class="integer">1</span>);              <span class="comment">// myStack stores 1</span>
+myStack.push(<span class="error">‘</span>b<span class="error">’</span>);            <span class="comment">// myStack stores 1 and ‘b’</span>
+myStack.push(<span class="integer">3</span>);              <span class="comment">// myStack stores 1, ‘b’, and 3</span>
+console.log(myStack.pop());   <span class="comment">// logs 3</span>
+console.log(myStack.size());  <span class="comment">// logs 2</span>
+</pre></div>
+</div>
+ </figure></notextile></div></p>
+
+<h1 id="functional-instantiation-wshared-methods">2. Functional Instantiation w/Shared Methods</h1>
+
+<p>By utilizing an object filled with methods, several classes can be created that have the same methods without creating new copies of said methods. The classes will use their own function references to refer to the same set of shared methods. Therefore, using shared methods eats up less memory than functional instantiation <em>without</em> shared methods.</p>
+
+<h4 id="characteristics-1">Characteristics</h4>
+
+<ul>
+  <li>Reuses functions (which conserves memory) by getting function references from a utility such as <a href="http://underscorejs.org/#extend">Underscore.js</a>’s <code>_.extend(instance,methods)</code>.</li>
+  <li>Retains the same benefits as functional instantiation <em>without</em> shared methods.</li>
+</ul>
+
+<h4 id="example-code-1">Example code:</h4>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption class='code-header' style='margin-bottom:-5px;'><span>Queue from scratch (functional instantiation with shared methods) </span></figcaption>
+ <div class="CodeRay">
+  <div class="code"><pre>
+<span class="keyword">var</span> <span class="function">makeQueue</span> = <span class="keyword">function</span>(queueName, comment){&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">p&gt;
+
+&lt;p&gt;</span><span class="delimiter">/</span></span>/ You can use object literal notation <span class="keyword">for</span> &lt;code&gt;instance&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">code&gt; (instead of dot notation),
+  </span><span class="delimiter">/</span></span>/ but then we have to use &lt;code&gt;<span class="local-variable">this</span>&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">code&gt; and we lose the privacy of closure scope
+  </span><span class="delimiter">/</span></span>/ (e.g., <span class="tag">&lt;code&gt;</span>storage<span class="tag">&lt;/code&gt;</span> is no longer <span class="reserved">private</span>), so <span class="local-variable">this</span> kind of sucks.
+  <span class="keyword">var</span> instance = {
+    <span class="key">name</span>: queueName,
+    <span class="key">annotation</span>: comment,
+    <span class="key">head</span>: <span class="integer">0</span>,
+    <span class="key">tail</span>: <span class="integer">0</span>,
+    <span class="key">storage</span>: {}
+  };&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">p&gt;
+
+&lt;p&gt;</span><span class="delimiter">/</span></span>/ The _.extend() <span class="keyword">function</span> <span class="function">is</span> provided by the Underscore.js library
+  _.extend(instance, sharedQueueMethods);&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">p&gt;
+
+&lt;p&gt;return instance;
+};&lt;</span><span class="delimiter">/</span></span>p&gt;
+
+<span class="tag">&lt;p&gt;</span>// The object below stores methods that could be shared with other classes
+var sharedQueueMethods = {
+  enqueue: function(data){
+    this.storage[this.tail] = data;
+    this.tail++;
+    // The tail points to the next EMPTY “spot” for data to be stored
+    // it does NOT point to the last OCCUPIED “spot” in the storage
+  },
+  dequeue: function(){
+    if(this.head <span class="entity">&amp;lt;</span>= this.tail){  // Check the queue’s size
+      var data = this.storage[this.head];<span class="tag">&lt;/p&gt;</span>
+
+<span class="tag">&lt;pre&gt;</span><span class="tag">&lt;code&gt;</span>  // Deleting is even more important for queues than for stacks
+  // (memory leaks are a bigger threat for queues)
+  delete this.storage[this.head];
+  this.head++;
+  return data;
+}   },   size: function(){
+return this.tail - this.head;   } };
+<span class="tag">&lt;/code&gt;</span><span class="tag">&lt;/pre&gt;</span>
+
+&lt;p&gt;<span class="comment">// Create and use an instance of the Queue class:</span>
+<span class="keyword">var</span> myCoolQueue = makeQueue(<span class="error">“</span>Jeff<span class="error">’</span>s Queue<span class="error">”</span>,<span class="error">’</span>Hello, world!<span class="error">’</span>);
+myCoolQueue.enqueue(<span class="error">‘</span>a<span class="error">’</span>);             <span class="comment">// myCoolQueue stores ‘a’</span>
+myCoolQueue.enqueue(<span class="integer">2</span>);               <span class="comment">// myCoolQueue stores ‘a’ and 2</span>
+myCoolQueue.enqueue(<span class="error">‘</span>c<span class="error">’</span>);             <span class="comment">// myCoolQueue stores ‘a’, 2, and ‘c’</span>
+console.log(myCoolQueue.dequeue());   <span class="comment">// output: ‘a’</span>
+console.log(myCoolQueue.size());      <span class="comment">// output: 2</span>
+</pre></div>
+</div>
+ </figure></notextile></div></p>
+
+<h1 id="prototypal-instantiation">3. Prototypal Instantiation</h1>
+
+<p>The key to prototypal instantiation is the use of <code>Object.create()</code> to utilize shared methods. Unlike functional instantiation with shared methods, there is no need to use an <code>extend()</code> function.</p>
+
+<p>While it’s possible to use a prototype’s functions with <code>Object.create(ExampleClass.prototype);</code>, it’s also possible to (ironically) avoid the word “prototype” altogether by using <code>Object.create(sharedMethods);</code>.</p>
+
+<h4 id="characteristics-2">Characteristics</h4>
+
+<ul>
+  <li>Reuses shared functions via <code>Object.create(Example.prototype)</code> or <code>Object.create(objectOfFunctions)</code>.</li>
+  <li>Unlike functional instantiation, function references are shared. Each instance of the class does not get its own function references that point to the shared methods. This saves even more memory (although it is a very small improvement).</li>
+  <li>Unlike functional instantiation, there is no way to use closure scope to enforce privacy of variables.</li>
+  <li>Variables are stored on the returned object (aka <code>instance</code>), which means the shared stack methods need to use the keyword <code>this</code> to access the necessary data. It’s not a huge bummer, but if you’re a beginner, then <code>this</code> can be a confusing concept.</li>
+  <li>Can use prototype chains for dynamic method modification and inheritance (subclasses!).</li>
+</ul>
+
+<h4 id="example-code-2">Example code:</h4>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption class='code-header' style='margin-bottom:-5px;'><span>Stack from scratch (prototypal instantiation) </span></figcaption>
+ <div class="CodeRay">
+  <div class="code"><pre>
+<span class="keyword">var</span> <span class="function">makeStack</span> = <span class="keyword">function</span>(comment){
+  <span class="keyword">var</span> instance = Object.create(sharedStackMethods);
+  instance.annotation = comment;
+  instance.size = <span class="integer">0</span>;
+  instance.storage = {};&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">p&gt;
+
+&lt;p&gt;return instance;
+};&lt;</span><span class="delimiter">/</span></span>p&gt;
+
+<span class="tag">&lt;p&gt;</span>var sharedStackMethods = {
+  push: function(data){
+    this.storage[this.size] = data;
+    this.size++;
+  },
+  pop: function(){
+    if(this.size <span class="entity">&amp;gt;</span> 0){
+      this.size–;
+      var data = this.storage[this.size];
+      delete this.storage[this.size];
+      return data;
+    }
+  },
+  size: function(){
+    return this.size;
+  }
+};<span class="tag">&lt;/p&gt;</span>
+
+&lt;p&gt;<span class="comment">// Create an instance of the Stack class:</span>
+<span class="keyword">var</span> myStack = makeStack(<span class="error">“</span>I<span class="error">’</span>m a stack! Whoa.<span class="error">”</span>);
+<span class="comment">// Using the instance doesn’t change from one class pattern to another</span>
+myStack.push(<span class="integer">1</span>);              <span class="comment">// myStack stores 1</span>
+myStack.push(<span class="error">‘</span>b<span class="error">’</span>);            <span class="comment">// myStack stores 1 and ‘b’</span>
+myStack.push(<span class="integer">3</span>);              <span class="comment">// myStack stores 1, ‘b’, and 3</span>
+console.log(myStack.pop());   <span class="comment">// logs 3</span>
+console.log(myStack.size());  <span class="comment">// logs 2</span>
+</pre></div>
+</div>
+ </figure></notextile></div></p>
+
+<h1 id="pseudoclassical-instantiation">4. Pseudoclassical Instantiation</h1>
+
+<p>This is the most commonly used class pattern. It’s also the most complicated because, in addition to using the <code>this</code> keyword, it involves two concepts that the other class patterns don’t require: the <code>new</code> keyword and prototypes. Prototypal instantiation uses prototypes via <code>Object.create()</code>, but pseudoclassical instantiation needs you to explicitly type out <code>ClassName.prototype.methodName</code>, which is just another source of confusion for beginners.</p>
+
+<p>Also, it’s the only class pattern that uses a true <a href="http://en.wikipedia.org/wiki/Constructor_(object-oriented_programming)">constructor</a> for creating new instances. Other class patterns use instantiator functions that explicitly return a new instance. The pseudoclassical class pattern does not perform such a return thanks to the <code>new</code> keyword.</p>
+
+<h4 id="characteristics-3">Characteristics</h4>
+
+<ul>
+  <li>Uses prototype chains to provide methods to instances of a class.</li>
+  <li>Allows for dynamic method modification and inheritance (subclasses!) via prototype chains.</li>
+  <li>Refers to the instance that’s being created with the <code>this</code> keyword.</li>
+  <li>Needs the <code>new</code> keyword to make an instance of a class.</li>
+  <li>Has a true constructor that is named with a noun rather than a verb. The name is capitalized.</li>
+  <li>Is the most commonly used class pattern.</li>
+</ul>
+
+<h4 id="example-code-3">Example code:</h4>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption class='code-header' style='margin-bottom:-5px;'><span>Queue from scratch (pseudoclassical instantiation) </span></figcaption>
+ <div class="CodeRay">
+  <div class="code"><pre>
+<span class="comment">// Class name is now a noun (no verb), and it starts with an upper case letter</span>
+<span class="keyword">var</span> <span class="function">Queue</span> = <span class="keyword">function</span>(queueName, comment){
+  <span class="comment">// Notice the use of ‘this’</span>
+  <span class="local-variable">this</span>.name = queueName,
+  <span class="local-variable">this</span>.annotation = comment,
+  <span class="local-variable">this</span>.head: <span class="integer">0</span>,
+  <span class="local-variable">this</span>.tail: <span class="integer">0</span>,
+  <span class="local-variable">this</span>.storage: {}
+};&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">p&gt;
+
+&lt;p&gt;</span><span class="delimiter">/</span></span>/ Notice the use of <span class="error">‘</span>prototype<span class="error">’</span>
+Queue.prototype.<span class="function">enqueue</span> = <span class="keyword">function</span>(data){
+  <span class="local-variable">this</span>.storage[<span class="local-variable">this</span>.tail] = data;
+  <span class="local-variable">this</span>.tail++;
+};
+Queue.prototype.<span class="function">dequeue</span> = <span class="keyword">function</span>(){
+  <span class="keyword">if</span>(<span class="local-variable">this</span>.head &amp;lt;= <span class="local-variable">this</span>.tail){
+    <span class="keyword">var</span> data = <span class="local-variable">this</span>.storage[<span class="local-variable">this</span>.head];
+    <span class="keyword">delete</span> <span class="local-variable">this</span>.storage[<span class="local-variable">this</span>.head];
+    <span class="local-variable">this</span>.head++;
+    <span class="keyword">return</span> data;
+  }
+};
+Queue.prototype.<span class="function">size</span> = <span class="keyword">function</span>(){
+  <span class="keyword">return</span> <span class="local-variable">this</span>.tail - <span class="local-variable">this</span>.head;
+};&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">p&gt;
+
+&lt;p&gt;</span><span class="delimiter">/</span></span>/ Create an instance of the Stack <span class="reserved">class</span> by using the <span class="error">‘</span><span class="keyword">new</span><span class="error">’</span> keyword:
+<span class="keyword">var</span> myCoolQueue = <span class="keyword">new</span> Queue(<span class="error">“</span>Jeff<span class="error">’</span>s Queue<span class="error">”</span>,<span class="error">”</span>The grass is always greener, but just as hard to mowww!<span class="error">”</span>);
+<span class="comment">// Use the instance just like in previous examples</span>
+myCoolQueue.enqueue(<span class="error">‘</span>a<span class="error">’</span>);             <span class="comment">// myCoolQueue stores ‘a’</span>
+myCoolQueue.enqueue(<span class="integer">2</span>);               <span class="comment">// myCoolQueue stores ‘a’ and 2</span>
+myCoolQueue.enqueue(<span class="error">‘</span>c<span class="error">’</span>);             <span class="comment">// myCoolQueue stores ‘a’, 2, and ‘c’</span>
+console.log(myCoolQueue.dequeue());   <span class="comment">// output: ‘a’</span>
+console.log(myCoolQueue.size());      <span class="comment">// output: 2</span>
+</pre></div>
+</div>
+ </figure></notextile></div></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Queues &amp; Stacks in JavaScript (with Batman and Superman)]]></title>
+    <link href="http://RebootJeff.github.io/blog/2013/12/26/queues-and-stacks-in-javascript/"/>
+    <updated>2013-12-26T15:54:00-08:00</updated>
+    <id>http://RebootJeff.github.io/blog/2013/12/26/queues-and-stacks-in-javascript</id>
+    <content type="html"><![CDATA[<p>The proverbial “they” say (says?) it’s good to write technical blog posts. Blog posts that get down and dirty with the nitty gritty of low-level, in-the-weeds details and nuances accompanied by jargon, acronyms, and name-dropping are all the rage in the dev community. More importantly, I really want to help beginners learn programming, so I may as well teach some basic concepts via my blog. (Later on, I hope to contribute more to <a href="http://www.theodinproject.com/">The Odin Project</a>, which is a free, open-source, online resource for beginners created by a very cool individual.)</p>
+
+<p>So as my first foray in technical blog posts, I present to all loveable noobs: the introductory data structures known as stacks and queues.</p>
+
+<h1 id="whats-a-stack">What’s a Stack?</h1>
+
+<p>A stack is a collection of items (or data) that follow a particular rule: the last item to join the collection is the first one to leave.</p>
+
+<ul>
+  <li>The <strong>L</strong>ast data <strong>I</strong>n is the <strong>F</strong>irst data <strong>O</strong>ut (<strong>LIFO</strong>)</li>
+  <li>Add data: <strong>push</strong></li>
+  <li>Remove data: <strong>pop</strong></li>
+  <li>Data enters and exits at the same end of the stack (at the <strong>top</strong>)</li>
+</ul>
+
+<h2 id="simple-implementation">Simple implementation</h2>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption class='code-header' style='margin-bottom:-5px;'><span>Simple Stack (array-based example)</span><a href='http://stackoverflow.com/questions/1590247/how-do-you-implement-a-stack-and-a-queue-in-javascript'>Stack Overflow </a></figcaption> <div class="CodeRay">
+  <div class="code"><pre>
+<span class="keyword">var</span> stack = [];
+stack.push(<span class="integer">1</span>);  <span class="comment">// use the push method provided by the Array prototype</span>
+stack.push(<span class="integer">2</span>);
+stack.push(<span class="integer">3</span>);
+console.log(stack);  <span class="comment">// output: [1,2,3]&lt;/p&gt;</span>
+
+&lt;p&gt;<span class="keyword">var</span> popped = stack.pop();  <span class="comment">// use the pop method provided by the Array prototype</span>
+console.log(popped);  <span class="comment">// output: 3</span>
+console.log(stack);  <span class="comment">// output: [1,2]</span>
+</pre></div>
+</div>
+ </figure></notextile></div></p>
+
+<h2 id="ridiculous-analogy">Ridiculous analogy</h2>
+
+<p>Imagine you’ve found an old, abandoned well. You think to yourself, “Bruce Wayne fell down a well when he was a kid, and I wanna be just like the Batman, so I’m gonna fall down this sweet well!” But you hesitate because …it’s a well, and wells are scary, ya know?</p>
+
+<p>Unbeknownst to you, <a href="http://batman.wikia.com/wiki/Harley_Quinn">your arch-nemesis</a> is out walking her <a href="http://batman.wikia.com/wiki/Bud_and_Lou">pet hyenas</a>. She spots you, and quickly runs over to shove you into the well. She giggles in delight at the sight of your plight. She then hides and waits for more people to walk near the well so she can <strong>push</strong> them too.</p>
+
+<p>It just so happens that this well has the diameter of a single person’s width. When someone is pushed into the well, they land on top of the last person who fell in before them. This creates a <strong>stack</strong> of people and some rather pronounced discomfort. Eventually, there are 5 people in this deep-yet-thin well, and you decide it’s time to call for help to get rescued.</p>
+
+<p>To your disappointment, the not-so-dark knight named Superman arrives to pull you well-dwellers out (one at a time). The last one pushed into the well is the first to <strong>pop</strong> out. <em>LIFO.</em></p>
+
+<h1 id="whats-a-queue">What’s a Queue?</h1>
+
+<p>A queue is a collection of items (or data) that follow the real-life “rules” of waiting in a line of people: the first item to join the collection is the first one to leave the collection.</p>
+
+<ul>
+  <li>The <strong>F</strong>irst data <strong>I</strong>n is the <strong>F</strong>irst data <strong>O</strong>ut (<strong>FIFO</strong>)</li>
+  <li>Add data: <strong>enqueue</strong></li>
+  <li>Remove data: <strong>dequeue</strong></li>
+  <li>Data exits at the: <strong>head</strong> of the queue</li>
+  <li>Data enters at the: <strong>tail</strong> of the queue</li>
+</ul>
+
+<h2 id="simple-implementation-1">Simple implementation</h2>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption class='code-header' style='margin-bottom:-5px;'><span>Simple Queue (array-based example)</span><a href='http://stackoverflow.com/questions/1590247/how-do-you-implement-a-stack-and-a-queue-in-javascript'>Stack Overflow </a></figcaption> <div class="CodeRay">
+  <div class="code"><pre>
+<span class="keyword">var</span> queue = [];
+queue.push(<span class="integer">1</span>);  <span class="comment">// “enqueue”</span>
+queue.push(<span class="integer">2</span>);
+queue.push(<span class="integer">3</span>);
+console.log(queue);  <span class="comment">// output: [1,2,3]&lt;/p&gt;</span>
+
+&lt;p&gt;<span class="keyword">var</span> dequeued = queue.shift();  <span class="comment">// “dequeue”</span>
+console.log(dequeued);  <span class="comment">// output: 1</span>
+console.log(queue);  <span class="comment">// output: [2,3]</span>
+</pre></div>
+</div>
+ </figure></notextile></div></p>
+
+<h2 id="ridiculous-analogy-1">Ridiculous analogy</h2>
+
+<p>Batman decides to do some in-the-field combat training. He drops into the middle of a gang meeting and yells, “I’ve sent your buddies to jail. I know you want revenge. Catch me if you can. P.S. I’m Batman!” Why does the cowled hero do this? We all know Batman is a smart dude, and sure enough, he has a clever plan. He lures the baddies who are running after him into a narrow alley.</p>
+
+<p>The gangsters can only approach Batman one at a time to fit in the narrow alley, so they form a line (aka <strong>queue</strong>). The gangster at the front of the line is the first gangster knocked out (aka <strong>dequeued</strong>) by Batman (<strong>first in; first out</strong>). You might even say that Batman’s fists aim for the <strong>head</strong> of the queue and foolish gangsters enter at the <strong>tail</strong> of the line of doom.</p>
+
+<h1 id="the-story-will-continue">The Story Will Continue</h1>
+
+<p>Stay tuned for more blog posts on data structures. My next technical blog post will examine how to implement stacks and queues from scratch (without arrays) to get a deeper understanding of push, pop, enqueue, and dequeue. I know you can’t wait for the moment I deliver on this promise. I can hear your panting through my WiFi, but please stay patient. I was busy working on a <a href="https://github.com/RebootJeff/cocompare">web app</a> and then a <a href="https://github.com/RebootJeff/phone-tag-phonegap">mobile app</a>. Now, I’m busy with job searching while possibly starting mini-project.</p>
+
+<p>On a mildly amusing, unrelated note: isn’t it funny to think about the phrase “stay tuned”? It’s getting rather archaic now that terrestrial, over-the-air TV and radio are losing popularity. Yes, these are the random things I think about as I write blog posts.</p>
+]]></content>
+  </entry>
+  
+</feed>
