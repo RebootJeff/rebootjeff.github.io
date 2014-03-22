@@ -9,7 +9,7 @@ footer: true
 
 Please check [my GitHub](https://github.com/rebootjeff) profile for a more comprehensive look at my portfolio and contributions.
 
-# Contents
+## Contents
 
 1. [My Projects](#my-projects)
 2. [Team Projects](#team-projects)
