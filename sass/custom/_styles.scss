@@ -90,12 +90,12 @@ a:visited {
   line-height: 1.5;
   margin-bottom: 14px;
 }
-.entry-content h1 {
+article h1:not(.entry-title), .entry-content h1 {
   text-align: center;
   margin-top: 12px;
   clear: both;
 }
-.entry-content h1:after {
+article h1:not(.entry-title):after, .entry-content h1:after {
   // modified from http://css-tricks.com/examples/hrs/
   content: " ";
   display: block;

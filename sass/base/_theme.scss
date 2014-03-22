@@ -10,12 +10,12 @@
   background-color: #000000;
   background-image: url("/images/hero_bg.jpg");
   background-origin: padding-box;
-  background-position: 0px -50px;
-  background-repeat: auto;
+  background-position: 0px -150px;
+  background-repeat: no-repeat;
   background-size: auto auto;
   // worth considering?
   // background-position: center -50px;
-  // background-size: cover; 
+  // background-size: cover;
   margin: 0px;
   padding: 75px;
   z-index: -1;
@@ -24,13 +24,13 @@
 #hero-inner {
   font-family: 'Cantarell', sans-serif;
   margin-top: 60px;
-  color: black;
-  text-shadow: 0px 0px 4px #FFFFFF, 0px 0px 4px #FFFFFF, 
-  0px 0px 7px #FFFFFF, 0px 0px 7px #FFFFFF,
-  0px 0px 10px #FFFFFF, 0px 0px 10px #FFFFFF;
+  color: white;
+  text-shadow: 0px 0px 4px black, 0px 0px 4px black, 
+  0px 0px 7px black, 0px 0px 7px black,
+  0px 0px 10px black, 0px 0px 10px black;
 }
 #hero-inner h1 {
-  font-size: 60px;
+  font-size: 5em;
 }
 #hero-inner em {
   font-style: normal;
