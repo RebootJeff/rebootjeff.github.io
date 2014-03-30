@@ -126,9 +126,21 @@
     </url>
     <url>
         <loc>
+            http://RebootJeff.github.io/blog/2014/01/27/setup-for-phonegap-for-android-for-reals/
+        </loc>
+        <lastmod>2014-03-24T20:17:00-07:00</lastmod>
+    </url>
+    <url>
+        <loc>
             http://RebootJeff.github.io/blog/2014/03/21/hackr-diary-weeks-6-and-7-making-something/
         </loc>
         <lastmod>2014-03-21T18:11:41-07:00</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://RebootJeff.github.io/blog/2014/03/23/hackr-diary-weeks-8-10-group-collaboration/
+        </loc>
+        <lastmod>2014-03-30T13:48:06-07:00</lastmod>
     </url>
     <url>
         <loc>http://RebootJeff.github.io/about/</loc>
@@ -140,10 +152,10 @@
     </url>
     <url>
         <loc>http://RebootJeff.github.io/</loc>
-        <lastmod>2014-03-21T18:11:41-07:00</lastmod>
+        <lastmod>2014-03-30T13:48:06-07:00</lastmod>
     </url>
     <url>
         <loc>http://RebootJeff.github.io/blog/archives/</loc>
-        <lastmod>2014-03-21T18:11:41-07:00</lastmod>
+        <lastmod>2014-03-30T13:48:06-07:00</lastmod>
     </url>
 </urlset>

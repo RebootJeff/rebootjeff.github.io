@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Hack Reactor | RebootJeff.com]]></title>
   <link href="http://RebootJeff.github.io/blog/categories/hack-reactor/atom.xml" rel="self"/>
   <link href="http://RebootJeff.github.io/"/>
-  <updated>2014-03-21T18:18:02-07:00</updated>
+  <updated>2014-03-30T13:49:07-07:00</updated>
   <id>http://RebootJeff.github.io/</id>
   <author>
     <name><![CDATA[Jeff Lee]]></name>
@@ -12,6 +12,81 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[[HackR Diary] Weeks 8-10: No More Solo]]></title>
+    <link href="http://RebootJeff.github.io/blog/2014/03/23/hackr-diary-weeks-8-10-group-collaboration/"/>
+    <updated>2014-03-23T15:52:00-07:00</updated>
+    <id>http://RebootJeff.github.io/blog/2014/03/23/hackr-diary-weeks-8-10-group-collaboration</id>
+    <content type="html"><![CDATA[<p><img src="/images/20140324/SimoneAnne-8351-birds.jpg" alt="something something Mighty Ducks" /></p>
+
+<p class="my-caption">Insert inspirational metaphor relating birds to teamwork</p>
+
+<h1 id="junior-to-senior-transition">Junior-to-Senior Transition</h1>
+
+<p>As I mentioned <a href="http://rebootjeff.github.io/blog/2014/03/21/hackr-diary-weeks-6-and-7-making-something/">last time</a>, my <a href="http://rebootjeff.github.io/blog/categories/hackr-diary/">HackR Diary</a> was on hiatus for a bit, so the events described in this blog post occurred back in mid-November thru early-December of 2013. Weeks 8, 9, and 10 of my Hack Reactor experience covered a group project period where students formed small teams to create web apps from scratch.</p>
+
+<p>I forgot to mention a few points in my description of the personal project period:</p>
+
+<h2 id="client-projects">Client Projects</h2>
+
+<p>Some folks in my cohort accepted client projects rather than coming up with their own web app ideas. This meant they had to meet with clients, deal with external requirements, etc. Some had fun experiences; some had frustrating experiences. Some got paid; some volunteered. They all got to add some extra gravitas to their resumes/CVs.</p>
+
+<h2 id="being-a-senior">Being a Senior</h2>
+
+<p>The cohort before mine graduated from the program just before interim week. After interim week, my cohort returned to HR HQ to find a new “junior” cohort, and there was a transition to seniorhood for us. As a senior, you have fewer/shorter lectures, less guidance, and you’re given more freedom to explore on your own. You still have a schedule to follow, but it’s far less rigid, which is fantastic. It’s funny how you feel more freedom, yet you end up working harder because of the nature of project periods at Hack Reactor.</p>
+
+<p>Unfortunately, there isn’t much time to get to know the juniors when you’re a senior. We had one code review night where seniors gave juniors feedback on their classwork, but as a senior, your mind is always worried about your project, your app, your baby born of code.</p>
+
+<p>By the way, I noticed that the juniors had more diversity. They had more women and more minority folks. I’m not saying my own cohort felt shitty because of the percentage of white males, and I’m not saying the new junior group reached some sort of ideal diversity (eventually, I may write a rambling blog entry about my views on diversity). I’m just noting the “slope” created by two “points of data.” The junior cohort was larger by about 5 or so people, but the increase in diversity was still noticeable. That said, I also noticed Hack Reactor felt more crowded (doh!).</p>
+
+<h1 id="recap-of-events">Recap of Events</h1>
+
+<p>I teamed up with 3 of my fellow seniors to work on a smartphone game called Phone Tag. Gameplay is like a free-for-all laser tag. Players sneak up on one another and hit a button to tag. The game displays a map (via Google Maps) to show locations of other players, power-ups, respawn points, etc. The app consists of HTML, CSS, and full-stack JavaScript. The client app is “ported” into an iOS app and an Android app via a tool called PhoneGap. Phone Tag leverages geolocation and real-time communications.</p>
+
+<p>The first week just consisted of setting up boilerplate code and brainstorming game ideas. It took us awhile to settle on the free-for-all game mode. We originally considered implementing a game resembling zombie tag instead. My team also had to spend lots of time researching libraries, tools, smartphone abilities, and all that sort of goodness to find out what we should use to develop our project.</p>
+
+<h2 id="fitness-challenge-push-up-routine">Fitness Challenge: Push-Up Routine</h2>
+
+<p>I’m sure some Hack Reactor folks (Hackers React? Hacker Reactions?) cynically roll their eyes at the staff’s efforts to promote health, but I appreciate them. For one week, there was a push-up challenge where students were encouraged to pair up and hold each other accountable for completing a set of push-ups twice a day. I paired up with a junior, and it was cool to be able to get to know someone outside of my cohort.</p>
+
+<h2 id="hacker-in-residence-program">Hacker-in-Residence Program</h2>
+
+<p>In the middle of the group project period, the staff told seniors about a program to extend the Hack Reactor experience. The Hacker-in-Residence program is an extra 3 months where you get paid to work part-time for the institution (develop internal tools, teach beginner-level content, interview applicants, etc) and work on more projects (i.e., extra project periods). The idea is that a select few seniors can become Hacker-in-Residence and gain valuable experience. I chose not to apply for the program because I already felt well prepared to enter the job market. Many students felt the same way, but plenty of them were attracted to the HIR program. Under half of the seniors applied, and most of them were accepted.</p>
+
+<p>Therefore, about 1/3 of my cohort became HIRs. It’s important to note that Hack Reactor might not include these guys in their post-graduation employment stats. But even so, I know previous HIRs have had little to no trouble getting employed after their HIR phase ended.</p>
+
+<h2 id="new-hack-reactor-admissions">New Hack Reactor Admissions</h2>
+
+<p>At some point during weeks 8-10, Hack Reactor launched their new website. It’s quite a bit nicer than their last version, but more interestingly, they changed their admissions process too. The new process uses their website to check very basic JS skills.</p>
+
+<p>Hack Reactor likes having students/alumni contribute to their official blog, and I anwered the call for volunteers by authoring <a href="http://www.hackreactor.com/blog/the-hack-reactor-interview-process-questions-and-tips">this blog post</a> about the admissions process. Sadly, much of my experience lost relevance when the staff produced a new admissions process. I had to go through a 2-stage interview process, but now there is only a single interview. However, I think a lot of the advice I provided still makes sense.</p>
+
+<h1 id="what-i-learned">What I Learned</h1>
+
+<p>Much like the personal project period, a lot was learned via trial-by-fire work during the group project period. My group tried and scrapped various features, libraries, tools, project management strategies, etc. It was so tough and so awesome at the same time.</p>
+
+<h2 id="tech">Tech</h2>
+
+<p>My team knew we wanted to use geolocation, but we weren’t certain about much else. This meant that we had to research and explore many options. Eventually, we settled on a tech stack featuring quite a few different libraries/tools.</p>
+
+<h3 id="phonegap">PhoneGap</h3>
+
+<p>I spent a lot of time wrestling with <a href="http://phonegap.com/">PhoneGap</a>, a dev tool for creating smartphone apps using tech normally reserved for web browsers. It’s a fairly popular option for informational smartphone apps, rapid prototyping, etc. However, 101 out of 62 doctors have concluded that PhoneGap can lead to headaches and irritable demeanor. I’ve written specifically about using PhoneGap for Android in <a href="http://rebootjeff.github.io/blog/2014/01/27/setup-for-phonegap-for-android-for-reals/">a past blog post</a>.</p>
+
+<h3 id="dont-use-jquery-animations">Don’t use jQuery animations</h3>
+
+<p><a href="http://css-tricks.com/myth-busting-css-animations-vs-javascript/">This article</a> explains animation options quite well, but the gist of it is that you should avoid jQuery animations. You can use CSS (if you love jQuery, then use it to add animation-centric classes to target elements) or faster JavaScript animation libraries like <a href="http://www.greensock.com/gsap-js/">GSAP</a> (but it’s not very famous?). For Phone Tag, my team originally tried doing simple slide animations via jQuery-Mobile, and the performance was horrible. We switched to CSS-driven animations because there’s plenty of online help for them and we knew it would be good for us to study more CSS anyway.</p>
+
+<h2 id="engineering-and-project-management">Engineering and Project Management</h2>
+
+<p>Everyone expects to learn plenty of technical stuff when building projects at Hack Reactor, but there’s a slew of non-technical wisdom discovered too. My team had a lot of discussion and debates regarding feature sets, client vs server roles, project priorities, division of labor, etc. as we worked to meet MVP (minimum viable product) milestones and deadlines.</p>
+
+<p>Unlike the personal project period, the group project period involved a ton of communication. There’s a huge amount of extra planning and talking that goes into group coding. The collaboration is great for producing cool ideas and reducing scope of work for any given individual, but the group setting necessitates expressed justification for actions. When you’re on your own, you just explore and debug however you want to, and you’re often making heavy use of your <a href="http://en.wikipedia.org/wiki/Working_memory">working memory</a>. When you’re in a group or even just a pair, you often have to explain before you act, which is a pretty serious exercise for your brain because it can feel like your working memory doesn’t get to operate at peak efficiency due to the extra steps of communication that fall between coming up with a small idea and implementing that idea.</p>
+
+<p>Another way to put it: when you’re going solo, you get comfortable with the <em>just try XYZ and see if it works</em> model for programming. When you’re part of a team, you often need to <em>explain</em> XYZ, process any critical feedback you may receive, etc. Transitioning from solo work to group work needs a major change in mental processes. Luckily, everyone in my team is more patient and laidback than I am, so no wars broke out and no debates devolved into chaos. Good times.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[[HackR Diary] Weeks 6 and 7: App from Scratch]]></title>
@@ -391,79 +466,6 @@
 <p>After a few weeks of this HackR Diary blogging, I’ve noticed that I’ve missed a few things. Despite my best efforts, these posts are not as comprehensive as I originally imagined. For example, last week, I forgot to talk about learning eventing systems. Overall, I’ve been forgetting to talk about specific aspects of student life like food options, daily mini-presentations, fitness challenges, the “halp system”, volunteering for tech blogging, and so on and so forth…</p>
 
 <p>So much to write about; so little time.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[[HackR Diary] Event: Pamela Fox on Backbone]]></title>
-    <link href="http://RebootJeff.github.io/blog/2013/10/16/hackr-diary-a-visit-from-pamela-fox-re-backbone/"/>
-    <updated>2013-10-16T07:13:00-07:00</updated>
-    <id>http://RebootJeff.github.io/blog/2013/10/16/hackr-diary-a-visit-from-pamela-fox-re-backbone</id>
-    <content type="html"><![CDATA[<p class="last-updated">Last updated on Oct 16, 2013 (see strikethrough text).</p>
-
-<blockquote class="twitter-tweet"><p><a href="https://twitter.com/pamelafox">@pamelafox</a> schooling <a href="https://twitter.com/HackReactor">@HackReactor</a> students on <a href="https://twitter.com/search?q=%23backbonejs&amp;src=hash">#backbonejs</a> <a href="http://t.co/1xRuxIEvKl">pic.twitter.com/1xRuxIEvKl</a></p>&mdash; andre (@AndrEvangelestA) <a href="https://twitter.com/AndrEvangelestA/statuses/389949525588062209">October 15, 2013</a></blockquote>
-<script async="" src="http://RebootJeff.github.io//platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-<p>Last Monday, the Hack Reactor students were treated to <a href="http://backbone-3ways.appspot.com/">a Backbone presentation</a> by <a href="http://blog.pamelafox.org/">Pamela Fox</a>. It was packed with a ton of insight. I frantically took notes on my smartphone (like a fool), so now I present to you a collection of cool cucumbers.</p>
-
-<h1 id="what-i-learned">What I Learned</h1>
-
-<h2 id="backbone-nuggets">Backbone Nuggets</h2>
-
-<ul>
-  <li>
-    <p>Region management (which you can “outsource” to the likes of <a href="http://chaplinjs.org/">Chaplin</a> or <a href="http://marionettejs.com/s">Marionette</a>) is worth checking out. Apparently, it helps limit the amount of rendering you need to do by allowing you to target specific regions of the web page.</p>
-  </li>
-  <li>
-    <p>Not all Backbone libraries are created equal! Some provide sweet functionality at the cost of depressing performance losses. The Backbone ecosystem is cool, but not entirely safe. Pamela once removed a library from Coursera’s codebase that was responsible for a <em>full second</em> of page load time.</p>
-  </li>
-  <li>
-    <p>Backbone is so flexible that you might feel like an Backbone expert one day and then feel like a noob the next day when you see someone else’s radically different and compelling usage.</p>
-  </li>
-  <li>
-    <p>Break up your views into more views. Make sibling views and nested views. No single view should be a bajillion lines of code. If you find yourself making long js files in Backbone, it’s time to split things up, my fellow noob.</p>
-  </li>
-</ul>
-
-<h2 id="general-code-related-nuggets">General Code-Related Nuggets</h2>
-
-<ul>
-  <li>
-    <p>Don’t optimize prematurely. Performant code is harder to read. Making code harder to read early on can be annoying. I wonder if Pamela is pro-<a href="/blog/2013/09/25/hackr-diary-first-impressions/#guard-operator">guard operator</a> or anti-guard operator.</p>
-  </li>
-  <li>
-    <p><a href="http://requirejs.org/">RequireJS</a> kills your foolish usage of global vars. Perhaps I should use it.</p>
-  </li>
-  <li>
-    <p>Single-page web apps can be harder to debug (than multi-page web apps?) because state gets saved across various renders. Errors can be hard to reproduce during the debugging process because there might be many user interactions that need to occur in a particular sequence to cause the error.</p>
-  </li>
-  <li>
-    <p><strong>Ask potential employers about their companies’ testing practices.</strong> How much regression testing do they do? How many tests have they created? More tests means less fear when contributing to the codebase as a fresh employee.</p>
-  </li>
-  <li>
-    <p>Making <strong>forms</strong> with Backbone (or any MV framework?) is great because forms lend themselves to the model-view-collection paradigm with ease. Forms are collections of questions, which are models, which have their own views. Each question view can draw from a set of views meant to provide a particular format (a view for a question answered by checkboxes, a view for question answered by text fields, a view for question answered by generic menu, etc). This also means Backbone is good for creating <strong>control panels</strong> for admin users (e.g., admin control panel for teacher conducting a Coursera class).</p>
-  </li>
-</ul>
-
-<h2 id="re-coursera">Re: Coursera</h2>
-
-<p>Pamela used to work for Coursera. She drew from her experiences with that company to provide a lot of context and real-world examples for the arguments she put forth in her presentation.</p>
-
-<ul>
-  <li>
-    <p>To address SEO concerns associated with single-page web apps, Coursera used <strong>Just-in-Time rendering</strong>. Coursera would detect whether or not a visitor was a search/social engine bot crawling the sit. Upon identifying the bot, Coursera servers would respond by firing up a rendered instance of the web app using Selenium. The bot would then be directed to the code produced by the rendering. This prevents the bot from crawling an HTML file that has nothing but <code>&lt;script&gt;</code> tags pulling in Backbone code. Side note: Google is not cool with the just-in-time technique. Coursera had to use a different technique for Google, but that was not disclosed during Pamela’s talk :(</p>
-  </li>
-  <li>
-    <p><del>It’s not the most organized</del> (nevermind –it’s split into easy-to-understand folders), but you can find a lot of Coursera <a href="https://github.com/coursera/forum-js-snapshot">code on Github</a> (open source, baby!)</p>
-  </li>
-  <li>
-    <p>When viewing their source code with your browser, you’ll see mostly <code>&lt;script&gt;</code> tags. There is very little <code>&lt;body&gt;</code> HTML. That’s due to extensive use of Backbone.</p>
-  </li>
-</ul>
-
-<h1 id="what-i-thought">What I Thought</h1>
-
-<p>Pamela is a fantastic speaker. What I liked most about her talk was the use of real-world examples. As a student, it’s always so informative to hear about life in the wild (so to speak). Seeing as how this was a Hack Reactor event exclusively for students, it’s hard to judge it impartially, but I’m going to go ahead and claim it was awesome.</p>
 ]]></content>
   </entry>
   

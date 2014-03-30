@@ -4,7 +4,7 @@
   <title><![CDATA[RebootJeff.com]]></title>
   <link href="http://RebootJeff.github.io/atom.xml" rel="self"/>
   <link href="http://RebootJeff.github.io/"/>
-  <updated>2014-03-21T18:18:02-07:00</updated>
+  <updated>2014-03-30T13:49:07-07:00</updated>
   <id>http://RebootJeff.github.io/</id>
   <author>
     <name><![CDATA[Jeff Lee]]></name>
@@ -12,6 +12,81 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[[HackR Diary] Weeks 8-10: No More Solo]]></title>
+    <link href="http://RebootJeff.github.io/blog/2014/03/23/hackr-diary-weeks-8-10-group-collaboration/"/>
+    <updated>2014-03-23T15:52:00-07:00</updated>
+    <id>http://RebootJeff.github.io/blog/2014/03/23/hackr-diary-weeks-8-10-group-collaboration</id>
+    <content type="html"><![CDATA[<p><img src="http://RebootJeff.github.io/images/20140324/SimoneAnne-8351-birds.jpg" alt="something something Mighty Ducks" /></p>
+
+<p class="my-caption">Insert inspirational metaphor relating birds to teamwork</p>
+
+<h1 id="junior-to-senior-transition">Junior-to-Senior Transition</h1>
+
+<p>As I mentioned <a href="http://rebootjeff.github.io/blog/2014/03/21/hackr-diary-weeks-6-and-7-making-something/">last time</a>, my <a href="http://rebootjeff.github.io/blog/categories/hackr-diary/">HackR Diary</a> was on hiatus for a bit, so the events described in this blog post occurred back in mid-November thru early-December of 2013. Weeks 8, 9, and 10 of my Hack Reactor experience covered a group project period where students formed small teams to create web apps from scratch.</p>
+
+<p>I forgot to mention a few points in my description of the personal project period:</p>
+
+<h2 id="client-projects">Client Projects</h2>
+
+<p>Some folks in my cohort accepted client projects rather than coming up with their own web app ideas. This meant they had to meet with clients, deal with external requirements, etc. Some had fun experiences; some had frustrating experiences. Some got paid; some volunteered. They all got to add some extra gravitas to their resumes/CVs.</p>
+
+<h2 id="being-a-senior">Being a Senior</h2>
+
+<p>The cohort before mine graduated from the program just before interim week. After interim week, my cohort returned to HR HQ to find a new “junior” cohort, and there was a transition to seniorhood for us. As a senior, you have fewer/shorter lectures, less guidance, and you’re given more freedom to explore on your own. You still have a schedule to follow, but it’s far less rigid, which is fantastic. It’s funny how you feel more freedom, yet you end up working harder because of the nature of project periods at Hack Reactor.</p>
+
+<p>Unfortunately, there isn’t much time to get to know the juniors when you’re a senior. We had one code review night where seniors gave juniors feedback on their classwork, but as a senior, your mind is always worried about your project, your app, your baby born of code.</p>
+
+<p>By the way, I noticed that the juniors had more diversity. They had more women and more minority folks. I’m not saying my own cohort felt shitty because of the percentage of white males, and I’m not saying the new junior group reached some sort of ideal diversity (eventually, I may write a rambling blog entry about my views on diversity). I’m just noting the “slope” created by two “points of data.” The junior cohort was larger by about 5 or so people, but the increase in diversity was still noticeable. That said, I also noticed Hack Reactor felt more crowded (doh!).</p>
+
+<h1 id="recap-of-events">Recap of Events</h1>
+
+<p>I teamed up with 3 of my fellow seniors to work on a smartphone game called Phone Tag. Gameplay is like a free-for-all laser tag. Players sneak up on one another and hit a button to tag. The game displays a map (via Google Maps) to show locations of other players, power-ups, respawn points, etc. The app consists of HTML, CSS, and full-stack JavaScript. The client app is “ported” into an iOS app and an Android app via a tool called PhoneGap. Phone Tag leverages geolocation and real-time communications.</p>
+
+<p>The first week just consisted of setting up boilerplate code and brainstorming game ideas. It took us awhile to settle on the free-for-all game mode. We originally considered implementing a game resembling zombie tag instead. My team also had to spend lots of time researching libraries, tools, smartphone abilities, and all that sort of goodness to find out what we should use to develop our project.</p>
+
+<h2 id="fitness-challenge-push-up-routine">Fitness Challenge: Push-Up Routine</h2>
+
+<p>I’m sure some Hack Reactor folks (Hackers React? Hacker Reactions?) cynically roll their eyes at the staff’s efforts to promote health, but I appreciate them. For one week, there was a push-up challenge where students were encouraged to pair up and hold each other accountable for completing a set of push-ups twice a day. I paired up with a junior, and it was cool to be able to get to know someone outside of my cohort.</p>
+
+<h2 id="hacker-in-residence-program">Hacker-in-Residence Program</h2>
+
+<p>In the middle of the group project period, the staff told seniors about a program to extend the Hack Reactor experience. The Hacker-in-Residence program is an extra 3 months where you get paid to work part-time for the institution (develop internal tools, teach beginner-level content, interview applicants, etc) and work on more projects (i.e., extra project periods). The idea is that a select few seniors can become Hacker-in-Residence and gain valuable experience. I chose not to apply for the program because I already felt well prepared to enter the job market. Many students felt the same way, but plenty of them were attracted to the HIR program. Under half of the seniors applied, and most of them were accepted.</p>
+
+<p>Therefore, about 1/3 of my cohort became HIRs. It’s important to note that Hack Reactor might not include these guys in their post-graduation employment stats. But even so, I know previous HIRs have had little to no trouble getting employed after their HIR phase ended.</p>
+
+<h2 id="new-hack-reactor-admissions">New Hack Reactor Admissions</h2>
+
+<p>At some point during weeks 8-10, Hack Reactor launched their new website. It’s quite a bit nicer than their last version, but more interestingly, they changed their admissions process too. The new process uses their website to check very basic JS skills.</p>
+
+<p>Hack Reactor likes having students/alumni contribute to their official blog, and I anwered the call for volunteers by authoring <a href="http://www.hackreactor.com/blog/the-hack-reactor-interview-process-questions-and-tips">this blog post</a> about the admissions process. Sadly, much of my experience lost relevance when the staff produced a new admissions process. I had to go through a 2-stage interview process, but now there is only a single interview. However, I think a lot of the advice I provided still makes sense.</p>
+
+<h1 id="what-i-learned">What I Learned</h1>
+
+<p>Much like the personal project period, a lot was learned via trial-by-fire work during the group project period. My group tried and scrapped various features, libraries, tools, project management strategies, etc. It was so tough and so awesome at the same time.</p>
+
+<h2 id="tech">Tech</h2>
+
+<p>My team knew we wanted to use geolocation, but we weren’t certain about much else. This meant that we had to research and explore many options. Eventually, we settled on a tech stack featuring quite a few different libraries/tools.</p>
+
+<h3 id="phonegap">PhoneGap</h3>
+
+<p>I spent a lot of time wrestling with <a href="http://phonegap.com/">PhoneGap</a>, a dev tool for creating smartphone apps using tech normally reserved for web browsers. It’s a fairly popular option for informational smartphone apps, rapid prototyping, etc. However, 101 out of 62 doctors have concluded that PhoneGap can lead to headaches and irritable demeanor. I’ve written specifically about using PhoneGap for Android in <a href="http://rebootjeff.github.io/blog/2014/01/27/setup-for-phonegap-for-android-for-reals/">a past blog post</a>.</p>
+
+<h3 id="dont-use-jquery-animations">Don’t use jQuery animations</h3>
+
+<p><a href="http://css-tricks.com/myth-busting-css-animations-vs-javascript/">This article</a> explains animation options quite well, but the gist of it is that you should avoid jQuery animations. You can use CSS (if you love jQuery, then use it to add animation-centric classes to target elements) or faster JavaScript animation libraries like <a href="http://www.greensock.com/gsap-js/">GSAP</a> (but it’s not very famous?). For Phone Tag, my team originally tried doing simple slide animations via jQuery-Mobile, and the performance was horrible. We switched to CSS-driven animations because there’s plenty of online help for them and we knew it would be good for us to study more CSS anyway.</p>
+
+<h2 id="engineering-and-project-management">Engineering and Project Management</h2>
+
+<p>Everyone expects to learn plenty of technical stuff when building projects at Hack Reactor, but there’s a slew of non-technical wisdom discovered too. My team had a lot of discussion and debates regarding feature sets, client vs server roles, project priorities, division of labor, etc. as we worked to meet MVP (minimum viable product) milestones and deadlines.</p>
+
+<p>Unlike the personal project period, the group project period involved a ton of communication. There’s a huge amount of extra planning and talking that goes into group coding. The collaboration is great for producing cool ideas and reducing scope of work for any given individual, but the group setting necessitates expressed justification for actions. When you’re on your own, you just explore and debug however you want to, and you’re often making heavy use of your <a href="http://en.wikipedia.org/wiki/Working_memory">working memory</a>. When you’re in a group or even just a pair, you often have to explain before you act, which is a pretty serious exercise for your brain because it can feel like your working memory doesn’t get to operate at peak efficiency due to the extra steps of communication that fall between coming up with a small idea and implementing that idea.</p>
+
+<p>Another way to put it: when you’re going solo, you get comfortable with the <em>just try XYZ and see if it works</em> model for programming. When you’re part of a team, you often need to <em>explain</em> XYZ, process any critical feedback you may receive, etc. Transitioning from solo work to group work needs a major change in mental processes. Luckily, everyone in my team is more patient and laidback than I am, so no wars broke out and no debates devolved into chaos. Good times.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[[HackR Diary] Weeks 6 and 7: App from Scratch]]></title>
@@ -107,6 +182,116 @@
 <p>You can find the code for Co-Compare on my GitHub. I took the time to write up a decent README too because for some reason, I have a good time writing English in addition to JavaScript. I suggest you <a href="https://github.com/RebootJeff/co-compare#development">check this out</a> if you’re interested in learning more about how I created an app from scratch.</p>
 
 <p>Keep in mind that you shouldn’t follow everything I do. For example, my Angular app folder structure neglects best practice. It was a popular structure at the time, but it’s actually best to name folders based on features, rather than just lumping all controllers together, all views together, etc.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Setup for PhoneGap for Android for Reals]]></title>
+    <link href="http://RebootJeff.github.io/blog/2014/01/27/setup-for-phonegap-for-android-for-reals/"/>
+    <updated>2014-01-27T17:52:00-08:00</updated>
+    <id>http://RebootJeff.github.io/blog/2014/01/27/setup-for-phonegap-for-android-for-reals</id>
+    <content type="html"><![CDATA[<p><img src="http://RebootJeff.github.io/images/20140127/phonegap-android.png" alt="PhoneGap and Android have wonderful conversations" /></p>
+
+<p>PhoneGap is a crazy tool for building “hybrid” smartphone apps. You write HTML, CSS, and JavaScript code for PhoneGap to compile into an app for iOS, Android, Windows Phone, Blackberry, etc. The app will simply use a browser embedded in a native app wrapper (hence, the “hybrid” label).</p>
+
+<p>There are many pros and cons to developing with PhoneGap, but I won’t review those because you can find debates on the usefulness of PhoneGap and others like it so long as you have (at least) mediocre Google Fu. You do have Google Fu, <a href="http://lmgtfy.com/?q=google+fu">right</a>? Don’t forget that Adobe PhoneGap is oftentimes referred to as Apache Cordova (even in modern documentation).</p>
+
+<p>Anyway, this blog post is meant to disclose the growing pains you could encounter upon trying PhoneGap for the first time for Android development. Although if you’re developing for iOS, you’ll still face annoyances like having to disable WebView bounce (why doesn’t PhoneGap do that for you by default?!).</p>
+
+<p>There were many unspoken hoops I had to jump through to get it working for me when I worked on an <a href="https://github.com/RebootJeff/phone-tag-phonegap">outdoor video game app</a>. I really wish someone had warned me about these hoops, but my loss is your gain.</p>
+
+<h1 id="installfest">Installfest</h1>
+
+<p>I’m sure you were told to just install the Android SDK plus PhoneGap and then you’d be off to the races, right? <a href="http://imgur.com/gallery/4clw90A">WRONG</a>. So wrong. Incredibly wrong. Maybe it’s because my personal dev machine is running Ubuntu, but I had to install many missing pieces to the PhoneGap puzzle. Some PhoneGap tutorials cover some of these dev components, but I don’t remember seeing one that covered all of them so here you go:</p>
+
+<ul>
+  <li>Apache Ant: Java library/tool</li>
+  <li>JRE: Java Runtime Environment</li>
+  <li>JDK: Java Development Kit</li>
+  <li>Android SDK: platform Software Dev Kit (make sure it comes with Eclipse)</li>
+</ul>
+
+<p>After you install the Android SDK, you probably want to make sure you have the right API version. I used API 17 for supporting phones with Android v4.2. Use the SDK manager to install the desired API. Type <code>android</code> in a terminal to open the SDK manager. If that doesn’t work, it’s probably because you have a problem that will be solved by reading the next section of this blog post.</p>
+
+<h1 id="command-line-goodness">Command Line Goodness</h1>
+
+<p>Everyone wants to use command line tools. In fact, PhoneGap wants to use some commands for Android development, but SURPRISE! Those commands are not available until you manually edit your .bash_profile file. You may have to do some searching to find where your .bash_profile sleeps at night, but mine was in my home directory (aka ~/.bash_profile). Keep in mind that it is a hidden file, so you need to enable viewing hidden files (in case you didn’t know). I created a Development folder for my Android dev tools. Then I added the following lines to my .bash_profile (make sure you replace my filepath with your filepath):</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption class="code-header" style="margin-bottom:-5px;"><span>.bash_profile </span></figcaption>
+ <div class="CodeRay">
+  <div class="code"><pre>
+# Adds Android SDK tools to command line
+export PATH=$PATH:/home/myUserName/Development/adt-bundle-linux-x86_64-20131030/sdk/tools
+export PATH=$PATH:/home/myUserName/Development/adt-bundle-linux-x86_64-20131030/sdk/platform-tools
+</pre></div>
+</div>
+ </figure></notextile></div>
+
+<p>Now, you’re finally set to begin development with PhoneGap. However, if you want certain features to work, you may have to modify some XML files. Read on, my relative from a common-and-super-old ancestor.</p>
+
+<h1 id="xml-file-modifications">XML File Modifications</h1>
+
+<p>Want your app to access external networks? Getting origin errors? Try the sweet taste of the <code>&lt;access origin&gt;</code> tag. Want to enable geolocation? Try the soothing sounds eminating from the <code>&lt;feature&gt;</code> tag. These tags need to be edited/added to the <code>config.xml</code> file of your PhoneGap project. Put your Google Fu to practice if you need more details. Just keep in mind that if you run into various problems in the future, the <code>config.xml</code> file is yet another possible source of irritation to debug.</p>
+
+<p>Here’s a snippet from my config file:</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption class="code-header" style="margin-bottom:-5px;"><span>config.xml </span></figcaption>
+ <div class="CodeRay">
+  <div class="code"><pre>
+# Adds Android SDK tools to command line
+<span class="tag">&lt;access</span> <span class="attribute-name">origin</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">http://yourserver.com</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+<span class="tag">&lt;feature</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">http://api.phonegap.com/1.0/geolocation</span><span class="delimiter">&quot;</span></span> <span class="tag">/&gt;</span>
+</pre></div>
+</div>
+ </figure></notextile></div>
+
+<p>By the way, it’s best practice to declare what kind of voodoo your app is utilizing. In case of GPS usage, modify your <code>/platforms/android/AndroidManifest.xml</code> file as follows:</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption class="code-header" style="margin-bottom:-5px;"><span>/platforms/android/AndroidManifest.xml </span></figcaption>
+ <div class="CodeRay">
+  <div class="code"><pre>
+<span class="tag">&lt;uses-permission</span> <span class="attribute-name">android:name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">android.permission.ACCESS_COARSE_LOCATION</span><span class="delimiter">&quot;</span></span> <span class="tag">/&gt;</span>
+<span class="tag">&lt;uses-permission</span> <span class="attribute-name">android:name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">android.permission.ACCESS_FINE_LOCATION</span><span class="delimiter">&quot;</span></span> <span class="tag">/&gt;</span>
+<span class="tag">&lt;uses-permission</span> <span class="attribute-name">android:name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">android.permission.ACCESS_LOCATION_EXTRA_COMMANDS</span><span class="delimiter">&quot;</span></span> <span class="tag">/&gt;</span>
+</pre></div>
+</div>
+ </figure></notextile></div>
+
+<h1 id="down-the-rabbit-hole">Down the Rabbit Hole</h1>
+
+<p>Using PhoneGap for the first time can be incredibly frustrating. I ran into so many small issues when learning how to use it. There can be problems with connecting a device to your computer, enabling certain phone features, dealing with compatibility quirks, etc.</p>
+
+<h2 id="connecting-an-android-device">Connecting an Android Device</h2>
+<p>Type <code>adb devices</code> into a terminal after you use a USB cable to attach an Android phone to your computer. Make sure that the phone is put into <strong>USB Debugging mode</strong>. You can find that mode in the developer options. Different versions of Android have different ways to access the developer options.</p>
+
+<p>If you don’t see any devices listed, you may need to investigate drivers for your phone. Sometimes there are other problems with adb that can be solved be restarting: try typing <code>adb kill-server &amp;&amp; adb start-server</code> in your terminal (possibly with <code>sudo</code>).</p>
+
+<h2 id="plugins-not-included">Plugins Not Included</h2>
+<p>When using GPS, I ran into some blog posts claiming that it’s necessary to install a geolocation plugin. In my experience, it’s not needed, but for other features, it may be a different story. If you’re trying to access a hardware sensor or simply want to use a feature someone has already implemented (e.g., bar code scanner), then you may need to investigate plugins. This might be helpful: <a href="http://cordova.apache.org/news/2013/10/21/cordova-registry.html">About Cordova plugin registry</a></p>
+
+<h2 id="android-fragmentation-strikes-again">Android Fragmentation Strikes Again</h2>
+<p>Be warned: PhoneGap has different bugs for different versions of Android. For example, the PhoneGap app I worked on was built with Android API 17 (aka 4.2 aka Jelly Bean). I tested the app on a phone that uses Android 4.2.2 and a second phone that uses Android 4.4 (aka KitKat). The Jelly Bean phone had no functional issues with the app, but some CSS rules weren’t being applied correctly, which created some off-center layouts. The KitKat phone had no CSS issues, so it looked nice, but it had some functional issues regarding touch gestures. However, that could’ve been a problem with <a href="http://eightmedia.github.io/hammer.js/">Hammer.js</a>.</p>
+
+<p>FYI, my team also encountered a problem in Android 4.4 and iOS 7 where scrolling wasn’t available for a <code>&lt;section&gt;</code> that had overflowing text. We tried the usual CSS rules, but to no avail.</p>
+
+<h1 id="links-links">Links? Links!</h1>
+
+<p>I saved a few links that I found particularly useful. I shall deposit said links right here because I can and totally not for SEO purposes.</p>
+
+<ul>
+  <li><a href="http://yaizabailen.com/setting-up-an-android-app-build-environment-with-android-sdk-and-phonegap-in-ubuntu-13-04/">Setting Up An Android App Build Environment With Android SDK and PhoneGap in Ubuntu 13.04</a></li>
+  <li><a href="http://stackoverflow.com/questions/3127539/ubuntu-android-device-debug/3129903#3129903">StackOverflow: restarting adb</a></li>
+  <li><a href="http://stackoverflow.com/questions/6116724/how-to-use-android-phone-instead-of-emulator">StackOverflow: USB debugging mode</a></li>
+  <li><a href="http://devgirl.org/2013/09/05/phonegap-3-0-stuff-you-should-know/">PhoneGap 3.0 - Stuff You Should Know</a></li>
+</ul>
+
+<h1 id="to-phonegap-or-not-to-phonegap">To PhoneGap or Not to PhoneGap</h1>
+
+<p>So is PhoneGap worth the trouble? This blog post probably makes it sound like there’s a lot of shit to scoop before uncovering any treasure. That’s…mostly true. If rapid development is a priority, then PhoneGap is still a solid choice when you lack Objective-C and Java experience. I’ve heard from colleagues that learning Objective-C is its own special kind of hell, so that’s a +1 for PhoneGap, I guess.</p>
+
+<p>To me, tech enthusiasts need to look at the bigger picture: imagine a world where mobile web apps dominate rather than having native apps dominate the smartphone landscape. Firefox OS is actually trying to embrace JavaScript, but why does it matter? Consider the differences in distribution. Forget app marketplaces. Forget Apple acting as a gatekeeper for iOS apps. Imagine that your app is as available as any other website. Web apps are becoming more and more powerful. There are new frameworks (e.g., <a href="http://famo.us/">Famous</a> and another brand new one that I can’t remember at the moment) that make it possible to replicate the oohlala of the much-lauded Yahoo! Weather native app.</p>
+
+<p>The problem is that web apps for mobile devices can’t yet access native notifications. This is a huge obstacle for mobile web app dominance. Companies want their apps to have notifications to enhance user engagement and fight churn. Users want their apps to have notifications because it makes smartphones more helpful (although the line between helpful and spammy seems slimmer than my chances of becoming a guitar master). That said, web apps are getting better at using phones’ GPS sensors, cameras, accelerometers, etc. Hopefully the barrier between native app and mobile web app will continue to whither and eventually die like smallpox. In the words of unoriginal coaches every where, “WE CAN DO IT!”</p>
 ]]></content>
   </entry>
   
@@ -1884,203 +2069,6 @@ _gaq.push([<span class="string"><span class="delimiter">'</span><span class="con
 </ul>
 
 <p>You can also find press coverage of bootcamps, but I’ve found that they generally fail to give you much insight. Most articles are just explaining what a coding bootcamp is. Some press coverage involves video interviews and whatnot. Those are worth watching because even though they’re edited fluff pieces, they still give a glimpse into personalities and facilities.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Mini-Review of CheckiO]]></title>
-    <link href="http://RebootJeff.github.io/blog/2013/09/02/mini-review-of-checkio/"/>
-    <updated>2013-09-02T13:12:00-07:00</updated>
-    <id>http://RebootJeff.github.io/blog/2013/09/02/mini-review-of-checkio</id>
-    <content type="html"><![CDATA[<h1 id="overview">Overview</h1>
-
-<p><a href="http://www.checkio.org/">CheckiO</a> is a website that aims to teach programming by providing an online gaming world with some social features heavily emphasized. CheckiO is meant for beginners and experts alike, but all coding challenges must be completed in Python.</p>
-
-<p>The creators have quite a bit of hype behind them. They have received hundreds of thousands of dollars in funding. They have cultivated a thriving community of users. So yeah, my interest was piqued.</p>
-
-<iframe width="300" height="169" src="http://RebootJeff.github.io//www.youtube-nocookie.com/embed/kWoW6RgH04g" frameborder="0" allowfullscreen=""></iframe>
-
-<p>Side note: The site doesn’t seem to use secure HTTPS. It lets you log in with your other social media and developer community accounts (Facebook, Twitter, WordPress, GitHub, Stack Exchange, etc) so does that mean it’s safer to log in with a Twitter account rather than with a native CheckiO account?</p>
-
-<h2 id="disclaimer">Disclaimer</h2>
-
-<p>I did not play with CheckiO for more than a few hours, so that’s why I call this blog post a mini-review.</p>
-
-<p>I think giving it a couple of hours is enough to pass judgement considering that most users will probably give up or continue based on their initial 10 minutes on the site. But my point is that it’s possible that CheckiO is a much deeper, richer website if you’re patient enough to explore it.</p>
-
-<h1 id="what-i-thought">What I Thought</h1>
-
-<p>It looks like the CheckiO community is quite strong, but the site is designed to attract users with a visual wow factor that is misleading. The visuals don’t really tie into the actual coding experience very well. It reminds me of when I first tried Neopets. I was disappointed to find that interaction with the pets was limited to static interaction rather than real-time, animated interactions.</p>
-
-<p>Although the visuals of the CheckiO world seem to be geared towards attracting a younger crowd, that potential user base will be deterred by the detachment of said world. Try as they might, the creators of CheckiO fail to make the world, the backstory, the characters, etc. feel relevant when facing a coding challenge. It’s kind of like how some action movies and video games have plots that barely exist because the creators focused more on the action than the story. I get the sense that the creators of CheckiO are actually trying hard to make their story feel relevant, but it’s just not working for me.</p>
-
-<p>In other words, CheckiO wants to prevent users from thinking it’s just another site full of coding challenges by showering the experience with cool graphics and a backstory. They want you to think it’s an edutainment experience rather than a purely academic one. They want you to think CheckiO is a game rather than a series of assignment akin to homework, but it just doesn’t feel like a video game.</p>
-
-<p>The bulk of the experience is not something that could be described as “gameplay.” The in-browser IDE screams “boring” when compared to the home screen presented after logging in. This is a big bummer because everything you see leading up to a coding challenge makes you think you’re about to see something really cool and interactive. It actually makes me think I’m about to see a mini-game. Instead, you end up setting your eyes on a very unappealing IDE.</p>
-
-<p>Despite its attempts to the contrary, CheckiO is just another site full of coding challenges. The challenges are fun for people who already enjoy programming, but the site just doesn’t live up to its potential to reach out to a new, bigger, untapped audience. The user experience really needs to be remade to properly engage users quickly. Instead, it leaves you a bit confused because it looks like a site full of features and gamification, but you can’t quite figure out how to enjoy the benefits.</p>
-
-<p>Given the current success earned by CheckiO, I have a feeling more patient yields more rewards when using the site, but I still have a hard time imagining that “coding on CheckiO” could ever be described as “playing CheckiO.” I feel bad to give CheckiO a thumbs down because they’re the type of underdog with the type of good intentions that I want to support.</p>
-
-<h2 id="woo">Woo!</h2>
-<ul>
-  <li>Thriving international community</li>
-  <li>Fun coding challenges</li>
-</ul>
-
-<h2 id="boo">Boo!</h2>
-<ul>
-  <li>Long load times</li>
-  <li>Tangled navigation</li>
-  <li>Omg bubbly/glassy UI is so 2009 duh</li>
-  <li>Solutions not displayed for first few challenges (even after you pass them)</li>
-  <li>The weird capitalization in the brand name “CheckiO” bothers me :p</li>
-</ul>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Hack Reactor is my future]]></title>
-    <link href="http://RebootJeff.github.io/blog/2013/08/25/hack-reactor-is-my-future/"/>
-    <updated>2013-08-25T15:58:00-07:00</updated>
-    <id>http://RebootJeff.github.io/blog/2013/08/25/hack-reactor-is-my-future</id>
-    <content type="html"><![CDATA[<p><img src="http://RebootJeff.github.io/images/hackreactorlogo_SP.png" alt="Hack Reactor logo" /></p>
-
-<p class="my-caption">Image Credits:  <a href="https://hackreactor.eventbrite.com/">Hack Reactor</a></p>
-
-<p>I have enrolled in the September 23, 2013 cohort of <a href="http://hackreactor.com">Hack Reactor</a> (aka HackR), which is a 12-week coding bootcamp (or “academy” as they say) located in downtown San Francisco. I will pay them thousands of dollars so I can spend about 72-80 hours/week training, learning, and exploring –all in an attempt to gain the skills of a software developer (with a focus on web tech).</p>
-
-<h1 id="hold-up-whats-a-coding-bootcamp">Hold up. What’s a coding bootcamp?</h1>
-<p>Coding bootcamps are training courses that teach students the fundamentals needed to become immediately employable in some field of programming (generally web development, but some bootcamps focus on smartphone apps). Most bootcamps require full-time commitment (you must quit your job) and are pretty intense. Students generally “work” for more than 40 hours per week.</p>
-
-<p>I put “work” in quotes because it in this case, I’m using the word to cover many different things that happen in a typical day at a bootcamp. Students listen to lectures by faculty and guest speakers. Students program in pairs. Students study and complete assignments. Most importantly, students get a ton of hands-on learning experience. Bootcamp curriculae typically involve projects that help students establish a portfolio of apps.</p>
-
-<p>Bootcamps are a great option for people who want to switch from a non-computer science career to a programming-heavy career. That said, there will be some CS grads in some bootcamps because college often neglects to teach relevant hard skills like how to use git.</p>
-
-<p>Coding bootcamps are also called programming bootcamps, developer/dev bootcamps, etc. The term “bootcamp” is sometimes replaced with “immersive course” or just “immersive.”</p>
-
-<p>Check out this video to get a sense of the Hack Reactor vibe:</p>
-
-<iframe width="300" height="169" src="http://RebootJeff.github.io//www.youtube.com/embed/ko9bXImNirE" frameborder="0" allowfullscreen=""></iframe>
-
-<h1 id="why-pick-hack-reactor">Why pick Hack Reactor?</h1>
-<p>In the coming days and weeks, I am going to extensively blog about my experience researching different bootcamps in a series unsurprisingly entitled <a href="http://RebootJeff.github.io/blog/categories/bootcamp-research/">Coding Bootcamp Research</a>. The series will cover all the ins and outs of how I examined my options, the admissions processes, and my decision to choose HackR over its competitors.</p>
-
-<p>To give you the gist of it, I chose HackR because it seems to produce the smartest bootcamp “grads” through a combination of high quality faculty/curriculum and lots of time. What I mean by “lots of time” is that faculty are on the clock from 9am-8pm x 6 days/week instead of the typical 9am-6pm x 5 days/week found at other bootcamps.</p>
-
-<p>The claim that HackR has the best grads is backed up by…more claims. They claim that 100% of their grads find a developer job within 3 months after graduation. They claim that the average starting salary of their alumni is somewhere around $100,000 (I don’t remember the exact dollar amount because the raw amount matters less than how high it ranks). No other bootcamps claim to have such high levels of success.</p>
-
-<p>Why should I believe Hack Reactor? Because I trust them. And I would normally litter such claims in my blog with relevant links, but the previous few paragraphs lack links because I will simply discuss these things in much greater detail in future blog posts.</p>
-
-<p>I have a lot to say regarding HackR’s pros and cons. I have a lot to say about the pros and cons of App Academy, Coding Dojo, General Assembly, Dev Bootcamp, and the brand new RocketU as well. So stay tuned.</p>
-
-<h1 id="so-what-now">So… what now?</h1>
-<p>I have about a month of funemployment left before HackR dominates my life. During that time, I have to deal with financial concerns, HackR introductory homework, and my own personal goals.</p>
-
-<h2 id="money-money-money-moneyey">Money, money, money (moneyey!)</h2>
-<p>This is about to get a bit personal, so prepare thyself.</p>
-
-<p>I need to deal with tuition. $2,000 down. $15,780 to go. In the word of the great philosopher, Bart Simpson: “Eep.” Luckily, my mom has offered to cover my tuition. At first, I was reluctant to accept. After all, I have the money…sort of (most of my money is in stocks). I wouldn’t have much left over if I paid tuition myself, but the real reason I hesitated to accept my mom’s generosity was based on principle.</p>
-
-<p>I like being independent in many ways. Financial independence is one of those ways.</p>
-
-<p>I often question what my mom thinks rather than just accepting her ideas at face value. I changed my mind about her offer by using a thought process I use whenever I encounter this questioning that routinely visits my mind. The process is simple. I ask myself, <strong>“How would I feel if I were the parent?”</strong> Obviously, I easily consider what happens when I’m the child. So when I consider the parent perspective, I can imagine being a parent considering the child perspective too.</p>
-
-<p>But let’s not get too cyclical/meta because I was telling a story that actually has an ending.</p>
-
-<p>As I thought about things from the view of my hypothetical, futuristic, child-rearing mind, I realized that if I were in my mom’s shoes, I would very much want my son to accept my money. The reason? Principle.</p>
-
-<blockquote>
-  <p>OMG @RebootJeff just paradoxed himself #WTF #ICallBS #hypocrisy</p>
-</blockquote>
-
-<p>Shut up and listen. You can posit that I’m merely rationlizing a money-grubbing stance, and I know that’s what it looks like, but I hold myself obligated to meet the same standards and expectations when I’m finally a parent. In this case, the expectation I’m talking about is the responsibility (and deep desire) to help my child <del>become a Neil deGrasse Tyson badass</del> get really awesome education.</p>
-
-<p>Not to mention, my family has that traditional Asian risk-aversion baked into its collective mind. However, as my mom pointed out, pursuing fantastic educational opportunities shouldn’t be considered a (financial) risk to avoid if the parent can help out.</p>
-
-<h2 id="the-curriculum-begins-now">The curriculum begins now</h2>
-<p>There are a few tasks to accomplish prior to the first day of class other than making HackR rich(er). The bootcamp’s pre-course work requires about 90 hours of dedication (about 50 hours mandatory + about 40 hours optional). I’ve been instructed to…</p>
-
-<ol>
-  <li>
-    <p>Complete a lot of <a href="http://codeschool.com">Code School</a> tutorials (which is a bit of a bummer because I’m tired of online tutorials).</p>
-  </li>
-  <li>
-    <p>Learn more JavaScript through some TDD challenges using Jasmine and Mocha (I don’t know what these are if they’re not hot beverages).</p>
-  </li>
-  <li>
-    <p>Learn about git via various videos and tutorials (which should be easy because I already know some git).</p>
-  </li>
-  <li>
-    <p>Build a basic Twitter clone (which sounds so difficult that I can’t wait to do it –what an odd feeling).</p>
-  </li>
-  <li>
-    <p>Check out a list of optional online resources.</p>
-  </li>
-</ol>
-
-<h2 id="my-own-pre-course-to-do-list">My own pre-course to-do list</h2>
-<p>I plan on completing most of the optional pre-course work (in addition to the mandatory parts), but I also hope to make time for some other pre-course goals of mine. Maybe some are covered by the pre-course work, but here’s a comprehensive list:</p>
-
-<h3 id="relevant">Relevant</h3>
-
-<ul>
-  <li>
-    <p>Watch videos re: <a href="https://tutsplus.com/course/improve-workflow-in-sublime-text-2/">Sublime Text wizadry</a></p>
-  </li>
-  <li>
-    <p>Consider PAYING for Sublime Text to get rid of the money-begging feature</p>
-  </li>
-  <li>
-    <p>Figure out regex</p>
-  </li>
-  <li>
-    <p>Get intimate with that scary thingamabob known as <a href="http://linuxcommand.org/lc3_learning_the_shell.php">Linux shell</a></p>
-  </li>
-  <li>
-    <p>Buy a notebook that is made of something called “paper”</p>
-  </li>
-  <li>
-    <p>Conform to a proper sleep schedule (makes me cry just thinking about it)</p>
-  </li>
-  <li>
-    <p>Watch more lectures from Berkeley’s <a href="http://www.youtube.com/watch?v=Fr-B4xHZRzY">CS169: Software as a Service</a></p>
-  </li>
-  <li>
-    <p>Buy tons of snacks/drinks because I won’t have much time for grocery shopping during bootcamp weeks</p>
-  </li>
-  <li>
-    <p>Attend lots of dev meetups, especially <a href="http://www.theodinproject.com/">Odin Project</a> meetups</p>
-  </li>
-  <li>
-    <p>Think of how I want to make my own HackR vlog</p>
-  </li>
-</ul>
-
-<h3 id="not-so-relevant">Not-so-relevant</h3>
-
-<ul>
-  <li>
-    <p>Take one last hit of that <a href="http://www.sfr-solo.org/solo2/cgi-bin/schedaction.cgi?autox&amp;where=all&amp;Next_three_months">autocross</a> high</p>
-  </li>
-  <li>
-    <p>Finish reading some rather <a href="http://www.amazon.com/Batman-Robin-Vol-Must-Die/dp/1401235085">disturbing-but-amazing Batman</a> comic books</p>
-  </li>
-  <li>
-    <p>Deactivate my online dating profiles because I won’t have time for that crap (although it’s not like I was a total playa to begin with)</p>
-  </li>
-  <li>
-    <p>Help a roommate build a new PC (he’s never built one before)</p>
-  </li>
-  <li>
-    <p>Make at least 1 more faux vlog episode</p>
-  </li>
-  <li>
-    <p>Make at least 1 music recording</p>
-  </li>
-</ul>
-
-<p>Most of all, I want to write up a LOT of blog posts documenting all the research I did when investigating coding bootcamps.</p>
 ]]></content>
   </entry>
   
