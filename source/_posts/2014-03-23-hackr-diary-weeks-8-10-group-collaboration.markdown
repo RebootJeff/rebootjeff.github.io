@@ -60,21 +60,16 @@ My team knew we wanted to use geolocation, but we weren't certain about much els
 
 ### PhoneGap
 
-I spent a lot of time wrestling with PhoneGap, a dev tool for creating smartphone apps using tech normally reserved for web browsers. It's a fairly popular option for informational smartphone apps, rapid prototyping, etc. However, 101 out of 62 doctors have concluded that PhoneGap can lead to headaches and irritable demeanor. I've written specifically about using PhoneGap for Android in [a past blog post]().
+I spent a lot of time wrestling with [PhoneGap](http://phonegap.com/), a dev tool for creating smartphone apps using tech normally reserved for web browsers. It's a fairly popular option for informational smartphone apps, rapid prototyping, etc. However, 101 out of 62 doctors have concluded that PhoneGap can lead to headaches and irritable demeanor. I've written specifically about using PhoneGap for Android in [a past blog post](http://rebootjeff.github.io/blog/2014/01/27/setup-for-phonegap-for-android-for-reals/).
 
-### Other Tech Fail
+### Don't use jQuery animations
 
-- jQuery-UI
-- RequireJS vs PhoneGap (file protocol)
+[This article](http://css-tricks.com/myth-busting-css-animations-vs-javascript/) explains animation options quite well, but the gist of it is that you should avoid jQuery animations. You can use CSS (if you love jQuery, then use it to add animation-centric classes to target elements) or faster JavaScript animation libraries like [GSAP](http://www.greensock.com/gsap-js/) (but it's not very famous?). For Phone Tag, my team originally tried doing simple slide animations via jQuery-Mobile, and the performance was horrible. We switched to CSS-driven animations because there's plenty of online help for them and we knew it would be good for us to study more CSS anyway.
 
-## Engineering
+## Engineering and Project Management
 
-- debating
-- architecture: client-side vs server-side
+Everyone expects to learn plenty of technical stuff when building projects at Hack Reactor, but there's a slew of non-technical wisdom discovered too. My team had a lot of discussion and debates regarding feature sets, client vs server roles, project priorities, division of labor, etc. as we worked to meet MVP (minimum viable product) milestones and deadlines.
 
-## Project Mangement
+Unlike the personal project period, the group project period involved a ton of communication. There's a huge amount of extra planning and talking that goes into group coding. The collaboration is great for producing cool ideas and reducing scope of work for any given individual, but the group setting necessitates expressed justification for actions. When you're on your own, you just explore and debug however you want to, and you're often making heavy use of your [working memory](http://en.wikipedia.org/wiki/Working_memory). When you're in a group or even just a pair, you often have to explain before you act, which is a pretty serious exercise for your brain because it can feel like your working memory doesn't get to operate at peak efficiency due to the extra steps of communication that fall between coming up with a small idea and implementing that idea.
 
-- MVP / what to prioritize
-  - dropped: testing, user auth, NoSQL database
-- staying on task / meeting MVP milestone deadlines
-- division of labor
+Another way to put it: when you're going solo, you get comfortable with the *just try XYZ and see if it works* model for programming. When you're part of a team, you often need to *explain* XYZ, process any critical feedback you may receive, etc. Transitioning from solo work to group work needs a major change in mental processes. Luckily, everyone in my team is more patient and laidback than I am, so no wars broke out and no debates devolved into chaos. Good times.
