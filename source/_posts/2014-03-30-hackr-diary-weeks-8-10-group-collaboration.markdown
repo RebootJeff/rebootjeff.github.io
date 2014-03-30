@@ -1,12 +1,12 @@
 ---
 layout: post
 title: "[HackR Diary] Weeks 8-10: No More Solo"
-date: 2014-03-23 15:52
+date: 2014-03-30 13:52
 comments: true
 categories: ['HackR Diary','Hack Reactor','coding bootcamps']
 ---
 
-![something something Mighty Ducks](/images/20140324/SimoneAnne-8351-birds.jpg)
+![something something Mighty Ducks](/images/20140330/SimoneAnne-8351-birds.jpg)
 
 <p class="my-caption">Insert inspirational metaphor relating birds to teamwork</p>
 
