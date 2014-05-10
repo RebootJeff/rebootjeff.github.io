@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "[HackR Diary] Weeks 11-12 and Beyond!"
-date: 2014-05-10 12:45
+title: "[HackR Diary] Weeks 11-12: And Beyond!"
+date: 2014-05-11 12:45
 comments: true
 categories: ['HackR Diary','Hack Reactor','coding bootcamps']
 ---
 
-![Now We Boogie](/images/20140510/flash_now_we_boogie.png)
+![Now We Boogie](/images/20140511/flash_now_we_boogie.png)
 
 <p class="my-caption">The Flash suggests rhythmic celebration -- Image by Yale Stewart of JL8 <a href="https://www.facebook.com/photo.php?fbid=252029451584354&set=a.191314654322501.42323.126319720821995&type=3&theater">Comic</a></p>
 
@@ -28,11 +28,11 @@ One of my favorite guest speakers during my time at Hack Reactor was Pamela Fox.
 
 ## Consultant Surveys the Students
 
-For the first time in Hack Reactor history, a consultant was brought in specifically to give a 2-day workshop on job search prep. The consultant, David Daniels, did all the usual stuff like resume review (which would make him the 5th person to review our resumes during the 12 weeks of Hack Reactor), but he also conducted exercises on networking and personality testing. Plus, he gave a lecture about what companies like Microsoft look at when evaluating candidates.
+For the first time in Hack Reactor history, a consultant was brought in specifically to give a 2-day workshop on job search prep. The consultant, David Daniels, did all the usual stuff like resume review (which would make him the 5th person to review our resumes during the job search prep portion of Hack Reactor), but he also conducted exercises on networking and personality testing. Plus, he gave a lecture about what companies like Microsoft look at when evaluating candidates.
 
 ### Networking Practice
 
-"Tell me about yourself" is such a common opener for job interviews (especially in the phone screen stages), but it's funny how hard it can be to come up with a coherent answer without any practice. Therefore, David had us all practice giving quick, autobiographical pitches that would not ony sound concise (no rambling!), but also provide all the relevant info that recruiters want to hear.
+"Tell me about yourself" is such a common opener for job interviews (especially in the phone screen stages), but it's funny how hard it can be to come up with a coherent answer without any practice. Therefore, David had us all practice giving quick, autobiographical pitches that would not ony sound concise (no rambling!), but also provide all the relevant info that recruiters want to hear (what you've been working on, what specific skills you have, what you look for in a new job, etc).
 
 Students were also instructed to practice giving "pitches" on why they want to work for company XYZ in response to the frequently asked question of "Why do you want to work here?" Admittedly, this is something I did not give much attention to after graduation, and I regret that. It's definitely important to practice answering that question for all the different companies you apply to.
 
@@ -50,7 +50,7 @@ Here are my top 5 (paraphrased) strengths according to the test:
 - **Restorative:** Strong problem solving. "Restorative" folks figure out what is wrong and resolving it.
 - **Intellection:** Characterized by intellectual activity. "Intellection" folks are introspective and appreciate intellectual discussions.
 
-My results put me in the "typical" engineer group. Together, with the fellow students with similar strengths, we built a Google Spreadsheet to further analyze our results and find out who was most similar to whom. **Damn. We nerdy.**
+My results put me in the "typical" engineer group. Together, with the fellow students with similar strengths, we built a Google Spreadsheet to further analyze our results and find out who was most similar to whom. **Damn. We *nerdy*.**
 
 #### Mini-Anti-Personality-Test-Rant
 
@@ -70,7 +70,7 @@ Then we parted ways. Some flew back home, never to return. Most of us went home 
 
 ### Presentation by Gayle Laakmann
 
-The author of the mucho famous book, *[Cracking the Coding Interview](http://www.crackingthecodinginterview.com/)*, gave a talk at Hack Reactor in January. She gave a ton of great advice. I will regurgitate much of it in a future blog post. For now, I just want to share the most interesting tidbit:
+The author of the mucho famous book, *[Cracking the Coding Interview](http://www.crackingthecodinginterview.com/)*, gave a talk at Hack Reactor in January. She gave a ton of great advice. I will regurgitate much of it in a future blog post. For now, I just want to share the most interesting tidbit.
 
 Gayle mentioned that you will suck at surmising your own interview success. Apparently surveys have been conducted, and they found no correlation between how well a candidate thinks they did versus how the candidate's interviewer thinks they did. You may think you aced an interview, but you actually bombed it. You may think you failed, but you actually did better than all the other candidates.
 
@@ -102,6 +102,7 @@ I learned so much about job hunting. I will go into details in a future blog pos
 - Regrets
   - I should've used more Hack Reactor connections
   - I should've taken more action sooner
+  - I should've actively shown more enthusiasm for each company I visited
 - General
   - What recruiters are really like
   - How employers evaluate you *before* any interview

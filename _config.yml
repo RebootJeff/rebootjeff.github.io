@@ -95,6 +95,9 @@ google_plus_one_size: medium
 googleplus_user:
 googleplus_hidden: false
 
+# Quora
+quora_user: Jeff-Lee-40
+
 # Pinboard
 pinboard_user:
 pinboard_count: 3
