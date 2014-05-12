@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "[HackR Diary] Weeks 11-12: And Beyond!"
-date: 2014-05-11 12:45
+date: 2014-05-11 22:42
 comments: true
 categories: ['HackR Diary','Hack Reactor','coding bootcamps']
 ---
@@ -10,7 +10,7 @@ categories: ['HackR Diary','Hack Reactor','coding bootcamps']
 
 <p class="my-caption">The Flash suggests rhythmic celebration -- Image by Yale Stewart of JL8 <a href="https://www.facebook.com/photo.php?fbid=252029451584354&set=a.191314654322501.42323.126319720821995&type=3&theater">Comic</a></p>
 
-The events discussed in this blog post occurred in December 2013 and January 2014 because a [blogging hiatus](/blog/2013/11/19/hackr-diary-my-apology/) caused a bit of a delay, plus I've just been lazy with blogging recently.
+The events discussed in this blog post occurred in December 2013 and January 2014 because a [blogging hiatus](/blog/2013/11/19/hackr-diary-my-apology/) caused a bit of a delay. Plus, I've just been lazy with blogging recently.
 
 # Recap of Events
 
@@ -64,7 +64,7 @@ There was booze, dancing, food, funny photos, and good times :D
 
 ## Overtime Support
 
-The day after graduation, my cohort returned for a follow-up. The follow-up included asking us not to reveal too many of Hack Reactor's trade secrets, asking us for feedback about the course, and some extra heartfelt moments.
+The day after graduation (which was in late December), my cohort returned for a follow-up. The follow-up included asking us not to reveal too many of Hack Reactor's trade secrets, asking us for feedback about the course, and some extra heartfelt moments.
 
 Then we parted ways. Some flew back home, never to return. Most of us went home for the winter holidays and returned in January for post-graduation job search help. This included mock interviews conducted by Hack Reactor staff (more specifically, [Cameron Boehmer](http://www.linkedin.com/in/cameronboehmer), an awesomely nice guy who created [Squirt.io](http://www.businessinsider.com/how-to-start-reading-at-nearly-1000-words-per-minute-today-2014-3)). It also included practicing whiteboarding with peers, lots of mentoring, and a few additional lectures about stuff like user authentication and SEO.
 
@@ -72,7 +72,7 @@ Then we parted ways. Some flew back home, never to return. Most of us went home 
 
 The author of the mucho famous book, *[Cracking the Coding Interview](http://www.crackingthecodinginterview.com/)*, gave a talk at Hack Reactor in January. She gave a ton of great advice. I will regurgitate much of it in a future blog post. For now, I just want to share the most interesting tidbit.
 
-Gayle mentioned that you will suck at surmising your own interview success. Apparently surveys have been conducted, and they found no correlation between how well a candidate thinks they did versus how the candidate's interviewer thinks they did. You may think you aced an interview, but you actually bombed it. You may think you failed, but you actually did better than all the other candidates.
+Gayle mentioned that you will suck at surmising your own interview success. Apparently, surveys have been conducted, and they reveal zero correlation between how well a candidate thinks they did versus how the candidate's interviewer thinks they did. You may think you aced an interview, but you actually said something that's a deal-breaker. Or you may think you bombed, but you actually did better than all the other candidates.
 
 ## Hiring Day
 
@@ -106,3 +106,9 @@ I learned so much about job hunting. I will go into details in a future blog pos
 - General
   - What recruiters are really like
   - How employers evaluate you *before* any interview
+
+# What's Next for Hack Reactor?
+
+Yesterday, I went to my cohort's "3-month" reunion hosted by Hack Reactor. It's actually been closer to 5 months since graduation, but whatever. At the reuinion, the founders of Hack Reactor did a Q&A panel where they provided career advice and asked us how things were going at our new jobs. After the panel, we were told that Hack Reactor HQ is expanding. It's already expanded once since my cohort ended by using a second floor of the building. That expansion increased the size of Hack Reactor cohorts. More staff have been hired too.
+
+A third floor will be opening in June. It will mostly be used as offices for the newly augmented staff, but it will also have a new lounge area for alumni to use! Niiice. Wheels have been set in motion to organize alumni events and general activity. For example, there are plans to use the alumni network as an avenue for project collaboration (e.g., Feel like starting a random side project? Get ideas and possibly form a team with alumni).
