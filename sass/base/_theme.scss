@@ -1,3 +1,5 @@
+$hero-height: 330px;
+
 .container {
   background-color: none;
 }
@@ -7,30 +9,31 @@
   width: 100%;
   background-attachment: scroll;
   background-clip: border-box;
-  background-color: #000000;
+  background-color: #FFF;
   background-image: url("/images/hero_bg.jpg");
   background-origin: padding-box;
-  background-position: 0px -150px;
+  // background-position: 0px -150px;
   background-repeat: no-repeat;
-  background-size: auto auto;
+  // background-size: auto auto;
   // worth considering?
-  // background-position: center -50px;
-  // background-size: cover;
-  margin: 0px;
-  padding: 75px;
+  background-position: center top;
+  background-size: auto 1000px;
+  // margin: 0;
+  // padding: 0;
   z-index: -1;
-  height: 550px;
+  height: $hero-height;
 }
 #hero-inner {
   font-family: 'Cantarell', sans-serif;
-  margin-top: 60px;
+  margin-top: $hero-height - 150;
+  text-align: center;
   color: white;
-  text-shadow: 0px 0px 4px black, 0px 0px 4px black, 
-  0px 0px 7px black, 0px 0px 7px black,
-  0px 0px 10px black, 0px 0px 10px black;
+  text-shadow: 0px 0px 4px black, 0px 0px 4px black,
+  0px 0px 4px black, 0px 0px 4px black,
+  0px 0px 11px black, 0px 0px 11px black;
 }
 #hero-inner h1 {
-  font-size: 5em;
+  font-size: 3em;
 }
 #hero-inner em {
   font-style: normal;
@@ -38,7 +41,7 @@
   text-shadow: -2px -2px 2px #FFFFFF, 2px 2px 2px #FFFFFF;
 }
 #hero-inner h2 {
-  font-size: 2em;
+  font-size: 1.5em;
   padding-left: 0.2em;
 }
 body {
@@ -73,7 +76,7 @@ article h1 {
 #front-wrapper {
   background-color: #F1F1F1;
   //change margin-top for front-wrapper and tool.tip.home simultaneously
-  margin-top: 400px;
+  margin-top: $hero-height - 50px;
   border-top-color: white;
   border-top-style: solid;
   border-top-width: 1px;
@@ -92,14 +95,16 @@ article h1 {
 }
 .wrapper_single {
   background-color: #F1F1F1;
-  background-image: url("/images/hero_bg.jpg");
+  // background-image: url("/images/hero_bg.jpg");
   background-attachment: fixed;
-  padding-top: 75px;
-  padding-bottom: 75px;
+  background-position: center top;
+  background-size: cover;
+  padding-top: 15px;
+  padding-bottom: 15px;
   border-bottom-color: white;
   border-bottom-style: solid;
   border-bottom-width: 1px;
-  min-height: 550px;
+  min-height: $hero-height;
 }
 .single_article {
   margin: 25px;
@@ -145,7 +150,7 @@ article h1 {
   border-bottom-style: solid;
   border-bottom-width: 1px;
   box-shadow: 0 1px 0 0 #FFFFFF;
-  padding: 20px;
+  padding: 10px;
   margin-bottom: 30px;
 }
 .social_icon {
@@ -229,7 +234,7 @@ table code {
   word-break: initial;
 }
 .tooltip.top.home {
-  margin-top: -403px;
+  margin-top: -$hero-height - 3px;
 }
 p {
   line-height: 1.7;
