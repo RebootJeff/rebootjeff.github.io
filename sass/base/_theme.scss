@@ -232,7 +232,8 @@ dt .social_icon {
   border: none;
 }
 table code {
-  white-space: inherit;
+  // This white-space nonsense is screwing up code block responsive design
+  // white-space: inherit;
   word-wrap: initial;
   word-break: initial;
 }
