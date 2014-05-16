@@ -42,7 +42,10 @@ I also configure Sublime Text to automatically add a new line at the end of ever
 # Theme (UI Skin)
 
 I use the Nexus theme, which you can find here: [https://github.com/EleazarCrusader/nexus-theme](https://github.com/EleazarCrusader/nexus-theme). The readme file explains a bunch of different installation options, but I recommend installing via Package Manager. The readme also tells you how to activate the theme after installation.
+
 ![official Nexus theme screenshot](https://raw.githubusercontent.com/EleazarCrusader/nexus-theme/master/nexus-theme.png)
+
+<p class="my-caption">The orange and blue decorations on the tabs tell you if the file has been change since last save.</p>
 
 # Packages
 
@@ -52,7 +55,8 @@ After you install Package Manager, you can access it by hitting `Ctrl+Shift+P` (
 
 Here are the packages I installed:
 
-**Alignment**: Prettify your code by aligning multiple lines of variable definitions and hash objects. For example...
+### Alignment
+Prettify your code by aligning multiple lines of variable definitions and hash objects. For example...
 
 {% coderay lang:js Before and After using the Alignment package %}
 // this stuff...
@@ -84,12 +88,15 @@ This may look stupid to you, but I don't use it all the time. The main place I l
 }
 {% endcoderay %}
 
-**GitGutter**: Add indicators in your gutter so then you can see which lines of code have been changed since the last git commit. See the left edge of this screenshot:
+### GitGutter
+Add indicators in your gutter so then you can see which lines of code have been changed since the last git commit. See the left edge of this screenshot:
 ![GitGutter in action](http://i.imgur.com/ur6FY.png)
 
-**SublimeLinter**: I prefer live linting over build-time linting. SublimeLinter supports a ton of languages, and I have it set to simply bring up an indicator in the gutter and some underscores to point to any issues it finds. It's not too obtrusive.
+### SublimeLinter
+I prefer live linting over build-time linting. SublimeLinter supports a ton of languages, and I have it set to simply bring up an indicator in the gutter and some underscores to point to any issues it finds. It's not too obtrusive.
 
-**TrailingSpaces**: Extraneous whitespace is bad. Trailing whitespace is worse. I use this package to highlight any trailing whitespace in bright pink. I bet I could set my linter to do this, but oh well.
+### TrailingSpaces
+Extraneous whitespace is bad. Trailing whitespace is worse. I use this package to highlight any trailing whitespace in bright pink. I bet I could set my linter to do this, but oh well.
 
 ## Syntax
 
