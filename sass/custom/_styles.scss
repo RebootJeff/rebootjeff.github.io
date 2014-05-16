@@ -34,10 +34,11 @@ article.archive-article-format { box-shadow: none; padding: 0; }
 .CodeRay pre {
   background: none;
   color: #000;
+  border-bottom: 2px solid #A0EB8D;
   /* added from http://html5devgal.com/blog/2013/06/08/octopress-toc-and-coderay-codeblocks/*/
-  overflow: scroll;
+  overflow: auto;
   white-space: pre;
-  word-wrap: break-word;
+  word-wrap: normal;
   word-break: normal;
 }
 /* fixes issue where the whole line wouldn't get colored in a diff */
@@ -63,6 +64,12 @@ figure.code figcaption a {
 }
 div.CodeRay {
   border-radius: 2px;
+}
+// Hacky fix for blog posts getting too wide on home page if it had long lines of code in codeblock
+.masonry-brick .CodeRay pre {
+  white-space: pre-wrap;
+  word-wrap: word-break;
+  word-break: break-all;
 }
 
 // Images
