@@ -42,7 +42,7 @@ article.archive-article-format { box-shadow: none; padding: 0; }
 }
 /* fixes issue where the whole line wouldn't get colored in a diff */
 .CodeRay span.insert, .CodeRay span.change, .CodeRay span.delete {
-        width: auto;
+  width: auto;
 }
 // My coderay fixes
 table.CodeRay { background-color: #F3FFF0; }

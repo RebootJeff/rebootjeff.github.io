@@ -1,4 +1,5 @@
 $hero-height: 330px;
+$main-bg-color: #F1F1F1;
 
 .container {
   background-color: none;
@@ -34,6 +35,7 @@ $hero-height: 330px;
 }
 #hero-inner h1 {
   font-size: 3em;
+  margin: 0;
 }
 #hero-inner em {
   font-style: normal;
@@ -42,12 +44,13 @@ $hero-height: 330px;
 }
 #hero-inner h2 {
   font-size: 1.5em;
-  padding-left: 0.2em;
+  margin: 0;
+  // padding-left: 0.2em;
 }
 body {
   background-attachment: scroll;
   background-clip: border-box;
-  background-color: #323232;
+  background-color: $main-bg-color;
   background-image: none;
   background-origin: padding-box;
   background-position: 0 0;
@@ -74,7 +77,7 @@ article h1 {
   margin-top: 0px;
 }
 #front-wrapper {
-  background-color: #F1F1F1;
+  background-color: $main-bg-color;
   //change margin-top for front-wrapper and tool.tip.home simultaneously
   margin-top: $hero-height - 50px;
   border-top-color: white;
@@ -85,7 +88,7 @@ article h1 {
   border-bottom-width: 1px;
 }
 #archive-wrapper {
-  background-color: #F1F1F1;
+  background-color: $main-bg-color;
   border-top-color: white;
   border-top-style: solid;
   border-top-width: 1px;
@@ -94,7 +97,7 @@ article h1 {
   border-bottom-width: 1px;
 }
 .wrapper_single {
-  background-color: #F1F1F1;
+  background-color: $main-bg-color;
   // background-image: url("/images/hero_bg.jpg");
   background-attachment: fixed;
   background-position: center top;
@@ -146,7 +149,7 @@ article h1 {
   background-position: 0 0;
   background-repeat: repeat;
   background-size: auto auto;
-  border-bottom-color: #F1F1F1;
+  border-bottom-color: $main-bg-color;
   border-bottom-style: solid;
   border-bottom-width: 1px;
   box-shadow: 0 1px 0 0 #FFFFFF;
@@ -185,7 +188,7 @@ dt .social_icon {
   background-position: 0 0;
   background-repeat: repeat;
   background-size: auto auto;
-  border-top-color: #F1F1F1;
+  border-top-color: $main-bg-color;
   border-top-style: solid;
   border-top-width: 1px;
   padding: 20px;
