@@ -6,8 +6,9 @@ url: http://RebootJeff.github.io
 title: "RebootJeff.com"
 subtitle: "Try. Learn. Repeat."
 author: Jeff Lee
+author_username: "@RebootJeff"
 simple_search: http://google.com/search
-description: Blog for Jeff Lee
+description: Blog for Jeff Lee (aka @RebootJeff)
 
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
 # You can customize the format as defined in
