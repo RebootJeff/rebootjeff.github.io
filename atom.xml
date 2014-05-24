@@ -4,10 +4,10 @@
   <title><![CDATA[RebootJeff.com]]></title>
   <link href="http://RebootJeff.github.io/atom.xml" rel="self"/>
   <link href="http://RebootJeff.github.io/"/>
-  <updated>2014-05-15T22:51:18-07:00</updated>
+  <updated>2014-05-24T12:28:53-07:00</updated>
   <id>http://RebootJeff.github.io/</id>
   <author>
-    <name><![CDATA[Jeff Lee]]></name>
+    <name><![CDATA[@RebootJeff]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
@@ -16,6 +16,10 @@
   <entry>
     <title type="html"><![CDATA[My Sublime Text 2 Setup and Customization]]></title>
     <link href="http://RebootJeff.github.io/blog/2014/05/15/my-sublime-text-2-setup-and-customization/"/>
+    <author>
+      <name><![CDATA[@RebootJeff]]></name>
+      
+    </author>
     <updated>2014-05-15T20:32:00-07:00</updated>
     <id>http://RebootJeff.github.io/blog/2014/05/15/my-sublime-text-2-setup-and-customization</id>
     <content type="html"><![CDATA[<p>I use Sublime Text 2 as my text editor for coding. I don’t use a fancy IDE like WebStorm, but I do plan on trying out WebStorm more at work. Actually, I should probably upgrade to ST3, but for now, I’m happy with ST2.</p>
@@ -135,6 +139,10 @@
   <entry>
     <title type="html"><![CDATA[[HackR Diary] Weeks 11-12: And Beyond!]]></title>
     <link href="http://RebootJeff.github.io/blog/2014/05/11/hackr-diary-weeks-11-12-and-beyond/"/>
+    <author>
+      <name><![CDATA[@RebootJeff]]></name>
+      
+    </author>
     <updated>2014-05-11T22:42:00-07:00</updated>
     <id>http://RebootJeff.github.io/blog/2014/05/11/hackr-diary-weeks-11-12-and-beyond</id>
     <content type="html"><![CDATA[<p><img src="http://RebootJeff.github.io/images/20140511/flash_now_we_boogie.png" alt="Now We Boogie" /></p>
@@ -265,6 +273,10 @@
   <entry>
     <title type="html"><![CDATA[[HackR Diary] Weeks 8-10: No More Solo]]></title>
     <link href="http://RebootJeff.github.io/blog/2014/03/30/hackr-diary-weeks-8-10-group-collaboration/"/>
+    <author>
+      <name><![CDATA[@RebootJeff]]></name>
+      
+    </author>
     <updated>2014-03-30T13:52:00-07:00</updated>
     <id>http://RebootJeff.github.io/blog/2014/03/30/hackr-diary-weeks-8-10-group-collaboration</id>
     <content type="html"><![CDATA[<p><img src="http://RebootJeff.github.io/images/20140330/SimoneAnne-8351-birds.jpg" alt="something something Mighty Ducks" /></p>
@@ -340,6 +352,10 @@
   <entry>
     <title type="html"><![CDATA[[HackR Diary] Weeks 6 and 7: App from Scratch]]></title>
     <link href="http://RebootJeff.github.io/blog/2014/03/21/hackr-diary-weeks-6-and-7-making-something/"/>
+    <author>
+      <name><![CDATA[@RebootJeff]]></name>
+      
+    </author>
     <updated>2014-03-21T17:12:00-07:00</updated>
     <id>http://RebootJeff.github.io/blog/2014/03/21/hackr-diary-weeks-6-and-7-making-something</id>
     <content type="html"><![CDATA[<p><img src="http://RebootJeff.github.io/images/20140321/co-compare_presentation.jpg" alt="Personal Project presentation time" /></p>
@@ -437,6 +453,10 @@
   <entry>
     <title type="html"><![CDATA[Setup for PhoneGap for Android for Reals]]></title>
     <link href="http://RebootJeff.github.io/blog/2014/01/27/setup-for-phonegap-for-android-for-reals/"/>
+    <author>
+      <name><![CDATA[@RebootJeff]]></name>
+      
+    </author>
     <updated>2014-01-27T17:52:00-08:00</updated>
     <id>http://RebootJeff.github.io/blog/2014/01/27/setup-for-phonegap-for-android-for-reals</id>
     <content type="html"><![CDATA[<p><img src="http://RebootJeff.github.io/images/20140127/phonegap-android.png" alt="PhoneGap and Android have wonderful conversations" /></p>
@@ -547,6 +567,10 @@ export PATH=$PATH:/home/myUserName/Development/adt-bundle-linux-x86_64-20131030/
   <entry>
     <title type="html"><![CDATA[Questions to ask dev interviewers]]></title>
     <link href="http://RebootJeff.github.io/blog/2014/01/09/questions-to-ask-dev-interviewers/"/>
+    <author>
+      <name><![CDATA[@RebootJeff]]></name>
+      
+    </author>
     <updated>2014-01-09T20:06:00-08:00</updated>
     <id>http://RebootJeff.github.io/blog/2014/01/09/questions-to-ask-dev-interviewers</id>
     <content type="html"><![CDATA[<blockquote>
@@ -661,6 +685,10 @@ export PATH=$PATH:/home/myUserName/Development/adt-bundle-linux-x86_64-20131030/
   <entry>
     <title type="html"><![CDATA[Queues & Stacks from Scratch with JS Patterns]]></title>
     <link href="http://RebootJeff.github.io/blog/2014/01/04/queues-stacks-javascript-class-patterns/"/>
+    <author>
+      <name><![CDATA[@RebootJeff]]></name>
+      
+    </author>
     <updated>2014-01-04T16:04:00-08:00</updated>
     <id>http://RebootJeff.github.io/blog/2014/01/04/queues-stacks-javascript-class-patterns</id>
     <content type="html"><![CDATA[<p>In my <a href="http://RebootJeff.github.io/blog/2013/12/26/queues-and-stacks-in-javascript/">previous post</a>, I began my quest to help noob programmers by introducing the basic computer science topic of data structures. I provided a quick overview of queues and stacks, so please read all about ‘em before engaging your eyeballs with this blog post. This time around, we’ll check out four different patterns for creating classes in JavaScript while learning how to build stacks and queues from scratch.</p>
@@ -932,6 +960,10 @@ console.log(myCoolQueue.size());      <span class="comment">// output: 2</span>
   <entry>
     <title type="html"><![CDATA[Queues &amp; Stacks in JavaScript (with Batman and Superman)]]></title>
     <link href="http://RebootJeff.github.io/blog/2013/12/26/queues-and-stacks-in-javascript/"/>
+    <author>
+      <name><![CDATA[@RebootJeff]]></name>
+      
+    </author>
     <updated>2013-12-26T15:54:00-08:00</updated>
     <id>http://RebootJeff.github.io/blog/2013/12/26/queues-and-stacks-in-javascript</id>
     <content type="html"><![CDATA[<p>The proverbial “they” say (says?) it’s good to write technical blog posts. Blog posts that get down and dirty with the nitty gritty of low-level, in-the-weeds details and nuances accompanied by jargon, acronyms, and name-dropping are all the rage in the dev community. More importantly, I really want to help beginners learn programming, so I may as well teach some basic concepts via my blog. (Later on, I hope to contribute more to <a href="http://www.theodinproject.com/">The Odin Project</a>, which is a free, open-source, online resource for beginners created by a very cool individual.)</p>
@@ -1022,6 +1054,10 @@ console.log(queue);  <span class="comment">// output: [2,3]</span>
   <entry>
     <title type="html"><![CDATA[[HackR Diary] My Formal Apology]]></title>
     <link href="http://RebootJeff.github.io/blog/2013/11/19/hackr-diary-my-apology/"/>
+    <author>
+      <name><![CDATA[@RebootJeff]]></name>
+      
+    </author>
     <updated>2013-11-19T21:53:00-08:00</updated>
     <id>http://RebootJeff.github.io/blog/2013/11/19/hackr-diary-my-apology</id>
     <content type="html"><![CDATA[<p>My previous blog post was nearly 3 weeks ago. Why? What’s stopped me from posting more stories of life at Hack Reactor? For the past several days, I have been working on an individual project. I was very confident going into it, and I should eventually blog specifically about the initial stages, but as it turned out …there is a crap-ton of stuff to juggle when developing a web app. There are so many things that can go wrong in your workflow –not just in your code.</p>
@@ -1120,6 +1156,10 @@ console.log(queue);  <span class="comment">// output: [2,3]</span>
   <entry>
     <title type="html"><![CDATA[[HackR Diary] Week 5: Final Sprints]]></title>
     <link href="http://RebootJeff.github.io/blog/2013/10/28/hackr-diary-week-5/"/>
+    <author>
+      <name><![CDATA[@RebootJeff]]></name>
+      
+    </author>
     <updated>2013-10-28T22:42:00-07:00</updated>
     <id>http://RebootJeff.github.io/blog/2013/10/28/hackr-diary-week-5</id>
     <content type="html"><![CDATA[<p><img src="http://RebootJeff.github.io/images/20131028/caltrain.jpg" alt="caltrain" /></p>
@@ -1215,6 +1255,10 @@ console.log(queue);  <span class="comment">// output: [2,3]</span>
   <entry>
     <title type="html"><![CDATA[[HackR Diary] Week 4: Now Entering Callback Hell]]></title>
     <link href="http://RebootJeff.github.io/blog/2013/10/21/hackr-diary-week-4/"/>
+    <author>
+      <name><![CDATA[@RebootJeff]]></name>
+      
+    </author>
     <updated>2013-10-21T21:45:00-07:00</updated>
     <id>http://RebootJeff.github.io/blog/2013/10/21/hackr-diary-week-4</id>
     <content type="html"><![CDATA[<p><img src="http://RebootJeff.github.io/images/20131021/joebowers_at_hackreactor.jpg" alt="photo of Joe Bowers presentation" /></p>
@@ -1306,6 +1350,10 @@ console.log(queue);  <span class="comment">// output: [2,3]</span>
   <entry>
     <title type="html"><![CDATA[[HackR Diary] Event: Pamela Fox on Backbone]]></title>
     <link href="http://RebootJeff.github.io/blog/2013/10/16/hackr-diary-a-visit-from-pamela-fox-re-backbone/"/>
+    <author>
+      <name><![CDATA[@RebootJeff]]></name>
+      
+    </author>
     <updated>2013-10-16T07:13:00-07:00</updated>
     <id>http://RebootJeff.github.io/blog/2013/10/16/hackr-diary-a-visit-from-pamela-fox-re-backbone</id>
     <content type="html"><![CDATA[<p class="last-updated">Last updated on Oct 16, 2013 (see strikethrough text).</p>
@@ -1379,6 +1427,10 @@ console.log(queue);  <span class="comment">// output: [2,3]</span>
   <entry>
     <title type="html"><![CDATA[[HackR Diary] Week 3: Order in the Code]]></title>
     <link href="http://RebootJeff.github.io/blog/2013/10/14/hackr-diary-week-3-backbone/"/>
+    <author>
+      <name><![CDATA[@RebootJeff]]></name>
+      
+    </author>
     <updated>2013-10-14T00:22:00-07:00</updated>
     <id>http://RebootJeff.github.io/blog/2013/10/14/hackr-diary-week-3-backbone</id>
     <content type="html"><![CDATA[<p><img src="http://RebootJeff.github.io/images/20131014/logos.png" alt="logos" /></p>
@@ -1443,6 +1495,10 @@ console.log(queue);  <span class="comment">// output: [2,3]</span>
   <entry>
     <title type="html"><![CDATA[[HackR Diary] Week 2: Now Exiting My Comfort Zone]]></title>
     <link href="http://RebootJeff.github.io/blog/2013/10/06/hackr-diary-week-2/"/>
+    <author>
+      <name><![CDATA[@RebootJeff]]></name>
+      
+    </author>
     <updated>2013-10-06T22:17:00-07:00</updated>
     <id>http://RebootJeff.github.io/blog/2013/10/06/hackr-diary-week-2</id>
     <content type="html"><![CDATA[<p class="last-updated">Last updated on Oct 13, 2013 to fix a typo and embedded a tweet.</p>
@@ -1513,6 +1569,10 @@ console.log(queue);  <span class="comment">// output: [2,3]</span>
   <entry>
     <title type="html"><![CDATA[[HackR Diary] Thoughts about Week #1]]></title>
     <link href="http://RebootJeff.github.io/blog/2013/09/29/hackr-diary-thoughts-about-week-number-1/"/>
+    <author>
+      <name><![CDATA[@RebootJeff]]></name>
+      
+    </author>
     <updated>2013-09-29T14:37:00-07:00</updated>
     <id>http://RebootJeff.github.io/blog/2013/09/29/hackr-diary-thoughts-about-week-number-1</id>
     <content type="html"><![CDATA[<p class="last-updated">Last updated on Oct 1, 2013 (minor edits).</p>
@@ -1602,6 +1662,10 @@ console.log(queue);  <span class="comment">// output: [2,3]</span>
   <entry>
     <title type="html"><![CDATA[[HackR Diary] First Impressions]]></title>
     <link href="http://RebootJeff.github.io/blog/2013/09/25/hackr-diary-first-impressions/"/>
+    <author>
+      <name><![CDATA[@RebootJeff]]></name>
+      
+    </author>
     <updated>2013-09-25T21:23:00-07:00</updated>
     <id>http://RebootJeff.github.io/blog/2013/09/25/hackr-diary-first-impressions</id>
     <content type="html"><![CDATA[<p class="last-updated">Last updated on Sep 28, 2013 to edit section on guard operator.</p>
@@ -1704,6 +1768,10 @@ arg &amp;&amp; myFunction(arg);
   <entry>
     <title type="html"><![CDATA[[HackR Diary] Pre-Course Anticipation]]></title>
     <link href="http://RebootJeff.github.io/blog/2013/09/22/hackr-diary-pre-course-anticipation/"/>
+    <author>
+      <name><![CDATA[@RebootJeff]]></name>
+      
+    </author>
     <updated>2013-09-22T11:51:00-07:00</updated>
     <id>http://RebootJeff.github.io/blog/2013/09/22/hackr-diary-pre-course-anticipation</id>
     <content type="html"><![CDATA[<p><img src="http://RebootJeff.github.io/images/20130922/mytwittler.png" alt="Thumbnail of my twittler" /></p>
@@ -1754,6 +1822,10 @@ arg &amp;&amp; myFunction(arg);
   <entry>
     <title type="html"><![CDATA[Adding Google Analytics to Octopress blog on Github Pages]]></title>
     <link href="http://RebootJeff.github.io/blog/2013/09/17/adding-google-analytics-to-octopress-blog-on-github-pages/"/>
+    <author>
+      <name><![CDATA[@RebootJeff]]></name>
+      
+    </author>
     <updated>2013-09-17T13:22:00-07:00</updated>
     <id>http://RebootJeff.github.io/blog/2013/09/17/adding-google-analytics-to-octopress-blog-on-github-pages</id>
     <content type="html"><![CDATA[<p>I wanted a way to count visitors for my blog. Easy enough, right? Just sign up for a free Google Analytics account, obtain a tracking ID from the account, and add the tracking ID to Octopress config file…right?</p>
@@ -1780,6 +1852,10 @@ _gaq.push([<span class="string"><span class="delimiter">'</span><span class="con
   <entry>
     <title type="html"><![CDATA[[Coding Bootcamp Research] Admissions Processes: My Experiences (Part 2 of 2)]]></title>
     <link href="http://RebootJeff.github.io/blog/2013/09/15/coding-bootcamp-research-admissions-part2/"/>
+    <author>
+      <name><![CDATA[@RebootJeff]]></name>
+      
+    </author>
     <updated>2013-09-15T18:40:00-07:00</updated>
     <id>http://RebootJeff.github.io/blog/2013/09/15/coding-bootcamp-research-admissions-part2</id>
     <content type="html"><![CDATA[<p><img src="http://RebootJeff.github.io/images/mycodingbootcamplogo_SP.png" alt="my coding bootcamp logo" /></p>
@@ -1994,6 +2070,10 @@ _gaq.push([<span class="string"><span class="delimiter">'</span><span class="con
   <entry>
     <title type="html"><![CDATA[How Not to Rescue a Baby Snake]]></title>
     <link href="http://RebootJeff.github.io/blog/2013/09/13/how-not-to-rescue-a-baby-snake/"/>
+    <author>
+      <name><![CDATA[@RebootJeff]]></name>
+      
+    </author>
     <updated>2013-09-13T10:04:00-07:00</updated>
     <id>http://RebootJeff.github.io/blog/2013/09/13/how-not-to-rescue-a-baby-snake</id>
     <content type="html"><![CDATA[<p><img src="http://RebootJeff.github.io/images/20130913/gopher_snake_SP.jpg" alt="a gopher snake" /></p>
