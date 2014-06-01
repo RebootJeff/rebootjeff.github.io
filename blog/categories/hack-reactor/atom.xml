@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Hack Reactor | RebootJeff.com]]></title>
   <link href="http://RebootJeff.github.io/blog/categories/hack-reactor/atom.xml" rel="self"/>
   <link href="http://RebootJeff.github.io/"/>
-  <updated>2014-05-31T20:34:22-07:00</updated>
+  <updated>2014-05-31T20:37:44-07:00</updated>
   <id>http://RebootJeff.github.io/</id>
   <author>
     <name><![CDATA[Jeff Lee]]></name>
@@ -78,7 +78,7 @@
 <ul>
   <li>If you are asked a trivia question, and you don’t know the answer, consider reasoning the answer by imagining how things should work. For example, if asked a question about CSS, imagine you created CSS. How would you implement a given rule?
     <ul>
-      <li><em>My 2 Cents:</em> This one’s iffy because a lot of trivia questions are meant to focus on unintuitive situations. For example: margin collapsing. If there are two sibling <code>&lt;div&gt;</code> elements, and they both have <code>margin: 10px;</code>, then how much space is between them? You’d expect there to be 20px of space between them, but instead, there is only 10px thanks to margin collapsing.</li>
+      <li><em>My 2 Cents:</em> This one’s iffy because a lot of trivia questions are meant to focus on unintuitive situations. A quick aside for a quick example: <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/margin_collapsing">margin collapsing</a>. If there are two sibling <code>&lt;div&gt;</code> elements, and they both have <code>margin: 10px;</code>, then how much space is between them? You’d expect there to be 20px of space between them, but instead, there is only 10px thanks to margin collapsing.</li>
     </ul>
   </li>
   <li>When solving an algorithm question, come up with some test cases (including edge cases!).</li>
