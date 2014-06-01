@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "[HackR Diary] [Dev Job Search] Tips from the Coding Interview Guru"
-date: 2014-05-28 18:48
+date: 2014-05-31 20:37
 comments: true
 categories: ['dev job search', 'Hack Reactor', 'HackR Diary', 'career development']
 ---
@@ -22,11 +22,11 @@ That said, I still want to share some of the more interesting takeaways from McD
 - Your performance is evaluated relative to other candidates (so you're not just being judged based on fixed benchmarks).
 - Resumes are barely read. You must make yours easy to skim within 15 seconds.
 - Unless it's a warm-up question, you are not expected to get the solution right away.
-- Employers judge your GitHub and public repos based on coding style [(do you violate any major no-nos?)](https://github.com/airbnb/javascript) and use of [design patterns](http://addyosmani.com/resources/essentialjsdesignpatterns/book/). They don't have much time to judge app architecture.
-  - *My 2 Cents:* But I would like to add that there is time to judge your use of a framework. If the employer is familiar with the frameworks you used, they will notice when you fail to follow the framework's more important conventions. For example, for AngularJS apps, I will notice if you put too much logic in the views, if you abuse $rootScope (which is akin to relying on global scope variables as a crutch), if you create bloated controllers, if you lack services/factories/providers, etc. I will be extra happy if I see you use multiple modules, if I see tests, if I see usage of Angular best practices, etc.
+- Employers judge your GitHub and public repos based on coding style ([do you violate any major no-nos?](https://github.com/airbnb/javascript)) and use of [design patterns](http://addyosmani.com/resources/essentialjsdesignpatterns/book/). They don't have much time to judge app architecture.
+  - *My 2 Cents:* Perhaps this falls under "design patterns", but I would like to add that there is time to judge your use of a framework. If the employer is familiar with the frameworks you used, they will notice when you fail to follow the framework's more important conventions. For example, for AngularJS apps, I will notice if you put too much logic in the views, if you abuse $rootScope (which is akin to relying on global scope variables as a crutch), if you create bloated controllers, if you lack services/factories/providers, etc. I will be extra happy if I see you use multiple modules, if I see tests, if I see usage of Angular best practices, etc.
 - Only the interviewer knows how well you did in the interview. You may think you aced it. You may think you bombed it. [But you don't really know](http://www.technologywoman.com/2011/03/31/why-your-interview-performance-is-impossible-to-judge/).
 
-{% blockquote --Gayle McDowell %}
+{% blockquote --Gayle L. McDowell %}
 When I was at Google, I referred a number of candidates, and ran a little (informal) experiment. How well could people judge their performance?
 After each candidate completed their interview, I’d ask them how they did. Then, I’d look up their actual performance. And guess what? There was no correlation. None. Zip. Zero. Zilch.
 {% endblockquote %}
@@ -42,7 +42,7 @@ After each candidate completed their interview, I’d ask them how they did. The
 - Your conversational skills don't need to be great because employers are desperate for technical skills.
   - *My 2 Cents:* I think this is dangerous advice. It might apply to a giant company, but if you're joining a smaller team, you need to be decent at chatting. Culture fit is also a bigger concern for smaller companies, and most company cultures include "must be decently articulate" as a core component.
 - Worry less about super advanced algorithms, but you should worry a lot about the common algorithms and data structures such as: hashes, trees (and common tree methods such as depth/breadth-first search), binary search, merge sort, and quick sort.
-  - *My 2 Cents:* I disagree. If you're aiming for a back-end job, then maybe you need to be more of an algo+data structures expert. But if you're aiming for a front-end or full-stack job, then there are more practical concerns that you will be quizzed on. This topic of "advanced algorithms vs practical concerns" is commonly debated, but I have my reasons, which I hope to discuss in a future blog post. For the record, I've conducted interviews at my current job. I ask practical questions that most candidates struggle with.
+  - *My 2 Cents:* I disagree. If you're aiming for a back-end job, then maybe you need to be more of an algo+data structures expert. But if you're aiming for a front-end or full-stack job, then there are more practical concerns that you will be quizzed on. I'm happy I know tree search methods, but this kind of knowledge only helped me in a few of many interviews I did during my job search. This topic of "advanced algorithms vs practical concerns" is commonly debated, but I have my reasons, which I hope to discuss in a future blog post. For the record, I've conducted interviews at my current job. I ask practical questions that most candidates struggle with.
 - You must know Big-O, recursion, and maybe even bit-wise.
   - *My 2 Cents:* I disagree about the bit-wise stuff (although, I suppose it's impressive if you can bust it out with ease).
 
@@ -61,4 +61,6 @@ After each candidate completed their interview, I’d ask them how they did. The
 - Use "breadth-first coding": write your code to use helper functions that may not exist. Write the helper functions later as needed. Think of it like writing an outline before writing an essay so then other people can quickly get a grasp of your overall approach rather than waiting and awkwardly watching for several minutes while you write out everything.
   - *My 2 Cents:* This sounds like a no-brainer, but you'd be surprised how many people don't do this. To be fair, this is like writing modular code BEFORE refactoring.
 - Beware of common bugs you might make regardless of how awesome you are. Examples:
-  - off-by-one errors; bad comparison operators in if-statements, loops, and other conditionals; division (or any math for that matter) where you must perform a check before performing the operation to prevent edge cases of dividing by zero.
+  - off-by-one errors
+  - bad comparison operators in if-statements, loops, and other conditionals
+  - math where you must perform a check before performing the operation to prevent edge cases from making your program explode. E.g., it might be good to perform a check before performing division so then you stop divide-by-zero errors.
