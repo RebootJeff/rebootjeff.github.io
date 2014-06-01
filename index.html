@@ -138,7 +138,7 @@
 
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2014/05/28/dev-job-search-tips-from-the-coding-interview-guru/">[HackR Diary] [Dev Job Search] Tips From the Coding Interview Guru</a></h1>
+      <h1 class="entry-title"><a href="/blog/2014/05/31/dev-job-search-tips-from-the-coding-interview-guru/">[HackR Diary] [Dev Job Search] Tips From the Coding Interview Guru</a></h1>
     
     
       <p class="meta">
@@ -163,7 +163,7 @@
   
 
 
-<time datetime="2014-05-28T18:48:00-07:00" pubdate data-updated="true">May 28<span>th</span>, 2014</time> - 
+<time datetime="2014-05-31T20:37:00-07:00" pubdate data-updated="true">May 31<span>st</span>, 2014</time> - 
         
 
 posted in
@@ -175,7 +175,7 @@ posted in
 
 
         
-         | <a href="/blog/2014/05/28/dev-job-search-tips-from-the-coding-interview-guru/#disqus_thread">Comments</a>
+         | <a href="/blog/2014/05/31/dev-job-search-tips-from-the-coding-interview-guru/#disqus_thread">Comments</a>
         
       </p>
     
@@ -199,15 +199,15 @@ posted in
   <li>Your performance is evaluated relative to other candidates (so you’re not just being judged based on fixed benchmarks).</li>
   <li>Resumes are barely read. You must make yours easy to skim within 15 seconds.</li>
   <li>Unless it’s a warm-up question, you are not expected to get the solution right away.</li>
-  <li>Employers judge your GitHub and public repos based on coding style <a href="https://github.com/airbnb/javascript">(do you violate any major no-nos?)</a> and use of <a href="http://addyosmani.com/resources/essentialjsdesignpatterns/book/">design patterns</a>. They don’t have much time to judge app architecture.
+  <li>Employers judge your GitHub and public repos based on coding style (<a href="https://github.com/airbnb/javascript">do you violate any major no-nos?</a>) and use of <a href="http://addyosmani.com/resources/essentialjsdesignpatterns/book/">design patterns</a>. They don’t have much time to judge app architecture.
     <ul>
-      <li><em>My 2 Cents:</em> But I would like to add that there is time to judge your use of a framework. If the employer is familiar with the frameworks you used, they will notice when you fail to follow the framework’s more important conventions. For example, for AngularJS apps, I will notice if you put too much logic in the views, if you abuse $rootScope (which is akin to relying on global scope variables as a crutch), if you create bloated controllers, if you lack services/factories/providers, etc. I will be extra happy if I see you use multiple modules, if I see tests, if I see usage of Angular best practices, etc.</li>
+      <li><em>My 2 Cents:</em> Perhaps this falls under “design patterns”, but I would like to add that there is time to judge your use of a framework. If the employer is familiar with the frameworks you used, they will notice when you fail to follow the framework’s more important conventions. For example, for AngularJS apps, I will notice if you put too much logic in the views, if you abuse $rootScope (which is akin to relying on global scope variables as a crutch), if you create bloated controllers, if you lack services/factories/providers, etc. I will be extra happy if I see you use multiple modules, if I see tests, if I see usage of Angular best practices, etc.</li>
     </ul>
   </li>
   <li>Only the interviewer knows how well you did in the interview. You may think you aced it. You may think you bombed it. <a href="http://www.technologywoman.com/2011/03/31/why-your-interview-performance-is-impossible-to-judge/">But you don’t really know</a>.</li>
 </ul>
 
-<blockquote><p>When I was at Google, I referred a number of candidates, and ran a little (informal) experiment. How well could people judge their performance?<br />After each candidate completed their interview, I’d ask them how they did. Then, I’d look up their actual performance. And guess what? There was no correlation. None. Zip. Zero. Zilch.</p><footer><strong>&#8211;Gayle McDowell</strong></footer></blockquote>
+<blockquote><p>When I was at Google, I referred a number of candidates, and ran a little (informal) experiment. How well could people judge their performance?<br />After each candidate completed their interview, I’d ask them how they did. Then, I’d look up their actual performance. And guess what? There was no correlation. None. Zip. Zero. Zilch.</p><footer><strong>&#8211;Gayle L. McDowell</strong></footer></blockquote>
 
 <h1 id="interview-coaching--advice">Interview Coaching / Advice</h1>
 
@@ -227,7 +227,7 @@ posted in
   </li>
   <li>Worry less about super advanced algorithms, but you should worry a lot about the common algorithms and data structures such as: hashes, trees (and common tree methods such as depth/breadth-first search), binary search, merge sort, and quick sort.
     <ul>
-      <li><em>My 2 Cents:</em> I disagree. If you’re aiming for a back-end job, then maybe you need to be more of an algo+data structures expert. But if you’re aiming for a front-end or full-stack job, then there are more practical concerns that you will be quizzed on. This topic of “advanced algorithms vs practical concerns” is commonly debated, but I have my reasons, which I hope to discuss in a future blog post. For the record, I’ve conducted interviews at my current job. I ask practical questions that most candidates struggle with.</li>
+      <li><em>My 2 Cents:</em> I disagree. If you’re aiming for a back-end job, then maybe you need to be more of an algo+data structures expert. But if you’re aiming for a front-end or full-stack job, then there are more practical concerns that you will be quizzed on. I’m happy I know tree search methods, but this kind of knowledge only helped me in a few of many interviews I did during my job search. This topic of “advanced algorithms vs practical concerns” is commonly debated, but I have my reasons, which I hope to discuss in a future blog post. For the record, I’ve conducted interviews at my current job. I ask practical questions that most candidates struggle with.</li>
     </ul>
   </li>
   <li>You must know Big-O, recursion, and maybe even bit-wise.
@@ -266,7 +266,9 @@ posted in
   </li>
   <li>Beware of common bugs you might make regardless of how awesome you are. Examples:
     <ul>
-      <li>off-by-one errors; bad comparison operators in if-statements, loops, and other conditionals; division (or any math for that matter) where you must perform a check before performing the operation to prevent edge cases of dividing by zero.</li>
+      <li>off-by-one errors</li>
+      <li>bad comparison operators in if-statements, loops, and other conditionals</li>
+      <li>math where you must perform a check before performing the operation to prevent edge cases from making your program explode. E.g., it might be good to perform a check before performing division so then you stop divide-by-zero errors.</li>
     </ul>
   </li>
 </ul>
@@ -1088,7 +1090,7 @@ export PATH=$PATH:/home/myUserName/Development/adt-bundle-linux-x86_64-20131030/
     <ul class="recent_posts">
       
         <li>
-          <a href="/blog/2014/05/28/dev-job-search-tips-from-the-coding-interview-guru/">[HackR Diary] [Dev Job Search] Tips from the Coding Interview Guru</a>
+          <a href="/blog/2014/05/31/dev-job-search-tips-from-the-coding-interview-guru/">[HackR Diary] [Dev Job Search] Tips from the Coding Interview Guru</a>
         </li>
       
         <li>
