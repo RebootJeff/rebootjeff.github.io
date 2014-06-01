@@ -9,13 +9,13 @@ categories: ['dev job search', 'Hack Reactor', 'HackR Diary', 'career developmen
 <blockquote class="twitter-tweet" lang="en"><p>Author of Cracking the Coding Interview, <a href="https://twitter.com/gayle">@gayle</a> , talking to <a href="https://twitter.com/HackReactor">@hackreactor</a> <a href="http://t.co/aVbcohgqSG">pic.twitter.com/aVbcohgqSG</a></p>&mdash; Jeff Lee (@RebootJeff) <a href="https://twitter.com/RebootJeff/statuses/423949825587945472">January 16, 2014</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-In a [previous post](/blog/2014/05/11/hackr-diary-weeks-11-12-and-beyond/#overtime-support), I mentioned that attended a talk given by [Gayle Laakmann](http://www.technologywoman.com) when she visited Hack Reactor. She's the author of the famous *Cracking the Coding Interview*, which is a book that helps developers perform better when interviewed for a new job. Her text mostly focuses on algorithm challenges, but there's also a lot of content that has more to do with coaching up interview candidates.
+In a [previous post](/blog/2014/05/11/hackr-diary-weeks-11-12-and-beyond/#overtime-support), I mentioned that attended a talk given by [Gayle Laakmann McDowell](http://www.technologywoman.com) when she visited Hack Reactor. She's the author of the famous *Cracking the Coding Interview*, which is a book that helps developers perform better when interviewed for a new job. Her text mostly focuses on algorithm challenges, but there's also a lot of content that has more to do with coaching up interview candidates.
 
-I really liked Laakmann's presentation at Hack Reactor. There were plenty of intriguing anecdotes, and of course, there was plenty of good advice. Plus, she included a lot of insight into the hiring process. Many of her stories and comments provided the Hack Reactor community with a "behind the scenes" sort of perspective.
+I really liked McDowell's presentation at Hack Reactor. There were plenty of intriguing anecdotes, and of course, there was plenty of good advice. Plus, she included a lot of insight into the hiring process. Many of her stories and comments provided the Hack Reactor community with a "behind the scenes" sort of perspective.
 
-Keep in mind that she worked for companies like Microsoft and Google, so **her advice comes from the perspective of giant companies**. I doubt her tips apply equally to smaller employers. For example, Laakmann heavily emphasized the importance to study certain algorithms (e.g., various sorting and searching algos) and data structures (e.g., trees, hashes, etc). In my experience mostly interviewing with smaller companies (fewer than 500 employees; as few as 5 employees), studying textbook algorithms and data structures wouldn't have helped me as much as studying more web-specific skills.
+Keep in mind that she worked for companies like Apple, Microsoft, and Google, so **her advice comes from the perspective of giant companies**. I doubt her tips apply equally to smaller employers. For example, McDowell heavily emphasized the importance to study certain algorithms (e.g., various sorting and searching algos) and data structures (e.g., trees, hashes, etc). In my experience mostly interviewing with smaller companies (fewer than 500 employees; as few as 5 employees), studying textbook algorithms and data structures wouldn't have helped me as much as studying more web-specific skills.
 
-That said, I still want to share some of the more interesting takeaways from Laakmann's talk.
+That said, I still want to share some of the more interesting takeaways from McDowell's talk.
 
 # Interviewers' Process / Employers' Perspective
 
@@ -26,7 +26,7 @@ That said, I still want to share some of the more interesting takeaways from Laa
   - *My 2 Cents:* But I would like to add that there is time to judge your use of a framework. If the employer is familiar with the frameworks you used, they will notice when you fail to follow the framework's more important conventions. For example, for AngularJS apps, I will notice if you put too much logic in the views, if you abuse $rootScope (which is akin to relying on global scope variables as a crutch), if you create bloated controllers, if you lack services/factories/providers, etc. I will be extra happy if I see you use multiple modules, if I see tests, if I see usage of Angular best practices, etc.
 - Only the interviewer knows how well you did in the interview. You may think you aced it. You may think you bombed it. [But you don't really know](http://www.technologywoman.com/2011/03/31/why-your-interview-performance-is-impossible-to-judge/).
 
-{% blockquote --Gayle Laakmann %}
+{% blockquote --Gayle McDowell %}
 When I was at Google, I referred a number of candidates, and ran a little (informal) experiment. How well could people judge their performance?
 After each candidate completed their interview, I’d ask them how they did. Then, I’d look up their actual performance. And guess what? There was no correlation. None. Zip. Zero. Zilch.
 {% endblockquote %}
