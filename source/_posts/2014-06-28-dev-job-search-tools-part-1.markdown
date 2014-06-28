@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Dev Job Searching Tools Roundup Part 1: LinkedIn vs Whitetruffle vs Hired vs Dice"
-date: 2014-06-28 20:34
+date: 2014-06-28 11:14
 comments: true
 categories:
   - dev job search
@@ -14,7 +14,7 @@ categories:
 
 <p class="my-caption">"Will Decorate Eggs For Food" by <a href="http://gratisography.com/">Gratisography.com</a></p>
 
-Back in December of 2013, [I graduated from Hack Reactor](/blog/2014/05/11/hackr-diary-weeks-11-12-and-beyond/). After graduating, I started casually looking for a job, but due to the winter holidays, I didn't start searching in earnest until early-to-mid January. In hindsight, perhaps I should've spent less time searching by myself and more time using Hack Reactor's network/connections. That said, Hack Reactor encourages grads to look for jobs using all sorts of resources, and I benefited from other forms of job search support from the HackR staff.
+Back in December of 2013, [I graduated from Hack Reactor](/blog/2014/05/11/hackr-diary-weeks-11-12-and-beyond/). After graduating, I started casually looking for a job, but due to the winter holidays, I didn't start searching in earnest until early-to-mid January. In hindsight, perhaps I should've spent less time searching by myself and more time using Hack Reactor's network/connections. That said, Hack Reactor encourages grads to look for jobs using all sorts of resources, and I benefited from [other forms of job search support](/blog/2014/05/11/hackr-diary-weeks-11-12-and-beyond/#overtime-support) from the HackR staff.
 
 This blog post covers a bunch of online resources I tried out myself. I ultimately found my current job through a recruiter, but that doesn't mean that job sites felt useless to me. Therefore, I'm happy to share some opinions and experiences with you. Maybe you'll have better results. At the very least, job sites showed me just how many awesome jobs are available, which kept my spirits up during my battles with job interview stress.
 
