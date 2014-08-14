@@ -78,7 +78,7 @@ article h1 {
 }
 #front-wrapper {
   background-color: $main-bg-color;
-  //change margin-top for front-wrapper and tool.tip.home simultaneously
+  // REMEMBER to change margin-top for front-wrapper and tool.tip.home simultaneously
   margin-top: $hero-height - 50px;
   border-top-color: white;
   border-top-style: solid;
@@ -238,7 +238,7 @@ table code {
   word-break: initial;
 }
 .tooltip.top.home {
-  margin-top: -$hero-height - 3px;
+  margin-top: 45px - $hero-height;
 }
 p {
   line-height: 1.7;
