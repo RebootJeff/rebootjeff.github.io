@@ -14,7 +14,7 @@ categories:
 
 <p class="my-caption">If you find the right job, you can feast your eyes on sweet code <strong>and palm trees</strong>.</p>
 
-In [my previous post](/blog/2014/06/28/dev-job-search-tools-part-1), I described my experience using LinkedIn, Whitetruffle, Hired, and Dice. This time around, I'm going to cover a crop of sites that I used less extensively. Although they didn't yield fruitful leads, they're still pretty interesting to me, and with job searching, you *can't not* more than a few avenues.
+In [my previous post](/blog/2014/06/28/dev-job-search-tools-part-1), I described my experience using LinkedIn, Whitetruffle, Hired, and Dice. This time around, I'm going to cover a crop of sites that I used less extensively. Although they didn't yield fruitful leads, they're still pretty interesting to me, and with job searching, you *can't not* explore more than a few avenues.
 
 # Job Sites and Search Tools
 

@@ -6,6 +6,8 @@ comments: true
 categories: ['dev tools', 'customization', 'software development']
 ---
 
+*Updated on August 8, 2014.*
+
 I use Sublime Text 2 as my text editor for coding. I don't use a fancy IDE like WebStorm, but I do plan on trying out WebStorm more at work. Actually, I should probably upgrade to ST3, but for now, I'm happy with ST2.
 
 # Config
