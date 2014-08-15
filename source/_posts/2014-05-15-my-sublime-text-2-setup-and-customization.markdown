@@ -98,6 +98,11 @@ I prefer live linting over build-time linting. SublimeLinter supports a ton of l
 ### TrailingSpaces
 Extraneous whitespace is bad. Trailing whitespace is worse. I use this package to highlight any trailing whitespace in bright pink. I bet I could set my linter to do this, but oh well.
 
+### MarkdownEditing
+Who doesn't love Markdown? It makes GitHub README files and wiki pages look great. It makes dev blogs look great. It makes writing dev-related text easy. Sometimes, I write rough drafts of blog posts within Google Docs or [Dillinger](http://dillinger.io/), which is a sweet online Markdown editor. In the end, I always complete my blog posts by writing Markdown within Sublime Text.
+
+I recently found a sweet ST package to help edit Markdown files: MarkdownEditing. It completely transforms the look and syntax highlighting of your Markdown. Sadly, I use CodeRay for codeblocks rather than standard Markdown markup. So MarkdownEditing can't beautify my codeblocks within Sublime Text, but `inline code snippets like this one` are highlighted in a very helpful way. You can see all the ways that the package alters your Markdown [here]((https://camo.githubusercontent.com/35a66d68a55666133ba7911fb0ea61277740680f/68747470733a2f2f7261772e6769746875622e636f6d2f5375626c696d65546578742d4d61726b646f776e2f4d61726b646f776e45646974696e672f6d61737465722f73637265656e73686f74732f6c696768742e706e67). Keep in mind that there are a couple other themes available specifically for MarkdownEditing. I use the dark theme of course.
+
 ## Syntax
 
 You might also find it handy to install packages for specific languages. For example, I dabble with CSS pre-processors and templating languages. I'm currently checking out LESS for CSS and Jade for HTML, so I've installed syntax highlighters for them. The package names are simply "LESS" and "Jade".
