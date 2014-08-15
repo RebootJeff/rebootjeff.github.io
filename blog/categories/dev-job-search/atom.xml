@@ -4,7 +4,7 @@
   <title><![CDATA[Category: dev job search | RebootJeff.com]]></title>
   <link href="http://RebootJeff.github.io/blog/categories/dev-job-search/atom.xml" rel="self"/>
   <link href="http://RebootJeff.github.io/"/>
-  <updated>2014-06-28T11:37:33-07:00</updated>
+  <updated>2014-08-14T18:49:10-07:00</updated>
   <id>http://RebootJeff.github.io/</id>
   <author>
     <name><![CDATA[Jeff Lee]]></name>
@@ -12,6 +12,87 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Dev Job Searching Tools Roundup Part 2: Readyforce, The Muse, The Sourcery, AngelList, VC job listings]]></title>
+    <link href="http://RebootJeff.github.io/blog/2014/08/14/dev-job-searching-tools-roundup-part-2/"/>
+    <updated>2014-08-14T18:49:00-07:00</updated>
+    <id>http://RebootJeff.github.io/blog/2014/08/14/dev-job-searching-tools-roundup-part-2</id>
+    <content type="html"><![CDATA[<p><img src="/images/20140814/code_and_trees.jpg" alt="JavaScript and Palm Trees" /></p>
+
+<p class="my-caption">If you find the right job, you can feast your eyes on sweet code <strong>and palm trees</strong>.</p>
+
+<p>In <a href="/blog/2014/06/28/dev-job-search-tools-part-1">my previous post</a>, I described my experience using LinkedIn, Whitetruffle, Hired, and Dice. This time around, I’m going to cover a crop of sites that I used less extensively. Although they didn’t yield fruitful leads, they’re still pretty interesting to me, and with job searching, you <em>can’t not</em> more than a few avenues.</p>
+
+<h1 id="job-sites-and-search-tools">Job Sites and Search Tools</h1>
+
+<h2 id="readyforce">Readyforce</h2>
+<ul>
+  <li><strong>The gist:</strong> Job board for entry-level opportunities (mostly for recent college grads)</li>
+  <li><strong>My experience:</strong> I only browsed Readyforce for a bit</li>
+  <li><strong>My recommendation:</strong> Give it a shot, but keep expectations low if you’re not a recent college student.</li>
+</ul>
+
+<p>The <a href="http://www.readyforce.com/">Readyforce website</a> has undergone a big redesign since my job searching days. I was originally drawn to the site by its large selection of companies listing their open positions. However, the site is clearly marketed towards college grads, and the creators want job seekers to “connect” with employers through their own social(?) network.</p>
+
+<p>When I visited the site a few days ago, it looked quite different. While it does look cooler nowadays, it also feels buggier. On top of that, there doesn’t seem to be a clear way to apply for jobs. Maybe I just don’t understand their model, or more likely: maybe I have to register an account first.</p>
+
+<h2 id="the-muse">The Muse</h2>
+<ul>
+  <li><strong>The gist:</strong> Job listing featuring “rich media”</li>
+  <li><strong>My experience:</strong> Browsing The Muse was so fun that I even signed up for the email newsletter.</li>
+  <li><strong>My recommendation:</strong> Must visit! The site does a fantastic job of profiling each company. Their email newsletter does a pretty bland job of standing out from other self-help resources.</li>
+</ul>
+
+<p>I love what <a href="https://www.themuse.com/">The Muse</a> is doing. Muse peeps travel to employers’ offices to take professional photos and record video interviews with current employees to highlight the benefits of working for the employers. It’s great to see photos of cool offices, and although the videos have mediocre audio/visual quality, they still provide some decent insight. The end result is that The Muse feels like a portal for quick tours of hiring companies. I felt like I was getting a fun, behind-the-scenes look at a bunch of tech jobs rather than just browsing endless, cookie-cutter job descriptions like you do with most other job sites.</p>
+
+<p>During my first few visits to their site, I was so enamored with The Muse that I signed up for their email newsletter. That’s right, I actually <em>wanted</em> their spam. Sadly, their emails are pretty lame. Each message uses a click-bait subject line like “This Genius Formula Can Tell You Your Dream Job”. Opening one of these emails just reveals a giant button to take you to their blog where the short articles don’t live up to the hype of their titles/headlines.</p>
+
+<h2 id="the-sourcery">The Sourcery</h2>
+<ul>
+  <li><strong>The gist:</strong> Recruiting firm that actually lists job opportunities on their site.</li>
+  <li><strong>My experience:</strong> I talked to a couple of their recruiters, and I got minimal results.</li>
+  <li><strong>My recommendation:</strong> I’m not a fan.</li>
+</ul>
+
+<p>You can find a lot of <a href="http://www.thesourcery.com/job_seekers">job postings on The Sourcery</a>. The companies that use The Sourcery for recruiting will often post on other job sites, but there will be a note at the bottom of the job description that mentions the requirement to apply via The Sourcery. After filling out a job application on The Sourcery, one of their recruiters will let you know whether or not your candidacy will be pursued.</p>
+
+<p>For me, the problems come from the recruiters. They noticed I was a Hack Reactor <a href="/blog/2014/05/11/hackr-diary-weeks-11-12-and-beyond/">grad</a>, and they immediately labeled me as just another coding bootcamp grad –in a bad way. Although they were friendly, the recruiters implied that all coding bootcamp grads are the same, that they’re all “great” <em>junior-level</em> coders, and that they all can’t handle more than the average entry-level job. What’s really weird is that I would get emails from some recruiters telling me that my job application was rejected due to a lack of work experience, but then other Sourcery recruiters would contact me and tell me that they want to interview me for the exact same job. Maybe the recruiters reach out to rejected applicants if the pool of applicants is running low for a particular job.</p>
+
+<p>Obviously, The Sourcery is not the only company that treats bootcamp grads as low-level programmers. This is why Hack Reactor <a href="http://sympatheticvibration.com/hack-reaction-week-8-no-recognition/">doesn’t want you to talk about them during interviews</a>. It’s also why Hack Reactor avoids calling itself a bootcamp. I’m getting off-topic, but the gist is: the bootcamp market is getting bigger, and the quality is very inconsistent. Consequently, the mediocre bootcamps are hurting the reputation for all bootcamps. The Sourcery’s expectations for bootcamp grads have already been adjusted downwards.</p>
+
+<h2 id="angellist">AngelList</h2>
+<ul>
+  <li><strong>The gist:</strong> Networking in the startup bubble.</li>
+  <li><strong>My experience:</strong> I hit the “I’m interested!” button several times without much luck.</li>
+  <li><strong>My recommendation:</strong> Meh. It’s easy enough to use, but results will be hit-or-miss.</li>
+</ul>
+
+<p>In my last couple of weeks at <a href="/blog/categories/hackr-diary/">Hack Reactor</a>, I was instructed to make sure I had 3 online profiles ready to show off: LinkedIn, GitHub, and AngelList. The nice thing about <a href="http://angel.co">AngelList</a> is that you’re more likely to get in contact with an in-house recruiter. You don’t have to go through 3rd party recruiters. The bad thing about AngelList is that you might not get in contact with any one. When I say it’s “hit-or-miss”, what I mean is that I know some colleagues who were contacted via AngelList by several companies, and I know other colleagues who were getting zero interest. There was no apparent reason for the two distinct outcomes.</p>
+
+<p>I was only contacted by a few companies via AngelList, and I wasn’t too interested in them. There are plenty of startups on the site, and if you’re hoping to join a tiny company, you should at least try to use AngelList.In my experience, although some companies reached out to me, none of the contacts yielded real conversations about interviewing. Also, there are a ton of companies that don’t distinguish themselves (i.e., there are a ton of startups in the advertising industry –and their profiles look too similar).</p>
+
+<h2 id="vc-sites">VC Sites</h2>
+<ul>
+  <li><strong>The gist:</strong> Easy way to discover jobs (but doesn’t make applying to jobs any easier).</li>
+  <li><strong>My experience:</strong> Lots of browsing filled me with hope.</li>
+  <li><strong>My recommendation:</strong> Definitely worthwhile, but it’s going to require plenty of effort.</li>
+</ul>
+
+<p>Many moons ago, a <a href="https://github.com/Ken123777/megatwillions">ridiculous</a> fellow Hack Reactor grad pointed out that Venture Capital websites tend to have giant lists of job openings for their respective startups. I eventually validated his insight for myself by checking out job lists maintained by:</p>
+
+<ul>
+  <li><a href="http://www.sparkcapital.com/jobs/">Spark Capital</a></li>
+  <li><a href="http://careers.accel.com/careers_home.php">Accel Partners</a></li>
+  <li><a href="http://www.kpcb.com/careers">Kleiner Perkins</a></li>
+</ul>
+
+<p>You can find a huge number of jobs. It definitely helps keep your hopes up, knowing that if you fail a job interview, there are so many other jobs to go for. But the caveat to remember is that these job postings are just like any other: it’s hard to get noticed when applying for a job without a referral/connection. For smaller companies, you have a much better chance, but overall, you will have to apply to a lot of jobs just to hear back from a couple employers. Like with all job openings, I recommend putting in some extra effort by checking LinkedIn (or maybe other social networks like Twitter?) to see if you can contact the employer’s engineers, hiring managers, and/or in-house recruiters.</p>
+
+<h1 id="in-other-news">In other news</h1>
+<p>I’m exicted to start a new series of blog posts covering various tips, tricks, hacks, best practices, puzzles, challenges, questions, and mysteries (both solves and unsolved) that I’ve encountered at work. This “Learned On The Job” series will be arriving shortly! That said, I haven’t finished writing about what I learned from the job search process. More job hunt-related content is still to come, but I want to mix things up a bit too. After all, talking about software engineering is more fun than talking about searching for software engineering jobs, right?</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Dev Job Searching Tools Roundup Part 1: LinkedIn vs Whitetruffle vs Hired vs Dice]]></title>

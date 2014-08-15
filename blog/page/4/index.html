@@ -138,6 +138,159 @@
 
   <header>
     
+      <h1 class="entry-title"><a href="/blog/2013/09/25/hackr-diary-first-impressions/">[HackR Diary] First Impressions</a></h1>
+    
+    
+      <p class="meta">
+        
+  
+
+
+  
+    <span class="byline author vcard">by <span class="fn">Jeff Lee</span></span>
+  
+
+ - 
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-09-25T21:23:00-07:00" pubdate data-updated="true">Sep 25<span>th</span>, 2013</time> - 
+        
+
+posted in
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/hack-reactor/'>Hack Reactor</a>, <a class='category' href='/blog/categories/hackr-diary/'>HackR Diary</a>, <a class='category' href='/blog/categories/javascript/'>JavaScript</a>, <a class='category' href='/blog/categories/til/'>TIL</a>, <a class='category' href='/blog/categories/coding-bootcamps/'>coding bootcamps</a>
+  
+</span>
+
+
+        
+         | <a href="/blog/2013/09/25/hackr-diary-first-impressions/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p class="last-updated">Last updated on Sep 28, 2013 to edit section on guard operator.</p>
+
+<p>It’s the end of day #3. I don’t have much time to write, so this blog post is a smattering of thoughts from a fresh Hack Reactor student.</p>
+
+<h1 id="initial-observations">Initial Observations</h1>
+
+<h2 id="recap">Recap</h2>
+
+<ul>
+  <li>Day 1 and 2 are just review days covering topics and challenges covered by the pre-course work. Day 1 covered ettiquette, expectations, and recursion. Day 2 covered passing functions, a lot of JS fundamentals, and awesome advice for being successful (e.g., we talked about impostor syndrome, Hack Reactor’s motivations, some job-hunting advice, etc).</li>
+  <li>Day 3 covered paired programming, object-oriented programming (OOP), and classes (e.g., functional instantiation vs. prototypal instantiation vs. psuedoclassical instantiation).</li>
+</ul>
+
+<h2 id="logistics">Logistics</h2>
+
+<ul>
+  <li>Week 1 is full of lectures. Each day is about 50% lectures, 50% coding.</li>
+  <li>The first 6 weeks will have plenty of lectures and structured challenges. Then there is an interim week where you work on a project from home, which gives you the flexibility to travel, but the Hack Reactor staff will be offline (they basically get a 1-week vacation every 7 weeks). After the interim week is more time for your individual project, time for a group project, and time for job prep.</li>
+</ul>
+
+<h2 id="nuances">Nuances</h2>
+
+<ul>
+  <li>Lunch breaks and dinner breaks are often cut short due to lectures running long.</li>
+  <li>Lectures run long due to people asking questions.</li>
+  <li>All teachers advocate for students to ask questions. At Hack Reactor, the students ask a TON of questions because the class atmosphere is very comfortable.</li>
+  <li>The students are really nice. Everyone’s excited to meet new people (even the quiet ones are clearly motivated to be social).</li>
+  <li>I’ve heard stories of students of other bootcamps going out at night to hang out and have fun. I could be wrong, but so far it seems like there’s no time/energy left for going out at night.</li>
+  <li>That said, students don’t stay here that late (so far). A lot of us leave by 9pm. I thought it’d be common to leave no earlier than 10pm, but there aren’t even that many students from the senior cohort by the time the clock strikes 9:20pm (which is the latest I’ve stayed). I have a feeling this will change in a few weeks (beause that will be crunch time for the senior cohort).</li>
+  <li>Nothing’s perfect. Some equipment is broken, some chairs are shitty, some online resources are buggy, etc. None of these issues have been big issues.</li>
+</ul>
+
+<h1 id="nuggets-of-knowledge">Nuggets of Knowledge</h1>
+
+<p>I’ve picked up a lot of cool (and oftentimes valuable) advice/facts in just 3 days.</p>
+
+<h2 id="life-nuggets">Life Nuggets</h2>
+
+<h3 id="re-education">Re: <strong>Education</strong></h3>
+
+<p>Passive learning is deceptively similar to true understanding. When you just observe a correct solution, it can give you the illusion that you learned more than you really did. For example, you might watch someone code up a good solution. When you walk away, you’ll think you understand everything necessary to solve the problem, but all you learned was some code without its meaning.</p>
+
+<h3 id="re-starting-a-new-tech-career">Re: <strong>Starting a new tech career</strong></h3>
+
+<p>Everyone thinks starting a new tech career with a tiny startup is really exciting. That might be true, but people tend to forget an important caveat: less structure could lead to a less efficient roadmap to individual success.</p>
+
+<p>In less formal terms, you might work for a tiny startup on something you truly care about, but the startup could easily be too small or too young to provide an environment with superiors/peers that can help you develop your programming skills (or any job-related skills).</p>
+
+<h2 id="javascript-nuggets">JavaScript Nuggets</h2>
+
+<h3 id="guard-operator">Guard operator</h3>
+
+<p>Marcus, the primary instructor, warned us that some devs dislike the guard operator, but it’s really concise (which is cool to him). The guard operator is a logical-AND or logical-OR that “guards” a small bit of code the same way an <code>if</code> statement would guard it. For example:</p>
+
+<div><div class="CodeRay">
+  <div class="code"><pre><span class="keyword">if</span>(goodStudent === <span class="predefined-constant">true</span>){
+    candy++;
+}
+
+<span class="comment">// The above code could be refactored into the following:</span>
+goodStudent &amp;&amp; candy++;
+</pre></div>
+</div>
+</div>
+
+<p>The following is a more practical example:</p>
+
+<div><div class="CodeRay">
+  <div class="code"><pre><span class="comment">// Let's say you want to only call a function with an array if the array is NOT undefined (i.e., you want to guard against a scenario where you pass an undefined argument to a function).</span>
+arg &amp;&amp; myFunction(arg);
+</pre></div>
+</div>
+</div>
+
+<p>You can also use a logical-OR in a guard-like fashion. This is sometimes called the <strong>default operator</strong> rather than a guard operator.</p>
+
+<div><div class="CodeRay">
+  <div class="code"><pre><span class="comment">// if no name was passed into the function, just give the name variable a default value of 'friend'</span>
+
+<span class="keyword">var</span> <span class="function">sayHello</span> = <span class="keyword">function</span>(name){
+  <span class="keyword">if</span>(name === <span class="predefined-constant">undefined</span>){
+    name = <span class="string"><span class="delimiter">'</span><span class="content">friend</span><span class="delimiter">'</span></span>;
+  }
+  console.log(<span class="string"><span class="delimiter">'</span><span class="content">Hello, </span><span class="delimiter">'</span></span> + name + <span class="string"><span class="delimiter">'</span><span class="content">!</span><span class="delimiter">'</span></span>);
+}
+
+<span class="comment">// the function above could be refactored to use the OR-guard as follows:</span>
+<span class="keyword">var</span> <span class="function">sayHello</span> = <span class="keyword">function</span>(name){
+  name = name || <span class="string"><span class="delimiter">'</span><span class="content">friend</span><span class="delimiter">'</span></span>;
+  console.log(<span class="string"><span class="delimiter">'</span><span class="content">Hello, </span><span class="delimiter">'</span></span> + name + <span class="string"><span class="delimiter">'</span><span class="content">!</span><span class="delimiter">'</span></span>);
+}
+</pre></div>
+</div>
+</div>
+</div>
+  
+  
+
+
+</div>
+
+      </article>
+    
+    
+      <article class="span4">
+        <div class="article-format">
+
+  <header>
+    
       <h1 class="entry-title"><a href="/blog/2013/09/22/hackr-diary-pre-course-anticipation/">[HackR Diary] Pre-Course Anticipation</a></h1>
     
     
@@ -914,150 +1067,6 @@ posted in
 
       </article>
     
-    
-      <article class="span4">
-        <div class="article-format">
-
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/09/04/coding-bootcamp-research-how-to-compare-bootcamps/">[Coding Bootcamp Research] How to Compare Bootcamps</a></h1>
-    
-    
-      <p class="meta">
-        
-  
-
-
-  
-    <span class="byline author vcard">by <span class="fn">Jeff Lee</span></span>
-  
-
- - 
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-09-04T01:12:00-07:00" pubdate data-updated="true">Sep 4<span>th</span>, 2013</time> - 
-        
-
-posted in
-<span class="categories">
-  
-    <a class='category' href='/blog/categories/bootcamp-research/'>bootcamp research</a>, <a class='category' href='/blog/categories/coding-bootcamps/'>coding bootcamps</a>
-  
-</span>
-
-
-        
-         | <a href="/blog/2013/09/04/coding-bootcamp-research-how-to-compare-bootcamps/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><img src="/images/mycodingbootcamplogo_SP.png" alt="my coding bootcamp logo" /></p>
-
-<p class="my-caption">Image Credits: original boot by MilitarySpot.com; ridiculous editing by me</p>
-
-<h1 id="how-do-you-research-bootcamps">How do you research bootcamps?</h1>
-<p>When you’re about to buy a car, you gather relevant data by going to KBB, Edmunds, and other sites. You read editorial reviews and watch video reviews. You can investigate possible issues by searching forums and recall databases.</p>
-
-<p>When comparing cars, you consider fuel economy, reliability, style, and niceties. When comparing any big expenditure, you consider price and value. As for determining which aspects of a car really matter to you the most, it’s pretty intuitive to just think about your daily life.</p>
-
-<p>So what do you do when “shopping” for a coding bootcamp? It’s a lot like shopping for cars, choosing a university, or making any other big decision: it’s time-consuming, it can be overwhelming, and there’s a ton of info for your consideration. However, it’s pretty easy to learn how to research cars and colleges thanks to the abundance of resources out there –but bootcamps are new, so it’s no surprise that learning how to research them seems mysterious. I’m going to help you.</p>
-
-<p>When I started looking at coding bootcamps, I wasn’t sure what to do other than basic Googling and looking at compay websites. This blog post serves as an examination of how to examine bootcamps.</p>
-
-<h1 id="what-factors-should-you-consider">What factors should you consider?</h1>
-<p>I’m not claiming you need to thoroughly analyze every item in the list below. Just like any other big decision, you need to prioritize various factors based on your own preferences and needs.</p>
-
-<ul>
-  <li><strong>Curriculum:</strong> What will you learn? How will you learn it?
-    <ul>
-      <li><strong>Technical Skills:</strong>
-  Which programming languages will be taught? What tools of the trade will you learn? What about Test Driven Development (TDD)? How many frameworks will you be exposed to?</li>
-      <li><strong>Non-Tech Skills:</strong> Does the bootcamp cover job interview prep? Paired programming? Presentation experience? Resume workshops? Listening skills?</li>
-      <li><strong>Intensity:</strong> How much time is devoted to various topics? How difficult is the bootcamp relative to other bootcamps?</li>
-    </ul>
-  </li>
-  <li><strong>Faculty:</strong> How many teachers are employed by the bootcamp? What qualifies them to teach you and earn your money?</li>
-  <li><strong>Job Placement:</strong> Other than teaching you relevant skills, how can a bootcamp help you get a job?
-    <ul>
-      <li><strong>Alumni Success:</strong> What kinds of careers have previous students earned after attending the bootcamp (employment rate)?</li>
-      <li><strong>Network:</strong> How well-connected is the bootcamp? How many employers are in touch with the program?</li>
-      <li><strong>Image:</strong> What kind of reputation does course have? Are employers familiar with the brand?</li>
-      <li><strong>Initiatives:</strong> Does the bootcamp conduct a hiring day? How many employers show up to the hiring day? Does the bootcamp offer job interview training? Does the bootcamp have a staff member dedicated to helping you find a job?</li>
-    </ul>
-  </li>
-  <li><strong>Schedule:</strong> Is there any flexibility in when you work? Are there any days off? Holidays?
-    <ul>
-      <li><strong>Typical Day:</strong> Students often dedicate more than 8 hours per day, but what about faculty? Will the long hours make it difficult to commute?</li>
-      <li><strong>Start &amp; End Dates:</strong> Do you want to get started right away? If so, the start date surely matters. The end date might affect your ability to find a job ASAP. What if the end date is right around the end of employers’ fiscal years?</li>
-    </ul>
-  </li>
-  <li><strong>Cost:</strong> How does a bootcamp’s price compare to its competitors? Why did they choose a particular price?
-    <ul>
-      <li><strong>Payment Plans:</strong> What’s the initial deposit? Do you pay in chunks, or all at once upfront? Can you defer payment until after a certain date?</li>
-      <li><strong>Discounts:</strong> Are there any scholarships for minorities/females? Are there any refunds or partial refunds upon getting hired by their employer network?</li>
-      <li><strong>Value:</strong> How much faculty time do you get for your money? Does the bootcamp provide computers? Does the bootcamp provide extra nice office space?</li>
-    </ul>
-  </li>
-  <li><strong>Facilities:</strong> Speaking of office space, are the facilities boring, or do they add to the learning experience? Where are they located? Will the location involve high commute costs? How feasible is it to live in a hostel near the bootcamp?</li>
-  <li><strong>Character:</strong> Does the bootcamp feel like a startup, a corporate player, or an amateur hour?
-    <ul>
-      <li><strong>Personalities:</strong> What’s the culture like? Do they welcome total noobs, or do they demand demonstrable coding experience?</li>
-      <li><strong>Long-Term Vision:</strong> How does the bootcamp treat its alumni? Does the bootcamp plan on expanding its territory or re-investing in a single location?</li>
-      <li><strong>Extras &amp; Perks:</strong> Free wifi? Duh. Free lunch? Oh nice. Organized outings? Sports? Happy hours? Guest lectures from industry experts?</li>
-    </ul>
-  </li>
-</ul>
-
-<h1 id="how-do-you-prioritize-factors">How do you prioritize factors?</h1>
-<p>Not only do you want to know what factors to consider, but you also want to know how much you should care.</p>
-
-<p>For factors like cost and location of facilities, it’s obvious how to think about their impacts relative to your life. For factors such as curriculum and long-term vision, it can be hard to figure out what matters to you. Should you look for a bootcamp that focuses on Ruby on Rails or Python with Django? Should you believe it when people say picking a programming language doesn’t matter?</p>
-
-<p>Other factors might actually surprise you once you dig into them. For example, it might bother you to find out that some of your tuition/time is being spent on <a href="http://devbootcamp.com/2013/01/30/yoga-panic-pandas-3-things-you-might-not-expect-from-a-programming-bootcamp/">mandatory yoga</a> classes.</p>
-
-<p>(For the record, I like the idea of mandatory yoga, but I’ve seen <a href="http://qr.ae/IL5Mc">negative reactions</a> to the fact.)</p>
-
-<p>I will try to explore the question of “how do you prioritize factors?” in much greater detail in upcoming blog posts that focus on a few factors at a time.</p>
-
-<h1 id="how-do-you-gather-info">How do you gather info?</h1>
-
-<ul>
-  <li><strong>Bootcamp website:</strong> Most bootcamp websites provide an overview of curriculum, tuition, etc. They don’t always do a good job of telling you the quality of their faculty or the typical day schedule.</li>
-  <li><strong>Comparison sites:</strong> A pair of new websites have been created to help you compare bootcamps by providing spec sheets. They don’t do a good job of providing info on bootcamp culture. What’s nice is that they have reviews, but the reviews basically feel like Quora comments.
-    <ul>
-      <li><a href="http://bootcamps.in">bootcamps.in</a>: Has a few helpful articles and a big list of self-education resources.</li>
-      <li><a href="http://bootcamper.io">bootcamper.io</a>: No articles, but cleaner aesthetics and better layout.</li>
-    </ul>
-  </li>
-  <li><strong>Quora:</strong> This is a fantastic resource if you want to hear from both students and co-founders. I’ve seen a lot of posts by founders of Dev Bootcamp, RocketU, Hack Reactor, and a few non-San Francisco bootcamps. Some posts feel like advertisements, but some feel like authentic, honest nuggets of insight.</li>
-  <li><strong>Student blogs:</strong> There are a lot of blogs out there by current and former students. They often cover curriculum details. They sometimes talk about bootcamp culture. It’s nice to read success stories, but you might also find tales of unfulfilled expectations.</li>
-  <li><strong>YouTube and Vimeo:</strong> Searching for videos can help you find out more about a bootcamp’s facilities, student personalities, etc.</li>
-  <li><strong>Admissions interviews:</strong> These are going to be your best chance to get your questions answered about typical day schedule, payment options, job placement, etc. Just keep in mind that the answers are biased.</li>
-</ul>
-
-<p>You can also find press coverage of bootcamps, but I’ve found that they generally fail to give you much insight. Most articles are just explaining what a coding bootcamp is. Some press coverage involves video interviews and whatnot. Those are worth watching because even though they’re edited fluff pieces, they still give a glimpse into personalities and facilities.</p>
-</div>
-  
-  
-
-
-</div>
-
-      </article>
-    
     </div>
       <div class="row">
         <ul class="pager">
@@ -1085,6 +1094,10 @@ posted in
     <ul class="recent_posts">
       
         <li>
+          <a href="/blog/2014/08/14/dev-job-searching-tools-roundup-part-2/">Dev Job Searching Tools Roundup Part 2: Readyforce, The Muse, The Sourcery, AngelList, VC job listings</a>
+        </li>
+      
+        <li>
           <a href="/blog/2014/06/28/dev-job-search-tools-part-1/">Dev Job Searching Tools Roundup Part 1: LinkedIn vs Whitetruffle vs Hired vs Dice</a>
         </li>
       
@@ -1098,10 +1111,6 @@ posted in
       
         <li>
           <a href="/blog/2014/05/11/hackr-diary-weeks-11-12-and-beyond/">[HackR Diary] Weeks 11-12: And Beyond!</a>
-        </li>
-      
-        <li>
-          <a href="/blog/2014/03/30/hackr-diary-weeks-8-10-group-collaboration/">[HackR Diary] Weeks 8-10: No More Solo</a>
         </li>
       
     </ul>
