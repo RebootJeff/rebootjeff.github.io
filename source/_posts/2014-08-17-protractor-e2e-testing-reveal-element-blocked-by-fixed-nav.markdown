@@ -13,13 +13,13 @@ categories:
 
 End-to-end testing can be pretty tricky. There are a lot of "gotchas" that prove how hard it can be for you to truly think from the perspective of a computer. Ideally, E2E testing is all about writing tests from the perspective of a user, but that's not going to always provide smooth sailing when writing E2E spec files.
 
-This blog post is going to focus on a gotcha that rears its ugly head when you have a fixed nav bar. Nowadays, it's pretty common to see fixed nav bars. Let's use Twitter as an example. Twitter doesn't use Angular, so you wouldn't want to test their site using Protractor, but what I'm about to talk about also applies to WebDriver (which can be used for any site running on any tech).
+This blog post is going to focus on a gotcha that rears its ugly head when you have a fixed nav bar. Nowadays, it's pretty common to see fixed nav bars. Let's use Twitter as an example. Twitter doesn't use Angular, so you wouldn't want to test their site using Protractor, but what I'm about to talk about can also be applied to WebDriver (which can be used for non-AngularJS sites).
 
 ![Twitter nav bar blocking an avatar](/images/20140817/screenshot_twitter_fixed_nav.png)
 
 # What's the big deal?
 
-Here's the problem: **what if we want Protractor to click on the avatar under the fixed nav bar as seen in the screenshot above?**
+Here's the problem: **what if we want Protractor to click on the avatar under the fixed nav bar as seen in the screenshot above?** Obviously, a human user would intuitively scroll to find an element before clicking on it. However, Protractor's perspective is different.
 
 {% coderay lang:JavaScript Example A - E2E spec with potential problem %}
 describe('"Who to Follow" widget', function() {
@@ -38,7 +38,9 @@ describe('"Who to Follow" widget', function() {
 
 When you use `.click()`, you might expect Protractor (or WebDriver, which serves as the underlying engine for Protractor) will try to scroll the web page until the target element is displayed before clicking. However, Protractor will only scroll until the target element is in the browser *viewport*.
 
-Now imagine your test suite includes several tests (ooh la la!). In test #1, the actions of the test cause Protractor to scroll to the bottom of the page. In test #2, the test tries to perform the actions of *Example A*. Therefore, during test #2, protractor tries to scroll back up the page until the target avatar is in the viewport, but this just brings the avatar directly under the fixed nav bar. Then Protractor attempts a click by finding the center of the target. So even if a tiny portion of the avatar's butt is displayed just below the bottom of the fixed nav bar, it won't be clicked. Instead, Protractor will throw an error saying that the target could not be clicked. The error will also mention that the nav bar would receive the click event.
+Now imagine your test suite includes several tests (ooh la la!). In test #1, the actions of the test cause Protractor to scroll to the bottom of the page. In test #2, the test tries to perform the actions of *Example A*. Therefore, during test #2, Protractor tries to scroll back up the page until the target avatar is in the viewport, but this just brings the avatar directly under the fixed nav bar.
+
+Then Protractor attempts a click by finding the center of the target. So even if a tiny portion of the avatar's butt is displayed just below the bottom of the fixed nav bar, it won't be clicked. Instead, Protractor will throw an error saying that the target could not be clicked. The error will also mention that the nav bar would receive the click event.
 
 # Well that sucks. Now what?
 
@@ -91,6 +93,6 @@ helpers.scrollElemFinderIntoView(avatar);
 avatar.click();
 {% endcoderay %}
 
-You may have noticed that the solution in *Example B* mentions promises, but the code in *Example C* does not use them. My understanding is that it's not crucial to use every single promise that Protractor and WebDriverJS provide. For example, even though the `click()` method returns a promise, you don't see devs writing Protractor tests with `exampleButton.click().then(function() { ... });` all the time.
+You may have noticed that the solution in *Example B* mentions promises, but the code in *Example C* does not use them. My understanding is that it's not crucial to use every single promise that Protractor and WebDriverJS provide. For example, even though the `.click()` method returns a promise, you don't see devs writing Protractor tests with `exampleButton.click().then(function() { ... });` all the time.
 
-So why did I mention promises in *Example B*? Just to reinforce the fact that `browser.executeScript()` will return a promise. By storing the result of `browser.executeScript()` in a variable called "promise", it tells other devs what to expect. That said, I admit it may not be terribly valuable. Let me know your opinion on this or any other part of the solution presented here.
+So why did I mention promises in *Example B*? Just to reinforce the fact that `browser.executeScript()` will return a promise. By storing the result in a variable called "promise", it tells other devs what to expect. That said, I admit it may not be terribly valuable. Let me know your opinion on this or any other part of the solution presented here.
