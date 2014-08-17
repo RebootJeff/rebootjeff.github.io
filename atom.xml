@@ -4,7 +4,7 @@
   <title><![CDATA[RebootJeff.com]]></title>
   <link href="http://RebootJeff.github.io/atom.xml" rel="self"/>
   <link href="http://RebootJeff.github.io/"/>
-  <updated>2014-08-15T11:37:35-07:00</updated>
+  <updated>2014-08-17T14:21:00-07:00</updated>
   <id>http://RebootJeff.github.io/</id>
   <author>
     <name><![CDATA[@RebootJeff]]></name>
@@ -12,6 +12,115 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Protractor E2E Testing: Reveal Element Blocked By Fixed Nav]]></title>
+    <link href="http://RebootJeff.github.io/blog/2014/08/17/protractor-e2e-testing-reveal-element-blocked-by-fixed-nav/"/>
+    <author>
+      <name><![CDATA[@RebootJeff]]></name>
+      
+    </author>
+    <updated>2014-08-17T14:19:00-07:00</updated>
+    <id>http://RebootJeff.github.io/blog/2014/08/17/protractor-e2e-testing-reveal-element-blocked-by-fixed-nav</id>
+    <content type="html"><![CDATA[<p>End-to-end testing can be pretty tricky. There are a lot of “gotchas” that prove how hard it can be for you to truly think from the perspective of a computer. Ideally, E2E testing is all about writing tests from the perspective of a user, but that’s not going to always provide smooth sailing when writing E2E spec files.</p>
+
+<p>This blog post is going to focus on a gotcha that rears its ugly head when you have a fixed nav bar. Nowadays, it’s pretty common to see fixed nav bars. Let’s use Twitter as an example. Twitter doesn’t use Angular, so you wouldn’t want to test their site using Protractor, but what I’m about to talk about also applies to WebDriver (which can be used for any site running on any tech).</p>
+
+<p><img src="http://RebootJeff.github.io/images/20140817/screenshot_twitter_fixed_nav.png" alt="Twitter nav bar blocking an avatar" /></p>
+
+<h1 id="whats-the-big-deal">What’s the big deal?</h1>
+
+<p>Here’s the problem: <strong>what if we want Protractor to click on the avatar under the fixed nav bar as seen in the screenshot above?</strong></p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption class="code-header" style="margin-bottom:-5px;"><span>Example A - E2E spec with potential problem </span></figcaption>
+ <div class="CodeRay">
+  <div class="code"><pre>
+describe(<span class="string"><span class="delimiter">'</span><span class="content">&quot;Who to Follow&quot; widget</span><span class="delimiter">'</span></span>, <span class="keyword">function</span>() {
+  it(<span class="string"><span class="delimiter">'</span><span class="content">should include avatars that go to other Twitter profiles</span><span class="delimiter">'</span></span>, <span class="keyword">function</span>() {
+    <span class="comment">// get first (index 0) avatar using class-based CSS selector</span>
+    <span class="keyword">var</span> avatar = <span class="predefined">$$</span>(<span class="string"><span class="delimiter">'</span><span class="content">.who-to-follow .avatar</span><span class="delimiter">'</span></span>).get(<span class="integer">0</span>);
+
+    <span class="comment">// Will this click always work?</span>
+    avatar.click();
+
+    <span class="comment">// assertion of what to expect as a result of the click</span>
+    expect(blahBlahBlah).toBe(yadaYada);
+  });
+});
+</pre></div>
+</div>
+ </figure></notextile></div>
+
+<p>When you use <code>.click()</code>, you might expect Protractor (or WebDriver, which serves as the underlying engine for Protractor) will try to scroll the web page until the target element is displayed before clicking. However, Protractor will only scroll until the target element is in the browser <em>viewport</em>.</p>
+
+<p>Now imagine your test suite includes several tests (ooh la la!). In test #1, the actions of the test cause Protractor to scroll to the bottom of the page. In test #2, the test tries to perform the actions of <em>Example A</em>. Therefore, during test #2, protractor tries to scroll back up the page until the target avatar is in the viewport, but this just brings the avatar directly under the fixed nav bar. Then Protractor attempts a click by finding the center of the target. So even if a tiny portion of the avatar’s butt is displayed just below the bottom of the fixed nav bar, it won’t be clicked. Instead, Protractor will throw an error saying that the target could not be clicked. The error will also mention that the nav bar would receive the click event.</p>
+
+<h1 id="well-that-sucks-now-what">Well that sucks. Now what?</h1>
+
+<p>There are two main solutions to consider:</p>
+
+<ol>
+  <li>Un-fix the nav bar for your E2E tests. –Bleh!</li>
+  <li>Add extra scrolling to your E2E tests. –Okay</li>
+</ol>
+
+<p>The first solution might not be a great idea because it’s a major alteration for the sake of testing. What if the fixed position of the nav bar causes other issues that your tests will reveal? I believe you want E2E tests to interact with a product that is very close to the product users will interact with. Changing the nav bar’s position just for testing goes against this philosophy. The main exception to this rule is animation: I believe it’s ok to disable animations for E2E testing just because it can take up a lot of time, slowing down your test/build process. Also, animations can just be very cumbersome for automated E2E systems like Protractor to deal with.</p>
+
+<h2 id="solution-how-to-add-pre-click-scrolling">Solution: How to add pre-click scrolling</h2>
+
+<p>The solution I use for dealing with fixed nav bars is to define and use a helper function that invokes <code>element.scrollIntoView(false)</code>. This method is a native DOM element method <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element.scrollIntoView">that you can read about on MDN</a>. You can’t simply invoke it on a Protractor ElementFinder object. You can’t call <code>elemFinder.scrollIntoView()</code> the same way you call <code>elemFinder.click()</code>.</p>
+
+<p>Also, you may have noticed that <code>false</code> is passed into <code>scrollIntoView</code>. This tells the browser to scroll as far as it can in an attempt to align the bottom of the target element with the bottom of the scroll area. In other words, <strong>this solution only solves issues with fixed nav bars at the <em>top</em> of the viewport.</strong> Using <code>element.scrollIntoView(false)</code> will fail if your web app uses a fixed nav bar at the <em>bottom</em> of the viewport.</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption class="code-header" style="margin-bottom:-5px;"><span>Example B - Solution: Helper function to align element with bottom of viewport </span></figcaption>
+ <div class="CodeRay">
+  <div class="code"><pre>
+<span class="comment">// Inside a separate JS file that contains helper functions...</span>
+
+<span class="comment">// Syntax Option 1</span>
+<span class="keyword">function</span> <span class="function">scrollElemToBottomOfView</span>(elem) {
+  elem.scrollIntoView(<span class="predefined-constant">false</span>);
+}
+module.exports.<span class="function">scrollElemFinderIntoView</span> = <span class="keyword">function</span>(elemFinder) {
+  <span class="keyword">var</span> promise = browser.executeScript(scrollElemToBottomOfView, elemFinder);
+  <span class="keyword">return</span> promise;
+};
+
+<span class="comment">// Syntax Option 2</span>
+module.exports.<span class="function">scrollElemFinderIntoView</span> = <span class="keyword">function</span>(elemFinder) {
+  <span class="keyword">var</span> promise = browser.executeScript(<span class="keyword">function</span>(elem) {
+    elem.scrollIntoView(<span class="predefined-constant">false</span>);
+  }, elemFinder);
+  <span class="keyword">return</span> promise;
+};
+
+<span class="comment">// Syntax Option 3</span>
+module.exports.<span class="function">scrollElemFinderIntoView</span> = <span class="keyword">function</span>(elemFinder) {
+  <span class="keyword">var</span> promise = browser.executeScript(<span class="string"><span class="delimiter">'</span><span class="content">arguments[0].scrollIntoView(false)</span><span class="delimiter">'</span></span>, elemFinder);
+  <span class="keyword">return</span> promise;
+};
+</pre></div>
+</div>
+ </figure></notextile></div>
+
+<p>There are 3 syntax options above because I just wanted to present a few different coding styles. As you can probably tell, <code>browser.executeScript()</code> accepts a couple of parameters. The first one is the script, the second one is the script’s parameter. The script can either be a function (technically speaking, it’s a function reference) or a string representation of the script’s body. Syntax Option #3 was inspired by a Stack Overflow answer for a very similar situation (it was for WebDriver, but it was easy to translate to Protractor).</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption class="code-header" style="margin-bottom:-5px;"><span>Example C - Using the Solution </span></figcaption>
+ <div class="CodeRay">
+  <div class="code"><pre>
+<span class="comment">// Somewhere inside test code...</span>
+<span class="keyword">var</span> helpers = require(<span class="string"><span class="delimiter">'</span><span class="content">../path/to/helpers</span><span class="delimiter">'</span></span>);
+helpers.scrollElemFinderIntoView(avatar);
+avatar.click();
+</pre></div>
+</div>
+ </figure></notextile></div>
+
+<p>You may have noticed that the solution in <em>Example B</em> mentions promises, but the code in <em>Example C</em> does not use them. My understanding is that it’s not crucial to use every single promise that Protractor and WebDriverJS provide. For example, even though the <code>click()</code> method returns a promise, you don’t see devs writing Protractor tests with <code>exampleButton.click().then(function() { ... });</code> all the time.</p>
+
+<p>So why did I mention promises in <em>Example B</em>? Just to reinforce the fact that <code>browser.executeScript()</code> will return a promise. By storing the result of <code>browser.executeScript()</code> in a variable called “promise”, it tells other devs what to expect. That said, I admit it may not be terribly valuable. Let me know your opinion on this or any other part of the solution presented here.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Dev Job Searching Tools Roundup Part 2: Readyforce, The Muse, The Sourcery, AngelList, VC job listings]]></title>
@@ -2047,60 +2156,6 @@ arg &amp;&amp; myFunction(arg);
 </pre></div>
 </div>
 </div>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[[HackR Diary] Pre-Course Anticipation]]></title>
-    <link href="http://RebootJeff.github.io/blog/2013/09/22/hackr-diary-pre-course-anticipation/"/>
-    <author>
-      <name><![CDATA[@RebootJeff]]></name>
-      
-    </author>
-    <updated>2013-09-22T11:51:00-07:00</updated>
-    <id>http://RebootJeff.github.io/blog/2013/09/22/hackr-diary-pre-course-anticipation</id>
-    <content type="html"><![CDATA[<p><img src="http://RebootJeff.github.io/images/20130922/mytwittler.png" alt="Thumbnail of my twittler" /></p>
-
-<p class="my-caption">Thumbnail of my Twitter clone assignment</p>
-
-<p>Tomorrow is a huge day for me. Tomorrow is when <a href="http://RebootJeff.github.io/blog/2013/08/25/hack-reactor-is-my-future/">I start attending Hack Reactor</a>. I’m about to go from funemployment (going to bed at 4am; waking up at 12pm) to immersive student life (spending 80 hours/week on “campus”). I will write about my journey from amateur to trained pro in a series of blog posts called <a href="http://RebootJeff.github.io/blog/categories/hackr-diary/">HackR Diary</a>.</p>
-
-<h1 id="mandatory-pre-course-work">Mandatory Pre-Course Work</h1>
-<p>I enrolled in tomorrow’s Hack Reactor cohort back in late August. So I had a month to get through some pre-course “homework.” Some bits of the homework were harder than I expected (e.g., functional JavaScript challenges); some bits were easier than I expected (e.g., creation of simple Twitter-like front-end). The Twitter clone challenge was actually really fun for me because I like a challenge that actually includes a front-end.</p>
-
-<p>There were times I was frustrated because I felt like I would be doing a lot better with just a little bit of help (e.g., recursion challenges), but I didn’t ask for much help, so I did a lot of solo struggling. However, one of the biggest bummers was going through the Backbone.js assignment. The assignment was to simply complete the <a href="http://www.codeschool.com/courses/anatomy-of-backbonejs">Code School Backbone.js tutorials</a> (two of them). <strong>Hack Reactor provided me with a Code School membership</strong>, and I was excited to take advantage of it, but that particular set of Code School tutorials isn’t very good at teaching. I felt like I didn’t get a good grip of the concepts (models/collections, views/rendering, routers).</p>
-
-<p>I’m also a bit jaded when it comes to online tutorials. They generally do a lot of hand-holding to the point where you don’t retain much info, and if you get stuck on something, you’re a bit screwed. <strong>My low patience for tutorials is part of why I decided to enroll in a bootcamp, but there I was: doing tutorials as part of bootcamp homework!</strong> Don’t get me wrong, online tutorials are great resources in general, but I can only take so much. Eventually, I’d rather do some <a href="http://www.coderbyte.com/">Coderbyte</a> challenges instead of Code School challenges.</p>
-
-<h1 id="pre-course-check-in-meeting">Pre-Course Check-In Meeting</h1>
-<p>Hack Reactor makes incoming students meet with a Hacker-in-Residence (basically a Teaching Assitant?) to check up on the pre-course homework. I heard that some students have been weeded out of the bootcamp by the homework.</p>
-
-<p>I met with an H-in-R named <a href="http://thishackergirl.wordpress.com/">Bianca</a>. My meeting was done in person, but these check-in meetings are sometimes conducted via webcam for those who haven’t arrived in San Francisco yet.</p>
-
-<p>Before the meeting, I was pretty worried about how I stacked up compared to my peers. We’re not experts (hence the desire to enroll in a bootcamp), but we’re supposed to be much better than a typical beginner because <a href="http://RebootJeff.github.io/blog/2013/09/15/coding-bootcamp-research-admissions-part2/#hack-reactor-wants-to-kick-your-ass">the admissions process was not easy</a>. During the meeting, Bianca asked me how I felt about the three biggest parts of the pre-course homework: the functional JavaScript challenge involving test-driven development (TDD), the rudimentary Twitter front-end clone, and the JSON recursion challenges.</p>
-
-<p>I anxiously watched as Bianca scrolled through my code. After discussing some questions I had, issues I struggled with, and solutions to my few bugs, I felt a lot better. Maybe I put too much pressure on myself, but I tend to worry a lot. <strong>I walked out of the conference room feeling very positive.</strong></p>
-
-<h1 id="other-pre-course-work">Other Pre-Course Work</h1>
-<p>Hack Reactor suggests completing more tutorials and reading some resources if students have some spare time before classes start. Suggested topics include Git, Node.js, CSS, Ruby, Ruby on Rails, and CoffeeScript.</p>
-
-<p>I <a href="http://youtu.be/jM8KE_Fa6JI">studied Backbone.js</a> a bit more, I read about JavaScript <a href="http://www.codeproject.com/Articles/580165/JavaScript-Best-Practices">best</a> <a href="http://www.thinkful.com/learn/javascript-best-practices-1/">practices</a>, and I spent a lot of time doing more Code School tutorials. Some are better than others. I mostly looked at HTML/CSS stuff, which sounds easy, but I just wanted to make sure there weren’t too many gaps in my fundamental knowledge (<code>position</code> and <code>display</code> properties still slap me around sometimes).</p>
-
-<p><strong>The <a href="http://www.codeschool.com/courses/fundamentals-of-design">Code School tutorial on the Fundamentals of Design</a> was pretty awesome</strong> actually. It’s the only tutorial that doesn’t require coding, but it imparted quite a few cool nuggets of knowledge about how to choose fonts, colors, and layouts. The layouts part wasn’t as insightful (I wish they had you actually implement a grid with some coding), but learning about typeface categories (e.g., humanist vs. transitional vs. modern) and what defines a good color scheme (e.g., 60 degrees of hue separation) was sweeeet. Hopefully I’ll get around to blogging about the basics of fonts and colors one day. It’s just some very simple stuff that can help a lot.</p>
-
-<p>Overall, I didn’t do as much studying on my own as I should have. I suck at independent study. Bahumbug.</p>
-
-<h1 id="im-so-friggin-nervous">I’m so friggin’ nervous!</h1>
-<p>Although the pre-course check-in meeting left me feeling optimistic about my future success at Hack Reactor, I no longer feel quite so confident.</p>
-
-<p>This past weekend, I got access to my cohort’s Google Group. I bet that Hack Reactor nearly forgot to add me to the group. I browsed the group forum, and I saw posts dating back from July. There were some posts in August about meeting up to get to know one another before our Hack Reactor course starts. Doh! I missed those opportunities!</p>
-
-<p>There was also a thread of self-introductions. Only a handful of people introduced themselves, but damn! They sound impressive. They make me worry about how I’ll compare. What’s funny is that a lot of them are non-Asians who have lived in China. They can speak Mandarin way better than I can (i.e., I only know a few basic words). Hopefully I don’t get a lot of flak. I already get enough grief from my mom.</p>
-
-<h1 id="my-plans-for-blogging">My plans for blogging</h1>
-<p>Considering that I will be busier than I have ever been in my entire life(?), I probably won’t have much time for blogging, but I am determined to do a fair amount of blogging anyway!</p>
-
-<p>I still have plenty of <a href="http://RebootJeff.github.io/blog/categories/bootcamp-research/">coding bootcamp research</a> to blog about, but I will give my HackR Diary a higher priority. I’ve set a goal to blog about my experience at Hack Reactor at least once per week. Each diary entry will include a quick recap of topics taught by HackR staff, observational knowledge nuggets I picked up myself, and my personal evaluation of myself and the bootcamp.</p>
 ]]></content>
   </entry>
   

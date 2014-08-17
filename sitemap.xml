@@ -169,6 +169,12 @@
         <lastmod>2014-08-15T11:36:03-07:00</lastmod>
     </url>
     <url>
+        <loc>
+            http://RebootJeff.github.io/blog/2014/08/17/protractor-e2e-testing-reveal-element-blocked-by-fixed-nav/
+        </loc>
+        <lastmod>2014-08-17T14:19:01-07:00</lastmod>
+    </url>
+    <url>
         <loc>http://RebootJeff.github.io/about/</loc>
         <lastmod>2014-05-12T23:57:47-07:00</lastmod>
     </url>
@@ -178,10 +184,10 @@
     </url>
     <url>
         <loc>http://RebootJeff.github.io/</loc>
-        <lastmod>2014-08-15T11:36:03-07:00</lastmod>
+        <lastmod>2014-08-17T14:19:01-07:00</lastmod>
     </url>
     <url>
         <loc>http://RebootJeff.github.io/blog/archives/</loc>
-        <lastmod>2014-08-15T11:36:03-07:00</lastmod>
+        <lastmod>2014-08-17T14:19:01-07:00</lastmod>
     </url>
 </urlset>
