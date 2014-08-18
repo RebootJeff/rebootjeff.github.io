@@ -3,7 +3,11 @@ layout: post
 title: "Questions to ask dev interviewers"
 date: 2014-01-09 20:06
 comments: true
-categories: ['jobs','interviews']
+categories:
+  - jobs
+  - interviews
+  - dev job search
+  - career development
 ---
 
 >Do you have any questions for me?
