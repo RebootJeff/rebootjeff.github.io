@@ -4,7 +4,7 @@
   <title><![CDATA[Category: software development | RebootJeff.com]]></title>
   <link href="http://RebootJeff.github.io/blog/categories/software-development/atom.xml" rel="self"/>
   <link href="http://RebootJeff.github.io/"/>
-  <updated>2014-08-17T14:31:35-07:00</updated>
+  <updated>2014-08-17T19:51:41-07:00</updated>
   <id>http://RebootJeff.github.io/</id>
   <author>
     <name><![CDATA[Jeff Lee]]></name>
@@ -131,7 +131,7 @@
 <h3 id="markdownediting">MarkdownEditing</h3>
 <p>Who doesn’t love Markdown? It makes GitHub README files and wiki pages look great. It makes dev blogs look great. It makes writing dev-related text easy. Sometimes, I write rough drafts of blog posts within Google Docs or <a href="http://dillinger.io/">Dillinger</a>, which is a sweet online Markdown editor. In the end, I always complete my blog posts by writing Markdown within Sublime Text.</p>
 
-<p>I recently found a sweet ST package to help edit Markdown files: MarkdownEditing. It completely transforms the look and syntax highlighting of your Markdown. Sadly, I use CodeRay for codeblocks rather than standard Markdown markup. So MarkdownEditing can’t beautify my codeblocks within Sublime Text, but <code>inline code snippets like this one</code> are highlighted in a very helpful way. You can see all the ways that the package alters your Markdown [here]((https://camo.githubusercontent.com/35a66d68a55666133ba7911fb0ea61277740680f/68747470733a2f2f7261772e6769746875622e636f6d2f5375626c696d65546578742d4d61726b646f776e2f4d61726b646f776e45646974696e672f6d61737465722f73637265656e73686f74732f6c696768742e706e67). Keep in mind that there are a couple other themes available specifically for MarkdownEditing. I use the dark theme of course.</p>
+<p>I recently found a sweet ST package to help edit Markdown files: MarkdownEditing. It completely transforms the look and syntax highlighting of your Markdown. Sadly, I use CodeRay for codeblocks rather than standard Markdown markup. So MarkdownEditing can’t beautify my codeblocks within Sublime Text, but <code>inline code snippets like this one</code> are highlighted in a very helpful way. You can see all the ways that the package alters your Markdown <a href="https://camo.githubusercontent.com/35a66d68a55666133ba7911fb0ea61277740680f/68747470733a2f2f7261772e6769746875622e636f6d2f5375626c696d65546578742d4d61726b646f776e2f4d61726b646f776e45646974696e672f6d61737465722f73637265656e73686f74732f6c696768742e706e67">here</a>. Keep in mind that there are a couple other themes available specifically for MarkdownEditing. I use the dark theme of course.</p>
 
 <h2 id="syntax">Syntax</h2>
 
