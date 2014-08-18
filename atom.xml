@@ -4,7 +4,7 @@
   <title><![CDATA[RebootJeff.com]]></title>
   <link href="http://RebootJeff.github.io/atom.xml" rel="self"/>
   <link href="http://RebootJeff.github.io/"/>
-  <updated>2014-08-17T19:51:41-07:00</updated>
+  <updated>2014-08-17T19:56:32-07:00</updated>
   <id>http://RebootJeff.github.io/</id>
   <author>
     <name><![CDATA[@RebootJeff]]></name>
@@ -421,7 +421,7 @@ avatar.click();
 
 <h2 id="key-bindings">Key Bindings</h2>
 
-<p>First, I change the keyboard shortcuts for cycling through open tabs. The default behavior is based on your usage history (most recently viewed tabs), but I prefer just cycling from left to right. Therefore, I edited my key bindings like so…</p>
+<p>First, I change the keyboard shortcuts for cycling through open tabs. The default behavior is based on your usage history (most recently viewed tabs), but I prefer just cycling from left to right. There’s actually another key binding that can cycle tabs from left to right, but I prefer using <code>Ctrl+Tab</code>.Therefore, I edited my key bindings like so…</p>
 
 <div class="bogus-wrapper"><notextile><figure class="code"><figcaption class="code-header" style="margin-bottom:-5px;"><span>Preferences &gt; Key Bindings – User </span></figcaption>
  <div class="CodeRay">
