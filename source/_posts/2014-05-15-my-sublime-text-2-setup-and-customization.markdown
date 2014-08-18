@@ -16,7 +16,7 @@ However, ST2's light weight comes at a cost: you probably need to configure some
 
 ## Key Bindings
 
-First, I change the keyboard shortcuts for cycling through open tabs. The default behavior is based on your usage history (most recently viewed tabs), but I prefer just cycling from left to right. Therefore, I edited my key bindings like so...
+First, I change the keyboard shortcuts for cycling through open tabs. The default behavior is based on your usage history (most recently viewed tabs), but I prefer just cycling from left to right. There's actually another key binding that can cycle tabs from left to right, but I prefer using `Ctrl+Tab`.Therefore, I edited my key bindings like so...
 
 {% coderay lang:json Preferences > Key Bindings – User %}
 { "keys": ["ctrl+tab"], "command": "next_view" },
