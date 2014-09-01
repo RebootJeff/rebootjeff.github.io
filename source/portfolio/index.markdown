@@ -13,7 +13,7 @@ Please check [my GitHub](https://github.com/rebootjeff) profile for a more compr
 
 1. [My Projects](#my-projects)
 2. [Team Projects](#team-projects)
-3. [Open-Source Contributions](#open-source-contributions)
+3. [Other](#other)
 
 # My Projects
 
@@ -39,8 +39,6 @@ What I love about this product is its ability to merge technology with good, old
   - Client-Side Source: [here](https://github.com/RebootJeff/phone-tag-phonegap)
   - Server-Side Source: [here](https://github.com/RebootJeff/phone-tag)
 
-# Open-Source Contributions
+# Other
 
-Pending...
-
-I hope to contribute to [The Odin Project](http://www.theodinproject.com/).
+In my spare time, I do a bit of teaching and tutoring. I have volunteered as  a teaching assistant and as a lead instructor for a handful of beginner JavaScript classes.
