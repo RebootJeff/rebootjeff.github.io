@@ -3,7 +3,7 @@ layout: post
 title: "[Video] SF Hills Are Great ...For Video"
 date: 2013-08-06 23:14
 comments: true
-categories: ['my videos','videos','my media','san francisco','travel']
+categories: ['videos','my media','san francisco','travel']
 ---
 
 <iframe src="http://player.vimeo.com/video/71790058?portrait=0&color=26BB01&byline=0&title=0" width="300" height="168" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
