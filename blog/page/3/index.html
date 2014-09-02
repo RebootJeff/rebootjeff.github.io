@@ -138,6 +138,147 @@
 
   <header>
     
+      <h1 class="entry-title"><a href="/blog/2013/12/26/queues-and-stacks-in-javascript/">Queues &amp; Stacks in JavaScript (With Batman and Superman)</a></h1>
+    
+    
+      <p class="meta">
+        
+  
+
+
+  
+    <span class="byline author vcard">by <span class="fn">Jeff Lee</span></span>
+  
+
+ - 
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-12-26T15:54:00-08:00" pubdate data-updated="true">Dec 26<span>th</span>, 2013</time> - 
+        
+
+posted in
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/javascript/'>JavaScript</a>, <a class='category' href='/blog/categories/data-structures/'>data structures</a>, <a class='category' href='/blog/categories/technical-posts/'>technical posts</a>
+  
+</span>
+
+
+        
+         | <a href="/blog/2013/12/26/queues-and-stacks-in-javascript/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>The proverbial “they” say (says?) it’s good to write technical blog posts. Blog posts that get down and dirty with the nitty gritty of low-level, in-the-weeds details and nuances accompanied by jargon, acronyms, and name-dropping are all the rage in the dev community. More importantly, I really want to help beginners learn programming, so I may as well teach some basic concepts via my blog. (Later on, I hope to contribute more to <a href="http://www.theodinproject.com/">The Odin Project</a>, which is a free, open-source, online resource for beginners created by a very cool individual.)</p>
+
+<p>So as my first foray in technical blog posts, I present to all loveable noobs: the introductory data structures known as stacks and queues.</p>
+
+<h1 id="whats-a-stack">What’s a Stack?</h1>
+
+<p>A stack is a collection of items (or data) that follow a particular rule: the last item to join the collection is the first one to leave.</p>
+
+<ul>
+  <li>The <strong>L</strong>ast data <strong>I</strong>n is the <strong>F</strong>irst data <strong>O</strong>ut (<strong>LIFO</strong>)</li>
+  <li>Add data: <strong>push</strong></li>
+  <li>Remove data: <strong>pop</strong></li>
+  <li>Data enters and exits at the same end of the stack (at the <strong>top</strong>)</li>
+</ul>
+
+<h2 id="simple-implementation">Simple implementation</h2>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption class="code-header" style="margin-bottom:-5px;"><span>Simple Stack (array-based example)</span><a href="http://stackoverflow.com/questions/1590247/how-do-you-implement-a-stack-and-a-queue-in-javascript">Stack Overflow </a></figcaption> <div class="CodeRay">
+  <div class="code"><pre>
+<span class="keyword">var</span> stack = [];
+stack.push(<span class="integer">1</span>);  <span class="comment">// use the push method provided by the Array prototype</span>
+stack.push(<span class="integer">2</span>);
+stack.push(<span class="integer">3</span>);
+console.log(stack);  <span class="comment">// output: [1,2,3]</span>
+
+<span class="keyword">var</span> popped = stack.pop();  <span class="comment">// use the pop method provided by the Array prototype</span>
+console.log(popped);  <span class="comment">// output: 3</span>
+console.log(stack);  <span class="comment">// output: [1,2]</span>
+</pre></div>
+</div>
+ </figure></notextile></div>
+
+<h2 id="ridiculous-analogy">Ridiculous analogy</h2>
+
+<p>Imagine you’ve found an old, abandoned well. You think to yourself, “Bruce Wayne fell down a well when he was a kid, and I wanna be just like the Batman, so I’m gonna fall down this sweet well!” But you hesitate because …it’s a well, and wells are scary, ya know?</p>
+
+<p>Unbeknownst to you, <a href="http://batman.wikia.com/wiki/Harley_Quinn">your arch-nemesis</a> is out walking her <a href="http://batman.wikia.com/wiki/Bud_and_Lou">pet hyenas</a>. She spots you, and quickly runs over to shove you into the well. She giggles in delight at the sight of your plight. She then hides and waits for more people to walk near the well so she can <strong>push</strong> them too.</p>
+
+<p>It just so happens that this well has the diameter of a single person’s width. When someone is pushed into the well, they land on top of the last person who fell in before them. This creates a <strong>stack</strong> of people and some rather pronounced discomfort. Eventually, there are 5 people in this deep-yet-thin well, and you decide it’s time to call for help to get rescued.</p>
+
+<p>To your disappointment, the not-so-dark knight named Superman arrives to pull you well-dwellers out (one at a time). The last one pushed into the well is the first to <strong>pop</strong> out. <em>LIFO.</em></p>
+
+<h1 id="whats-a-queue">What’s a Queue?</h1>
+
+<p>A queue is a collection of items (or data) that follow the real-life “rules” of waiting in a line of people: the first item to join the collection is the first one to leave the collection.</p>
+
+<ul>
+  <li>The <strong>F</strong>irst data <strong>I</strong>n is the <strong>F</strong>irst data <strong>O</strong>ut (<strong>FIFO</strong>)</li>
+  <li>Add data: <strong>enqueue</strong></li>
+  <li>Remove data: <strong>dequeue</strong></li>
+  <li>Data exits at the: <strong>head</strong> of the queue</li>
+  <li>Data enters at the: <strong>tail</strong> of the queue</li>
+</ul>
+
+<h2 id="simple-implementation-1">Simple implementation</h2>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption class="code-header" style="margin-bottom:-5px;"><span>Simple Queue (array-based example)</span><a href="http://stackoverflow.com/questions/1590247/how-do-you-implement-a-stack-and-a-queue-in-javascript">Stack Overflow </a></figcaption> <div class="CodeRay">
+  <div class="code"><pre>
+<span class="keyword">var</span> queue = [];
+queue.push(<span class="integer">1</span>);  <span class="comment">// &quot;enqueue&quot;</span>
+queue.push(<span class="integer">2</span>);
+queue.push(<span class="integer">3</span>);
+console.log(queue);  <span class="comment">// output: [1,2,3]</span>
+
+<span class="keyword">var</span> dequeued = queue.shift();  <span class="comment">// &quot;dequeue&quot;</span>
+console.log(dequeued);  <span class="comment">// output: 1</span>
+console.log(queue);  <span class="comment">// output: [2,3]</span>
+</pre></div>
+</div>
+ </figure></notextile></div>
+
+<h2 id="ridiculous-analogy-1">Ridiculous analogy</h2>
+
+<p>Batman decides to do some in-the-field combat training. He drops into the middle of a gang meeting and yells, “I’ve sent your buddies to jail. I know you want revenge. Catch me if you can. P.S. I’m Batman!” Why does the cowled hero do this? We all know Batman is a smart dude, and sure enough, he has a clever plan. He lures the baddies who are running after him into a narrow alley.</p>
+
+<p>The gangsters can only approach Batman one at a time to fit in the narrow alley, so they form a line (aka <strong>queue</strong>). The gangster at the front of the line is the first gangster knocked out (aka <strong>dequeued</strong>) by Batman (<strong>first in; first out</strong>). You might even say that Batman’s fists aim for the <strong>head</strong> of the queue and foolish gangsters enter at the <strong>tail</strong> of the line of doom.</p>
+
+<h1 id="the-story-will-continue">The Story Will Continue</h1>
+
+<p>Stay tuned for more blog posts on data structures. My next technical blog post will examine how to implement stacks and queues from scratch (without arrays) to get a deeper understanding of push, pop, enqueue, and dequeue. I know you can’t wait for the moment I deliver on this promise. I can hear your panting through my WiFi, but please stay patient. I was busy working on a <a href="https://github.com/RebootJeff/cocompare">web app</a> and then a <a href="https://github.com/RebootJeff/phone-tag-phonegap">mobile app</a>. Now, I’m busy with job searching while possibly starting mini-project.</p>
+
+<p>On a mildly amusing, unrelated note: isn’t it funny to think about the phrase “stay tuned”? It’s getting rather archaic now that terrestrial, over-the-air TV and radio are losing popularity. Yes, these are the random things I think about as I write blog posts.</p>
+</div>
+  
+  
+
+
+</div>
+
+      </article>
+    
+    
+      <article class="span4">
+        <div class="article-format">
+
+  <header>
+    
       <h1 class="entry-title"><a href="/blog/2013/11/19/hackr-diary-my-apology/">[HackR Diary] My Formal Apology</a></h1>
     
     
@@ -808,127 +949,6 @@ posted in
 
       </article>
     
-    
-      <article class="span4">
-        <div class="article-format">
-
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/10/06/hackr-diary-week-2/">[HackR Diary] Week 2: Now Exiting My Comfort Zone</a></h1>
-    
-    
-      <p class="meta">
-        
-  
-
-
-  
-    <span class="byline author vcard">by <span class="fn">Jeff Lee</span></span>
-  
-
- - 
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-10-06T22:17:00-07:00" pubdate data-updated="true">Oct 6<span>th</span>, 2013</time> - 
-        
-
-posted in
-<span class="categories">
-  
-    <a class='category' href='/blog/categories/hack-reactor/'>Hack Reactor</a>, <a class='category' href='/blog/categories/hackr-diary/'>HackR Diary</a>, <a class='category' href='/blog/categories/coding-bootcamps/'>coding bootcamps</a>
-  
-</span>
-
-
-        
-         | <a href="/blog/2013/10/06/hackr-diary-week-2/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p class="last-updated">Last updated on Oct 13, 2013 to fix a typo and embedded a tweet.</p>
-
-<blockquote class="twitter-tweet"><p>Awesome of the <a href="https://twitter.com/Airbnb">@Airbnb</a> team to visit <a href="https://twitter.com/HackReactor">@HackReactor</a>. Picture of them talking about their tech stack. <a href="http://t.co/AYVDYA3JaT">pic.twitter.com/AYVDYA3JaT</a></p>&mdash; Ben Martin (@HealthfulHacker) <a href="https://twitter.com/HealthfulHacker/statuses/385258134677106689">October 2, 2013</a></blockquote>
-<script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-<p>I don’t know if <a href="blog/2013/09/29/hackr-diary-thoughts-about-week-number-1/">my summary of week #1</a> made it clear or not, but although my first six days at Hack Reactor were tough, I didn’t exactly struggle with any of the material. This is probably because the pre-course work was <a href="/blog/2013/09/22/hackr-diary-pre-course-anticipation/">incredibly difficult</a>, thereby infusing me with helpful knowledge while also shaping my expectations.</p>
-
-<p>Well guess what? Week 1 was an anomaly. It was a week filled with more lectures and less hands-on programming. I knew this ahead of time, but week 2 still caught me off guard. There was quite a bit more learning with minimal guidance. Also, the joys/stresses of pair programming are turned up a few notches as a result of the additional programming time created by reducing the amount of lecture time.</p>
-
-<p>Consequently, I’ve been feeling more tired in general. Forgive me, but spending my free time to write this blog is beginning to look less and less appealing.</p>
-
-<p>I joined a nearby gym (aside: I just remembered that I need to notify Hack Reactor to get my $50 reimbursement from them!) so my energy levels should increase in a week or two. Every other lunch break is two hours long instead of just one hour long. The extra time is meant to encourage students to go exercise.</p>
-
-<p>I want to write more about student life at Hack Reactor, but I think I’ll just spread out the details in my <a href="/blog/categories/hackr-diary/">HackR Diary</a> series rather than providing every bit of info in a single, giant blog post. So for now, I cover gym time, toy problems, and tapouts. In the future, I’ll discuss the workstations, help system, student-staff interaction, food, and more.</p>
-
-<h1 id="week-in-review">Week in Review</h1>
-
-<h4 id="toy-problems">Toy Problems</h4>
-
-<p>This week, my cohort, the junior students, started solving (almost) daily toy problems, which are small coding challenges designed to get us used to the type of timed problems that will be thrown our way at tech interviews. We have to complete these problems individually. We have 30-60 minutes to think of a solution, code the solution, and submit pull requests to have an automated tester give us feedback that we can use to help fix our solutions as necessary.</p>
-
-<h4 id="tapouts">Tapouts</h4>
-
-<p>This week, us juniors also started attending weekly(?) tapouts. Tapouts are like small group therapy sessions where five students voice their opinions of Hack Reactor to an alumnus. She will send anonimized feedback up the chain while also providing us with advice for any struggles we care to talk about. </p>
-
-<h4 id="special-event-airbnb-presentation">Special Event: AirBnB Presentation</h4>
-
-<p>Lead devs from <a href="https://twitter.com/Airbnb">AirBnB</a> presented a ton of info about their tech stack, their work environment, <a href="http://nerds.airbnb.com/weve-open-sourced-rendr-run-your-backbonejs-a/">their open source project</a>, dev career advice, startup advice, etc. There was a post-presentation panel for answering several questions. Then there was a post-panel meet-and-greet session. It was a truly fantastic event.</p>
-
-<h4 id="saturday-social-night">Saturday Social Night</h4>
-
-<p>I skipped last Saturday’s social night to go to a close friend’s birthday celebration(s). Week 2’s theme for social night was board/card games.</p>
-
-<h1 id="what-i-learned--what-i-thought">What I Learned + What I Thought</h1>
-
-<h4 id="inheritancesubclassing-in-javascript">Inheritance/Subclassing in JavaScript</h4>
-
-<p>The subclassing sprint was a bit frustrating at first. It took me awhile to grasp the keyword <code>this</code> because of JavaScript’s tendency to pass functions around as parameters to other functions.</p>
-
-<p>Upon wrapping one’s brain around <code>this</code> (and the <code>.call()</code>/<code>.apply()</code> methods), there was a lot of fun to be had with the assignment that Hack Reactor gave the students. This was the first assignment involving a visual facet, and the student body reacted accordingly (with creativity galore).</p>
-
-<h4 id="algorithms">Algorithms</h4>
-
-<p>The algorithms sprint was a fantastic challenge, but there was no specific set of knowledge to learn. It felt like the main goal of the sprint was to get students’ minds thinking in more computer-oriented ways. We were taught some basics about time complexity, but we didn’t go into much depth about Big-O notation. We briefly described actions (e.g., deleting data from an array) and algorithms (e.g., solutions to the <a href="http://en.wikipedia.org/wiki/Eight_queens_puzzle#Related_problems">n-queens puzzle</a>) as constant, linear, quadratic, polynomial, and exponential (as opposed to discussing the nuances of O(c), O(n), O(n^2), O(n^c), O(c^n), etc).</p>
-
-<p>The main takeaway was that we should worry more about macro optimizations (storing data in variables in a way that allows for constant-time lookup) rather than micro optimizations (improving a <code>for</code> loop so then it loops fewer times). <strong>Micro optimizations are good, but they aren’t very valuable when you’re just creating prototypes, minimum viable products, etc.</strong></p>
-
-<p>I’m somewhat disappointed that we weren’t taught specific algorithms such as quicksort, binary search, etc. I’m under the assumption that all software developers need to know the “greatest hits” of algorithms. Although, I’m also under the assumption that such knowledge is more useful in tech interviews than in day-to-day coding.</p>
-
-<h4 id="layoutpositioning-htmlcss">Layout/Positioning (HTML/CSS)</h4>
-
-<p>I taught myself a decent amount of HTML/CSS before my cohort’s start date, so I was very comfortable with the layout assignment, but it wasn’t easy. There are still plenty of times when proper CSS positioning eludes me. That said, this topic doesn’t provide an intellectual challenge.</p>
-
-<p>The difficulty lies in getting the syntax just right and understanding hierarchy. Some students didn’t learn much HTML/CSS before joining Hack Reactor, and so they had a lot to learn (box model, DOM hierarchy, CSS selectors, etc.) in a very short amount of time.</p>
-
-<p><strong>If you’re thinking of joining Hack Reactor as a student, I highly recommend you teach yourself HTML/CSS</strong> ahead of time. HTML/CSS isn’t tough to learn on your own, but it can be time-consuming even if you’ve got pros helping you. You may as well prepare yourself so then you can spend less time at Hack Reactor worrying about HTML/CSS and more time worrying about other technologies and concepts.</p>
-
-<h4 id="d3-library">D3 (library)</h4>
-
-<p><a href="http://d3js.org/">D3.js</a> is a JavaScript library for creating data-driven visuals inside HTML documents. I thought jQuery was cool, but now I think D3 takes the cake. It’s much harder to learn D3, but there is tremendous power to be had from familiarizing yourself with it.</p>
-
-<p>That said, the D3 assignment left me mentally tired as hell. Like jQuery, you can easily select DOM elements, but the rest of the D3 syntax isn’t so straightforward, and the general concepts for using D3 properly will feel rather foreign at first. I hope to spend more time on my own to master D3 …when I’m not so damn tired. The key is to understand the <a href="http://bl.ocks.org/mbostock/3808218">general update pattern</a>.</p>
-</div>
-  
-  
-
-
-</div>
-
-      </article>
-    
     </div>
       <div class="row">
         <ul class="pager">
@@ -956,6 +976,10 @@ posted in
     <ul class="recent_posts">
       
         <li>
+          <a href="/blog/2014/09/01/communication-for-engineers-101-we-have-a-problem/">Communication for Engineers 101: We Have A Problem</a>
+        </li>
+      
+        <li>
           <a href="/blog/2014/08/17/protractor-e2e-testing-reveal-element-blocked-by-fixed-nav/">Protractor E2E Testing: Reveal Element Blocked By Fixed Nav</a>
         </li>
       
@@ -969,10 +993,6 @@ posted in
       
         <li>
           <a href="/blog/2014/05/31/dev-job-search-tips-from-the-coding-interview-guru/">[HackR Diary] [Dev Job Search] Tips from the Coding Interview Guru</a>
-        </li>
-      
-        <li>
-          <a href="/blog/2014/05/15/my-sublime-text-2-setup-and-customization/">My Sublime Text 2 Setup and Customization</a>
         </li>
       
     </ul>
