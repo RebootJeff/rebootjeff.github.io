@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Communication for Engineers 101: We Have A Problem"
-date: 2014-09-01 12:26
+date: 2014-09-02 12:01
 comments: true
 categories:
   - communication skills
@@ -10,7 +10,7 @@ categories:
 ---
 Software Engineers are hot shit right now. Recruiters pander to us by calling us rockstars, ninjas, and gurus. We are revered for our intellect, our problem solving skills, our powerful working memory, our familiarity with mysterious tech --but not for our communication skills. **Why is this ok?** If we're expected to be smart, shouldn't we be expected to grasp effective information exchange with *fellow humans*? Why is modern society still excusing coding "rockstars" from having to come equipped with high quality communication skills?
 
-![Tin Can Tech](/images/20140901/tin_can_walkies.jpg)
+![Tin Can Tech](/images/20140902/tin_can_walkies.jpg)
 
 <p class="my-caption">Photo by <a href="http://gratisography.com/">Gratisography</a></p>
 
