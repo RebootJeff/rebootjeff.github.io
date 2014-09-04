@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "portfolio"
-date: 2013-12-19 17:50
+date: 2014-09-03 18:37
 comments: true
 sharing: true
 footer: true
@@ -41,4 +41,4 @@ What I love about this product is its ability to merge technology with good, old
 
 # Other
 
-In my spare time, I do a bit of teaching and tutoring. I have volunteered as  a teaching assistant and as a lead instructor for a handful of beginner JavaScript classes.
+In my spare time, I do a bit of teaching and tutoring. I have volunteered as  a teaching assistant or coach for a handful of beginner JavaScript classes organized by groups such as [Open TechSchool](http://www.opentechschool.org/) and [JavaScript from Zero to Hero](http://www.meetup.com/Javascript-from-Zero-to-Hero/). As a lead instructor, I also taught a class covering JavaScript inheritance and prototype chains.
