@@ -7,9 +7,10 @@ categories:
   - web tech
   - security
   - technical posts
+  - JavaScript
 ---
 
-Back in late May, I went to one of the most informative tech meetups ever. The [SFHTML5 meetup group](http://www.meetup.com/sfhtml5/) organized an event at the Google SF office to cover web security. Google security researchers presented for about 2.5 hours of lectures talking about common hacks/attacks, good defense, the general state of web security, etc.
+Back in late May, I went to one of the most informative tech meetups ever. The [SFHTML5 meetup group](http://www.meetup.com/sfhtml5/) organized an event at the Google SF office to cover web security. Google security researchers presented about 2.5 hours of lectures talking about common hacks/attacks, good defense, and the general state of web security.
 
 You can check out the slides here: [click here if you dare.](http://www.meetup.com/sfhtml5/events/179713932/#event_comment-362704742) You can watch the lectures here:
 
@@ -24,7 +25,7 @@ But if you don't feel like sitting through 2.5 hours of lecture, allow me to sum
   - MITM
 2. Simple security best practices
   - Use frameworks/libraries to fight XSS for you
-  - Implement CSP on your server
+  - Implement CSP to protect your front end
   - Reinforce HTTPS with HSTS
 
 **I won't go into detail about any particular topic.** This blog post will simply get you started in understanding fundamental web security. I suggest you use Google to research more about hacks/attacks or wait for me to post another blog post that provides a collection of links to sweet videos, references, and articles that I found particularly helpful for learning more about all these topics.
