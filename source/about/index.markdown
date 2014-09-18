@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "about"
-date: 2014-3-21 18:11
+date: 2014-9-17 5:55
 comments: true
 sharing: true
 footer: true
@@ -30,7 +30,8 @@ If you're wondering how I made this blog, check out [my first post](/blog/2013/0
 ![blue car](/images/about/autocross_sp.jpg)
 
 - **Favorite Color:** not green actually
+- **Favorite Comic Book:** Saga
 - **Theme Song:** "Reboot the Mission" by The Wallflowers
 - **Inner Conflict:** I like cars *and* the environment :'(
 - **Expertise:** comman grammer/spelling mistake's
-- **Favorite Superhero:** Don't you dare make me choose
+- **Desired Superpower:** Ability to shoot telepathic/telekinetic beams that force victims to sing, dance, and perform whatever catchy song they've been listening to lately.
