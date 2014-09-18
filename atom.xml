@@ -4,7 +4,7 @@
   <title><![CDATA[RebootJeff.com]]></title>
   <link href="http://RebootJeff.github.io/atom.xml" rel="self"/>
   <link href="http://RebootJeff.github.io/"/>
-  <updated>2014-09-03T18:37:13-07:00</updated>
+  <updated>2014-09-18T09:12:20-07:00</updated>
   <id>http://RebootJeff.github.io/</id>
   <author>
     <name><![CDATA[@RebootJeff]]></name>
@@ -12,6 +12,123 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Web Security Fundamentals - Part 1: What Google Peeps Say]]></title>
+    <link href="http://RebootJeff.github.io/blog/2014/09/18/web-security-fundamentals-by-google-peeps/"/>
+    <author>
+      <name><![CDATA[@RebootJeff]]></name>
+      
+    </author>
+    <updated>2014-09-18T10:26:00-07:00</updated>
+    <id>http://RebootJeff.github.io/blog/2014/09/18/web-security-fundamentals-by-google-peeps</id>
+    <content type="html"><![CDATA[<p>Back in late May, I went to one of the most informative tech meetups ever. The <a href="http://www.meetup.com/sfhtml5/">SFHTML5 meetup group</a> organized an event at the Google SF office to cover web security. Google security researchers presented about 2.5 hours of lectures talking about common hacks/attacks, good defense, and the general state of web security.</p>
+
+<p>You can check out the slides here: <a href="http://www.meetup.com/sfhtml5/events/179713932/#event_comment-362704742">click here if you dare.</a> You can watch the lectures here:</p>
+
+<iframe width="300" height="185" src="http://RebootJeff.github.io//www.youtube-nocookie.com/embed/Yg5g2aMKbNA?list=PLOU2XLYxmsIIkEU3Z_xdVo9EADurbdxKa" frameborder="0" allowfullscreen=""></iframe>
+<p />
+
+<p>But if you don’t feel like sitting through 2.5 hours of lecture, allow me to summarize the best parts:</p>
+
+<ol>
+  <li>Common hacks/exploits
+    <ul>
+      <li>XSS</li>
+      <li>CSRF</li>
+      <li>MITM</li>
+    </ul>
+  </li>
+  <li>Simple security best practices
+    <ul>
+      <li>Use frameworks/libraries to fight XSS for you</li>
+      <li>Implement CSP to protect your front end</li>
+      <li>Reinforce HTTPS with HSTS</li>
+    </ul>
+  </li>
+</ol>
+
+<p><strong>I won’t go into detail about any particular topic.</strong> This blog post will simply get you started in understanding fundamental web security. I suggest you use Google to research more about hacks/attacks or wait for me to post another blog post that provides a collection of links to sweet videos, references, and articles that I found particularly helpful for learning more about all these topics.</p>
+
+<h1 id="be-afraid">Be Afraid</h1>
+
+<p>How are websites and web apps compromised? Why are sites often “hacked”? There are three main types of attacks that you should worry about: XSS, CSRF, and MITM.</p>
+
+<h2 id="cross-site-scripting-xss">Cross-Site Scripting (XSS)</h2>
+
+<p>When a punk manages to get your code to run their JavaScript, that’s XSS. A simple example is when an unprotected website just accepts text from the user and adds it to the site’s HTML code. If that text is actually JS, then the site ends up sending the browser user-generated code. Damn.</p>
+
+<p>XSS is one of the most common problems plaguing web security today. This is pretty depressing because there are plenty of frameworks and libraries that help fight XSS, but so many site operators just don’t use them and some fools even try to write their own anti-XSS code.</p>
+
+<h2 id="cross-site-request-forgery-xsrfcsrf">Cross-Site Request Forgery (XSRF/CSRF)</h2>
+
+<p>Let’s say a user logs into your website or web app. They are now authenticated, right? Well it depends. It could be that the user’s <em>browser</em> is authenticated. An attacker could take advantage of this authentication and get the user’s browser to submit an HTTP request crafted with nefarious intentions. The request will be accepted because the browser has the right authentication cookie data, for example.</p>
+
+<p>How is the evil HTTP request initiated? It could be through XSS, it could be through convincing a victim to visit a malicious site that sends HTTP requests, etc. Most examples mention authenticated cookies being used by attackers.</p>
+
+<h2 id="man-in-the-middle-mitm">Man-in-the-Middle (MITM)</h2>
+
+<p>There’s a reason why public internet is unsafe. When you’re on a shared network, other users on the same network can try to intercept your data. Not only can man-in-the-middle attacks read your data, they can also send you bad data/code. Some attackers merely intercept web pages you’re accessing, add more advertisements, and feed you the web page with extra ads. Other attackers might intercept your attempt to visit http://www.facebook.com, give you a fake Facebook login page, and convince you to submit your login info to them.</p>
+
+<p>Obviously, protecting a network by requiring a password to connect can help. However, if you’re using public WiFi in a coffee shop where the password is given to anybody who asks for it, then you’re in trouble again. As I shall mention, HTTPS is crucial for fighting MITM pain.</p>
+
+<h1 id="be-somewhat-less-afraid">Be Somewhat Less Afraid</h1>
+
+<p>It’s great if you’re aware of threats. Now it’s time to learn the basics on how to combat the threats. At the meetup, the Google peeps focused on three types of solutions: frameworks/libraries, CSP, and HTTPS with HSTS. I will also mention a couple other technologies (BONUS) for your consideration.</p>
+
+<h2 id="frameworkslibraries-features">Frameworks/Libraries Features</h2>
+
+<p>One of the Google experts emphasized that XSS is a much bigger problem than it should be because there are so many frameworks and libraries that help fight XSS. He said that no one should be writing their own anti-XSS libraries. Instead, use one of the many open-source solutions. Also, it’s quite possible that you’re already using a framework that has anti-XSS features that just need to be activated or configured.</p>
+
+<p>For example, in some templating libraries, a simple syntax change will enable anti-XSS escaping features. Other templating libraries automatically escape contents by default. Some frameworks like AngularJS do “round-trip escaping on all strings for you” to protect your app from XSS and other injection attacks.</p>
+
+<h2 id="content-security-policy-csp">Content Security Policy (CSP)</h2>
+
+<p>A server can instruct a browser to use a whitelist to decide which resources should be loaded and which should be blocked. This is done when a server adds a CSP to a response header.</p>
+
+<p>For example, a CSP whitelist can tell a browser to trust script files from the server and Google CDNs, images from the server and Amazon CDNs, CSS files from the server, and web fonts from Google. Everything else will be blocked. In-line JavaScript will be blocked, in-line styles will be blocked, images hosted by 3rd parties will be blocked, Flash will be blocked, iframes will be blocked, etc.</p>
+
+<p>Your CSP can be configured based on various types of resources. Check this <a href="http://content-security-policy.com/">CSP Cheatsheet</a> for the list of options. I recommend that you investigate server-side libraries, frameworks, or middleware that can help you implement CSP. When writing your CSP, you can try starting with the most restrictive whitelist and then see what needs to be unblocked.</p>
+
+<h3 id="reporting-feature">Reporting Feature</h3>
+
+<p>You can also set up a reporting system to find out what your CSP has managed to block (thereby identifying failed attacks).</p>
+
+<p>A Googler suggested using the CSP reporting feature <em>without</em> an enforced whitelist to help you examine what browsers are actually digesting when they visit your site or app. For example, you could set up a CSP that has a whitelist and just asks browsers to report non-whitelisted sources without actually blocking them. This gives you the ability to <strong>tweak your whitelist based on production usage without changing production usage</strong>. After you’re done tweaking, change the CSP to force browsers to report <em>and</em> block uninvited resources and content.</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption class="code-header" style="margin-bottom:-5px;"><span>Ultra-Strict Example CSP for Express server using Lusca middleware </span></figcaption>
+ <div class="CodeRay">
+  <div class="code"><pre>
+app.use(lusca.csp({
+  <span class="key">policy</span>: {
+    <span class="key"><span class="delimiter">'</span><span class="content">default-src</span><span class="delimiter">'</span></span>: <span class="string"><span class="delimiter">'</span><span class="content">none</span><span class="delimiter">'</span></span>, <span class="comment">// Block EVERYTHING</span>
+  },
+  <span class="key">reportOnly</span>: <span class="predefined-constant">true</span>, <span class="comment">// Record what's being blocked</span>
+  <span class="key">reportUri</span>: <span class="string"><span class="delimiter">'</span><span class="content">/report-violation-endpoint</span><span class="delimiter">'</span></span>
+}));
+</pre></div>
+</div>
+ </figure></notextile></div>
+
+<h2 id="https-and-https-strict-transport-security-hsts">HTTPS and HTTPS Strict Transport Security (HSTS)</h2>
+
+<h3 id="https">HTTPS</h3>
+
+<p>To protect data transfers from MITM attacks, many sites connect to visitors via HTTPS. HTTPS connections not only protect typical payloads like JSON, but also static files and cookies that would otherwise be vulnerable to CSRF attacks. The hard part about using HTTPS is making sure no part of the site ever falls back to unencrypted HTTP.</p>
+
+<p>For example, let’s say you’re browsing a site that provides free icons and graphics. Are all files served over HTTPS? HTML, CSS, and JavaScript files are no-brainers. What about images? Yeah that’s pretty standard too. But what about when you get an icon pack? You click a download link, and the browser starts downloading a zip file. Is that using the HTTPS protocol? It’s easy to <a href="http://httpshaming.tumblr.com/">make mistakes</a>.</p>
+
+<h3 id="hsts">HSTS</h3>
+
+<p>Furthermore, what if a user visits the site using HTTP first? It’s pretty common for people to type “somewebsite.com” in the URL bar and the browser will turn that into “http://somewebsite.com”. After they visit that URL, the site can redirect the visitor to “<strong>https</strong>://somewebsite.com”. But sadly, that initial connection via http wasn’t secure. It’s susceptible to a MITM attack.</p>
+
+<p>With HTTPS Strict Transport Security, the browser can automatically turn “somewebsite.com” into “<strong>https</strong>://somewebsite.com”. HSTS works by setting a header that tells the browser to enforce HTTPS for requests sent to the domain (“somewebsite.com”) for the next X number of seconds. Yes, you can set X to be a very large number such that HSTS is enforcing HTTPS for the next <em>year</em>, if you want to be cool like that.</p>
+
+<h1 id="stay-tuned">Stay Tuned</h1>
+
+<p>This blog post was getting pretty lengthy, so I decided to split it into two parts. In a follow-up blog post, I will provide a list of references, tutorials, and videos to help you research more about CSP, HSTS, and some complementary tools/libraries.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Communication for Engineers 101: We Have A Problem]]></title>
@@ -2038,99 +2155,6 @@ console.log(queue);  <span class="comment">// output: [2,3]</span>
 <p><a href="http://d3js.org/">D3.js</a> is a JavaScript library for creating data-driven visuals inside HTML documents. I thought jQuery was cool, but now I think D3 takes the cake. It’s much harder to learn D3, but there is tremendous power to be had from familiarizing yourself with it.</p>
 
 <p>That said, the D3 assignment left me mentally tired as hell. Like jQuery, you can easily select DOM elements, but the rest of the D3 syntax isn’t so straightforward, and the general concepts for using D3 properly will feel rather foreign at first. I hope to spend more time on my own to master D3 …when I’m not so damn tired. The key is to understand the <a href="http://bl.ocks.org/mbostock/3808218">general update pattern</a>.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[[HackR Diary] Thoughts about Week #1]]></title>
-    <link href="http://RebootJeff.github.io/blog/2013/09/29/hackr-diary-thoughts-about-week-number-1/"/>
-    <author>
-      <name><![CDATA[@RebootJeff]]></name>
-      
-    </author>
-    <updated>2013-09-29T14:37:00-07:00</updated>
-    <id>http://RebootJeff.github.io/blog/2013/09/29/hackr-diary-thoughts-about-week-number-1</id>
-    <content type="html"><![CDATA[<p class="last-updated">Last updated on Oct 1, 2013 (minor edits).</p>
-
-<blockquote class="twitter-tweet"><p>Good way to start week 2 at <a href="https://twitter.com/HackReactor">@HackReactor</a> <a href="http://t.co/6pB80gQKCO">pic.twitter.com/6pB80gQKCO</a></p>&mdash; Jeff Lee (@RebootJeff) <a href="https://twitter.com/RebootJeff/statuses/384728991359176704">September 30, 2013</a></blockquote>
-<script async="" src="http://RebootJeff.github.io//platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-<p>This post is a bit late, but it can be hard to find time to write up a thorough blog post when I’m studying at Hack Reactor for 70-80 hours/week. During my free time, it’s tempting to just play <a href="http://www.playhawken.com">Hawken</a> or catch up on YouTube (yes, I subscribe to some damn good channels).</p>
-
-<p>Quick correction: In <a href="">my previous HackR Diary entry</a>, I said that the staff gets a 1-week vacation every 7 weeks (6 weeks of work followed by a 1-week break). This isn’t entirely true. The interim week can be used as vacation, but staff also use it to make changes to Hack Reactor. For example, the most recent interim week was used by staff to rearrange the lecture room, which involved installing a new projector screen.</p>
-
-<h1 id="week-in-review">Week in Review</h1>
-
-<p>I wake up everyday Mon-Sat at 7:30am. I should really wake up earlier so then I can arrive before 8:50am. I rely on the BART (subway) to get to/from Hack Reactor. I make my subway rides more enjoyable by saving YouTube videos as .mp4 files to my phone. I generally watch documentaries on cosmology and nature featuring British narrators. The accent is key. If you’re interested in such documentaries, <strong>check out <a href="http://science-documentaries.com/">this link</a> and <a href="http://www.youtube.com/watch?v=ag0U65NkxrI&amp;feature=share&amp;list=PL300BF5A42D3C21C4">this link</a></strong>.</p>
-
-<p>Ok enough of that. You came here to read about the intersection of start-up life and student life, not BBC on YouTube. Here’s a quick recap of what I was up to last week:</p>
-
-<ul>
-  <li><strong>Learning:</strong> 2 “standard” sprints + 1 longer sprint</li>
-  <li><strong>Reflection:</strong> Provided feedback on what students did and didn’t like about week 1.</li>
-  <li><strong>Week 0 self-assessment:</strong> An ungraded quiz to force you to ask yourself how confident you are about what was taught in the pre-course work.</li>
-  <li><strong>Code Review by seniors:</strong> The “upperclassmen” took a look at our data structures solutions.</li>
-  <li><strong>Social Night:</strong> Visited <em>House of Air</em>, a sweet trampoline gym.</li>
-</ul>
-
-<h1 id="what-i-learned">What I Learned</h1>
-
-<ul>
-  <li><strong>Sprint #1:</strong> Recursion</li>
-  <li><strong>Sprint #2:</strong> Mini-clone of Underscore.js</li>
-  <li><strong>Extra #1:</strong> Advice for Success
-    <ul>
-      <li>Hack Reactor’s role in students’ success</li>
-      <li>Students’ role in our own success</li>
-    </ul>
-  </li>
-  <li><strong>Extra #2:</strong> Debugging
-    <ul>
-      <li><code>debugger;</code> statement</li>
-      <li>Sources tab in Google Chrome dev tools</li>
-      <li>Call Stack in Sources tab</li>
-    </ul>
-  </li>
-  <li><strong>Sprint #3:</strong> Instantiating Data Structures with various Class Patterns
-    <ul>
-      <li>Class Patterns
-        <ul>
-          <li>Functional (with and without shared methods)</li>
-          <li>Prototypal</li>
-          <li>Pseudoclassical</li>
-        </ul>
-      </li>
-      <li>Data Structures
-        <ul>
-          <li>Stacks</li>
-          <li>Queues</li>
-          <li>Linked Lists</li>
-          <li>Trees</li>
-          <li>Sets</li>
-          <li>Hash Tables</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-</ul>
-
-<h1 id="what-i-thought">What I Thought</h1>
-
-<h2 id="lectures">Lectures</h2>
-
-<p><strong>Week 1 is very different from most weeks</strong> due to the amount of lengthy lectures we have to sit through, but ya know what? I really liked the lectures. The main instructor for week 1 is Marcus, and he’s pretty great at teaching. Students constantly ask questions during lecture so it feels much more interactive and much less like being force-fed information.</p>
-
-<p>I like that lectures involve plenty of analogies, live coding examples, industry best practices, and “every interviewer will ask you about this” moments. You’d think students would get pretty tired of all the lectures, but they’re too good to be off-putting. Also, 5+ hours of lectures per day isn’t a lot when you consider we’re spending 12+ hours per day at the school.</p>
-
-<h2 id="paired-programming">Paired Programming</h2>
-
-<p>I generally like the idea of paired programming so long as you have a good dynamic with your partner. That said, it can be <em>really</em> tiring because you’re constantly talking as you and your partner are coding. Not only are you exhausting your brain’s cognitive abilities by working on programming challenges, but you’re also exercising verbal comm skills and listening skills. It can be tough to listen to your partner explain his/her solution when you feel like you’re on the brink of working out your own awesome solution in your head.</p>
-
-<h2 id="the-school">The School</h2>
-
-<p>Hack Reactor is a fantastic environment, and I know every student of every bootcamp says this, but it’s just so amazing to be in a school where the students and teachers are all so pumped to be there. On top of that, the students are open-minded without being naive. Basically, <strong>Hack Reactor is filled with the positive vibes that should make every college wildly jealous.</strong></p>
-
-<p>It’s also worth noting that Hack Reactor is transparent. They’re a small company, and their small size allows them to build a tighter community of teachers, students, and alumni. I love that Hack Reactor staff is very honest and genuine. When cynics look at the relatively expensive tuition, it’s tempting for them to say HackR is “in it for the money,” but check out a lecture or listen to them explain their intentions and you won’t hear a sales pitch. You’ll hear earnest intentions to educate the next generation of developers using next-generation methods.</p>
 ]]></content>
   </entry>
   

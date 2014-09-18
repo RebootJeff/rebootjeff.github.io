@@ -1,0 +1,418 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Web Security Fundamentals - Part 1: What Google Peeps Say - RebootJeff.com</title>
+  <meta name="author" content="Jeff Lee">
+  <link rel="author" href="humans.txt">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  
+    
+  
+  <meta name="description" content="Back in late May, I went to one of the most informative tech meetups ever. The SFHTML5 meetup group organized an event at the Google SF office to &hellip;">
+  
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://RebootJeff.github.io/blog/2014/09/18/web-security-fundamentals-by-google-peeps/">
+  <link href="/favicon.png" rel="icon">
+  <link href='http://fonts.googleapis.com/css?family=Cantarell' rel='stylesheet' type='text/css'>
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="RebootJeff.com" type="application/atom+xml">
+  <meta name="og:type" content="website" />
+  <meta name="og:site_name" content="RebootJeff.com" />
+  <meta name="og:title" content="Web Security Fundamentals - Part 1: What Google Peeps Say" />
+  <meta name="og:description" content="Back in late May, I went to one of the most informative tech meetups ever. The SFHTML5 meetup group organized an event at the Google SF office to &hellip;" />
+  <meta name="og:url" content="http://RebootJeff.github.io/blog/2014/09/18/web-security-fundamentals-by-google-peeps/"/>
+  <meta name="url" content="http://RebootJeff.github.io/blog/2014/09/18/web-security-fundamentals-by-google-peeps/">
+  
+  <meta name="subject" content="JavaScriptsecuritytechnical postsweb tech"/>
+  <meta name="category" content="JavaScriptsecuritytechnical postsweb tech"/>
+  
+  <meta name="distribution" content="global">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-44084259-1']);
+    _gaq.push(['_setDomainName','github.io']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <nav role="navigation"><div class="navbar">
+  <div class="navbar-inner">
+    <a class="brand" href="/">RebootJeff.com</a>
+    <ul class="nav">
+      <li><a href="/">Home</a></li>
+      <!-- BEGIN custom nav here because importing custom/navigation.html at the bottom (by default) shows up looking weird -->
+      <li><a href="/about">About</a></li>
+      <li><a href="/portfolio">Portfolio</a></li>
+      <li><a href="/blog/categories/my-media">Media</a></li>
+      <li><a href="/blog/archives">Archives</a></li>
+    </ul>
+    <ul class="nav" data-subscription="rss">
+      <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+      
+    </ul>
+      
+    <form class="navbar-form" action="http://google.com/search" method="get">
+      <fieldset role="search">
+        <input type="hidden" name="q" value="site:RebootJeff.github.io" />
+        <input class="span2" type="text" name="q" results="0" placeholder="Search"/>
+      </fieldset>
+    </form>
+      
+    <!-- I have customized the navigation.html file OUTSIDE of the custom folder because the part I wanted to customize comes BEFORE the `include` statement that invokes the custom/navigation.html file (aka the file you're reading now). -->
+  </div>
+</div>
+</nav>
+  <div class="wrapper_single">
+    <div class="container">
+      <div class="row">
+        <article class="span8 offset2" role="article">
+          <div class="article-format">
+
+  <header>
+    
+      <h1 class="entry-title">Web Security Fundamentals - Part 1: What Google Peeps Say</h1>
+    
+    
+      <p class="meta">
+        
+  
+
+
+  
+    <span class="byline author vcard">by <span class="fn">Jeff Lee</span></span>
+  
+
+ - 
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-09-18T10:26:00-07:00" pubdate data-updated="true">Sep 18<span>th</span>, 2014</time> - 
+        
+
+posted in
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/javascript/'>JavaScript</a>, <a class='category' href='/blog/categories/security/'>security</a>, <a class='category' href='/blog/categories/technical-posts/'>technical posts</a>, <a class='category' href='/blog/categories/web-tech/'>web tech</a>
+  
+</span>
+
+
+        
+         | <a href="#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Back in late May, I went to one of the most informative tech meetups ever. The <a href="http://www.meetup.com/sfhtml5/">SFHTML5 meetup group</a> organized an event at the Google SF office to cover web security. Google security researchers presented about 2.5 hours of lectures talking about common hacks/attacks, good defense, and the general state of web security.</p>
+
+<p>You can check out the slides here: <a href="http://www.meetup.com/sfhtml5/events/179713932/#event_comment-362704742">click here if you dare.</a> You can watch the lectures here:</p>
+
+<iframe width="300" height="185" src="//www.youtube-nocookie.com/embed/Yg5g2aMKbNA?list=PLOU2XLYxmsIIkEU3Z_xdVo9EADurbdxKa" frameborder="0" allowfullscreen=""></iframe>
+<p />
+
+<p>But if you don’t feel like sitting through 2.5 hours of lecture, allow me to summarize the best parts:</p>
+
+<ol>
+  <li>Common hacks/exploits
+    <ul>
+      <li>XSS</li>
+      <li>CSRF</li>
+      <li>MITM</li>
+    </ul>
+  </li>
+  <li>Simple security best practices
+    <ul>
+      <li>Use frameworks/libraries to fight XSS for you</li>
+      <li>Implement CSP to protect your front end</li>
+      <li>Reinforce HTTPS with HSTS</li>
+    </ul>
+  </li>
+</ol>
+
+<p><strong>I won’t go into detail about any particular topic.</strong> This blog post will simply get you started in understanding fundamental web security. I suggest you use Google to research more about hacks/attacks or wait for me to post another blog post that provides a collection of links to sweet videos, references, and articles that I found particularly helpful for learning more about all these topics.</p>
+
+<h1 id="be-afraid">Be Afraid</h1>
+
+<p>How are websites and web apps compromised? Why are sites often “hacked”? There are three main types of attacks that you should worry about: XSS, CSRF, and MITM.</p>
+
+<h2 id="cross-site-scripting-xss">Cross-Site Scripting (XSS)</h2>
+
+<p>When a punk manages to get your code to run their JavaScript, that’s XSS. A simple example is when an unprotected website just accepts text from the user and adds it to the site’s HTML code. If that text is actually JS, then the site ends up sending the browser user-generated code. Damn.</p>
+
+<p>XSS is one of the most common problems plaguing web security today. This is pretty depressing because there are plenty of frameworks and libraries that help fight XSS, but so many site operators just don’t use them and some fools even try to write their own anti-XSS code.</p>
+
+<h2 id="cross-site-request-forgery-xsrfcsrf">Cross-Site Request Forgery (XSRF/CSRF)</h2>
+
+<p>Let’s say a user logs into your website or web app. They are now authenticated, right? Well it depends. It could be that the user’s <em>browser</em> is authenticated. An attacker could take advantage of this authentication and get the user’s browser to submit an HTTP request crafted with nefarious intentions. The request will be accepted because the browser has the right authentication cookie data, for example.</p>
+
+<p>How is the evil HTTP request initiated? It could be through XSS, it could be through convincing a victim to visit a malicious site that sends HTTP requests, etc. Most examples mention authenticated cookies being used by attackers.</p>
+
+<h2 id="man-in-the-middle-mitm">Man-in-the-Middle (MITM)</h2>
+
+<p>There’s a reason why public internet is unsafe. When you’re on a shared network, other users on the same network can try to intercept your data. Not only can man-in-the-middle attacks read your data, they can also send you bad data/code. Some attackers merely intercept web pages you’re accessing, add more advertisements, and feed you the web page with extra ads. Other attackers might intercept your attempt to visit http://www.facebook.com, give you a fake Facebook login page, and convince you to submit your login info to them.</p>
+
+<p>Obviously, protecting a network by requiring a password to connect can help. However, if you’re using public WiFi in a coffee shop where the password is given to anybody who asks for it, then you’re in trouble again. As I shall mention, HTTPS is crucial for fighting MITM pain.</p>
+
+<h1 id="be-somewhat-less-afraid">Be Somewhat Less Afraid</h1>
+
+<p>It’s great if you’re aware of threats. Now it’s time to learn the basics on how to combat the threats. At the meetup, the Google peeps focused on three types of solutions: frameworks/libraries, CSP, and HTTPS with HSTS. I will also mention a couple other technologies (BONUS) for your consideration.</p>
+
+<h2 id="frameworkslibraries-features">Frameworks/Libraries Features</h2>
+
+<p>One of the Google experts emphasized that XSS is a much bigger problem than it should be because there are so many frameworks and libraries that help fight XSS. He said that no one should be writing their own anti-XSS libraries. Instead, use one of the many open-source solutions. Also, it’s quite possible that you’re already using a framework that has anti-XSS features that just need to be activated or configured.</p>
+
+<p>For example, in some templating libraries, a simple syntax change will enable anti-XSS escaping features. Other templating libraries automatically escape contents by default. Some frameworks like AngularJS do “round-trip escaping on all strings for you” to protect your app from XSS and other injection attacks.</p>
+
+<h2 id="content-security-policy-csp">Content Security Policy (CSP)</h2>
+
+<p>A server can instruct a browser to use a whitelist to decide which resources should be loaded and which should be blocked. This is done when a server adds a CSP to a response header.</p>
+
+<p>For example, a CSP whitelist can tell a browser to trust script files from the server and Google CDNs, images from the server and Amazon CDNs, CSS files from the server, and web fonts from Google. Everything else will be blocked. In-line JavaScript will be blocked, in-line styles will be blocked, images hosted by 3rd parties will be blocked, Flash will be blocked, iframes will be blocked, etc.</p>
+
+<p>Your CSP can be configured based on various types of resources. Check this <a href="http://content-security-policy.com/">CSP Cheatsheet</a> for the list of options. I recommend that you investigate server-side libraries, frameworks, or middleware that can help you implement CSP. When writing your CSP, you can try starting with the most restrictive whitelist and then see what needs to be unblocked.</p>
+
+<h3 id="reporting-feature">Reporting Feature</h3>
+
+<p>You can also set up a reporting system to find out what your CSP has managed to block (thereby identifying failed attacks).</p>
+
+<p>A Googler suggested using the CSP reporting feature <em>without</em> an enforced whitelist to help you examine what browsers are actually digesting when they visit your site or app. For example, you could set up a CSP that has a whitelist and just asks browsers to report non-whitelisted sources without actually blocking them. This gives you the ability to <strong>tweak your whitelist based on production usage without changing production usage</strong>. After you’re done tweaking, change the CSP to force browsers to report <em>and</em> block uninvited resources and content.</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption class="code-header" style="margin-bottom:-5px;"><span>Ultra-Strict Example CSP for Express server using Lusca middleware </span></figcaption>
+ <div class="CodeRay">
+  <div class="code"><pre>
+app.use(lusca.csp({
+  <span class="key">policy</span>: {
+    <span class="key"><span class="delimiter">'</span><span class="content">default-src</span><span class="delimiter">'</span></span>: <span class="string"><span class="delimiter">'</span><span class="content">none</span><span class="delimiter">'</span></span>, <span class="comment">// Block EVERYTHING</span>
+  },
+  <span class="key">reportOnly</span>: <span class="predefined-constant">true</span>, <span class="comment">// Record what's being blocked</span>
+  <span class="key">reportUri</span>: <span class="string"><span class="delimiter">'</span><span class="content">/report-violation-endpoint</span><span class="delimiter">'</span></span>
+}));
+</pre></div>
+</div>
+ </figure></notextile></div>
+
+<h2 id="https-and-https-strict-transport-security-hsts">HTTPS and HTTPS Strict Transport Security (HSTS)</h2>
+
+<h3 id="https">HTTPS</h3>
+
+<p>To protect data transfers from MITM attacks, many sites connect to visitors via HTTPS. HTTPS connections not only protect typical payloads like JSON, but also static files and cookies that would otherwise be vulnerable to CSRF attacks. The hard part about using HTTPS is making sure no part of the site ever falls back to unencrypted HTTP.</p>
+
+<p>For example, let’s say you’re browsing a site that provides free icons and graphics. Are all files served over HTTPS? HTML, CSS, and JavaScript files are no-brainers. What about images? Yeah that’s pretty standard too. But what about when you get an icon pack? You click a download link, and the browser starts downloading a zip file. Is that using the HTTPS protocol? It’s easy to <a href="http://httpshaming.tumblr.com/">make mistakes</a>.</p>
+
+<h3 id="hsts">HSTS</h3>
+
+<p>Furthermore, what if a user visits the site using HTTP first? It’s pretty common for people to type “somewebsite.com” in the URL bar and the browser will turn that into “http://somewebsite.com”. After they visit that URL, the site can redirect the visitor to “<strong>https</strong>://somewebsite.com”. But sadly, that initial connection via http wasn’t secure. It’s susceptible to a MITM attack.</p>
+
+<p>With HTTPS Strict Transport Security, the browser can automatically turn “somewebsite.com” into “<strong>https</strong>://somewebsite.com”. HSTS works by setting a header that tells the browser to enforce HTTPS for requests sent to the domain (“somewebsite.com”) for the next X number of seconds. Yes, you can set X to be a very large number such that HSTS is enforcing HTTPS for the next <em>year</em>, if you want to be cool like that.</p>
+
+<h1 id="stay-tuned">Stay Tuned</h1>
+
+<p>This blog post was getting pretty lengthy, so I decided to split it into two parts. In a follow-up blog post, I will provide a list of references, tutorials, and videos to help you research more about CSP, HSTS, and some complementary tools/libraries.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+
+  
+    <span class="byline author vcard">by <span class="fn">Jeff Lee</span></span>
+  
+
+ - 
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-09-18T10:26:00-07:00" pubdate data-updated="true">Sep 18<span>th</span>, 2014</time> - 
+      
+
+posted in
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/javascript/'>JavaScript</a>, <a class='category' href='/blog/categories/security/'>security</a>, <a class='category' href='/blog/categories/technical-posts/'>technical posts</a>, <a class='category' href='/blog/categories/web-tech/'>web tech</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://RebootJeff.github.io/blog/2014/09/18/web-security-fundamentals-by-google-peeps/" data-via="rebootjeff" data-counturl="http://RebootJeff.github.io/blog/2014/09/18/web-security-fundamentals-by-google-peeps/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    
+      <a class="pull-left" href="/blog/2014/09/02/communication-for-engineers-101-we-have-a-problem/" title="Previous Post: Communication for Engineers 101: We Have A Problem">&laquo; Communication for Engineers 101: We Have A Problem</a>
+    
+    
+  </footer>
+
+</div>
+
+          
+            <div class="article-format">
+              <h1>Comments</h1>
+              <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+            </div>
+          
+        </article>
+      </div>
+    </div>
+  </div>
+  <div id="footer-widgets">
+  <div class="container">
+    <div class="row">
+  <div class="span3">
+    <h2>Recent Posts</h2>
+    <ul class="recent_posts">
+      
+        <li>
+          <a href="/blog/2014/09/18/web-security-fundamentals-by-google-peeps/">Web Security Fundamentals - Part 1: What Google Peeps Say</a>
+        </li>
+      
+        <li>
+          <a href="/blog/2014/09/02/communication-for-engineers-101-we-have-a-problem/">Communication for Engineers 101: We Have A Problem</a>
+        </li>
+      
+        <li>
+          <a href="/blog/2014/08/17/protractor-e2e-testing-reveal-element-blocked-by-fixed-nav/">Protractor E2E Testing: Reveal Element Blocked By Fixed Nav</a>
+        </li>
+      
+        <li>
+          <a href="/blog/2014/08/14/dev-job-searching-tools-roundup-part-2/">Dev Job Searching Tools Roundup Part 2: Readyforce, The Muse, The Sourcery, AngelList, VC job listings</a>
+        </li>
+      
+        <li>
+          <a href="/blog/2014/06/28/dev-job-search-tools-part-1/">Dev Job Searching Tools Roundup Part 1: LinkedIn vs Whitetruffle vs Hired vs Dice</a>
+        </li>
+      
+    </ul>
+    <h2><a href="/blog/archives">Archives</a></h2>
+  </div>
+  <div class="span3">
+    
+
+  </div>
+  <!-- DISABLE Twitter and Found On footer widgets for now
+  <div class="span4">
+    
+  </div>
+  <div class="span2">
+    
+  -->
+  <div class="span6" id="footer_notes">
+    <p>
+      <a href="/">RebootJeff.com</a> - Copyright &copy; 2014 - Jeff Lee
+    </p>
+    <p>
+      Powered by <a href="http://octopress.org/">Octopress</a>. Made pretty with Foxslide theme by <a href="http://www.AdrianArtiles.com">Adrian Artiles</a>. Theme heavily tweaked by me. It took forever T.T
+    </p>
+  </div>
+</div>
+
+  </div>
+</div>
+<!-- DISABLE footer beyond footer-widgets
+<footer class="footer">
+  <div class="container">
+  	
+  </div>
+</footer>
+-->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+<script>window.jQuery || document.write('<script src="/javascripts/libs/jquery-1.7.2.min.js" type="text/javascript"><\/script>')</script>
+<script src="/javascripts/libs/bootstrap.min.js" type="text/javascript"></script>
+<script src="/javascripts/jquery.tweet.js" type="text/javascript"></script>
+<script src="/javascripts/jquery.instagram.js" type="text/javascript"></script>
+<script src="/javascripts/libs/jquery.masonry.min.js" type="text/javascript"></script>
+<script src="/javascripts/custom.js" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'rebootjeff';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://RebootJeff.github.io/blog/2014/09/18/web-security-fundamentals-by-google-peeps/';
+        var disqus_url = 'http://RebootJeff.github.io/blog/2014/09/18/web-security-fundamentals-by-google-peeps/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+</body>
+</html>

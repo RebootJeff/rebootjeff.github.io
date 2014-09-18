@@ -4,7 +4,7 @@
   <title><![CDATA[Category: JavaScript | RebootJeff.com]]></title>
   <link href="http://RebootJeff.github.io/blog/categories/javascript/atom.xml" rel="self"/>
   <link href="http://RebootJeff.github.io/"/>
-  <updated>2014-09-03T18:37:13-07:00</updated>
+  <updated>2014-09-18T09:12:20-07:00</updated>
   <id>http://RebootJeff.github.io/</id>
   <author>
     <name><![CDATA[Jeff Lee]]></name>
@@ -12,6 +12,119 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Web Security Fundamentals - Part 1: What Google Peeps Say]]></title>
+    <link href="http://RebootJeff.github.io/blog/2014/09/18/web-security-fundamentals-by-google-peeps/"/>
+    <updated>2014-09-18T10:26:00-07:00</updated>
+    <id>http://RebootJeff.github.io/blog/2014/09/18/web-security-fundamentals-by-google-peeps</id>
+    <content type="html"><![CDATA[<p>Back in late May, I went to one of the most informative tech meetups ever. The <a href="http://www.meetup.com/sfhtml5/">SFHTML5 meetup group</a> organized an event at the Google SF office to cover web security. Google security researchers presented about 2.5 hours of lectures talking about common hacks/attacks, good defense, and the general state of web security.</p>
+
+<p>You can check out the slides here: <a href="http://www.meetup.com/sfhtml5/events/179713932/#event_comment-362704742">click here if you dare.</a> You can watch the lectures here:</p>
+
+<iframe width="300" height="185" src="http://RebootJeff.github.io//www.youtube-nocookie.com/embed/Yg5g2aMKbNA?list=PLOU2XLYxmsIIkEU3Z_xdVo9EADurbdxKa" frameborder="0" allowfullscreen=""></iframe>
+<p />
+
+<p>But if you don’t feel like sitting through 2.5 hours of lecture, allow me to summarize the best parts:</p>
+
+<ol>
+  <li>Common hacks/exploits
+    <ul>
+      <li>XSS</li>
+      <li>CSRF</li>
+      <li>MITM</li>
+    </ul>
+  </li>
+  <li>Simple security best practices
+    <ul>
+      <li>Use frameworks/libraries to fight XSS for you</li>
+      <li>Implement CSP to protect your front end</li>
+      <li>Reinforce HTTPS with HSTS</li>
+    </ul>
+  </li>
+</ol>
+
+<p><strong>I won’t go into detail about any particular topic.</strong> This blog post will simply get you started in understanding fundamental web security. I suggest you use Google to research more about hacks/attacks or wait for me to post another blog post that provides a collection of links to sweet videos, references, and articles that I found particularly helpful for learning more about all these topics.</p>
+
+<h1 id="be-afraid">Be Afraid</h1>
+
+<p>How are websites and web apps compromised? Why are sites often “hacked”? There are three main types of attacks that you should worry about: XSS, CSRF, and MITM.</p>
+
+<h2 id="cross-site-scripting-xss">Cross-Site Scripting (XSS)</h2>
+
+<p>When a punk manages to get your code to run their JavaScript, that’s XSS. A simple example is when an unprotected website just accepts text from the user and adds it to the site’s HTML code. If that text is actually JS, then the site ends up sending the browser user-generated code. Damn.</p>
+
+<p>XSS is one of the most common problems plaguing web security today. This is pretty depressing because there are plenty of frameworks and libraries that help fight XSS, but so many site operators just don’t use them and some fools even try to write their own anti-XSS code.</p>
+
+<h2 id="cross-site-request-forgery-xsrfcsrf">Cross-Site Request Forgery (XSRF/CSRF)</h2>
+
+<p>Let’s say a user logs into your website or web app. They are now authenticated, right? Well it depends. It could be that the user’s <em>browser</em> is authenticated. An attacker could take advantage of this authentication and get the user’s browser to submit an HTTP request crafted with nefarious intentions. The request will be accepted because the browser has the right authentication cookie data, for example.</p>
+
+<p>How is the evil HTTP request initiated? It could be through XSS, it could be through convincing a victim to visit a malicious site that sends HTTP requests, etc. Most examples mention authenticated cookies being used by attackers.</p>
+
+<h2 id="man-in-the-middle-mitm">Man-in-the-Middle (MITM)</h2>
+
+<p>There’s a reason why public internet is unsafe. When you’re on a shared network, other users on the same network can try to intercept your data. Not only can man-in-the-middle attacks read your data, they can also send you bad data/code. Some attackers merely intercept web pages you’re accessing, add more advertisements, and feed you the web page with extra ads. Other attackers might intercept your attempt to visit http://www.facebook.com, give you a fake Facebook login page, and convince you to submit your login info to them.</p>
+
+<p>Obviously, protecting a network by requiring a password to connect can help. However, if you’re using public WiFi in a coffee shop where the password is given to anybody who asks for it, then you’re in trouble again. As I shall mention, HTTPS is crucial for fighting MITM pain.</p>
+
+<h1 id="be-somewhat-less-afraid">Be Somewhat Less Afraid</h1>
+
+<p>It’s great if you’re aware of threats. Now it’s time to learn the basics on how to combat the threats. At the meetup, the Google peeps focused on three types of solutions: frameworks/libraries, CSP, and HTTPS with HSTS. I will also mention a couple other technologies (BONUS) for your consideration.</p>
+
+<h2 id="frameworkslibraries-features">Frameworks/Libraries Features</h2>
+
+<p>One of the Google experts emphasized that XSS is a much bigger problem than it should be because there are so many frameworks and libraries that help fight XSS. He said that no one should be writing their own anti-XSS libraries. Instead, use one of the many open-source solutions. Also, it’s quite possible that you’re already using a framework that has anti-XSS features that just need to be activated or configured.</p>
+
+<p>For example, in some templating libraries, a simple syntax change will enable anti-XSS escaping features. Other templating libraries automatically escape contents by default. Some frameworks like AngularJS do “round-trip escaping on all strings for you” to protect your app from XSS and other injection attacks.</p>
+
+<h2 id="content-security-policy-csp">Content Security Policy (CSP)</h2>
+
+<p>A server can instruct a browser to use a whitelist to decide which resources should be loaded and which should be blocked. This is done when a server adds a CSP to a response header.</p>
+
+<p>For example, a CSP whitelist can tell a browser to trust script files from the server and Google CDNs, images from the server and Amazon CDNs, CSS files from the server, and web fonts from Google. Everything else will be blocked. In-line JavaScript will be blocked, in-line styles will be blocked, images hosted by 3rd parties will be blocked, Flash will be blocked, iframes will be blocked, etc.</p>
+
+<p>Your CSP can be configured based on various types of resources. Check this <a href="http://content-security-policy.com/">CSP Cheatsheet</a> for the list of options. I recommend that you investigate server-side libraries, frameworks, or middleware that can help you implement CSP. When writing your CSP, you can try starting with the most restrictive whitelist and then see what needs to be unblocked.</p>
+
+<h3 id="reporting-feature">Reporting Feature</h3>
+
+<p>You can also set up a reporting system to find out what your CSP has managed to block (thereby identifying failed attacks).</p>
+
+<p>A Googler suggested using the CSP reporting feature <em>without</em> an enforced whitelist to help you examine what browsers are actually digesting when they visit your site or app. For example, you could set up a CSP that has a whitelist and just asks browsers to report non-whitelisted sources without actually blocking them. This gives you the ability to <strong>tweak your whitelist based on production usage without changing production usage</strong>. After you’re done tweaking, change the CSP to force browsers to report <em>and</em> block uninvited resources and content.</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption class='code-header' style='margin-bottom:-5px;'><span>Ultra-Strict Example CSP for Express server using Lusca middleware </span></figcaption>
+ <div class="CodeRay">
+  <div class="code"><pre>
+app.use(lusca.csp({
+  <span class="key">policy</span>: {
+    <span class="error">‘</span><span class="keyword">default</span>-src<span class="error">’</span>: <span class="error">‘</span>none<span class="error">’</span>, <span class="comment">// Block EVERYTHING</span>
+  },
+  <span class="key">reportOnly</span>: <span class="predefined-constant">true</span>, <span class="comment">// Record what’s being blocked</span>
+  <span class="key">reportUri</span>: <span class="error">‘</span><span class="regexp"><span class="delimiter">/</span><span class="content">report-violation-endpoint’
+}));
+</span></span></pre></div>
+</div>
+ </figure></notextile></div></p>
+
+<h2 id="https-and-https-strict-transport-security-hsts">HTTPS and HTTPS Strict Transport Security (HSTS)</h2>
+
+<h3 id="https">HTTPS</h3>
+
+<p>To protect data transfers from MITM attacks, many sites connect to visitors via HTTPS. HTTPS connections not only protect typical payloads like JSON, but also static files and cookies that would otherwise be vulnerable to CSRF attacks. The hard part about using HTTPS is making sure no part of the site ever falls back to unencrypted HTTP.</p>
+
+<p>For example, let’s say you’re browsing a site that provides free icons and graphics. Are all files served over HTTPS? HTML, CSS, and JavaScript files are no-brainers. What about images? Yeah that’s pretty standard too. But what about when you get an icon pack? You click a download link, and the browser starts downloading a zip file. Is that using the HTTPS protocol? It’s easy to <a href="http://httpshaming.tumblr.com/">make mistakes</a>.</p>
+
+<h3 id="hsts">HSTS</h3>
+
+<p>Furthermore, what if a user visits the site using HTTP first? It’s pretty common for people to type “somewebsite.com” in the URL bar and the browser will turn that into “http://somewebsite.com”. After they visit that URL, the site can redirect the visitor to “<strong>https</strong>://somewebsite.com”. But sadly, that initial connection via http wasn’t secure. It’s susceptible to a MITM attack.</p>
+
+<p>With HTTPS Strict Transport Security, the browser can automatically turn “somewebsite.com” into “<strong>https</strong>://somewebsite.com”. HSTS works by setting a header that tells the browser to enforce HTTPS for requests sent to the domain (“somewebsite.com”) for the next X number of seconds. Yes, you can set X to be a very large number such that HSTS is enforcing HTTPS for the next <em>year</em>, if you want to be cool like that.</p>
+
+<h1 id="stay-tuned">Stay Tuned</h1>
+
+<p>This blog post was getting pretty lengthy, so I decided to split it into two parts. In a follow-up blog post, I will provide a list of references, tutorials, and videos to help you research more about CSP, HSTS, and some complementary tools/libraries.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Queues & Stacks from Scratch with JS Patterns]]></title>
