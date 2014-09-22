@@ -86,7 +86,7 @@ app.use(lusca.csp({
 }));
 {% endcoderay %}
 
-## HTTPS and HTTPS Strict Transport Security (HSTS)
+## HTTPS and HTTP Strict Transport Security (HSTS)
 
 ### HTTPS
 
@@ -98,7 +98,7 @@ For example, let's say you're browsing a site that provides free icons and graph
 
 Furthermore, what if a user visits the site using HTTP first? It's pretty common for people to type "somewebsite.com" in the URL bar and the browser will turn that into "http://somewebsite.com". After they visit that URL, the site can redirect the visitor to "**https**://somewebsite.com". But sadly, that initial connection via http wasn't secure. It's susceptible to a MITM attack.
 
-With HTTPS Strict Transport Security, the browser can automatically turn "somewebsite.com" into "**https**://somewebsite.com". HSTS works by setting a header that tells the browser to enforce HTTPS for requests sent to the domain ("somewebsite.com") for the next X number of seconds. Yes, you can set X to be a very large number such that HSTS is enforcing HTTPS for the next *year*, if you want to be cool like that.
+With HTTP Strict Transport Security, the browser can automatically turn "somewebsite.com" into "**https**://somewebsite.com". HSTS works by setting a header that tells the browser to enforce HTTPS for requests sent to the domain ("somewebsite.com") for the next X number of seconds. Yes, you can set X to be a very large number such that HSTS is enforcing HTTPS for the next *year*, if you want to be cool like that.
 
 # Stay Tuned
 
