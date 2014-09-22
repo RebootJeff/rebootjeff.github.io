@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Web Security Fundamentals - Part 2: More Info on Defense"
+title: "Web Security Fundamentals - Part 2: More Info on Modern Defense"
 date: 2014-09-22 8:26
 comments: true
 categories:
