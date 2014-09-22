@@ -4,7 +4,7 @@
   <title><![CDATA[Category: JavaScript | RebootJeff.com]]></title>
   <link href="http://RebootJeff.github.io/blog/categories/javascript/atom.xml" rel="self"/>
   <link href="http://RebootJeff.github.io/"/>
-  <updated>2014-09-18T09:12:20-07:00</updated>
+  <updated>2014-09-22T08:31:28-07:00</updated>
   <id>http://RebootJeff.github.io/</id>
   <author>
     <name><![CDATA[Jeff Lee]]></name>
@@ -12,6 +12,69 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Web Security Fundamentals - Part 2: More Info on Modern Defense]]></title>
+    <link href="http://RebootJeff.github.io/blog/2014/09/22/web-security-fundamentals-part-2-helpful-resources/"/>
+    <updated>2014-09-22T08:26:00-07:00</updated>
+    <id>http://RebootJeff.github.io/blog/2014/09/22/web-security-fundamentals-part-2-helpful-resources</id>
+    <content type="html"><![CDATA[<p>Last Thursday, I published <a href="/blog/2014/09/18/web-security-fundamentals-by-google-peeps/">a blog post</a> in which I summarized the main attack techniques (XSS, CSRF, and MITM) used by baddies to screw with the web. That post also covered two header-based solutions available to help you defend your site: CSP and HSTS. To supplement all that info, I am providing a bunch of articles, references, videos, and tools to help you learn more and take advantage of CSP and HSTS.</p>
+
+<h1 id="content-security-policy-csp">Content Security Policy (CSP)</h1>
+
+<h3 id="browser-support">Browser Support</h3>
+
+<p>Cross-browser support for CSP is <a href="http://caniuse.com/#feat=contentsecuritypolicy">pretty good</a>. The latest versions of IE require the CSP header to use a special prefix (much like vendor prefixes for certain CSS features). Older crap like IE9 and below have no CSP support.</p>
+
+<h3 id="further-readingreferences">Further Reading/References</h3>
+
+<ul>
+  <li><a href="http://www.html5rocks.com/en/tutorials/security/content-security-policy/">HTML5 Rocks - Intro to CSP</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/Security/CSP">MDN - CSP Topics</a></li>
+  <li><a href="http://content-security-policy.com/">CSP Cheatsheet</a></li>
+  <li><a href="http://engineeringblog.yelp.com/2014/09/csp_reports_at_scale.html">Yelp Engineering Blog - CSP at Scale</a></li>
+</ul>
+
+<h4 id="awesome-presentation-on-csp">Awesome Presentation on CSP</h4>
+<iframe width="300" height="169" src="http://RebootJeff.github.io//www.youtube-nocookie.com/embed/pocsv39pNXA" frameborder="0" allowfullscreen=""></iframe>
+
+<h1 id="http-strict-transport-security-hsts">HTTP Strict Transport Security (HSTS)</h1>
+
+<h3 id="browser-support-1">Browser Support</h3>
+
+<p>Most browsers get a passing grade when it comes to HSTS support –except for…</p>
+
+<p><blockquote><p>Internet Explorer doesn’t support HSTS—which means that there’s basically no such thing as a secure website in IE</p><footer><strong>Electronic Frontier Foundation (EFF),</strong> <cite><a href='https://www.eff.org/deeplinks/2014/02/websites-hsts'>Websites Must Use HSTS in Order to Be Secure</a></cite></footer></blockquote></p>
+
+<h3 id="further-readingreferences-1">Further Reading/References</h3>
+
+<ul>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/Security/HTTP_strict_transport_security">MDN - HSTS Overview</a></li>
+  <li><a href="https://www.eff.org/deeplinks/2014/02/websites-hsts">EFF - HSTS is a must</a></li>
+  <li><a href="https://www.leviathansecurity.com/blog/the-double-edged-sword-of-hsts-persistence-and-privacy/">Leviathan - Caveat for using HSTS with wildcard SSL certificates</a></li>
+</ul>
+
+<h4 id="quick-video-summary-of-mitm-and-hsts">Quick Video Summary of MITM and HSTS</h4>
+
+<iframe width="300" height="169" src="http://RebootJeff.github.io//www.youtube-nocookie.com/embed/zEV3HOuM_Vw" frameborder="0" allowfullscreen=""></iframe>
+
+<p><strong>Note:</strong> The video above provides <em>outdated</em> browser support info. Updated info can be found here: <a href="http://caniuse.com/#feat=stricttransportsecurity">CanIUse.com</a>.</p>
+
+<h1 id="bonus-security-toolkit-for-express-apps">Bonus: Security Toolkit for Express Apps</h1>
+
+<h2 id="lusca">Lusca</h2>
+
+<p>Do you use Node.js? Does your Node.js app use Express? Want some middleware to help secure that app? Perhaps you should consider using <a href="https://github.com/krakenjs/lusca">Lusca</a>, a free module created by Paypal to quickly add and configure various security features such as CSP and HSTS. I haven’t personally tried it yet, but I plan to do so soon. Their README file makes Lusca look very easy for devs to use.</p>
+
+<p>You can pick and choose which security features you want to enable. For example, if you’re already using <a href="http://angular-tips.com/blog/2014/05/json-web-tokens-introduction/">JSON Web Tokens</a>, then you may not want to use Lusca’s CSRF method while you take advantage of Lusca’s legacy browser XSS protection.</p>
+
+<p>By the way, don’t get confused: Paypal uses their own open-source, Express-based framework called KrakenJS, but Lusca works with Kraken apps <em>and</em> Express apps.</p>
+
+<h4 id="presentation-on-securing-spas-and-nodejs-apps-by-paypal-engineer">Presentation on Securing SPAs and Node.js Apps (by PayPal Engineer)</h4>
+
+<iframe width="300" height="169" src="http://RebootJeff.github.io//www.youtube-nocookie.com/embed/40-Ccq6b5lk" frameborder="0" allowfullscreen=""></iframe>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Web Security Fundamentals - Part 1: What Google Peeps Say]]></title>
@@ -106,7 +169,7 @@ app.use(lusca.csp({
 </div>
  </figure></notextile></div></p>
 
-<h2 id="https-and-https-strict-transport-security-hsts">HTTPS and HTTPS Strict Transport Security (HSTS)</h2>
+<h2 id="https-and-http-strict-transport-security-hsts">HTTPS and HTTP Strict Transport Security (HSTS)</h2>
 
 <h3 id="https">HTTPS</h3>
 
@@ -118,7 +181,7 @@ app.use(lusca.csp({
 
 <p>Furthermore, what if a user visits the site using HTTP first? It’s pretty common for people to type “somewebsite.com” in the URL bar and the browser will turn that into “http://somewebsite.com”. After they visit that URL, the site can redirect the visitor to “<strong>https</strong>://somewebsite.com”. But sadly, that initial connection via http wasn’t secure. It’s susceptible to a MITM attack.</p>
 
-<p>With HTTPS Strict Transport Security, the browser can automatically turn “somewebsite.com” into “<strong>https</strong>://somewebsite.com”. HSTS works by setting a header that tells the browser to enforce HTTPS for requests sent to the domain (“somewebsite.com”) for the next X number of seconds. Yes, you can set X to be a very large number such that HSTS is enforcing HTTPS for the next <em>year</em>, if you want to be cool like that.</p>
+<p>With HTTP Strict Transport Security, the browser can automatically turn “somewebsite.com” into “<strong>https</strong>://somewebsite.com”. HSTS works by setting a header that tells the browser to enforce HTTPS for requests sent to the domain (“somewebsite.com”) for the next X number of seconds. Yes, you can set X to be a very large number such that HSTS is enforcing HTTPS for the next <em>year</em>, if you want to be cool like that.</p>
 
 <h1 id="stay-tuned">Stay Tuned</h1>
 
@@ -549,108 +612,6 @@ console.log(queue);  <span class="comment">// output: [2,3]</span>
 <h1 id="what-i-thought">What I Thought</h1>
 
 <p>Pamela is a fantastic speaker. What I liked most about her talk was the use of real-world examples. As a student, it’s always so informative to hear about life in the wild (so to speak). Seeing as how this was a Hack Reactor event exclusively for students, it’s hard to judge it impartially, but I’m going to go ahead and claim it was awesome.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[[HackR Diary] First Impressions]]></title>
-    <link href="http://RebootJeff.github.io/blog/2013/09/25/hackr-diary-first-impressions/"/>
-    <updated>2013-09-25T21:23:00-07:00</updated>
-    <id>http://RebootJeff.github.io/blog/2013/09/25/hackr-diary-first-impressions</id>
-    <content type="html"><![CDATA[<p class="last-updated">Last updated on Sep 28, 2013 to edit section on guard operator.</p>
-
-<p>It’s the end of day #3. I don’t have much time to write, so this blog post is a smattering of thoughts from a fresh Hack Reactor student.</p>
-
-<h1 id="initial-observations">Initial Observations</h1>
-
-<h2 id="recap">Recap</h2>
-
-<ul>
-  <li>Day 1 and 2 are just review days covering topics and challenges covered by the pre-course work. Day 1 covered ettiquette, expectations, and recursion. Day 2 covered passing functions, a lot of JS fundamentals, and awesome advice for being successful (e.g., we talked about impostor syndrome, Hack Reactor’s motivations, some job-hunting advice, etc).</li>
-  <li>Day 3 covered paired programming, object-oriented programming (OOP), and classes (e.g., functional instantiation vs. prototypal instantiation vs. psuedoclassical instantiation).</li>
-</ul>
-
-<h2 id="logistics">Logistics</h2>
-
-<ul>
-  <li>Week 1 is full of lectures. Each day is about 50% lectures, 50% coding.</li>
-  <li>The first 6 weeks will have plenty of lectures and structured challenges. Then there is an interim week where you work on a project from home, which gives you the flexibility to travel, but the Hack Reactor staff will be offline (they basically get a 1-week vacation every 7 weeks). After the interim week is more time for your individual project, time for a group project, and time for job prep.</li>
-</ul>
-
-<h2 id="nuances">Nuances</h2>
-
-<ul>
-  <li>Lunch breaks and dinner breaks are often cut short due to lectures running long.</li>
-  <li>Lectures run long due to people asking questions.</li>
-  <li>All teachers advocate for students to ask questions. At Hack Reactor, the students ask a TON of questions because the class atmosphere is very comfortable.</li>
-  <li>The students are really nice. Everyone’s excited to meet new people (even the quiet ones are clearly motivated to be social).</li>
-  <li>I’ve heard stories of students of other bootcamps going out at night to hang out and have fun. I could be wrong, but so far it seems like there’s no time/energy left for going out at night.</li>
-  <li>That said, students don’t stay here that late (so far). A lot of us leave by 9pm. I thought it’d be common to leave no earlier than 10pm, but there aren’t even that many students from the senior cohort by the time the clock strikes 9:20pm (which is the latest I’ve stayed). I have a feeling this will change in a few weeks (beause that will be crunch time for the senior cohort).</li>
-  <li>Nothing’s perfect. Some equipment is broken, some chairs are shitty, some online resources are buggy, etc. None of these issues have been big issues.</li>
-</ul>
-
-<h1 id="nuggets-of-knowledge">Nuggets of Knowledge</h1>
-
-<p>I’ve picked up a lot of cool (and oftentimes valuable) advice/facts in just 3 days.</p>
-
-<h2 id="life-nuggets">Life Nuggets</h2>
-
-<h3 id="re-education">Re: <strong>Education</strong></h3>
-
-<p>Passive learning is deceptively similar to true understanding. When you just observe a correct solution, it can give you the illusion that you learned more than you really did. For example, you might watch someone code up a good solution. When you walk away, you’ll think you understand everything necessary to solve the problem, but all you learned was some code without its meaning.</p>
-
-<h3 id="re-starting-a-new-tech-career">Re: <strong>Starting a new tech career</strong></h3>
-
-<p>Everyone thinks starting a new tech career with a tiny startup is really exciting. That might be true, but people tend to forget an important caveat: less structure could lead to a less efficient roadmap to individual success.</p>
-
-<p>In less formal terms, you might work for a tiny startup on something you truly care about, but the startup could easily be too small or too young to provide an environment with superiors/peers that can help you develop your programming skills (or any job-related skills).</p>
-
-<h2 id="javascript-nuggets">JavaScript Nuggets</h2>
-
-<h3 id="guard-operator">Guard operator</h3>
-
-<p>Marcus, the primary instructor, warned us that some devs dislike the guard operator, but it’s really concise (which is cool to him). The guard operator is a logical-AND or logical-OR that “guards” a small bit of code the same way an <code>if</code> statement would guard it. For example:</p>
-
-<div><div class="CodeRay">
-  <div class="code"><pre><span class="keyword">if</span>(goodStudent === <span class="predefined-constant">true</span>){
-    candy++;
-}
-
-<span class="comment">// The above code could be refactored into the following:</span>
-goodStudent &amp;&amp; candy++;
-</pre></div>
-</div>
-</div>
-
-<p>The following is a more practical example:</p>
-
-<div><div class="CodeRay">
-  <div class="code"><pre><span class="comment">// Let's say you want to only call a function with an array if the array is NOT undefined (i.e., you want to guard against a scenario where you pass an undefined argument to a function).</span>
-arg &amp;&amp; myFunction(arg);
-</pre></div>
-</div>
-</div>
-
-<p>You can also use a logical-OR in a guard-like fashion. This is sometimes called the <strong>default operator</strong> rather than a guard operator.</p>
-
-<div><div class="CodeRay">
-  <div class="code"><pre><span class="comment">// if no name was passed into the function, just give the name variable a default value of 'friend'</span>
-
-<span class="keyword">var</span> <span class="function">sayHello</span> = <span class="keyword">function</span>(name){
-  <span class="keyword">if</span>(name === <span class="predefined-constant">undefined</span>){
-    name = <span class="string"><span class="delimiter">'</span><span class="content">friend</span><span class="delimiter">'</span></span>;
-  }
-  console.log(<span class="string"><span class="delimiter">'</span><span class="content">Hello, </span><span class="delimiter">'</span></span> + name + <span class="string"><span class="delimiter">'</span><span class="content">!</span><span class="delimiter">'</span></span>);
-}
-
-<span class="comment">// the function above could be refactored to use the OR-guard as follows:</span>
-<span class="keyword">var</span> <span class="function">sayHello</span> = <span class="keyword">function</span>(name){
-  name = name || <span class="string"><span class="delimiter">'</span><span class="content">friend</span><span class="delimiter">'</span></span>;
-  console.log(<span class="string"><span class="delimiter">'</span><span class="content">Hello, </span><span class="delimiter">'</span></span> + name + <span class="string"><span class="delimiter">'</span><span class="content">!</span><span class="delimiter">'</span></span>);
-}
-</pre></div>
-</div>
-</div>
 ]]></content>
   </entry>
   

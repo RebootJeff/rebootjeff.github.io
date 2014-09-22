@@ -4,7 +4,7 @@
   <title><![CDATA[Category: web tech | RebootJeff.com]]></title>
   <link href="http://RebootJeff.github.io/blog/categories/web-tech/atom.xml" rel="self"/>
   <link href="http://RebootJeff.github.io/"/>
-  <updated>2014-09-18T09:12:20-07:00</updated>
+  <updated>2014-09-22T08:31:28-07:00</updated>
   <id>http://RebootJeff.github.io/</id>
   <author>
     <name><![CDATA[Jeff Lee]]></name>
@@ -12,6 +12,69 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Web Security Fundamentals - Part 2: More Info on Modern Defense]]></title>
+    <link href="http://RebootJeff.github.io/blog/2014/09/22/web-security-fundamentals-part-2-helpful-resources/"/>
+    <updated>2014-09-22T08:26:00-07:00</updated>
+    <id>http://RebootJeff.github.io/blog/2014/09/22/web-security-fundamentals-part-2-helpful-resources</id>
+    <content type="html"><![CDATA[<p>Last Thursday, I published <a href="/blog/2014/09/18/web-security-fundamentals-by-google-peeps/">a blog post</a> in which I summarized the main attack techniques (XSS, CSRF, and MITM) used by baddies to screw with the web. That post also covered two header-based solutions available to help you defend your site: CSP and HSTS. To supplement all that info, I am providing a bunch of articles, references, videos, and tools to help you learn more and take advantage of CSP and HSTS.</p>
+
+<h1 id="content-security-policy-csp">Content Security Policy (CSP)</h1>
+
+<h3 id="browser-support">Browser Support</h3>
+
+<p>Cross-browser support for CSP is <a href="http://caniuse.com/#feat=contentsecuritypolicy">pretty good</a>. The latest versions of IE require the CSP header to use a special prefix (much like vendor prefixes for certain CSS features). Older crap like IE9 and below have no CSP support.</p>
+
+<h3 id="further-readingreferences">Further Reading/References</h3>
+
+<ul>
+  <li><a href="http://www.html5rocks.com/en/tutorials/security/content-security-policy/">HTML5 Rocks - Intro to CSP</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/Security/CSP">MDN - CSP Topics</a></li>
+  <li><a href="http://content-security-policy.com/">CSP Cheatsheet</a></li>
+  <li><a href="http://engineeringblog.yelp.com/2014/09/csp_reports_at_scale.html">Yelp Engineering Blog - CSP at Scale</a></li>
+</ul>
+
+<h4 id="awesome-presentation-on-csp">Awesome Presentation on CSP</h4>
+<iframe width="300" height="169" src="http://RebootJeff.github.io//www.youtube-nocookie.com/embed/pocsv39pNXA" frameborder="0" allowfullscreen=""></iframe>
+
+<h1 id="http-strict-transport-security-hsts">HTTP Strict Transport Security (HSTS)</h1>
+
+<h3 id="browser-support-1">Browser Support</h3>
+
+<p>Most browsers get a passing grade when it comes to HSTS support –except for…</p>
+
+<p><blockquote><p>Internet Explorer doesn’t support HSTS—which means that there’s basically no such thing as a secure website in IE</p><footer><strong>Electronic Frontier Foundation (EFF),</strong> <cite><a href='https://www.eff.org/deeplinks/2014/02/websites-hsts'>Websites Must Use HSTS in Order to Be Secure</a></cite></footer></blockquote></p>
+
+<h3 id="further-readingreferences-1">Further Reading/References</h3>
+
+<ul>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/Security/HTTP_strict_transport_security">MDN - HSTS Overview</a></li>
+  <li><a href="https://www.eff.org/deeplinks/2014/02/websites-hsts">EFF - HSTS is a must</a></li>
+  <li><a href="https://www.leviathansecurity.com/blog/the-double-edged-sword-of-hsts-persistence-and-privacy/">Leviathan - Caveat for using HSTS with wildcard SSL certificates</a></li>
+</ul>
+
+<h4 id="quick-video-summary-of-mitm-and-hsts">Quick Video Summary of MITM and HSTS</h4>
+
+<iframe width="300" height="169" src="http://RebootJeff.github.io//www.youtube-nocookie.com/embed/zEV3HOuM_Vw" frameborder="0" allowfullscreen=""></iframe>
+
+<p><strong>Note:</strong> The video above provides <em>outdated</em> browser support info. Updated info can be found here: <a href="http://caniuse.com/#feat=stricttransportsecurity">CanIUse.com</a>.</p>
+
+<h1 id="bonus-security-toolkit-for-express-apps">Bonus: Security Toolkit for Express Apps</h1>
+
+<h2 id="lusca">Lusca</h2>
+
+<p>Do you use Node.js? Does your Node.js app use Express? Want some middleware to help secure that app? Perhaps you should consider using <a href="https://github.com/krakenjs/lusca">Lusca</a>, a free module created by Paypal to quickly add and configure various security features such as CSP and HSTS. I haven’t personally tried it yet, but I plan to do so soon. Their README file makes Lusca look very easy for devs to use.</p>
+
+<p>You can pick and choose which security features you want to enable. For example, if you’re already using <a href="http://angular-tips.com/blog/2014/05/json-web-tokens-introduction/">JSON Web Tokens</a>, then you may not want to use Lusca’s CSRF method while you take advantage of Lusca’s legacy browser XSS protection.</p>
+
+<p>By the way, don’t get confused: Paypal uses their own open-source, Express-based framework called KrakenJS, but Lusca works with Kraken apps <em>and</em> Express apps.</p>
+
+<h4 id="presentation-on-securing-spas-and-nodejs-apps-by-paypal-engineer">Presentation on Securing SPAs and Node.js Apps (by PayPal Engineer)</h4>
+
+<iframe width="300" height="169" src="http://RebootJeff.github.io//www.youtube-nocookie.com/embed/40-Ccq6b5lk" frameborder="0" allowfullscreen=""></iframe>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Web Security Fundamentals - Part 1: What Google Peeps Say]]></title>
@@ -106,7 +169,7 @@ app.use(lusca.csp({
 </div>
  </figure></notextile></div></p>
 
-<h2 id="https-and-https-strict-transport-security-hsts">HTTPS and HTTPS Strict Transport Security (HSTS)</h2>
+<h2 id="https-and-http-strict-transport-security-hsts">HTTPS and HTTP Strict Transport Security (HSTS)</h2>
 
 <h3 id="https">HTTPS</h3>
 
@@ -118,7 +181,7 @@ app.use(lusca.csp({
 
 <p>Furthermore, what if a user visits the site using HTTP first? It’s pretty common for people to type “somewebsite.com” in the URL bar and the browser will turn that into “http://somewebsite.com”. After they visit that URL, the site can redirect the visitor to “<strong>https</strong>://somewebsite.com”. But sadly, that initial connection via http wasn’t secure. It’s susceptible to a MITM attack.</p>
 
-<p>With HTTPS Strict Transport Security, the browser can automatically turn “somewebsite.com” into “<strong>https</strong>://somewebsite.com”. HSTS works by setting a header that tells the browser to enforce HTTPS for requests sent to the domain (“somewebsite.com”) for the next X number of seconds. Yes, you can set X to be a very large number such that HSTS is enforcing HTTPS for the next <em>year</em>, if you want to be cool like that.</p>
+<p>With HTTP Strict Transport Security, the browser can automatically turn “somewebsite.com” into “<strong>https</strong>://somewebsite.com”. HSTS works by setting a header that tells the browser to enforce HTTPS for requests sent to the domain (“somewebsite.com”) for the next X number of seconds. Yes, you can set X to be a very large number such that HSTS is enforcing HTTPS for the next <em>year</em>, if you want to be cool like that.</p>
 
 <h1 id="stay-tuned">Stay Tuned</h1>
 

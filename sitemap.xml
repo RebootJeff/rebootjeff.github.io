@@ -184,7 +184,13 @@
         <loc>
             http://RebootJeff.github.io/blog/2014/09/18/web-security-fundamentals-by-google-peeps/
         </loc>
-        <lastmod>2014-09-17T21:12:13-07:00</lastmod>
+        <lastmod>2014-09-21T23:08:44-07:00</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://RebootJeff.github.io/blog/2014/09/22/web-security-fundamentals-part-2-helpful-resources/
+        </loc>
+        <lastmod>2014-09-21T23:26:34-07:00</lastmod>
     </url>
     <url>
         <loc>http://RebootJeff.github.io/about/</loc>
@@ -196,10 +202,10 @@
     </url>
     <url>
         <loc>http://RebootJeff.github.io/</loc>
-        <lastmod>2014-09-17T21:12:13-07:00</lastmod>
+        <lastmod>2014-09-21T23:26:34-07:00</lastmod>
     </url>
     <url>
         <loc>http://RebootJeff.github.io/blog/archives/</loc>
-        <lastmod>2014-09-17T21:12:13-07:00</lastmod>
+        <lastmod>2014-09-21T23:26:34-07:00</lastmod>
     </url>
 </urlset>

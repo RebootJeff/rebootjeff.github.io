@@ -226,7 +226,7 @@ app.use(lusca.csp({
 </div>
  </figure></notextile></div>
 
-<h2 id="https-and-https-strict-transport-security-hsts">HTTPS and HTTPS Strict Transport Security (HSTS)</h2>
+<h2 id="https-and-http-strict-transport-security-hsts">HTTPS and HTTP Strict Transport Security (HSTS)</h2>
 
 <h3 id="https">HTTPS</h3>
 
@@ -238,7 +238,7 @@ app.use(lusca.csp({
 
 <p>Furthermore, what if a user visits the site using HTTP first? It’s pretty common for people to type “somewebsite.com” in the URL bar and the browser will turn that into “http://somewebsite.com”. After they visit that URL, the site can redirect the visitor to “<strong>https</strong>://somewebsite.com”. But sadly, that initial connection via http wasn’t secure. It’s susceptible to a MITM attack.</p>
 
-<p>With HTTPS Strict Transport Security, the browser can automatically turn “somewebsite.com” into “<strong>https</strong>://somewebsite.com”. HSTS works by setting a header that tells the browser to enforce HTTPS for requests sent to the domain (“somewebsite.com”) for the next X number of seconds. Yes, you can set X to be a very large number such that HSTS is enforcing HTTPS for the next <em>year</em>, if you want to be cool like that.</p>
+<p>With HTTP Strict Transport Security, the browser can automatically turn “somewebsite.com” into “<strong>https</strong>://somewebsite.com”. HSTS works by setting a header that tells the browser to enforce HTTPS for requests sent to the domain (“somewebsite.com”) for the next X number of seconds. Yes, you can set X to be a very large number such that HSTS is enforcing HTTPS for the next <em>year</em>, if you want to be cool like that.</p>
 
 <h1 id="stay-tuned">Stay Tuned</h1>
 
@@ -295,6 +295,8 @@ posted in
       <a class="pull-left" href="/blog/2014/09/02/communication-for-engineers-101-we-have-a-problem/" title="Previous Post: Communication for Engineers 101: We Have A Problem">&laquo; Communication for Engineers 101: We Have A Problem</a>
     
     
+      <a class="pull-right" href="/blog/2014/09/22/web-security-fundamentals-part-2-helpful-resources/" title="Next Post: Web Security Fundamentals - Part 2: More Info on Modern Defense">Web Security Fundamentals - Part 2: More Info on Modern Defense &raquo;</a>
+    
   </footer>
 
 </div>
@@ -318,6 +320,10 @@ posted in
     <ul class="recent_posts">
       
         <li>
+          <a href="/blog/2014/09/22/web-security-fundamentals-part-2-helpful-resources/">Web Security Fundamentals - Part 2: More Info on Modern Defense</a>
+        </li>
+      
+        <li>
           <a href="/blog/2014/09/18/web-security-fundamentals-by-google-peeps/">Web Security Fundamentals - Part 1: What Google Peeps Say</a>
         </li>
       
@@ -331,10 +337,6 @@ posted in
       
         <li>
           <a href="/blog/2014/08/14/dev-job-searching-tools-roundup-part-2/">Dev Job Searching Tools Roundup Part 2: Readyforce, The Muse, The Sourcery, AngelList, VC job listings</a>
-        </li>
-      
-        <li>
-          <a href="/blog/2014/06/28/dev-job-search-tools-part-1/">Dev Job Searching Tools Roundup Part 1: LinkedIn vs Whitetruffle vs Hired vs Dice</a>
         </li>
       
     </ul>
