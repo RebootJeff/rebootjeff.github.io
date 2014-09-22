@@ -4,7 +4,7 @@
   <title><![CDATA[Category: technical posts | RebootJeff.com]]></title>
   <link href="http://RebootJeff.github.io/blog/categories/technical-posts/atom.xml" rel="self"/>
   <link href="http://RebootJeff.github.io/"/>
-  <updated>2014-09-22T08:31:28-07:00</updated>
+  <updated>2014-09-22T12:24:24-07:00</updated>
   <id>http://RebootJeff.github.io/</id>
   <author>
     <name><![CDATA[Jeff Lee]]></name>
@@ -18,13 +18,21 @@
     <link href="http://RebootJeff.github.io/blog/2014/09/22/web-security-fundamentals-part-2-helpful-resources/"/>
     <updated>2014-09-22T08:26:00-07:00</updated>
     <id>http://RebootJeff.github.io/blog/2014/09/22/web-security-fundamentals-part-2-helpful-resources</id>
-    <content type="html"><![CDATA[<p>Last Thursday, I published <a href="/blog/2014/09/18/web-security-fundamentals-by-google-peeps/">a blog post</a> in which I summarized the main attack techniques (XSS, CSRF, and MITM) used by baddies to screw with the web. That post also covered two header-based solutions available to help you defend your site: CSP and HSTS. To supplement all that info, I am providing a bunch of articles, references, videos, and tools to help you learn more and take advantage of CSP and HSTS.</p>
+    <content type="html"><![CDATA[<p class="last-updated">Last updated: Sep 22nd, 2014 at 12:21PM PDT. I added <a href="#angularjs--csp">some info</a> about using CSP with AngularJS.</p>
+
+<p>Last Thursday, I published <a href="/blog/2014/09/18/web-security-fundamentals-by-google-peeps/">a blog post</a> in which I summarized the main attack techniques (XSS, CSRF, and MITM) used by baddies to screw with the web. That post also covered two header-based solutions available to help you defend your site: CSP and HSTS. To supplement all that info, I am providing a bunch of articles, references, videos, and tools to help you learn more and take advantage of CSP and HSTS.</p>
 
 <h1 id="content-security-policy-csp">Content Security Policy (CSP)</h1>
 
 <h3 id="browser-support">Browser Support</h3>
 
 <p>Cross-browser support for CSP is <a href="http://caniuse.com/#feat=contentsecuritypolicy">pretty good</a>. The latest versions of IE require the CSP header to use a special prefix (much like vendor prefixes for certain CSS features). Older crap like IE9 and below have no CSP support.</p>
+
+<h3 id="angularjs--csp">AngularJS + CSP</h3>
+
+<p>Sadly, CSP reduces Angular’s performance because the framework does some optimizations that run afowl of CSP. I imagine that the performance loss shouldn’t be a problem unless you have a ton of Angular expressions on the page at once (e.g., you use <code>ng-repeat</code> to generate hundreds of expressions).</p>
+
+<p>Despite these concerns, CSP is highly recommended by the <a href="https://docs.angularjs.org/misc/faq">AngularJS FAQ page</a>. For more info on how to use CSP with AngularJS, check out the <a href="https://docs.angularjs.org/api/ng/directive/ngCsp">docs for the ngCSP directive</a>.</p>
 
 <h3 id="further-readingreferences">Further Reading/References</h3>
 
