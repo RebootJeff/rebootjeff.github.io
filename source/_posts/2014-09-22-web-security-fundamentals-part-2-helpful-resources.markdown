@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Web Security Fundamentals - Part 2: More Info on CSP and HSTS Goodness"
+title: "Web Security Fundamentals - Part 2: More Info on Defense"
 date: 2014-09-22 8:26
 comments: true
 categories:
@@ -44,17 +44,19 @@ Internet Explorer doesn't support HSTS—which means that there's basically no s
 
 - [MDN - HSTS Overview](https://developer.mozilla.org/en-US/docs/Web/Security/HTTP_strict_transport_security)
 - [EFF - HSTS is a must](https://www.eff.org/deeplinks/2014/02/websites-hsts)
-- [Leviathan - Caveat for using HSTS with wildcard certs](https://www.leviathansecurity.com/blog/the-double-edged-sword-of-hsts-persistence-and-privacy/)
+- [Leviathan - Caveat for using HSTS with wildcard SSL certificates](https://www.leviathansecurity.com/blog/the-double-edged-sword-of-hsts-persistence-and-privacy/)
 
-#### Quick Video Summary of HSTS
+#### Quick Video Summary of MITM and HSTS
 
 <iframe width="300" height="169" src="//www.youtube-nocookie.com/embed/zEV3HOuM_Vw" frameborder="0" allowfullscreen></iframe>
+
+**Note:** The video above provides *outdated* browser support info. Updated info can be found here: [CanIUse.com](http://caniuse.com/#feat=stricttransportsecurity).
 
 # Bonus: Security Toolkit for Express Apps
 
 ## Lusca
 
-Do you use Node.js? Does your Node.js app use Express? Want some middleware to help secure that app? Use [Lusca](https://github.com/krakenjs/lusca), a free module created by Paypal to quickly add and configure various security features such as CSP and HSTS.
+Do you use Node.js? Does your Node.js app use Express? Want some middleware to help secure that app? Perhaps you should consider using [Lusca](https://github.com/krakenjs/lusca), a free module created by Paypal to quickly add and configure various security features such as CSP and HSTS. I haven't personally tried it yet, but I plan to do so soon. Their README file makes Lusca look very easy for devs to use.
 
 You can pick and choose which security features you want to enable. For example, if you're already using [JSON Web Tokens](http://angular-tips.com/blog/2014/05/json-web-tokens-introduction/), then you may not want to use Lusca's CSRF method while you take advantage of Lusca's legacy browser XSS protection.
 
