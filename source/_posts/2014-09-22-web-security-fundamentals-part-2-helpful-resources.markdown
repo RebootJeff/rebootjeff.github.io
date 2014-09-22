@@ -12,6 +12,8 @@ categories:
   - Express
 ---
 
+<p class="last-updated">Last updated: Sep 22nd, 2014 at 12:21PM PDT. I added <a href="#angularjs--csp">some info</a> about using CSP with AngularJS.</p>
+
 Last Thursday, I published [a blog post](/blog/2014/09/18/web-security-fundamentals-by-google-peeps/) in which I summarized the main attack techniques (XSS, CSRF, and MITM) used by baddies to screw with the web. That post also covered two header-based solutions available to help you defend your site: CSP and HSTS. To supplement all that info, I am providing a bunch of articles, references, videos, and tools to help you learn more and take advantage of CSP and HSTS.
 
 # Content Security Policy (CSP)
@@ -19,6 +21,12 @@ Last Thursday, I published [a blog post](/blog/2014/09/18/web-security-fundament
 ### Browser Support
 
 Cross-browser support for CSP is [pretty good](http://caniuse.com/#feat=contentsecuritypolicy). The latest versions of IE require the CSP header to use a special prefix (much like vendor prefixes for certain CSS features). Older crap like IE9 and below have no CSP support.
+
+### AngularJS + CSP
+
+Sadly, CSP reduces Angular's performance because the framework does some optimizations that run afowl of CSP. I imagine that the performance loss shouldn't be a problem unless you have a ton of Angular expressions on the page at once (e.g., you use `ng-repeat` to generate hundreds of expressions).
+
+Despite these concerns, CSP is highly recommended by the [AngularJS FAQ page](https://docs.angularjs.org/misc/faq). For more info on how to use CSP with AngularJS, check out the [docs for the ngCSP directive](https://docs.angularjs.org/api/ng/directive/ngCsp).
 
 ### Further Reading/References
 
