@@ -37,7 +37,7 @@ These sites gather tutorials and various resources into one place. Most of these
 
 If you're specifically trying to learn the quirks of JavaScript, then [classes like the one I teach](http://www.meetup.com/hackreactor/events/217841372/) are perfect for you. If you're not near San Francisco, you can try [online classes](https://frontendmasters.com/workshops/js-fundamentals-to-functional/) taught by the one who helped me become a teacher ([@BiancaGando](https://twitter.com/biancagando)).
 
-But these aren't free. Ya know what is free? This great gather of words about vital JS concepts: [16 JavaScript Concepts JavaScript Professionals Must Know Well](http://javascriptissexy.com/16-javascript-concepts-you-must-know-well/)
+But these aren't free. Ya know what is free? This great gathering of words describing vital JS concepts: [16 JavaScript Concepts JavaScript Professionals Must Know Well](http://javascriptissexy.com/16-javascript-concepts-you-must-know-well/)
 
 ## The Community
 
