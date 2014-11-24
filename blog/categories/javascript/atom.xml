@@ -4,7 +4,7 @@
   <title><![CDATA[Category: JavaScript | RebootJeff.com]]></title>
   <link href="http://RebootJeff.github.io/blog/categories/javascript/atom.xml" rel="self"/>
   <link href="http://RebootJeff.github.io/"/>
-  <updated>2014-09-22T12:24:24-07:00</updated>
+  <updated>2014-11-23T21:37:42-08:00</updated>
   <id>http://RebootJeff.github.io/</id>
   <author>
     <name><![CDATA[Jeff Lee]]></name>
@@ -12,6 +12,82 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[How to Start AND Continue Learning JavaScript and Web Development]]></title>
+    <link href="http://RebootJeff.github.io/blog/2014/11/23/how-to-learn-javascript-and-web-development/"/>
+    <updated>2014-11-23T21:37:00-08:00</updated>
+    <id>http://RebootJeff.github.io/blog/2014/11/23/how-to-learn-javascript-and-web-development</id>
+    <content type="html"><![CDATA[<p><img src="/images/20141123/IMG_20141116_135049sp.jpg" alt="Teaching my JS Fundamentals workshop" /></p>
+
+<p class="my-caption">Me teaching a JavaScript workshop for beginners</p>
+
+<ol>
+  <li>A couple of weeks ago, a friend asked me for advice on giving advice to beginners.</li>
+  <li>One week ago, I taught a <a href="http://www.meetup.com/hackreactor/events/217841372/">class on JavaScript</a> for beginners (or <em>advanced</em> beginners –as I like to say).</li>
+  <li>A few days ago, I recently found a <a href="https://www.quora.com/Should-I-purchase-a-Code-School-subscription-to-prepare-for-the-Hack-Reactor-interview">Quora question about getting better at JS</a>.</li>
+</ol>
+
+<p>These three moments have had my brain wondering about how to point coding newbies in the right direction. After some Googling and recalling my own past, I’ve gathered some links that will hopefully help beginners and maybe even intermediate folks. However, I should warn you that I haven’t tried out all the various services for myself.</p>
+
+<h2 id="the-basics">The Basics</h2>
+
+<p><a href="http://imgur.com/gallery/BL6Vs">This Imgur post</a> lists 6 sites that provide tutorials for getting started in coding. I’ve personally used Code School and Codecademy. They’re great, but after awhile, you’ll want to explore other options. They are not sufficient by themselves.</p>
+
+<h2 id="compilations">Compilations</h2>
+
+<p>These sites gather tutorials and various resources into one place. Most of these also give some guidance or roadmap to help beginners prioritize what to learn:</p>
+
+<ul>
+  <li><a href="http://programming-motherfucker.com/become.html">Programming, Motherf…</a>: Categorized links</li>
+  <li><a href="https://www.bento.io/">Bento</a>: Curated links packaged into manageable sections.</li>
+  <li><a href="http://www.whatsnext.info/#/javascript">What’s Next</a>: Curated links grouped by topic and difficulty.</li>
+  <li><a href="http://www.theodinproject.com/courses">The Odin Project</a>: Open-source curriculum.</li>
+</ul>
+
+<h2 id="the-fundamentals-of-js">The Fundamentals of JS</h2>
+
+<p>If you’re specifically trying to learn the quirks of JavaScript, then <a href="http://www.meetup.com/hackreactor/events/217841372/">classes like the one I teach</a> are perfect for you. If you’re not near San Francisco, you can try <a href="https://frontendmasters.com/workshops/js-fundamentals-to-functional/">online classes</a> taught by the one who helped me become a teacher (<a href="https://twitter.com/biancagando">@BiancaGando</a>).</p>
+
+<p>But these aren’t free. Ya know what is free? This great gather of words about vital JS concepts: <a href="http://javascriptissexy.com/16-javascript-concepts-you-must-know-well/">16 JavaScript Concepts JavaScript Professionals Must Know Well</a></p>
+
+<h2 id="the-community">The Community</h2>
+
+<p>San Francisco is my neck of the woods. If you’re lucky enough to be around here, then you should take advantage of the stellar community. There are lots of free meetups/events that can help you learn. If you’re not in the area, check Meetup.com for groups that provide similar events.</p>
+
+<ul>
+  <li><a href="http://www.meetup.com/tinderbox/events/212435202/">Tinderbox</a>: They often host “hack nights”, which might sound intimidating, but they’re very open-ended so you could show up and just ask for help learning a particular subject.</li>
+  <li><a href="http://www.meetup.com/SFRails/events/199733902/">SF Rails</a>: Much like Tinderbox, the SF Rails group hosts open-ended “protonight” events. The group might focus on Ruby on Rails, but you’re likely to find people who can help with any beginner or intermediate level coding topic.</li>
+</ul>
+
+<p>If you’re female, you might want to search for organizations that provide free support for women. Some examples:</p>
+
+<ul>
+  <li><a href="https://www.womenwhocode.com/">Women Who Code</a></li>
+  <li><a href="http://www.girldevelopit.com/">Girl Develop It</a></li>
+  <li><a href="http://railsbridge.org/">Railsbridge</a></li>
+  <li><a href="https://twitter.com/tevgende">Aysegul Office Hours</a></li>
+</ul>
+
+<p>Back in the day, I used <a href="http://curriculum.railsbridge.org/frontend/frontend">a free, online curriculum</a> created by Railsbridge to learn some web dev skills.</p>
+
+<p>A Hack Reactor alum recently launched a free service called Hackvard. It helps people quickly find nearby programmers who want to meet up. After a few weeks (or days?), it was renamed to <a href="http://www.codaround.com/">Codaround</a>. One of the co-founders contacted me and mentioned that Codaround might be changed to focus on helping match mentors/teachers with students/beginners. I don’t know any details, but it’s worth keeping an eye on this.</p>
+
+<h2 id="games">Games</h2>
+
+<p>Want to play while you program? Here are some sites that turn learning to code into a game:</p>
+
+<ul>
+  <li><a href="http://www.checkio.org/">CheckIO</a>: When I <a href="http://localhost:4000/blog/2013/09/02/mini-review-of-checkio/">tried them out</a>, I wasn’t impressed by their attempt to cover coding challenges in a layer of gamification. A CheckIO employee reached out to me and told me things have changed a lot. I haven’t verified his claims, but their user base was pretty large last time I checked, and their blog is very active, so they’re alive and kicking.</li>
+  <li><a href="http://codecombat.com/">Code Combat</a>: I played with this a couple months ago. It was fun, but a tad buggy. I like the idea of writing code to control your character.</li>
+  <li><a href="http://www.screeps.com/">Screeps</a>: This looks quite promising. You write code to control small armies.</li>
+</ul>
+
+<h2 id="what-else">What else?</h2>
+
+<p>Let me know in the comments (or via Twitter) if you know of any other solid resources that help people learn JavaScript and other programming skills.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Web Security Fundamentals - Part 2: More Info on Modern Defense]]></title>
@@ -547,79 +623,6 @@ console.log(queue);  <span class="comment">// output: [2,3]</span>
 <p>Stay tuned for more blog posts on data structures. My next technical blog post will examine how to implement stacks and queues from scratch (without arrays) to get a deeper understanding of push, pop, enqueue, and dequeue. I know you can’t wait for the moment I deliver on this promise. I can hear your panting through my WiFi, but please stay patient. I was busy working on a <a href="https://github.com/RebootJeff/cocompare">web app</a> and then a <a href="https://github.com/RebootJeff/phone-tag-phonegap">mobile app</a>. Now, I’m busy with job searching while possibly starting mini-project.</p>
 
 <p>On a mildly amusing, unrelated note: isn’t it funny to think about the phrase “stay tuned”? It’s getting rather archaic now that terrestrial, over-the-air TV and radio are losing popularity. Yes, these are the random things I think about as I write blog posts.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[[HackR Diary] Event: Pamela Fox on Backbone]]></title>
-    <link href="http://RebootJeff.github.io/blog/2013/10/16/hackr-diary-a-visit-from-pamela-fox-re-backbone/"/>
-    <updated>2013-10-16T07:13:00-07:00</updated>
-    <id>http://RebootJeff.github.io/blog/2013/10/16/hackr-diary-a-visit-from-pamela-fox-re-backbone</id>
-    <content type="html"><![CDATA[<p class="last-updated">Last updated on Oct 16, 2013 (see strikethrough text).</p>
-
-<blockquote class="twitter-tweet"><p><a href="https://twitter.com/pamelafox">@pamelafox</a> schooling <a href="https://twitter.com/HackReactor">@HackReactor</a> students on <a href="https://twitter.com/search?q=%23backbonejs&amp;src=hash">#backbonejs</a> <a href="http://t.co/1xRuxIEvKl">pic.twitter.com/1xRuxIEvKl</a></p>&mdash; andre (@AndrEvangelestA) <a href="https://twitter.com/AndrEvangelestA/statuses/389949525588062209">October 15, 2013</a></blockquote>
-<script async="" src="http://RebootJeff.github.io//platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-<p>Last Monday, the Hack Reactor students were treated to <a href="http://backbone-3ways.appspot.com/">a Backbone presentation</a> by <a href="http://blog.pamelafox.org/">Pamela Fox</a>. It was packed with a ton of insight. I frantically took notes on my smartphone (like a fool), so now I present to you a collection of cool cucumbers.</p>
-
-<h1 id="what-i-learned">What I Learned</h1>
-
-<h2 id="backbone-nuggets">Backbone Nuggets</h2>
-
-<ul>
-  <li>
-    <p>Region management (which you can “outsource” to the likes of <a href="http://chaplinjs.org/">Chaplin</a> or <a href="http://marionettejs.com/s">Marionette</a>) is worth checking out. Apparently, it helps limit the amount of rendering you need to do by allowing you to target specific regions of the web page.</p>
-  </li>
-  <li>
-    <p>Not all Backbone libraries are created equal! Some provide sweet functionality at the cost of depressing performance losses. The Backbone ecosystem is cool, but not entirely safe. Pamela once removed a library from Coursera’s codebase that was responsible for a <em>full second</em> of page load time.</p>
-  </li>
-  <li>
-    <p>Backbone is so flexible that you might feel like an Backbone expert one day and then feel like a noob the next day when you see someone else’s radically different and compelling usage.</p>
-  </li>
-  <li>
-    <p>Break up your views into more views. Make sibling views and nested views. No single view should be a bajillion lines of code. If you find yourself making long js files in Backbone, it’s time to split things up, my fellow noob.</p>
-  </li>
-</ul>
-
-<h2 id="general-code-related-nuggets">General Code-Related Nuggets</h2>
-
-<ul>
-  <li>
-    <p>Don’t optimize prematurely. Performant code is harder to read. Making code harder to read early on can be annoying. I wonder if Pamela is pro-<a href="/blog/2013/09/25/hackr-diary-first-impressions/#guard-operator">guard operator</a> or anti-guard operator.</p>
-  </li>
-  <li>
-    <p><a href="http://requirejs.org/">RequireJS</a> kills your foolish usage of global vars. Perhaps I should use it.</p>
-  </li>
-  <li>
-    <p>Single-page web apps can be harder to debug (than multi-page web apps?) because state gets saved across various renders. Errors can be hard to reproduce during the debugging process because there might be many user interactions that need to occur in a particular sequence to cause the error.</p>
-  </li>
-  <li>
-    <p><strong>Ask potential employers about their companies’ testing practices.</strong> How much regression testing do they do? How many tests have they created? More tests means less fear when contributing to the codebase as a fresh employee.</p>
-  </li>
-  <li>
-    <p>Making <strong>forms</strong> with Backbone (or any MV framework?) is great because forms lend themselves to the model-view-collection paradigm with ease. Forms are collections of questions, which are models, which have their own views. Each question view can draw from a set of views meant to provide a particular format (a view for a question answered by checkboxes, a view for question answered by text fields, a view for question answered by generic menu, etc). This also means Backbone is good for creating <strong>control panels</strong> for admin users (e.g., admin control panel for teacher conducting a Coursera class).</p>
-  </li>
-</ul>
-
-<h2 id="re-coursera">Re: Coursera</h2>
-
-<p>Pamela used to work for Coursera. She drew from her experiences with that company to provide a lot of context and real-world examples for the arguments she put forth in her presentation.</p>
-
-<ul>
-  <li>
-    <p>To address SEO concerns associated with single-page web apps, Coursera used <strong>Just-in-Time rendering</strong>. Coursera would detect whether or not a visitor was a search/social engine bot crawling the sit. Upon identifying the bot, Coursera servers would respond by firing up a rendered instance of the web app using Selenium. The bot would then be directed to the code produced by the rendering. This prevents the bot from crawling an HTML file that has nothing but <code>&lt;script&gt;</code> tags pulling in Backbone code. Side note: Google is not cool with the just-in-time technique. Coursera had to use a different technique for Google, but that was not disclosed during Pamela’s talk :(</p>
-  </li>
-  <li>
-    <p><del>It’s not the most organized</del> (nevermind –it’s split into easy-to-understand folders), but you can find a lot of Coursera <a href="https://github.com/coursera/forum-js-snapshot">code on Github</a> (open source, baby!)</p>
-  </li>
-  <li>
-    <p>When viewing their source code with your browser, you’ll see mostly <code>&lt;script&gt;</code> tags. There is very little <code>&lt;body&gt;</code> HTML. That’s due to extensive use of Backbone.</p>
-  </li>
-</ul>
-
-<h1 id="what-i-thought">What I Thought</h1>
-
-<p>Pamela is a fantastic speaker. What I liked most about her talk was the use of real-world examples. As a student, it’s always so informative to hear about life in the wild (so to speak). Seeing as how this was a Hack Reactor event exclusively for students, it’s hard to judge it impartially, but I’m going to go ahead and claim it was awesome.</p>
 ]]></content>
   </entry>
   

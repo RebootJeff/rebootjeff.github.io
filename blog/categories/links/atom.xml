@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: links | RebootJeff.com]]></title>
+  <link href="http://RebootJeff.github.io/blog/categories/links/atom.xml" rel="self"/>
+  <link href="http://RebootJeff.github.io/"/>
+  <updated>2014-11-23T21:37:42-08:00</updated>
+  <id>http://RebootJeff.github.io/</id>
+  <author>
+    <name><![CDATA[Jeff Lee]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[How to Start AND Continue Learning JavaScript and Web Development]]></title>
+    <link href="http://RebootJeff.github.io/blog/2014/11/23/how-to-learn-javascript-and-web-development/"/>
+    <updated>2014-11-23T21:37:00-08:00</updated>
+    <id>http://RebootJeff.github.io/blog/2014/11/23/how-to-learn-javascript-and-web-development</id>
+    <content type="html"><![CDATA[<p><img src="/images/20141123/IMG_20141116_135049sp.jpg" alt="Teaching my JS Fundamentals workshop" /></p>
+
+<p class="my-caption">Me teaching a JavaScript workshop for beginners</p>
+
+<ol>
+  <li>A couple of weeks ago, a friend asked me for advice on giving advice to beginners.</li>
+  <li>One week ago, I taught a <a href="http://www.meetup.com/hackreactor/events/217841372/">class on JavaScript</a> for beginners (or <em>advanced</em> beginners –as I like to say).</li>
+  <li>A few days ago, I recently found a <a href="https://www.quora.com/Should-I-purchase-a-Code-School-subscription-to-prepare-for-the-Hack-Reactor-interview">Quora question about getting better at JS</a>.</li>
+</ol>
+
+<p>These three moments have had my brain wondering about how to point coding newbies in the right direction. After some Googling and recalling my own past, I’ve gathered some links that will hopefully help beginners and maybe even intermediate folks. However, I should warn you that I haven’t tried out all the various services for myself.</p>
+
+<h2 id="the-basics">The Basics</h2>
+
+<p><a href="http://imgur.com/gallery/BL6Vs">This Imgur post</a> lists 6 sites that provide tutorials for getting started in coding. I’ve personally used Code School and Codecademy. They’re great, but after awhile, you’ll want to explore other options. They are not sufficient by themselves.</p>
+
+<h2 id="compilations">Compilations</h2>
+
+<p>These sites gather tutorials and various resources into one place. Most of these also give some guidance or roadmap to help beginners prioritize what to learn:</p>
+
+<ul>
+  <li><a href="http://programming-motherfucker.com/become.html">Programming, Motherf…</a>: Categorized links</li>
+  <li><a href="https://www.bento.io/">Bento</a>: Curated links packaged into manageable sections.</li>
+  <li><a href="http://www.whatsnext.info/#/javascript">What’s Next</a>: Curated links grouped by topic and difficulty.</li>
+  <li><a href="http://www.theodinproject.com/courses">The Odin Project</a>: Open-source curriculum.</li>
+</ul>
+
+<h2 id="the-fundamentals-of-js">The Fundamentals of JS</h2>
+
+<p>If you’re specifically trying to learn the quirks of JavaScript, then <a href="http://www.meetup.com/hackreactor/events/217841372/">classes like the one I teach</a> are perfect for you. If you’re not near San Francisco, you can try <a href="https://frontendmasters.com/workshops/js-fundamentals-to-functional/">online classes</a> taught by the one who helped me become a teacher (<a href="https://twitter.com/biancagando">@BiancaGando</a>).</p>
+
+<p>But these aren’t free. Ya know what is free? This great gather of words about vital JS concepts: <a href="http://javascriptissexy.com/16-javascript-concepts-you-must-know-well/">16 JavaScript Concepts JavaScript Professionals Must Know Well</a></p>
+
+<h2 id="the-community">The Community</h2>
+
+<p>San Francisco is my neck of the woods. If you’re lucky enough to be around here, then you should take advantage of the stellar community. There are lots of free meetups/events that can help you learn. If you’re not in the area, check Meetup.com for groups that provide similar events.</p>
+
+<ul>
+  <li><a href="http://www.meetup.com/tinderbox/events/212435202/">Tinderbox</a>: They often host “hack nights”, which might sound intimidating, but they’re very open-ended so you could show up and just ask for help learning a particular subject.</li>
+  <li><a href="http://www.meetup.com/SFRails/events/199733902/">SF Rails</a>: Much like Tinderbox, the SF Rails group hosts open-ended “protonight” events. The group might focus on Ruby on Rails, but you’re likely to find people who can help with any beginner or intermediate level coding topic.</li>
+</ul>
+
+<p>If you’re female, you might want to search for organizations that provide free support for women. Some examples:</p>
+
+<ul>
+  <li><a href="https://www.womenwhocode.com/">Women Who Code</a></li>
+  <li><a href="http://www.girldevelopit.com/">Girl Develop It</a></li>
+  <li><a href="http://railsbridge.org/">Railsbridge</a></li>
+  <li><a href="https://twitter.com/tevgende">Aysegul Office Hours</a></li>
+</ul>
+
+<p>Back in the day, I used <a href="http://curriculum.railsbridge.org/frontend/frontend">a free, online curriculum</a> created by Railsbridge to learn some web dev skills.</p>
+
+<p>A Hack Reactor alum recently launched a free service called Hackvard. It helps people quickly find nearby programmers who want to meet up. After a few weeks (or days?), it was renamed to <a href="http://www.codaround.com/">Codaround</a>. One of the co-founders contacted me and mentioned that Codaround might be changed to focus on helping match mentors/teachers with students/beginners. I don’t know any details, but it’s worth keeping an eye on this.</p>
+
+<h2 id="games">Games</h2>
+
+<p>Want to play while you program? Here are some sites that turn learning to code into a game:</p>
+
+<ul>
+  <li><a href="http://www.checkio.org/">CheckIO</a>: When I <a href="http://localhost:4000/blog/2013/09/02/mini-review-of-checkio/">tried them out</a>, I wasn’t impressed by their attempt to cover coding challenges in a layer of gamification. A CheckIO employee reached out to me and told me things have changed a lot. I haven’t verified his claims, but their user base was pretty large last time I checked, and their blog is very active, so they’re alive and kicking.</li>
+  <li><a href="http://codecombat.com/">Code Combat</a>: I played with this a couple months ago. It was fun, but a tad buggy. I like the idea of writing code to control your character.</li>
+  <li><a href="http://www.screeps.com/">Screeps</a>: This looks quite promising. You write code to control small armies.</li>
+</ul>
+
+<h2 id="what-else">What else?</h2>
+
+<p>Let me know in the comments (or via Twitter) if you know of any other solid resources that help people learn JavaScript and other programming skills.</p>
+]]></content>
+  </entry>
+  
+</feed>
