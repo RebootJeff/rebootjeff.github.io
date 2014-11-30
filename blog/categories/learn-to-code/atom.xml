@@ -4,7 +4,7 @@
   <title><![CDATA[Category: learn to code | RebootJeff.com]]></title>
   <link href="http://RebootJeff.github.io/blog/categories/learn-to-code/atom.xml" rel="self"/>
   <link href="http://RebootJeff.github.io/"/>
-  <updated>2014-11-23T21:59:35-08:00</updated>
+  <updated>2014-11-30T09:04:15-08:00</updated>
   <id>http://RebootJeff.github.io/</id>
   <author>
     <name><![CDATA[Jeff Lee]]></name>
@@ -21,6 +21,8 @@
     <content type="html"><![CDATA[<p><img src="/images/20141123/IMG_20141116_135049sp.jpg" alt="Teaching my JS Fundamentals workshop" /></p>
 
 <p class="my-caption">Me teaching a JavaScript workshop for beginners</p>
+
+<p class="last-updated">Last update on Nov 30, 2014 to add another great link.</p>
 
 <ol>
   <li>A couple of weeks ago, a friend asked me for advice on giving advice to beginners.</li>
@@ -43,6 +45,7 @@
   <li><a href="https://www.bento.io/">Bento</a>: Curated links packaged into manageable sections.</li>
   <li><a href="http://www.whatsnext.info/#/javascript">What’s Next</a>: Curated links grouped by topic and difficulty.</li>
   <li><a href="http://www.theodinproject.com/courses">The Odin Project</a>: Open-source curriculum.</li>
+  <li><a href="http://www.jstherightway.org/">JavaScript The Right Way</a>: Gigantic list of links covering the entire JS ecosystem (basics, patterns, testing, frameworks, news/podcasts/feeds).</li>
 </ul>
 
 <h2 id="the-fundamentals-of-js">The Fundamentals of JS</h2>
