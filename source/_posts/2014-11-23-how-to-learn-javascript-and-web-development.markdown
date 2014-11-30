@@ -14,6 +14,8 @@ categories:
 
 <p class="my-caption">Me teaching a JavaScript workshop for beginners</p>
 
+<p class="last-updated">Last update on Nov 30, 2014 to add a great link to the "Compilations" section.</p>
+
 1. A couple of weeks ago, a friend asked me for advice on giving advice to beginners.
 2. One week ago, I taught a [class on JavaScript](http://www.meetup.com/hackreactor/events/217841372/) for beginners (or *advanced* beginners --as I like to say).
 3. A few days ago, I recently found a [Quora question about getting better at JS](https://www.quora.com/Should-I-purchase-a-Code-School-subscription-to-prepare-for-the-Hack-Reactor-interview).
@@ -28,10 +30,11 @@ These three moments have had my brain wondering about how to point coding newbie
 
 These sites gather tutorials and various resources into one place. Most of these also give some guidance or roadmap to help beginners prioritize what to learn:
 
-- [Programming, Motherf...](http://programming-motherfucker.com/become.html): Categorized links
-- [Bento](https://www.bento.io/): Curated links packaged into manageable sections.
-- [What's Next](http://www.whatsnext.info/#/javascript): Curated links grouped by topic and difficulty.
-- [The Odin Project](http://www.theodinproject.com/courses): Open-source curriculum.
+- [Programming, Motherf...](http://programming-motherfucker.com/become.html): Categorized links for various languages.
+- [Bento](https://www.bento.io/): Links organized into manageable sections.
+- [What's Next](http://www.whatsnext.info/#/javascript): Links grouped by topic and difficulty.
+- [The Odin Project](http://www.theodinproject.com/courses): Open-source web dev curriculum.
+- [JavaScript The Right Way](http://www.jstherightway.org/): Links covering the entire JS ecosystem (basics, patterns, testing, frameworks, news/podcasts/feeds).
 
 ## The Fundamentals of JS
 
