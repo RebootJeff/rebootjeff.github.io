@@ -4,7 +4,7 @@
   <title><![CDATA[Category: web development | RebootJeff.com]]></title>
   <link href="http://RebootJeff.github.io/blog/categories/web-development/atom.xml" rel="self"/>
   <link href="http://RebootJeff.github.io/"/>
-  <updated>2014-11-30T09:05:56-08:00</updated>
+  <updated>2014-11-30T09:09:26-08:00</updated>
   <id>http://RebootJeff.github.io/</id>
   <author>
     <name><![CDATA[Jeff Lee]]></name>
@@ -41,11 +41,11 @@
 <p>These sites gather tutorials and various resources into one place. Most of these also give some guidance or roadmap to help beginners prioritize what to learn:</p>
 
 <ul>
-  <li><a href="http://programming-motherfucker.com/become.html">Programming, Motherf…</a>: Categorized links</li>
-  <li><a href="https://www.bento.io/">Bento</a>: Curated links packaged into manageable sections.</li>
-  <li><a href="http://www.whatsnext.info/#/javascript">What’s Next</a>: Curated links grouped by topic and difficulty.</li>
-  <li><a href="http://www.theodinproject.com/courses">The Odin Project</a>: Open-source curriculum.</li>
-  <li><a href="http://www.jstherightway.org/">JavaScript The Right Way</a>: Gigantic list of links covering the entire JS ecosystem (basics, patterns, testing, frameworks, news/podcasts/feeds).</li>
+  <li><a href="http://programming-motherfucker.com/become.html">Programming, Motherf…</a>: Categorized links for various languages.</li>
+  <li><a href="https://www.bento.io/">Bento</a>: Links organized into manageable sections.</li>
+  <li><a href="http://www.whatsnext.info/#/javascript">What’s Next</a>: Links grouped by topic and difficulty.</li>
+  <li><a href="http://www.theodinproject.com/courses">The Odin Project</a>: Open-source web dev curriculum.</li>
+  <li><a href="http://www.jstherightway.org/">JavaScript The Right Way</a>: Links covering the entire JS ecosystem (basics, patterns, testing, frameworks, news/podcasts/feeds).</li>
 </ul>
 
 <h2 id="the-fundamentals-of-js">The Fundamentals of JS</h2>

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: E2E testing | RebootJeff.com]]></title>
   <link href="http://RebootJeff.github.io/blog/categories/e2e-testing/atom.xml" rel="self"/>
   <link href="http://RebootJeff.github.io/"/>
-  <updated>2014-11-30T09:08:02-08:00</updated>
+  <updated>2014-11-30T09:09:26-08:00</updated>
   <id>http://RebootJeff.github.io/</id>
   <author>
     <name><![CDATA[Jeff Lee]]></name>
@@ -28,17 +28,21 @@
 
 <p>Here’s the problem: <strong>what if we want Protractor to click on the avatar under the fixed nav bar as seen in the screenshot above?</strong> Obviously, a human user would intuitively scroll to find an element before clicking on it. However, Protractor’s perspective is different.</p>
 
-<p>{% coderay lang:JavaScript Example A - E2E spec with potential problem %}
-describe(‘“Who to Follow” widget’, function() {
-  it(‘should include avatars that go to other Twitter profiles’, function() {
-    // get first (index 0) avatar using class-based CSS selector
-    var avatar = $$(‘.who-to-follow .avatar’).get(0);</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption class='code-header' style='margin-bottom:-5px;'><span>Example A - E2E spec with potential problem </span></figcaption>
+ <div class="CodeRay">
+  <div class="code"><pre>
+describe(<span class="error">‘</span><span class="error">“</span>Who to Follow<span class="error">”</span> widget<span class="error">’</span>, <span class="keyword">function</span>() {
+  it(<span class="error">‘</span>should include avatars that go to other Twitter profiles<span class="error">’</span>, <span class="keyword">function</span>() {
+    <span class="comment">// get first (index 0) avatar using class-based CSS selector</span>
+    <span class="keyword">var</span> avatar = <span class="predefined">$$</span>(<span class="error">‘</span>.who-to-follow .avatar<span class="error">’</span>).get(<span class="integer">0</span>);&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">p&gt;
 
-<pre><code>// Will this click always work?
+&lt;pre&gt;&lt;code&gt;</span><span class="delimiter">/</span></span>/ Will <span class="local-variable">this</span> click always work?
 avatar.click();
 
-// assertion of what to expect as a result of the click
-expect(blahBlahBlah).toBe(yadaYada);   }); }); {% endcoderay %}
+<span class="comment">// assertion of what to expect as a result of the click</span>
+expect(blahBlahBlah).toBe(yadaYada);   }); }); </pre></div>
+</div>
+ </figure></notextile></div>
 </code></pre>
 
 <p>When you use <code>.click()</code>, you might expect Protractor (or WebDriver, which serves as the underlying engine for Protractor) will try to scroll the web page until the target element is displayed before clicking. However, Protractor will only scroll until the target element is in the browser <em>viewport</em>.</p>
@@ -64,41 +68,49 @@ expect(blahBlahBlah).toBe(yadaYada);   }); }); {% endcoderay %}
 
 <p>Also, you may have noticed that <code>false</code> is passed into <code>scrollIntoView</code>. This tells the browser to scroll as far as it can in an attempt to align the bottom of the target element with the bottom of the scroll area. In other words, <strong>this solution only solves issues with fixed nav bars at the <em>top</em> of the viewport.</strong> Using <code>element.scrollIntoView(false)</code> will fail if your web app uses a fixed nav bar at the <em>bottom</em> of the viewport.</p>
 
-<p>{% coderay lang:JavaScript Example B - Solution: Helper function to align element with bottom of viewport %}
-// Inside a separate JS file that contains helper functions…</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption class='code-header' style='margin-bottom:-5px;'><span>Example B - Solution: Helper function to align element with bottom of viewport </span></figcaption>
+ <div class="CodeRay">
+  <div class="code"><pre>
+<span class="comment">// Inside a separate JS file that contains helper functions…&lt;/p&gt;</span>
 
-<p>// Syntax Option 1
+<span class="tag">&lt;p&gt;</span>// Syntax Option 1
 function scrollElemToBottomOfView(elem) {
   elem.scrollIntoView(false);
 }
 module.exports.scrollElemFinderIntoView = function(elemFinder) {
   var promise = browser.executeScript(scrollElemToBottomOfView, elemFinder);
   return promise;
-};</p>
+};<span class="tag">&lt;/p&gt;</span>
 
-<p>// Syntax Option 2
+<span class="tag">&lt;p&gt;</span>// Syntax Option 2
 module.exports.scrollElemFinderIntoView = function(elemFinder) {
   var promise = browser.executeScript(function(elem) {
     elem.scrollIntoView(false);
   }, elemFinder);
   return promise;
-};</p>
+};<span class="tag">&lt;/p&gt;</span>
 
-<p>// Syntax Option 3
-module.exports.scrollElemFinderIntoView = function(elemFinder) {
-  var promise = browser.executeScript(‘arguments[0].scrollIntoView(false)’, elemFinder);
-  return promise;
+&lt;p&gt;<span class="comment">// Syntax Option 3</span>
+module.exports.<span class="function">scrollElemFinderIntoView</span> = <span class="keyword">function</span>(elemFinder) {
+  <span class="keyword">var</span> promise = browser.executeScript(<span class="error">‘</span><span class="local-variable">arguments</span>[<span class="integer">0</span>].scrollIntoView(<span class="predefined-constant">false</span>)<span class="error">’</span>, elemFinder);
+  <span class="keyword">return</span> promise;
 };
-{% endcoderay %}</p>
+</pre></div>
+</div>
+ </figure></notextile></div></p>
 
 <p>There are 3 syntax options above because I just wanted to present a few different coding styles. As you can probably tell, <code>browser.executeScript()</code> accepts a couple of parameters. The first one is the script, the second one is the script’s parameter. The script can either be a function (technically speaking, it’s a function reference) or a string representation of the script’s body. Syntax Option #3 was inspired by a Stack Overflow answer for a very similar situation (it was for WebDriver, but it was easy to translate to Protractor).</p>
 
-<p>{% coderay lang:JavaScript Example C - Using the Solution %}
-// Somewhere inside test code…
-var helpers = require(‘../path/to/helpers’);
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption class='code-header' style='margin-bottom:-5px;'><span>Example C - Using the Solution </span></figcaption>
+ <div class="CodeRay">
+  <div class="code"><pre>
+<span class="comment">// Somewhere inside test code…</span>
+<span class="keyword">var</span> helpers = require(<span class="error">‘</span>..<span class="regexp"><span class="delimiter">/</span><span class="content">path</span><span class="delimiter">/</span></span>to/helpers<span class="error">’</span>);
 helpers.scrollElemFinderIntoView(avatar);
 avatar.click();
-{% endcoderay %}</p>
+</pre></div>
+</div>
+ </figure></notextile></div></p>
 
 <p>You may have noticed that the solution in <em>Example B</em> mentions promises, but the code in <em>Example C</em> does not use them. My understanding is that it’s not crucial to use every single promise that Protractor and WebDriverJS provide. For example, even though the <code>.click()</code> method returns a promise, you don’t see devs writing Protractor tests with <code>exampleButton.click().then(function() { ... });</code> all the time.</p>
 
