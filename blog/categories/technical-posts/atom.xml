@@ -4,7 +4,7 @@
   <title><![CDATA[Category: technical posts | RebootJeff.com]]></title>
   <link href="http://RebootJeff.github.io/blog/categories/technical-posts/atom.xml" rel="self"/>
   <link href="http://RebootJeff.github.io/"/>
-  <updated>2015-01-05T19:27:29-08:00</updated>
+  <updated>2015-01-05T20:01:14-08:00</updated>
   <id>http://RebootJeff.github.io/</id>
   <author>
     <name><![CDATA[Jeff Lee]]></name>
@@ -18,7 +18,9 @@
     <link href="http://RebootJeff.github.io/blog/2015/01/05/maybe-the-angularjs-armageddon-isnt-real/"/>
     <updated>2015-01-05T19:26:00-08:00</updated>
     <id>http://RebootJeff.github.io/blog/2015/01/05/maybe-the-angularjs-armageddon-isnt-real</id>
-    <content type="html"><![CDATA[<p>A few months ago, the JavaScript community had a rather negative <a href="https://www.quora.com/Why-are-many-developers-upset-about-the-changes-in-Angular-2-0">reaction to an announcement about Angular v2.0</a>. <em>Quick aside: my boss lost faith in Google and jumped on the ReactJS bandwagon.</em> On a <a href="http://devchat.tv/adventures-in-angular/016-aia-ng-1-3-and-2-0-with-brad-green-igor-minar-and-mi-ko-hevery">recent episode</a> of the Adventures in Angular podcast, the Angular core dev team tried to clear the air regarding the general approach for Angular 2.0 and the differences between Angular 1.3 and 2.0. The podcast is surprisingly well-done. There are 9 people included (1 of them is THE <a href="http://www.johnpapa.net/angularjs-patterns-clean-code-released/">John Papa</a>; 4 of them are Angular team members) and yet they never accidentally interrupt one another or talk over one another.</p>
+    <content type="html"><![CDATA[<p><img src="/images/20150105/AngularRIP.png" alt="RIP? AngularJS" /></p>
+
+<p>A few months ago, the JavaScript community had a rather negative <a href="https://www.quora.com/Why-are-many-developers-upset-about-the-changes-in-Angular-2-0">reaction to an announcement about Angular v2.0</a>. <em>Quick aside: my boss lost faith in Google and jumped on the ReactJS bandwagon.</em> On a <a href="http://devchat.tv/adventures-in-angular/016-aia-ng-1-3-and-2-0-with-brad-green-igor-minar-and-mi-ko-hevery">recent episode</a> of the Adventures in Angular podcast, the Angular core dev team tried to clear the air regarding the general approach for Angular 2.0 and the differences between Angular 1.3 and 2.0. The podcast is surprisingly well-done. There are 9 people included (1 of them is THE <a href="http://www.johnpapa.net/angularjs-patterns-clean-code-released/">John Papa</a>; 4 of them are Angular team members) and yet they never accidentally interrupt one another or talk over one another.</p>
 
 <p>I’ve listed some interesting bits I gleaned:</p>
 
