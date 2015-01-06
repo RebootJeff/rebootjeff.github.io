@@ -9,6 +9,8 @@ categories:
   - technical posts
 ---
 
+![RIP? AngularJS](/images/20150105/AngularRIP.png)
+
 A few months ago, the JavaScript community had a rather negative [reaction to an announcement about Angular v2.0](https://www.quora.com/Why-are-many-developers-upset-about-the-changes-in-Angular-2-0). *Quick aside: my boss lost faith in Google and jumped on the ReactJS bandwagon.* On a [recent episode](http://devchat.tv/adventures-in-angular/016-aia-ng-1-3-and-2-0-with-brad-green-igor-minar-and-mi-ko-hevery) of the Adventures in Angular podcast, the Angular core dev team tried to clear the air regarding the general approach for Angular 2.0 and the differences between Angular 1.3 and 2.0. The podcast is surprisingly well-done. There are 9 people included (1 of them is THE [John Papa](http://www.johnpapa.net/angularjs-patterns-clean-code-released/); 4 of them are Angular team members) and yet they never accidentally interrupt one another or talk over one another.
 
 I've listed some interesting bits I gleaned:
