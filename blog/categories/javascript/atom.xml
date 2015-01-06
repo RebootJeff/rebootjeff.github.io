@@ -4,7 +4,7 @@
   <title><![CDATA[Category: JavaScript | RebootJeff.com]]></title>
   <link href="http://RebootJeff.github.io/blog/categories/javascript/atom.xml" rel="self"/>
   <link href="http://RebootJeff.github.io/"/>
-  <updated>2014-11-30T09:09:26-08:00</updated>
+  <updated>2015-01-05T19:25:26-08:00</updated>
   <id>http://RebootJeff.github.io/</id>
   <author>
     <name><![CDATA[Jeff Lee]]></name>
@@ -12,6 +12,74 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[The Myth of the AngularJS Armageddon]]></title>
+    <link href="http://RebootJeff.github.io/blog/2015/01/05/maybe-the-angularjs-armageddon-isnt-real/"/>
+    <updated>2015-01-05T19:26:00-08:00</updated>
+    <id>http://RebootJeff.github.io/blog/2015/01/05/maybe-the-angularjs-armageddon-isnt-real</id>
+    <content type="html"><![CDATA[<p>A few months ago, the JavaScript community had a rather negative <a href="https://www.quora.com/Why-are-many-developers-upset-about-the-changes-in-Angular-2-0">reaction to an announcement about Angular v2.0</a>. <em>Quick aside: my boss lost faith in Google and jumped on the ReactJS bandwagon.</em> On a <a href="http://devchat.tv/adventures-in-angular/016-aia-ng-1-3-and-2-0-with-brad-green-igor-minar-and-mi-ko-hevery">recent episode</a> of the Adventures in Angular podcast, the Angular core dev team tried to clear the air regarding the general approach for Angular 2.0 and the differences between Angular 1.3 and 2.0. The podcast is surprisingly well-done. There are 9 people included (1 of them is THE <a href="http://www.johnpapa.net/angularjs-patterns-clean-code-released/">John Papa</a>; 4 of them are Angular team members) and yet they never accidentally interrupt one another or talk over one another.</p>
+
+<p>I’ve listed some interesting bits I gleaned:</p>
+
+<h3 id="some-misunderstandings">Some Misunderstandings</h3>
+
+<ul>
+  <li>It sounds like there might actually be a migration path for 1.3 to 2.0. There is no path yet because 2.0 isn’t close enough to completion to judge. The idea of <strong>“no migration path” was a misunderstanding</strong>.</li>
+  <li>It is not necessary to use AtScript for Angular 2.0 (and it is not necessary to use Angular 2.0 for AtScript).</li>
+</ul>
+
+<h3 id="some-rationale">Some Rationale</h3>
+
+<ul>
+  <li>They’re trying to re-make their routing module in a way that will be easier to use.</li>
+  <li>Some things are disappearing for logical reasons:
+    <ul>
+      <li><code>$scope</code> is disappearing because they realized “controller as” syntax is best, so they want to revamp that system completely to avoid common <code>$scope</code> confusion.</li>
+      <li>Code for directives will be totally different because <a href="https://d2eip9sf3oo6c2.cloudfront.net/pdf/egghead-io-directive-definition-object-cheat-sheet.pdf">Directive Definition Objects</a> as they currently stand are ugly and kind of convoluted (e.g., most directives don’t need a linking function, they just need a controller function –kind of like how most views/templates should use <code>controllerAs</code> instead of <code>$scope</code>).</li>
+      <li>Angular’s module system will disappear because ECMAScript6 will have a native module system. By embracing the new ES6 system, it will make Angular 2.0 more compatible with future non-Angular modules (much like how all back-end JS embraces Node’s system).</li>
+    </ul>
+  </li>
+  <li>There are a few <strong>key motivations behind Angular 2.0’s design:</strong>
+    <ul>
+      <li>Mobile friendliness.</li>
+      <li>Fixing mistakes they’ve made when creating Angular 1.x (e.g., getting rid of $scope).</li>
+      <li>Simplicity and performance.</li>
+      <li>Embracing future tech like ES6 and web components.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="some-points-of-emphasis">Some Points of Emphasis</h3>
+
+<ul>
+  <li>The new syntax looks crazy, but the Angular team claims that it will be much harder to convert a non-Angular 1.3 app to 2.0 than to convert Angular 1.3 to 2.0 –which sounds like a no-brainer, but as you can imagine, they’re really trying to emphasize that you should not abandon 1.3 just because 2.0 looks so different now.</li>
+  <li>They emphasized how Angular 2.0 is still in a state of flux, so it’s too early to make business decisions based on it.</li>
+  <li>The Angular team claims they are making changes for practical reasons, not purely academic reasons. In other words, they have examined how current Angular apps are made, deployed, etc. They don’t just think about what would be cool, they do think about what would be truly helpful/useful.</li>
+</ul>
+
+<h3 id="my-takeaways">My Takeaways</h3>
+
+<p>I know I sound like I’m defending the Angular team. To a certain extent, that’s true (I need to try some React.js one day to hopefully reduce my bias for Angular), but it really comes down to:</p>
+
+<ul>
+  <li>They’re converting to ES6, which means it will probably be necessary to use a transpiler to convert core Angular 2.0 code to ES5 for older browsers.
+    <ul>
+      <li>Ideally, this won’t be a huge problem for evergreen (self-updating) browsers. Maybe they will support key ES6 features by the time Angular 2.0 becomes “mainstream” (in the same sense that Angular 1.3 is currently “mainstream”). Or maybe I’m dreaming :p.</li>
+    </ul>
+  </li>
+  <li>There were some huge misunderstandings when Angular 2.0 was announced (re: lack of migration path, role of AtScript, etc).</li>
+  <li>It’s too early to really tell what Angular 2.0 will look like when it’s released.</li>
+  <li>When Angular 2.0 does arrive, it may look syntactically different, but it will do many of the same, <em>Angulary</em> things (i.e., the Angular “flavor” of MVC, augmenting HTML markup, enabling powerful custom components, etc).</li>
+</ul>
+
+<h3 id="newsflash-angular-1x-is-not-dead">Newsflash! Angular 1.x is NOT Dead!</h3>
+
+<p><strong>Angular 1.4 is <a href="http://angularjs.blogspot.com/2014/12/planning-angular-14.html">coming in Spring 2015</a>.</strong></p>
+
+<p>News of 1.4 landed <em>after</em> the podcast aired. It will bring the new router I mentioned earlier, a “first class” I18N system, slick-looking documentation (using <a href="https://material.angularjs.org/">Angular-Material</a>), and other goodies –including some breaking changes. :D</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[How to Start AND Continue Learning JavaScript and Web Development]]></title>
@@ -536,96 +604,6 @@ console.log(myCoolQueue.size());      <span class="comment">// output: 2</span>
 </pre></div>
 </div>
  </figure></notextile></div></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Queues &amp; Stacks in JavaScript (with Batman and Superman)]]></title>
-    <link href="http://RebootJeff.github.io/blog/2013/12/26/queues-and-stacks-in-javascript/"/>
-    <updated>2013-12-26T15:54:00-08:00</updated>
-    <id>http://RebootJeff.github.io/blog/2013/12/26/queues-and-stacks-in-javascript</id>
-    <content type="html"><![CDATA[<p>The proverbial “they” say (says?) it’s good to write technical blog posts. Blog posts that get down and dirty with the nitty gritty of low-level, in-the-weeds details and nuances accompanied by jargon, acronyms, and name-dropping are all the rage in the dev community. More importantly, I really want to help beginners learn programming, so I may as well teach some basic concepts via my blog. (Later on, I hope to contribute more to <a href="http://www.theodinproject.com/">The Odin Project</a>, which is a free, open-source, online resource for beginners created by a very cool individual.)</p>
-
-<p>So as my first foray in technical blog posts, I present to all loveable noobs: the introductory data structures known as stacks and queues.</p>
-
-<h1 id="whats-a-stack">What’s a Stack?</h1>
-
-<p>A stack is a collection of items (or data) that follow a particular rule: the last item to join the collection is the first one to leave.</p>
-
-<ul>
-  <li>The <strong>L</strong>ast data <strong>I</strong>n is the <strong>F</strong>irst data <strong>O</strong>ut (<strong>LIFO</strong>)</li>
-  <li>Add data: <strong>push</strong></li>
-  <li>Remove data: <strong>pop</strong></li>
-  <li>Data enters and exits at the same end of the stack (at the <strong>top</strong>)</li>
-</ul>
-
-<h2 id="simple-implementation">Simple implementation</h2>
-
-<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption class='code-header' style='margin-bottom:-5px;'><span>Simple Stack (array-based example)</span><a href='http://stackoverflow.com/questions/1590247/how-do-you-implement-a-stack-and-a-queue-in-javascript'>Stack Overflow </a></figcaption> <div class="CodeRay">
-  <div class="code"><pre>
-<span class="keyword">var</span> stack = [];
-stack.push(<span class="integer">1</span>);  <span class="comment">// use the push method provided by the Array prototype</span>
-stack.push(<span class="integer">2</span>);
-stack.push(<span class="integer">3</span>);
-console.log(stack);  <span class="comment">// output: [1,2,3]&lt;/p&gt;</span>
-
-&lt;p&gt;<span class="keyword">var</span> popped = stack.pop();  <span class="comment">// use the pop method provided by the Array prototype</span>
-console.log(popped);  <span class="comment">// output: 3</span>
-console.log(stack);  <span class="comment">// output: [1,2]</span>
-</pre></div>
-</div>
- </figure></notextile></div></p>
-
-<h2 id="ridiculous-analogy">Ridiculous analogy</h2>
-
-<p>Imagine you’ve found an old, abandoned well. You think to yourself, “Bruce Wayne fell down a well when he was a kid, and I wanna be just like the Batman, so I’m gonna fall down this sweet well!” But you hesitate because …it’s a well, and wells are scary, ya know?</p>
-
-<p>Unbeknownst to you, <a href="http://batman.wikia.com/wiki/Harley_Quinn">your arch-nemesis</a> is out walking her <a href="http://batman.wikia.com/wiki/Bud_and_Lou">pet hyenas</a>. She spots you, and quickly runs over to shove you into the well. She giggles in delight at the sight of your plight. She then hides and waits for more people to walk near the well so she can <strong>push</strong> them too.</p>
-
-<p>It just so happens that this well has the diameter of a single person’s width. When someone is pushed into the well, they land on top of the last person who fell in before them. This creates a <strong>stack</strong> of people and some rather pronounced discomfort. Eventually, there are 5 people in this deep-yet-thin well, and you decide it’s time to call for help to get rescued.</p>
-
-<p>To your disappointment, the not-so-dark knight named Superman arrives to pull you well-dwellers out (one at a time). The last one pushed into the well is the first to <strong>pop</strong> out. <em>LIFO.</em></p>
-
-<h1 id="whats-a-queue">What’s a Queue?</h1>
-
-<p>A queue is a collection of items (or data) that follow the real-life “rules” of waiting in a line of people: the first item to join the collection is the first one to leave the collection.</p>
-
-<ul>
-  <li>The <strong>F</strong>irst data <strong>I</strong>n is the <strong>F</strong>irst data <strong>O</strong>ut (<strong>FIFO</strong>)</li>
-  <li>Add data: <strong>enqueue</strong></li>
-  <li>Remove data: <strong>dequeue</strong></li>
-  <li>Data exits at the: <strong>head</strong> of the queue</li>
-  <li>Data enters at the: <strong>tail</strong> of the queue</li>
-</ul>
-
-<h2 id="simple-implementation-1">Simple implementation</h2>
-
-<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption class='code-header' style='margin-bottom:-5px;'><span>Simple Queue (array-based example)</span><a href='http://stackoverflow.com/questions/1590247/how-do-you-implement-a-stack-and-a-queue-in-javascript'>Stack Overflow </a></figcaption> <div class="CodeRay">
-  <div class="code"><pre>
-<span class="keyword">var</span> queue = [];
-queue.push(<span class="integer">1</span>);  <span class="comment">// “enqueue”</span>
-queue.push(<span class="integer">2</span>);
-queue.push(<span class="integer">3</span>);
-console.log(queue);  <span class="comment">// output: [1,2,3]&lt;/p&gt;</span>
-
-&lt;p&gt;<span class="keyword">var</span> dequeued = queue.shift();  <span class="comment">// “dequeue”</span>
-console.log(dequeued);  <span class="comment">// output: 1</span>
-console.log(queue);  <span class="comment">// output: [2,3]</span>
-</pre></div>
-</div>
- </figure></notextile></div></p>
-
-<h2 id="ridiculous-analogy-1">Ridiculous analogy</h2>
-
-<p>Batman decides to do some in-the-field combat training. He drops into the middle of a gang meeting and yells, “I’ve sent your buddies to jail. I know you want revenge. Catch me if you can. P.S. I’m Batman!” Why does the cowled hero do this? We all know Batman is a smart dude, and sure enough, he has a clever plan. He lures the baddies who are running after him into a narrow alley.</p>
-
-<p>The gangsters can only approach Batman one at a time to fit in the narrow alley, so they form a line (aka <strong>queue</strong>). The gangster at the front of the line is the first gangster knocked out (aka <strong>dequeued</strong>) by Batman (<strong>first in; first out</strong>). You might even say that Batman’s fists aim for the <strong>head</strong> of the queue and foolish gangsters enter at the <strong>tail</strong> of the line of doom.</p>
-
-<h1 id="the-story-will-continue">The Story Will Continue</h1>
-
-<p>Stay tuned for more blog posts on data structures. My next technical blog post will examine how to implement stacks and queues from scratch (without arrays) to get a deeper understanding of push, pop, enqueue, and dequeue. I know you can’t wait for the moment I deliver on this promise. I can hear your panting through my WiFi, but please stay patient. I was busy working on a <a href="https://github.com/RebootJeff/cocompare">web app</a> and then a <a href="https://github.com/RebootJeff/phone-tag-phonegap">mobile app</a>. Now, I’m busy with job searching while possibly starting mini-project.</p>
-
-<p>On a mildly amusing, unrelated note: isn’t it funny to think about the phrase “stay tuned”? It’s getting rather archaic now that terrestrial, over-the-air TV and radio are losing popularity. Yes, these are the random things I think about as I write blog posts.</p>
 ]]></content>
   </entry>
   

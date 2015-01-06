@@ -4,7 +4,7 @@
   <title><![CDATA[Category: technical posts | RebootJeff.com]]></title>
   <link href="http://RebootJeff.github.io/blog/categories/technical-posts/atom.xml" rel="self"/>
   <link href="http://RebootJeff.github.io/"/>
-  <updated>2014-11-30T09:09:26-08:00</updated>
+  <updated>2015-01-05T19:25:26-08:00</updated>
   <id>http://RebootJeff.github.io/</id>
   <author>
     <name><![CDATA[Jeff Lee]]></name>
@@ -12,6 +12,74 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[The Myth of the AngularJS Armageddon]]></title>
+    <link href="http://RebootJeff.github.io/blog/2015/01/05/maybe-the-angularjs-armageddon-isnt-real/"/>
+    <updated>2015-01-05T19:26:00-08:00</updated>
+    <id>http://RebootJeff.github.io/blog/2015/01/05/maybe-the-angularjs-armageddon-isnt-real</id>
+    <content type="html"><![CDATA[<p>A few months ago, the JavaScript community had a rather negative <a href="https://www.quora.com/Why-are-many-developers-upset-about-the-changes-in-Angular-2-0">reaction to an announcement about Angular v2.0</a>. <em>Quick aside: my boss lost faith in Google and jumped on the ReactJS bandwagon.</em> On a <a href="http://devchat.tv/adventures-in-angular/016-aia-ng-1-3-and-2-0-with-brad-green-igor-minar-and-mi-ko-hevery">recent episode</a> of the Adventures in Angular podcast, the Angular core dev team tried to clear the air regarding the general approach for Angular 2.0 and the differences between Angular 1.3 and 2.0. The podcast is surprisingly well-done. There are 9 people included (1 of them is THE <a href="http://www.johnpapa.net/angularjs-patterns-clean-code-released/">John Papa</a>; 4 of them are Angular team members) and yet they never accidentally interrupt one another or talk over one another.</p>
+
+<p>I’ve listed some interesting bits I gleaned:</p>
+
+<h3 id="some-misunderstandings">Some Misunderstandings</h3>
+
+<ul>
+  <li>It sounds like there might actually be a migration path for 1.3 to 2.0. There is no path yet because 2.0 isn’t close enough to completion to judge. The idea of <strong>“no migration path” was a misunderstanding</strong>.</li>
+  <li>It is not necessary to use AtScript for Angular 2.0 (and it is not necessary to use Angular 2.0 for AtScript).</li>
+</ul>
+
+<h3 id="some-rationale">Some Rationale</h3>
+
+<ul>
+  <li>They’re trying to re-make their routing module in a way that will be easier to use.</li>
+  <li>Some things are disappearing for logical reasons:
+    <ul>
+      <li><code>$scope</code> is disappearing because they realized “controller as” syntax is best, so they want to revamp that system completely to avoid common <code>$scope</code> confusion.</li>
+      <li>Code for directives will be totally different because <a href="https://d2eip9sf3oo6c2.cloudfront.net/pdf/egghead-io-directive-definition-object-cheat-sheet.pdf">Directive Definition Objects</a> as they currently stand are ugly and kind of convoluted (e.g., most directives don’t need a linking function, they just need a controller function –kind of like how most views/templates should use <code>controllerAs</code> instead of <code>$scope</code>).</li>
+      <li>Angular’s module system will disappear because ECMAScript6 will have a native module system. By embracing the new ES6 system, it will make Angular 2.0 more compatible with future non-Angular modules (much like how all back-end JS embraces Node’s system).</li>
+    </ul>
+  </li>
+  <li>There are a few <strong>key motivations behind Angular 2.0’s design:</strong>
+    <ul>
+      <li>Mobile friendliness.</li>
+      <li>Fixing mistakes they’ve made when creating Angular 1.x (e.g., getting rid of $scope).</li>
+      <li>Simplicity and performance.</li>
+      <li>Embracing future tech like ES6 and web components.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="some-points-of-emphasis">Some Points of Emphasis</h3>
+
+<ul>
+  <li>The new syntax looks crazy, but the Angular team claims that it will be much harder to convert a non-Angular 1.3 app to 2.0 than to convert Angular 1.3 to 2.0 –which sounds like a no-brainer, but as you can imagine, they’re really trying to emphasize that you should not abandon 1.3 just because 2.0 looks so different now.</li>
+  <li>They emphasized how Angular 2.0 is still in a state of flux, so it’s too early to make business decisions based on it.</li>
+  <li>The Angular team claims they are making changes for practical reasons, not purely academic reasons. In other words, they have examined how current Angular apps are made, deployed, etc. They don’t just think about what would be cool, they do think about what would be truly helpful/useful.</li>
+</ul>
+
+<h3 id="my-takeaways">My Takeaways</h3>
+
+<p>I know I sound like I’m defending the Angular team. To a certain extent, that’s true (I need to try some React.js one day to hopefully reduce my bias for Angular), but it really comes down to:</p>
+
+<ul>
+  <li>They’re converting to ES6, which means it will probably be necessary to use a transpiler to convert core Angular 2.0 code to ES5 for older browsers.
+    <ul>
+      <li>Ideally, this won’t be a huge problem for evergreen (self-updating) browsers. Maybe they will support key ES6 features by the time Angular 2.0 becomes “mainstream” (in the same sense that Angular 1.3 is currently “mainstream”). Or maybe I’m dreaming :p.</li>
+    </ul>
+  </li>
+  <li>There were some huge misunderstandings when Angular 2.0 was announced (re: lack of migration path, role of AtScript, etc).</li>
+  <li>It’s too early to really tell what Angular 2.0 will look like when it’s released.</li>
+  <li>When Angular 2.0 does arrive, it may look syntactically different, but it will do many of the same, <em>Angulary</em> things (i.e., the Angular “flavor” of MVC, augmenting HTML markup, enabling powerful custom components, etc).</li>
+</ul>
+
+<h3 id="newsflash-angular-1x-is-not-dead">Newsflash! Angular 1.x is NOT Dead!</h3>
+
+<p><strong>Angular 1.4 is <a href="http://angularjs.blogspot.com/2014/12/planning-angular-14.html">coming in Spring 2015</a>.</strong></p>
+
+<p>News of 1.4 landed <em>after</em> the podcast aired. It will bring the new router I mentioned earlier, a “first class” I18N system, slick-looking documentation (using <a href="https://material.angularjs.org/">Angular-Material</a>), and other goodies –including some breaking changes. :D</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Web Security Fundamentals - Part 2: More Info on Modern Defense]]></title>
@@ -409,269 +477,6 @@ export PATH=$PATH:/home/myUserName/Development/adt-bundle-linux-x86&lt;/em&gt;64
 <p>To me, tech enthusiasts need to look at the bigger picture: imagine a world where mobile web apps dominate rather than having native apps dominate the smartphone landscape. Firefox OS is actually trying to embrace JavaScript, but why does it matter? Consider the differences in distribution. Forget app marketplaces. Forget Apple acting as a gatekeeper for iOS apps. Imagine that your app is as available as any other website. Web apps are becoming more and more powerful. There are new frameworks (e.g., <a href="http://famo.us/">Famous</a> and another brand new one that I can’t remember at the moment) that make it possible to replicate the oohlala of the much-lauded Yahoo! Weather native app.</p>
 
 <p>The problem is that web apps for mobile devices can’t yet access native notifications. This is a huge obstacle for mobile web app dominance. Companies want their apps to have notifications to enhance user engagement and fight churn. Users want their apps to have notifications because it makes smartphones more helpful (although the line between helpful and spammy seems slimmer than my chances of becoming a guitar master). That said, web apps are getting better at using phones’ GPS sensors, cameras, accelerometers, etc. Hopefully the barrier between native app and mobile web app will continue to whither and eventually die like smallpox. In the words of unoriginal coaches every where, “WE CAN DO IT!”</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Queues & Stacks from Scratch with JS Patterns]]></title>
-    <link href="http://RebootJeff.github.io/blog/2014/01/04/queues-stacks-javascript-class-patterns/"/>
-    <updated>2014-01-04T16:04:00-08:00</updated>
-    <id>http://RebootJeff.github.io/blog/2014/01/04/queues-stacks-javascript-class-patterns</id>
-    <content type="html"><![CDATA[<p>In my <a href="/blog/2013/12/26/queues-and-stacks-in-javascript/">previous post</a>, I began my quest to help noob programmers by introducing the basic computer science topic of data structures. I provided a quick overview of queues and stacks, so please read all about ‘em before engaging your eyeballs with this blog post. This time around, we’ll check out four different patterns for creating classes in JavaScript while learning how to build stacks and queues from scratch.</p>
-
-<p>Before we go, I should warn you that I’m going to focus on describing the class instantiation patterns rather than thoroughly explaining the implementation of the data structures. Just keep in mind that we are going to explore building stacks and queues with objects rather than arrays. More specifically, we will use a property called <code>storage</code> that is an object, not an array. Now I know what you’re pondering.</p>
-
-<blockquote>
-  <p>Why?</p>
-</blockquote>
-
-<p>That is a beautiful question. Please ask it all the time (but please don’t troll me by leaving “Why?” in the comments section of this blog post). In this case, the answer to “Why?” may be a tad disatisfying. The answer is “because we can”, but don’t worry! It’ll be fun. Now, let’s start instantiating some motherhugging classes.</p>
-
-<h1 id="functional-instantiation">1. Functional Instantiation</h1>
-
-<p>The simplest way to implement classes is with a “maker” function that creates a new instance of the class and returns that instance so it can be stored as a variable. The new instance is just like any other JavaScript object. It can have properties that store relevant information about the instance (e.g., with a <code>Car</code> class, instances might have a <code>price</code> property). It can also have properties that store functions. These functions serve as <strong>methods</strong> that are tightly associated with the instance.</p>
-
-<h4 id="characteristics">Characteristics</h4>
-
-<ul>
-  <li>Creates new copies of the same functions when creating a new instance of the same class. This lack of reuse takes up more memory and can leave an unsavory taste in some programmers’ mouths.</li>
-  <li>There is no quick way to modify all instances of the class after they’ve been created. This will become more clear after examining the other instantiation tactics.</li>
-  <li>Private variables can be created/used by harnessing <strong>closure scope</strong> superpowers, but I won’t get into that today.</li>
-  <li>If you understand JavaScript functions and objects, then you can understand classes implemented via functional instantiation (other instantiation techniques require knowledge of <code>this</code> and/or <code>new</code>).</li>
-  <li>Could be used to create callable instances (i.e., the class could return a function rather than an object filled with properties).</li>
-</ul>
-
-<h4 id="example-code">Example code:</h4>
-<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption class='code-header' style='margin-bottom:-5px;'><span>Stack from scratch (functional instantiation) </span></figcaption>
- <div class="CodeRay">
-  <div class="code"><pre>
-<span class="keyword">var</span> <span class="function">makeStack</span> = <span class="keyword">function</span>(comment){
-  <span class="comment">// Provide private variables in closure scope</span>
-  <span class="keyword">var</span> size = <span class="integer">0</span>;
-  <span class="keyword">var</span> storage = {};
-  <span class="keyword">var</span> instance = {};  <span class="comment">// Start building an instance of Stack class&lt;/p&gt;</span>
-
-<span class="tag">&lt;p&gt;</span>// Add extra properties for the hell of it
-  instance.annotation = comment;<span class="tag">&lt;/p&gt;</span>
-
-<span class="tag">&lt;p&gt;</span>// Add functions to the instance to serve as methods
-  // (they will provide an interface to the stack’s storage)
-  instance.push = function(data){
-    storage[size] = data;
-    size++;
-  };<span class="tag">&lt;/p&gt;</span>
-
-<span class="tag">&lt;p&gt;</span>instance.pop = function(){
-    if(size <span class="entity">&amp;gt;</span> 0){  // Only perform pop actions if the stack has data
-      size–;
-      var data = storage[size];
-      delete storage[size];  // Don’t forget to delete from storage!
-      return data;
-    }
-  };<span class="tag">&lt;/p&gt;</span>
-
-<span class="tag">&lt;p&gt;</span>instance.size = function(){
-    return size;
-  };<span class="tag">&lt;/p&gt;</span>
-
-<span class="tag">&lt;p&gt;</span>return instance;
-};<span class="tag">&lt;/p&gt;</span>
-
-&lt;p&gt;<span class="comment">// Create and use an instance of the Stack class</span>
-<span class="keyword">var</span> myStack = makeStack(<span class="error">“</span>I<span class="error">’</span>m a stack! Whoa.<span class="error">”</span>);
-myStack.push(<span class="integer">1</span>);              <span class="comment">// myStack stores 1</span>
-myStack.push(<span class="error">‘</span>b<span class="error">’</span>);            <span class="comment">// myStack stores 1 and ‘b’</span>
-myStack.push(<span class="integer">3</span>);              <span class="comment">// myStack stores 1, ‘b’, and 3</span>
-console.log(myStack.pop());   <span class="comment">// logs 3</span>
-console.log(myStack.size());  <span class="comment">// logs 2</span>
-</pre></div>
-</div>
- </figure></notextile></div></p>
-
-<h1 id="functional-instantiation-wshared-methods">2. Functional Instantiation w/Shared Methods</h1>
-
-<p>By utilizing an object filled with methods, several classes can be created that have the same methods without creating new copies of said methods. The classes will use their own function references to refer to the same set of shared methods. Therefore, using shared methods eats up less memory than functional instantiation <em>without</em> shared methods.</p>
-
-<h4 id="characteristics-1">Characteristics</h4>
-
-<ul>
-  <li>Reuses functions (which conserves memory) by getting function references from a utility such as <a href="http://underscorejs.org/#extend">Underscore.js</a>’s <code>_.extend(instance,methods)</code>.</li>
-  <li>Retains the same benefits as functional instantiation <em>without</em> shared methods.</li>
-</ul>
-
-<h4 id="example-code-1">Example code:</h4>
-<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption class='code-header' style='margin-bottom:-5px;'><span>Queue from scratch (functional instantiation with shared methods) </span></figcaption>
- <div class="CodeRay">
-  <div class="code"><pre>
-<span class="keyword">var</span> <span class="function">makeQueue</span> = <span class="keyword">function</span>(queueName, comment){&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">p&gt;
-
-&lt;p&gt;</span><span class="delimiter">/</span></span>/ You can use object literal notation <span class="keyword">for</span> &lt;code&gt;instance&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">code&gt; (instead of dot notation),
-  </span><span class="delimiter">/</span></span>/ but then we have to use &lt;code&gt;<span class="local-variable">this</span>&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">code&gt; and we lose the privacy of closure scope
-  </span><span class="delimiter">/</span></span>/ (e.g., <span class="tag">&lt;code&gt;</span>storage<span class="tag">&lt;/code&gt;</span> is no longer <span class="reserved">private</span>), so <span class="local-variable">this</span> kind of sucks.
-  <span class="keyword">var</span> instance = {
-    <span class="key">name</span>: queueName,
-    <span class="key">annotation</span>: comment,
-    <span class="key">head</span>: <span class="integer">0</span>,
-    <span class="key">tail</span>: <span class="integer">0</span>,
-    <span class="key">storage</span>: {}
-  };&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">p&gt;
-
-&lt;p&gt;</span><span class="delimiter">/</span></span>/ The _.extend() <span class="keyword">function</span> <span class="function">is</span> provided by the Underscore.js library
-  _.extend(instance, sharedQueueMethods);&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">p&gt;
-
-&lt;p&gt;return instance;
-};&lt;</span><span class="delimiter">/</span></span>p&gt;
-
-<span class="tag">&lt;p&gt;</span>// The object below stores methods that could be shared with other classes
-var sharedQueueMethods = {
-  enqueue: function(data){
-    this.storage[this.tail] = data;
-    this.tail++;
-    // The tail points to the next EMPTY “spot” for data to be stored
-    // it does NOT point to the last OCCUPIED “spot” in the storage
-  },
-  dequeue: function(){
-    if(this.head <span class="entity">&amp;lt;</span>= this.tail){  // Check the queue’s size
-      var data = this.storage[this.head];<span class="tag">&lt;/p&gt;</span>
-
-<span class="tag">&lt;pre&gt;</span><span class="tag">&lt;code&gt;</span>  // Deleting is even more important for queues than for stacks
-  // (memory leaks are a bigger threat for queues)
-  delete this.storage[this.head];
-  this.head++;
-  return data;
-}   },   size: function(){
-return this.tail - this.head;   } };
-<span class="tag">&lt;/code&gt;</span><span class="tag">&lt;/pre&gt;</span>
-
-&lt;p&gt;<span class="comment">// Create and use an instance of the Queue class:</span>
-<span class="keyword">var</span> myCoolQueue = makeQueue(<span class="error">“</span>Jeff<span class="error">’</span>s Queue<span class="error">”</span>,<span class="error">’</span>Hello, world!<span class="error">’</span>);
-myCoolQueue.enqueue(<span class="error">‘</span>a<span class="error">’</span>);             <span class="comment">// myCoolQueue stores ‘a’</span>
-myCoolQueue.enqueue(<span class="integer">2</span>);               <span class="comment">// myCoolQueue stores ‘a’ and 2</span>
-myCoolQueue.enqueue(<span class="error">‘</span>c<span class="error">’</span>);             <span class="comment">// myCoolQueue stores ‘a’, 2, and ‘c’</span>
-console.log(myCoolQueue.dequeue());   <span class="comment">// output: ‘a’</span>
-console.log(myCoolQueue.size());      <span class="comment">// output: 2</span>
-</pre></div>
-</div>
- </figure></notextile></div></p>
-
-<h1 id="prototypal-instantiation">3. Prototypal Instantiation</h1>
-
-<p>The key to prototypal instantiation is the use of <code>Object.create()</code> to utilize shared methods. Unlike functional instantiation with shared methods, there is no need to use an <code>extend()</code> function.</p>
-
-<p>While it’s possible to use a prototype’s functions with <code>Object.create(ExampleClass.prototype);</code>, it’s also possible to (ironically) avoid the word “prototype” altogether by using <code>Object.create(sharedMethods);</code>.</p>
-
-<h4 id="characteristics-2">Characteristics</h4>
-
-<ul>
-  <li>Reuses shared functions via <code>Object.create(Example.prototype)</code> or <code>Object.create(objectOfFunctions)</code>.</li>
-  <li>Unlike functional instantiation, function references are shared. Each instance of the class does not get its own function references that point to the shared methods. This saves even more memory (although it is a very small improvement).</li>
-  <li>Unlike functional instantiation, there is no way to use closure scope to enforce privacy of variables.</li>
-  <li>Variables are stored on the returned object (aka <code>instance</code>), which means the shared stack methods need to use the keyword <code>this</code> to access the necessary data. It’s not a huge bummer, but if you’re a beginner, then <code>this</code> can be a confusing concept.</li>
-  <li>Can use prototype chains for dynamic method modification and inheritance (subclasses!).</li>
-</ul>
-
-<h4 id="example-code-2">Example code:</h4>
-<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption class='code-header' style='margin-bottom:-5px;'><span>Stack from scratch (prototypal instantiation) </span></figcaption>
- <div class="CodeRay">
-  <div class="code"><pre>
-<span class="keyword">var</span> <span class="function">makeStack</span> = <span class="keyword">function</span>(comment){
-  <span class="keyword">var</span> instance = Object.create(sharedStackMethods);
-  instance.annotation = comment;
-  instance.size = <span class="integer">0</span>;
-  instance.storage = {};&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">p&gt;
-
-&lt;p&gt;return instance;
-};&lt;</span><span class="delimiter">/</span></span>p&gt;
-
-<span class="tag">&lt;p&gt;</span>var sharedStackMethods = {
-  push: function(data){
-    this.storage[this.size] = data;
-    this.size++;
-  },
-  pop: function(){
-    if(this.size <span class="entity">&amp;gt;</span> 0){
-      this.size–;
-      var data = this.storage[this.size];
-      delete this.storage[this.size];
-      return data;
-    }
-  },
-  size: function(){
-    return this.size;
-  }
-};<span class="tag">&lt;/p&gt;</span>
-
-&lt;p&gt;<span class="comment">// Create an instance of the Stack class:</span>
-<span class="keyword">var</span> myStack = makeStack(<span class="error">“</span>I<span class="error">’</span>m a stack! Whoa.<span class="error">”</span>);
-<span class="comment">// Using the instance doesn’t change from one class pattern to another</span>
-myStack.push(<span class="integer">1</span>);              <span class="comment">// myStack stores 1</span>
-myStack.push(<span class="error">‘</span>b<span class="error">’</span>);            <span class="comment">// myStack stores 1 and ‘b’</span>
-myStack.push(<span class="integer">3</span>);              <span class="comment">// myStack stores 1, ‘b’, and 3</span>
-console.log(myStack.pop());   <span class="comment">// logs 3</span>
-console.log(myStack.size());  <span class="comment">// logs 2</span>
-</pre></div>
-</div>
- </figure></notextile></div></p>
-
-<h1 id="pseudoclassical-instantiation">4. Pseudoclassical Instantiation</h1>
-
-<p>This is the most commonly used class pattern. It’s also the most complicated because, in addition to using the <code>this</code> keyword, it involves two concepts that the other class patterns don’t require: the <code>new</code> keyword and prototypes. Prototypal instantiation uses prototypes via <code>Object.create()</code>, but pseudoclassical instantiation needs you to explicitly type out <code>ClassName.prototype.methodName</code>, which is just another source of confusion for beginners.</p>
-
-<p>Also, it’s the only class pattern that uses a true <a href="http://en.wikipedia.org/wiki/Constructor_(object-oriented_programming)">constructor</a> for creating new instances. Other class patterns use instantiator functions that explicitly return a new instance. The pseudoclassical class pattern does not perform such a return thanks to the <code>new</code> keyword.</p>
-
-<h4 id="characteristics-3">Characteristics</h4>
-
-<ul>
-  <li>Uses prototype chains to provide methods to instances of a class.</li>
-  <li>Allows for dynamic method modification and inheritance (subclasses!) via prototype chains.</li>
-  <li>Refers to the instance that’s being created with the <code>this</code> keyword.</li>
-  <li>Needs the <code>new</code> keyword to make an instance of a class.</li>
-  <li>Has a true constructor that is named with a noun rather than a verb. The name is capitalized.</li>
-  <li>Is the most commonly used class pattern.</li>
-</ul>
-
-<h4 id="example-code-3">Example code:</h4>
-<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption class='code-header' style='margin-bottom:-5px;'><span>Queue from scratch (pseudoclassical instantiation) </span></figcaption>
- <div class="CodeRay">
-  <div class="code"><pre>
-<span class="comment">// Class name is now a noun (no verb), and it starts with an upper case letter</span>
-<span class="keyword">var</span> <span class="function">Queue</span> = <span class="keyword">function</span>(queueName, comment){
-  <span class="comment">// Notice the use of ‘this’</span>
-  <span class="local-variable">this</span>.name = queueName,
-  <span class="local-variable">this</span>.annotation = comment,
-  <span class="local-variable">this</span>.head: <span class="integer">0</span>,
-  <span class="local-variable">this</span>.tail: <span class="integer">0</span>,
-  <span class="local-variable">this</span>.storage: {}
-};&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">p&gt;
-
-&lt;p&gt;</span><span class="delimiter">/</span></span>/ Notice the use of <span class="error">‘</span>prototype<span class="error">’</span>
-Queue.prototype.<span class="function">enqueue</span> = <span class="keyword">function</span>(data){
-  <span class="local-variable">this</span>.storage[<span class="local-variable">this</span>.tail] = data;
-  <span class="local-variable">this</span>.tail++;
-};
-Queue.prototype.<span class="function">dequeue</span> = <span class="keyword">function</span>(){
-  <span class="keyword">if</span>(<span class="local-variable">this</span>.head &amp;lt;= <span class="local-variable">this</span>.tail){
-    <span class="keyword">var</span> data = <span class="local-variable">this</span>.storage[<span class="local-variable">this</span>.head];
-    <span class="keyword">delete</span> <span class="local-variable">this</span>.storage[<span class="local-variable">this</span>.head];
-    <span class="local-variable">this</span>.head++;
-    <span class="keyword">return</span> data;
-  }
-};
-Queue.prototype.<span class="function">size</span> = <span class="keyword">function</span>(){
-  <span class="keyword">return</span> <span class="local-variable">this</span>.tail - <span class="local-variable">this</span>.head;
-};&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">p&gt;
-
-&lt;p&gt;</span><span class="delimiter">/</span></span>/ Create an instance of the Stack <span class="reserved">class</span> by using the <span class="error">‘</span><span class="keyword">new</span><span class="error">’</span> keyword:
-<span class="keyword">var</span> myCoolQueue = <span class="keyword">new</span> Queue(<span class="error">“</span>Jeff<span class="error">’</span>s Queue<span class="error">”</span>,<span class="error">”</span>The grass is always greener, but just as hard to mowww!<span class="error">”</span>);
-<span class="comment">// Use the instance just like in previous examples</span>
-myCoolQueue.enqueue(<span class="error">‘</span>a<span class="error">’</span>);             <span class="comment">// myCoolQueue stores ‘a’</span>
-myCoolQueue.enqueue(<span class="integer">2</span>);               <span class="comment">// myCoolQueue stores ‘a’ and 2</span>
-myCoolQueue.enqueue(<span class="error">‘</span>c<span class="error">’</span>);             <span class="comment">// myCoolQueue stores ‘a’, 2, and ‘c’</span>
-console.log(myCoolQueue.dequeue());   <span class="comment">// output: ‘a’</span>
-console.log(myCoolQueue.size());      <span class="comment">// output: 2</span>
-</pre></div>
-</div>
- </figure></notextile></div></p>
 ]]></content>
   </entry>
   
