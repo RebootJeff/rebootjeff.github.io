@@ -32,7 +32,7 @@ When an employer/recruiter asks you this question, you should answer, "YES OF CO
 - How often do people actually take vacations?
 
 - What are some examples of your company's culture in play?
-  - e.g., It's one thing to say the company is open and friendly, but what are examples of that happening?
+  - e.g., It's one thing to say the company promotes diversity, but what are examples of that happening?
 - What aspects of your company help shape the cuture?
 
 - Older/bigger companies: One of the stereotypical downsides of working at a more established company is that employees don't feel like they have a big enough impact. How do you ensure employees can make substantive contributions rather than feel like a tiny cog in a big machine?
@@ -45,7 +45,7 @@ When an employer/recruiter asks you this question, you should answer, "YES OF CO
 - How big are the engineering teams?
   - Will team size change a lot (scaling up)?
 - Do employees ever change teams/roles?
-- Exactly who would I be working with?
+- Exactly whom would I be working with?
     - What are their roles, backgrounds, etc?
 
 - How does user feedback ultimately end up reaching the engineers?
@@ -53,6 +53,7 @@ When an employer/recruiter asks you this question, you should answer, "YES OF CO
   - What is the structure of a typical sprint?
   - How often do engineers deploy?
   - Do they use Agile SCRUM, Kanban, etc?
+- In an average week, how many meetings would I need to attend?
 
 # Engineering Culture
 
