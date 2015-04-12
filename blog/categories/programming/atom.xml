@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: teaching | RebootJeff.com]]></title>
-  <link href="http://RebootJeff.github.io/blog/categories/teaching/atom.xml" rel="self"/>
+  <title><![CDATA[Category: programming | RebootJeff.com]]></title>
+  <link href="http://RebootJeff.github.io/blog/categories/programming/atom.xml" rel="self"/>
   <link href="http://RebootJeff.github.io/"/>
   <updated>2015-04-11T17:54:06-07:00</updated>
   <id>http://RebootJeff.github.io/</id>
