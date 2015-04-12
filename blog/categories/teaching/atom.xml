@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: teaching | RebootJeff.com]]></title>
+  <link href="http://RebootJeff.github.io/blog/categories/teaching/atom.xml" rel="self"/>
+  <link href="http://RebootJeff.github.io/"/>
+  <updated>2015-04-11T17:30:11-07:00</updated>
+  <id>http://RebootJeff.github.io/</id>
+  <author>
+    <name><![CDATA[Jeff Lee]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[How to Help a Beginner Debug]]></title>
+    <link href="http://RebootJeff.github.io/blog/2015/04/11/how-to-help-a-beginner-debug/"/>
+    <updated>2015-04-11T16:21:00-07:00</updated>
+    <id>http://RebootJeff.github.io/blog/2015/04/11/how-to-help-a-beginner-debug</id>
+    <content type="html"><![CDATA[<p><img src="/images/teachingatmks.jpg" alt="Teaching" /></p>
+
+<p>When I teach JavaScript workshops, I usually have teaching assistants who can help students complete classwork exercises. The TAs mostly focus on helping beginners debug their code rather than just giving solutions and walking through them.</p>
+
+<p>Here’s the advice that I give TAs:</p>
+
+<h2 id="dear-teaching-assistant">Dear Teaching Assistant</h2>
+
+<p>Remember that you should avoid giving away direct solutions. When students ask for your help, they will often not know exactly what puzzles them. They will often just ask, “Can you help me?” rather than asking something more precise such as, “Why doesn’t this function return the value I expect?”</p>
+
+<p>Your role is to understand the particular problem that the student is facing. Try to find out what precise questions should be asked and relay them to the student. This might require vocalizing your step-by-step thought process for solving the problem, and finding the first step that confuses the student.</p>
+
+<p>When debugging, try to debug the student’s code one step at a time. Explain those steps so the student can learn how to debug (e.g., where to put <code>console.log</code>s, which variables need to be checked, etc).</p>
+
+<p>Never give the hungry student a cooked fish. Teach the student how to use a fishing pole, a gutting knife, a cooking fire, and Chrome DevTools.</p>
+
+<p>Do everything you can to show a student <em>how</em> to get the solution. Showing a student the actual solution is the last resort. At that point, you should not only show the student the solution, but walk through it and ask the student questions to test their understanding.</p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,330 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>How to Help a Beginner Debug - RebootJeff.com</title>
+  <meta name="author" content="Jeff Lee">
+  <link rel="author" href="humans.txt">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  
+    
+  
+  <meta name="description" content="When I teach JavaScript workshops, I usually have teaching assistants who can help students complete classwork exercises. The TAs mostly focus on &hellip;">
+  
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://RebootJeff.github.io/blog/2015/04/11/how-to-help-a-beginner-debug/">
+  <link href="/favicon.png" rel="icon">
+  <link href='http://fonts.googleapis.com/css?family=Cantarell' rel='stylesheet' type='text/css'>
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="RebootJeff.com" type="application/atom+xml">
+  <meta name="og:type" content="website" />
+  <meta name="og:site_name" content="RebootJeff.com" />
+  <meta name="og:title" content="How to Help a Beginner Debug" />
+  <meta name="og:description" content="When I teach JavaScript workshops, I usually have teaching assistants who can help students complete classwork exercises. The TAs mostly focus on &hellip;" />
+  <meta name="og:url" content="http://RebootJeff.github.io/blog/2015/04/11/how-to-help-a-beginner-debug/"/>
+  <meta name="url" content="http://RebootJeff.github.io/blog/2015/04/11/how-to-help-a-beginner-debug/">
+  
+  <meta name="subject" content="teaching"/>
+  <meta name="category" content="teaching"/>
+  
+  <meta name="distribution" content="global">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-44084259-1']);
+    _gaq.push(['_setDomainName','github.io']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <nav role="navigation"><div class="navbar">
+  <div class="navbar-inner">
+    <a class="brand" href="/">RebootJeff.com</a>
+    <ul class="nav">
+      <li><a href="/">Home</a></li>
+      <!-- BEGIN custom nav here because importing custom/navigation.html at the bottom (by default) shows up looking weird -->
+      <li><a href="/about">About</a></li>
+      <li><a href="/portfolio">Portfolio</a></li>
+      <li><a href="/blog/categories/my-media">Media</a></li>
+      <li><a href="/blog/archives">Archives</a></li>
+    </ul>
+    <ul class="nav" data-subscription="rss">
+      <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+      
+    </ul>
+      
+    <form class="navbar-form" action="http://google.com/search" method="get">
+      <fieldset role="search">
+        <input type="hidden" name="q" value="site:RebootJeff.github.io" />
+        <input class="span2" type="text" name="q" results="0" placeholder="Search"/>
+      </fieldset>
+    </form>
+      
+    <!-- I have customized the navigation.html file OUTSIDE of the custom folder because the part I wanted to customize comes BEFORE the `include` statement that invokes the custom/navigation.html file (aka the file you're reading now). -->
+  </div>
+</div>
+</nav>
+  <div class="wrapper_single">
+    <div class="container">
+      <div class="row">
+        <article class="span8 offset2" role="article">
+          <div class="article-format">
+
+  <header>
+    
+      <h1 class="entry-title">How to Help a Beginner Debug</h1>
+    
+    
+      <p class="meta">
+        
+  
+
+
+  
+    <span class="byline author vcard">by <span class="fn">Jeff Lee</span></span>
+  
+
+ - 
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-04-11T16:21:00-07:00" pubdate data-updated="true">Apr 11<span>th</span>, 2015</time> - 
+        
+
+posted in
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/teaching/'>teaching</a>
+  
+</span>
+
+
+        
+         | <a href="#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><img src="/images/teachingatmks.jpg" alt="Teaching" /></p>
+
+<p>When I teach JavaScript workshops, I usually have teaching assistants who can help students complete classwork exercises. The TAs mostly focus on helping beginners debug their code rather than just giving solutions and walking through them.</p>
+
+<p>Here’s the advice that I give TAs:</p>
+
+<h2 id="dear-teaching-assistant">Dear Teaching Assistant</h2>
+
+<p>Remember that you should avoid giving away direct solutions. When students ask for your help, they will often not know exactly what puzzles them. They will often just ask, “Can you help me?” rather than asking something more precise such as, “Why doesn’t this function return the value I expect?”</p>
+
+<p>Your role is to understand the particular problem that the student is facing. Try to find out what precise questions should be asked and relay them to the student. This might require vocalizing your step-by-step thought process for solving the problem, and finding the first step that confuses the student.</p>
+
+<p>When debugging, try to debug the student’s code one step at a time. Explain those steps so the student can learn how to debug (e.g., where to put <code>console.log</code>s, which variables need to be checked, etc).</p>
+
+<p>Never give the hungry student a cooked fish. Teach the student how to use a fishing pole, a gutting knife, a cooking fire, and Chrome DevTools.</p>
+
+<p>Do everything you can to show a student <em>how</em> to get the solution. Showing a student the actual solution is the last resort. At that point, you should not only show the student the solution, but walk through it and ask the student questions to test their understanding.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+
+  
+    <span class="byline author vcard">by <span class="fn">Jeff Lee</span></span>
+  
+
+ - 
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-04-11T16:21:00-07:00" pubdate data-updated="true">Apr 11<span>th</span>, 2015</time> - 
+      
+
+posted in
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/teaching/'>teaching</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://RebootJeff.github.io/blog/2015/04/11/how-to-help-a-beginner-debug/" data-via="rebootjeff" data-counturl="http://RebootJeff.github.io/blog/2015/04/11/how-to-help-a-beginner-debug/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    
+      <a class="pull-left" href="/blog/2015/01/05/maybe-the-angularjs-armageddon-isnt-real/" title="Previous Post: The Myth of the AngularJS Armageddon">&laquo; The Myth of the AngularJS Armageddon</a>
+    
+    
+  </footer>
+
+</div>
+
+          
+            <div class="article-format">
+              <h1>Comments</h1>
+              <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+            </div>
+          
+        </article>
+      </div>
+    </div>
+  </div>
+  <div id="footer-widgets">
+  <div class="container">
+    <div class="row">
+  <div class="span3">
+    <h2>Recent Posts</h2>
+    <ul class="recent_posts">
+      
+        <li>
+          <a href="/blog/2015/04/11/how-to-help-a-beginner-debug/">How to Help a Beginner Debug</a>
+        </li>
+      
+        <li>
+          <a href="/blog/2015/01/05/maybe-the-angularjs-armageddon-isnt-real/">The Myth of the AngularJS Armageddon</a>
+        </li>
+      
+        <li>
+          <a href="/blog/2014/11/23/how-to-learn-javascript-and-web-development/">How to Start AND Continue Learning JavaScript and Web Development</a>
+        </li>
+      
+        <li>
+          <a href="/blog/2014/09/22/web-security-fundamentals-part-2-helpful-resources/">Web Security Fundamentals - Part 2: More Info on Modern Defense</a>
+        </li>
+      
+        <li>
+          <a href="/blog/2014/09/18/web-security-fundamentals-by-google-peeps/">Web Security Fundamentals - Part 1: What Google Peeps Say</a>
+        </li>
+      
+    </ul>
+    <h2><a href="/blog/archives">Archives</a></h2>
+  </div>
+  <div class="span3">
+    
+
+  </div>
+  <!-- DISABLE Twitter and Found On footer widgets for now
+  <div class="span4">
+    
+  </div>
+  <div class="span2">
+    
+  -->
+  <div class="span6" id="footer_notes">
+    <p>
+      <a href="/">RebootJeff.com</a> - Copyright &copy; 2015 - Jeff Lee
+    </p>
+    <p>
+      Powered by <a href="http://octopress.org/">Octopress</a>. Made pretty with Foxslide theme by <a href="http://www.AdrianArtiles.com">Adrian Artiles</a>. Theme heavily tweaked by me. It took forever T.T
+    </p>
+  </div>
+</div>
+
+  </div>
+</div>
+<!-- DISABLE footer beyond footer-widgets
+<footer class="footer">
+  <div class="container">
+  	
+  </div>
+</footer>
+-->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+<script>window.jQuery || document.write('<script src="/javascripts/libs/jquery-1.7.2.min.js" type="text/javascript"><\/script>')</script>
+<script src="/javascripts/libs/bootstrap.min.js" type="text/javascript"></script>
+<script src="/javascripts/jquery.tweet.js" type="text/javascript"></script>
+<script src="/javascripts/jquery.instagram.js" type="text/javascript"></script>
+<script src="/javascripts/libs/jquery.masonry.min.js" type="text/javascript"></script>
+<script src="/javascripts/custom.js" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'rebootjeff';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://RebootJeff.github.io/blog/2015/04/11/how-to-help-a-beginner-debug/';
+        var disqus_url = 'http://RebootJeff.github.io/blog/2015/04/11/how-to-help-a-beginner-debug/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+</body>
+</html>
