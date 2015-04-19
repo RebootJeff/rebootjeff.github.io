@@ -1,18 +1,23 @@
 ---
 layout: post
 title: "How to Talk While Coding and Whiteboarding in 7 Steps"
-date: 2015-03-15 21:13
+date: 2015-04-19 21:13
 comments: true
 categories:
   - communication skills
   - Communication for Engineers
   - career development
   - dev job search
+  - JavaScript
 ---
+
+![Photo of whiteboarding](/images/20150419/startupstock_whiteboarding.jpg)
 
 In [my first article on Communication For Engineers](/blog/2014/09/02/communication-for-engineers-101-we-have-a-problem/), I ranted about my disappointment surrounding engineering and communication skills. I ended that blog post with a list of communication-related topics that I promised to write about. Instead of addressing any of those topics (sorry!), this post will talk about how software engineers can improve their communication while coding collaboratively or while solving coding challenges for a job interview.
 
-#### There are up to 7 steps for smoother communication while coding:
+**Warning:** JavaScript is my specialty, so some of the advice below is JS-centric, and all code examples are written in JS.
+
+#### I cooked up 7 steps for how to discuss code smoothly:
 
 1. Draw the situation
 2. Ask clarifying questions
@@ -22,7 +27,7 @@ In [my first article on Communication For Engineers](/blog/2014/09/02/communicat
 6. Walkthrough
 7. Testing
 
-Notice that these steps don't magically provide a complete guide to actually solving problems. For example, they don't tell you which data structures to use. Instead, these steps show you how to communicate better as you solve the challenge. They help you talk with your interviewer or colleague about the problem space, your initial impressions, your ability to break down the problem into sub-problems, and your personal quality assurance process.
+Notice that these steps don't magically provide a complete guide to actually solving problems. For example, they don't tell you which data structures to use. Instead, these steps show you how to communicate better as you solve a challenge. They help you talk with your interviewer or colleague about the problem space, your initial impressions, your ability to break down the problem into sub-problems, and your quality assurance process.
 
 # The 7 Steps Explained
 
@@ -54,8 +59,8 @@ In other words, write modular code by using a breadth-first mindset. Everyone kn
 // Challenge (aka Prompt) - Write a function that determines the average number of
 // retweets for a given user after a given cut off date.
 
-// Phase 1 - Psuedocode
-function processTweets(username, cutOffDate) {
+// Phase 0 - Psuedocode (optional)
+function getRetweetAverage(username, cutOffDate) {
   /**
    * 1. Fetch tweets via Twiter API
    * 2. Filter tweets based on date
@@ -64,25 +69,22 @@ function processTweets(username, cutOffDate) {
   **/
 }
 
-// Phase 2 - Coding with declarative helper functions
-function processTweets(username, cutOffDate) {
+// Phase 1 - Coding with declarative helper functions
+function getRetweetAverage(username, cutOffDate) {
   return fetchTweets(username).then(function(tweets) {
     var recentTweets = filterTweetsByDate(tweets, cutOffDate);
     return calculateAverageRetweets(recentTweets);
   });
 }
 
-// Phase 3 - Implement low-level helper functions
+// Phase 2 - Implement low-level helper functions
 function fetchTweets(username) {
   // Let's pretend we're using AngularJS's HTTP request service, which uses promises.
-  return $http({
-    method: 'GET',
-    url: 'https://api.twitter.com/1.1/statuses/user_timeline.json',
-    params: {
-      screen_name: username,
-      count: 200 // FYI this is the max allowed by Twitter's API
-    }
-  });
+  var params = {
+    screen_name: username,
+    count: 200 // FYI this is the max allowed by Twitter's API
+  };
+  return $http.get('https://api.twitter.com/1.1/statuses/user_timeline.json', params);
 }
 
 function filterTweetsByDate(tweets, cutOffDate) {
@@ -101,25 +103,36 @@ function calculateAverageRetweets(tweets) {
 }
 {% endcoderay %}
 
+In the example above, you should write code one "phase" at a time. Starting with psuedocode is optional, but it might be a good idea to at least verbalize it if you don't plan on writing it. Then write the code in a declarative style as seen in "Phase 1". Lastly, flesh out the functionality of your solution by writing the code that actually makes things work.
+
+By the way, I've never actually used the Twitter API, so the example code might not follow best practices or might not take into account how it actually behaves. For instance, maybe the API accepts a parameter to do the date filtering for you.
+
 ## 5. Refactoring Your First Draft
 
-- Promises (e.g., `Q.all`)
-- Readability
-  - Rename variables
-  - Replace looping over collections with map, filter, reduce, etc when possible
-- Extract code into helper functions
-- Add error-handling/logging for professional bonus points
-- Rewrite in another style (e.g., Functional Programming vs Object-Oriented Programming) for bonus points
+Once you've reached the point where the code seems to solve the challenge at hand, it's time to refactor. If you're writing under pressure in an interview situation, it's likely that you haven't written the cleanest code. If you're writing without any pressure, it's still good to refactor your first draft into a more readable/maintainable variant. Here's a list of tips for deciding what to refactor:
+
+- **Improve readability** by fixing indentation, whitespace, names, etc.
+  - **Rename variables** into semantic names. It's tempting to use very short variable names during interviews because you feel pressure to finish quickly. Consider renaming them into more recognizable names to show your audience that you know how to write maintainable code that potential co-workers could easily read.
+  - **Replace loops** with a `map`, `filter`, `reduce`, etc where possible.
+  - **Consider naming anonymous functions** if they have potential to be re-used as a helper.
+- **Extract code** into helper functions. It's very common for interview candidates to inadvertently write long functions. Even if you tried to follow Breadth-First Coding in Step 4, you may have slipped.
+- **Double-check promises** and look for opportunities to reduce boilerplate and anonymous functions.
+  - **Check return statements** to ensure that your promises will resolve to the correct values (and that the segments of your promise chain will pass correct values).
+  - **Use promise library helpers** such as `all`, `spread`, etc where possible.
+- **Add error-handling**/logging for professional bonus points.
+- **Rewrite in another style** (e.g., Functional Programming vs Object-Oriented Programming) for massive bonus points.
+
+Admittedly, this Step 5 isn't as directly related to communication as other steps. It's mostly focused on improving your code. However, there is still a communiation-related opportunity here. As you are refactoring, verbalize your intentions. Discuss what you want to improve before you improve it. Explain the rationale behind the improvements. Mentions the pros and cons of your code without the improvements and with the improvements (i.e., before vs after).
 
 ## 6. Walking Through Your Answer
 
-- Demonstrate detailed understanding of your own code
-  - Demonstrate you know how the computer will run your code
-- Call out any particularly good parts, weak parts, potential bottle-necks, etc.
+At this point, your code should be presentable. By following the previous steps, your audience should already have a solid, high-level understanding of your code. So now it's time to give a detailed walkthrough.
+
+Explain any nuances, use precise terminology, and expound on any interesting control flow or references (e.g., closures in JavaScript). You can also mention any implications regarding speed, memory, I/O, security, etc. But overall, your goal is to describe your code *in detail*.
 
 ## 7. Testing Your Answer
 
-You might actually want to perform this step before step 6, but it depends on how you roll. After you've gotten to the point where you have a solution that seems to be good, take a minute to describe how you'd make sure. When you normally write code on your own, you of course test out your code by running it with various inputs or circumstances. Describe them; verbalize them.
+You might actually want to perform this step before step 6, but it depends on how you roll. After you've gotten to the point where you have a solution that seems to be good, take a minute to describe how you'd make sure it's robust. When you normally write code on your own, you of course test it out by running it with various inputs or circumstances. Describe them; verbalize them.
 
 For example, if you're writing a function with some parameters, you'll probably run the function with a bunch of different arguments with different values and maybe different datatypes.
 
@@ -136,4 +149,4 @@ I came up with these 7 steps based on...
 - [advice from Hack Reactor instructors](/blog/2014/05/11/hackr-diary-weeks-11-12-and-beyond/)
 - my experience interviewing for jobs
 - my experience conducting a handful of mock interviews for Hack Reactor grads
-- my experience conducting 10+ (so far) interviews where I work
+- my experience conducting interviews where I work (10+ so far)
