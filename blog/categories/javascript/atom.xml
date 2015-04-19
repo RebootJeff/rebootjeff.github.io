@@ -4,7 +4,7 @@
   <title><![CDATA[Category: JavaScript | RebootJeff.com]]></title>
   <link href="http://RebootJeff.github.io/blog/categories/javascript/atom.xml" rel="self"/>
   <link href="http://RebootJeff.github.io/"/>
-  <updated>2015-04-11T17:54:06-07:00</updated>
+  <updated>2015-04-19T14:35:44-07:00</updated>
   <id>http://RebootJeff.github.io/</id>
   <author>
     <name><![CDATA[Jeff Lee]]></name>
@@ -12,6 +12,171 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[How to Talk While Coding and Whiteboarding in 7 Steps]]></title>
+    <link href="http://RebootJeff.github.io/blog/2015/04/19/how-to-talk-while-coding-and-whiteboarding/"/>
+    <updated>2015-04-19T21:13:00-07:00</updated>
+    <id>http://RebootJeff.github.io/blog/2015/04/19/how-to-talk-while-coding-and-whiteboarding</id>
+    <content type="html"><![CDATA[<p><img src="/images/20150419/startupstock_whiteboarding.jpg" alt="Photo of whiteboarding" /></p>
+
+<p>In <a href="/blog/2014/09/02/communication-for-engineers-101-we-have-a-problem/">my first article on Communication For Engineers</a>, I ranted about my disappointment surrounding engineering and communication skills. I ended that blog post with a list of communication-related topics that I promised to write about. Instead of addressing any of those topics (sorry!), this post will talk about how software engineers can improve their communication while coding collaboratively or while solving coding challenges for a job interview.</p>
+
+<p><strong>Warning:</strong> JavaScript is my specialty, so some of the advice below is JS-centric, and all code examples are written in JS.</p>
+
+<h4 id="i-cooked-up-7-steps-for-how-to-discuss-code-smoothly">I cooked up 7 steps for how to discuss code smoothly:</h4>
+
+<ol>
+  <li>Draw the situation</li>
+  <li>Ask clarifying questions</li>
+  <li>Explain approach</li>
+  <li>Breadth-first coding</li>
+  <li>Refactor</li>
+  <li>Walkthrough</li>
+  <li>Testing</li>
+</ol>
+
+<p>Notice that these steps don’t magically provide a complete guide to actually solving problems. For example, they don’t tell you which data structures to use. Instead, these steps show you how to communicate better as you solve a challenge. They help you talk with your interviewer or colleague about the problem space, your initial impressions, your ability to break down the problem into sub-problems, and your quality assurance process.</p>
+
+<h1 id="the-7-steps-explained">The 7 Steps Explained</h1>
+
+<h2 id="drawing-the-problem">1. Drawing the Problem</h2>
+<p>Admittedly, this step could be optional. Drawing is best for folks who work well with visuals. But even if you’re not an artist, you should still consider drawing a diagram or picture of the problem because visuals tend to be effective tools for communicating complex subjects and situations. For example, data structures are usually easier to talk about after you draw them out.</p>
+
+<p>Furthermore, you might reveal certain questions through the act of drawing. At the very least, <strong>drawing stuff out can help an interviewer follow you</strong>. Going back to the data structures example: imagine you’re supposed to work with a binary tree. It’s easier to talk about it if you draw a tree and point to nodes rather than just saying, “First we will process the root node, then we will go to the left child and do blah blah blah. At that point, depending on the value, we might go down to the child’s child or we might…”</p>
+
+<p>By the way, <strong>you don’t have to stick to drawing pictures</strong>. This step could be about writing down example data, example inputs, example outputs, example use cases; and then mapping them together by drawing arrows, circles, etc. Examples are great for communication, and they are also good for problem-solving in general. Try to think of examples that are really simple (to get a basic grasp of the problem), examples that are more realistic, and examples that are crazy (to reveal edge cases and potential validation concerns).</p>
+
+<h2 id="asking-clarifying-questions">2. Asking Clarifying Questions</h2>
+<p>Do not follow any of your assumptions without asking a question first. It’s tempting to hear a challenge or puzzle and immediately get into solving it. But there are real-world concerns for real-world problems, and you should demonstrate your familiarity with such issues.</p>
+
+<p>Also, you can save time by asking clarifying questions during an interview because interview challenges tend to be contrived. Do you have to account for crazy input values? Does the output need to be formatted in a certain way? If the puzzle involves numbers, do you have to account for negative values, decimals, etc? Are you expected to do input validation, error handling, or memory optimization?</p>
+
+<h2 id="explaining-your-approach">3. Explaining Your Approach</h2>
+
+<p>At this point, you might have a solution in mind and you’re eager to get coding. Or you might just have a partial solution. Either way, take a moment to give a quick overview of the <strong>purpose</strong> of the code you’re about to write. Also, give a sense of what <strong>algorithms or concepts</strong> will be implemented as part of your approach to the problem at hand.</p>
+
+<p>For example, “This looks like a problem we can solve with a recursive solution that traverses all nodes of the dataset.” In this example, “recursion” is the concept and traversal is the purpose.</p>
+
+<h2 id="breadth-first-coding">4. Breadth-First Coding</h2>
+
+<p>When it comes time to actually write out some code (or pseudocode), write out as much as possible at a high-level before going into the low-level details. For example, if your solution requires looping over objects received from an AJAX request in order to parse some data, don’t dive into that AJAX request. That’s a low-level detail. Start from the high-level approach of “fetching data” and then immediately move to the next high-level step of “parsing data”. With this strategy, you cover the whole breadth of the solution before diving into any detail of the solution.</p>
+
+<p>In other words, write modular code by using a breadth-first mindset. Everyone knows it’s a good idea to write several small functions rather than one giant function, so apply that approach to your communication too. When you explain how a computer works, you start the explanation at a high level (e.g., “hard drives store data, CPUs crunch data, …”) rather than starting at a low level (e.g., “the flow of electrons is controlled by gates known as transistors”).</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption class='code-header' style='margin-bottom:-5px;'><span>Example - Breadth-First Coding </span></figcaption>
+ <div class="CodeRay">
+  <div class="code"><pre>
+<span class="comment">// Challenge (aka Prompt) - Write a function that determines the average number of</span>
+<span class="comment">// retweets for a given user after a given cut off date.&lt;/p&gt;</span>
+
+<span class="tag">&lt;p&gt;</span>// Phase 0 - Psuedocode (optional)
+function getRetweetAverage(username, cutOffDate) {
+  /**
+   * 1. Fetch tweets via Twiter API
+   * 2. Filter tweets based on date
+   * 3. Calculate avg count of retweets from filtered data
+   * 4. Return a promise that resolves to the answer
+  **/
+}<span class="tag">&lt;/p&gt;</span>
+
+<span class="tag">&lt;p&gt;</span>// Phase 1 - Coding with declarative helper functions
+function getRetweetAverage(username, cutOffDate) {
+  return fetchTweets(username).then(function(tweets) {
+    var recentTweets = filterTweetsByDate(tweets, cutOffDate);
+    return calculateAverageRetweets(recentTweets);
+  });
+}<span class="tag">&lt;/p&gt;</span>
+
+<span class="tag">&lt;p&gt;</span>// Phase 2 - Implement low-level helper functions
+function fetchTweets(username) {
+  // Let’s pretend we’re using AngularJS’s HTTP request service, which uses promises.
+  var params = {
+    screen_name: username,
+    count: 200 // FYI this is the max allowed by Twitter’s API
+  };
+  return $http.get(‘https://api.twitter.com/1.1/statuses/user_timeline.json’, params);
+}<span class="tag">&lt;/p&gt;</span>
+
+<span class="tag">&lt;p&gt;</span>function filterTweetsByDate(tweets, cutOffDate) {
+  return tweets.filter(function(tweet) {
+    // Convert tweet’s String date into a JS Date object before comparing.
+    var createdAt = new Date(tweet.created_at);
+    return createdAt <span class="entity">&amp;gt;</span> cutOffDate;
+  });
+}<span class="tag">&lt;/p&gt;</span>
+
+&lt;p&gt;<span class="keyword">function</span> <span class="function">calculateAverageRetweets</span>(tweets) {
+  <span class="keyword">var</span> totalRetweets = tweets.reduce(<span class="keyword">function</span>(sum, tweet) {
+    <span class="keyword">return</span> sum + tweet.retweet_count;
+  }, <span class="integer">0</span>);
+  <span class="keyword">return</span> totalRetweets / tweets.length;
+}
+</pre></div>
+</div>
+ </figure></notextile></div></p>
+
+<p>In the example above, you should write code one “phase” at a time. Starting with psuedocode is optional, but it might be a good idea to at least verbalize it if you don’t plan on writing it. Then write the code in a declarative style as seen in “Phase 1”. Lastly, flesh out the functionality of your solution by writing the code that actually makes things work.</p>
+
+<p>By the way, I’ve never actually used the Twitter API, so the example code might not follow best practices or might not take into account how it actually behaves. For instance, maybe the API accepts a parameter to do the date filtering for you.</p>
+
+<h2 id="refactoring-your-first-draft">5. Refactoring Your First Draft</h2>
+
+<p>Once you’ve reached the point where the code seems to solve the challenge at hand, it’s time to refactor. If you’re writing under pressure in an interview situation, it’s likely that you haven’t written the cleanest code. If you’re writing without any pressure, it’s still good to refactor your first draft into a more readable/maintainable variant. Here’s a list of tips for deciding what to refactor:</p>
+
+<ul>
+  <li><strong>Improve readability</strong> by fixing indentation, whitespace, names, etc.
+    <ul>
+      <li><strong>Rename variables</strong> into semantic names. It’s tempting to use very short variable names during interviews because you feel pressure to finish quickly. Consider renaming them into more recognizable names to show your audience that you know how to write maintainable code that potential co-workers could easily read.</li>
+      <li><strong>Replace loops</strong> with a <code>map</code>, <code>filter</code>, <code>reduce</code>, etc where possible.</li>
+      <li><strong>Consider naming anonymous functions</strong> if they have potential to be re-used as a helper.</li>
+    </ul>
+  </li>
+  <li><strong>Extract code</strong> into helper functions. It’s very common for interview candidates to inadvertently write long functions. Even if you tried to follow Breadth-First Coding in Step 4, you may have slipped.</li>
+  <li><strong>Double-check promises</strong> and look for opportunities to reduce boilerplate and anonymous functions.
+    <ul>
+      <li><strong>Check return statements</strong> to ensure that your promises will resolve to the correct values (and that the segments of your promise chain will pass correct values).</li>
+      <li><strong>Use promise library helpers</strong> such as <code>all</code>, <code>spread</code>, etc where possible.</li>
+    </ul>
+  </li>
+  <li><strong>Add error-handling</strong>/logging for professional bonus points.</li>
+  <li><strong>Rewrite in another style</strong> (e.g., Functional Programming vs Object-Oriented Programming) for massive bonus points.</li>
+</ul>
+
+<p>Admittedly, this Step 5 isn’t as directly related to communication as other steps. It’s mostly focused on improving your code. However, there is still a communiation-related opportunity here. As you are refactoring, verbalize your intentions. Discuss what you want to improve before you improve it. Explain the rationale behind the improvements. Mentions the pros and cons of your code without the improvements and with the improvements (i.e., before vs after).</p>
+
+<h2 id="walking-through-your-answer">6. Walking Through Your Answer</h2>
+
+<p>At this point, your code should be presentable. By following the previous steps, your audience should already have a solid, high-level understanding of your code. So now it’s time to give a detailed walkthrough.</p>
+
+<p>Explain any nuances, use precise terminology, and expound on any interesting control flow or references (e.g., closures in JavaScript). You can also mention any implications regarding speed, memory, I/O, security, etc. But overall, your goal is to describe your code <em>in detail</em>.</p>
+
+<h2 id="testing-your-answer">7. Testing Your Answer</h2>
+
+<p>You might actually want to perform this step before step 6, but it depends on how you roll. After you’ve gotten to the point where you have a solution that seems to be good, take a minute to describe how you’d make sure it’s robust. When you normally write code on your own, you of course test it out by running it with various inputs or circumstances. Describe them; verbalize them.</p>
+
+<p>For example, if you’re writing a function with some parameters, you’ll probably run the function with a bunch of different arguments with different values and maybe different datatypes.</p>
+
+<ul>
+  <li><strong>Numbers:</strong> negative values, 0, 1, odd vs even, really big numbers, decimals</li>
+  <li><strong>Strings:</strong> upper vs lower case, single character, numeric characters, punctuation and non-alphanumeric characters.</li>
+  <li><strong>Object Literals:</strong> check for weird keys (much like <em>Strings</em>)</li>
+  <li><strong>Collections &amp; Data Structures:</strong> empty collections, only 1 item, several items, check for mutation side-effects, ascending order, descending order, random order, nested objects/arrays/other data structures.</li>
+</ul>
+
+<h1 id="where-did-these-steps-come-from">Where Did These Steps Come From?</h1>
+
+<p>I came up with these 7 steps based on…</p>
+
+<ul>
+  <li><a href="/blog/2014/05/31/dev-job-search-tips-from-the-coding-interview-guru/">advice from Gayle Laakmann McDowell</a></li>
+  <li><a href="/blog/2014/05/11/hackr-diary-weeks-11-12-and-beyond/">advice from Hack Reactor instructors</a></li>
+  <li>my experience interviewing for jobs</li>
+  <li>my experience conducting a handful of mock interviews for Hack Reactor grads</li>
+  <li>my experience conducting interviews where I work (10+ so far)</li>
+</ul>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[The Myth of the AngularJS Armageddon]]></title>
@@ -343,269 +508,6 @@ app.use(lusca.csp({
 <h1 id="stay-tuned">Stay Tuned</h1>
 
 <p>This blog post was getting pretty lengthy, so I decided to split it into two parts. In a follow-up blog post, I will provide a list of references, tutorials, and videos to help you research more about CSP, HSTS, and some complementary tools/libraries.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Queues & Stacks from Scratch with JS Patterns]]></title>
-    <link href="http://RebootJeff.github.io/blog/2014/01/04/queues-stacks-javascript-class-patterns/"/>
-    <updated>2014-01-04T16:04:00-08:00</updated>
-    <id>http://RebootJeff.github.io/blog/2014/01/04/queues-stacks-javascript-class-patterns</id>
-    <content type="html"><![CDATA[<p>In my <a href="/blog/2013/12/26/queues-and-stacks-in-javascript/">previous post</a>, I began my quest to help noob programmers by introducing the basic computer science topic of data structures. I provided a quick overview of queues and stacks, so please read all about ‘em before engaging your eyeballs with this blog post. This time around, we’ll check out four different patterns for creating classes in JavaScript while learning how to build stacks and queues from scratch.</p>
-
-<p>Before we go, I should warn you that I’m going to focus on describing the class instantiation patterns rather than thoroughly explaining the implementation of the data structures. Just keep in mind that we are going to explore building stacks and queues with objects rather than arrays. More specifically, we will use a property called <code>storage</code> that is an object, not an array. Now I know what you’re pondering.</p>
-
-<blockquote>
-  <p>Why?</p>
-</blockquote>
-
-<p>That is a beautiful question. Please ask it all the time (but please don’t troll me by leaving “Why?” in the comments section of this blog post). In this case, the answer to “Why?” may be a tad disatisfying. The answer is “because we can”, but don’t worry! It’ll be fun. Now, let’s start instantiating some motherhugging classes.</p>
-
-<h1 id="functional-instantiation">1. Functional Instantiation</h1>
-
-<p>The simplest way to implement classes is with a “maker” function that creates a new instance of the class and returns that instance so it can be stored as a variable. The new instance is just like any other JavaScript object. It can have properties that store relevant information about the instance (e.g., with a <code>Car</code> class, instances might have a <code>price</code> property). It can also have properties that store functions. These functions serve as <strong>methods</strong> that are tightly associated with the instance.</p>
-
-<h4 id="characteristics">Characteristics</h4>
-
-<ul>
-  <li>Creates new copies of the same functions when creating a new instance of the same class. This lack of reuse takes up more memory and can leave an unsavory taste in some programmers’ mouths.</li>
-  <li>There is no quick way to modify all instances of the class after they’ve been created. This will become more clear after examining the other instantiation tactics.</li>
-  <li>Private variables can be created/used by harnessing <strong>closure scope</strong> superpowers, but I won’t get into that today.</li>
-  <li>If you understand JavaScript functions and objects, then you can understand classes implemented via functional instantiation (other instantiation techniques require knowledge of <code>this</code> and/or <code>new</code>).</li>
-  <li>Could be used to create callable instances (i.e., the class could return a function rather than an object filled with properties).</li>
-</ul>
-
-<h4 id="example-code">Example code:</h4>
-<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption class='code-header' style='margin-bottom:-5px;'><span>Stack from scratch (functional instantiation) </span></figcaption>
- <div class="CodeRay">
-  <div class="code"><pre>
-<span class="keyword">var</span> <span class="function">makeStack</span> = <span class="keyword">function</span>(comment){
-  <span class="comment">// Provide private variables in closure scope</span>
-  <span class="keyword">var</span> size = <span class="integer">0</span>;
-  <span class="keyword">var</span> storage = {};
-  <span class="keyword">var</span> instance = {};  <span class="comment">// Start building an instance of Stack class&lt;/p&gt;</span>
-
-<span class="tag">&lt;p&gt;</span>// Add extra properties for the hell of it
-  instance.annotation = comment;<span class="tag">&lt;/p&gt;</span>
-
-<span class="tag">&lt;p&gt;</span>// Add functions to the instance to serve as methods
-  // (they will provide an interface to the stack’s storage)
-  instance.push = function(data){
-    storage[size] = data;
-    size++;
-  };<span class="tag">&lt;/p&gt;</span>
-
-<span class="tag">&lt;p&gt;</span>instance.pop = function(){
-    if(size <span class="entity">&amp;gt;</span> 0){  // Only perform pop actions if the stack has data
-      size–;
-      var data = storage[size];
-      delete storage[size];  // Don’t forget to delete from storage!
-      return data;
-    }
-  };<span class="tag">&lt;/p&gt;</span>
-
-<span class="tag">&lt;p&gt;</span>instance.size = function(){
-    return size;
-  };<span class="tag">&lt;/p&gt;</span>
-
-<span class="tag">&lt;p&gt;</span>return instance;
-};<span class="tag">&lt;/p&gt;</span>
-
-&lt;p&gt;<span class="comment">// Create and use an instance of the Stack class</span>
-<span class="keyword">var</span> myStack = makeStack(<span class="error">“</span>I<span class="error">’</span>m a stack! Whoa.<span class="error">”</span>);
-myStack.push(<span class="integer">1</span>);              <span class="comment">// myStack stores 1</span>
-myStack.push(<span class="error">‘</span>b<span class="error">’</span>);            <span class="comment">// myStack stores 1 and ‘b’</span>
-myStack.push(<span class="integer">3</span>);              <span class="comment">// myStack stores 1, ‘b’, and 3</span>
-console.log(myStack.pop());   <span class="comment">// logs 3</span>
-console.log(myStack.size());  <span class="comment">// logs 2</span>
-</pre></div>
-</div>
- </figure></notextile></div></p>
-
-<h1 id="functional-instantiation-wshared-methods">2. Functional Instantiation w/Shared Methods</h1>
-
-<p>By utilizing an object filled with methods, several classes can be created that have the same methods without creating new copies of said methods. The classes will use their own function references to refer to the same set of shared methods. Therefore, using shared methods eats up less memory than functional instantiation <em>without</em> shared methods.</p>
-
-<h4 id="characteristics-1">Characteristics</h4>
-
-<ul>
-  <li>Reuses functions (which conserves memory) by getting function references from a utility such as <a href="http://underscorejs.org/#extend">Underscore.js</a>’s <code>_.extend(instance,methods)</code>.</li>
-  <li>Retains the same benefits as functional instantiation <em>without</em> shared methods.</li>
-</ul>
-
-<h4 id="example-code-1">Example code:</h4>
-<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption class='code-header' style='margin-bottom:-5px;'><span>Queue from scratch (functional instantiation with shared methods) </span></figcaption>
- <div class="CodeRay">
-  <div class="code"><pre>
-<span class="keyword">var</span> <span class="function">makeQueue</span> = <span class="keyword">function</span>(queueName, comment){&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">p&gt;
-
-&lt;p&gt;</span><span class="delimiter">/</span></span>/ You can use object literal notation <span class="keyword">for</span> &lt;code&gt;instance&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">code&gt; (instead of dot notation),
-  </span><span class="delimiter">/</span></span>/ but then we have to use &lt;code&gt;<span class="local-variable">this</span>&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">code&gt; and we lose the privacy of closure scope
-  </span><span class="delimiter">/</span></span>/ (e.g., <span class="tag">&lt;code&gt;</span>storage<span class="tag">&lt;/code&gt;</span> is no longer <span class="reserved">private</span>), so <span class="local-variable">this</span> kind of sucks.
-  <span class="keyword">var</span> instance = {
-    <span class="key">name</span>: queueName,
-    <span class="key">annotation</span>: comment,
-    <span class="key">head</span>: <span class="integer">0</span>,
-    <span class="key">tail</span>: <span class="integer">0</span>,
-    <span class="key">storage</span>: {}
-  };&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">p&gt;
-
-&lt;p&gt;</span><span class="delimiter">/</span></span>/ The _.extend() <span class="keyword">function</span> <span class="function">is</span> provided by the Underscore.js library
-  _.extend(instance, sharedQueueMethods);&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">p&gt;
-
-&lt;p&gt;return instance;
-};&lt;</span><span class="delimiter">/</span></span>p&gt;
-
-<span class="tag">&lt;p&gt;</span>// The object below stores methods that could be shared with other classes
-var sharedQueueMethods = {
-  enqueue: function(data){
-    this.storage[this.tail] = data;
-    this.tail++;
-    // The tail points to the next EMPTY “spot” for data to be stored
-    // it does NOT point to the last OCCUPIED “spot” in the storage
-  },
-  dequeue: function(){
-    if(this.head <span class="entity">&amp;lt;</span>= this.tail){  // Check the queue’s size
-      var data = this.storage[this.head];<span class="tag">&lt;/p&gt;</span>
-
-<span class="tag">&lt;pre&gt;</span><span class="tag">&lt;code&gt;</span>  // Deleting is even more important for queues than for stacks
-  // (memory leaks are a bigger threat for queues)
-  delete this.storage[this.head];
-  this.head++;
-  return data;
-}   },   size: function(){
-return this.tail - this.head;   } };
-<span class="tag">&lt;/code&gt;</span><span class="tag">&lt;/pre&gt;</span>
-
-&lt;p&gt;<span class="comment">// Create and use an instance of the Queue class:</span>
-<span class="keyword">var</span> myCoolQueue = makeQueue(<span class="error">“</span>Jeff<span class="error">’</span>s Queue<span class="error">”</span>,<span class="error">’</span>Hello, world!<span class="error">’</span>);
-myCoolQueue.enqueue(<span class="error">‘</span>a<span class="error">’</span>);             <span class="comment">// myCoolQueue stores ‘a’</span>
-myCoolQueue.enqueue(<span class="integer">2</span>);               <span class="comment">// myCoolQueue stores ‘a’ and 2</span>
-myCoolQueue.enqueue(<span class="error">‘</span>c<span class="error">’</span>);             <span class="comment">// myCoolQueue stores ‘a’, 2, and ‘c’</span>
-console.log(myCoolQueue.dequeue());   <span class="comment">// output: ‘a’</span>
-console.log(myCoolQueue.size());      <span class="comment">// output: 2</span>
-</pre></div>
-</div>
- </figure></notextile></div></p>
-
-<h1 id="prototypal-instantiation">3. Prototypal Instantiation</h1>
-
-<p>The key to prototypal instantiation is the use of <code>Object.create()</code> to utilize shared methods. Unlike functional instantiation with shared methods, there is no need to use an <code>extend()</code> function.</p>
-
-<p>While it’s possible to use a prototype’s functions with <code>Object.create(ExampleClass.prototype);</code>, it’s also possible to (ironically) avoid the word “prototype” altogether by using <code>Object.create(sharedMethods);</code>.</p>
-
-<h4 id="characteristics-2">Characteristics</h4>
-
-<ul>
-  <li>Reuses shared functions via <code>Object.create(Example.prototype)</code> or <code>Object.create(objectOfFunctions)</code>.</li>
-  <li>Unlike functional instantiation, function references are shared. Each instance of the class does not get its own function references that point to the shared methods. This saves even more memory (although it is a very small improvement).</li>
-  <li>Unlike functional instantiation, there is no way to use closure scope to enforce privacy of variables.</li>
-  <li>Variables are stored on the returned object (aka <code>instance</code>), which means the shared stack methods need to use the keyword <code>this</code> to access the necessary data. It’s not a huge bummer, but if you’re a beginner, then <code>this</code> can be a confusing concept.</li>
-  <li>Can use prototype chains for dynamic method modification and inheritance (subclasses!).</li>
-</ul>
-
-<h4 id="example-code-2">Example code:</h4>
-<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption class='code-header' style='margin-bottom:-5px;'><span>Stack from scratch (prototypal instantiation) </span></figcaption>
- <div class="CodeRay">
-  <div class="code"><pre>
-<span class="keyword">var</span> <span class="function">makeStack</span> = <span class="keyword">function</span>(comment){
-  <span class="keyword">var</span> instance = Object.create(sharedStackMethods);
-  instance.annotation = comment;
-  instance.size = <span class="integer">0</span>;
-  instance.storage = {};&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">p&gt;
-
-&lt;p&gt;return instance;
-};&lt;</span><span class="delimiter">/</span></span>p&gt;
-
-<span class="tag">&lt;p&gt;</span>var sharedStackMethods = {
-  push: function(data){
-    this.storage[this.size] = data;
-    this.size++;
-  },
-  pop: function(){
-    if(this.size <span class="entity">&amp;gt;</span> 0){
-      this.size–;
-      var data = this.storage[this.size];
-      delete this.storage[this.size];
-      return data;
-    }
-  },
-  size: function(){
-    return this.size;
-  }
-};<span class="tag">&lt;/p&gt;</span>
-
-&lt;p&gt;<span class="comment">// Create an instance of the Stack class:</span>
-<span class="keyword">var</span> myStack = makeStack(<span class="error">“</span>I<span class="error">’</span>m a stack! Whoa.<span class="error">”</span>);
-<span class="comment">// Using the instance doesn’t change from one class pattern to another</span>
-myStack.push(<span class="integer">1</span>);              <span class="comment">// myStack stores 1</span>
-myStack.push(<span class="error">‘</span>b<span class="error">’</span>);            <span class="comment">// myStack stores 1 and ‘b’</span>
-myStack.push(<span class="integer">3</span>);              <span class="comment">// myStack stores 1, ‘b’, and 3</span>
-console.log(myStack.pop());   <span class="comment">// logs 3</span>
-console.log(myStack.size());  <span class="comment">// logs 2</span>
-</pre></div>
-</div>
- </figure></notextile></div></p>
-
-<h1 id="pseudoclassical-instantiation">4. Pseudoclassical Instantiation</h1>
-
-<p>This is the most commonly used class pattern. It’s also the most complicated because, in addition to using the <code>this</code> keyword, it involves two concepts that the other class patterns don’t require: the <code>new</code> keyword and prototypes. Prototypal instantiation uses prototypes via <code>Object.create()</code>, but pseudoclassical instantiation needs you to explicitly type out <code>ClassName.prototype.methodName</code>, which is just another source of confusion for beginners.</p>
-
-<p>Also, it’s the only class pattern that uses a true <a href="http://en.wikipedia.org/wiki/Constructor_(object-oriented_programming)">constructor</a> for creating new instances. Other class patterns use instantiator functions that explicitly return a new instance. The pseudoclassical class pattern does not perform such a return thanks to the <code>new</code> keyword.</p>
-
-<h4 id="characteristics-3">Characteristics</h4>
-
-<ul>
-  <li>Uses prototype chains to provide methods to instances of a class.</li>
-  <li>Allows for dynamic method modification and inheritance (subclasses!) via prototype chains.</li>
-  <li>Refers to the instance that’s being created with the <code>this</code> keyword.</li>
-  <li>Needs the <code>new</code> keyword to make an instance of a class.</li>
-  <li>Has a true constructor that is named with a noun rather than a verb. The name is capitalized.</li>
-  <li>Is the most commonly used class pattern.</li>
-</ul>
-
-<h4 id="example-code-3">Example code:</h4>
-<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption class='code-header' style='margin-bottom:-5px;'><span>Queue from scratch (pseudoclassical instantiation) </span></figcaption>
- <div class="CodeRay">
-  <div class="code"><pre>
-<span class="comment">// Class name is now a noun (no verb), and it starts with an upper case letter</span>
-<span class="keyword">var</span> <span class="function">Queue</span> = <span class="keyword">function</span>(queueName, comment){
-  <span class="comment">// Notice the use of ‘this’</span>
-  <span class="local-variable">this</span>.name = queueName,
-  <span class="local-variable">this</span>.annotation = comment,
-  <span class="local-variable">this</span>.head: <span class="integer">0</span>,
-  <span class="local-variable">this</span>.tail: <span class="integer">0</span>,
-  <span class="local-variable">this</span>.storage: {}
-};&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">p&gt;
-
-&lt;p&gt;</span><span class="delimiter">/</span></span>/ Notice the use of <span class="error">‘</span>prototype<span class="error">’</span>
-Queue.prototype.<span class="function">enqueue</span> = <span class="keyword">function</span>(data){
-  <span class="local-variable">this</span>.storage[<span class="local-variable">this</span>.tail] = data;
-  <span class="local-variable">this</span>.tail++;
-};
-Queue.prototype.<span class="function">dequeue</span> = <span class="keyword">function</span>(){
-  <span class="keyword">if</span>(<span class="local-variable">this</span>.head &amp;lt;= <span class="local-variable">this</span>.tail){
-    <span class="keyword">var</span> data = <span class="local-variable">this</span>.storage[<span class="local-variable">this</span>.head];
-    <span class="keyword">delete</span> <span class="local-variable">this</span>.storage[<span class="local-variable">this</span>.head];
-    <span class="local-variable">this</span>.head++;
-    <span class="keyword">return</span> data;
-  }
-};
-Queue.prototype.<span class="function">size</span> = <span class="keyword">function</span>(){
-  <span class="keyword">return</span> <span class="local-variable">this</span>.tail - <span class="local-variable">this</span>.head;
-};&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">p&gt;
-
-&lt;p&gt;</span><span class="delimiter">/</span></span>/ Create an instance of the Stack <span class="reserved">class</span> by using the <span class="error">‘</span><span class="keyword">new</span><span class="error">’</span> keyword:
-<span class="keyword">var</span> myCoolQueue = <span class="keyword">new</span> Queue(<span class="error">“</span>Jeff<span class="error">’</span>s Queue<span class="error">”</span>,<span class="error">”</span>The grass is always greener, but just as hard to mowww!<span class="error">”</span>);
-<span class="comment">// Use the instance just like in previous examples</span>
-myCoolQueue.enqueue(<span class="error">‘</span>a<span class="error">’</span>);             <span class="comment">// myCoolQueue stores ‘a’</span>
-myCoolQueue.enqueue(<span class="integer">2</span>);               <span class="comment">// myCoolQueue stores ‘a’ and 2</span>
-myCoolQueue.enqueue(<span class="error">‘</span>c<span class="error">’</span>);             <span class="comment">// myCoolQueue stores ‘a’, 2, and ‘c’</span>
-console.log(myCoolQueue.dequeue());   <span class="comment">// output: ‘a’</span>
-console.log(myCoolQueue.size());      <span class="comment">// output: 2</span>
-</pre></div>
-</div>
- </figure></notextile></div></p>
 ]]></content>
   </entry>
   
