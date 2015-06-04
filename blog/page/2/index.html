@@ -138,6 +138,170 @@
 
   <header>
     
+      <h1 class="entry-title"><a href="/blog/2014/09/18/web-security-fundamentals-by-google-peeps/">Web Security Fundamentals - Part 1: What Google Peeps Say</a></h1>
+    
+    
+      <p class="meta">
+        
+  
+
+
+  
+    <span class="byline author vcard">by <span class="fn">Jeff Lee</span></span>
+  
+
+ - 
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-09-18T10:26:00-07:00" pubdate data-updated="true">Sep 18<span>th</span>, 2014</time> - 
+        
+
+posted in
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/javascript/'>JavaScript</a>, <a class='category' href='/blog/categories/security/'>security</a>, <a class='category' href='/blog/categories/technical-posts/'>technical posts</a>, <a class='category' href='/blog/categories/web-tech/'>web tech</a>
+  
+</span>
+
+
+        
+         | <a href="/blog/2014/09/18/web-security-fundamentals-by-google-peeps/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Back in late May, I went to one of the most informative tech meetups ever. The <a href="http://www.meetup.com/sfhtml5/">SFHTML5 meetup group</a> organized an event at the Google SF office to cover web security. Google security researchers presented about 2.5 hours of lectures talking about common hacks/attacks, good defense, and the general state of web security.</p>
+
+<p>You can check out the slides here: <a href="http://www.meetup.com/sfhtml5/events/179713932/#event_comment-362704742">click here if you dare.</a> You can watch the lectures here:</p>
+
+<iframe width="300" height="185" src="//www.youtube-nocookie.com/embed/Yg5g2aMKbNA?list=PLOU2XLYxmsIIkEU3Z_xdVo9EADurbdxKa" frameborder="0" allowfullscreen=""></iframe>
+<p />
+
+<p>But if you don’t feel like sitting through 2.5 hours of lecture, allow me to summarize the best parts:</p>
+
+<ol>
+  <li>Common hacks/exploits
+    <ul>
+      <li>XSS</li>
+      <li>CSRF</li>
+      <li>MITM</li>
+    </ul>
+  </li>
+  <li>Simple security best practices
+    <ul>
+      <li>Use frameworks/libraries to fight XSS for you</li>
+      <li>Implement CSP to protect your front end</li>
+      <li>Reinforce HTTPS with HSTS</li>
+    </ul>
+  </li>
+</ol>
+
+<p><strong>I won’t go into detail about any particular topic.</strong> This blog post will simply get you started in understanding fundamental web security. I suggest you use Google to research more about hacks/attacks or wait for me to post another blog post that provides a collection of links to sweet videos, references, and articles that I found particularly helpful for learning more about all these topics.</p>
+
+<h1 id="be-afraid">Be Afraid</h1>
+
+<p>How are websites and web apps compromised? Why are sites often “hacked”? There are three main types of attacks that you should worry about: XSS, CSRF, and MITM.</p>
+
+<h2 id="cross-site-scripting-xss">Cross-Site Scripting (XSS)</h2>
+
+<p>When a punk manages to get your code to run their JavaScript, that’s XSS. A simple example is when an unprotected website just accepts text from the user and adds it to the site’s HTML code. If that text is actually JS, then the site ends up sending the browser user-generated code. Damn.</p>
+
+<p>XSS is one of the most common problems plaguing web security today. This is pretty depressing because there are plenty of frameworks and libraries that help fight XSS, but so many site operators just don’t use them and some fools even try to write their own anti-XSS code.</p>
+
+<h2 id="cross-site-request-forgery-xsrfcsrf">Cross-Site Request Forgery (XSRF/CSRF)</h2>
+
+<p>Let’s say a user logs into your website or web app. They are now authenticated, right? Well it depends. It could be that the user’s <em>browser</em> is authenticated. An attacker could take advantage of this authentication and get the user’s browser to submit an HTTP request crafted with nefarious intentions. The request will be accepted because the browser has the right authentication cookie data, for example.</p>
+
+<p>How is the evil HTTP request initiated? It could be through XSS, it could be through convincing a victim to visit a malicious site that sends HTTP requests, etc. Most examples mention authenticated cookies being used by attackers.</p>
+
+<h2 id="man-in-the-middle-mitm">Man-in-the-Middle (MITM)</h2>
+
+<p>There’s a reason why public internet is unsafe. When you’re on a shared network, other users on the same network can try to intercept your data. Not only can man-in-the-middle attacks read your data, they can also send you bad data/code. Some attackers merely intercept web pages you’re accessing, add more advertisements, and feed you the web page with extra ads. Other attackers might intercept your attempt to visit http://www.facebook.com, give you a fake Facebook login page, and convince you to submit your login info to them.</p>
+
+<p>Obviously, protecting a network by requiring a password to connect can help. However, if you’re using public WiFi in a coffee shop where the password is given to anybody who asks for it, then you’re in trouble again. As I shall mention, HTTPS is crucial for fighting MITM pain.</p>
+
+<h1 id="be-somewhat-less-afraid">Be Somewhat Less Afraid</h1>
+
+<p>It’s great if you’re aware of threats. Now it’s time to learn the basics on how to combat the threats. At the meetup, the Google peeps focused on three types of solutions: frameworks/libraries, CSP, and HTTPS with HSTS. I will also mention a couple other technologies (BONUS) for your consideration.</p>
+
+<h2 id="frameworkslibraries-features">Frameworks/Libraries Features</h2>
+
+<p>One of the Google experts emphasized that XSS is a much bigger problem than it should be because there are so many frameworks and libraries that help fight XSS. He said that no one should be writing their own anti-XSS libraries. Instead, use one of the many open-source solutions. Also, it’s quite possible that you’re already using a framework that has anti-XSS features that just need to be activated or configured.</p>
+
+<p>For example, in some templating libraries, a simple syntax change will enable anti-XSS escaping features. Other templating libraries automatically escape contents by default. Some frameworks like AngularJS do “round-trip escaping on all strings for you” to protect your app from XSS and other injection attacks.</p>
+
+<h2 id="content-security-policy-csp">Content Security Policy (CSP)</h2>
+
+<p>A server can instruct a browser to use a whitelist to decide which resources should be loaded and which should be blocked. This is done when a server adds a CSP to a response header.</p>
+
+<p>For example, a CSP whitelist can tell a browser to trust script files from the server and Google CDNs, images from the server and Amazon CDNs, CSS files from the server, and web fonts from Google. Everything else will be blocked. In-line JavaScript will be blocked, in-line styles will be blocked, images hosted by 3rd parties will be blocked, Flash will be blocked, iframes will be blocked, etc.</p>
+
+<p>Your CSP can be configured based on various types of resources. Check this <a href="http://content-security-policy.com/">CSP Cheatsheet</a> for the list of options. I recommend that you investigate server-side libraries, frameworks, or middleware that can help you implement CSP. When writing your CSP, you can try starting with the most restrictive whitelist and then see what needs to be unblocked.</p>
+
+<h3 id="reporting-feature">Reporting Feature</h3>
+
+<p>You can also set up a reporting system to find out what your CSP has managed to block (thereby identifying failed attacks).</p>
+
+<p>A Googler suggested using the CSP reporting feature <em>without</em> an enforced whitelist to help you examine what browsers are actually digesting when they visit your site or app. For example, you could set up a CSP that has a whitelist and just asks browsers to report non-whitelisted sources without actually blocking them. This gives you the ability to <strong>tweak your whitelist based on production usage without changing production usage</strong>. After you’re done tweaking, change the CSP to force browsers to report <em>and</em> block uninvited resources and content.</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption class="code-header" style="margin-bottom:-5px;"><span>Ultra-Strict Example CSP for Express server using Lusca middleware </span></figcaption>
+ <div class="CodeRay">
+  <div class="code"><pre>
+app.use(lusca.csp({
+  <span class="key">policy</span>: {
+    <span class="key"><span class="delimiter">'</span><span class="content">default-src</span><span class="delimiter">'</span></span>: <span class="string"><span class="delimiter">'</span><span class="content">none</span><span class="delimiter">'</span></span>, <span class="comment">// Block EVERYTHING</span>
+  },
+  <span class="key">reportOnly</span>: <span class="predefined-constant">true</span>, <span class="comment">// Record what's being blocked</span>
+  <span class="key">reportUri</span>: <span class="string"><span class="delimiter">'</span><span class="content">/report-violation-endpoint</span><span class="delimiter">'</span></span>
+}));
+</pre></div>
+</div>
+ </figure></notextile></div>
+
+<h2 id="https-and-http-strict-transport-security-hsts">HTTPS and HTTP Strict Transport Security (HSTS)</h2>
+
+<h3 id="https">HTTPS</h3>
+
+<p>To protect data transfers from MITM attacks, many sites connect to visitors via HTTPS. HTTPS connections not only protect typical payloads like JSON, but also static files and cookies that would otherwise be vulnerable to CSRF attacks. The hard part about using HTTPS is making sure no part of the site ever falls back to unencrypted HTTP.</p>
+
+<p>For example, let’s say you’re browsing a site that provides free icons and graphics. Are all files served over HTTPS? HTML, CSS, and JavaScript files are no-brainers. What about images? Yeah that’s pretty standard too. But what about when you get an icon pack? You click a download link, and the browser starts downloading a zip file. Is that using the HTTPS protocol? It’s easy to <a href="http://httpshaming.tumblr.com/">make mistakes</a>.</p>
+
+<h3 id="hsts">HSTS</h3>
+
+<p>Furthermore, what if a user visits the site using HTTP first? It’s pretty common for people to type “somewebsite.com” in the URL bar and the browser will turn that into “http://somewebsite.com”. After they visit that URL, the site can redirect the visitor to “<strong>https</strong>://somewebsite.com”. But sadly, that initial connection via http wasn’t secure. It’s susceptible to a MITM attack.</p>
+
+<p>With HTTP Strict Transport Security, the browser can automatically turn “somewebsite.com” into “<strong>https</strong>://somewebsite.com”. HSTS works by setting a header that tells the browser to enforce HTTPS for requests sent to the domain (“somewebsite.com”) for the next X number of seconds. Yes, you can set X to be a very large number such that HSTS is enforcing HTTPS for the next <em>year</em>, if you want to be cool like that.</p>
+
+<h1 id="stay-tuned">Stay Tuned</h1>
+
+<p>This blog post was getting pretty lengthy, so I decided to split it into two parts. In a follow-up blog post, I will provide a list of references, tutorials, and videos to help you research more about CSP, HSTS, and some complementary tools/libraries.</p>
+</div>
+  
+  
+
+
+</div>
+
+      </article>
+    
+    
+      <article class="span4">
+        <div class="article-format">
+
+  <header>
+    
       <h1 class="entry-title"><a href="/blog/2014/09/02/communication-for-engineers-101-we-have-a-problem/">Communication for Engineers 101: We Have a Problem</a></h1>
     
     
@@ -835,183 +999,6 @@ posted in
 
       </article>
     
-    
-      <article class="span4">
-        <div class="article-format">
-
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/05/15/my-sublime-text-2-setup-and-customization/">My Sublime Text 2 Setup and Customization</a></h1>
-    
-    
-      <p class="meta">
-        
-  
-
-
-  
-    <span class="byline author vcard">by <span class="fn">Jeff Lee</span></span>
-  
-
- - 
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-05-15T20:32:00-07:00" pubdate data-updated="true">May 15<span>th</span>, 2014</time> - 
-        
-
-posted in
-<span class="categories">
-  
-    <a class='category' href='/blog/categories/customization/'>customization</a>, <a class='category' href='/blog/categories/dev-tools/'>dev tools</a>, <a class='category' href='/blog/categories/software-development/'>software development</a>
-  
-</span>
-
-
-        
-         | <a href="/blog/2014/05/15/my-sublime-text-2-setup-and-customization/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><em>Updated on August 8, 2014.</em></p>
-
-<p>I use Sublime Text 2 as my text editor for coding. I don’t use a fancy IDE like WebStorm, but I do plan on trying out WebStorm more at work. Actually, I should probably upgrade to ST3, but for now, I’m happy with ST2.</p>
-
-<h1 id="config">Config</h1>
-
-<p>However, ST2’s light weight comes at a cost: you probably need to configure some stuff before you’re really ready to roll. Here’s what I do when I first install ST2 on a machine.</p>
-
-<h2 id="key-bindings">Key Bindings</h2>
-
-<p>First, I change the keyboard shortcuts for cycling through open tabs. The default behavior is based on your usage history (most recently viewed tabs), but I prefer just cycling from left to right. There’s actually another key binding that can cycle tabs from left to right, but I prefer using <code>Ctrl+Tab</code>.Therefore, I edited my key bindings like so…</p>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><figcaption class="code-header" style="margin-bottom:-5px;"><span>Preferences &gt; Key Bindings – User </span></figcaption>
- <div class="CodeRay">
-  <div class="code"><pre>
-{ <span class="key"><span class="delimiter">&quot;</span><span class="content">keys</span><span class="delimiter">&quot;</span></span>: [<span class="string"><span class="delimiter">&quot;</span><span class="content">ctrl+tab</span><span class="delimiter">&quot;</span></span>], <span class="key"><span class="delimiter">&quot;</span><span class="content">command</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">next_view</span><span class="delimiter">&quot;</span></span> },
-{ <span class="key"><span class="delimiter">&quot;</span><span class="content">keys</span><span class="delimiter">&quot;</span></span>: [<span class="string"><span class="delimiter">&quot;</span><span class="content">ctrl+shift+tab</span><span class="delimiter">&quot;</span></span>], <span class="key"><span class="delimiter">&quot;</span><span class="content">command</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">prev_view</span><span class="delimiter">&quot;</span></span> },
-</pre></div>
-</div>
- </figure></notextile></div>
-
-<h2 id="settings">Settings</h2>
-
-<p>Next up, I make sure my whitespace is configured to my liking. I think most coders who lift hefty amounts of JavaScript go with indentation 2 spaces at a time, so that’s what I do. I prefer it because it takes up less space than a typical 4-space tab, which is critical when viewing code in split-screen mode. I also like having the option to manually change indentation with spaces if necessary for alignment purposes. Mixing spaces and tabs gets messy.</p>
-
-<p>I also configure Sublime Text to automatically add a new line at the end of every file whenever I save. It won’t add a new line if one already exists at EOF. I personally never suffer from lack of new line at EOF, but <a href="http://stackoverflow.com/questions/729692/why-should-files-end-with-a-newline">some UNIX tools won’t work without them</a>, and I know lots of hardcore coders out there like using such tools. I don’t want to screw them over. With that said, allow me to present my ST2 settings…</p>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><figcaption class="code-header" style="margin-bottom:-5px;"><span>Preferences &gt; Settings – User </span></figcaption>
- <div class="CodeRay">
-  <div class="code"><pre>
-<span class="comment">// The number of spaces a tab is considered equal to</span>
-  <span class="string"><span class="delimiter">&quot;</span><span class="content">tab_size</span><span class="delimiter">&quot;</span></span>: <span class="integer">2</span>,
-
- <span class="comment">// Set to true to insert spaces when tab is pressed</span>
-  <span class="key"><span class="delimiter">&quot;</span><span class="content">translate_tabs_to_spaces</span><span class="delimiter">&quot;</span></span>: <span class="predefined-constant">true</span>,
-
-<span class="comment">// Set to true to ensure the last line of the file ends in a newline</span>
-<span class="comment">// character when saving</span>
-  <span class="key"><span class="delimiter">&quot;</span><span class="content">ensure_newline_at_eof_on_save</span><span class="delimiter">&quot;</span></span>: <span class="predefined-constant">true</span>,
-</pre></div>
-</div>
- </figure></notextile></div>
-
-<h1 id="theme-ui-skin">Theme (UI Skin)</h1>
-
-<p>I use the Nexus theme, which you can find here: <a href="https://github.com/EleazarCrusader/nexus-theme">https://github.com/EleazarCrusader/nexus-theme</a>. The readme file explains a bunch of different installation options, but I recommend installing via Package Manager. The readme also tells you how to activate the theme after installation.</p>
-
-<p><img src="https://raw.githubusercontent.com/EleazarCrusader/nexus-theme/master/nexus-theme.png" alt="official Nexus theme screenshot" /></p>
-
-<p class="my-caption">The orange and blue decorations on the tabs tell you if the file has been change since last save.</p>
-
-<h1 id="packages">Packages</h1>
-
-<p>Sublime Text doesn’t come with many bells and whistles. Instead you add them as packages. First, you must install the package manager by following <a href="https://sublime.wbond.net/installation#st2">these instructions</a>. After that, get ready to discover a giant pool of all the bells and whistles you could possibly want. If you need to adjust the settings for any of these packages, you can usually find good documentation from the readme files of their respective GitHub repos.</p>
-
-<p>After you install Package Manager, you can access it by hitting <code>Ctrl+Shift+P</code> (or perhaps <code>Cmd+Shift+P</code> for Macs?) and then typing “package control” into the search box. The typeahead will reveal your various options, but you mostly be using “Package Control: Install Package”. There will be some load time necessary to provide you a list of available packages, but after it’s done, you can search for packages by name. Installation will similarly require some load time. Check the bottom-left of the ST2 window to see relevant status messages.</p>
-
-<p>Here are the packages I installed:</p>
-
-<h3 id="alignment">Alignment</h3>
-<p>Prettify your code by aligning multiple lines of variable definitions and hash objects. For example…</p>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><figcaption class="code-header" style="margin-bottom:-5px;"><span>Before and After using the Alignment package </span></figcaption>
- <div class="CodeRay">
-  <div class="code"><pre>
-<span class="comment">// this stuff...</span>
-<span class="keyword">var</span> x = <span class="integer">123</span>;
-<span class="keyword">var</span> foo = <span class="string"><span class="delimiter">'</span><span class="content">bar</span><span class="delimiter">'</span></span>;
-<span class="keyword">var</span> exampleObj = {
-  <span class="key">my</span>: x,
-  <span class="key">name</span>: <span class="integer">99</span>,
-  <span class="key">is</span>: <span class="string"><span class="delimiter">'</span><span class="content">Jeff</span><span class="delimiter">'</span></span>
-};
-
-<span class="comment">// would turn into this stuff...</span>
-<span class="keyword">var</span> x          = <span class="integer">123</span>;
-<span class="keyword">var</span> foo        = <span class="string"><span class="delimiter">'</span><span class="content">bar</span><span class="delimiter">'</span></span>;
-<span class="keyword">var</span> exampleObj = {
-  <span class="key">my</span>  : x,
-  <span class="key">name</span>: <span class="integer">99</span>,
-  <span class="key">is</span>  : <span class="string"><span class="delimiter">'</span><span class="content">Jeff</span><span class="delimiter">'</span></span>
-};
-</pre></div>
-</div>
- </figure></notextile></div>
-
-<p>This may look stupid to you, but I don’t use it all the time. The main place I like to use it is with multiple <code>var example = require('npm package name here');</code> statements at the top of a JS file. By the way, I had to edit the package settings to get alignment for object literals. I added the <code>":"</code> seen below…</p>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><figcaption class="code-header" style="margin-bottom:-5px;"><span>Preferences &gt; Package Settings &gt; Alignment &gt; Settings – User </span></figcaption>
- <div class="CodeRay">
-  <div class="code"><pre>
-{
-  <span class="comment">// The mid-line characters to align in a multi-line selection, changing</span>
-  <span class="comment">// this to an empty array will disable mid-line alignment</span>
-  <span class="key"><span class="delimiter">&quot;</span><span class="content">alignment_chars</span><span class="delimiter">&quot;</span></span>: [<span class="string"><span class="delimiter">&quot;</span><span class="content">=</span><span class="delimiter">&quot;</span></span>, <span class="string"><span class="delimiter">&quot;</span><span class="content">:</span><span class="delimiter">&quot;</span></span>]
-}
-</pre></div>
-</div>
- </figure></notextile></div>
-
-<h3 id="gitgutter">GitGutter</h3>
-<p>Add indicators in your gutter so then you can see which lines of code have been changed since the last git commit. See the left edge of this screenshot:
-<img src="http://i.imgur.com/ur6FY.png" alt="GitGutter in action" /></p>
-
-<h3 id="sublimelinter">SublimeLinter</h3>
-<p>I prefer live linting over build-time linting. SublimeLinter supports a ton of languages, and I have it set to simply bring up an indicator in the gutter and some underscores to point to any issues it finds. It’s not too obtrusive.</p>
-
-<h3 id="trailingspaces">TrailingSpaces</h3>
-<p>Extraneous whitespace is bad. Trailing whitespace is worse. I use this package to highlight any trailing whitespace in bright pink. I bet I could set my linter to do this, but oh well.</p>
-
-<h3 id="markdownediting">MarkdownEditing</h3>
-<p>Who doesn’t love Markdown? It makes GitHub README files and wiki pages look great. It makes dev blogs look great. It makes writing dev-related text easy. Sometimes, I write rough drafts of blog posts within Google Docs or <a href="http://dillinger.io/">Dillinger</a>, which is a sweet online Markdown editor. In the end, I always complete my blog posts by writing Markdown within Sublime Text.</p>
-
-<p>I recently found a sweet ST package to help edit Markdown files: MarkdownEditing. It completely transforms the look and syntax highlighting of your Markdown. Sadly, I use CodeRay for codeblocks rather than standard Markdown markup. So MarkdownEditing can’t beautify my codeblocks within Sublime Text, but <code>inline code snippets like this one</code> are highlighted in a very helpful way. You can see all the ways that the package alters your Markdown <a href="https://camo.githubusercontent.com/35a66d68a55666133ba7911fb0ea61277740680f/68747470733a2f2f7261772e6769746875622e636f6d2f5375626c696d65546578742d4d61726b646f776e2f4d61726b646f776e45646974696e672f6d61737465722f73637265656e73686f74732f6c696768742e706e67">here</a>. Keep in mind that there are a couple other themes available specifically for MarkdownEditing. I use the dark theme of course.</p>
-
-<h2 id="syntax">Syntax</h2>
-
-<p>You might also find it handy to install packages for specific languages. For example, I dabble with CSS pre-processors and templating languages. I’m currently checking out LESS for CSS and Jade for HTML, so I’ve installed syntax highlighters for them. The package names are simply “LESS” and “Jade”.</p>
-</div>
-  
-  
-
-
-</div>
-
-      </article>
-    
     </div>
       <div class="row">
         <ul class="pager">
@@ -1039,6 +1026,10 @@ posted in
     <ul class="recent_posts">
       
         <li>
+          <a href="/blog/2015/06/03/recap-of-lambdaconf-2015/">Recap of LambdaConf 2015 - Where Brains Explode</a>
+        </li>
+      
+        <li>
           <a href="/blog/2015/04/19/how-to-talk-while-coding-and-whiteboarding/">How to Talk While Coding and Whiteboarding in 7 Steps</a>
         </li>
       
@@ -1052,10 +1043,6 @@ posted in
       
         <li>
           <a href="/blog/2014/11/23/how-to-learn-javascript-and-web-development/">How to Start AND Continue Learning JavaScript and Web Development</a>
-        </li>
-      
-        <li>
-          <a href="/blog/2014/09/22/web-security-fundamentals-part-2-helpful-resources/">Web Security Fundamentals - Part 2: More Info on Modern Defense</a>
         </li>
       
     </ul>

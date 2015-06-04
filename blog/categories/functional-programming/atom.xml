@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: functional programming | RebootJeff.com]]></title>
+  <link href="http://RebootJeff.github.io/blog/categories/functional-programming/atom.xml" rel="self"/>
+  <link href="http://RebootJeff.github.io/"/>
+  <updated>2015-06-03T20:38:49-07:00</updated>
+  <id>http://RebootJeff.github.io/</id>
+  <author>
+    <name><![CDATA[Jeff Lee]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Recap of LambdaConf 2015 - Where Brains Explode]]></title>
+    <link href="http://RebootJeff.github.io/blog/2015/06/03/recap-of-lambdaconf-2015/"/>
+    <updated>2015-06-03T20:39:00-07:00</updated>
+    <id>http://RebootJeff.github.io/blog/2015/06/03/recap-of-lambdaconf-2015</id>
+    <content type="html"><![CDATA[<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">Can you intuit that these slides are about promise-land of virtual filesystems inspired by <a href="https://twitter.com/hashtag/FunctionalProgramming?src=hash">#FunctionalProgramming</a> ? <a href="http://t.co/AGiupUies9">pic.twitter.com/AGiupUies9</a></p>&mdash; Jeff Lee (@RebootJeff) <a href="https://twitter.com/RebootJeff/status/602129973067952128">May 23, 2015</a></blockquote>
+<script async="" src="http://RebootJeff.github.io//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<p>On May 21st, I traveled to Boulder for <a href="http://www.degoesconsulting.com/lambdaconf-2015/">LambdaConf 2015</a>, a functional programming (FP) conference. Overall, it wasn’t as beginner-friendly as I had hoped, but it gave me plenty of food for thought as I explore FP. Today, I’m going to summarize some key points and takeaways from the talks that really stuck with me. I didn’t understand everything I heard, but still learned a thing or two …I think.</p>
+
+<h1 id="recaps">Recaps</h1>
+
+<h2 id="keynote-ipecac-for-the-ouroboros-by-paul-phillips">Keynote: “Ipecac for the Ouroboros” by Paul Phillips</h2>
+<p>Apparently, the <a href="http://en.wikipedia.org/wiki/Ouroboros">Ouroboros</a> (serpent eating its own tail) in this talk represents all programmers (and perhaps even all computer users) who are eating their own tails by accepting the current model for filesystems (files, folders, directories, etc). Phillips suggests that he has the cure (the ipecac).</p>
+
+<p>What if computers used virtual filesystems? Imagine if filesystems were more like databases, and retrieving files would be like using expressions that define queries and which files to retrieve. You would not need to rely on knowing filepaths and file names. You wouldn’t end up with multiple copies of the same files/folders in various directories. You would rely on useful metadata to get your latest photos. You could even ask for “all the photos with person X” (via facial recognition).</p>
+
+<h2 id="selfish-purity-how-functional-programming-makes-every-day-jobs-easier-by-daniel-spiewak">“Selfish Purity: How Functional Programming Makes Every-Day Jobs Easier” by Daniel Spiewak</h2>
+<p>Spiewak claims that FP gurus suck at articulating to non-FP programmers about why FP rocks. According to him, FP’s strengths boil down to reasonability, testability, and concurrency.</p>
+
+<p>As a beginner in the world of FP, I partially agree. For me, it’s easy to grasp why FP rocks in theory, but sometimes it’s hard to understand in practice because it can be so difficult to start writing FP code.</p>
+
+<p>Instead of going on about abstract algebra, Spiewak says FP evangelists should emphasize <strong>reasonability, testability, and concurrency</strong>. For intro classes, FP teachers should focus less on manipulating data and more on how to do data-centric programming instead of behavior-centric programming.</p>
+
+<h3 id="reasonability">Reasonability</h3>
+<p>FP emphasizes data over behavior, and it’s easier to reason about data than behavior (especially if the behavior can be different due to side-effects, implicit inputs, etc –in other words, impurity makes it difficult to reason about behavior).</p>
+
+<h3 id="testability">Testability</h3>
+<p>Side-effects leads to difficult testability leads to devs hating testing leads to devs writing fewer/poorer tests leads to lower software quality. This plagues the software industry.</p>
+
+<p>Using FP algebra leads to simpler logic and better testability. By writing a “real” interpreter that performs side-effects and a “fake” interpreter that inspects, testing becomes easy. Free monads enable this pattern. Free monads make it easy to write these 2 “interpreters”.</p>
+
+<h3 id="concurrency">Concurrency</h3>
+
+<ul>
+  <li>sequential ~ <code>flatMap</code> or <code>for-</code>comprehensions ~ monads</li>
+  <li>Parallel ~ <code>zip</code> ~ applicatives</li>
+</ul>
+
+<p><em>Note:</em> In case it isn’t obvious already, I had trouble comprehending this part of the Spiewak’s talk. My understanding is that the purity of FP lends itself to easily distributing computation of expressions and composing the results.</p>
+
+<h2 id="why-i-like-fp-by-adelbert-chang">“Why I Like FP” by Adelbert Chang</h2>
+<p>Imperative programming requires you to maintain state in your head. At the very least, you have to remember values stored in all sorts of variables, maybe different state for each iteration of a loop, etc. With imperative programming, your brain uses a lot of energy on maintaining state (and types in an untyped language) when it should be focused on just solving the problem. This is really annoying if you love the expressions from physics/math where you simply derive solutions to problems.</p>
+
+<p>Math has referential transparency (algebra is just lots of substitution), which is straightforward. FP brings referential transparency (and therefore, more algrebraic concepts) into programming.</p>
+
+<h2 id="how-i-learned-haskell-in-5-years-by-chris-allen">“How I Learned Haskell in 5 Years” by Chris Allen</h2>
+<p>Or: Thoughts on <strong>teaching</strong> Haskell (and just “teaching” in general).</p>
+
+<p>Allen is a professional Haskeller, but he also does a lot of teaching. He spent a lot of time introducing co-workers to the language, and he eventually created a <a href="https://github.com/bitemyapp/learnhaskell">free guide on Haskell</a>. It was great to hear his perspective on education in the realm of coding.</p>
+
+<ul>
+  <li>It took Allen 5 years to learn Haskell because he went through unproductive cycles: complete a tutorial, try a practical project, get frustrated, stop …repeat.</li>
+  <li>When he first started teaching, he sucked at it. He emphasizes that his first audiences were test subjects, and novice teachers should be grateful to their first audiences.</li>
+  <li>His Haskell book, <em><a href="http://haskellbook.com/">Haskell Programming from first principles</a></em> is for self-learners and doesn’t assume recent Computer Science education. It doesn’t even assume programming experience because going from something like JavaScript to Haskell will feel like starting from scratch anyway (yikes!).</li>
+  <li>Handwaving over explanations is problematic. Allen warns that teachers should avoid giving definitions before explanations. That tactic runs counter to how <strong>humans learn via intuition and informal observations that eventually coalesce into formal explanations</strong>.</li>
+  <li>I found a few particularly interesting blog posts by Allen:
+    <ul>
+      <li><a href="http://bitemyapp.com/posts/2014-12-31-functional-education.html">The problem of learning functional programming</a></li>
+      <li><a href="http://bitemyapp.com/posts/2014-04-29-meditations-on-learning-haskell.html">Meditations on learning Haskell</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="programming-and-math-by-harold-carr">“Programming and Math” by Harold Carr</h2>
+<p>Boom: <a href="http://www4.di.uminho.pt/~jno/ps/pdbc_part.pdf">http://www4.di.uminho.pt/~jno/ps/pdbc_part.pdf</a></p>
+
+<h1 id="further-impressions">Further Impressions</h1>
+
+<h2 id="fp-in-the-real-world">FP in the real world</h2>
+<p>Functional programming used to be considered rather academic and unpractical, but nowadays, there are a lot of languages and corresponding communities that make FP friendlier and useful. Consequently, there are plenty of people using FP for “real” software.</p>
+
+<h2 id="fp-languages">FP languages</h2>
+<p>Judging from the conference, Scala, Clojure, and Haskell are the most popular functional programming languages. Haskell seems to have the fewest programmers, but the most momentum/interest. Not only is Haskell favored by the purists, but its static type system is lauded as being the near-panacea that programmers don’t realize they need until they learn it.</p>
+
+<p>However, I saw enough Clojure code to walk away impressed by it. It seems far less intimidating than Haskell, but perhaps that’s largely due to my background in JavaScript (JS and Clojure are both dynamically typed). The funny thing is that there seemed to be a theme where Clojure developers end up finding enlightenment in Haskell thanks to its strict ways. Perhaps learning Clojure is the perfect stepping stone for learning Haskell? If you’re intrigued, check out:</p>
+
+<ul>
+  <li><a href="http://www.braveclojure.com/getting-started/#1__First_things_first__What_is_Clojure_">Clojure for the Brave and True</a>, an online book</li>
+  <li><a href="https://github.com/ClojureBridge/curriculum/tree/gh-pages">ClojureBridge</a>, organization providing workshops and a free online curriculum</li>
+  <li><a href="https://sekao.net/nightmod/">Nightmod</a>, a Clojure-based game-making tool</li>
+</ul>
+]]></content>
+  </entry>
+  
+</feed>

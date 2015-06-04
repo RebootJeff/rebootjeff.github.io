@@ -138,6 +138,183 @@
 
   <header>
     
+      <h1 class="entry-title"><a href="/blog/2014/05/15/my-sublime-text-2-setup-and-customization/">My Sublime Text 2 Setup and Customization</a></h1>
+    
+    
+      <p class="meta">
+        
+  
+
+
+  
+    <span class="byline author vcard">by <span class="fn">Jeff Lee</span></span>
+  
+
+ - 
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-05-15T20:32:00-07:00" pubdate data-updated="true">May 15<span>th</span>, 2014</time> - 
+        
+
+posted in
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/customization/'>customization</a>, <a class='category' href='/blog/categories/dev-tools/'>dev tools</a>, <a class='category' href='/blog/categories/software-development/'>software development</a>
+  
+</span>
+
+
+        
+         | <a href="/blog/2014/05/15/my-sublime-text-2-setup-and-customization/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><em>Updated on August 8, 2014.</em></p>
+
+<p>I use Sublime Text 2 as my text editor for coding. I don’t use a fancy IDE like WebStorm, but I do plan on trying out WebStorm more at work. Actually, I should probably upgrade to ST3, but for now, I’m happy with ST2.</p>
+
+<h1 id="config">Config</h1>
+
+<p>However, ST2’s light weight comes at a cost: you probably need to configure some stuff before you’re really ready to roll. Here’s what I do when I first install ST2 on a machine.</p>
+
+<h2 id="key-bindings">Key Bindings</h2>
+
+<p>First, I change the keyboard shortcuts for cycling through open tabs. The default behavior is based on your usage history (most recently viewed tabs), but I prefer just cycling from left to right. There’s actually another key binding that can cycle tabs from left to right, but I prefer using <code>Ctrl+Tab</code>.Therefore, I edited my key bindings like so…</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption class="code-header" style="margin-bottom:-5px;"><span>Preferences &gt; Key Bindings – User </span></figcaption>
+ <div class="CodeRay">
+  <div class="code"><pre>
+{ <span class="key"><span class="delimiter">&quot;</span><span class="content">keys</span><span class="delimiter">&quot;</span></span>: [<span class="string"><span class="delimiter">&quot;</span><span class="content">ctrl+tab</span><span class="delimiter">&quot;</span></span>], <span class="key"><span class="delimiter">&quot;</span><span class="content">command</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">next_view</span><span class="delimiter">&quot;</span></span> },
+{ <span class="key"><span class="delimiter">&quot;</span><span class="content">keys</span><span class="delimiter">&quot;</span></span>: [<span class="string"><span class="delimiter">&quot;</span><span class="content">ctrl+shift+tab</span><span class="delimiter">&quot;</span></span>], <span class="key"><span class="delimiter">&quot;</span><span class="content">command</span><span class="delimiter">&quot;</span></span>: <span class="string"><span class="delimiter">&quot;</span><span class="content">prev_view</span><span class="delimiter">&quot;</span></span> },
+</pre></div>
+</div>
+ </figure></notextile></div>
+
+<h2 id="settings">Settings</h2>
+
+<p>Next up, I make sure my whitespace is configured to my liking. I think most coders who lift hefty amounts of JavaScript go with indentation 2 spaces at a time, so that’s what I do. I prefer it because it takes up less space than a typical 4-space tab, which is critical when viewing code in split-screen mode. I also like having the option to manually change indentation with spaces if necessary for alignment purposes. Mixing spaces and tabs gets messy.</p>
+
+<p>I also configure Sublime Text to automatically add a new line at the end of every file whenever I save. It won’t add a new line if one already exists at EOF. I personally never suffer from lack of new line at EOF, but <a href="http://stackoverflow.com/questions/729692/why-should-files-end-with-a-newline">some UNIX tools won’t work without them</a>, and I know lots of hardcore coders out there like using such tools. I don’t want to screw them over. With that said, allow me to present my ST2 settings…</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption class="code-header" style="margin-bottom:-5px;"><span>Preferences &gt; Settings – User </span></figcaption>
+ <div class="CodeRay">
+  <div class="code"><pre>
+<span class="comment">// The number of spaces a tab is considered equal to</span>
+  <span class="string"><span class="delimiter">&quot;</span><span class="content">tab_size</span><span class="delimiter">&quot;</span></span>: <span class="integer">2</span>,
+
+ <span class="comment">// Set to true to insert spaces when tab is pressed</span>
+  <span class="key"><span class="delimiter">&quot;</span><span class="content">translate_tabs_to_spaces</span><span class="delimiter">&quot;</span></span>: <span class="predefined-constant">true</span>,
+
+<span class="comment">// Set to true to ensure the last line of the file ends in a newline</span>
+<span class="comment">// character when saving</span>
+  <span class="key"><span class="delimiter">&quot;</span><span class="content">ensure_newline_at_eof_on_save</span><span class="delimiter">&quot;</span></span>: <span class="predefined-constant">true</span>,
+</pre></div>
+</div>
+ </figure></notextile></div>
+
+<h1 id="theme-ui-skin">Theme (UI Skin)</h1>
+
+<p>I use the Nexus theme, which you can find here: <a href="https://github.com/EleazarCrusader/nexus-theme">https://github.com/EleazarCrusader/nexus-theme</a>. The readme file explains a bunch of different installation options, but I recommend installing via Package Manager. The readme also tells you how to activate the theme after installation.</p>
+
+<p><img src="https://raw.githubusercontent.com/EleazarCrusader/nexus-theme/master/nexus-theme.png" alt="official Nexus theme screenshot" /></p>
+
+<p class="my-caption">The orange and blue decorations on the tabs tell you if the file has been change since last save.</p>
+
+<h1 id="packages">Packages</h1>
+
+<p>Sublime Text doesn’t come with many bells and whistles. Instead you add them as packages. First, you must install the package manager by following <a href="https://sublime.wbond.net/installation#st2">these instructions</a>. After that, get ready to discover a giant pool of all the bells and whistles you could possibly want. If you need to adjust the settings for any of these packages, you can usually find good documentation from the readme files of their respective GitHub repos.</p>
+
+<p>After you install Package Manager, you can access it by hitting <code>Ctrl+Shift+P</code> (or perhaps <code>Cmd+Shift+P</code> for Macs?) and then typing “package control” into the search box. The typeahead will reveal your various options, but you mostly be using “Package Control: Install Package”. There will be some load time necessary to provide you a list of available packages, but after it’s done, you can search for packages by name. Installation will similarly require some load time. Check the bottom-left of the ST2 window to see relevant status messages.</p>
+
+<p>Here are the packages I installed:</p>
+
+<h3 id="alignment">Alignment</h3>
+<p>Prettify your code by aligning multiple lines of variable definitions and hash objects. For example…</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption class="code-header" style="margin-bottom:-5px;"><span>Before and After using the Alignment package </span></figcaption>
+ <div class="CodeRay">
+  <div class="code"><pre>
+<span class="comment">// this stuff...</span>
+<span class="keyword">var</span> x = <span class="integer">123</span>;
+<span class="keyword">var</span> foo = <span class="string"><span class="delimiter">'</span><span class="content">bar</span><span class="delimiter">'</span></span>;
+<span class="keyword">var</span> exampleObj = {
+  <span class="key">my</span>: x,
+  <span class="key">name</span>: <span class="integer">99</span>,
+  <span class="key">is</span>: <span class="string"><span class="delimiter">'</span><span class="content">Jeff</span><span class="delimiter">'</span></span>
+};
+
+<span class="comment">// would turn into this stuff...</span>
+<span class="keyword">var</span> x          = <span class="integer">123</span>;
+<span class="keyword">var</span> foo        = <span class="string"><span class="delimiter">'</span><span class="content">bar</span><span class="delimiter">'</span></span>;
+<span class="keyword">var</span> exampleObj = {
+  <span class="key">my</span>  : x,
+  <span class="key">name</span>: <span class="integer">99</span>,
+  <span class="key">is</span>  : <span class="string"><span class="delimiter">'</span><span class="content">Jeff</span><span class="delimiter">'</span></span>
+};
+</pre></div>
+</div>
+ </figure></notextile></div>
+
+<p>This may look stupid to you, but I don’t use it all the time. The main place I like to use it is with multiple <code>var example = require('npm package name here');</code> statements at the top of a JS file. By the way, I had to edit the package settings to get alignment for object literals. I added the <code>":"</code> seen below…</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption class="code-header" style="margin-bottom:-5px;"><span>Preferences &gt; Package Settings &gt; Alignment &gt; Settings – User </span></figcaption>
+ <div class="CodeRay">
+  <div class="code"><pre>
+{
+  <span class="comment">// The mid-line characters to align in a multi-line selection, changing</span>
+  <span class="comment">// this to an empty array will disable mid-line alignment</span>
+  <span class="key"><span class="delimiter">&quot;</span><span class="content">alignment_chars</span><span class="delimiter">&quot;</span></span>: [<span class="string"><span class="delimiter">&quot;</span><span class="content">=</span><span class="delimiter">&quot;</span></span>, <span class="string"><span class="delimiter">&quot;</span><span class="content">:</span><span class="delimiter">&quot;</span></span>]
+}
+</pre></div>
+</div>
+ </figure></notextile></div>
+
+<h3 id="gitgutter">GitGutter</h3>
+<p>Add indicators in your gutter so then you can see which lines of code have been changed since the last git commit. See the left edge of this screenshot:
+<img src="http://i.imgur.com/ur6FY.png" alt="GitGutter in action" /></p>
+
+<h3 id="sublimelinter">SublimeLinter</h3>
+<p>I prefer live linting over build-time linting. SublimeLinter supports a ton of languages, and I have it set to simply bring up an indicator in the gutter and some underscores to point to any issues it finds. It’s not too obtrusive.</p>
+
+<h3 id="trailingspaces">TrailingSpaces</h3>
+<p>Extraneous whitespace is bad. Trailing whitespace is worse. I use this package to highlight any trailing whitespace in bright pink. I bet I could set my linter to do this, but oh well.</p>
+
+<h3 id="markdownediting">MarkdownEditing</h3>
+<p>Who doesn’t love Markdown? It makes GitHub README files and wiki pages look great. It makes dev blogs look great. It makes writing dev-related text easy. Sometimes, I write rough drafts of blog posts within Google Docs or <a href="http://dillinger.io/">Dillinger</a>, which is a sweet online Markdown editor. In the end, I always complete my blog posts by writing Markdown within Sublime Text.</p>
+
+<p>I recently found a sweet ST package to help edit Markdown files: MarkdownEditing. It completely transforms the look and syntax highlighting of your Markdown. Sadly, I use CodeRay for codeblocks rather than standard Markdown markup. So MarkdownEditing can’t beautify my codeblocks within Sublime Text, but <code>inline code snippets like this one</code> are highlighted in a very helpful way. You can see all the ways that the package alters your Markdown <a href="https://camo.githubusercontent.com/35a66d68a55666133ba7911fb0ea61277740680f/68747470733a2f2f7261772e6769746875622e636f6d2f5375626c696d65546578742d4d61726b646f776e2f4d61726b646f776e45646974696e672f6d61737465722f73637265656e73686f74732f6c696768742e706e67">here</a>. Keep in mind that there are a couple other themes available specifically for MarkdownEditing. I use the dark theme of course.</p>
+
+<h2 id="syntax">Syntax</h2>
+
+<p>You might also find it handy to install packages for specific languages. For example, I dabble with CSS pre-processors and templating languages. I’m currently checking out LESS for CSS and Jade for HTML, so I’ve installed syntax highlighters for them. The package names are simply “LESS” and “Jade”.</p>
+</div>
+  
+  
+
+
+</div>
+
+      </article>
+    
+    
+      <article class="span4">
+        <div class="article-format">
+
+  <header>
+    
       <h1 class="entry-title"><a href="/blog/2014/05/11/hackr-diary-weeks-11-12-and-beyond/">[HackR Diary] Weeks 11-12: And Beyond!</a></h1>
     
     
@@ -914,328 +1091,6 @@ posted in
 
       </article>
     
-    
-      <article class="span4">
-        <div class="article-format">
-
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/01/04/queues-stacks-javascript-class-patterns/">Queues & Stacks From Scratch With JS Patterns</a></h1>
-    
-    
-      <p class="meta">
-        
-  
-
-
-  
-    <span class="byline author vcard">by <span class="fn">Jeff Lee</span></span>
-  
-
- - 
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-01-04T16:04:00-08:00" pubdate data-updated="true">Jan 4<span>th</span>, 2014</time> - 
-        
-
-posted in
-<span class="categories">
-  
-    <a class='category' href='/blog/categories/javascript/'>JavaScript</a>, <a class='category' href='/blog/categories/data-structures/'>data structures</a>, <a class='category' href='/blog/categories/design-patterns/'>design patterns</a>, <a class='category' href='/blog/categories/technical-posts/'>technical posts</a>
-  
-</span>
-
-
-        
-         | <a href="/blog/2014/01/04/queues-stacks-javascript-class-patterns/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>In my <a href="/blog/2013/12/26/queues-and-stacks-in-javascript/">previous post</a>, I began my quest to help noob programmers by introducing the basic computer science topic of data structures. I provided a quick overview of queues and stacks, so please read all about ‘em before engaging your eyeballs with this blog post. This time around, we’ll check out four different patterns for creating classes in JavaScript while learning how to build stacks and queues from scratch.</p>
-
-<p>Before we go, I should warn you that I’m going to focus on describing the class instantiation patterns rather than thoroughly explaining the implementation of the data structures. Just keep in mind that we are going to explore building stacks and queues with objects rather than arrays. More specifically, we will use a property called <code>storage</code> that is an object, not an array. Now I know what you’re pondering.</p>
-
-<blockquote>
-  <p>Why?</p>
-</blockquote>
-
-<p>That is a beautiful question. Please ask it all the time (but please don’t troll me by leaving “Why?” in the comments section of this blog post). In this case, the answer to “Why?” may be a tad disatisfying. The answer is “because we can”, but don’t worry! It’ll be fun. Now, let’s start instantiating some motherhugging classes.</p>
-
-<h1 id="functional-instantiation">1. Functional Instantiation</h1>
-
-<p>The simplest way to implement classes is with a “maker” function that creates a new instance of the class and returns that instance so it can be stored as a variable. The new instance is just like any other JavaScript object. It can have properties that store relevant information about the instance (e.g., with a <code>Car</code> class, instances might have a <code>price</code> property). It can also have properties that store functions. These functions serve as <strong>methods</strong> that are tightly associated with the instance.</p>
-
-<h4 id="characteristics">Characteristics</h4>
-
-<ul>
-  <li>Creates new copies of the same functions when creating a new instance of the same class. This lack of reuse takes up more memory and can leave an unsavory taste in some programmers’ mouths.</li>
-  <li>There is no quick way to modify all instances of the class after they’ve been created. This will become more clear after examining the other instantiation tactics.</li>
-  <li>Private variables can be created/used by harnessing <strong>closure scope</strong> superpowers, but I won’t get into that today.</li>
-  <li>If you understand JavaScript functions and objects, then you can understand classes implemented via functional instantiation (other instantiation techniques require knowledge of <code>this</code> and/or <code>new</code>).</li>
-  <li>Could be used to create callable instances (i.e., the class could return a function rather than an object filled with properties).</li>
-</ul>
-
-<h4 id="example-code">Example code:</h4>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><figcaption class="code-header" style="margin-bottom:-5px;"><span>Stack from scratch (functional instantiation) </span></figcaption>
- <div class="CodeRay">
-  <div class="code"><pre>
-<span class="keyword">var</span> <span class="function">makeStack</span> = <span class="keyword">function</span>(comment){
-  <span class="comment">// Provide private variables in closure scope</span>
-  <span class="keyword">var</span> size = <span class="integer">0</span>;
-  <span class="keyword">var</span> storage = {};
-  <span class="keyword">var</span> instance = {};  <span class="comment">// Start building an instance of Stack class</span>
-
-  <span class="comment">// Add extra properties for the hell of it</span>
-  instance.annotation = comment;
-
-  <span class="comment">// Add functions to the instance to serve as methods</span>
-  <span class="comment">// (they will provide an interface to the stack's storage)</span>
-  instance.<span class="function">push</span> = <span class="keyword">function</span>(data){
-    storage[size] = data;
-    size++;
-  };
-
-  instance.<span class="function">pop</span> = <span class="keyword">function</span>(){
-    <span class="keyword">if</span>(size &gt; <span class="integer">0</span>){  <span class="comment">// Only perform pop actions if the stack has data</span>
-      size--;
-      <span class="keyword">var</span> data = storage[size];
-      <span class="keyword">delete</span> storage[size];  <span class="comment">// Don't forget to delete from storage!</span>
-      <span class="keyword">return</span> data;
-    }
-  };
-
-  instance.<span class="function">size</span> = <span class="keyword">function</span>(){
-    <span class="keyword">return</span> size;
-  };
-
-  <span class="keyword">return</span> instance;
-};
-
-<span class="comment">// Create and use an instance of the Stack class</span>
-<span class="keyword">var</span> myStack = makeStack(<span class="string"><span class="delimiter">&quot;</span><span class="content">I'm a stack! Whoa.</span><span class="delimiter">&quot;</span></span>);
-myStack.push(<span class="integer">1</span>);              <span class="comment">// myStack stores 1</span>
-myStack.push(<span class="string"><span class="delimiter">'</span><span class="content">b</span><span class="delimiter">'</span></span>);            <span class="comment">// myStack stores 1 and 'b'</span>
-myStack.push(<span class="integer">3</span>);              <span class="comment">// myStack stores 1, 'b', and 3</span>
-console.log(myStack.pop());   <span class="comment">// logs 3</span>
-console.log(myStack.size());  <span class="comment">// logs 2</span>
-</pre></div>
-</div>
- </figure></notextile></div>
-
-<h1 id="functional-instantiation-wshared-methods">2. Functional Instantiation w/Shared Methods</h1>
-
-<p>By utilizing an object filled with methods, several classes can be created that have the same methods without creating new copies of said methods. The classes will use their own function references to refer to the same set of shared methods. Therefore, using shared methods eats up less memory than functional instantiation <em>without</em> shared methods.</p>
-
-<h4 id="characteristics-1">Characteristics</h4>
-
-<ul>
-  <li>Reuses functions (which conserves memory) by getting function references from a utility such as <a href="http://underscorejs.org/#extend">Underscore.js</a>’s <code>_.extend(instance,methods)</code>.</li>
-  <li>Retains the same benefits as functional instantiation <em>without</em> shared methods.</li>
-</ul>
-
-<h4 id="example-code-1">Example code:</h4>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><figcaption class="code-header" style="margin-bottom:-5px;"><span>Queue from scratch (functional instantiation with shared methods) </span></figcaption>
- <div class="CodeRay">
-  <div class="code"><pre>
-<span class="keyword">var</span> <span class="function">makeQueue</span> = <span class="keyword">function</span>(queueName, comment){
-
-  <span class="comment">// You can use object literal notation for `instance` (instead of dot notation),</span>
-  <span class="comment">// but then we have to use `this` and we lose the privacy of closure scope</span>
-  <span class="comment">// (e.g., `storage` is no longer private), so this kind of sucks.</span>
-  <span class="keyword">var</span> instance = {
-    <span class="key">name</span>: queueName,
-    <span class="key">annotation</span>: comment,
-    <span class="key">head</span>: <span class="integer">0</span>,
-    <span class="key">tail</span>: <span class="integer">0</span>,
-    <span class="key">storage</span>: {}
-  };
-
-  <span class="comment">// The _.extend() function is provided by the Underscore.js library</span>
-  _.extend(instance, sharedQueueMethods);
-
-  <span class="keyword">return</span> instance;
-};
-
-<span class="comment">// The object below stores methods that could be shared with other classes</span>
-<span class="keyword">var</span> sharedQueueMethods = {
-  <span class="function">enqueue</span>: <span class="keyword">function</span>(data){
-    <span class="local-variable">this</span>.storage[<span class="local-variable">this</span>.tail] = data;
-    <span class="local-variable">this</span>.tail++;
-    <span class="comment">// The tail points to the next EMPTY &quot;spot&quot; for data to be stored</span>
-    <span class="comment">// it does NOT point to the last OCCUPIED &quot;spot&quot; in the storage</span>
-  },
-  <span class="function">dequeue</span>: <span class="keyword">function</span>(){
-    <span class="keyword">if</span>(<span class="local-variable">this</span>.head &lt;= <span class="local-variable">this</span>.tail){  <span class="comment">// Check the queue's size</span>
-      <span class="keyword">var</span> data = <span class="local-variable">this</span>.storage[<span class="local-variable">this</span>.head];
-
-      <span class="comment">// Deleting is even more important for queues than for stacks</span>
-      <span class="comment">// (memory leaks are a bigger threat for queues)</span>
-      <span class="keyword">delete</span> <span class="local-variable">this</span>.storage[<span class="local-variable">this</span>.head];
-      <span class="local-variable">this</span>.head++;
-      <span class="keyword">return</span> data;
-    }
-  },
-  <span class="function">size</span>: <span class="keyword">function</span>(){
-    <span class="keyword">return</span> <span class="local-variable">this</span>.tail - <span class="local-variable">this</span>.head;
-  }
-};
-
-<span class="comment">// Create and use an instance of the Queue class:</span>
-<span class="keyword">var</span> myCoolQueue = makeQueue(<span class="string"><span class="delimiter">&quot;</span><span class="content">Jeff's Queue</span><span class="delimiter">&quot;</span></span>,<span class="string"><span class="delimiter">'</span><span class="content">Hello, world!</span><span class="delimiter">'</span></span>);
-myCoolQueue.enqueue(<span class="string"><span class="delimiter">'</span><span class="content">a</span><span class="delimiter">'</span></span>);             <span class="comment">// myCoolQueue stores 'a'</span>
-myCoolQueue.enqueue(<span class="integer">2</span>);               <span class="comment">// myCoolQueue stores 'a' and 2</span>
-myCoolQueue.enqueue(<span class="string"><span class="delimiter">'</span><span class="content">c</span><span class="delimiter">'</span></span>);             <span class="comment">// myCoolQueue stores 'a', 2, and 'c'</span>
-console.log(myCoolQueue.dequeue());   <span class="comment">// output: 'a'</span>
-console.log(myCoolQueue.size());      <span class="comment">// output: 2</span>
-</pre></div>
-</div>
- </figure></notextile></div>
-
-<h1 id="prototypal-instantiation">3. Prototypal Instantiation</h1>
-
-<p>The key to prototypal instantiation is the use of <code>Object.create()</code> to utilize shared methods. Unlike functional instantiation with shared methods, there is no need to use an <code>extend()</code> function.</p>
-
-<p>While it’s possible to use a prototype’s functions with <code>Object.create(ExampleClass.prototype);</code>, it’s also possible to (ironically) avoid the word “prototype” altogether by using <code>Object.create(sharedMethods);</code>.</p>
-
-<h4 id="characteristics-2">Characteristics</h4>
-
-<ul>
-  <li>Reuses shared functions via <code>Object.create(Example.prototype)</code> or <code>Object.create(objectOfFunctions)</code>.</li>
-  <li>Unlike functional instantiation, function references are shared. Each instance of the class does not get its own function references that point to the shared methods. This saves even more memory (although it is a very small improvement).</li>
-  <li>Unlike functional instantiation, there is no way to use closure scope to enforce privacy of variables.</li>
-  <li>Variables are stored on the returned object (aka <code>instance</code>), which means the shared stack methods need to use the keyword <code>this</code> to access the necessary data. It’s not a huge bummer, but if you’re a beginner, then <code>this</code> can be a confusing concept.</li>
-  <li>Can use prototype chains for dynamic method modification and inheritance (subclasses!).</li>
-</ul>
-
-<h4 id="example-code-2">Example code:</h4>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><figcaption class="code-header" style="margin-bottom:-5px;"><span>Stack from scratch (prototypal instantiation) </span></figcaption>
- <div class="CodeRay">
-  <div class="code"><pre>
-<span class="keyword">var</span> <span class="function">makeStack</span> = <span class="keyword">function</span>(comment){
-  <span class="keyword">var</span> instance = Object.create(sharedStackMethods);
-  instance.annotation = comment;
-  instance.size = <span class="integer">0</span>;
-  instance.storage = {};
-
-  <span class="keyword">return</span> instance;
-};
-
-<span class="keyword">var</span> sharedStackMethods = {
-  <span class="function">push</span>: <span class="keyword">function</span>(data){
-    <span class="local-variable">this</span>.storage[<span class="local-variable">this</span>.size] = data;
-    <span class="local-variable">this</span>.size++;
-  },
-  <span class="function">pop</span>: <span class="keyword">function</span>(){
-    <span class="keyword">if</span>(<span class="local-variable">this</span>.size &gt; <span class="integer">0</span>){
-      <span class="local-variable">this</span>.size--;
-      <span class="keyword">var</span> data = <span class="local-variable">this</span>.storage[<span class="local-variable">this</span>.size];
-      <span class="keyword">delete</span> <span class="local-variable">this</span>.storage[<span class="local-variable">this</span>.size];
-      <span class="keyword">return</span> data;
-    }
-  },
-  <span class="function">size</span>: <span class="keyword">function</span>(){
-    <span class="keyword">return</span> <span class="local-variable">this</span>.size;
-  }
-};
-
-<span class="comment">// Create an instance of the Stack class:</span>
-<span class="keyword">var</span> myStack = makeStack(<span class="string"><span class="delimiter">&quot;</span><span class="content">I'm a stack! Whoa.</span><span class="delimiter">&quot;</span></span>);
-<span class="comment">// Using the instance doesn't change from one class pattern to another</span>
-myStack.push(<span class="integer">1</span>);              <span class="comment">// myStack stores 1</span>
-myStack.push(<span class="string"><span class="delimiter">'</span><span class="content">b</span><span class="delimiter">'</span></span>);            <span class="comment">// myStack stores 1 and 'b'</span>
-myStack.push(<span class="integer">3</span>);              <span class="comment">// myStack stores 1, 'b', and 3</span>
-console.log(myStack.pop());   <span class="comment">// logs 3</span>
-console.log(myStack.size());  <span class="comment">// logs 2</span>
-</pre></div>
-</div>
- </figure></notextile></div>
-
-<h1 id="pseudoclassical-instantiation">4. Pseudoclassical Instantiation</h1>
-
-<p>This is the most commonly used class pattern. It’s also the most complicated because, in addition to using the <code>this</code> keyword, it involves two concepts that the other class patterns don’t require: the <code>new</code> keyword and prototypes. Prototypal instantiation uses prototypes via <code>Object.create()</code>, but pseudoclassical instantiation needs you to explicitly type out <code>ClassName.prototype.methodName</code>, which is just another source of confusion for beginners.</p>
-
-<p>Also, it’s the only class pattern that uses a true <a href="http://en.wikipedia.org/wiki/Constructor_(object-oriented_programming)">constructor</a> for creating new instances. Other class patterns use instantiator functions that explicitly return a new instance. The pseudoclassical class pattern does not perform such a return thanks to the <code>new</code> keyword.</p>
-
-<h4 id="characteristics-3">Characteristics</h4>
-
-<ul>
-  <li>Uses prototype chains to provide methods to instances of a class.</li>
-  <li>Allows for dynamic method modification and inheritance (subclasses!) via prototype chains.</li>
-  <li>Refers to the instance that’s being created with the <code>this</code> keyword.</li>
-  <li>Needs the <code>new</code> keyword to make an instance of a class.</li>
-  <li>Has a true constructor that is named with a noun rather than a verb. The name is capitalized.</li>
-  <li>Is the most commonly used class pattern.</li>
-</ul>
-
-<h4 id="example-code-3">Example code:</h4>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><figcaption class="code-header" style="margin-bottom:-5px;"><span>Queue from scratch (pseudoclassical instantiation) </span></figcaption>
- <div class="CodeRay">
-  <div class="code"><pre>
-<span class="comment">// Class name is now a noun (no verb), and it starts with an upper case letter</span>
-<span class="keyword">var</span> <span class="function">Queue</span> = <span class="keyword">function</span>(queueName, comment){
-  <span class="comment">// Notice the use of 'this'</span>
-  <span class="local-variable">this</span>.name = queueName,
-  <span class="local-variable">this</span>.annotation = comment,
-  <span class="local-variable">this</span>.head: <span class="integer">0</span>,
-  <span class="local-variable">this</span>.tail: <span class="integer">0</span>,
-  <span class="local-variable">this</span>.storage: {}
-};
-
-<span class="comment">// Notice the use of 'prototype'</span>
-Queue.prototype.<span class="function">enqueue</span> = <span class="keyword">function</span>(data){
-  <span class="local-variable">this</span>.storage[<span class="local-variable">this</span>.tail] = data;
-  <span class="local-variable">this</span>.tail++;
-};
-Queue.prototype.<span class="function">dequeue</span> = <span class="keyword">function</span>(){
-  <span class="keyword">if</span>(<span class="local-variable">this</span>.head &lt;= <span class="local-variable">this</span>.tail){
-    <span class="keyword">var</span> data = <span class="local-variable">this</span>.storage[<span class="local-variable">this</span>.head];
-    <span class="keyword">delete</span> <span class="local-variable">this</span>.storage[<span class="local-variable">this</span>.head];
-    <span class="local-variable">this</span>.head++;
-    <span class="keyword">return</span> data;
-  }
-};
-Queue.prototype.<span class="function">size</span> = <span class="keyword">function</span>(){
-  <span class="keyword">return</span> <span class="local-variable">this</span>.tail - <span class="local-variable">this</span>.head;
-};
-
-<span class="comment">// Create an instance of the Stack class by using the 'new' keyword:</span>
-<span class="keyword">var</span> myCoolQueue = <span class="keyword">new</span> Queue(<span class="string"><span class="delimiter">&quot;</span><span class="content">Jeff's Queue</span><span class="delimiter">&quot;</span></span>,<span class="string"><span class="delimiter">&quot;</span><span class="content">The grass is always greener, but just as hard to mowww!</span><span class="delimiter">&quot;</span></span>);
-<span class="comment">// Use the instance just like in previous examples</span>
-myCoolQueue.enqueue(<span class="string"><span class="delimiter">'</span><span class="content">a</span><span class="delimiter">'</span></span>);             <span class="comment">// myCoolQueue stores 'a'</span>
-myCoolQueue.enqueue(<span class="integer">2</span>);               <span class="comment">// myCoolQueue stores 'a' and 2</span>
-myCoolQueue.enqueue(<span class="string"><span class="delimiter">'</span><span class="content">c</span><span class="delimiter">'</span></span>);             <span class="comment">// myCoolQueue stores 'a', 2, and 'c'</span>
-console.log(myCoolQueue.dequeue());   <span class="comment">// output: 'a'</span>
-console.log(myCoolQueue.size());      <span class="comment">// output: 2</span>
-</pre></div>
-</div>
- </figure></notextile></div>
-
-</div>
-  
-  
-
-
-</div>
-
-      </article>
-    
     </div>
       <div class="row">
         <ul class="pager">
@@ -1263,6 +1118,10 @@ console.log(myCoolQueue.size());      <span class="comment">// output: 2</span>
     <ul class="recent_posts">
       
         <li>
+          <a href="/blog/2015/06/03/recap-of-lambdaconf-2015/">Recap of LambdaConf 2015 - Where Brains Explode</a>
+        </li>
+      
+        <li>
           <a href="/blog/2015/04/19/how-to-talk-while-coding-and-whiteboarding/">How to Talk While Coding and Whiteboarding in 7 Steps</a>
         </li>
       
@@ -1276,10 +1135,6 @@ console.log(myCoolQueue.size());      <span class="comment">// output: 2</span>
       
         <li>
           <a href="/blog/2014/11/23/how-to-learn-javascript-and-web-development/">How to Start AND Continue Learning JavaScript and Web Development</a>
-        </li>
-      
-        <li>
-          <a href="/blog/2014/09/22/web-security-fundamentals-part-2-helpful-resources/">Web Security Fundamentals - Part 2: More Info on Modern Defense</a>
         </li>
       
     </ul>
