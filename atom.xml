@@ -4,7 +4,7 @@
   <title><![CDATA[RebootJeff.com]]></title>
   <link href="http://RebootJeff.github.io/atom.xml" rel="self"/>
   <link href="http://RebootJeff.github.io/"/>
-  <updated>2015-06-03T20:38:49-07:00</updated>
+  <updated>2015-06-12T11:41:51-07:00</updated>
   <id>http://RebootJeff.github.io/</id>
   <author>
     <name><![CDATA[@RebootJeff]]></name>
@@ -12,6 +12,68 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Pair Programming Impressions and Tips]]></title>
+    <link href="http://RebootJeff.github.io/blog/2015/06/12/pair-programming-tips-and-impressions/"/>
+    <author>
+      <name><![CDATA[@RebootJeff]]></name>
+      
+    </author>
+    <updated>2015-06-12T01:33:00-07:00</updated>
+    <id>http://RebootJeff.github.io/blog/2015/06/12/pair-programming-tips-and-impressions</id>
+    <content type="html"><![CDATA[<p><img src="http://RebootJeff.github.io/images/20150612/pair_programming_ducks.jpg" alt="two rubber ducks pair programming" /></p>
+
+<p class="my-caption">This is the best photo I&#8217;ve ever taken.</p>
+
+<p>Some programming friends think I’m crazy, but I most definitely &lt;3 pair programming. I dig the human interaction. I appreciate enduring the horrors of debugging with a comrade. I love the anti-ego culture.</p>
+
+<p>On top of all that, pairing reduces the risk of burnout for a couple of reasons. Firstly, the average level of focus stays high throughout the day so you don’t have to work as many hours. Secondly, any stress, tedium, and brain workouts are shared by two folks instead of one. Therefore, individuals are less likely to get overwhelmed or feel alone in handling responsibilities or overcoming blockers.</p>
+
+<p>Admittedly, there are times when I want to get in the flow by myself without the need to constantly talk to another person, but usually, I embrace 1-on-1 talks. Why? (1) Discussion activates more of my brain. (2) <a href="http://rebootjeff.github.io/blog/categories/communication-for-engineers/">I’m a big fan of communication skills</a>. (3) Considering another individual’s perspective gives me more to think about, and I love thinking about thinking.</p>
+
+<p>For nearly 2 years, I’ve been pair programming. During this time, I’ve picked up on a few tips and pet-peeves. Read on for some musings on software development in dynamic duos.</p>
+
+<h2 id="communication-tips">Communication Tips</h2>
+<p>These tips are good for all communication, not just pair programming. But bad communication skills become an unavoidable problem when you pair up, so consider improving how you talk and listen to become a better paired engineer.</p>
+
+<h4 id="tone-be-inquisitive-not-accusatory">Tone: be inquisitive, not accusatory</h4>
+<p>Another way to put it: be curious about your own assumptions, conclusions, and judgements. Unless you are 100% certain, give your partner the benefit of the doubt.</p>
+
+<blockquote>
+  <ul>
+    <li><strong>DO:</strong> What if X? Will that affect idea Y?</li>
+    <li><strong>DON’T:</strong> Your idea (Y) won’t work because of X.</li>
+  </ul>
+</blockquote>
+
+<blockquote>
+  <ul>
+    <li><strong>DO:</strong> What are the obstacles? Let’s see if we can tackle them together.</li>
+    <li><strong>DON’T:</strong> I imagine what we need to do should be easy. Why don’t you think so?</li>
+  </ul>
+</blockquote>
+
+<h4 id="precision-be-specific-use-idiomatic-terms-avoid-vague-pronouns">Precision: be specific; use idiomatic terms; avoid vague pronouns</h4>
+<p>The below example is more pertinent to a senior teaching a junior, but even proficient engineers get out of sync when generic words like “that one” are used instead of precise words like “the <em>[insert object name]</em> at <em>[insert context or line number]</em>.”</p>
+
+<blockquote>
+  <ul>
+    <li><strong>DO:</strong> The promise returned by the request at line 31 will resolve with a response body containing the JSON we need to parse and possibly flatten.</li>
+    <li><strong>DON’T:</strong> That method call will give us the data we need to check out.</li>
+  </ul>
+</blockquote>
+
+<h2 id="keyboard--mouse-tips">Keyboard &amp; Mouse Tips</h2>
+<p>Maybe it’s just me, but I find it painful to watch someone use only arrow keys to move a cursor or use slow mouse movements to scroll to the top or bottom of a file. Although, I admit that I could be a tad unfair in the typing department (<a href="http://10fastfingers.com/speedtests/generate_screenshot_result/1_102_508_0_0_96_0_97.96_3086_151253">I rock triple-digit WPM</a> so …booya).</p>
+
+<ul>
+  <li>Please learn general typing shortcuts such as moving the cursor to beginning/end of word/line/file. Use these cursor movement shortcuts in conjunction with shift/delete to select/remove code quickly.</li>
+  <li>Learn IDE shortcuts such as multi-selection/cursors, vertical/block selection, switching tabs, and deleting current line.</li>
+  <li>Use the mouse to point at parts of the screen, not your finger. You don’t want to block parts of the screen with your hand/arm, and you don’t want to reach over to your partner’s monitor if you’ve got a setup with dual-mirrored-monitors.</li>
+</ul>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Recap of LambdaConf 2015 - Where Brains Explode]]></title>
@@ -2066,100 +2128,6 @@ console.log(myCoolQueue.size());      <span class="comment">// output: 2</span>
 </div>
  </figure></notextile></div>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Queues &amp; Stacks in JavaScript (with Batman and Superman)]]></title>
-    <link href="http://RebootJeff.github.io/blog/2013/12/26/queues-and-stacks-in-javascript/"/>
-    <author>
-      <name><![CDATA[@RebootJeff]]></name>
-      
-    </author>
-    <updated>2013-12-26T15:54:00-08:00</updated>
-    <id>http://RebootJeff.github.io/blog/2013/12/26/queues-and-stacks-in-javascript</id>
-    <content type="html"><![CDATA[<p>The proverbial “they” say (says?) it’s good to write technical blog posts. Blog posts that get down and dirty with the nitty gritty of low-level, in-the-weeds details and nuances accompanied by jargon, acronyms, and name-dropping are all the rage in the dev community. More importantly, I really want to help beginners learn programming, so I may as well teach some basic concepts via my blog. (Later on, I hope to contribute more to <a href="http://www.theodinproject.com/">The Odin Project</a>, which is a free, open-source, online resource for beginners created by a very cool individual.)</p>
-
-<p>So as my first foray in technical blog posts, I present to all loveable noobs: the introductory data structures known as stacks and queues.</p>
-
-<h1 id="whats-a-stack">What’s a Stack?</h1>
-
-<p>A stack is a collection of items (or data) that follow a particular rule: the last item to join the collection is the first one to leave.</p>
-
-<ul>
-  <li>The <strong>L</strong>ast data <strong>I</strong>n is the <strong>F</strong>irst data <strong>O</strong>ut (<strong>LIFO</strong>)</li>
-  <li>Add data: <strong>push</strong></li>
-  <li>Remove data: <strong>pop</strong></li>
-  <li>Data enters and exits at the same end of the stack (at the <strong>top</strong>)</li>
-</ul>
-
-<h2 id="simple-implementation">Simple implementation</h2>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><figcaption class="code-header" style="margin-bottom:-5px;"><span>Simple Stack (array-based example)</span><a href="http://stackoverflow.com/questions/1590247/how-do-you-implement-a-stack-and-a-queue-in-javascript">Stack Overflow </a></figcaption> <div class="CodeRay">
-  <div class="code"><pre>
-<span class="keyword">var</span> stack = [];
-stack.push(<span class="integer">1</span>);  <span class="comment">// use the push method provided by the Array prototype</span>
-stack.push(<span class="integer">2</span>);
-stack.push(<span class="integer">3</span>);
-console.log(stack);  <span class="comment">// output: [1,2,3]</span>
-
-<span class="keyword">var</span> popped = stack.pop();  <span class="comment">// use the pop method provided by the Array prototype</span>
-console.log(popped);  <span class="comment">// output: 3</span>
-console.log(stack);  <span class="comment">// output: [1,2]</span>
-</pre></div>
-</div>
- </figure></notextile></div>
-
-<h2 id="ridiculous-analogy">Ridiculous analogy</h2>
-
-<p>Imagine you’ve found an old, abandoned well. You think to yourself, “Bruce Wayne fell down a well when he was a kid, and I wanna be just like the Batman, so I’m gonna fall down this sweet well!” But you hesitate because …it’s a well, and wells are scary, ya know?</p>
-
-<p>Unbeknownst to you, <a href="http://batman.wikia.com/wiki/Harley_Quinn">your arch-nemesis</a> is out walking her <a href="http://batman.wikia.com/wiki/Bud_and_Lou">pet hyenas</a>. She spots you, and quickly runs over to shove you into the well. She giggles in delight at the sight of your plight. She then hides and waits for more people to walk near the well so she can <strong>push</strong> them too.</p>
-
-<p>It just so happens that this well has the diameter of a single person’s width. When someone is pushed into the well, they land on top of the last person who fell in before them. This creates a <strong>stack</strong> of people and some rather pronounced discomfort. Eventually, there are 5 people in this deep-yet-thin well, and you decide it’s time to call for help to get rescued.</p>
-
-<p>To your disappointment, the not-so-dark knight named Superman arrives to pull you well-dwellers out (one at a time). The last one pushed into the well is the first to <strong>pop</strong> out. <em>LIFO.</em></p>
-
-<h1 id="whats-a-queue">What’s a Queue?</h1>
-
-<p>A queue is a collection of items (or data) that follow the real-life “rules” of waiting in a line of people: the first item to join the collection is the first one to leave the collection.</p>
-
-<ul>
-  <li>The <strong>F</strong>irst data <strong>I</strong>n is the <strong>F</strong>irst data <strong>O</strong>ut (<strong>FIFO</strong>)</li>
-  <li>Add data: <strong>enqueue</strong></li>
-  <li>Remove data: <strong>dequeue</strong></li>
-  <li>Data exits at the: <strong>head</strong> of the queue</li>
-  <li>Data enters at the: <strong>tail</strong> of the queue</li>
-</ul>
-
-<h2 id="simple-implementation-1">Simple implementation</h2>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><figcaption class="code-header" style="margin-bottom:-5px;"><span>Simple Queue (array-based example)</span><a href="http://stackoverflow.com/questions/1590247/how-do-you-implement-a-stack-and-a-queue-in-javascript">Stack Overflow </a></figcaption> <div class="CodeRay">
-  <div class="code"><pre>
-<span class="keyword">var</span> queue = [];
-queue.push(<span class="integer">1</span>);  <span class="comment">// &quot;enqueue&quot;</span>
-queue.push(<span class="integer">2</span>);
-queue.push(<span class="integer">3</span>);
-console.log(queue);  <span class="comment">// output: [1,2,3]</span>
-
-<span class="keyword">var</span> dequeued = queue.shift();  <span class="comment">// &quot;dequeue&quot;</span>
-console.log(dequeued);  <span class="comment">// output: 1</span>
-console.log(queue);  <span class="comment">// output: [2,3]</span>
-</pre></div>
-</div>
- </figure></notextile></div>
-
-<h2 id="ridiculous-analogy-1">Ridiculous analogy</h2>
-
-<p>Batman decides to do some in-the-field combat training. He drops into the middle of a gang meeting and yells, “I’ve sent your buddies to jail. I know you want revenge. Catch me if you can. P.S. I’m Batman!” Why does the cowled hero do this? We all know Batman is a smart dude, and sure enough, he has a clever plan. He lures the baddies who are running after him into a narrow alley.</p>
-
-<p>The gangsters can only approach Batman one at a time to fit in the narrow alley, so they form a line (aka <strong>queue</strong>). The gangster at the front of the line is the first gangster knocked out (aka <strong>dequeued</strong>) by Batman (<strong>first in; first out</strong>). You might even say that Batman’s fists aim for the <strong>head</strong> of the queue and foolish gangsters enter at the <strong>tail</strong> of the line of doom.</p>
-
-<h1 id="the-story-will-continue">The Story Will Continue</h1>
-
-<p>Stay tuned for more blog posts on data structures. My next technical blog post will examine how to implement stacks and queues from scratch (without arrays) to get a deeper understanding of push, pop, enqueue, and dequeue. I know you can’t wait for the moment I deliver on this promise. I can hear your panting through my WiFi, but please stay patient. I was busy working on a <a href="https://github.com/RebootJeff/cocompare">web app</a> and then a <a href="https://github.com/RebootJeff/phone-tag-phonegap">mobile app</a>. Now, I’m busy with job searching while possibly starting mini-project.</p>
-
-<p>On a mildly amusing, unrelated note: isn’t it funny to think about the phrase “stay tuned”? It’s getting rather archaic now that terrestrial, over-the-air TV and radio are losing popularity. Yes, these are the random things I think about as I write blog posts.</p>
 ]]></content>
   </entry>
   

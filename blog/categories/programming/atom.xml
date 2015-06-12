@@ -4,7 +4,7 @@
   <title><![CDATA[Category: programming | RebootJeff.com]]></title>
   <link href="http://RebootJeff.github.io/blog/categories/programming/atom.xml" rel="self"/>
   <link href="http://RebootJeff.github.io/"/>
-  <updated>2015-06-03T20:38:49-07:00</updated>
+  <updated>2015-06-12T11:41:51-07:00</updated>
   <id>http://RebootJeff.github.io/</id>
   <author>
     <name><![CDATA[Jeff Lee]]></name>
@@ -12,6 +12,64 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Pair Programming Impressions and Tips]]></title>
+    <link href="http://RebootJeff.github.io/blog/2015/06/12/pair-programming-tips-and-impressions/"/>
+    <updated>2015-06-12T01:33:00-07:00</updated>
+    <id>http://RebootJeff.github.io/blog/2015/06/12/pair-programming-tips-and-impressions</id>
+    <content type="html"><![CDATA[<p><img src="/images/20150612/pair_programming_ducks.jpg" alt="two rubber ducks pair programming" /></p>
+
+<p class="my-caption">This is the best photo I've ever taken.</p>
+
+<p>Some programming friends think I’m crazy, but I most definitely &lt;3 pair programming. I dig the human interaction. I appreciate enduring the horrors of debugging with a comrade. I love the anti-ego culture.</p>
+
+<p>On top of all that, pairing reduces the risk of burnout for a couple of reasons. Firstly, the average level of focus stays high throughout the day so you don’t have to work as many hours. Secondly, any stress, tedium, and brain workouts are shared by two folks instead of one. Therefore, individuals are less likely to get overwhelmed or feel alone in handling responsibilities or overcoming blockers.</p>
+
+<p>Admittedly, there are times when I want to get in the flow by myself without the need to constantly talk to another person, but usually, I embrace 1-on-1 talks. Why? (1) Discussion activates more of my brain. (2) <a href="http://rebootjeff.github.io/blog/categories/communication-for-engineers/">I’m a big fan of communication skills</a>. (3) Considering another individual’s perspective gives me more to think about, and I love thinking about thinking.</p>
+
+<p>For nearly 2 years, I’ve been pair programming. During this time, I’ve picked up on a few tips and pet-peeves. Read on for some musings on software development in dynamic duos.</p>
+
+<h2 id="communication-tips">Communication Tips</h2>
+<p>These tips are good for all communication, not just pair programming. But bad communication skills become an unavoidable problem when you pair up, so consider improving how you talk and listen to become a better paired engineer.</p>
+
+<h4 id="tone-be-inquisitive-not-accusatory">Tone: be inquisitive, not accusatory</h4>
+<p>Another way to put it: be curious about your own assumptions, conclusions, and judgements. Unless you are 100% certain, give your partner the benefit of the doubt.</p>
+
+<blockquote>
+  <ul>
+    <li><strong>DO:</strong> What if X? Will that affect idea Y?</li>
+    <li><strong>DON’T:</strong> Your idea (Y) won’t work because of X.</li>
+  </ul>
+</blockquote>
+
+<blockquote>
+  <ul>
+    <li><strong>DO:</strong> What are the obstacles? Let’s see if we can tackle them together.</li>
+    <li><strong>DON’T:</strong> I imagine what we need to do should be easy. Why don’t you think so?</li>
+  </ul>
+</blockquote>
+
+<h4 id="precision-be-specific-use-idiomatic-terms-avoid-vague-pronouns">Precision: be specific; use idiomatic terms; avoid vague pronouns</h4>
+<p>The below example is more pertinent to a senior teaching a junior, but even proficient engineers get out of sync when generic words like “that one” are used instead of precise words like “the <em>[insert object name]</em> at <em>[insert context or line number]</em>.”</p>
+
+<blockquote>
+  <ul>
+    <li><strong>DO:</strong> The promise returned by the request at line 31 will resolve with a response body containing the JSON we need to parse and possibly flatten.</li>
+    <li><strong>DON’T:</strong> That method call will give us the data we need to check out.</li>
+  </ul>
+</blockquote>
+
+<h2 id="keyboard--mouse-tips">Keyboard &amp; Mouse Tips</h2>
+<p>Maybe it’s just me, but I find it painful to watch someone use only arrow keys to move a cursor or use slow mouse movements to scroll to the top or bottom of a file. Although, I admit that I could be a tad unfair in the typing department (<a href="http://10fastfingers.com/speedtests/generate_screenshot_result/1_102_508_0_0_96_0_97.96_3086_151253">I rock triple-digit WPM</a> so …booya).</p>
+
+<ul>
+  <li>Please learn general typing shortcuts such as moving the cursor to beginning/end of word/line/file. Use these cursor movement shortcuts in conjunction with shift/delete to select/remove code quickly.</li>
+  <li>Learn IDE shortcuts such as multi-selection/cursors, vertical/block selection, switching tabs, and deleting current line.</li>
+  <li>Use the mouse to point at parts of the screen, not your finger. You don’t want to block parts of the screen with your hand/arm, and you don’t want to reach over to your partner’s monitor if you’ve got a setup with dual-mirrored-monitors.</li>
+</ul>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[How to Help a Beginner Debug Code]]></title>

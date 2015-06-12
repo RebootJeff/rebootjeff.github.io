@@ -1,0 +1,363 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Pair Programming Impressions and Tips - RebootJeff.com</title>
+  <meta name="author" content="Jeff Lee">
+  <link rel="author" href="humans.txt">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  
+    
+  
+  <meta name="description" content="This is the best photo I&#8217;ve ever taken. Some programming friends think I’m crazy, but I most definitely &lt;3 pair programming. I dig the &hellip;">
+  
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://RebootJeff.github.io/blog/2015/06/12/pair-programming-tips-and-impressions/">
+  <link href="/favicon.png" rel="icon">
+  <link href='http://fonts.googleapis.com/css?family=Cantarell' rel='stylesheet' type='text/css'>
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="RebootJeff.com" type="application/atom+xml">
+  <meta name="og:type" content="website" />
+  <meta name="og:site_name" content="RebootJeff.com" />
+  <meta name="og:title" content="Pair Programming Impressions and Tips" />
+  <meta name="og:description" content="This is the best photo I&#8217;ve ever taken. Some programming friends think I’m crazy, but I most definitely &lt;3 pair programming. I dig the &hellip;" />
+  <meta name="og:url" content="http://RebootJeff.github.io/blog/2015/06/12/pair-programming-tips-and-impressions/"/>
+  <meta name="url" content="http://RebootJeff.github.io/blog/2015/06/12/pair-programming-tips-and-impressions/">
+  
+  <meta name="subject" content="Communication for Engineerscommunication Skillsprogrammingtechnical"/>
+  <meta name="category" content="Communication for Engineerscommunication Skillsprogrammingtechnical"/>
+  
+  <meta name="distribution" content="global">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-44084259-1']);
+    _gaq.push(['_setDomainName','github.io']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <nav role="navigation"><div class="navbar">
+  <div class="navbar-inner">
+    <a class="brand" href="/">RebootJeff.com</a>
+    <ul class="nav">
+      <li><a href="/">Home</a></li>
+      <!-- BEGIN custom nav here because importing custom/navigation.html at the bottom (by default) shows up looking weird -->
+      <li><a href="/about">About</a></li>
+      <li><a href="/portfolio">Portfolio</a></li>
+      <li><a href="/blog/categories/my-media">Media</a></li>
+      <li><a href="/blog/archives">Archives</a></li>
+    </ul>
+    <ul class="nav" data-subscription="rss">
+      <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+      
+    </ul>
+      
+    <form class="navbar-form" action="http://google.com/search" method="get">
+      <fieldset role="search">
+        <input type="hidden" name="q" value="site:RebootJeff.github.io" />
+        <input class="span2" type="text" name="q" results="0" placeholder="Search"/>
+      </fieldset>
+    </form>
+      
+    <!-- I have customized the navigation.html file OUTSIDE of the custom folder because the part I wanted to customize comes BEFORE the `include` statement that invokes the custom/navigation.html file (aka the file you're reading now). -->
+  </div>
+</div>
+</nav>
+  <div class="wrapper_single">
+    <div class="container">
+      <div class="row">
+        <article class="span8 offset2" role="article">
+          <div class="article-format">
+
+  <header>
+    
+      <h1 class="entry-title">Pair Programming Impressions and Tips</h1>
+    
+    
+      <p class="meta">
+        
+  
+
+
+  
+    <span class="byline author vcard">by <span class="fn">Jeff Lee</span></span>
+  
+
+ - 
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-06-12T01:33:00-07:00" pubdate data-updated="true">Jun 12<span>th</span>, 2015</time> - 
+        
+
+posted in
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/communication-for-engineers/'>Communication for Engineers</a>, <a class='category' href='/blog/categories/communication-skills/'>communication Skills</a>, <a class='category' href='/blog/categories/programming/'>programming</a>, <a class='category' href='/blog/categories/technical/'>technical</a>
+  
+</span>
+
+
+        
+         | <a href="#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><img src="/images/20150612/pair_programming_ducks.jpg" alt="two rubber ducks pair programming" /></p>
+
+<p class="my-caption">This is the best photo I&#8217;ve ever taken.</p>
+
+<p>Some programming friends think I’m crazy, but I most definitely &lt;3 pair programming. I dig the human interaction. I appreciate enduring the horrors of debugging with a comrade. I love the anti-ego culture.</p>
+
+<p>On top of all that, pairing reduces the risk of burnout for a couple of reasons. Firstly, the average level of focus stays high throughout the day so you don’t have to work as many hours. Secondly, any stress, tedium, and brain workouts are shared by two folks instead of one. Therefore, individuals are less likely to get overwhelmed or feel alone in handling responsibilities or overcoming blockers.</p>
+
+<p>Admittedly, there are times when I want to get in the flow by myself without the need to constantly talk to another person, but usually, I embrace 1-on-1 talks. Why? (1) Discussion activates more of my brain. (2) <a href="http://rebootjeff.github.io/blog/categories/communication-for-engineers/">I’m a big fan of communication skills</a>. (3) Considering another individual’s perspective gives me more to think about, and I love thinking about thinking.</p>
+
+<p>For nearly 2 years, I’ve been pair programming. During this time, I’ve picked up on a few tips and pet-peeves. Read on for some musings on software development in dynamic duos.</p>
+
+<h2 id="communication-tips">Communication Tips</h2>
+<p>These tips are good for all communication, not just pair programming. But bad communication skills become an unavoidable problem when you pair up, so consider improving how you talk and listen to become a better paired engineer.</p>
+
+<h4 id="tone-be-inquisitive-not-accusatory">Tone: be inquisitive, not accusatory</h4>
+<p>Another way to put it: be curious about your own assumptions, conclusions, and judgements. Unless you are 100% certain, give your partner the benefit of the doubt.</p>
+
+<blockquote>
+  <ul>
+    <li><strong>DO:</strong> What if X? Will that affect idea Y?</li>
+    <li><strong>DON’T:</strong> Your idea (Y) won’t work because of X.</li>
+  </ul>
+</blockquote>
+
+<blockquote>
+  <ul>
+    <li><strong>DO:</strong> What are the obstacles? Let’s see if we can tackle them together.</li>
+    <li><strong>DON’T:</strong> I imagine what we need to do should be easy. Why don’t you think so?</li>
+  </ul>
+</blockquote>
+
+<h4 id="precision-be-specific-use-idiomatic-terms-avoid-vague-pronouns">Precision: be specific; use idiomatic terms; avoid vague pronouns</h4>
+<p>The below example is more pertinent to a senior teaching a junior, but even proficient engineers get out of sync when generic words like “that one” are used instead of precise words like “the <em>[insert object name]</em> at <em>[insert context or line number]</em>.”</p>
+
+<blockquote>
+  <ul>
+    <li><strong>DO:</strong> The promise returned by the request at line 31 will resolve with a response body containing the JSON we need to parse and possibly flatten.</li>
+    <li><strong>DON’T:</strong> That method call will give us the data we need to check out.</li>
+  </ul>
+</blockquote>
+
+<h2 id="keyboard--mouse-tips">Keyboard &amp; Mouse Tips</h2>
+<p>Maybe it’s just me, but I find it painful to watch someone use only arrow keys to move a cursor or use slow mouse movements to scroll to the top or bottom of a file. Although, I admit that I could be a tad unfair in the typing department (<a href="http://10fastfingers.com/speedtests/generate_screenshot_result/1_102_508_0_0_96_0_97.96_3086_151253">I rock triple-digit WPM</a> so …booya).</p>
+
+<ul>
+  <li>Please learn general typing shortcuts such as moving the cursor to beginning/end of word/line/file. Use these cursor movement shortcuts in conjunction with shift/delete to select/remove code quickly.</li>
+  <li>Learn IDE shortcuts such as multi-selection/cursors, vertical/block selection, switching tabs, and deleting current line.</li>
+  <li>Use the mouse to point at parts of the screen, not your finger. You don’t want to block parts of the screen with your hand/arm, and you don’t want to reach over to your partner’s monitor if you’ve got a setup with dual-mirrored-monitors.</li>
+</ul>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+
+  
+    <span class="byline author vcard">by <span class="fn">Jeff Lee</span></span>
+  
+
+ - 
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-06-12T01:33:00-07:00" pubdate data-updated="true">Jun 12<span>th</span>, 2015</time> - 
+      
+
+posted in
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/communication-for-engineers/'>Communication for Engineers</a>, <a class='category' href='/blog/categories/communication-skills/'>communication Skills</a>, <a class='category' href='/blog/categories/programming/'>programming</a>, <a class='category' href='/blog/categories/technical/'>technical</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://RebootJeff.github.io/blog/2015/06/12/pair-programming-tips-and-impressions/" data-via="rebootjeff" data-counturl="http://RebootJeff.github.io/blog/2015/06/12/pair-programming-tips-and-impressions/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    
+      <a class="pull-left" href="/blog/2015/06/03/recap-of-lambdaconf-2015/" title="Previous Post: Recap of LambdaConf 2015 - Where Brains Explode">&laquo; Recap of LambdaConf 2015 - Where Brains Explode</a>
+    
+    
+  </footer>
+
+</div>
+
+          
+            <div class="article-format">
+              <h1>Comments</h1>
+              <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+            </div>
+          
+        </article>
+      </div>
+    </div>
+  </div>
+  <div id="footer-widgets">
+  <div class="container">
+    <div class="row">
+  <div class="span3">
+    <h2>Recent Posts</h2>
+    <ul class="recent_posts">
+      
+        <li>
+          <a href="/blog/2015/06/12/pair-programming-tips-and-impressions/">Pair Programming Impressions and Tips</a>
+        </li>
+      
+        <li>
+          <a href="/blog/2015/06/03/recap-of-lambdaconf-2015/">Recap of LambdaConf 2015 - Where Brains Explode</a>
+        </li>
+      
+        <li>
+          <a href="/blog/2015/04/19/how-to-talk-while-coding-and-whiteboarding/">How to Talk While Coding and Whiteboarding in 7 Steps</a>
+        </li>
+      
+        <li>
+          <a href="/blog/2015/04/11/how-to-help-a-beginner-debug/">How to Help a Beginner Debug Code</a>
+        </li>
+      
+        <li>
+          <a href="/blog/2015/01/05/maybe-the-angularjs-armageddon-isnt-real/">The Myth of the AngularJS Armageddon</a>
+        </li>
+      
+    </ul>
+    <h2><a href="/blog/archives">Archives</a></h2>
+  </div>
+  <div class="span3">
+    
+
+  </div>
+  <!-- DISABLE Twitter and Found On footer widgets for now
+  <div class="span4">
+    
+  </div>
+  <div class="span2">
+    
+  -->
+  <div class="span6" id="footer_notes">
+    <p>
+      <a href="/">RebootJeff.com</a> - Copyright &copy; 2015 - Jeff Lee
+    </p>
+    <p>
+      Powered by <a href="http://octopress.org/">Octopress</a>. Made pretty with Foxslide theme by <a href="http://www.AdrianArtiles.com">Adrian Artiles</a>. Theme heavily tweaked by me.
+    </p>
+  </div>
+</div>
+
+  </div>
+</div>
+<!-- DISABLE footer beyond footer-widgets
+<footer class="footer">
+  <div class="container">
+  	
+  </div>
+</footer>
+-->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+<script>window.jQuery || document.write('<script src="/javascripts/libs/jquery-1.7.2.min.js" type="text/javascript"><\/script>')</script>
+<script src="/javascripts/libs/bootstrap.min.js" type="text/javascript"></script>
+<script src="/javascripts/jquery.tweet.js" type="text/javascript"></script>
+<script src="/javascripts/jquery.instagram.js" type="text/javascript"></script>
+<script src="/javascripts/libs/jquery.masonry.min.js" type="text/javascript"></script>
+<script src="/javascripts/custom.js" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'rebootjeff';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://RebootJeff.github.io/blog/2015/06/12/pair-programming-tips-and-impressions/';
+        var disqus_url = 'http://RebootJeff.github.io/blog/2015/06/12/pair-programming-tips-and-impressions/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+</body>
+</html>
