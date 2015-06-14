@@ -4,7 +4,7 @@
   <title><![CDATA[RebootJeff.com]]></title>
   <link href="http://RebootJeff.github.io/atom.xml" rel="self"/>
   <link href="http://RebootJeff.github.io/"/>
-  <updated>2015-06-14T10:53:06-07:00</updated>
+  <updated>2015-06-14T11:10:33-07:00</updated>
   <id>http://RebootJeff.github.io/</id>
   <author>
     <name><![CDATA[@RebootJeff]]></name>
@@ -184,7 +184,7 @@ Third, we use some part of that info to search for relevant photos from the Flic
     <span class="keyword">return</span> getRelevantPhotoFromFlickrAPI(response2);
   }).then(<span class="keyword">function</span>(response3) {
     <span class="keyword">return</span> response3;
-    <span class="comment">// Note: This is last part of the promise chain is actually unnecessary, but</span>
+    <span class="comment">// Note: This last part of the promise chain is actually unnecessary, but</span>
     <span class="comment">// newbies tend to include it.</span>
   });
 }
