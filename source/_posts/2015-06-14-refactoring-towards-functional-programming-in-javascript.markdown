@@ -132,7 +132,7 @@ function getAnimalData() {
     return getRelevantPhotoFromFlickrAPI(response2);
   }).then(function(response3) {
     return response3;
-    // Note: This is last part of the promise chain is actually unnecessary, but
+    // Note: This last part of the promise chain is actually unnecessary, but
     // newbies tend to include it.
   });
 }
