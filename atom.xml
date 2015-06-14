@@ -4,7 +4,7 @@
   <title><![CDATA[RebootJeff.com]]></title>
   <link href="http://RebootJeff.github.io/atom.xml" rel="self"/>
   <link href="http://RebootJeff.github.io/"/>
-  <updated>2015-06-12T11:41:51-07:00</updated>
+  <updated>2015-06-14T10:53:06-07:00</updated>
   <id>http://RebootJeff.github.io/</id>
   <author>
     <name><![CDATA[@RebootJeff]]></name>
@@ -12,6 +12,203 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Refactoring Towards Functional Programming in JavaScript]]></title>
+    <link href="http://RebootJeff.github.io/blog/2015/06/14/refactoring-towards-functional-programming-in-javascript/"/>
+    <author>
+      <name><![CDATA[@RebootJeff]]></name>
+      
+    </author>
+    <updated>2015-06-14T13:58:00-07:00</updated>
+    <id>http://RebootJeff.github.io/blog/2015/06/14/refactoring-towards-functional-programming-in-javascript</id>
+    <content type="html"><![CDATA[<p><img src="https://camo.githubusercontent.com/0b4c12a5daec02b72e6e6879861ac70f75046e65/687474703a2f2f72616d64612e6a637068696c6c697070732e636f6d2f6c6f676f2f72616d646146696c6c65645f323030783233352e706e67" alt="Ramda.js logo" /></p>
+
+<p>This is not a “What is FP?” guide that uses JavaScript. If that’s what you’re looking for, you’ll love <a href="https://github.com/DrBoolean/mostly-adequate-guide">Brian Lonsdorf’s free GitHub-based guide</a>. For this blog post, I will assume you already know currying and composition. I won’t assume you know functors, monads, and the other funky whatchamacallits that I’m still trying to learn for myself.</p>
+
+<p>There are a lot of blogs and presentations that answer “What is Functional Programming?” and “Why bother with Functional Programming?”. There aren’t a lot of resources answering “How do I start using Functional Programming in REAL life?”. Most intro-to-FP resources leave you feeling like you’re supposed to just drop everything and start coding from scratch in Haskell or an FP-focused language that transpiles into JavaScript (e.g., <a href="http://elm-lang.org/">Elm</a> and <a href="https://github.com/clojure/clojurescript">ClosureScript</a>).</p>
+
+<p>My team at work has recently been exploring FP in JavaScript by using a library called <a href="http://ramdajs.com/">Ramda</a>. It’s a functional programming JavaScript library. Ramda offers some common FP utilities to help you code in the FP style or just slowly convert parts of your codebase to the FP style.</p>
+
+<p>Most of the team is unfamiliar with FP, so rather than diving into massive re-writes to convert large chunks of code from Object-Oriented Programming to FP, we’ve been starting small. Along the way, we’ve learned some solid steps for introducing FP into an existing codebase at a comfy pace. The gist of it is: don’t dive into the world of endofunctors, monoids, and catamorphisms. Instead, focus on treating functions differently by cutting down on anonymous functions, subdividing functions into tiny functions, and using the simplest FP concepts such as currying and composition.</p>
+
+<h2 id="code-smells">Code smells</h2>
+
+<p>These are some signs that code is very imperative and not very FP-like:</p>
+
+<ul>
+  <li><strong>Anonymous callbacks</strong> - It’s harder to re-use functions that don’t have names, it’s harder to write pointfree code with anonymous <em>callbacks</em> in particular, and functions expressions will be more commonplace when you start using more FP (due to frequent use of <code>curry</code> and <code>composition</code>).</li>
+  <li><strong>Suboptimal parameter order</strong> - Function signatures should have parameters arranged in an order that fits currying. This means putting config-like parameters first and main data parameters last (which is pretty much the exact opposite order that we’re all used to).</li>
+  <li><strong>Loops</strong> - In JS, loops are usually for-loops that iterate over collections. There are specialized methods such as <code>map</code>, <code>reduce</code>, and <code>filter</code> that can perform the most common looping operations in a style that is more functional and declarative.</li>
+  <li><strong>Localized mutation</strong> - This is a bit harder to explain, but local mutation (usually limited to the scope of a single function and a few nested anonymous callbacks) generally seems innocent enough until you realize it makes it more difficult to split up your functions into tiny functions, which is a major part of refactoring towards FP.</li>
+  <li><strong>Side-effects from functions</strong> - One of the major principles in FP is that <a href="https://github.com/DrBoolean/mostly-adequate-guide/blob/master/ch3.md">functions should be pure</a>. When functions affect data outside their own local scope, it is usually due to IO actions or an OOP construct such as a method operating on the properties of its context object.</li>
+</ul>
+
+<h2 id="refactoring-steps">Refactoring steps</h2>
+
+<h3 id="easy-difficulty">Easy Difficulty</h3>
+
+<ul>
+  <li><strong>Use named functions</strong> - This will make it easier to write pointfree code and to compose functions.</li>
+  <li><strong>Use predicates</strong> - Functions that encapsulate conditional statements can be composed with other functions for the FP/declarative equivalent of imperative control flow.</li>
+  <li><strong>Refactor loops via <code>each</code>, <code>map</code>, <code>filter</code>, <code>reduce</code>, etc</strong> - Using these FP iteration functions encourage you to also write small helper functions and predicates. They will guide you towards more FP.</li>
+</ul>
+
+<h3 id="medium-difficulty">Medium Difficulty</h3>
+
+<ul>
+  <li><strong>Focus on simple FP utilities</strong> - <code>R.curry</code>, <code>R.compose</code>, <code>R.composeP</code>, <code>R.prop</code>, <code>R.is</code>, <code>R.has</code>, <code>R.anyPass</code>/<code>R.allPass</code> are all worth checking out. Set a goal to use these as much as possible. It’s a great (and reasonable!) goal to get started with the FP style without getting too overwhelmed.
+    <ul>
+      <li>Using <code>curry</code> and <code>compose</code> get you to the heart of FP’s flexibility. Your code will look significantly different once you start currying and composing functions.</li>
+      <li>Dot notation for accessing properties that will be used as input to a function (use <code>R.prop</code> or <code>R.has</code> as needed).</li>
+    </ul>
+  </li>
+  <li><strong>Simplify all functions</strong> - Break down larger functions into smaller functions; break down helper functions into more and more generalized helper functions.
+    <ul>
+      <li>Minimize the number of arguments</li>
+      <li>Write pure functions as often as possible</li>
+    </ul>
+  </li>
+  <li><strong>Segregate mutation/state</strong> - If mutation/state is absolutely necessary, then try to separate the mutation into a traditional function and the rest into something that can be more FP-like. For example, if a function called <code>foo</code> changes some parent scope variables in addition to performing some calculation, then change <code>foo</code> so it calls two helper functions: the parent scope manipulation is done by one helper function while the calculation is done by another helper function.</li>
+</ul>
+
+<h2 id="getting-comfortable">Getting Comfortable</h2>
+
+<p>What can you expect as you start writing FP code?</p>
+
+<ul>
+  <li>Function names should be very expressive and more verbose.
+    <ul>
+      <li>…which leads to code that looks more semantic.</li>
+    </ul>
+  </li>
+  <li>Higher-level functions should be composed of smaller, lower-level functions.
+    <ul>
+      <li>Making functions from functions will look/feel like a tree of nested functions.</li>
+      <li>Lower-level functions should be only a handful of lines (and 1-line functions become common-place). Higher-level functions might also be really short because they just rely on calling multiple functions without much additional logic.</li>
+    </ul>
+  </li>
+  <li>Remember: Function compositions are normally read from right to left.</li>
+  <li>Debugging may be tricky at first, but you should be able to easily test lower-level functions, which means higher-level functions should be less fragile.
+    <ul>
+      <li>For debugging with <code>console.log</code>, you may have to add it to compositions. E.g., <code>var processData = R.compose(calculateStuff, logFilteredData, filterData);</code> You can find a more detailed example of this logging tactic later in this blog post.</li>
+    </ul>
+  </li>
+  <li>Naming functions becomes even more important; names no longer always start with verbs because they are often treated as data (nouns) rather than actions/procedures (verbs).
+    <ul>
+      <li>However, due to FP’s relative obscurity, naming conventions are not as widespread, which could lead to codebases with poorly named functions (significantly more helper functions means more opportunities to get function names messed up). Make sure your team is on the same page for nomenclature.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="examples">Examples</h2>
+
+<p>Keep in mind that I’m using <a href="http://ramdajs.com/">Ramda.js</a> for these examples.</p>
+
+<h3 id="ex-filtering-an-array">Ex: Filtering an array</h3>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption class="code-header" style="margin-bottom:-5px;"><span>Example - Filtering for odd numbers and multiples of 6 </span></figcaption>
+ <div class="CodeRay">
+  <div class="code"><pre>
+<span class="keyword">var</span> originalArray = [<span class="integer">1</span>, <span class="integer">2</span>, <span class="integer">3</span>, <span class="integer">4</span>];
+
+<span class="comment">// Bad - using a for-loop to mutate a new array</span>
+<span class="keyword">var</span> filteredArray = [];
+<span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="integer">0</span>; i &lt; originalArray.length; i++) {
+  <span class="keyword">var</span> number = originalArray[i];
+  <span class="keyword">if</span>(number % <span class="integer">2</span> || number % <span class="integer">6</span> === <span class="integer">0</span>) {
+    filteredArray.push(number);
+  }
+}
+
+<span class="comment">// Better - using the native Array filter method with a typical anonymous function</span>
+<span class="keyword">var</span> filteredArray = originalArray.filter(<span class="keyword">function</span>(number) {
+  <span class="keyword">return</span> number % <span class="integer">2</span> || number % <span class="integer">6</span> === <span class="integer">0</span>;
+});
+
+<span class="comment">// Most Functional - using predicates with a filter method</span>
+<span class="keyword">var</span> <span class="function">isOdd</span> = <span class="keyword">function</span>(number) {
+  <span class="keyword">return</span> number % <span class="integer">2</span>;
+};
+<span class="keyword">var</span> <span class="function">isDivisibleBySix</span> = <span class="keyword">function</span>(number) {
+  <span class="keyword">return</span> number % <span class="integer">6</span> === <span class="integer">0</span>;
+};
+<span class="keyword">var</span> isValid = R.allPass(isOdd, isDivisibleBySix);
+<span class="keyword">var</span> filteredArray = R.filter(isValid, originalArray);
+</pre></div>
+</div>
+ </figure></notextile></div>
+
+<p>The “most functional” technique may seem unappealling because it requires so many lines of code, but it’s vital to remember that predicates serve as re-usable, easily testable utilities. Also, <code>R.anyPass(isOdd, isDivisibleBySix)</code> is more expressive than <code>number % 2 || number % 6 === 0</code>. In the latter case, readers must remember how <code>%</code> works and how the result is a number that gets coerced into a boolean value for truthiness/falsiness.</p>
+
+<h3 id="ex-debugging-via-consolelog">Ex: Debugging via console.log</h3>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption class="code-header" style="margin-bottom:-5px;"><span>Example - Adding a logger for debugging </span></figcaption>
+ <div class="CodeRay">
+  <div class="code"><pre>
+<span class="comment">// Let's try to debug the following function</span>
+<span class="keyword">var</span> processData = R.compose(calculateStuff, sortByDate, filterByStatus);
+
+<span class="comment">// First, we need an FP-friendly logger that works with composition</span>
+<span class="keyword">function</span> <span class="function">log</span>(note, input) {
+  console.log(note + <span class="string"><span class="delimiter">'</span><span class="content"> --- </span><span class="delimiter">'</span></span> + input);
+  <span class="keyword">return</span> input; <span class="comment">// this return is vital</span>
+}
+
+<span class="comment">// Second, we insert the logger into the composition to check if filtering worked</span>
+<span class="keyword">var</span> processData = R.compose(calculateStuff, sortByDate, log(<span class="string"><span class="delimiter">'</span><span class="content">filtered data</span><span class="delimiter">'</span></span>), filterByStatus);
+
+<span class="comment">// Then we run processData with some data, check the log output, and adjust</span>
+<span class="comment">// the placement of the log within the composition until we find where</span>
+<span class="comment">// things go wrong.</span>
+</pre></div>
+</div>
+ </figure></notextile></div>
+
+<p>Once again, it may seem a tad painful. You’re being forced to create a special logger function. But much like in the previous example, keep in mind that you’re being forced to create specialized functions that will probably be useful enough to be part of your project’s internal library of utilities and helpers.</p>
+
+<h3 id="ex-promises">Ex: Promises</h3>
+<p>Let’s pretend we need to grab data about an animal.
+First, we query our database of animals.
+Second, we use our query results to get more info from a 3rd-party animal API.
+Third, we use some part of that info to search for relevant photos from the Flickr API.</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption class="code-header" style="margin-bottom:-5px;"><span>Example - Writing promise chains </span></figcaption>
+ <div class="CodeRay">
+  <div class="code"><pre>
+<span class="comment">// Bad - using typical anonymous function boilerplate</span>
+<span class="keyword">function</span> <span class="function">getAnimalData</span>() {
+  <span class="keyword">return</span> getAnimalInfoFromDatabase().then(<span class="keyword">function</span>(response1) {
+    <span class="keyword">return</span> getRelevantInfoFrom3rdPartyAPI(response1);
+  }).then(<span class="keyword">function</span>(response2) {
+    <span class="keyword">return</span> getRelevantPhotoFromFlickrAPI(response2);
+  }).then(<span class="keyword">function</span>(response3) {
+    <span class="keyword">return</span> response3;
+    <span class="comment">// Note: This is last part of the promise chain is actually unnecessary, but</span>
+    <span class="comment">// newbies tend to include it.</span>
+  });
+}
+
+<span class="comment">// Better - using pointfree style</span>
+<span class="keyword">function</span> <span class="function">getAnimalData</span>() {
+  <span class="keyword">return</span> getAnimalInfoFromDatabase()
+    .then(getRelevantInfoFrom3rdPartyAPI)
+    .then(getRelevantPhotoFromFlickrAPI);
+}
+
+<span class="comment">// Most Radtastic - using Ramda's promise composer</span>
+<span class="keyword">var</span> getAnimalData = R.composeP(
+  getRelevantPhotoFromFlickrAPI,
+  getRelevantInfoFrom3rdPartyAPI,
+  getAnimalInfoFromDatabase
+);
+<span class="comment">// Notice how the order of composition goes from right to left.</span>
+</pre></div>
+</div>
+ </figure></notextile></div>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Pair Programming Impressions and Tips]]></title>
@@ -1852,281 +2049,6 @@ export PATH=$PATH:/home/myUserName/Development/adt-bundle-linux-x86_64-20131030/
     </ul>
   </li>
 </ul>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Queues & Stacks from Scratch with JS Patterns]]></title>
-    <link href="http://RebootJeff.github.io/blog/2014/01/04/queues-stacks-javascript-class-patterns/"/>
-    <author>
-      <name><![CDATA[@RebootJeff]]></name>
-      
-    </author>
-    <updated>2014-01-04T16:04:00-08:00</updated>
-    <id>http://RebootJeff.github.io/blog/2014/01/04/queues-stacks-javascript-class-patterns</id>
-    <content type="html"><![CDATA[<p>In my <a href="http://RebootJeff.github.io/blog/2013/12/26/queues-and-stacks-in-javascript/">previous post</a>, I began my quest to help noob programmers by introducing the basic computer science topic of data structures. I provided a quick overview of queues and stacks, so please read all about ‘em before engaging your eyeballs with this blog post. This time around, we’ll check out four different patterns for creating classes in JavaScript while learning how to build stacks and queues from scratch.</p>
-
-<p>Before we go, I should warn you that I’m going to focus on describing the class instantiation patterns rather than thoroughly explaining the implementation of the data structures. Just keep in mind that we are going to explore building stacks and queues with objects rather than arrays. More specifically, we will use a property called <code>storage</code> that is an object, not an array. Now I know what you’re pondering.</p>
-
-<blockquote>
-  <p>Why?</p>
-</blockquote>
-
-<p>That is a beautiful question. Please ask it all the time (but please don’t troll me by leaving “Why?” in the comments section of this blog post). In this case, the answer to “Why?” may be a tad disatisfying. The answer is “because we can”, but don’t worry! It’ll be fun. Now, let’s start instantiating some motherhugging classes.</p>
-
-<h1 id="functional-instantiation">1. Functional Instantiation</h1>
-
-<p>The simplest way to implement classes is with a “maker” function that creates a new instance of the class and returns that instance so it can be stored as a variable. The new instance is just like any other JavaScript object. It can have properties that store relevant information about the instance (e.g., with a <code>Car</code> class, instances might have a <code>price</code> property). It can also have properties that store functions. These functions serve as <strong>methods</strong> that are tightly associated with the instance.</p>
-
-<h4 id="characteristics">Characteristics</h4>
-
-<ul>
-  <li>Creates new copies of the same functions when creating a new instance of the same class. This lack of reuse takes up more memory and can leave an unsavory taste in some programmers’ mouths.</li>
-  <li>There is no quick way to modify all instances of the class after they’ve been created. This will become more clear after examining the other instantiation tactics.</li>
-  <li>Private variables can be created/used by harnessing <strong>closure scope</strong> superpowers, but I won’t get into that today.</li>
-  <li>If you understand JavaScript functions and objects, then you can understand classes implemented via functional instantiation (other instantiation techniques require knowledge of <code>this</code> and/or <code>new</code>).</li>
-  <li>Could be used to create callable instances (i.e., the class could return a function rather than an object filled with properties).</li>
-</ul>
-
-<h4 id="example-code">Example code:</h4>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><figcaption class="code-header" style="margin-bottom:-5px;"><span>Stack from scratch (functional instantiation) </span></figcaption>
- <div class="CodeRay">
-  <div class="code"><pre>
-<span class="keyword">var</span> <span class="function">makeStack</span> = <span class="keyword">function</span>(comment){
-  <span class="comment">// Provide private variables in closure scope</span>
-  <span class="keyword">var</span> size = <span class="integer">0</span>;
-  <span class="keyword">var</span> storage = {};
-  <span class="keyword">var</span> instance = {};  <span class="comment">// Start building an instance of Stack class</span>
-
-  <span class="comment">// Add extra properties for the hell of it</span>
-  instance.annotation = comment;
-
-  <span class="comment">// Add functions to the instance to serve as methods</span>
-  <span class="comment">// (they will provide an interface to the stack's storage)</span>
-  instance.<span class="function">push</span> = <span class="keyword">function</span>(data){
-    storage[size] = data;
-    size++;
-  };
-
-  instance.<span class="function">pop</span> = <span class="keyword">function</span>(){
-    <span class="keyword">if</span>(size &gt; <span class="integer">0</span>){  <span class="comment">// Only perform pop actions if the stack has data</span>
-      size--;
-      <span class="keyword">var</span> data = storage[size];
-      <span class="keyword">delete</span> storage[size];  <span class="comment">// Don't forget to delete from storage!</span>
-      <span class="keyword">return</span> data;
-    }
-  };
-
-  instance.<span class="function">size</span> = <span class="keyword">function</span>(){
-    <span class="keyword">return</span> size;
-  };
-
-  <span class="keyword">return</span> instance;
-};
-
-<span class="comment">// Create and use an instance of the Stack class</span>
-<span class="keyword">var</span> myStack = makeStack(<span class="string"><span class="delimiter">&quot;</span><span class="content">I'm a stack! Whoa.</span><span class="delimiter">&quot;</span></span>);
-myStack.push(<span class="integer">1</span>);              <span class="comment">// myStack stores 1</span>
-myStack.push(<span class="string"><span class="delimiter">'</span><span class="content">b</span><span class="delimiter">'</span></span>);            <span class="comment">// myStack stores 1 and 'b'</span>
-myStack.push(<span class="integer">3</span>);              <span class="comment">// myStack stores 1, 'b', and 3</span>
-console.log(myStack.pop());   <span class="comment">// logs 3</span>
-console.log(myStack.size());  <span class="comment">// logs 2</span>
-</pre></div>
-</div>
- </figure></notextile></div>
-
-<h1 id="functional-instantiation-wshared-methods">2. Functional Instantiation w/Shared Methods</h1>
-
-<p>By utilizing an object filled with methods, several classes can be created that have the same methods without creating new copies of said methods. The classes will use their own function references to refer to the same set of shared methods. Therefore, using shared methods eats up less memory than functional instantiation <em>without</em> shared methods.</p>
-
-<h4 id="characteristics-1">Characteristics</h4>
-
-<ul>
-  <li>Reuses functions (which conserves memory) by getting function references from a utility such as <a href="http://underscorejs.org/#extend">Underscore.js</a>’s <code>_.extend(instance,methods)</code>.</li>
-  <li>Retains the same benefits as functional instantiation <em>without</em> shared methods.</li>
-</ul>
-
-<h4 id="example-code-1">Example code:</h4>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><figcaption class="code-header" style="margin-bottom:-5px;"><span>Queue from scratch (functional instantiation with shared methods) </span></figcaption>
- <div class="CodeRay">
-  <div class="code"><pre>
-<span class="keyword">var</span> <span class="function">makeQueue</span> = <span class="keyword">function</span>(queueName, comment){
-
-  <span class="comment">// You can use object literal notation for `instance` (instead of dot notation),</span>
-  <span class="comment">// but then we have to use `this` and we lose the privacy of closure scope</span>
-  <span class="comment">// (e.g., `storage` is no longer private), so this kind of sucks.</span>
-  <span class="keyword">var</span> instance = {
-    <span class="key">name</span>: queueName,
-    <span class="key">annotation</span>: comment,
-    <span class="key">head</span>: <span class="integer">0</span>,
-    <span class="key">tail</span>: <span class="integer">0</span>,
-    <span class="key">storage</span>: {}
-  };
-
-  <span class="comment">// The _.extend() function is provided by the Underscore.js library</span>
-  _.extend(instance, sharedQueueMethods);
-
-  <span class="keyword">return</span> instance;
-};
-
-<span class="comment">// The object below stores methods that could be shared with other classes</span>
-<span class="keyword">var</span> sharedQueueMethods = {
-  <span class="function">enqueue</span>: <span class="keyword">function</span>(data){
-    <span class="local-variable">this</span>.storage[<span class="local-variable">this</span>.tail] = data;
-    <span class="local-variable">this</span>.tail++;
-    <span class="comment">// The tail points to the next EMPTY &quot;spot&quot; for data to be stored</span>
-    <span class="comment">// it does NOT point to the last OCCUPIED &quot;spot&quot; in the storage</span>
-  },
-  <span class="function">dequeue</span>: <span class="keyword">function</span>(){
-    <span class="keyword">if</span>(<span class="local-variable">this</span>.head &lt;= <span class="local-variable">this</span>.tail){  <span class="comment">// Check the queue's size</span>
-      <span class="keyword">var</span> data = <span class="local-variable">this</span>.storage[<span class="local-variable">this</span>.head];
-
-      <span class="comment">// Deleting is even more important for queues than for stacks</span>
-      <span class="comment">// (memory leaks are a bigger threat for queues)</span>
-      <span class="keyword">delete</span> <span class="local-variable">this</span>.storage[<span class="local-variable">this</span>.head];
-      <span class="local-variable">this</span>.head++;
-      <span class="keyword">return</span> data;
-    }
-  },
-  <span class="function">size</span>: <span class="keyword">function</span>(){
-    <span class="keyword">return</span> <span class="local-variable">this</span>.tail - <span class="local-variable">this</span>.head;
-  }
-};
-
-<span class="comment">// Create and use an instance of the Queue class:</span>
-<span class="keyword">var</span> myCoolQueue = makeQueue(<span class="string"><span class="delimiter">&quot;</span><span class="content">Jeff's Queue</span><span class="delimiter">&quot;</span></span>,<span class="string"><span class="delimiter">'</span><span class="content">Hello, world!</span><span class="delimiter">'</span></span>);
-myCoolQueue.enqueue(<span class="string"><span class="delimiter">'</span><span class="content">a</span><span class="delimiter">'</span></span>);             <span class="comment">// myCoolQueue stores 'a'</span>
-myCoolQueue.enqueue(<span class="integer">2</span>);               <span class="comment">// myCoolQueue stores 'a' and 2</span>
-myCoolQueue.enqueue(<span class="string"><span class="delimiter">'</span><span class="content">c</span><span class="delimiter">'</span></span>);             <span class="comment">// myCoolQueue stores 'a', 2, and 'c'</span>
-console.log(myCoolQueue.dequeue());   <span class="comment">// output: 'a'</span>
-console.log(myCoolQueue.size());      <span class="comment">// output: 2</span>
-</pre></div>
-</div>
- </figure></notextile></div>
-
-<h1 id="prototypal-instantiation">3. Prototypal Instantiation</h1>
-
-<p>The key to prototypal instantiation is the use of <code>Object.create()</code> to utilize shared methods. Unlike functional instantiation with shared methods, there is no need to use an <code>extend()</code> function.</p>
-
-<p>While it’s possible to use a prototype’s functions with <code>Object.create(ExampleClass.prototype);</code>, it’s also possible to (ironically) avoid the word “prototype” altogether by using <code>Object.create(sharedMethods);</code>.</p>
-
-<h4 id="characteristics-2">Characteristics</h4>
-
-<ul>
-  <li>Reuses shared functions via <code>Object.create(Example.prototype)</code> or <code>Object.create(objectOfFunctions)</code>.</li>
-  <li>Unlike functional instantiation, function references are shared. Each instance of the class does not get its own function references that point to the shared methods. This saves even more memory (although it is a very small improvement).</li>
-  <li>Unlike functional instantiation, there is no way to use closure scope to enforce privacy of variables.</li>
-  <li>Variables are stored on the returned object (aka <code>instance</code>), which means the shared stack methods need to use the keyword <code>this</code> to access the necessary data. It’s not a huge bummer, but if you’re a beginner, then <code>this</code> can be a confusing concept.</li>
-  <li>Can use prototype chains for dynamic method modification and inheritance (subclasses!).</li>
-</ul>
-
-<h4 id="example-code-2">Example code:</h4>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><figcaption class="code-header" style="margin-bottom:-5px;"><span>Stack from scratch (prototypal instantiation) </span></figcaption>
- <div class="CodeRay">
-  <div class="code"><pre>
-<span class="keyword">var</span> <span class="function">makeStack</span> = <span class="keyword">function</span>(comment){
-  <span class="keyword">var</span> instance = Object.create(sharedStackMethods);
-  instance.annotation = comment;
-  instance.size = <span class="integer">0</span>;
-  instance.storage = {};
-
-  <span class="keyword">return</span> instance;
-};
-
-<span class="keyword">var</span> sharedStackMethods = {
-  <span class="function">push</span>: <span class="keyword">function</span>(data){
-    <span class="local-variable">this</span>.storage[<span class="local-variable">this</span>.size] = data;
-    <span class="local-variable">this</span>.size++;
-  },
-  <span class="function">pop</span>: <span class="keyword">function</span>(){
-    <span class="keyword">if</span>(<span class="local-variable">this</span>.size &gt; <span class="integer">0</span>){
-      <span class="local-variable">this</span>.size--;
-      <span class="keyword">var</span> data = <span class="local-variable">this</span>.storage[<span class="local-variable">this</span>.size];
-      <span class="keyword">delete</span> <span class="local-variable">this</span>.storage[<span class="local-variable">this</span>.size];
-      <span class="keyword">return</span> data;
-    }
-  },
-  <span class="function">size</span>: <span class="keyword">function</span>(){
-    <span class="keyword">return</span> <span class="local-variable">this</span>.size;
-  }
-};
-
-<span class="comment">// Create an instance of the Stack class:</span>
-<span class="keyword">var</span> myStack = makeStack(<span class="string"><span class="delimiter">&quot;</span><span class="content">I'm a stack! Whoa.</span><span class="delimiter">&quot;</span></span>);
-<span class="comment">// Using the instance doesn't change from one class pattern to another</span>
-myStack.push(<span class="integer">1</span>);              <span class="comment">// myStack stores 1</span>
-myStack.push(<span class="string"><span class="delimiter">'</span><span class="content">b</span><span class="delimiter">'</span></span>);            <span class="comment">// myStack stores 1 and 'b'</span>
-myStack.push(<span class="integer">3</span>);              <span class="comment">// myStack stores 1, 'b', and 3</span>
-console.log(myStack.pop());   <span class="comment">// logs 3</span>
-console.log(myStack.size());  <span class="comment">// logs 2</span>
-</pre></div>
-</div>
- </figure></notextile></div>
-
-<h1 id="pseudoclassical-instantiation">4. Pseudoclassical Instantiation</h1>
-
-<p>This is the most commonly used class pattern. It’s also the most complicated because, in addition to using the <code>this</code> keyword, it involves two concepts that the other class patterns don’t require: the <code>new</code> keyword and prototypes. Prototypal instantiation uses prototypes via <code>Object.create()</code>, but pseudoclassical instantiation needs you to explicitly type out <code>ClassName.prototype.methodName</code>, which is just another source of confusion for beginners.</p>
-
-<p>Also, it’s the only class pattern that uses a true <a href="http://en.wikipedia.org/wiki/Constructor_(object-oriented_programming)">constructor</a> for creating new instances. Other class patterns use instantiator functions that explicitly return a new instance. The pseudoclassical class pattern does not perform such a return thanks to the <code>new</code> keyword.</p>
-
-<h4 id="characteristics-3">Characteristics</h4>
-
-<ul>
-  <li>Uses prototype chains to provide methods to instances of a class.</li>
-  <li>Allows for dynamic method modification and inheritance (subclasses!) via prototype chains.</li>
-  <li>Refers to the instance that’s being created with the <code>this</code> keyword.</li>
-  <li>Needs the <code>new</code> keyword to make an instance of a class.</li>
-  <li>Has a true constructor that is named with a noun rather than a verb. The name is capitalized.</li>
-  <li>Is the most commonly used class pattern.</li>
-</ul>
-
-<h4 id="example-code-3">Example code:</h4>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><figcaption class="code-header" style="margin-bottom:-5px;"><span>Queue from scratch (pseudoclassical instantiation) </span></figcaption>
- <div class="CodeRay">
-  <div class="code"><pre>
-<span class="comment">// Class name is now a noun (no verb), and it starts with an upper case letter</span>
-<span class="keyword">var</span> <span class="function">Queue</span> = <span class="keyword">function</span>(queueName, comment){
-  <span class="comment">// Notice the use of 'this'</span>
-  <span class="local-variable">this</span>.name = queueName,
-  <span class="local-variable">this</span>.annotation = comment,
-  <span class="local-variable">this</span>.head: <span class="integer">0</span>,
-  <span class="local-variable">this</span>.tail: <span class="integer">0</span>,
-  <span class="local-variable">this</span>.storage: {}
-};
-
-<span class="comment">// Notice the use of 'prototype'</span>
-Queue.prototype.<span class="function">enqueue</span> = <span class="keyword">function</span>(data){
-  <span class="local-variable">this</span>.storage[<span class="local-variable">this</span>.tail] = data;
-  <span class="local-variable">this</span>.tail++;
-};
-Queue.prototype.<span class="function">dequeue</span> = <span class="keyword">function</span>(){
-  <span class="keyword">if</span>(<span class="local-variable">this</span>.head &lt;= <span class="local-variable">this</span>.tail){
-    <span class="keyword">var</span> data = <span class="local-variable">this</span>.storage[<span class="local-variable">this</span>.head];
-    <span class="keyword">delete</span> <span class="local-variable">this</span>.storage[<span class="local-variable">this</span>.head];
-    <span class="local-variable">this</span>.head++;
-    <span class="keyword">return</span> data;
-  }
-};
-Queue.prototype.<span class="function">size</span> = <span class="keyword">function</span>(){
-  <span class="keyword">return</span> <span class="local-variable">this</span>.tail - <span class="local-variable">this</span>.head;
-};
-
-<span class="comment">// Create an instance of the Stack class by using the 'new' keyword:</span>
-<span class="keyword">var</span> myCoolQueue = <span class="keyword">new</span> Queue(<span class="string"><span class="delimiter">&quot;</span><span class="content">Jeff's Queue</span><span class="delimiter">&quot;</span></span>,<span class="string"><span class="delimiter">&quot;</span><span class="content">The grass is always greener, but just as hard to mowww!</span><span class="delimiter">&quot;</span></span>);
-<span class="comment">// Use the instance just like in previous examples</span>
-myCoolQueue.enqueue(<span class="string"><span class="delimiter">'</span><span class="content">a</span><span class="delimiter">'</span></span>);             <span class="comment">// myCoolQueue stores 'a'</span>
-myCoolQueue.enqueue(<span class="integer">2</span>);               <span class="comment">// myCoolQueue stores 'a' and 2</span>
-myCoolQueue.enqueue(<span class="string"><span class="delimiter">'</span><span class="content">c</span><span class="delimiter">'</span></span>);             <span class="comment">// myCoolQueue stores 'a', 2, and 'c'</span>
-console.log(myCoolQueue.dequeue());   <span class="comment">// output: 'a'</span>
-console.log(myCoolQueue.size());      <span class="comment">// output: 2</span>
-</pre></div>
-</div>
- </figure></notextile></div>
 
 ]]></content>
   </entry>
