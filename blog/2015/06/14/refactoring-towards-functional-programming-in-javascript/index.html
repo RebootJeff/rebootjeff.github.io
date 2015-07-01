@@ -242,7 +242,7 @@
 <span class="keyword">var</span> <span class="function">isDivisibleBySix</span> = <span class="keyword">function</span>(number) {
   <span class="keyword">return</span> number % <span class="integer">6</span> === <span class="integer">0</span>;
 };
-<span class="keyword">var</span> isValid = R.allPass(isOdd, isDivisibleBySix);
+<span class="keyword">var</span> isValid = R.allPass([isOdd, isDivisibleBySix]);
 <span class="keyword">var</span> filteredArray = R.filter(isValid, originalArray);
 </pre></div>
 </div>
