@@ -89,7 +89,7 @@ var isOdd = function(number) {
 var isDivisibleBySix = function(number) {
   return number % 6 === 0;
 };
-var isValid = R.allPass(isOdd, isDivisibleBySix);
+var isValid = R.allPass([isOdd, isDivisibleBySix]);
 var filteredArray = R.filter(isValid, originalArray);
 {% endcoderay %}
 
