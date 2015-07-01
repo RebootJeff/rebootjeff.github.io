@@ -146,7 +146,7 @@
 <p>These are some signs that code is very imperative and not very FP-like:</p>
 
 <ul>
-  <li><strong>Anonymous callbacks</strong> - It’s harder to re-use functions that don’t have names, it’s harder to write pointfree code with anonymous <em>callbacks</em> in particular, and functions expressions will be more commonplace when you start using more FP (due to frequent use of <code>curry</code> and <code>composition</code>).</li>
+  <li><strong>Anonymous callbacks</strong> - It’s harder to re-use functions that don’t have names, it’s harder to write pointfree code with anonymous <em>callbacks</em> in particular, and function expressions will be more commonplace when you start using more FP (due to frequent use of <code>curry</code> and <code>composition</code>).</li>
   <li><strong>Suboptimal parameter order</strong> - Function signatures should have parameters arranged in an order that fits currying. This means putting config-like parameters first and main data parameters last (which is pretty much the exact opposite order that we’re all used to).</li>
   <li><strong>Loops</strong> - In JS, loops are usually for-loops that iterate over collections. There are specialized methods such as <code>map</code>, <code>reduce</code>, and <code>filter</code> that can perform the most common looping operations in a style that is more functional and declarative.</li>
   <li><strong>Localized mutation</strong> - This is a bit harder to explain, but local mutation (usually limited to the scope of a single function and a few nested anonymous callbacks) generally seems innocent enough until you realize it makes it more difficult to split up your functions into tiny functions, which is a major part of refactoring towards FP.</li>
