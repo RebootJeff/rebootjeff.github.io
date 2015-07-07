@@ -4,7 +4,7 @@
   <title><![CDATA[RebootJeff.com]]></title>
   <link href="http://RebootJeff.github.io/atom.xml" rel="self"/>
   <link href="http://RebootJeff.github.io/"/>
-  <updated>2015-07-01T16:31:40-07:00</updated>
+  <updated>2015-07-06T22:52:43-07:00</updated>
   <id>http://RebootJeff.github.io/</id>
   <author>
     <name><![CDATA[@RebootJeff]]></name>
@@ -139,7 +139,7 @@
 </div>
  </figure></notextile></div>
 
-<p>The “most functional” technique may seem unappealling because it requires so many lines of code, but it’s vital to remember that predicates serve as re-usable, easily testable utilities. Also, <code>R.anyPass(isOdd, isDivisibleBySix)</code> is more expressive than <code>number % 2 || number % 6 === 0</code>. In the latter case, readers must remember how <code>%</code> works and how the result is a number that gets coerced into a boolean value for truthiness/falsiness.</p>
+<p>The “most functional” technique may seem unappealling because it requires so many lines of code, but it’s vital to remember that predicates serve as re-usable, easily testable utilities. Also, <code>R.allPass([isOdd, isDivisibleBySix])</code> is more expressive than <code>number % 2 || number % 6 === 0</code>. In the latter case, readers must remember how <code>%</code> works and how the result is a number that gets coerced into a boolean value for truthiness/falsiness.</p>
 
 <h3 id="ex-debugging-via-consolelog">Ex: Debugging via console.log</h3>
 
