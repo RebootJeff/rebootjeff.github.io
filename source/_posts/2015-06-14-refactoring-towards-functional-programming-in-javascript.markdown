@@ -93,7 +93,7 @@ var isValid = R.allPass([isOdd, isDivisibleBySix]);
 var filteredArray = R.filter(isValid, originalArray);
 {% endcoderay %}
 
-The "most functional" technique may seem unappealling because it requires so many lines of code, but it's vital to remember that predicates serve as re-usable, easily testable utilities. Also, `R.anyPass(isOdd, isDivisibleBySix)` is more expressive than `number % 2 || number % 6 === 0`. In the latter case, readers must remember how `%` works and how the result is a number that gets coerced into a boolean value for truthiness/falsiness.
+The "most functional" technique may seem unappealling because it requires so many lines of code, but it's vital to remember that predicates serve as re-usable, easily testable utilities. Also, `R.allPass([isOdd, isDivisibleBySix])` is more expressive than `number % 2 || number % 6 === 0`. In the latter case, readers must remember how `%` works and how the result is a number that gets coerced into a boolean value for truthiness/falsiness.
 
 ### Ex: Debugging via console.log
 
