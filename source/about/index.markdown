@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "about"
-date: 2014-9-17 5:55
+date: 2015-8-21 19:38
 comments: true
 sharing: true
 footer: true
@@ -17,12 +17,12 @@ footer: true
 My name is Jeff. I'm here to rant and hopefully help you become a better web programmer as I explore web app development.
 
 # I am coding
-My weapon of choice is JavaScript. I use it to craft Node servers and thick clients. It's vital that I keep my full-stack skills sharp so that I can build what my imagination demands, but I have a great affinity for cool user experiences. Therefore, I prefer spending my time swimming in the beauty of front-end code.
+My weapon of choice is JavaScript. I use it to craft Node servers and thick clients. It's vital that I keep my full-stack skills sharp so that I can build what my imagination demands, but I have a great affinity for cool user experiences. My near-term goal is to level-up my JavaScript skills with more projects; then I will dive into functional programming with JS; then learn Clojure; then learn Haskell. But of course this is totally subject to change.
 
 # I am documenting
 I've been fond of typing tons of text since the good ol' days of Xanga (that's before the days of Facebook, kids). There is generally too much on my mind at any given time, but blogging helps ease the overflow.
 
-RebootJeff.com will cover my thoughts, discoveries, and reactions. For the near-term (i.e., most of 2014), this blog will focus on my recent trials and tribulations of finding a new job. I won't name names, I won't reveal details for interview questions, but I will be as insightful as possible.
+RebootJeff.com will cover my thoughts, discoveries, and reactions. This blog will focus on extra-cool engineering/programming nuggets I pick up, industry observations/tips, and other info I can't help but share.
 
 If you're wondering how I made this blog, check out [my first post](/blog/2013/08/02/ready-set-octopress/) and any posts tagged with the "[blog customization](/blog/categories/blog-customization/)" category. You can easily replicate it for yourself.
 
