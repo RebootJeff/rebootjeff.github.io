@@ -12,7 +12,7 @@ categories:
   - JavaScript
 ---
 
-Have you seen the new Nexus 6P smartphone? It packs a "system on a chip" that features *two* CPUs, each with *four* cores. Surely it can run your JavaScript code without breaking a sweat, right?
+Have you seen the new Nexus 6P smartphone? It packs a "system on a chip" that features *two* CPUs, each with *four* cores. What a crazy, powerful world we live in! Surely modern smartphones can run your JavaScript code without breaking a sweat, right?
 
 ![Snapdragon 810 promo material](/images/20151116/ss_snapdragon810.png)
 
@@ -54,4 +54,7 @@ My decision-making process for how to spend my time on performance involves a fe
 I've noticed many of my "key points" really just boil down to "do your best, buddy!" Freaking brilliant.
 
 #### P.S.
-Because JavaScript is single-threaded, the multi-core loveliness of modern CPUs doesn't directly help your web app unless you use web workers. There will be some benefit regardless of web workers just because the phone has to worry about more than just your web app (background apps, managing sensors, etc).
+
+Because JavaScript is single-threaded, the multi-core loveliness of modern CPUs doesn't directly help your web app unless you use web workers.
+
+That said, there will be some benefit regardless of web workers just because devices such as smartphones usually have to juggle more than just your web app (e.g., background apps, managing sensors, etc). The extra cores should help prevent the phone from stressing out from the juggling, so that tangentially helps your web app's performance.
