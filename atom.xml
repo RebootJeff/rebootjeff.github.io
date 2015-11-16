@@ -4,7 +4,7 @@
   <title><![CDATA[RebootJeff.com]]></title>
   <link href="http://RebootJeff.github.io/atom.xml" rel="self"/>
   <link href="http://RebootJeff.github.io/"/>
-  <updated>2015-08-21T19:44:33-07:00</updated>
+  <updated>2015-11-15T23:06:08-08:00</updated>
   <id>http://RebootJeff.github.io/</id>
   <author>
     <name><![CDATA[@RebootJeff]]></name>
@@ -12,6 +12,66 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Why fast code matters even when phones have octa-core CPUs]]></title>
+    <link href="http://RebootJeff.github.io/blog/2015/11/16/why-fast-code-matters-even-when-phones-have-octa-core-cpus/"/>
+    <author>
+      <name><![CDATA[@RebootJeff]]></name>
+      
+    </author>
+    <updated>2015-11-16T10:29:00-08:00</updated>
+    <id>http://RebootJeff.github.io/blog/2015/11/16/why-fast-code-matters-even-when-phones-have-octa-core-cpus</id>
+    <content type="html"><![CDATA[<p>Have you seen the new Nexus 6P smartphone? It packs a “system on a chip” that features <em>two</em> CPUs, each with <em>four</em> cores. What a crazy, powerful world we live in! Surely modern smartphones can run your JavaScript code without breaking a sweat, right?</p>
+
+<p><img src="http://RebootJeff.github.io/images/20151116/ss_snapdragon810.png" alt="Snapdragon 810 promo material" /></p>
+
+<h2 id="writing-performant-code-is-hard">Writing Performant Code is Hard</h2>
+
+<p>It’s true that really low-level performance optimizations often don’t feel like they’re worth learning or worrying about. You’ve got to deal with complicated business logic and juggling user data and state! You don’t have time to record CPU profiles for every new function you write!</p>
+
+<p>On top of that, <strong>computers keep getting more powerful, right?</strong></p>
+
+<h2 id="but-what-does-the-future-hold">But What Does the Future Hold?</h2>
+
+<p>Here’s the insight*: if you’re targeting laptops/desktops, then you can probably feel safe about imperfect code in many respects. However, <strong>the trend of computers getting more powerful isn’t what it seems.</strong></p>
+
+<h3 id="devices-speed-up-after-slow-starts">Devices speed up after slow starts</h3>
+
+<p>Look at the trend from a bigger picture perspective: modern tech has gone from powerful desktops to less powerful laptops (and netbooks and Chromebooks!) to even less powerful smartphones/tablets to much less powerful wearables and IoT devices. Consider that smartphone apps might not be so popular if web apps were more performant earlier in the history of iOS, Android, and web views.</p>
+
+<p><em>*Disclaimer:</em> I can’t take credit for the insight. I read it somewhere on the Internet, and I don’t remember where. Probably Quora though.</p>
+
+<p>I’ll also add my own thought to chew on: Memory optimizations might still be important as folks browsing the web tend to leave a ton of tabs open and don’t close/reopen their browsers as often as they used to.</p>
+
+<h2 id="whats-a-well-intentioned-developer-to-do">What’s a well-intentioned developer to do?</h2>
+
+<p>To be fair, browsers have come a long way. And it can be tough to care about tiny performance optimizations when browsers might end up handling them for you. For example, string concatenation used to be a no-no in JavaScript. The recommended best practice was to use <code>Array.prototype.join</code> instead of string concatenation.</p>
+
+<p>This “best practice” is now <a href="http://archive.oreilly.com/pub/a/server-administration/excerpts/even-faster-websites/writing-efficient-javascript.html">very outdated</a>.</p>
+
+<p>Like most decisions in reality, there will be trade-offs and ROI concerns. Like most decisions, the right answer is probably somewhere in between two extremes. Like most of my commentary on this blog, I’m dispensing info with JavaScript in mind, but some takeaways are language-agnostic.</p>
+
+<p>My decision-making process for how to spend my time on performance involves a few key points:</p>
+
+<ul>
+  <li>Always stay curious about current best practices.</li>
+  <li>Don’t learn a “best practice” and expect it to remain “best” forever. If someone teaches you a performance optimization tactic, check the Internet to make sure it’s still relevant.</li>
+  <li>Focus on higher-level performance optimizations (e.g., learning <a href="https://blog.codeschool.io/2015/09/11/how-to-keep-web-animations-from-slowing-you-down/">performant animation techniques</a>, shaming nested loops/traversals, plugging memory leaks, refactoring to recursion for <a href="http://www.2ality.com/2015/06/tail-call-optimization.html">Tail Call Optimization</a>) rather than lower-level concerns (e.g., <code>while</code> loop vs <code>for</code> loop, <code>i++</code> vs <code>++i</code>, etc).</li>
+  <li>Learn how code is actually digested by your target platform (e.g., for browser-based apps, <a href="https://www.udacity.com/course/website-performance-optimization--ud884">learn the Critical Rendering Path</a>, learn the <a href="http://blog.carbonfive.com/2013/10/27/the-javascript-event-loop-explained/">JavaScript Event Loop</a> –and Web Workers as a bonus).</li>
+  <li>Readability matters. If other devs can’t understand your code because of obscure micro-optimizations, then you’re probably hurting the team. Consider sacrificing the optimizations to prioritize collaboration.</li>
+  <li>Keep dreaming for the day when platforms will optimize your code for you! Just kidding. It’s kinda sorta already happening (<a href="https://twitter.com/RebootJeff/status/603281637070123008">learn about JIT compilers</a>).</li>
+</ul>
+
+<p>I’ve noticed many of my “key points” really just boil down to “do your best, buddy!” Freaking brilliant.</p>
+
+<h4 id="ps">P.S.</h4>
+
+<p>Because JavaScript is single-threaded, the multi-core loveliness of modern CPUs doesn’t directly help your web app unless you use web workers.</p>
+
+<p>That said, there will be some benefit regardless of web workers just because devices such as smartphones usually have to juggle more than just your web app (e.g., background apps, managing sensors, etc). The extra cores should help prevent the phone from stressing out from the juggling, so that tangentially helps your web app’s performance.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Refactoring Towards Functional Programming in JavaScript]]></title>
@@ -1931,125 +1991,6 @@ export PATH=$PATH:/home/myUserName/Development/adt-bundle-linux-x86_64-20131030/
 <p>To me, tech enthusiasts need to look at the bigger picture: imagine a world where mobile web apps dominate rather than having native apps dominate the smartphone landscape. Firefox OS is actually trying to embrace JavaScript, but why does it matter? Consider the differences in distribution. Forget app marketplaces. Forget Apple acting as a gatekeeper for iOS apps. Imagine that your app is as available as any other website. Web apps are becoming more and more powerful. There are new frameworks (e.g., <a href="http://famo.us/">Famous</a> and another brand new one that I can’t remember at the moment) that make it possible to replicate the oohlala of the much-lauded Yahoo! Weather native app.</p>
 
 <p>The problem is that web apps for mobile devices can’t yet access native notifications. This is a huge obstacle for mobile web app dominance. Companies want their apps to have notifications to enhance user engagement and fight churn. Users want their apps to have notifications because it makes smartphones more helpful (although the line between helpful and spammy seems slimmer than my chances of becoming a guitar master). That said, web apps are getting better at using phones’ GPS sensors, cameras, accelerometers, etc. Hopefully the barrier between native app and mobile web app will continue to whither and eventually die like smallpox. In the words of unoriginal coaches every where, “WE CAN DO IT!”</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Questions to ask dev interviewers]]></title>
-    <link href="http://RebootJeff.github.io/blog/2014/01/09/questions-to-ask-dev-interviewers/"/>
-    <author>
-      <name><![CDATA[@RebootJeff]]></name>
-      
-    </author>
-    <updated>2014-01-09T20:06:00-08:00</updated>
-    <id>http://RebootJeff.github.io/blog/2014/01/09/questions-to-ask-dev-interviewers</id>
-    <content type="html"><![CDATA[<blockquote>
-  <p>Do you have any questions for me?</p>
-</blockquote>
-
-<p>When an employer/recruiter asks you this question, you should answer, “YES OF COURSE I DO.” Then you casually bombard them with the questions listed below. Although, you should keep in mind that some questions can be answered just by doing your homework (researching the company). So don’t ask <em>all the questions</em>.</p>
-
-<h1 id="company-vision">Company Vision</h1>
-
-<ul>
-  <li>Where will the company be in 2 years? (maybe “2 years” should be greater if company is older)
-    <ul>
-      <li>Will the business model remain the same? Is the business model still in flux?</li>
-      <li>How many employees will there be in X years? What many of them will be engineers?</li>
-    </ul>
-  </li>
-  <li>Does the company plan to scale up? How?
-    <ul>
-      <li>Increased marketing efforts?</li>
-      <li>Increased R&amp;D?</li>
-      <li>Growing talent?</li>
-      <li>Creating partnerships?</li>
-      <li>Business model pivot?</li>
-    </ul>
-  </li>
-</ul>
-
-<h1 id="employee-logisticsculture">Employee logistics/culture</h1>
-
-<ul>
-  <li>What are typical work hours?</li>
-  <li>
-    <p>How often do people actually take vacations?</p>
-  </li>
-  <li>What are some examples of your company’s culture in play?
-    <ul>
-      <li>e.g., It’s one thing to say the company promotes diversity, but what are examples of that happening?</li>
-    </ul>
-  </li>
-  <li>
-    <p>What aspects of your company help shape the cuture?</p>
-  </li>
-  <li>Older/bigger companies: One of the stereotypical downsides of working at a more established company is that employees don’t feel like they have a big enough impact. How do you ensure employees can make substantive contributions rather than feel like a tiny cog in a big machine?
-    <ul>
-      <li>How do you ensure that employees always get to try/learn new things?</li>
-    </ul>
-  </li>
-</ul>
-
-<h1 id="engineering-logistics">Engineering Logistics</h1>
-
-<ul>
-  <li>How many engineers does the company have?
-    <ul>
-      <li>How many back-end, how many front-end, how many full-stack?</li>
-    </ul>
-  </li>
-  <li>How big are the engineering teams?
-    <ul>
-      <li>Will team size change a lot (scaling up)?</li>
-    </ul>
-  </li>
-  <li>Do employees ever change teams/roles?</li>
-  <li>Exactly whom would I be working with?
-    <ul>
-      <li>What are their roles, backgrounds, etc?</li>
-    </ul>
-  </li>
-  <li>How does user feedback ultimately end up reaching the engineers?</li>
-  <li>What kind of development cycle do they use?
-    <ul>
-      <li>What is the structure of a typical sprint?</li>
-      <li>How often do engineers deploy?</li>
-      <li>Do they use Agile SCRUM, Kanban, etc?</li>
-    </ul>
-  </li>
-  <li>In an average week, how many meetings would I need to attend?</li>
-</ul>
-
-<h1 id="engineering-culture">Engineering Culture</h1>
-
-<ul>
-  <li>How does the company ensure quick, painless onboarding?
-    <ul>
-      <li>(does the company ensure new hires don’t get overwhelmed by huge, existing codebase?)</li>
-      <li>(or is there no onboarding at all because the company is too tiny?)</li>
-    </ul>
-  </li>
-  <li>Does the company have strong opinions on coding aesthetics?
-    <ul>
-      <li>Does the company have a style guide?</li>
-    </ul>
-  </li>
-  <li>Mentorship?</li>
-  <li>Are there code reviews?
-    <ul>
-      <li>Are they scheduled or ad hoc? (“ad hoc” may be BS for “rarely”)</li>
-    </ul>
-  </li>
-  <li>Is there time set aside for post-mortems, reflections, retrospectives, etc?</li>
-  <li>What kind of testing is in place?
-    <ul>
-      <li>(unit testing, integration testing, e2e testing, QA engineering)?</li>
-      <li>which tools?</li>
-    </ul>
-  </li>
-</ul>
-
 ]]></content>
   </entry>
   

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: performance | RebootJeff.com]]></title>
+  <link href="http://RebootJeff.github.io/blog/categories/performance/atom.xml" rel="self"/>
+  <link href="http://RebootJeff.github.io/"/>
+  <updated>2015-11-15T23:06:08-08:00</updated>
+  <id>http://RebootJeff.github.io/</id>
+  <author>
+    <name><![CDATA[Jeff Lee]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Why fast code matters even when phones have octa-core CPUs]]></title>
+    <link href="http://RebootJeff.github.io/blog/2015/11/16/why-fast-code-matters-even-when-phones-have-octa-core-cpus/"/>
+    <updated>2015-11-16T10:29:00-08:00</updated>
+    <id>http://RebootJeff.github.io/blog/2015/11/16/why-fast-code-matters-even-when-phones-have-octa-core-cpus</id>
+    <content type="html"><![CDATA[<p>Have you seen the new Nexus 6P smartphone? It packs a “system on a chip” that features <em>two</em> CPUs, each with <em>four</em> cores. What a crazy, powerful world we live in! Surely modern smartphones can run your JavaScript code without breaking a sweat, right?</p>
+
+<p><img src="/images/20151116/ss_snapdragon810.png" alt="Snapdragon 810 promo material" /></p>
+
+<h2 id="writing-performant-code-is-hard">Writing Performant Code is Hard</h2>
+
+<p>It’s true that really low-level performance optimizations often don’t feel like they’re worth learning or worrying about. You’ve got to deal with complicated business logic and juggling user data and state! You don’t have time to record CPU profiles for every new function you write!</p>
+
+<p>On top of that, <strong>computers keep getting more powerful, right?</strong></p>
+
+<h2 id="but-what-does-the-future-hold">But What Does the Future Hold?</h2>
+
+<p>Here’s the insight*: if you’re targeting laptops/desktops, then you can probably feel safe about imperfect code in many respects. However, <strong>the trend of computers getting more powerful isn’t what it seems.</strong></p>
+
+<h3 id="devices-speed-up-after-slow-starts">Devices speed up after slow starts</h3>
+
+<p>Look at the trend from a bigger picture perspective: modern tech has gone from powerful desktops to less powerful laptops (and netbooks and Chromebooks!) to even less powerful smartphones/tablets to much less powerful wearables and IoT devices. Consider that smartphone apps might not be so popular if web apps were more performant earlier in the history of iOS, Android, and web views.</p>
+
+<p><em>*Disclaimer:</em> I can’t take credit for the insight. I read it somewhere on the Internet, and I don’t remember where. Probably Quora though.</p>
+
+<p>I’ll also add my own thought to chew on: Memory optimizations might still be important as folks browsing the web tend to leave a ton of tabs open and don’t close/reopen their browsers as often as they used to.</p>
+
+<h2 id="whats-a-well-intentioned-developer-to-do">What’s a well-intentioned developer to do?</h2>
+
+<p>To be fair, browsers have come a long way. And it can be tough to care about tiny performance optimizations when browsers might end up handling them for you. For example, string concatenation used to be a no-no in JavaScript. The recommended best practice was to use <code>Array.prototype.join</code> instead of string concatenation.</p>
+
+<p>This “best practice” is now <a href="http://archive.oreilly.com/pub/a/server-administration/excerpts/even-faster-websites/writing-efficient-javascript.html">very outdated</a>.</p>
+
+<p>Like most decisions in reality, there will be trade-offs and ROI concerns. Like most decisions, the right answer is probably somewhere in between two extremes. Like most of my commentary on this blog, I’m dispensing info with JavaScript in mind, but some takeaways are language-agnostic.</p>
+
+<p>My decision-making process for how to spend my time on performance involves a few key points:</p>
+
+<ul>
+  <li>Always stay curious about current best practices.</li>
+  <li>Don’t learn a “best practice” and expect it to remain “best” forever. If someone teaches you a performance optimization tactic, check the Internet to make sure it’s still relevant.</li>
+  <li>Focus on higher-level performance optimizations (e.g., learning <a href="https://blog.codeschool.io/2015/09/11/how-to-keep-web-animations-from-slowing-you-down/">performant animation techniques</a>, shaming nested loops/traversals, plugging memory leaks, refactoring to recursion for <a href="http://www.2ality.com/2015/06/tail-call-optimization.html">Tail Call Optimization</a>) rather than lower-level concerns (e.g., <code>while</code> loop vs <code>for</code> loop, <code>i++</code> vs <code>++i</code>, etc).</li>
+  <li>Learn how code is actually digested by your target platform (e.g., for browser-based apps, <a href="https://www.udacity.com/course/website-performance-optimization--ud884">learn the Critical Rendering Path</a>, learn the <a href="http://blog.carbonfive.com/2013/10/27/the-javascript-event-loop-explained/">JavaScript Event Loop</a> –and Web Workers as a bonus).</li>
+  <li>Readability matters. If other devs can’t understand your code because of obscure micro-optimizations, then you’re probably hurting the team. Consider sacrificing the optimizations to prioritize collaboration.</li>
+  <li>Keep dreaming for the day when platforms will optimize your code for you! Just kidding. It’s kinda sorta already happening (<a href="https://twitter.com/RebootJeff/status/603281637070123008">learn about JIT compilers</a>).</li>
+</ul>
+
+<p>I’ve noticed many of my “key points” really just boil down to “do your best, buddy!” Freaking brilliant.</p>
+
+<h4 id="ps">P.S.</h4>
+
+<p>Because JavaScript is single-threaded, the multi-core loveliness of modern CPUs doesn’t directly help your web app unless you use web workers.</p>
+
+<p>That said, there will be some benefit regardless of web workers just because devices such as smartphones usually have to juggle more than just your web app (e.g., background apps, managing sensors, etc). The extra cores should help prevent the phone from stressing out from the juggling, so that tangentially helps your web app’s performance.</p>
+]]></content>
+  </entry>
+  
+</feed>

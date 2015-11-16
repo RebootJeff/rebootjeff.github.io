@@ -4,7 +4,7 @@
   <title><![CDATA[Category: technical | RebootJeff.com]]></title>
   <link href="http://RebootJeff.github.io/blog/categories/technical/atom.xml" rel="self"/>
   <link href="http://RebootJeff.github.io/"/>
-  <updated>2015-08-21T19:44:33-07:00</updated>
+  <updated>2015-11-15T23:06:08-08:00</updated>
   <id>http://RebootJeff.github.io/</id>
   <author>
     <name><![CDATA[Jeff Lee]]></name>
@@ -12,6 +12,254 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Why fast code matters even when phones have octa-core CPUs]]></title>
+    <link href="http://RebootJeff.github.io/blog/2015/11/16/why-fast-code-matters-even-when-phones-have-octa-core-cpus/"/>
+    <updated>2015-11-16T10:29:00-08:00</updated>
+    <id>http://RebootJeff.github.io/blog/2015/11/16/why-fast-code-matters-even-when-phones-have-octa-core-cpus</id>
+    <content type="html"><![CDATA[<p>Have you seen the new Nexus 6P smartphone? It packs a “system on a chip” that features <em>two</em> CPUs, each with <em>four</em> cores. What a crazy, powerful world we live in! Surely modern smartphones can run your JavaScript code without breaking a sweat, right?</p>
+
+<p><img src="/images/20151116/ss_snapdragon810.png" alt="Snapdragon 810 promo material" /></p>
+
+<h2 id="writing-performant-code-is-hard">Writing Performant Code is Hard</h2>
+
+<p>It’s true that really low-level performance optimizations often don’t feel like they’re worth learning or worrying about. You’ve got to deal with complicated business logic and juggling user data and state! You don’t have time to record CPU profiles for every new function you write!</p>
+
+<p>On top of that, <strong>computers keep getting more powerful, right?</strong></p>
+
+<h2 id="but-what-does-the-future-hold">But What Does the Future Hold?</h2>
+
+<p>Here’s the insight*: if you’re targeting laptops/desktops, then you can probably feel safe about imperfect code in many respects. However, <strong>the trend of computers getting more powerful isn’t what it seems.</strong></p>
+
+<h3 id="devices-speed-up-after-slow-starts">Devices speed up after slow starts</h3>
+
+<p>Look at the trend from a bigger picture perspective: modern tech has gone from powerful desktops to less powerful laptops (and netbooks and Chromebooks!) to even less powerful smartphones/tablets to much less powerful wearables and IoT devices. Consider that smartphone apps might not be so popular if web apps were more performant earlier in the history of iOS, Android, and web views.</p>
+
+<p><em>*Disclaimer:</em> I can’t take credit for the insight. I read it somewhere on the Internet, and I don’t remember where. Probably Quora though.</p>
+
+<p>I’ll also add my own thought to chew on: Memory optimizations might still be important as folks browsing the web tend to leave a ton of tabs open and don’t close/reopen their browsers as often as they used to.</p>
+
+<h2 id="whats-a-well-intentioned-developer-to-do">What’s a well-intentioned developer to do?</h2>
+
+<p>To be fair, browsers have come a long way. And it can be tough to care about tiny performance optimizations when browsers might end up handling them for you. For example, string concatenation used to be a no-no in JavaScript. The recommended best practice was to use <code>Array.prototype.join</code> instead of string concatenation.</p>
+
+<p>This “best practice” is now <a href="http://archive.oreilly.com/pub/a/server-administration/excerpts/even-faster-websites/writing-efficient-javascript.html">very outdated</a>.</p>
+
+<p>Like most decisions in reality, there will be trade-offs and ROI concerns. Like most decisions, the right answer is probably somewhere in between two extremes. Like most of my commentary on this blog, I’m dispensing info with JavaScript in mind, but some takeaways are language-agnostic.</p>
+
+<p>My decision-making process for how to spend my time on performance involves a few key points:</p>
+
+<ul>
+  <li>Always stay curious about current best practices.</li>
+  <li>Don’t learn a “best practice” and expect it to remain “best” forever. If someone teaches you a performance optimization tactic, check the Internet to make sure it’s still relevant.</li>
+  <li>Focus on higher-level performance optimizations (e.g., learning <a href="https://blog.codeschool.io/2015/09/11/how-to-keep-web-animations-from-slowing-you-down/">performant animation techniques</a>, shaming nested loops/traversals, plugging memory leaks, refactoring to recursion for <a href="http://www.2ality.com/2015/06/tail-call-optimization.html">Tail Call Optimization</a>) rather than lower-level concerns (e.g., <code>while</code> loop vs <code>for</code> loop, <code>i++</code> vs <code>++i</code>, etc).</li>
+  <li>Learn how code is actually digested by your target platform (e.g., for browser-based apps, <a href="https://www.udacity.com/course/website-performance-optimization--ud884">learn the Critical Rendering Path</a>, learn the <a href="http://blog.carbonfive.com/2013/10/27/the-javascript-event-loop-explained/">JavaScript Event Loop</a> –and Web Workers as a bonus).</li>
+  <li>Readability matters. If other devs can’t understand your code because of obscure micro-optimizations, then you’re probably hurting the team. Consider sacrificing the optimizations to prioritize collaboration.</li>
+  <li>Keep dreaming for the day when platforms will optimize your code for you! Just kidding. It’s kinda sorta already happening (<a href="https://twitter.com/RebootJeff/status/603281637070123008">learn about JIT compilers</a>).</li>
+</ul>
+
+<p>I’ve noticed many of my “key points” really just boil down to “do your best, buddy!” Freaking brilliant.</p>
+
+<h4 id="ps">P.S.</h4>
+
+<p>Because JavaScript is single-threaded, the multi-core loveliness of modern CPUs doesn’t directly help your web app unless you use web workers.</p>
+
+<p>That said, there will be some benefit regardless of web workers just because devices such as smartphones usually have to juggle more than just your web app (e.g., background apps, managing sensors, etc). The extra cores should help prevent the phone from stressing out from the juggling, so that tangentially helps your web app’s performance.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Refactoring Towards Functional Programming in JavaScript]]></title>
+    <link href="http://RebootJeff.github.io/blog/2015/06/14/refactoring-towards-functional-programming-in-javascript/"/>
+    <updated>2015-06-14T13:58:00-07:00</updated>
+    <id>http://RebootJeff.github.io/blog/2015/06/14/refactoring-towards-functional-programming-in-javascript</id>
+    <content type="html"><![CDATA[<p><img src="https://camo.githubusercontent.com/0b4c12a5daec02b72e6e6879861ac70f75046e65/687474703a2f2f72616d64612e6a637068696c6c697070732e636f6d2f6c6f676f2f72616d646146696c6c65645f323030783233352e706e67" alt="Ramda.js logo" /></p>
+
+<p>This is not a “What is FP?” guide that uses JavaScript. If that’s what you’re looking for, you’ll love <a href="https://github.com/DrBoolean/mostly-adequate-guide">Brian Lonsdorf’s free GitHub-based guide</a>. For this blog post, I will assume you already know currying and composition. I won’t assume you know functors, monads, and the other funky whatchamacallits that I’m still trying to learn for myself.</p>
+
+<p>There are a lot of blogs and presentations that answer “What is Functional Programming?” and “Why bother with Functional Programming?”. There aren’t a lot of resources answering “How do I start using Functional Programming in REAL life?”. Most intro-to-FP resources leave you feeling like you’re supposed to just drop everything and start coding from scratch in Haskell or an FP-focused language that transpiles into JavaScript (e.g., <a href="http://elm-lang.org/">Elm</a> and <a href="https://github.com/clojure/clojurescript">ClosureScript</a>).</p>
+
+<p>My team at work has recently been exploring FP in JavaScript by using a library called <a href="http://ramdajs.com/">Ramda</a>. It’s a functional programming JavaScript library. Ramda offers some common FP utilities to help you code in the FP style or just slowly convert parts of your codebase to the FP style.</p>
+
+<p>Most of the team is unfamiliar with FP, so rather than diving into massive re-writes to convert large chunks of code from Object-Oriented Programming to FP, we’ve been starting small. Along the way, we’ve learned some solid steps for introducing FP into an existing codebase at a comfy pace. The gist of it is: don’t dive into the world of endofunctors, monoids, and catamorphisms. Instead, focus on treating functions differently by cutting down on anonymous functions, subdividing functions into tiny functions, and using the simplest FP concepts such as currying and composition.</p>
+
+<h2 id="code-smells">Code smells</h2>
+
+<p>These are some signs that code is very imperative and not very FP-like:</p>
+
+<ul>
+  <li><strong>Anonymous callbacks</strong> - It’s harder to re-use functions that don’t have names, it’s harder to write pointfree code with anonymous <em>callbacks</em> in particular, and function expressions will be more commonplace when you start using more FP (due to frequent use of <code>curry</code> and <code>composition</code>).</li>
+  <li><strong>Suboptimal parameter order</strong> - Function signatures should have parameters arranged in an order that fits currying. This means putting config-like parameters first and main data parameters last (which is pretty much the exact opposite order that we’re all used to).</li>
+  <li><strong>Loops</strong> - In JS, loops are usually for-loops that iterate over collections. There are specialized methods such as <code>map</code>, <code>reduce</code>, and <code>filter</code> that can perform the most common looping operations in a style that is more functional and declarative.</li>
+  <li><strong>Localized mutation</strong> - This is a bit harder to explain, but local mutation (usually limited to the scope of a single function and a few nested anonymous callbacks) generally seems innocent enough until you realize it makes it more difficult to split up your functions into tiny functions, which is a major part of refactoring towards FP.</li>
+  <li><strong>Side-effects from functions</strong> - One of the major principles in FP is that <a href="https://github.com/DrBoolean/mostly-adequate-guide/blob/master/ch3.md">functions should be pure</a>. When functions affect data outside their own local scope, it is usually due to IO actions or an OOP construct such as a method operating on the properties of its context object.</li>
+</ul>
+
+<h2 id="refactoring-steps">Refactoring steps</h2>
+
+<h3 id="easy-difficulty">Easy Difficulty</h3>
+
+<ul>
+  <li><strong>Use named functions</strong> - This will make it easier to write pointfree code and to compose functions.</li>
+  <li><strong>Use predicates</strong> - Functions that encapsulate conditional statements can be composed with other functions for the FP/declarative equivalent of imperative control flow.</li>
+  <li><strong>Refactor loops via <code>each</code>, <code>map</code>, <code>filter</code>, <code>reduce</code>, etc</strong> - Using these FP iteration functions encourage you to also write small helper functions and predicates. They will guide you towards more FP.</li>
+</ul>
+
+<h3 id="medium-difficulty">Medium Difficulty</h3>
+
+<ul>
+  <li><strong>Focus on simple FP utilities</strong> - <code>R.curry</code>, <code>R.compose</code>, <code>R.composeP</code>, <code>R.prop</code>, <code>R.is</code>, <code>R.has</code>, <code>R.anyPass</code>/<code>R.allPass</code> are all worth checking out. Set a goal to use these as much as possible. It’s a great (and reasonable!) goal to get started with the FP style without getting too overwhelmed.
+    <ul>
+      <li>Using <code>curry</code> and <code>compose</code> get you to the heart of FP’s flexibility. Your code will look significantly different once you start currying and composing functions.</li>
+      <li>Dot notation for accessing properties that will be used as input to a function (use <code>R.prop</code> or <code>R.has</code> as needed).</li>
+    </ul>
+  </li>
+  <li><strong>Simplify all functions</strong> - Break down larger functions into smaller functions; break down helper functions into more and more generalized helper functions.
+    <ul>
+      <li>Minimize the number of arguments</li>
+      <li>Write pure functions as often as possible</li>
+    </ul>
+  </li>
+  <li><strong>Segregate mutation/state</strong> - If mutation/state is absolutely necessary, then try to separate the mutation into a traditional function and the rest into something that can be more FP-like. For example, if a function called <code>foo</code> changes some parent scope variables in addition to performing some calculation, then change <code>foo</code> so it calls two helper functions: the parent scope manipulation is done by one helper function while the calculation is done by another helper function.</li>
+</ul>
+
+<h2 id="getting-comfortable">Getting Comfortable</h2>
+
+<p>What can you expect as you start writing FP code?</p>
+
+<ul>
+  <li>Function names should be very expressive and more verbose.
+    <ul>
+      <li>…which leads to code that looks more semantic.</li>
+    </ul>
+  </li>
+  <li>Higher-level functions should be composed of smaller, lower-level functions.
+    <ul>
+      <li>Making functions from functions will look/feel like a tree of nested functions.</li>
+      <li>Lower-level functions should be only a handful of lines (and 1-line functions become common-place). Higher-level functions might also be really short because they just rely on calling multiple functions without much additional logic.</li>
+    </ul>
+  </li>
+  <li>Remember: Function compositions are normally read from right to left.</li>
+  <li>Debugging may be tricky at first, but you should be able to easily test lower-level functions, which means higher-level functions should be less fragile.
+    <ul>
+      <li>For debugging with <code>console.log</code>, you may have to add it to compositions. E.g., <code>var processData = R.compose(calculateStuff, logFilteredData, filterData);</code> You can find a more detailed example of this logging tactic later in this blog post.</li>
+    </ul>
+  </li>
+  <li>Naming functions becomes even more important; names no longer always start with verbs because they are often treated as data (nouns) rather than actions/procedures (verbs).
+    <ul>
+      <li>However, due to FP’s relative obscurity, naming conventions are not as widespread, which could lead to codebases with poorly named functions (significantly more helper functions means more opportunities to get function names messed up). Make sure your team is on the same page for nomenclature.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="examples">Examples</h2>
+
+<p>Keep in mind that I’m using <a href="http://ramdajs.com/">Ramda.js</a> for these examples.</p>
+
+<h3 id="ex-filtering-an-array">Ex: Filtering an array</h3>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption class='code-header' style='margin-bottom:-5px;'><span>Example - Filtering for odd numbers and multiples of 6 </span></figcaption>
+ <div class="CodeRay">
+  <div class="code"><pre>
+<span class="keyword">var</span> originalArray = [<span class="integer">1</span>, <span class="integer">2</span>, <span class="integer">3</span>, <span class="integer">4</span>];&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">p&gt;
+
+&lt;p&gt;</span><span class="delimiter">/</span></span>/ Bad - using a <span class="keyword">for</span>-loop to mutate a <span class="keyword">new</span> array
+<span class="keyword">var</span> filteredArray = [];
+<span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="integer">0</span>; i &amp;lt; originalArray.length; i++) {
+  <span class="keyword">var</span> number = originalArray[i];
+  <span class="keyword">if</span>(number % <span class="integer">2</span> || number % <span class="integer">6</span> === <span class="integer">0</span>) {
+    filteredArray.push(number);
+  }
+}&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">p&gt;
+
+&lt;p&gt;</span><span class="delimiter">/</span></span>/ Better - using the <span class="reserved">native</span> Array filter method <span class="keyword">with</span> a typical anonymous <span class="keyword">function</span>
+<span class="keyword">var</span> filteredArray = originalArray.filter(<span class="keyword">function</span>(number) {
+  <span class="keyword">return</span> number % <span class="integer">2</span> || number % <span class="integer">6</span> === <span class="integer">0</span>;
+});&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">p&gt;
+
+&lt;p&gt;</span><span class="delimiter">/</span></span>/ Most Functional - using predicates <span class="keyword">with</span> a filter method
+<span class="keyword">var</span> <span class="function">isOdd</span> = <span class="keyword">function</span>(number) {
+  <span class="keyword">return</span> number % <span class="integer">2</span>;
+};
+<span class="keyword">var</span> <span class="function">isDivisibleBySix</span> = <span class="keyword">function</span>(number) {
+  <span class="keyword">return</span> number % <span class="integer">6</span> === <span class="integer">0</span>;
+};
+<span class="keyword">var</span> isValid = R.allPass([isOdd, isDivisibleBySix]);
+<span class="keyword">var</span> filteredArray = R.filter(isValid, originalArray);
+</pre></div>
+</div>
+ </figure></notextile></div></p>
+
+<p>The “most functional” technique may seem unappealling because it requires so many lines of code, but it’s vital to remember that predicates serve as re-usable, easily testable utilities. Also, <code>R.allPass([isOdd, isDivisibleBySix])</code> is more expressive than <code>number % 2 || number % 6 === 0</code>. In the latter case, readers must remember how <code>%</code> works and how the result is a number that gets coerced into a boolean value for truthiness/falsiness.</p>
+
+<h3 id="ex-debugging-via-consolelog">Ex: Debugging via console.log</h3>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption class='code-header' style='margin-bottom:-5px;'><span>Example - Adding a logger for debugging </span></figcaption>
+ <div class="CodeRay">
+  <div class="code"><pre>
+<span class="comment">// Let’s try to debug the following function</span>
+<span class="keyword">var</span> processData = R.compose(calculateStuff, sortByDate, filterByStatus);&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">p&gt;
+
+&lt;p&gt;</span><span class="delimiter">/</span></span>/ First, we need an FP-friendly logger that works <span class="keyword">with</span> composition
+<span class="keyword">function</span> <span class="function">log</span>(note, input) {
+  console.log(note + <span class="error">‘</span> <span class="error">—</span> <span class="error">‘</span> + input);
+  <span class="keyword">return</span> input; <span class="comment">// this return is vital</span>
+}&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">p&gt;
+
+&lt;p&gt;</span><span class="delimiter">/</span></span>/ Second, we insert the logger into the composition to check <span class="keyword">if</span> filtering worked
+<span class="keyword">var</span> processData = R.compose(calculateStuff, sortByDate, log(<span class="error">‘</span>filtered data<span class="error">’</span>), filterByStatus);&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">p&gt;
+
+&lt;p&gt;</span><span class="delimiter">/</span></span>/ Then we run processData <span class="keyword">with</span> some data, check the log output, and adjust
+<span class="comment">// the placement of the log within the composition until we find where</span>
+<span class="comment">// things go wrong.</span>
+</pre></div>
+</div>
+ </figure></notextile></div></p>
+
+<p>Once again, it may seem a tad painful. You’re being forced to create a special logger function. But much like in the previous example, keep in mind that you’re being forced to create specialized functions that will probably be useful enough to be part of your project’s internal library of utilities and helpers.</p>
+
+<h3 id="ex-promises">Ex: Promises</h3>
+<p>Let’s pretend we need to grab data about an animal.
+First, we query our database of animals.
+Second, we use our query results to get more info from a 3rd-party animal API.
+Third, we use some part of that info to search for relevant photos from the Flickr API.</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption class='code-header' style='margin-bottom:-5px;'><span>Example - Writing promise chains </span></figcaption>
+ <div class="CodeRay">
+  <div class="code"><pre>
+<span class="comment">// Bad - using typical anonymous function boilerplate</span>
+<span class="keyword">function</span> <span class="function">getAnimalData</span>() {
+  <span class="keyword">return</span> getAnimalInfoFromDatabase().then(<span class="keyword">function</span>(response1) {
+    <span class="keyword">return</span> getRelevantInfoFrom3rdPartyAPI(response1);
+  }).then(<span class="keyword">function</span>(response2) {
+    <span class="keyword">return</span> getRelevantPhotoFromFlickrAPI(response2);
+  }).then(<span class="keyword">function</span>(response3) {
+    <span class="keyword">return</span> response3;
+    <span class="comment">// Note: This last part of the promise chain is actually unnecessary, but</span>
+    <span class="comment">// newbies tend to include it.</span>
+  });
+}&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">p&gt;
+
+&lt;p&gt;</span><span class="delimiter">/</span></span>/ Better - using pointfree style
+<span class="keyword">function</span> <span class="function">getAnimalData</span>() {
+  <span class="keyword">return</span> getAnimalInfoFromDatabase()
+    .then(getRelevantInfoFrom3rdPartyAPI)
+    .then(getRelevantPhotoFromFlickrAPI);
+}&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">p&gt;
+
+&lt;p&gt;</span><span class="delimiter">/</span></span>/ Most Radtastic - using Ramda<span class="error">’</span>s promise composer
+<span class="keyword">var</span> getAnimalData = R.composeP(
+  getRelevantPhotoFromFlickrAPI,
+  getRelevantInfoFrom3rdPartyAPI,
+  getAnimalInfoFromDatabase
+);
+<span class="comment">// Notice how the order of composition goes from right to left.</span>
+</pre></div>
+</div>
+ </figure></notextile></div></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Pair Programming Impressions and Tips]]></title>
