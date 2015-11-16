@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Why fast code matters even when phones have octa-core CPUs"
-date: 2015-11-16 10:29
+date: 2015-11-16 9:10
 comments: true
 categories:
   - engineering
