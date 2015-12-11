@@ -177,4 +177,4 @@ var combineKeyedArrays = R.pipe(
 
 Why don't we say something more specific such as `// {k: [user]} --> [user]`? Because `combineKeyedArrays` clearly works with any type of element inside the arrays. Whoooaaaaaa...
 
-And because I appreciate you as a cool person, here's a [Gist that has all the code in 1 spot](https://gist.github.com/RebootJeff/d8877fdbcff79ec140cf) for your future reference.
+And because I appreciate you as a cool person, here's a [Gist that has all the code in one spot](https://gist.github.com/RebootJeff/d8877fdbcff79ec140cf) for your future reference.
