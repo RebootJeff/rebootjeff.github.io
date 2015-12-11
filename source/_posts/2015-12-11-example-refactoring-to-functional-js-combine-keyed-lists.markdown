@@ -55,7 +55,7 @@ The following code snippet is a slightly modified version of someone else's work
 {% coderay lang:JavaScript Original Solution %}
 var _ = require('lodash');
 
-function concatenateKeyedArrays(keyedArrays){
+function combineKeyedArrays(keyedArrays){
   var flattened = [];
 
   // produce a flat Array from an Object with values that are arrays
@@ -80,7 +80,7 @@ function concatenateKeyedArrays(keyedArrays){
 {% coderay lang:JavaScript Refactored Version 1 %}
 var _ = require('lodash');
 
-function flattenArrayHash(keyedArrays){
+function combineKeyedArrays(keyedArrays){
   return _.chain(keyedArrays)
     .reduce(concatArray, [])
     .filter(Boolean)
@@ -101,7 +101,7 @@ Thankfully, we can actually use Lodash's `reduce` on objects (not just arrays). 
 {% coderay lang:JavaScript Refactored Version 2 %}
 var _ = require('lodash');
 
-var flattenArrayHash = _.flow(
+var combineKeyedArrays = _.flow(
   _.values,
   _.flatten,
   _.compact
@@ -110,7 +110,7 @@ var flattenArrayHash = _.flow(
 
 Now we use [function composition](https://github.com/MostlyAdequate/mostly-adequate-guide/blob/master/ch5.md) via `flow`, which uses left-to-right direction. Standard function composition via `compose` would read from right-to-left, but I prefer LTR for a more familiar aesthetic. My friends who are more advanced in [functional programming](/blog/categories/functional-programming/) assure me I'll get used to the RTL direction if I give it a shot, but for now, I protest (i.e., I'm lazy).
 
-With `flow`, we can read `flattenArrayHash` as a series of 3 steps. First, we extract values from an object via `values`, then we flatten the resulting array via `flatten`, then we reject any falsey elements from the array via `compact`.
+With `flow`, we can read `combineKeyedArrays` as a series of 3 steps. First, we extract values from an object via `values`, then we flatten the resulting array via `flatten`, then we reject any falsey elements from the array via `compact`.
 
 Notes:
 
@@ -122,7 +122,7 @@ Notes:
 >
 > **--You (probably)**
 
-We can stop referring to the input as `keyedArrays`. Our function `flattenArrayHash` has now been written in a **pointfree (aka point-free aka tacit) style**. In other words, we no longer need to name - and refer back to - any parameter variable.
+We can stop referring to the input as `keyedArrays`. Our function `combineKeyedArrays` has now been written in a **pointfree (aka point-free aka tacit) style**. In other words, we no longer need to name - and refer back to - any parameter variable.
 
 Think of it like the verbs "hit" and "type" in the English language. The word "hit" is a bit vague, so you probably should include more context or *references* for clarity. Are you hitting a person in a fight? Are you hitting some books to study? Are you hitting the bed to sleep? Are you hitting a keyboard button to type?
 
@@ -137,7 +137,7 @@ Now, let's translate from Lodash to [Ramda](http://ramdajs.com/), a utility libr
 {% coderay lang:JavaScript Refactored Version 3 %}
 var R = require('ramda');
 
-var flattenArrayHash = R.pipe(
+var combineKeyedArrays = R.pipe(
   R.values,
   R.unnest,
   R.filter(Boolean)
@@ -160,7 +160,7 @@ We've gained so much:
 - **Robustness!** We're using well-tested library methods. There are fewer possible typos after refactoring to simpler code.
 - **Fun!** Wasn't that so much fun?! Hell yeah it was!! [\*level-up\*](https://www.youtube.com/watch?v=qEg9wKFGtQg&t=0m05s)
 
-By the way, possible documentation for our refactored, pointfree `flattenArrayHash` involves a type signature as a comment, but admittedly, I'm still learning how to do proper, FP-style type signatures. Also, keep in mind that the names of your functions should help tell others what it does, and the fact that it's composed of 3 easy-to-read methods is quite helpful as well.
+By the way, possible documentation for our refactored, pointfree `combineKeyedArrays` involves a type signature as a comment, but admittedly, I'm still learning how to do proper, FP-style type signatures. Also, keep in mind that the names of your functions should help tell others what it does, and the fact that it's composed of 3 easy-to-read methods is quite helpful as well.
 
 {% coderay lang:JavaScript Refactored Version 3 with comment for documentation %}
 var R = require('ramda');
@@ -168,11 +168,11 @@ var R = require('ramda');
 // Object<Array> --> Array (more old-fashioned)
 // ...or...maybe...
 // {k: [v]} --> [v] (similar to Ramda docs)
-var flattenArrayHash = R.pipe(
+var combineKeyedArrays = R.pipe(
   R.values,
   R.unnest,
   R.filter(Boolean)
 );
 {% endcoderay %}
 
-Why don't we say something more specific such as `// {k: [user]} --> [user]`? Because `flattenArrayHash` clearly works with any type of element inside the arrays. Whoooaaaaaa...
+Why don't we say something more specific such as `// {k: [user]} --> [user]`? Because `combineKeyedArrays` clearly works with any type of element inside the arrays. Whoooaaaaaa...
