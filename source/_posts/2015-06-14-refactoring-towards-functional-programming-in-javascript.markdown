@@ -4,10 +4,12 @@ title: "Refactoring Towards Functional Programming in JavaScript"
 date: 2015-06-14 13:58
 comments: true
 categories:
+  - JavaScript
+  - functional programming
+  - example code
+  - technical
   - engineering
   - programming
-  - technical
-  - JavaScript
 ---
 
 ![Ramda.js logo](https://camo.githubusercontent.com/0b4c12a5daec02b72e6e6879861ac70f75046e65/687474703a2f2f72616d64612e6a637068696c6c697070732e636f6d2f6c6f676f2f72616d646146696c6c65645f323030783233352e706e67)
