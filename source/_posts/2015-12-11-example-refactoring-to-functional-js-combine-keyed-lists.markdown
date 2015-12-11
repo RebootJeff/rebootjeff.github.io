@@ -155,7 +155,7 @@ Notes:
 
 We've gained so much:
 
-- **Expressiveness!** Remember that `each` is vague. The combo of `_.chain` and `_.value` adds unnecessary boilerplate cruft compared to the simplicity of `flow` or `pipe`.
+- **Expressiveness!** Remember that `each` is vague; the refactored versions using `flow` and `pipe` are far more direct and straightforward (assuming you're familiar with the library methods). Also, the combo of `_.chain` and `_.value` adds unnecessary boilerplate cruft compared to the simplicity of `flow` or `pipe`.
 - **Brevity!** Shorter code isn't always better code, but if expressiveness and legibility remain high as code length decreases, that's generally what scientists refer to as a victory.
 - **Robustness!** We're using well-tested library methods. There are fewer possible typos after refactoring to simpler code.
 - **Fun!** Wasn't that so much fun?! Hell yeah it was!! [\*level-up\*](https://www.youtube.com/watch?v=qEg9wKFGtQg&t=0m05s)
