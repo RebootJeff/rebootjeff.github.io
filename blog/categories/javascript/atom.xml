@@ -4,7 +4,7 @@
   <title><![CDATA[Category: JavaScript | RebootJeff.com]]></title>
   <link href="http://RebootJeff.github.io/blog/categories/javascript/atom.xml" rel="self"/>
   <link href="http://RebootJeff.github.io/"/>
-  <updated>2015-12-10T23:27:45-08:00</updated>
+  <updated>2015-12-11T08:55:58-08:00</updated>
   <id>http://RebootJeff.github.io/</id>
   <author>
     <name><![CDATA[Jeff Lee]]></name>
@@ -188,7 +188,7 @@
 <p>We’ve gained so much:</p>
 
 <ul>
-  <li><strong>Expressiveness!</strong> Remember that <code>each</code> is vague. The combo of <code>_.chain</code> and <code>_.value</code> adds unnecessary boilerplate cruft compared to the simplicity of <code>flow</code> or <code>pipe</code>.</li>
+  <li><strong>Expressiveness!</strong> Remember that <code>each</code> is vague; the refactored versions using <code>flow</code> and <code>pipe</code> are far more direct and straightforward (assuming you’re familiar with the library methods). Also, the combo of <code>_.chain</code> and <code>_.value</code> adds unnecessary boilerplate cruft compared to the simplicity of <code>flow</code> or <code>pipe</code>.</li>
   <li><strong>Brevity!</strong> Shorter code isn’t always better code, but if expressiveness and legibility remain high as code length decreases, that’s generally what scientists refer to as a victory.</li>
   <li><strong>Robustness!</strong> We’re using well-tested library methods. There are fewer possible typos after refactoring to simpler code.</li>
   <li><strong>Fun!</strong> Wasn’t that so much fun?! Hell yeah it was!! <a href="https://www.youtube.com/watch?v=qEg9wKFGtQg&amp;t=0m05s">*level-up*</a></li>
