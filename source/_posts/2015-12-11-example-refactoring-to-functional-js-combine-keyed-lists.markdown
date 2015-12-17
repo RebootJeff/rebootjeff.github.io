@@ -12,6 +12,10 @@ categories:
   - programming
 ---
 
+![pipe](/images/20151211/pipe-174918_640.jpg)
+
+Why the image of a water pipe with flowing water? It will all make sense soon, my dear reader.
+
 ## The Premise
 
 Given a bunch of arrays kept within a JavaScript hash table (plain object), we want to extract the arrays and combine them. In other words, we're given a collection of arrays of elements and we want a single array of elements.
