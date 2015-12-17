@@ -4,7 +4,7 @@
   <title><![CDATA[Category: engineering | RebootJeff.com]]></title>
   <link href="http://RebootJeff.github.io/blog/categories/engineering/atom.xml" rel="self"/>
   <link href="http://RebootJeff.github.io/"/>
-  <updated>2015-12-11T09:00:32-08:00</updated>
+  <updated>2015-12-16T18:56:38-08:00</updated>
   <id>http://RebootJeff.github.io/</id>
   <author>
     <name><![CDATA[Jeff Lee]]></name>
@@ -18,7 +18,11 @@
     <link href="http://RebootJeff.github.io/blog/2015/12/11/example-refactoring-to-functional-js-combine-keyed-lists/"/>
     <updated>2015-12-11T09:02:00-08:00</updated>
     <id>http://RebootJeff.github.io/blog/2015/12/11/example-refactoring-to-functional-js-combine-keyed-lists</id>
-    <content type="html"><![CDATA[<h2 id="the-premise">The Premise</h2>
+    <content type="html"><![CDATA[<p><img src="/images/20151211/pipe-174918_640.jpg" alt="pipe" /></p>
+
+<p>Why the image of a water pipe with flowing water? It will all make sense soon, my dear reader.</p>
+
+<h2 id="the-premise">The Premise</h2>
 
 <p>Given a bunch of arrays kept within a JavaScript hash table (plain object), we want to extract the arrays and combine them. In other words, we’re given a collection of arrays of elements and we want a single array of elements.</p>
 
