@@ -4,7 +4,7 @@
   <title><![CDATA[Category: security | RebootJeff.com]]></title>
   <link href="http://RebootJeff.github.io/blog/categories/security/atom.xml" rel="self"/>
   <link href="http://RebootJeff.github.io/"/>
-  <updated>2015-12-16T18:56:38-08:00</updated>
+  <updated>2016-04-25T19:04:51-07:00</updated>
   <id>http://RebootJeff.github.io/</id>
   <author>
     <name><![CDATA[Jeff Lee]]></name>
@@ -52,7 +52,9 @@
 
 <p>Most browsers get a passing grade when it comes to HSTS support –except for…</p>
 
-<p><blockquote><p>Internet Explorer doesn’t support HSTS—which means that there’s basically no such thing as a secure website in IE</p><footer><strong>Electronic Frontier Foundation (EFF),</strong> <cite><a href='https://www.eff.org/deeplinks/2014/02/websites-hsts'>Websites Must Use HSTS in Order to Be Secure</a></cite></footer></blockquote></p>
+<p>{% blockquote Electronic Frontier Foundation (EFF), https://www.eff.org/deeplinks/2014/02/websites-hsts Websites Must Use HSTS in Order to Be Secure %}
+Internet Explorer doesn’t support HSTS—which means that there’s basically no such thing as a secure website in IE
+{% endblockquote %}</p>
 
 <h3 id="further-readingreferences-1">Further Reading/References</h3>
 
@@ -163,19 +165,15 @@
 
 <p>A Googler suggested using the CSP reporting feature <em>without</em> an enforced whitelist to help you examine what browsers are actually digesting when they visit your site or app. For example, you could set up a CSP that has a whitelist and just asks browsers to report non-whitelisted sources without actually blocking them. This gives you the ability to <strong>tweak your whitelist based on production usage without changing production usage</strong>. After you’re done tweaking, change the CSP to force browsers to report <em>and</em> block uninvited resources and content.</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption class='code-header' style='margin-bottom:-5px;'><span>Ultra-Strict Example CSP for Express server using Lusca middleware </span></figcaption>
- <div class="CodeRay">
-  <div class="code"><pre>
+<p>{% coderay lang:JavaScript Ultra-Strict Example CSP for Express server using Lusca middleware %}
 app.use(lusca.csp({
-  <span class="key">policy</span>: {
-    <span class="error">‘</span><span class="keyword">default</span>-src<span class="error">’</span>: <span class="error">‘</span>none<span class="error">’</span>, <span class="comment">// Block EVERYTHING</span>
+  policy: {
+    ‘default-src’: ‘none’, // Block EVERYTHING
   },
-  <span class="key">reportOnly</span>: <span class="predefined-constant">true</span>, <span class="comment">// Record what’s being blocked</span>
-  <span class="key">reportUri</span>: <span class="error">‘</span><span class="regexp"><span class="delimiter">/</span><span class="content">report-violation-endpoint’
+  reportOnly: true, // Record what’s being blocked
+  reportUri: ‘/report-violation-endpoint’
 }));
-</span></span></pre></div>
-</div>
- </figure></notextile></div></p>
+{% endcoderay %}</p>
 
 <h2 id="https-and-http-strict-transport-security-hsts">HTTPS and HTTP Strict Transport Security (HSTS)</h2>
 

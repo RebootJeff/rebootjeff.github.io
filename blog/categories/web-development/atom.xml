@@ -4,7 +4,7 @@
   <title><![CDATA[Category: web development | RebootJeff.com]]></title>
   <link href="http://RebootJeff.github.io/blog/categories/web-development/atom.xml" rel="self"/>
   <link href="http://RebootJeff.github.io/"/>
-  <updated>2015-12-16T18:56:38-08:00</updated>
+  <updated>2016-04-25T19:04:51-07:00</updated>
   <id>http://RebootJeff.github.io/</id>
   <author>
     <name><![CDATA[Jeff Lee]]></name>
@@ -12,6 +12,67 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Web Dev Machine Setup 2016]]></title>
+    <link href="http://RebootJeff.github.io/blog/2016/04/25/web-dev-machine-setup-2016/"/>
+    <updated>2016-04-25T19:04:00-07:00</updated>
+    <id>http://RebootJeff.github.io/blog/2016/04/25/web-dev-machine-setup-2016</id>
+    <content type="html"><![CDATA[<h1 id="my-web-dev-setup">My Web Dev Setup</h1>
+
+<p>It’s been nearly two years since I wrote about <a href="http://rebootjeff.github.io/blog/2014/05/15/my-sublime-text-2-setup-and-customization/">my preferences for Sublime Text 2</a>. In those two years, I’ve accrued more tools, and I’ve installed/configured a better web dev setup for myself. <strong><em>My current setup is <a href="https://github.com/RebootJeff/my-installfest">documented in a repo</a></em></strong>, which will be kept up to date so then any time I need to set up a new machine, I have a quick guide that I can reference.</p>
+
+<p>There are a few aspects of my setup worth explaining…</p>
+
+<h2 id="atom-vs-sublime-text">Atom vs Sublime Text</h2>
+
+<p>I’ve switched to Atom. There’s no doubt that Sublime Text is way faster. I still use it to read and edit extremely large files (e.g., large JSON). But Sublime Text always felt a bit clunky in its GUI. Most notably, the package manager for Sublime Text wasn’t very nice to use.</p>
+
+<p>On Macs, Atom has a lot of great features for updating the software and packages. It has one-click installation of shell commands (e.g., <code>atom [filename]</code> to open a file in Atom via terminal).</p>
+
+<p>On Linux, these features are missing, but I still use Atom on my Ubuntu machine because its GUI feels more modern than Sublime Text’s GUI. Also, Atom’s built-in Markdown and Git features are pretty sweet.</p>
+
+<p>That said, <a href="https://code.visualstudio.com/">Microsoft’s Visual Code Studio</a> looks enticing. The battle of free code editors is really heating up! Visual Code Studio appears to be more powerful than Atom – and I’ve got to give it a try eventually – but Atom’s community is at least 2x larger at the moment. The ecosystem of Atom packages is outstanding.</p>
+
+<p>Some of my favorite Atom packages:
+- <a href="https://atom.io/packages/pigments">pigments</a> to highlight colors (great for CSS/SCSS/LESS code that deal with colors)
+- <a href="https://atom.io/packages/file-icons">file-icons</a> to show icons specific to different file types
+- <a href="https://atom.io/packages/autocomplete-emojis">autocomplete-emojis</a> because emojis can spice up any comment/documentation! 🌟</p>
+
+<p><img src="/images/20160425/atom_ss.png" alt="Atom screenshot" /></p>
+
+<h2 id="browsers">Browsers</h2>
+
+<h3 id="a-few-words-about-chrome">A few words about Chrome</h3>
+
+<p>I still use Google Chrome as my main browser for development, and now I use a few Chrome extensions a whole lot: <a href="https://chrome.google.com/webstore/detail/advanced-rest-client/hgmloofddffdnphfgcellkdfbfbjeloo?hl=en-US">Advanced REST Client</a> for testing REST APIs and <a href="https://chrome.google.com/webstore/detail/jsonview/chklaanhfefbnpoihckbnefhakgolnmc/related?hl=en">JSONView</a> for browsing JSON data.</p>
+
+<p>For development, it can be helpful to disable the “prefetch resources” advanced setting. If it’s enabled, the network panel of your Chrome DevTools might jump the gun, confusing you in the process.</p>
+
+<h3 id="firefox-is-getting-better">Firefox is getting better</h3>
+
+<p>That said, I’m enjoying <a href="https://www.mozilla.org/en-US/firefox/developer/">Mozilla Firefox Developer Edition</a>. It’s got some <a href="https://www.youtube.com/playlist?list=PLo3w8EB99pqLRJBWRCoyGTIrkctoUgB9W">fancy dev tools</a> that I haven’t gotten a chance to use much, but the browser itself feels pretty speedy. Unlike normal Firefox, the dev edition has separate processes for each tab.</p>
+
+<h4 id="mini-rant-modern-browser-wars">Mini-Rant: Modern Browser Wars</h4>
+
+<p>Also, I like supporting Mozilla by using their browser. <a href="https://www.youtube.com/watch?v=_YkTAu333xM">It’s good to have some competition in browsers</a>, and Mozilla has no conflict of interest with the web. They’re more likely to promote an open web as much as possible whereas Google and especially Apple have a conflict of supporting web versus supporting iOS/Android apps. <a href="http://arstechnica.com/information-technology/2015/06/op-ed-safari-is-the-new-internet-explorer/">Some say Safari is neglected</a> by Apple because they care more about dedicating resources to iOS + the App Store.</p>
+
+<p>There’s also a nice conspiracy theory suggesting that Apple would rather web apps not rise in popularity because that would detract from the App Store’s prominence. You could argue the same goes for Google and the Play store, but Google’s done some amazing work on “<a href="https://developers.google.com/web/progressive-web-apps">Progressive Web Apps</a>” to make web tech (push notifications, offline support, etc) as powerful as native mobile apps.</p>
+
+<h2 id="mac-tips--tricks">Mac Tips &amp; Tricks</h2>
+
+<p><a href="https://github.com/RebootJeff/my-installfest">My documentation repo</a> has more tips &amp; tricks, but I’ll lay out a few here. They all happen to relate to making development on a Mac even better (I guess I’ve been using my Mac way more than my Ubuntu machine lately).</p>
+
+<h4 id="window-management">Window Management</h4>
+<p>The latest Mac OSX has a built-in window layout feature, but it sucks. I continue to use <a href="http://www.irradiatedsoftware.com/sizeup/">SizeUp</a>. It’s free and more powerful/flexible.</p>
+
+<h4 id="installing-software-on-macs">Installing software on Macs</h4>
+<p>I try to install as much as possible via <a href="http://brew.sh/">Homebrew</a>. It makes updating installed software a bit easier, and it can help you avoid common pitfalls (e.g., installing Node.js via Homebrew avoids permissions issues with <code>npm install -g</code> that you’d normally have to fix yourself).</p>
+
+<h4 id="horrible-smart-quotes">Horrible “Smart Quotes”</h4>
+<p>Do yourself a favor and go into the keyboard settings to disable Smart Quotes. Otherwise, they could eventually find their way into your code and screw you up in the most insidious way (it could take awhile for you to realize you’ve accidentally typed/copy/pasted some Smart Quotes into your code).</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Why fast code matters even when phones have octa-core CPUs]]></title>

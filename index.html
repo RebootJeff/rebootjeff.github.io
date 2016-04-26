@@ -138,6 +138,118 @@
 
   <header>
     
+      <h1 class="entry-title"><a href="/blog/2016/04/25/web-dev-machine-setup-2016/">Web Dev Machine Setup 2016</a></h1>
+    
+    
+      <p class="meta">
+        
+  
+
+
+  
+    <span class="byline author vcard">by <span class="fn">Jeff Lee</span></span>
+  
+
+ - 
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2016-04-25T19:04:00-07:00" pubdate data-updated="true">Apr 25<span>th</span>, 2016</time> - 
+        
+
+posted in
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/dev-tools/'>dev tools</a>, <a class='category' href='/blog/categories/software-development/'>software development</a>, <a class='category' href='/blog/categories/web-development/'>web development</a>
+  
+</span>
+
+
+        
+         | <a href="/blog/2016/04/25/web-dev-machine-setup-2016/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h1 id="my-web-dev-setup">My Web Dev Setup</h1>
+
+<p>It’s been nearly two years since I wrote about <a href="http://rebootjeff.github.io/blog/2014/05/15/my-sublime-text-2-setup-and-customization/">my preferences for Sublime Text 2</a>. In those two years, I’ve accrued more tools, and I’ve installed/configured a better web dev setup for myself. <strong><em>My current setup is <a href="https://github.com/RebootJeff/my-installfest">documented in a repo</a></em></strong>, which will be kept up to date so then any time I need to set up a new machine, I have a quick guide that I can reference.</p>
+
+<p>There are a few aspects of my setup worth explaining…</p>
+
+<h2 id="atom-vs-sublime-text">Atom vs Sublime Text</h2>
+
+<p>I’ve switched to Atom. There’s no doubt that Sublime Text is way faster. I still use it to read and edit extremely large files (e.g., large JSON). But Sublime Text always felt a bit clunky in its GUI. Most notably, the package manager for Sublime Text wasn’t very nice to use.</p>
+
+<p>On Macs, Atom has a lot of great features for updating the software and packages. It has one-click installation of shell commands (e.g., <code>atom [filename]</code> to open a file in Atom via terminal).</p>
+
+<p>On Linux, these features are missing, but I still use Atom on my Ubuntu machine because its GUI feels more modern than Sublime Text’s GUI. Also, Atom’s built-in Markdown and Git features are pretty sweet.</p>
+
+<p>That said, <a href="https://code.visualstudio.com/">Microsoft’s Visual Code Studio</a> looks enticing. The battle of free code editors is really heating up! Visual Code Studio appears to be more powerful than Atom – and I’ve got to give it a try eventually – but Atom’s community is at least 2x larger at the moment. The ecosystem of Atom packages is outstanding.</p>
+
+<p>Some of my favorite Atom packages:
+- <a href="https://atom.io/packages/pigments">pigments</a> to highlight colors (great for CSS/SCSS/LESS code that deal with colors)
+- <a href="https://atom.io/packages/file-icons">file-icons</a> to show icons specific to different file types
+- <a href="https://atom.io/packages/autocomplete-emojis">autocomplete-emojis</a> because emojis can spice up any comment/documentation! 🌟</p>
+
+<p><img src="/images/20160425/atom_ss.png" alt="Atom screenshot" /></p>
+
+<h2 id="browsers">Browsers</h2>
+
+<h3 id="a-few-words-about-chrome">A few words about Chrome</h3>
+
+<p>I still use Google Chrome as my main browser for development, and now I use a few Chrome extensions a whole lot: <a href="https://chrome.google.com/webstore/detail/advanced-rest-client/hgmloofddffdnphfgcellkdfbfbjeloo?hl=en-US">Advanced REST Client</a> for testing REST APIs and <a href="https://chrome.google.com/webstore/detail/jsonview/chklaanhfefbnpoihckbnefhakgolnmc/related?hl=en">JSONView</a> for browsing JSON data.</p>
+
+<p>For development, it can be helpful to disable the “prefetch resources” advanced setting. If it’s enabled, the network panel of your Chrome DevTools might jump the gun, confusing you in the process.</p>
+
+<h3 id="firefox-is-getting-better">Firefox is getting better</h3>
+
+<p>That said, I’m enjoying <a href="https://www.mozilla.org/en-US/firefox/developer/">Mozilla Firefox Developer Edition</a>. It’s got some <a href="https://www.youtube.com/playlist?list=PLo3w8EB99pqLRJBWRCoyGTIrkctoUgB9W">fancy dev tools</a> that I haven’t gotten a chance to use much, but the browser itself feels pretty speedy. Unlike normal Firefox, the dev edition has separate processes for each tab.</p>
+
+<h4 id="mini-rant-modern-browser-wars">Mini-Rant: Modern Browser Wars</h4>
+
+<p>Also, I like supporting Mozilla by using their browser. <a href="https://www.youtube.com/watch?v=_YkTAu333xM">It’s good to have some competition in browsers</a>, and Mozilla has no conflict of interest with the web. They’re more likely to promote an open web as much as possible whereas Google and especially Apple have a conflict of supporting web versus supporting iOS/Android apps. <a href="http://arstechnica.com/information-technology/2015/06/op-ed-safari-is-the-new-internet-explorer/">Some say Safari is neglected</a> by Apple because they care more about dedicating resources to iOS + the App Store.</p>
+
+<p>There’s also a nice conspiracy theory suggesting that Apple would rather web apps not rise in popularity because that would detract from the App Store’s prominence. You could argue the same goes for Google and the Play store, but Google’s done some amazing work on “<a href="https://developers.google.com/web/progressive-web-apps">Progressive Web Apps</a>” to make web tech (push notifications, offline support, etc) as powerful as native mobile apps.</p>
+
+<h2 id="mac-tips--tricks">Mac Tips &amp; Tricks</h2>
+
+<p><a href="https://github.com/RebootJeff/my-installfest">My documentation repo</a> has more tips &amp; tricks, but I’ll lay out a few here. They all happen to relate to making development on a Mac even better (I guess I’ve been using my Mac way more than my Ubuntu machine lately).</p>
+
+<h4 id="window-management">Window Management</h4>
+<p>The latest Mac OSX has a built-in window layout feature, but it sucks. I continue to use <a href="http://www.irradiatedsoftware.com/sizeup/">SizeUp</a>. It’s free and more powerful/flexible.</p>
+
+<h4 id="installing-software-on-macs">Installing software on Macs</h4>
+<p>I try to install as much as possible via <a href="http://brew.sh/">Homebrew</a>. It makes updating installed software a bit easier, and it can help you avoid common pitfalls (e.g., installing Node.js via Homebrew avoids permissions issues with <code>npm install -g</code> that you’d normally have to fix yourself).</p>
+
+<h4 id="horrible-smart-quotes">Horrible “Smart Quotes”</h4>
+<p>Do yourself a favor and go into the keyboard settings to disable Smart Quotes. Otherwise, they could eventually find their way into your code and screw you up in the most insidious way (it could take awhile for you to realize you’ve accidentally typed/copy/pasted some Smart Quotes into your code).</p>
+</div>
+  
+  
+
+
+</div>
+
+      </article>
+    
+    
+      <article class="span4">
+        <div class="article-format">
+
+  <header>
+    
       <h1 class="entry-title"><a href="/blog/2015/12/11/example-refactoring-to-functional-js-combine-keyed-lists/">[Example] Refactoring to Functional JS - Combine Keyed Lists</a></h1>
     
     
@@ -989,222 +1101,6 @@ posted in
 
       </article>
     
-    
-      <article class="span4">
-        <div class="article-format">
-
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2015/04/19/how-to-talk-while-coding-and-whiteboarding/">How to Talk While Coding and Whiteboarding in 7 Steps</a></h1>
-    
-    
-      <p class="meta">
-        
-  
-
-
-  
-    <span class="byline author vcard">by <span class="fn">Jeff Lee</span></span>
-  
-
- - 
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-04-19T21:13:00-07:00" pubdate data-updated="true">Apr 19<span>th</span>, 2015</time> - 
-        
-
-posted in
-<span class="categories">
-  
-    <a class='category' href='/blog/categories/communication-for-engineers/'>Communication for Engineers</a>, <a class='category' href='/blog/categories/javascript/'>JavaScript</a>, <a class='category' href='/blog/categories/career-development/'>career development</a>, <a class='category' href='/blog/categories/communication-skills/'>communication skills</a>, <a class='category' href='/blog/categories/dev-job-search/'>dev job search</a>
-  
-</span>
-
-
-        
-         | <a href="/blog/2015/04/19/how-to-talk-while-coding-and-whiteboarding/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><img src="/images/20150419/startupstock_whiteboarding.jpg" alt="Photo of whiteboarding" /></p>
-
-<p>In <a href="/blog/2014/09/02/communication-for-engineers-101-we-have-a-problem/">my first article on Communication For Engineers</a>, I ranted about my disappointment surrounding engineering and communication skills. I ended that blog post with a list of communication-related topics that I promised to write about. Instead of addressing any of those topics (sorry!), this post will talk about how software engineers can improve their communication while coding collaboratively or while solving coding challenges for a job interview.</p>
-
-<p><strong>Warning:</strong> JavaScript is my specialty, so some of the advice below is JS-centric, and all code examples are written in JS.</p>
-
-<h4 id="i-cooked-up-7-steps-for-how-to-discuss-code-smoothly">I cooked up 7 steps for how to discuss code smoothly:</h4>
-
-<ol>
-  <li>Draw the situation</li>
-  <li>Ask clarifying questions</li>
-  <li>Explain approach</li>
-  <li>Breadth-first coding</li>
-  <li>Refactor</li>
-  <li>Walkthrough</li>
-  <li>Testing</li>
-</ol>
-
-<p>Notice that these steps don’t magically provide a complete guide to actually solving problems. For example, they don’t tell you which data structures to use. Instead, these steps show you how to communicate better as you solve a challenge. They help you talk with your interviewer or colleague about the problem space, your initial impressions, your ability to break down the problem into sub-problems, and your quality assurance process.</p>
-
-<h1 id="the-7-steps-explained">The 7 Steps Explained</h1>
-
-<h2 id="drawing-the-problem">1. Drawing the Problem</h2>
-<p>Admittedly, this step could be optional. Drawing is best for folks who work well with visuals. But even if you’re not an artist, you should still consider drawing a diagram or picture of the problem because visuals tend to be effective tools for communicating complex subjects and situations. For example, data structures are usually easier to talk about after you draw them out.</p>
-
-<p>Furthermore, you might reveal certain questions through the act of drawing. At the very least, <strong>drawing stuff out can help an interviewer follow you</strong>. Going back to the data structures example: imagine you’re supposed to work with a binary tree. It’s easier to talk about it if you draw a tree and point to nodes rather than just saying, “First we will process the root node, then we will go to the left child and do blah blah blah. At that point, depending on the value, we might go down to the child’s child or we might…”</p>
-
-<p>By the way, <strong>you don’t have to stick to drawing pictures</strong>. This step could be about writing down example data, example inputs, example outputs, example use cases; and then mapping them together by drawing arrows, circles, etc. Examples are great for communication, and they are also good for problem-solving in general. Try to think of examples that are really simple (to get a basic grasp of the problem), examples that are more realistic, and examples that are crazy (to reveal edge cases and potential validation concerns).</p>
-
-<h2 id="asking-clarifying-questions">2. Asking Clarifying Questions</h2>
-<p>Do not follow any of your assumptions without asking a question first. It’s tempting to hear a challenge or puzzle and immediately get into solving it. But there are real-world concerns for real-world problems, and you should demonstrate your familiarity with such issues.</p>
-
-<p>Also, you can save time by asking clarifying questions during an interview because interview challenges tend to be contrived. Do you have to account for crazy input values? Does the output need to be formatted in a certain way? If the puzzle involves numbers, do you have to account for negative values, decimals, etc? Are you expected to do input validation, error handling, or memory optimization?</p>
-
-<h2 id="explaining-your-approach">3. Explaining Your Approach</h2>
-
-<p>At this point, you might have a solution in mind and you’re eager to get coding. Or you might just have a partial solution. Either way, take a moment to give a quick overview of the <strong>purpose</strong> of the code you’re about to write. Also, give a sense of what <strong>algorithms or concepts</strong> will be implemented as part of your approach to the problem at hand.</p>
-
-<p>For example, “This looks like a problem we can solve with a recursive solution that traverses all nodes of the dataset.” In this example, “recursion” is the concept and traversal is the purpose.</p>
-
-<h2 id="breadth-first-coding">4. Breadth-First Coding</h2>
-
-<p>When it comes time to actually write out some code (or pseudocode), write out as much as possible at a high-level before going into the low-level details. For example, if your solution requires looping over objects received from an AJAX request in order to parse some data, don’t dive into that AJAX request. That’s a low-level detail. Start from the high-level approach of “fetching data” and then immediately move to the next high-level step of “parsing data”. With this strategy, you cover the whole breadth of the solution before diving into any detail of the solution.</p>
-
-<p>In other words, write modular code by using a breadth-first mindset. Everyone knows it’s a good idea to write several small functions rather than one giant function, so apply that approach to your communication too. When you explain how a computer works, you start the explanation at a high level (e.g., “hard drives store data, CPUs crunch data, …”) rather than starting at a low level (e.g., “the flow of electrons is controlled by gates known as transistors”).</p>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><figcaption class="code-header" style="margin-bottom:-5px;"><span>Example - Breadth-First Coding </span></figcaption>
- <div class="CodeRay">
-  <div class="code"><pre>
-<span class="comment">// Challenge (aka Prompt) - Write a function that determines the average number of</span>
-<span class="comment">// retweets for a given user after a given cut off date.</span>
-
-<span class="comment">// Phase 0 - Psuedocode (optional)</span>
-<span class="keyword">function</span> <span class="function">getRetweetAverage</span>(username, cutOffDate) {
-  <span class="comment">/**
-   * 1. Fetch tweets via Twiter API
-   * 2. Filter tweets based on date
-   * 3. Calculate avg count of retweets from filtered data
-   * 4. Return a promise that resolves to the answer
-  **/</span>
-}
-
-<span class="comment">// Phase 1 - Coding with declarative helper functions</span>
-<span class="keyword">function</span> <span class="function">getRetweetAverage</span>(username, cutOffDate) {
-  <span class="keyword">return</span> fetchTweets(username).then(<span class="keyword">function</span>(tweets) {
-    <span class="keyword">var</span> recentTweets = filterTweetsByDate(tweets, cutOffDate);
-    <span class="keyword">return</span> calculateAverageRetweets(recentTweets);
-  });
-}
-
-<span class="comment">// Phase 2 - Implement low-level helper functions</span>
-<span class="keyword">function</span> <span class="function">fetchTweets</span>(username) {
-  <span class="comment">// Let's pretend we're using AngularJS's HTTP request service, which uses promises.</span>
-  <span class="keyword">var</span> params = {
-    <span class="key">screen_name</span>: username,
-    <span class="key">count</span>: <span class="integer">200</span> <span class="comment">// FYI this is the max allowed by Twitter's API</span>
-  };
-  <span class="keyword">return</span> <span class="predefined">$http</span>.get(<span class="string"><span class="delimiter">'</span><span class="content">https://api.twitter.com/1.1/statuses/user_timeline.json</span><span class="delimiter">'</span></span>, params);
-}
-
-<span class="keyword">function</span> <span class="function">filterTweetsByDate</span>(tweets, cutOffDate) {
-  <span class="keyword">return</span> tweets.filter(<span class="keyword">function</span>(tweet) {
-    <span class="comment">// Convert tweet's String date into a JS Date object before comparing.</span>
-    <span class="keyword">var</span> createdAt = <span class="keyword">new</span> Date(tweet.created_at);
-    <span class="keyword">return</span> createdAt &gt; cutOffDate;
-  });
-}
-
-<span class="keyword">function</span> <span class="function">calculateAverageRetweets</span>(tweets) {
-  <span class="keyword">var</span> totalRetweets = tweets.reduce(<span class="keyword">function</span>(sum, tweet) {
-    <span class="keyword">return</span> sum + tweet.retweet_count;
-  }, <span class="integer">0</span>);
-  <span class="keyword">return</span> totalRetweets / tweets.length;
-}
-</pre></div>
-</div>
- </figure></notextile></div>
-
-<p>In the example above, you should write code one “phase” at a time. Starting with psuedocode is optional, but it might be a good idea to at least verbalize it if you don’t plan on writing it. Then write the code in a declarative style as seen in “Phase 1”. Lastly, flesh out the functionality of your solution by writing the code that actually makes things work.</p>
-
-<p>By the way, I’ve never actually used the Twitter API, so the example code might not follow best practices or might not take into account how it actually behaves. For instance, maybe the API accepts a parameter to do the date filtering for you.</p>
-
-<h2 id="refactoring-your-first-draft">5. Refactoring Your First Draft</h2>
-
-<p>Once you’ve reached the point where the code seems to solve the challenge at hand, it’s time to refactor. If you’re writing under pressure in an interview situation, it’s likely that you haven’t written the cleanest code. If you’re writing without any pressure, it’s still good to refactor your first draft into a more readable/maintainable variant. Here’s a list of tips for deciding what to refactor:</p>
-
-<ul>
-  <li><strong>Improve readability</strong> by fixing indentation, whitespace, names, etc.
-    <ul>
-      <li><strong>Rename variables</strong> into semantic names. It’s tempting to use very short variable names during interviews because you feel pressure to finish quickly. Consider renaming them into more recognizable names to show your audience that you know how to write maintainable code that potential co-workers could easily read.</li>
-      <li><strong>Replace loops</strong> with a <code>map</code>, <code>filter</code>, <code>reduce</code>, etc where possible.</li>
-      <li><strong>Consider naming anonymous functions</strong> if they have potential to be re-used as a helper.</li>
-    </ul>
-  </li>
-  <li><strong>Extract code</strong> into helper functions. It’s very common for interview candidates to inadvertently write long functions. Even if you tried to follow Breadth-First Coding in Step 4, you may have slipped.</li>
-  <li><strong>Double-check promises</strong> and look for opportunities to reduce boilerplate and anonymous functions.
-    <ul>
-      <li><strong>Check return statements</strong> to ensure that your promises will resolve to the correct values (and that the segments of your promise chain will pass correct values).</li>
-      <li><strong>Use promise library helpers</strong> such as <code>all</code>, <code>spread</code>, etc where possible.</li>
-    </ul>
-  </li>
-  <li><strong>Add error-handling</strong>/logging for professional bonus points.</li>
-  <li><strong>Rewrite in another style</strong> (e.g., Functional Programming vs Object-Oriented Programming) for massive bonus points.</li>
-</ul>
-
-<p>Admittedly, this Step 5 isn’t as directly related to communication as other steps. It’s mostly focused on improving your code. However, there is still a communiation-related opportunity here. As you are refactoring, verbalize your intentions. Discuss what you want to improve before you improve it. Explain the rationale behind the improvements. Mentions the pros and cons of your code without the improvements and with the improvements (i.e., before vs after).</p>
-
-<h2 id="walking-through-your-answer">6. Walking Through Your Answer</h2>
-
-<p>At this point, your code should be presentable. By following the previous steps, your audience should already have a solid, high-level understanding of your code. So now it’s time to give a detailed walkthrough.</p>
-
-<p>Explain any nuances, use precise terminology, and expound on any interesting control flow or references (e.g., closures in JavaScript). You can also mention any implications regarding speed, memory, I/O, security, etc. But overall, your goal is to describe your code <em>in detail</em>.</p>
-
-<h2 id="testing-your-answer">7. Testing Your Answer</h2>
-
-<p>You might actually want to perform this step before step 6, but it depends on how you roll. After you’ve gotten to the point where you have a solution that seems to be good, take a minute to describe how you’d make sure it’s robust. When you normally write code on your own, you of course test it out by running it with various inputs or circumstances. Describe them; verbalize them.</p>
-
-<p>For example, if you’re writing a function with some parameters, you’ll probably run the function with a bunch of different arguments with different values and maybe different datatypes.</p>
-
-<ul>
-  <li><strong>Numbers:</strong> negative values, 0, 1, odd vs even, really big numbers, decimals</li>
-  <li><strong>Strings:</strong> upper vs lower case, single character, numeric characters, punctuation and non-alphanumeric characters.</li>
-  <li><strong>Object Literals:</strong> check for weird keys (much like <em>Strings</em>)</li>
-  <li><strong>Collections &amp; Data Structures:</strong> empty collections, only 1 item, several items, check for mutation side-effects, ascending order, descending order, random order, nested objects/arrays/other data structures.</li>
-</ul>
-
-<h1 id="where-did-these-steps-come-from">Where Did These Steps Come From?</h1>
-
-<p>I came up with these 7 steps based on…</p>
-
-<ul>
-  <li><a href="/blog/2014/05/31/dev-job-search-tips-from-the-coding-interview-guru/">advice from Gayle Laakmann McDowell</a></li>
-  <li><a href="/blog/2014/05/11/hackr-diary-weeks-11-12-and-beyond/">advice from Hack Reactor instructors</a></li>
-  <li>my experience interviewing for jobs</li>
-  <li>my experience conducting a handful of mock interviews for Hack Reactor grads</li>
-  <li>my experience conducting interviews where I work (10+ so far)</li>
-</ul>
-</div>
-  
-  
-
-
-</div>
-
-      </article>
-    
     </div>
       <div class="row">
         <ul class="pager">
@@ -1228,6 +1124,10 @@ posted in
     <ul class="recent_posts">
       
         <li>
+          <a href="/blog/2016/04/25/web-dev-machine-setup-2016/">Web Dev Machine Setup 2016</a>
+        </li>
+      
+        <li>
           <a href="/blog/2015/12/11/example-refactoring-to-functional-js-combine-keyed-lists/">[Example] Refactoring to Functional JS - Combine Keyed Lists</a>
         </li>
       
@@ -1241,10 +1141,6 @@ posted in
       
         <li>
           <a href="/blog/2015/06/12/pair-programming-tips-and-impressions/">Pair Programming Impressions and Tips</a>
-        </li>
-      
-        <li>
-          <a href="/blog/2015/06/03/recap-of-lambdaconf-2015/">Recap of LambdaConf 2015 - Where Brains Explode</a>
         </li>
       
     </ul>
@@ -1263,7 +1159,7 @@ posted in
   -->
   <div class="span6" id="footer_notes">
     <p>
-      <a href="/">RebootJeff.com</a> - Copyright &copy; 2015 - Jeff Lee
+      <a href="/">RebootJeff.com</a> - Copyright &copy; 2016 - Jeff Lee
     </p>
     <p>
       Powered by <a href="http://octopress.org/">Octopress</a>. Made pretty with Foxslide theme by <a href="http://www.AdrianArtiles.com">Adrian Artiles</a>. Theme heavily tweaked by me.

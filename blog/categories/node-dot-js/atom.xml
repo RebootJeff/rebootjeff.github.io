@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Node.js | RebootJeff.com]]></title>
   <link href="http://RebootJeff.github.io/blog/categories/node-dot-js/atom.xml" rel="self"/>
   <link href="http://RebootJeff.github.io/"/>
-  <updated>2015-12-16T18:56:38-08:00</updated>
+  <updated>2016-04-25T19:04:51-07:00</updated>
   <id>http://RebootJeff.github.io/</id>
   <author>
     <name><![CDATA[Jeff Lee]]></name>
@@ -52,7 +52,9 @@
 
 <p>Most browsers get a passing grade when it comes to HSTS support –except for…</p>
 
-<p><blockquote><p>Internet Explorer doesn’t support HSTS—which means that there’s basically no such thing as a secure website in IE</p><footer><strong>Electronic Frontier Foundation (EFF),</strong> <cite><a href='https://www.eff.org/deeplinks/2014/02/websites-hsts'>Websites Must Use HSTS in Order to Be Secure</a></cite></footer></blockquote></p>
+<p>{% blockquote Electronic Frontier Foundation (EFF), https://www.eff.org/deeplinks/2014/02/websites-hsts Websites Must Use HSTS in Order to Be Secure %}
+Internet Explorer doesn’t support HSTS—which means that there’s basically no such thing as a secure website in IE
+{% endblockquote %}</p>
 
 <h3 id="further-readingreferences-1">Further Reading/References</h3>
 

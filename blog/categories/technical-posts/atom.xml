@@ -4,7 +4,7 @@
   <title><![CDATA[Category: technical posts | RebootJeff.com]]></title>
   <link href="http://RebootJeff.github.io/blog/categories/technical-posts/atom.xml" rel="self"/>
   <link href="http://RebootJeff.github.io/"/>
-  <updated>2015-12-16T18:56:38-08:00</updated>
+  <updated>2016-04-25T19:04:51-07:00</updated>
   <id>http://RebootJeff.github.io/</id>
   <author>
     <name><![CDATA[Jeff Lee]]></name>
@@ -122,7 +122,9 @@
 
 <p>Most browsers get a passing grade when it comes to HSTS support –except for…</p>
 
-<p><blockquote><p>Internet Explorer doesn’t support HSTS—which means that there’s basically no such thing as a secure website in IE</p><footer><strong>Electronic Frontier Foundation (EFF),</strong> <cite><a href='https://www.eff.org/deeplinks/2014/02/websites-hsts'>Websites Must Use HSTS in Order to Be Secure</a></cite></footer></blockquote></p>
+<p>{% blockquote Electronic Frontier Foundation (EFF), https://www.eff.org/deeplinks/2014/02/websites-hsts Websites Must Use HSTS in Order to Be Secure %}
+Internet Explorer doesn’t support HSTS—which means that there’s basically no such thing as a secure website in IE
+{% endblockquote %}</p>
 
 <h3 id="further-readingreferences-1">Further Reading/References</h3>
 
@@ -233,19 +235,15 @@
 
 <p>A Googler suggested using the CSP reporting feature <em>without</em> an enforced whitelist to help you examine what browsers are actually digesting when they visit your site or app. For example, you could set up a CSP that has a whitelist and just asks browsers to report non-whitelisted sources without actually blocking them. This gives you the ability to <strong>tweak your whitelist based on production usage without changing production usage</strong>. After you’re done tweaking, change the CSP to force browsers to report <em>and</em> block uninvited resources and content.</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption class='code-header' style='margin-bottom:-5px;'><span>Ultra-Strict Example CSP for Express server using Lusca middleware </span></figcaption>
- <div class="CodeRay">
-  <div class="code"><pre>
+<p>{% coderay lang:JavaScript Ultra-Strict Example CSP for Express server using Lusca middleware %}
 app.use(lusca.csp({
-  <span class="key">policy</span>: {
-    <span class="error">‘</span><span class="keyword">default</span>-src<span class="error">’</span>: <span class="error">‘</span>none<span class="error">’</span>, <span class="comment">// Block EVERYTHING</span>
+  policy: {
+    ‘default-src’: ‘none’, // Block EVERYTHING
   },
-  <span class="key">reportOnly</span>: <span class="predefined-constant">true</span>, <span class="comment">// Record what’s being blocked</span>
-  <span class="key">reportUri</span>: <span class="error">‘</span><span class="regexp"><span class="delimiter">/</span><span class="content">report-violation-endpoint’
+  reportOnly: true, // Record what’s being blocked
+  reportUri: ‘/report-violation-endpoint’
 }));
-</span></span></pre></div>
-</div>
- </figure></notextile></div></p>
+{% endcoderay %}</p>
 
 <h2 id="https-and-http-strict-transport-security-hsts">HTTPS and HTTP Strict Transport Security (HSTS)</h2>
 
@@ -282,21 +280,17 @@ app.use(lusca.csp({
 
 <p>Here’s the problem: <strong>what if we want Protractor to click on the avatar under the fixed nav bar as seen in the screenshot above?</strong> Obviously, a human user would intuitively scroll to find an element before clicking on it. However, Protractor’s perspective is different.</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption class='code-header' style='margin-bottom:-5px;'><span>Example A - E2E spec with potential problem </span></figcaption>
- <div class="CodeRay">
-  <div class="code"><pre>
-describe(<span class="error">‘</span><span class="error">“</span>Who to Follow<span class="error">”</span> widget<span class="error">’</span>, <span class="keyword">function</span>() {
-  it(<span class="error">‘</span>should include avatars that go to other Twitter profiles<span class="error">’</span>, <span class="keyword">function</span>() {
-    <span class="comment">// get first (index 0) avatar using class-based CSS selector</span>
-    <span class="keyword">var</span> avatar = <span class="predefined">$$</span>(<span class="error">‘</span>.who-to-follow .avatar<span class="error">’</span>).get(<span class="integer">0</span>);&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">p&gt;
+<p>{% coderay lang:JavaScript Example A - E2E spec with potential problem %}
+describe(‘“Who to Follow” widget’, function() {
+  it(‘should include avatars that go to other Twitter profiles’, function() {
+    // get first (index 0) avatar using class-based CSS selector
+    var avatar = $$(‘.who-to-follow .avatar’).get(0);</p>
 
-&lt;pre&gt;&lt;code&gt;</span><span class="delimiter">/</span></span>/ Will <span class="local-variable">this</span> click always work?
+<pre><code>// Will this click always work?
 avatar.click();
 
-<span class="comment">// assertion of what to expect as a result of the click</span>
-expect(blahBlahBlah).toBe(yadaYada);   }); }); </pre></div>
-</div>
- </figure></notextile></div>
+// assertion of what to expect as a result of the click
+expect(blahBlahBlah).toBe(yadaYada);   }); }); {% endcoderay %}
 </code></pre>
 
 <p>When you use <code>.click()</code>, you might expect Protractor (or WebDriver, which serves as the underlying engine for Protractor) will try to scroll the web page until the target element is displayed before clicking. However, Protractor will only scroll until the target element is in the browser <em>viewport</em>.</p>
@@ -322,49 +316,41 @@ expect(blahBlahBlah).toBe(yadaYada);   }); }); </pre></div>
 
 <p>Also, you may have noticed that <code>false</code> is passed into <code>scrollIntoView</code>. This tells the browser to scroll as far as it can in an attempt to align the bottom of the target element with the bottom of the scroll area. In other words, <strong>this solution only solves issues with fixed nav bars at the <em>top</em> of the viewport.</strong> Using <code>element.scrollIntoView(false)</code> will fail if your web app uses a fixed nav bar at the <em>bottom</em> of the viewport.</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption class='code-header' style='margin-bottom:-5px;'><span>Example B - Solution: Helper function to align element with bottom of viewport </span></figcaption>
- <div class="CodeRay">
-  <div class="code"><pre>
-<span class="comment">// Inside a separate JS file that contains helper functions…&lt;/p&gt;</span>
+<p>{% coderay lang:JavaScript Example B - Solution: Helper function to align element with bottom of viewport %}
+// Inside a separate JS file that contains helper functions…</p>
 
-<span class="tag">&lt;p&gt;</span>// Syntax Option 1
+<p>// Syntax Option 1
 function scrollElemToBottomOfView(elem) {
   elem.scrollIntoView(false);
 }
 module.exports.scrollElemFinderIntoView = function(elemFinder) {
   var promise = browser.executeScript(scrollElemToBottomOfView, elemFinder);
   return promise;
-};<span class="tag">&lt;/p&gt;</span>
+};</p>
 
-<span class="tag">&lt;p&gt;</span>// Syntax Option 2
+<p>// Syntax Option 2
 module.exports.scrollElemFinderIntoView = function(elemFinder) {
   var promise = browser.executeScript(function(elem) {
     elem.scrollIntoView(false);
   }, elemFinder);
   return promise;
-};<span class="tag">&lt;/p&gt;</span>
+};</p>
 
-&lt;p&gt;<span class="comment">// Syntax Option 3</span>
-module.exports.<span class="function">scrollElemFinderIntoView</span> = <span class="keyword">function</span>(elemFinder) {
-  <span class="keyword">var</span> promise = browser.executeScript(<span class="error">‘</span><span class="local-variable">arguments</span>[<span class="integer">0</span>].scrollIntoView(<span class="predefined-constant">false</span>)<span class="error">’</span>, elemFinder);
-  <span class="keyword">return</span> promise;
+<p>// Syntax Option 3
+module.exports.scrollElemFinderIntoView = function(elemFinder) {
+  var promise = browser.executeScript(‘arguments[0].scrollIntoView(false)’, elemFinder);
+  return promise;
 };
-</pre></div>
-</div>
- </figure></notextile></div></p>
+{% endcoderay %}</p>
 
 <p>There are 3 syntax options above because I just wanted to present a few different coding styles. As you can probably tell, <code>browser.executeScript()</code> accepts a couple of parameters. The first one is the script, the second one is the script’s parameter. The script can either be a function (technically speaking, it’s a function reference) or a string representation of the script’s body. Syntax Option #3 was inspired by a Stack Overflow answer for a very similar situation (it was for WebDriver, but it was easy to translate to Protractor).</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption class='code-header' style='margin-bottom:-5px;'><span>Example C - Using the Solution </span></figcaption>
- <div class="CodeRay">
-  <div class="code"><pre>
-<span class="comment">// Somewhere inside test code…</span>
-<span class="keyword">var</span> helpers = require(<span class="error">‘</span>..<span class="regexp"><span class="delimiter">/</span><span class="content">path</span><span class="delimiter">/</span></span>to/helpers<span class="error">’</span>);
+<p>{% coderay lang:JavaScript Example C - Using the Solution %}
+// Somewhere inside test code…
+var helpers = require(‘../path/to/helpers’);
 helpers.scrollElemFinderIntoView(avatar);
 avatar.click();
-</pre></div>
-</div>
- </figure></notextile></div></p>
+{% endcoderay %}</p>
 
 <p>You may have noticed that the solution in <em>Example B</em> mentions promises, but the code in <em>Example C</em> does not use them. My understanding is that it’s not crucial to use every single promise that Protractor and WebDriverJS provide. For example, even though the <code>.click()</code> method returns a promise, you don’t see devs writing Protractor tests with <code>exampleButton.click().then(function() { ... });</code> all the time.</p>
 
@@ -404,15 +390,11 @@ avatar.click();
 
 <p>Everyone wants to use command line tools. In fact, PhoneGap wants to use some commands for Android development, but SURPRISE! Those commands are not available until you manually edit your .bash_profile file. You may have to do some searching to find where your .bash_profile sleeps at night, but mine was in my home directory (aka ~/.bash_profile). Keep in mind that it is a hidden file, so you need to enable viewing hidden files (in case you didn’t know). I created a Development folder for my Android dev tools. Then I added the following lines to my .bash_profile (make sure you replace my filepath with your filepath):</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption class='code-header' style='margin-bottom:-5px;'><span>.bash_profile </span></figcaption>
- <div class="CodeRay">
-  <div class="code"><pre>
+<p>{% coderay .bash_profile %}
 # Adds Android SDK tools to command line
-export PATH=$PATH:/home/myUserName/Development/adt-bundle-linux-x86&lt;em&gt;64-20131030/sdk/tools
-export PATH=$PATH:/home/myUserName/Development/adt-bundle-linux-x86&lt;/em&gt;64-20131030/sdk/platform-tools
-</pre></div>
-</div>
- </figure></notextile></div></p>
+export PATH=$PATH:/home/myUserName/Development/adt-bundle-linux-x86<em>64-20131030/sdk/tools
+export PATH=$PATH:/home/myUserName/Development/adt-bundle-linux-x86</em>64-20131030/sdk/platform-tools
+{% endcoderay %}</p>
 
 <p>Now, you’re finally set to begin development with PhoneGap. However, if you want certain features to work, you may have to modify some XML files. Read on, my relative from a common-and-super-old ancestor.</p>
 
@@ -422,27 +404,19 @@ export PATH=$PATH:/home/myUserName/Development/adt-bundle-linux-x86&lt;/em&gt;64
 
 <p>Here’s a snippet from my config file:</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption class='code-header' style='margin-bottom:-5px;'><span>config.xml </span></figcaption>
- <div class="CodeRay">
-  <div class="code"><pre>
+<p>{% coderay config.xml %}
 # Adds Android SDK tools to command line
-<span class="tag">&lt;access</span> <span class="attribute-name">origin</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">http://yourserver.com</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
-<span class="tag">&lt;feature</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">http://api.phonegap.com/1.0/geolocation</span><span class="delimiter">&quot;</span></span> <span class="tag">/&gt;</span>
-</pre></div>
-</div>
- </figure></notextile></div></access></p>
+<access origin="http://yourserver.com">
+<feature name="http://api.phonegap.com/1.0/geolocation" />
+{% endcoderay %}</access></p>
 
 <p>By the way, it’s best practice to declare what kind of voodoo your app is utilizing. In case of GPS usage, modify your <code>/platforms/android/AndroidManifest.xml</code> file as follows:</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption class='code-header' style='margin-bottom:-5px;'><span>/platforms/android/AndroidManifest.xml </span></figcaption>
- <div class="CodeRay">
-  <div class="code"><pre>
-<span class="tag">&lt;uses-permission</span> <span class="attribute-name">android:name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">android.permission.ACCESS_COARSE_LOCATION</span><span class="delimiter">&quot;</span></span> <span class="tag">/&gt;</span>
-<span class="tag">&lt;uses-permission</span> <span class="attribute-name">android:name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">android.permission.ACCESS_FINE_LOCATION</span><span class="delimiter">&quot;</span></span> <span class="tag">/&gt;</span>
-<span class="tag">&lt;uses-permission</span> <span class="attribute-name">android:name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">android.permission.ACCESS_LOCATION_EXTRA_COMMANDS</span><span class="delimiter">&quot;</span></span> <span class="tag">/&gt;</span>
-</pre></div>
-</div>
- </figure></notextile></div></p>
+<p>{% coderay /platforms/android/AndroidManifest.xml %}
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+{% endcoderay %}</p>
 
 <h1 id="down-the-rabbit-hole">Down the Rabbit Hole</h1>
 

@@ -1,0 +1,366 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Web Dev Machine Setup 2016 - RebootJeff.com</title>
+  <meta name="author" content="Jeff Lee">
+  <link rel="author" href="humans.txt">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  
+    
+  
+  <meta name="description" content="My Web Dev Setup It’s been nearly two years since I wrote about my preferences for Sublime Text 2. In those two years, I’ve accrued more tools, and &hellip;">
+  
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://RebootJeff.github.io/blog/2016/04/25/web-dev-machine-setup-2016/">
+  <link href="/favicon.png" rel="icon">
+  <link href='http://fonts.googleapis.com/css?family=Cantarell' rel='stylesheet' type='text/css'>
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="RebootJeff.com" type="application/atom+xml">
+  <meta name="og:type" content="website" />
+  <meta name="og:site_name" content="RebootJeff.com" />
+  <meta name="og:title" content="Web Dev Machine Setup 2016" />
+  <meta name="og:description" content="My Web Dev Setup It’s been nearly two years since I wrote about my preferences for Sublime Text 2. In those two years, I’ve accrued more tools, and &hellip;" />
+  <meta name="og:url" content="http://RebootJeff.github.io/blog/2016/04/25/web-dev-machine-setup-2016/"/>
+  <meta name="url" content="http://RebootJeff.github.io/blog/2016/04/25/web-dev-machine-setup-2016/">
+  
+  <meta name="subject" content="dev toolssoftware developmentweb development"/>
+  <meta name="category" content="dev toolssoftware developmentweb development"/>
+  
+  <meta name="distribution" content="global">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-44084259-1']);
+    _gaq.push(['_setDomainName','github.io']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <nav role="navigation"><div class="navbar">
+  <div class="navbar-inner">
+    <a class="brand" href="/">RebootJeff.com</a>
+    <ul class="nav">
+      <li><a href="/">Home</a></li>
+      <!-- BEGIN custom nav here because importing custom/navigation.html at the bottom (by default) shows up looking weird -->
+      <li><a href="/about">About</a></li>
+      <li><a href="/portfolio">Portfolio</a></li>
+      <li><a href="/blog/categories/my-media">Media</a></li>
+      <li><a href="/blog/archives">Archives</a></li>
+    </ul>
+    <ul class="nav" data-subscription="rss">
+      <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+      
+    </ul>
+      
+    <form class="navbar-form" action="http://google.com/search" method="get">
+      <fieldset role="search">
+        <input type="hidden" name="q" value="site:RebootJeff.github.io" />
+        <input class="span2" type="text" name="q" results="0" placeholder="Search"/>
+      </fieldset>
+    </form>
+      
+    <!-- I have customized the navigation.html file OUTSIDE of the custom folder because the part I wanted to customize comes BEFORE the `include` statement that invokes the custom/navigation.html file (aka the file you're reading now). -->
+  </div>
+</div>
+</nav>
+  <div class="wrapper_single">
+    <div class="container">
+      <div class="row">
+        <article class="span8 offset2" role="article">
+          <div class="article-format">
+
+  <header>
+    
+      <h1 class="entry-title">Web Dev Machine Setup 2016</h1>
+    
+    
+      <p class="meta">
+        
+  
+
+
+  
+    <span class="byline author vcard">by <span class="fn">Jeff Lee</span></span>
+  
+
+ - 
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2016-04-25T19:04:00-07:00" pubdate data-updated="true">Apr 25<span>th</span>, 2016</time> - 
+        
+
+posted in
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/dev-tools/'>dev tools</a>, <a class='category' href='/blog/categories/software-development/'>software development</a>, <a class='category' href='/blog/categories/web-development/'>web development</a>
+  
+</span>
+
+
+        
+         | <a href="#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h1 id="my-web-dev-setup">My Web Dev Setup</h1>
+
+<p>It’s been nearly two years since I wrote about <a href="http://rebootjeff.github.io/blog/2014/05/15/my-sublime-text-2-setup-and-customization/">my preferences for Sublime Text 2</a>. In those two years, I’ve accrued more tools, and I’ve installed/configured a better web dev setup for myself. <strong><em>My current setup is <a href="https://github.com/RebootJeff/my-installfest">documented in a repo</a></em></strong>, which will be kept up to date so then any time I need to set up a new machine, I have a quick guide that I can reference.</p>
+
+<p>There are a few aspects of my setup worth explaining…</p>
+
+<h2 id="atom-vs-sublime-text">Atom vs Sublime Text</h2>
+
+<p>I’ve switched to Atom. There’s no doubt that Sublime Text is way faster. I still use it to read and edit extremely large files (e.g., large JSON). But Sublime Text always felt a bit clunky in its GUI. Most notably, the package manager for Sublime Text wasn’t very nice to use.</p>
+
+<p>On Macs, Atom has a lot of great features for updating the software and packages. It has one-click installation of shell commands (e.g., <code>atom [filename]</code> to open a file in Atom via terminal).</p>
+
+<p>On Linux, these features are missing, but I still use Atom on my Ubuntu machine because its GUI feels more modern than Sublime Text’s GUI. Also, Atom’s built-in Markdown and Git features are pretty sweet.</p>
+
+<p>That said, <a href="https://code.visualstudio.com/">Microsoft’s Visual Code Studio</a> looks enticing. The battle of free code editors is really heating up! Visual Code Studio appears to be more powerful than Atom – and I’ve got to give it a try eventually – but Atom’s community is at least 2x larger at the moment. The ecosystem of Atom packages is outstanding.</p>
+
+<p>Some of my favorite Atom packages:
+- <a href="https://atom.io/packages/pigments">pigments</a> to highlight colors (great for CSS/SCSS/LESS code that deal with colors)
+- <a href="https://atom.io/packages/file-icons">file-icons</a> to show icons specific to different file types
+- <a href="https://atom.io/packages/autocomplete-emojis">autocomplete-emojis</a> because emojis can spice up any comment/documentation! 🌟</p>
+
+<p><img src="/images/20160425/atom_ss.png" alt="Atom screenshot" /></p>
+
+<h2 id="browsers">Browsers</h2>
+
+<h3 id="a-few-words-about-chrome">A few words about Chrome</h3>
+
+<p>I still use Google Chrome as my main browser for development, and now I use a few Chrome extensions a whole lot: <a href="https://chrome.google.com/webstore/detail/advanced-rest-client/hgmloofddffdnphfgcellkdfbfbjeloo?hl=en-US">Advanced REST Client</a> for testing REST APIs and <a href="https://chrome.google.com/webstore/detail/jsonview/chklaanhfefbnpoihckbnefhakgolnmc/related?hl=en">JSONView</a> for browsing JSON data.</p>
+
+<p>For development, it can be helpful to disable the “prefetch resources” advanced setting. If it’s enabled, the network panel of your Chrome DevTools might jump the gun, confusing you in the process.</p>
+
+<h3 id="firefox-is-getting-better">Firefox is getting better</h3>
+
+<p>That said, I’m enjoying <a href="https://www.mozilla.org/en-US/firefox/developer/">Mozilla Firefox Developer Edition</a>. It’s got some <a href="https://www.youtube.com/playlist?list=PLo3w8EB99pqLRJBWRCoyGTIrkctoUgB9W">fancy dev tools</a> that I haven’t gotten a chance to use much, but the browser itself feels pretty speedy. Unlike normal Firefox, the dev edition has separate processes for each tab.</p>
+
+<h4 id="mini-rant-modern-browser-wars">Mini-Rant: Modern Browser Wars</h4>
+
+<p>Also, I like supporting Mozilla by using their browser. <a href="https://www.youtube.com/watch?v=_YkTAu333xM">It’s good to have some competition in browsers</a>, and Mozilla has no conflict of interest with the web. They’re more likely to promote an open web as much as possible whereas Google and especially Apple have a conflict of supporting web versus supporting iOS/Android apps. <a href="http://arstechnica.com/information-technology/2015/06/op-ed-safari-is-the-new-internet-explorer/">Some say Safari is neglected</a> by Apple because they care more about dedicating resources to iOS + the App Store.</p>
+
+<p>There’s also a nice conspiracy theory suggesting that Apple would rather web apps not rise in popularity because that would detract from the App Store’s prominence. You could argue the same goes for Google and the Play store, but Google’s done some amazing work on “<a href="https://developers.google.com/web/progressive-web-apps">Progressive Web Apps</a>” to make web tech (push notifications, offline support, etc) as powerful as native mobile apps.</p>
+
+<h2 id="mac-tips--tricks">Mac Tips &amp; Tricks</h2>
+
+<p><a href="https://github.com/RebootJeff/my-installfest">My documentation repo</a> has more tips &amp; tricks, but I’ll lay out a few here. They all happen to relate to making development on a Mac even better (I guess I’ve been using my Mac way more than my Ubuntu machine lately).</p>
+
+<h4 id="window-management">Window Management</h4>
+<p>The latest Mac OSX has a built-in window layout feature, but it sucks. I continue to use <a href="http://www.irradiatedsoftware.com/sizeup/">SizeUp</a>. It’s free and more powerful/flexible.</p>
+
+<h4 id="installing-software-on-macs">Installing software on Macs</h4>
+<p>I try to install as much as possible via <a href="http://brew.sh/">Homebrew</a>. It makes updating installed software a bit easier, and it can help you avoid common pitfalls (e.g., installing Node.js via Homebrew avoids permissions issues with <code>npm install -g</code> that you’d normally have to fix yourself).</p>
+
+<h4 id="horrible-smart-quotes">Horrible “Smart Quotes”</h4>
+<p>Do yourself a favor and go into the keyboard settings to disable Smart Quotes. Otherwise, they could eventually find their way into your code and screw you up in the most insidious way (it could take awhile for you to realize you’ve accidentally typed/copy/pasted some Smart Quotes into your code).</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+
+  
+    <span class="byline author vcard">by <span class="fn">Jeff Lee</span></span>
+  
+
+ - 
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2016-04-25T19:04:00-07:00" pubdate data-updated="true">Apr 25<span>th</span>, 2016</time> - 
+      
+
+posted in
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/dev-tools/'>dev tools</a>, <a class='category' href='/blog/categories/software-development/'>software development</a>, <a class='category' href='/blog/categories/web-development/'>web development</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://RebootJeff.github.io/blog/2016/04/25/web-dev-machine-setup-2016/" data-via="rebootjeff" data-counturl="http://RebootJeff.github.io/blog/2016/04/25/web-dev-machine-setup-2016/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    
+      <a class="pull-left" href="/blog/2015/12/11/example-refactoring-to-functional-js-combine-keyed-lists/" title="Previous Post: [Example] Refactoring to Functional JS - Combine Keyed Lists">&laquo; [Example] Refactoring to Functional JS - Combine Keyed Lists</a>
+    
+    
+  </footer>
+
+</div>
+
+          
+            <div class="article-format">
+              <h1>Comments</h1>
+              <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+            </div>
+          
+        </article>
+      </div>
+    </div>
+  </div>
+  <div id="footer-widgets">
+  <div class="container">
+    <div class="row">
+  <div class="span3">
+    <h2>Recent Posts</h2>
+    <ul class="recent_posts">
+      
+        <li>
+          <a href="/blog/2016/04/25/web-dev-machine-setup-2016/">Web Dev Machine Setup 2016</a>
+        </li>
+      
+        <li>
+          <a href="/blog/2015/12/11/example-refactoring-to-functional-js-combine-keyed-lists/">[Example] Refactoring to Functional JS - Combine Keyed Lists</a>
+        </li>
+      
+        <li>
+          <a href="/blog/2015/11/16/why-fast-code-matters-even-when-phones-have-octa-core-cpus/">Why fast code matters even when phones have octa-core CPUs</a>
+        </li>
+      
+        <li>
+          <a href="/blog/2015/06/14/refactoring-towards-functional-programming-in-javascript/">Refactoring Towards Functional Programming in JavaScript</a>
+        </li>
+      
+        <li>
+          <a href="/blog/2015/06/12/pair-programming-tips-and-impressions/">Pair Programming Impressions and Tips</a>
+        </li>
+      
+    </ul>
+    <h2><a href="/blog/archives">Archives</a></h2>
+  </div>
+  <div class="span3">
+    
+
+  </div>
+  <!-- DISABLE Twitter and Found On footer widgets for now
+  <div class="span4">
+    
+  </div>
+  <div class="span2">
+    
+  -->
+  <div class="span6" id="footer_notes">
+    <p>
+      <a href="/">RebootJeff.com</a> - Copyright &copy; 2016 - Jeff Lee
+    </p>
+    <p>
+      Powered by <a href="http://octopress.org/">Octopress</a>. Made pretty with Foxslide theme by <a href="http://www.AdrianArtiles.com">Adrian Artiles</a>. Theme heavily tweaked by me.
+    </p>
+  </div>
+</div>
+
+  </div>
+</div>
+<!-- DISABLE footer beyond footer-widgets
+<footer class="footer">
+  <div class="container">
+  	
+  </div>
+</footer>
+-->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+<script>window.jQuery || document.write('<script src="/javascripts/libs/jquery-1.7.2.min.js" type="text/javascript"><\/script>')</script>
+<script src="/javascripts/libs/bootstrap.min.js" type="text/javascript"></script>
+<script src="/javascripts/jquery.tweet.js" type="text/javascript"></script>
+<script src="/javascripts/jquery.instagram.js" type="text/javascript"></script>
+<script src="/javascripts/libs/jquery.masonry.min.js" type="text/javascript"></script>
+<script src="/javascripts/custom.js" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'rebootjeff';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://RebootJeff.github.io/blog/2016/04/25/web-dev-machine-setup-2016/';
+        var disqus_url = 'http://RebootJeff.github.io/blog/2016/04/25/web-dev-machine-setup-2016/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+</body>
+</html>

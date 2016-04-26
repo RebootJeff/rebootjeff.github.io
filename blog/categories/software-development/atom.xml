@@ -4,7 +4,7 @@
   <title><![CDATA[Category: software development | RebootJeff.com]]></title>
   <link href="http://RebootJeff.github.io/blog/categories/software-development/atom.xml" rel="self"/>
   <link href="http://RebootJeff.github.io/"/>
-  <updated>2015-12-16T18:56:38-08:00</updated>
+  <updated>2016-04-25T19:04:51-07:00</updated>
   <id>http://RebootJeff.github.io/</id>
   <author>
     <name><![CDATA[Jeff Lee]]></name>
@@ -12,6 +12,67 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Web Dev Machine Setup 2016]]></title>
+    <link href="http://RebootJeff.github.io/blog/2016/04/25/web-dev-machine-setup-2016/"/>
+    <updated>2016-04-25T19:04:00-07:00</updated>
+    <id>http://RebootJeff.github.io/blog/2016/04/25/web-dev-machine-setup-2016</id>
+    <content type="html"><![CDATA[<h1 id="my-web-dev-setup">My Web Dev Setup</h1>
+
+<p>It’s been nearly two years since I wrote about <a href="http://rebootjeff.github.io/blog/2014/05/15/my-sublime-text-2-setup-and-customization/">my preferences for Sublime Text 2</a>. In those two years, I’ve accrued more tools, and I’ve installed/configured a better web dev setup for myself. <strong><em>My current setup is <a href="https://github.com/RebootJeff/my-installfest">documented in a repo</a></em></strong>, which will be kept up to date so then any time I need to set up a new machine, I have a quick guide that I can reference.</p>
+
+<p>There are a few aspects of my setup worth explaining…</p>
+
+<h2 id="atom-vs-sublime-text">Atom vs Sublime Text</h2>
+
+<p>I’ve switched to Atom. There’s no doubt that Sublime Text is way faster. I still use it to read and edit extremely large files (e.g., large JSON). But Sublime Text always felt a bit clunky in its GUI. Most notably, the package manager for Sublime Text wasn’t very nice to use.</p>
+
+<p>On Macs, Atom has a lot of great features for updating the software and packages. It has one-click installation of shell commands (e.g., <code>atom [filename]</code> to open a file in Atom via terminal).</p>
+
+<p>On Linux, these features are missing, but I still use Atom on my Ubuntu machine because its GUI feels more modern than Sublime Text’s GUI. Also, Atom’s built-in Markdown and Git features are pretty sweet.</p>
+
+<p>That said, <a href="https://code.visualstudio.com/">Microsoft’s Visual Code Studio</a> looks enticing. The battle of free code editors is really heating up! Visual Code Studio appears to be more powerful than Atom – and I’ve got to give it a try eventually – but Atom’s community is at least 2x larger at the moment. The ecosystem of Atom packages is outstanding.</p>
+
+<p>Some of my favorite Atom packages:
+- <a href="https://atom.io/packages/pigments">pigments</a> to highlight colors (great for CSS/SCSS/LESS code that deal with colors)
+- <a href="https://atom.io/packages/file-icons">file-icons</a> to show icons specific to different file types
+- <a href="https://atom.io/packages/autocomplete-emojis">autocomplete-emojis</a> because emojis can spice up any comment/documentation! 🌟</p>
+
+<p><img src="/images/20160425/atom_ss.png" alt="Atom screenshot" /></p>
+
+<h2 id="browsers">Browsers</h2>
+
+<h3 id="a-few-words-about-chrome">A few words about Chrome</h3>
+
+<p>I still use Google Chrome as my main browser for development, and now I use a few Chrome extensions a whole lot: <a href="https://chrome.google.com/webstore/detail/advanced-rest-client/hgmloofddffdnphfgcellkdfbfbjeloo?hl=en-US">Advanced REST Client</a> for testing REST APIs and <a href="https://chrome.google.com/webstore/detail/jsonview/chklaanhfefbnpoihckbnefhakgolnmc/related?hl=en">JSONView</a> for browsing JSON data.</p>
+
+<p>For development, it can be helpful to disable the “prefetch resources” advanced setting. If it’s enabled, the network panel of your Chrome DevTools might jump the gun, confusing you in the process.</p>
+
+<h3 id="firefox-is-getting-better">Firefox is getting better</h3>
+
+<p>That said, I’m enjoying <a href="https://www.mozilla.org/en-US/firefox/developer/">Mozilla Firefox Developer Edition</a>. It’s got some <a href="https://www.youtube.com/playlist?list=PLo3w8EB99pqLRJBWRCoyGTIrkctoUgB9W">fancy dev tools</a> that I haven’t gotten a chance to use much, but the browser itself feels pretty speedy. Unlike normal Firefox, the dev edition has separate processes for each tab.</p>
+
+<h4 id="mini-rant-modern-browser-wars">Mini-Rant: Modern Browser Wars</h4>
+
+<p>Also, I like supporting Mozilla by using their browser. <a href="https://www.youtube.com/watch?v=_YkTAu333xM">It’s good to have some competition in browsers</a>, and Mozilla has no conflict of interest with the web. They’re more likely to promote an open web as much as possible whereas Google and especially Apple have a conflict of supporting web versus supporting iOS/Android apps. <a href="http://arstechnica.com/information-technology/2015/06/op-ed-safari-is-the-new-internet-explorer/">Some say Safari is neglected</a> by Apple because they care more about dedicating resources to iOS + the App Store.</p>
+
+<p>There’s also a nice conspiracy theory suggesting that Apple would rather web apps not rise in popularity because that would detract from the App Store’s prominence. You could argue the same goes for Google and the Play store, but Google’s done some amazing work on “<a href="https://developers.google.com/web/progressive-web-apps">Progressive Web Apps</a>” to make web tech (push notifications, offline support, etc) as powerful as native mobile apps.</p>
+
+<h2 id="mac-tips--tricks">Mac Tips &amp; Tricks</h2>
+
+<p><a href="https://github.com/RebootJeff/my-installfest">My documentation repo</a> has more tips &amp; tricks, but I’ll lay out a few here. They all happen to relate to making development on a Mac even better (I guess I’ve been using my Mac way more than my Ubuntu machine lately).</p>
+
+<h4 id="window-management">Window Management</h4>
+<p>The latest Mac OSX has a built-in window layout feature, but it sucks. I continue to use <a href="http://www.irradiatedsoftware.com/sizeup/">SizeUp</a>. It’s free and more powerful/flexible.</p>
+
+<h4 id="installing-software-on-macs">Installing software on Macs</h4>
+<p>I try to install as much as possible via <a href="http://brew.sh/">Homebrew</a>. It makes updating installed software a bit easier, and it can help you avoid common pitfalls (e.g., installing Node.js via Homebrew avoids permissions issues with <code>npm install -g</code> that you’d normally have to fix yourself).</p>
+
+<h4 id="horrible-smart-quotes">Horrible “Smart Quotes”</h4>
+<p>Do yourself a favor and go into the keyboard settings to disable Smart Quotes. Otherwise, they could eventually find their way into your code and screw you up in the most insidious way (it could take awhile for you to realize you’ve accidentally typed/copy/pasted some Smart Quotes into your code).</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[My Sublime Text 2 Setup and Customization]]></title>
@@ -30,14 +91,10 @@
 
 <p>First, I change the keyboard shortcuts for cycling through open tabs. The default behavior is based on your usage history (most recently viewed tabs), but I prefer just cycling from left to right. There’s actually another key binding that can cycle tabs from left to right, but I prefer using <code>Ctrl+Tab</code>.Therefore, I edited my key bindings like so…</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption class='code-header' style='margin-bottom:-5px;'><span>Preferences &gt; Key Bindings – User </span></figcaption>
- <div class="CodeRay">
-  <div class="code"><pre>
-{ <span class="error">“</span><span class="error">k</span><span class="error">e</span><span class="error">y</span><span class="error">s</span><span class="error">”</span>: [<span class="error">“</span><span class="error">c</span><span class="error">t</span><span class="error">r</span><span class="error">l</span><span class="error">+</span><span class="error">t</span><span class="error">a</span><span class="error">b</span><span class="error">”</span>], <span class="error">“</span><span class="error">c</span><span class="error">o</span><span class="error">m</span><span class="error">m</span><span class="error">a</span><span class="error">n</span><span class="error">d</span><span class="error">”</span>: <span class="error">“</span><span class="error">n</span><span class="error">e</span><span class="error">x</span><span class="error">t</span><span class="error">_</span><span class="error">v</span><span class="error">i</span><span class="error">e</span><span class="error">w</span><span class="error">”</span> },
-{ <span class="error">“</span><span class="error">k</span><span class="error">e</span><span class="error">y</span><span class="error">s</span><span class="error">”</span>: [<span class="error">“</span><span class="error">c</span><span class="error">t</span><span class="error">r</span><span class="error">l</span><span class="error">+</span><span class="error">s</span><span class="error">h</span><span class="error">i</span><span class="error">f</span><span class="error">t</span><span class="error">+</span><span class="error">t</span><span class="error">a</span><span class="error">b</span><span class="error">”</span>], <span class="error">“</span><span class="error">c</span><span class="error">o</span><span class="error">m</span><span class="error">m</span><span class="error">a</span><span class="error">n</span><span class="error">d</span><span class="error">”</span>: <span class="error">“</span><span class="error">p</span><span class="error">r</span><span class="error">e</span><span class="error">v</span><span class="error">_</span><span class="error">v</span><span class="error">i</span><span class="error">e</span><span class="error">w</span><span class="error">”</span> },
-</pre></div>
-</div>
- </figure></notextile></div></p>
+<p>{% coderay lang:json Preferences &gt; Key Bindings – User %}
+{ “keys”: [“ctrl+tab”], “command”: “next_view” },
+{ “keys”: [“ctrl+shift+tab”], “command”: “prev_view” },
+{% endcoderay %}</p>
 
 <h2 id="settings">Settings</h2>
 
@@ -45,21 +102,17 @@
 
 <p>I also configure Sublime Text to automatically add a new line at the end of every file whenever I save. It won’t add a new line if one already exists at EOF. I personally never suffer from lack of new line at EOF, but <a href="http://stackoverflow.com/questions/729692/why-should-files-end-with-a-newline">some UNIX tools won’t work without them</a>, and I know lots of hardcore coders out there like using such tools. I don’t want to screw them over. With that said, allow me to present my ST2 settings…</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption class='code-header' style='margin-bottom:-5px;'><span>Preferences &gt; Settings – User </span></figcaption>
- <div class="CodeRay">
-  <div class="code"><pre>
-<span class="comment">// The number of spaces a tab is considered equal to</span>
-  <span class="error">“</span>tab_size<span class="error">”</span>: <span class="integer">2</span>,&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">p&gt;
+<p>{% coderay lang:js Preferences &gt; Settings – User %}
+// The number of spaces a tab is considered equal to
+  “tab_size”: 2,</p>
 
-&lt;p&gt;</span><span class="delimiter">/</span></span>/ Set to <span class="predefined-constant">true</span> to insert spaces when tab is pressed
-  <span class="error">“</span>translate_tabs_to_spaces<span class="error">”</span>: <span class="predefined-constant">true</span>,&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">p&gt;
+<p>// Set to true to insert spaces when tab is pressed
+  “translate_tabs_to_spaces”: true,</p>
 
-&lt;p&gt;</span><span class="delimiter">/</span></span>/ Set to <span class="predefined-constant">true</span> to ensure the last line of the file ends <span class="keyword">in</span> a newline
-<span class="comment">// character when saving</span>
-  <span class="error">“</span>ensure_newline_at_eof_on_save<span class="error">”</span>: <span class="predefined-constant">true</span>,
-</pre></div>
-</div>
- </figure></notextile></div></p>
+<p>// Set to true to ensure the last line of the file ends in a newline
+// character when saving
+  “ensure_newline_at_eof_on_save”: true,
+{% endcoderay %}</p>
 
 <h1 id="theme-ui-skin">Theme (UI Skin)</h1>
 
@@ -80,43 +133,35 @@
 <h3 id="alignment">Alignment</h3>
 <p>Prettify your code by aligning multiple lines of variable definitions and hash objects. For example…</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption class='code-header' style='margin-bottom:-5px;'><span>Before and After using the Alignment package </span></figcaption>
- <div class="CodeRay">
-  <div class="code"><pre>
-<span class="comment">// this stuff…</span>
-<span class="keyword">var</span> x = <span class="integer">123</span>;
-<span class="keyword">var</span> foo = <span class="error">‘</span>bar<span class="error">’</span>;
-<span class="keyword">var</span> exampleObj = {
-  <span class="key">my</span>: x,
-  <span class="key">name</span>: <span class="integer">99</span>,
-  <span class="key">is</span>: <span class="error">‘</span>Jeff<span class="error">’</span>
-};&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">p&gt;
+<p>{% coderay lang:js Before and After using the Alignment package %}
+// this stuff…
+var x = 123;
+var foo = ‘bar’;
+var exampleObj = {
+  my: x,
+  name: 99,
+  is: ‘Jeff’
+};</p>
 
-&lt;p&gt;</span><span class="delimiter">/</span></span>/ would turn into <span class="local-variable">this</span> stuff<span class="error">…</span>
-<span class="keyword">var</span> x          = <span class="integer">123</span>;
-<span class="keyword">var</span> foo        = <span class="error">‘</span>bar<span class="error">’</span>;
-<span class="keyword">var</span> exampleObj = {
-  <span class="key">my</span>  : x,
-  <span class="key">name</span>: <span class="integer">99</span>,
-  <span class="key">is</span>  : <span class="error">‘</span>Jeff<span class="error">’</span>
+<p>// would turn into this stuff…
+var x          = 123;
+var foo        = ‘bar’;
+var exampleObj = {
+  my  : x,
+  name: 99,
+  is  : ‘Jeff’
 };
-</pre></div>
-</div>
- </figure></notextile></div></p>
+{% endcoderay %}</p>
 
 <p>This may look stupid to you, but I don’t use it all the time. The main place I like to use it is with multiple <code>var example = require('npm package name here');</code> statements at the top of a JS file. By the way, I had to edit the package settings to get alignment for object literals. I added the <code>":"</code> seen below…</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption class='code-header' style='margin-bottom:-5px;'><span>Preferences &gt; Package Settings &gt; Alignment &gt; Settings – User </span></figcaption>
- <div class="CodeRay">
-  <div class="code"><pre>
+<p>{% coderay lang:js Preferences &gt; Package Settings &gt; Alignment &gt; Settings – User %}
 {
-  <span class="comment">// The mid-line characters to align in a multi-line selection, changing</span>
-  <span class="comment">// this to an empty array will disable mid-line alignment</span>
-  <span class="error">“</span>alignment_chars<span class="error">”</span>: [<span class="error">”</span>=<span class="error">”</span>, <span class="error">“</span>:<span class="error">”</span>]
+  // The mid-line characters to align in a multi-line selection, changing
+  // this to an empty array will disable mid-line alignment
+  “alignment_chars”: [”=”, “:”]
 }
-</pre></div>
-</div>
- </figure></notextile></div></p>
+{% endcoderay %}</p>
 
 <h3 id="gitgutter">GitGutter</h3>
 <p>Add indicators in your gutter so then you can see which lines of code have been changed since the last git commit. See the left edge of this screenshot:

@@ -4,7 +4,7 @@
   <title><![CDATA[RebootJeff.com]]></title>
   <link href="http://RebootJeff.github.io/atom.xml" rel="self"/>
   <link href="http://RebootJeff.github.io/"/>
-  <updated>2015-12-16T18:56:38-08:00</updated>
+  <updated>2016-04-25T19:04:33-07:00</updated>
   <id>http://RebootJeff.github.io/</id>
   <author>
     <name><![CDATA[@RebootJeff]]></name>
@@ -12,6 +12,71 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Web Dev Machine Setup 2016]]></title>
+    <link href="http://RebootJeff.github.io/blog/2016/04/25/web-dev-machine-setup-2016/"/>
+    <author>
+      <name><![CDATA[@RebootJeff]]></name>
+      
+    </author>
+    <updated>2016-04-25T19:04:00-07:00</updated>
+    <id>http://RebootJeff.github.io/blog/2016/04/25/web-dev-machine-setup-2016</id>
+    <content type="html"><![CDATA[<h1 id="my-web-dev-setup">My Web Dev Setup</h1>
+
+<p>It’s been nearly two years since I wrote about <a href="http://rebootjeff.github.io/blog/2014/05/15/my-sublime-text-2-setup-and-customization/">my preferences for Sublime Text 2</a>. In those two years, I’ve accrued more tools, and I’ve installed/configured a better web dev setup for myself. <strong><em>My current setup is <a href="https://github.com/RebootJeff/my-installfest">documented in a repo</a></em></strong>, which will be kept up to date so then any time I need to set up a new machine, I have a quick guide that I can reference.</p>
+
+<p>There are a few aspects of my setup worth explaining…</p>
+
+<h2 id="atom-vs-sublime-text">Atom vs Sublime Text</h2>
+
+<p>I’ve switched to Atom. There’s no doubt that Sublime Text is way faster. I still use it to read and edit extremely large files (e.g., large JSON). But Sublime Text always felt a bit clunky in its GUI. Most notably, the package manager for Sublime Text wasn’t very nice to use.</p>
+
+<p>On Macs, Atom has a lot of great features for updating the software and packages. It has one-click installation of shell commands (e.g., <code>atom [filename]</code> to open a file in Atom via terminal).</p>
+
+<p>On Linux, these features are missing, but I still use Atom on my Ubuntu machine because its GUI feels more modern than Sublime Text’s GUI. Also, Atom’s built-in Markdown and Git features are pretty sweet.</p>
+
+<p>That said, <a href="https://code.visualstudio.com/">Microsoft’s Visual Code Studio</a> looks enticing. The battle of free code editors is really heating up! Visual Code Studio appears to be more powerful than Atom – and I’ve got to give it a try eventually – but Atom’s community is at least 2x larger at the moment. The ecosystem of Atom packages is outstanding.</p>
+
+<p>Some of my favorite Atom packages:
+- <a href="https://atom.io/packages/pigments">pigments</a> to highlight colors (great for CSS/SCSS/LESS code that deal with colors)
+- <a href="https://atom.io/packages/file-icons">file-icons</a> to show icons specific to different file types
+- <a href="https://atom.io/packages/autocomplete-emojis">autocomplete-emojis</a> because emojis can spice up any comment/documentation! 🌟</p>
+
+<p><img src="http://RebootJeff.github.io/images/20160425/atom_ss.png" alt="Atom screenshot" /></p>
+
+<h2 id="browsers">Browsers</h2>
+
+<h3 id="a-few-words-about-chrome">A few words about Chrome</h3>
+
+<p>I still use Google Chrome as my main browser for development, and now I use a few Chrome extensions a whole lot: <a href="https://chrome.google.com/webstore/detail/advanced-rest-client/hgmloofddffdnphfgcellkdfbfbjeloo?hl=en-US">Advanced REST Client</a> for testing REST APIs and <a href="https://chrome.google.com/webstore/detail/jsonview/chklaanhfefbnpoihckbnefhakgolnmc/related?hl=en">JSONView</a> for browsing JSON data.</p>
+
+<p>For development, it can be helpful to disable the “prefetch resources” advanced setting. If it’s enabled, the network panel of your Chrome DevTools might jump the gun, confusing you in the process.</p>
+
+<h3 id="firefox-is-getting-better">Firefox is getting better</h3>
+
+<p>That said, I’m enjoying <a href="https://www.mozilla.org/en-US/firefox/developer/">Mozilla Firefox Developer Edition</a>. It’s got some <a href="https://www.youtube.com/playlist?list=PLo3w8EB99pqLRJBWRCoyGTIrkctoUgB9W">fancy dev tools</a> that I haven’t gotten a chance to use much, but the browser itself feels pretty speedy. Unlike normal Firefox, the dev edition has separate processes for each tab.</p>
+
+<h4 id="mini-rant-modern-browser-wars">Mini-Rant: Modern Browser Wars</h4>
+
+<p>Also, I like supporting Mozilla by using their browser. <a href="https://www.youtube.com/watch?v=_YkTAu333xM">It’s good to have some competition in browsers</a>, and Mozilla has no conflict of interest with the web. They’re more likely to promote an open web as much as possible whereas Google and especially Apple have a conflict of supporting web versus supporting iOS/Android apps. <a href="http://arstechnica.com/information-technology/2015/06/op-ed-safari-is-the-new-internet-explorer/">Some say Safari is neglected</a> by Apple because they care more about dedicating resources to iOS + the App Store.</p>
+
+<p>There’s also a nice conspiracy theory suggesting that Apple would rather web apps not rise in popularity because that would detract from the App Store’s prominence. You could argue the same goes for Google and the Play store, but Google’s done some amazing work on “<a href="https://developers.google.com/web/progressive-web-apps">Progressive Web Apps</a>” to make web tech (push notifications, offline support, etc) as powerful as native mobile apps.</p>
+
+<h2 id="mac-tips--tricks">Mac Tips &amp; Tricks</h2>
+
+<p><a href="https://github.com/RebootJeff/my-installfest">My documentation repo</a> has more tips &amp; tricks, but I’ll lay out a few here. They all happen to relate to making development on a Mac even better (I guess I’ve been using my Mac way more than my Ubuntu machine lately).</p>
+
+<h4 id="window-management">Window Management</h4>
+<p>The latest Mac OSX has a built-in window layout feature, but it sucks. I continue to use <a href="http://www.irradiatedsoftware.com/sizeup/">SizeUp</a>. It’s free and more powerful/flexible.</p>
+
+<h4 id="installing-software-on-macs">Installing software on Macs</h4>
+<p>I try to install as much as possible via <a href="http://brew.sh/">Homebrew</a>. It makes updating installed software a bit easier, and it can help you avoid common pitfalls (e.g., installing Node.js via Homebrew avoids permissions issues with <code>npm install -g</code> that you’d normally have to fix yourself).</p>
+
+<h4 id="horrible-smart-quotes">Horrible “Smart Quotes”</h4>
+<p>Do yourself a favor and go into the keyboard settings to disable Smart Quotes. Otherwise, they could eventually find their way into your code and screw you up in the most insidious way (it could take awhile for you to realize you’ve accidentally typed/copy/pasted some Smart Quotes into your code).</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[[Example] Refactoring to Functional JS - Combine Keyed Lists]]></title>
@@ -1990,107 +2055,6 @@ avatar.click();
 <p>Unlike the personal project period, the group project period involved a ton of communication. There’s a huge amount of extra planning and talking that goes into group coding. The collaboration is great for producing cool ideas and reducing scope of work for any given individual, but the group setting necessitates expressed justification for actions. When you’re on your own, you just explore and debug however you want to, and you’re often making heavy use of your <a href="http://en.wikipedia.org/wiki/Working_memory">working memory</a>. When you’re in a group or even just a pair, you often have to explain before you act, which is a pretty serious exercise for your brain because it can feel like your working memory doesn’t get to operate at peak efficiency due to the extra steps of communication that fall between coming up with a small idea and implementing that idea.</p>
 
 <p>Another way to put it: when you’re going solo, you get comfortable with the <em>just try XYZ and see if it works</em> model for programming. When you’re part of a team, you often need to <em>explain</em> XYZ, process any critical feedback you may receive, etc. Transitioning from solo work to group work needs a major change in mental processes. Luckily, everyone in my team is more patient and laidback than I am, so no wars broke out and no debates devolved into chaos. Good times.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[[HackR Diary] Weeks 6 and 7: App from Scratch]]></title>
-    <link href="http://RebootJeff.github.io/blog/2014/03/21/hackr-diary-weeks-6-and-7-making-something/"/>
-    <author>
-      <name><![CDATA[@RebootJeff]]></name>
-      
-    </author>
-    <updated>2014-03-21T17:12:00-07:00</updated>
-    <id>http://RebootJeff.github.io/blog/2014/03/21/hackr-diary-weeks-6-and-7-making-something</id>
-    <content type="html"><![CDATA[<p><img src="http://RebootJeff.github.io/images/20140321/co-compare_presentation.jpg" alt="Personal Project presentation time" /></p>
-
-<p class="my-caption">Presenting my project, Co-Compare, to the folks of Hack Reactor</p>
-
-<h1 id="life-update">Life Update</h1>
-
-<p>I got a job! I will start using my JS skills for dolla bills on Monday. I will blog all about my rather tiring job search soon. For now, I will resume blogging about Hack Reactor from <a href="http://rebootjeff.github.io/blog/2013/10/28/hackr-diary-week-5/">where I left off</a>. During the 2nd half of the program, I didn’t do any blogging, but I took plenty of notes for the sake of blogging at a later time, so prepare to be amazed …or mildly amused. Remember, the following rollercoaster ride took place during late-October through mid-November.</p>
-
-<h1 id="recap-of-events">Recap of Events</h1>
-
-<h2 id="interim-week-different-format">Interim Week (different format)</h2>
-
-<p>The 2nd half of Hack Reactor starts with an “interim week” (aka “solo week”) where expectations are a bit cloudy. <strong>The Hack Reactor website didn’t do a good job of explaining that the injection of an interim week means that Hack Reactor is really a 13-week program.</strong> During this special week, Hack Reactor HQ is not guaranteed to be open to students. Also, students are not guaranteed any access to staff. The staff is either taking a break or working on reconfiguring the offices or other changes.</p>
-
-<p>In other words, the students are on their own for starting the first week of developing their personal projects. Students self-organize if they want to meet up at a cafe or whathaveyou to enable collaboration.</p>
-
-<h2 id="what-i-did">What I Did</h2>
-
-<ul>
-  <li>I spent most of my time working from HR HQ when it was open. I used nearby cafes when it wasn’t.</li>
-  <li>Like a few others, I used interim week to do some travelling and to catch up on sleep.</li>
-  <li>At one point (maybe after interim week?), I broke my laptop by being a Linux noob. I was one of few Ubuntu users in my cohort, and I had trouble dealing with permission/access issues. I eventually followed some StackOverflow suggestion and fucked up my permissions so badly that I had to reinstall Ubuntu. As you can imagine, my emotions are still failing to heal from that self-inflicted disaster.
-    <ul>
-      <li>FYI, my new job is giving me a Mac. Soon I will join the majority of devs in the promise land of screens that actually reproduce accurate colors, impressive battery life, and installation wonders such as homebrew.</li>
-    </ul>
-  </li>
-</ul>
-
-<h2 id="extras">Extras</h2>
-
-<ul>
-  <li>In my cohort, we organized a night to go to a movie theater for Ender’s Game. Good times.</li>
-  <li>A rep from <a href="http://famo.us/">Famous</a> stopped by to give a presentation about a brand new web app framework. It’s so new that even now, Famous is in beta. Back during the personal project period, it was in a closed beta (or was it alpha?), but Famous was inviting Hack Reactor students to access it! The framework renders special <code>&lt;div&gt;</code> elements in a breathtaking way. I never used it, but I will talk about it a bit more in another blog post.</li>
-</ul>
-
-<h1 id="what-i-learned">What I Learned</h1>
-
-<p>Holy. Crap. I learned so much during the personal project weeks. Admittedly, I didn’t work extra long hours until the last week or so before the deadline. By then, I was working at least 80 hours per week. In the first couple of days, I realized there was so much I had to learn that it felt quite overwhelming, and I had a difficult time starting.</p>
-
-<h2 id="tools">Tools</h2>
-
-<p>Obviously I would have to learn a lot of app concepts, engineer some solid logic, etc. But I also had to do all this while learning new tools.</p>
-
-<ul>
-  <li><strong>Balsamiq:</strong> Wireframing software. Creating wireframes really helps when trying to explain what you hope to build. To practice communication skills and project management, students had to explain their progress/goals very briefly during small stand-up meetings.</li>
-  <li><strong>Yeoman:</strong> Boilerplate/scaffold generator. I used an Angular-Express generator to help me get started making a full-stack app with boilerplate code for Angular, Node, and Express. This served as a great “starter pack” of code.</li>
-  <li><strong>Grunt:</strong> Task runner. To be honest, I used Grunt simpy because it came with Yeoman. However, gaining exposure to the tool opened my eyes to the possibilities provided by task runners like Grunt.</li>
-  <li><strong>Stylus:</strong> CSS pre-processor. I’m not sure if CSS pre-processors are part of the tech stack or “just” another set of dev tools, but for what it’s worth, I didn’t write pure CSS for Co-Compare. Instead, I wrote Stylus CSS. I like the visual design side of front-end development, and using Stylus made that facet even more fun.</li>
-  <li><strong>Heroku:</strong> Web app hosting provider. It’s easy to use because it follows a git workflow, but deployment still has challenges (re: environment configuration).</li>
-</ul>
-
-<h2 id="the-tortured-ok-not-really-birth-of-an-idea">The Tortured (ok not really) Birth of An Idea</h2>
-
-<p>I like to think my mind is superior –errr…I mean <em>creative</em>. However, it can be tough to come up with web app ideas based on constraints. Everyone worried about whether or not they could actually implement their ideas in just a few weeks (I think it amounted to only 2.5 weeks). In the end, I learned that “Just Do It” really applies. You can spend roughly 3 gajillion hours analyzing ideas, use cases, market needs, tech stacks, visual design, etc. But at some point, you need to just do it already. Just make something and see what happens. The price of failure is time spent. The gain of failure is lessons learned. A beauty of programming is the ability to quickly change, pivot, redo, etc.</p>
-
-<h3 id="from-cool-to-meh">From Cool to Meh</h3>
-
-<p>Originally, I thought my idea was too boring. I wanted to create a fantasy sports game specifically for tennis, but I couldn’t find a good way to get the data/stats from pro tennis matches, so I switched to something far less cool.</p>
-
-<p>I switched to an idea spawned by my love for analyzing/comparing products and services. In the past, I’ve spent far too much time comparing video game consoles, cars, computer parts, <em>bootcamps</em>, etc. I enjoyed it too. A lot. But I knew most people aren’t crazy in this way, so I worried that my app idea for <a href="http://cocompare.herokuapp.com">Co-Compare</a> (a web app to build comparison tables and have others vote on them) was too unsexy.</p>
-
-<h3 id="from-meh-to-oooh">From Meh to Oooh</h3>
-
-<p>It’s true that Co-Compare doesn’t have a ton of wow-factor, but it provided plenty of opportunity:</p>
-
-<ul>
-  <li><strong>Simplicity:</strong> It was the type of idea that could work with very few features (good for rapid prototyping).</li>
-  <li><strong>Exploration:</strong> But I could have fun adding more and more features as I desired. There were plenty of sub-ideas to explore and keep my brain satiated with more goodies to engineer.</li>
-  <li><strong>Fundamentals:</strong> My app requires CRUD actions. Create, Read, Update, and Delete are fundamental app actions that devs should know. It’s weird to “brag” that Co-Compare helped me learn <em>fundamentals</em>, but it’s important, and it’s not easy just because it’s “fundamental.” Engineering a CRUDy app is a great learning experience.</li>
-  <li><strong>Full-Stack:</strong> My app covered a lot of territory so it exposed me to CSS pre-processors, front-end MVC, API design, databases, user authentication, etc. This was really scary at first, but afterwards, I was truly proud of what I covered.</li>
-</ul>
-
-<p>I really believe that the full-stack nature of Co-Compare solidified my abilities as a web app developer. By creating a nice-looking front-end, my own API, and back-end models for a SQL datastore, I learned so much that it gave my confidence a tremendous boost –which is funny because I had a ton of confidence going into the personal project weeks…then I lost a lot of confidence when nothing I created worked the first time. So at the end, I regained a lot of confidence that I already had at the beginning.</p>
-
-<p>Note: Some of my classmates implemented ideas that had very bare front ends because all the impressive stuff was run on the server side. Other folks created apps that had little or no back-end logic. The number of things wrong with these paths is quite small. In fact, most experts would say the number rhymes with “hero.” Anyway, my point is that this particular “full-stack” facet of my experience is not the “best” way, but just something that I really value for myself.</p>
-
-<h2 id="dev-cycleprocess">Dev Cycle/Process</h2>
-
-<p>Hack Reactor staff helped students with their projects by giving recommendations on tech stack decisions, dev tools, deployment options, etc. And of course, they gave us debugging help, but there was no hand holding.</p>
-
-<p>The primary form of guidance came in the form of some project management structure. We formed small groups that held its members accountable for short-term goals. The staff taught us about iterative development and the concept of creating MVPs (minimal viable products) as milestones rather than aiming for creating versions that were 100% complete.</p>
-
-<p>In other words, I learned about some dev processes to help promote productivity as a software engineer.</p>
-
-<h1 id="want-to-learn-from-my-app">Want to Learn from My App?</h1>
-
-<p>You can find the code for Co-Compare on my GitHub. I took the time to write up a decent README too because for some reason, I have a good time writing English in addition to JavaScript. I suggest you <a href="https://github.com/RebootJeff/co-compare#development">check this out</a> if you’re interested in learning more about how I created an app from scratch.</p>
-
-<p>Keep in mind that you shouldn’t follow everything I do. For example, my Angular app folder structure neglects best practice. It was a popular structure at the time, but it’s actually best to name folders based on features, rather than just lumping all controllers together, all views together, etc.</p>
 ]]></content>
   </entry>
   

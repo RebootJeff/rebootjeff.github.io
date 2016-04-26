@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Hack Reactor | RebootJeff.com]]></title>
   <link href="http://RebootJeff.github.io/blog/categories/hack-reactor/atom.xml" rel="self"/>
   <link href="http://RebootJeff.github.io/"/>
-  <updated>2015-12-16T18:56:38-08:00</updated>
+  <updated>2016-04-25T19:04:51-07:00</updated>
   <id>http://RebootJeff.github.io/</id>
   <author>
     <name><![CDATA[Jeff Lee]]></name>
@@ -211,7 +211,10 @@
   <li>Only the interviewer knows how well you did in the interview. You may think you aced it. You may think you bombed it. <a href="http://www.technologywoman.com/2011/03/31/why-your-interview-performance-is-impossible-to-judge/">But you don’t really know</a>.</li>
 </ul>
 
-<p><blockquote><p>When I was at Google, I referred a number of candidates, and ran a little (informal) experiment. How well could people judge their performance?<br/>After each candidate completed their interview, I’d ask them how they did. Then, I’d look up their actual performance. And guess what? There was no correlation. None. Zip. Zero. Zilch.</p><footer><strong>–Gayle L. McDowell</strong></footer></blockquote></p>
+<p>{% blockquote –Gayle L. McDowell %}
+When I was at Google, I referred a number of candidates, and ran a little (informal) experiment. How well could people judge their performance?
+After each candidate completed their interview, I’d ask them how they did. Then, I’d look up their actual performance. And guess what? There was no correlation. None. Zip. Zero. Zilch.
+{% endblockquote %}</p>
 
 <h1 id="interview-coaching--advice">Interview Coaching / Advice</h1>
 

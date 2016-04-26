@@ -4,7 +4,7 @@
   <title><![CDATA[Category: dev job search | RebootJeff.com]]></title>
   <link href="http://RebootJeff.github.io/blog/categories/dev-job-search/atom.xml" rel="self"/>
   <link href="http://RebootJeff.github.io/"/>
-  <updated>2015-12-16T18:56:38-08:00</updated>
+  <updated>2016-04-25T19:04:51-07:00</updated>
   <id>http://RebootJeff.github.io/</id>
   <author>
     <name><![CDATA[Jeff Lee]]></name>
@@ -64,13 +64,11 @@
 
 <p>In other words, write modular code by using a breadth-first mindset. Everyone knows it’s a good idea to write several small functions rather than one giant function, so apply that approach to your communication too. When you explain how a computer works, you start the explanation at a high level (e.g., “hard drives store data, CPUs crunch data, …”) rather than starting at a low level (e.g., “the flow of electrons is controlled by gates known as transistors”).</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption class='code-header' style='margin-bottom:-5px;'><span>Example - Breadth-First Coding </span></figcaption>
- <div class="CodeRay">
-  <div class="code"><pre>
-<span class="comment">// Challenge (aka Prompt) - Write a function that determines the average number of</span>
-<span class="comment">// retweets for a given user after a given cut off date.&lt;/p&gt;</span>
+<p>{% coderay lang:JavaScript Example - Breadth-First Coding %}
+// Challenge (aka Prompt) - Write a function that determines the average number of
+// retweets for a given user after a given cut off date.</p>
 
-<span class="tag">&lt;p&gt;</span>// Phase 0 - Psuedocode (optional)
+<p>// Phase 0 - Psuedocode (optional)
 function getRetweetAverage(username, cutOffDate) {
   /**
    * 1. Fetch tweets via Twiter API
@@ -78,17 +76,17 @@ function getRetweetAverage(username, cutOffDate) {
    * 3. Calculate avg count of retweets from filtered data
    * 4. Return a promise that resolves to the answer
   **/
-}<span class="tag">&lt;/p&gt;</span>
+}</p>
 
-<span class="tag">&lt;p&gt;</span>// Phase 1 - Coding with declarative helper functions
+<p>// Phase 1 - Coding with declarative helper functions
 function getRetweetAverage(username, cutOffDate) {
   return fetchTweets(username).then(function(tweets) {
     var recentTweets = filterTweetsByDate(tweets, cutOffDate);
     return calculateAverageRetweets(recentTweets);
   });
-}<span class="tag">&lt;/p&gt;</span>
+}</p>
 
-<span class="tag">&lt;p&gt;</span>// Phase 2 - Implement low-level helper functions
+<p>// Phase 2 - Implement low-level helper functions
 function fetchTweets(username) {
   // Let’s pretend we’re using AngularJS’s HTTP request service, which uses promises.
   var params = {
@@ -96,25 +94,23 @@ function fetchTweets(username) {
     count: 200 // FYI this is the max allowed by Twitter’s API
   };
   return $http.get(‘https://api.twitter.com/1.1/statuses/user_timeline.json’, params);
-}<span class="tag">&lt;/p&gt;</span>
+}</p>
 
-<span class="tag">&lt;p&gt;</span>function filterTweetsByDate(tweets, cutOffDate) {
+<p>function filterTweetsByDate(tweets, cutOffDate) {
   return tweets.filter(function(tweet) {
     // Convert tweet’s String date into a JS Date object before comparing.
     var createdAt = new Date(tweet.created_at);
-    return createdAt <span class="entity">&amp;gt;</span> cutOffDate;
+    return createdAt &gt; cutOffDate;
   });
-}<span class="tag">&lt;/p&gt;</span>
+}</p>
 
-&lt;p&gt;<span class="keyword">function</span> <span class="function">calculateAverageRetweets</span>(tweets) {
-  <span class="keyword">var</span> totalRetweets = tweets.reduce(<span class="keyword">function</span>(sum, tweet) {
-    <span class="keyword">return</span> sum + tweet.retweet_count;
-  }, <span class="integer">0</span>);
-  <span class="keyword">return</span> totalRetweets / tweets.length;
+<p>function calculateAverageRetweets(tweets) {
+  var totalRetweets = tweets.reduce(function(sum, tweet) {
+    return sum + tweet.retweet_count;
+  }, 0);
+  return totalRetweets / tweets.length;
 }
-</pre></div>
-</div>
- </figure></notextile></div></p>
+{% endcoderay %}</p>
 
 <p>In the example above, you should write code one “phase” at a time. Starting with psuedocode is optional, but it might be a good idea to at least verbalize it if you don’t plan on writing it. Then write the code in a declarative style as seen in “Phase 1”. Lastly, flesh out the functionality of your solution by writing the code that actually makes things work.</p>
 
@@ -376,7 +372,10 @@ function fetchTweets(username) {
   <li>Only the interviewer knows how well you did in the interview. You may think you aced it. You may think you bombed it. <a href="http://www.technologywoman.com/2011/03/31/why-your-interview-performance-is-impossible-to-judge/">But you don’t really know</a>.</li>
 </ul>
 
-<p><blockquote><p>When I was at Google, I referred a number of candidates, and ran a little (informal) experiment. How well could people judge their performance?<br/>After each candidate completed their interview, I’d ask them how they did. Then, I’d look up their actual performance. And guess what? There was no correlation. None. Zip. Zero. Zilch.</p><footer><strong>–Gayle L. McDowell</strong></footer></blockquote></p>
+<p>{% blockquote –Gayle L. McDowell %}
+When I was at Google, I referred a number of candidates, and ran a little (informal) experiment. How well could people judge their performance?
+After each candidate completed their interview, I’d ask them how they did. Then, I’d look up their actual performance. And guess what? There was no correlation. None. Zip. Zero. Zilch.
+{% endblockquote %}</p>
 
 <h1 id="interview-coaching--advice">Interview Coaching / Advice</h1>
 

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: communication Skills | RebootJeff.com]]></title>
+  <title><![CDATA[Category: communication skills | RebootJeff.com]]></title>
   <link href="http://RebootJeff.github.io/blog/categories/communication-skills/atom.xml" rel="self"/>
   <link href="http://RebootJeff.github.io/"/>
-  <updated>2015-12-16T18:56:38-08:00</updated>
+  <updated>2016-04-25T19:04:51-07:00</updated>
   <id>http://RebootJeff.github.io/</id>
   <author>
     <name><![CDATA[Jeff Lee]]></name>
@@ -14,59 +14,239 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Pair Programming Impressions and Tips]]></title>
-    <link href="http://RebootJeff.github.io/blog/2015/06/12/pair-programming-tips-and-impressions/"/>
-    <updated>2015-06-12T01:33:00-07:00</updated>
-    <id>http://RebootJeff.github.io/blog/2015/06/12/pair-programming-tips-and-impressions</id>
-    <content type="html"><![CDATA[<p><img src="/images/20150612/pair_programming_ducks.jpg" alt="two rubber ducks pair programming" /></p>
+    <title type="html"><![CDATA[How to Talk While Coding and Whiteboarding in 7 Steps]]></title>
+    <link href="http://RebootJeff.github.io/blog/2015/04/19/how-to-talk-while-coding-and-whiteboarding/"/>
+    <updated>2015-04-19T21:13:00-07:00</updated>
+    <id>http://RebootJeff.github.io/blog/2015/04/19/how-to-talk-while-coding-and-whiteboarding</id>
+    <content type="html"><![CDATA[<p><img src="/images/20150419/startupstock_whiteboarding.jpg" alt="Photo of whiteboarding" /></p>
 
-<p class="my-caption">This is the best photo I've ever taken.</p>
+<p>In <a href="/blog/2014/09/02/communication-for-engineers-101-we-have-a-problem/">my first article on Communication For Engineers</a>, I ranted about my disappointment surrounding engineering and communication skills. I ended that blog post with a list of communication-related topics that I promised to write about. Instead of addressing any of those topics (sorry!), this post will talk about how software engineers can improve their communication while coding collaboratively or while solving coding challenges for a job interview.</p>
 
-<p>Some programming friends think I’m crazy, but I most definitely &lt;3 pair programming. I dig the human interaction. I appreciate enduring the horrors of debugging with a comrade. I love the anti-ego culture.</p>
+<p><strong>Warning:</strong> JavaScript is my specialty, so some of the advice below is JS-centric, and all code examples are written in JS.</p>
 
-<p>On top of all that, pairing reduces the risk of burnout for a couple of reasons. Firstly, the average level of focus stays high throughout the day so you don’t have to work as many hours. Secondly, any stress, tedium, and brain workouts are shared by two folks instead of one. Therefore, individuals are less likely to get overwhelmed or feel alone in handling responsibilities or overcoming blockers.</p>
+<h4 id="i-cooked-up-7-steps-for-how-to-discuss-code-smoothly">I cooked up 7 steps for how to discuss code smoothly:</h4>
 
-<p>Admittedly, there are times when I want to get in the flow by myself without the need to constantly talk to another person, but usually, I embrace 1-on-1 talks. Why? (1) Discussion activates more of my brain. (2) <a href="http://rebootjeff.github.io/blog/categories/communication-for-engineers/">I’m a big fan of communication skills</a>. (3) Considering another individual’s perspective gives me more to think about, and I love thinking about thinking.</p>
+<ol>
+  <li>Draw the situation</li>
+  <li>Ask clarifying questions</li>
+  <li>Explain approach</li>
+  <li>Breadth-first coding</li>
+  <li>Refactor</li>
+  <li>Walkthrough</li>
+  <li>Testing</li>
+</ol>
 
-<p>For nearly 2 years, I’ve been pair programming. During this time, I’ve picked up on a few tips and pet-peeves. Read on for some musings on software development in dynamic duos.</p>
+<p>Notice that these steps don’t magically provide a complete guide to actually solving problems. For example, they don’t tell you which data structures to use. Instead, these steps show you how to communicate better as you solve a challenge. They help you talk with your interviewer or colleague about the problem space, your initial impressions, your ability to break down the problem into sub-problems, and your quality assurance process.</p>
 
-<h2 id="communication-tips">Communication Tips</h2>
-<p>These tips are good for all communication, not just pair programming. But bad communication skills become an unavoidable problem when you pair up, so consider improving how you talk and listen to become a better paired engineer.</p>
+<h1 id="the-7-steps-explained">The 7 Steps Explained</h1>
 
-<h4 id="tone-be-inquisitive-not-accusatory">Tone: be inquisitive, not accusatory</h4>
-<p>Another way to put it: be curious about your own assumptions, conclusions, and judgements. Unless you are 100% certain, give your partner the benefit of the doubt.</p>
+<h2 id="drawing-the-problem">1. Drawing the Problem</h2>
+<p>Admittedly, this step could be optional. Drawing is best for folks who work well with visuals. But even if you’re not an artist, you should still consider drawing a diagram or picture of the problem because visuals tend to be effective tools for communicating complex subjects and situations. For example, data structures are usually easier to talk about after you draw them out.</p>
 
-<blockquote>
-  <ul>
-    <li><strong>DO:</strong> What if X? Will that affect idea Y?</li>
-    <li><strong>DON’T:</strong> Your idea (Y) won’t work because of X.</li>
-  </ul>
-</blockquote>
+<p>Furthermore, you might reveal certain questions through the act of drawing. At the very least, <strong>drawing stuff out can help an interviewer follow you</strong>. Going back to the data structures example: imagine you’re supposed to work with a binary tree. It’s easier to talk about it if you draw a tree and point to nodes rather than just saying, “First we will process the root node, then we will go to the left child and do blah blah blah. At that point, depending on the value, we might go down to the child’s child or we might…”</p>
 
-<blockquote>
-  <ul>
-    <li><strong>DO:</strong> What are the obstacles? Let’s see if we can tackle them together.</li>
-    <li><strong>DON’T:</strong> I imagine what we need to do should be easy. Why don’t you think so?</li>
-  </ul>
-</blockquote>
+<p>By the way, <strong>you don’t have to stick to drawing pictures</strong>. This step could be about writing down example data, example inputs, example outputs, example use cases; and then mapping them together by drawing arrows, circles, etc. Examples are great for communication, and they are also good for problem-solving in general. Try to think of examples that are really simple (to get a basic grasp of the problem), examples that are more realistic, and examples that are crazy (to reveal edge cases and potential validation concerns).</p>
 
-<h4 id="precision-be-specific-use-idiomatic-terms-avoid-vague-pronouns">Precision: be specific; use idiomatic terms; avoid vague pronouns</h4>
-<p>The below example is more pertinent to a senior teaching a junior, but even proficient engineers get out of sync when generic words like “that one” are used instead of precise words like “the <em>[insert object name]</em> at <em>[insert context or line number]</em>.”</p>
+<h2 id="asking-clarifying-questions">2. Asking Clarifying Questions</h2>
+<p>Do not follow any of your assumptions without asking a question first. It’s tempting to hear a challenge or puzzle and immediately get into solving it. But there are real-world concerns for real-world problems, and you should demonstrate your familiarity with such issues.</p>
 
-<blockquote>
-  <ul>
-    <li><strong>DO:</strong> The promise returned by the request at line 31 will resolve with a response body containing the JSON we need to parse and possibly flatten.</li>
-    <li><strong>DON’T:</strong> That method call will give us the data we need to check out.</li>
-  </ul>
-</blockquote>
+<p>Also, you can save time by asking clarifying questions during an interview because interview challenges tend to be contrived. Do you have to account for crazy input values? Does the output need to be formatted in a certain way? If the puzzle involves numbers, do you have to account for negative values, decimals, etc? Are you expected to do input validation, error handling, or memory optimization?</p>
 
-<h2 id="keyboard--mouse-tips">Keyboard &amp; Mouse Tips</h2>
-<p>Maybe it’s just me, but I find it painful to watch someone use only arrow keys to move a cursor or use slow mouse movements to scroll to the top or bottom of a file. Although, I admit that I could be a tad unfair in the typing department (<a href="http://10fastfingers.com/speedtests/generate_screenshot_result/1_102_508_0_0_96_0_97.96_3086_151253">I rock triple-digit WPM</a> so …booya).</p>
+<h2 id="explaining-your-approach">3. Explaining Your Approach</h2>
+
+<p>At this point, you might have a solution in mind and you’re eager to get coding. Or you might just have a partial solution. Either way, take a moment to give a quick overview of the <strong>purpose</strong> of the code you’re about to write. Also, give a sense of what <strong>algorithms or concepts</strong> will be implemented as part of your approach to the problem at hand.</p>
+
+<p>For example, “This looks like a problem we can solve with a recursive solution that traverses all nodes of the dataset.” In this example, “recursion” is the concept and traversal is the purpose.</p>
+
+<h2 id="breadth-first-coding">4. Breadth-First Coding</h2>
+
+<p>When it comes time to actually write out some code (or pseudocode), write out as much as possible at a high-level before going into the low-level details. For example, if your solution requires looping over objects received from an AJAX request in order to parse some data, don’t dive into that AJAX request. That’s a low-level detail. Start from the high-level approach of “fetching data” and then immediately move to the next high-level step of “parsing data”. With this strategy, you cover the whole breadth of the solution before diving into any detail of the solution.</p>
+
+<p>In other words, write modular code by using a breadth-first mindset. Everyone knows it’s a good idea to write several small functions rather than one giant function, so apply that approach to your communication too. When you explain how a computer works, you start the explanation at a high level (e.g., “hard drives store data, CPUs crunch data, …”) rather than starting at a low level (e.g., “the flow of electrons is controlled by gates known as transistors”).</p>
+
+<p>{% coderay lang:JavaScript Example - Breadth-First Coding %}
+// Challenge (aka Prompt) - Write a function that determines the average number of
+// retweets for a given user after a given cut off date.</p>
+
+<p>// Phase 0 - Psuedocode (optional)
+function getRetweetAverage(username, cutOffDate) {
+  /**
+   * 1. Fetch tweets via Twiter API
+   * 2. Filter tweets based on date
+   * 3. Calculate avg count of retweets from filtered data
+   * 4. Return a promise that resolves to the answer
+  **/
+}</p>
+
+<p>// Phase 1 - Coding with declarative helper functions
+function getRetweetAverage(username, cutOffDate) {
+  return fetchTweets(username).then(function(tweets) {
+    var recentTweets = filterTweetsByDate(tweets, cutOffDate);
+    return calculateAverageRetweets(recentTweets);
+  });
+}</p>
+
+<p>// Phase 2 - Implement low-level helper functions
+function fetchTweets(username) {
+  // Let’s pretend we’re using AngularJS’s HTTP request service, which uses promises.
+  var params = {
+    screen_name: username,
+    count: 200 // FYI this is the max allowed by Twitter’s API
+  };
+  return $http.get(‘https://api.twitter.com/1.1/statuses/user_timeline.json’, params);
+}</p>
+
+<p>function filterTweetsByDate(tweets, cutOffDate) {
+  return tweets.filter(function(tweet) {
+    // Convert tweet’s String date into a JS Date object before comparing.
+    var createdAt = new Date(tweet.created_at);
+    return createdAt &gt; cutOffDate;
+  });
+}</p>
+
+<p>function calculateAverageRetweets(tweets) {
+  var totalRetweets = tweets.reduce(function(sum, tweet) {
+    return sum + tweet.retweet_count;
+  }, 0);
+  return totalRetweets / tweets.length;
+}
+{% endcoderay %}</p>
+
+<p>In the example above, you should write code one “phase” at a time. Starting with psuedocode is optional, but it might be a good idea to at least verbalize it if you don’t plan on writing it. Then write the code in a declarative style as seen in “Phase 1”. Lastly, flesh out the functionality of your solution by writing the code that actually makes things work.</p>
+
+<p>By the way, I’ve never actually used the Twitter API, so the example code might not follow best practices or might not take into account how it actually behaves. For instance, maybe the API accepts a parameter to do the date filtering for you.</p>
+
+<h2 id="refactoring-your-first-draft">5. Refactoring Your First Draft</h2>
+
+<p>Once you’ve reached the point where the code seems to solve the challenge at hand, it’s time to refactor. If you’re writing under pressure in an interview situation, it’s likely that you haven’t written the cleanest code. If you’re writing without any pressure, it’s still good to refactor your first draft into a more readable/maintainable variant. Here’s a list of tips for deciding what to refactor:</p>
 
 <ul>
-  <li>Please learn general typing shortcuts such as moving the cursor to beginning/end of word/line/file. Use these cursor movement shortcuts in conjunction with shift/delete to select/remove code quickly.</li>
-  <li>Learn IDE shortcuts such as multi-selection/cursors, vertical/block selection, switching tabs, and deleting current line.</li>
-  <li>Use the mouse to point at parts of the screen, not your finger. You don’t want to block parts of the screen with your hand/arm, and you don’t want to reach over to your partner’s monitor if you’ve got a setup with dual-mirrored-monitors.</li>
+  <li><strong>Improve readability</strong> by fixing indentation, whitespace, names, etc.
+    <ul>
+      <li><strong>Rename variables</strong> into semantic names. It’s tempting to use very short variable names during interviews because you feel pressure to finish quickly. Consider renaming them into more recognizable names to show your audience that you know how to write maintainable code that potential co-workers could easily read.</li>
+      <li><strong>Replace loops</strong> with a <code>map</code>, <code>filter</code>, <code>reduce</code>, etc where possible.</li>
+      <li><strong>Consider naming anonymous functions</strong> if they have potential to be re-used as a helper.</li>
+    </ul>
+  </li>
+  <li><strong>Extract code</strong> into helper functions. It’s very common for interview candidates to inadvertently write long functions. Even if you tried to follow Breadth-First Coding in Step 4, you may have slipped.</li>
+  <li><strong>Double-check promises</strong> and look for opportunities to reduce boilerplate and anonymous functions.
+    <ul>
+      <li><strong>Check return statements</strong> to ensure that your promises will resolve to the correct values (and that the segments of your promise chain will pass correct values).</li>
+      <li><strong>Use promise library helpers</strong> such as <code>all</code>, <code>spread</code>, etc where possible.</li>
+    </ul>
+  </li>
+  <li><strong>Add error-handling</strong>/logging for professional bonus points.</li>
+  <li><strong>Rewrite in another style</strong> (e.g., Functional Programming vs Object-Oriented Programming) for massive bonus points.</li>
+</ul>
+
+<p>Admittedly, this Step 5 isn’t as directly related to communication as other steps. It’s mostly focused on improving your code. However, there is still a communiation-related opportunity here. As you are refactoring, verbalize your intentions. Discuss what you want to improve before you improve it. Explain the rationale behind the improvements. Mentions the pros and cons of your code without the improvements and with the improvements (i.e., before vs after).</p>
+
+<h2 id="walking-through-your-answer">6. Walking Through Your Answer</h2>
+
+<p>At this point, your code should be presentable. By following the previous steps, your audience should already have a solid, high-level understanding of your code. So now it’s time to give a detailed walkthrough.</p>
+
+<p>Explain any nuances, use precise terminology, and expound on any interesting control flow or references (e.g., closures in JavaScript). You can also mention any implications regarding speed, memory, I/O, security, etc. But overall, your goal is to describe your code <em>in detail</em>.</p>
+
+<h2 id="testing-your-answer">7. Testing Your Answer</h2>
+
+<p>You might actually want to perform this step before step 6, but it depends on how you roll. After you’ve gotten to the point where you have a solution that seems to be good, take a minute to describe how you’d make sure it’s robust. When you normally write code on your own, you of course test it out by running it with various inputs or circumstances. Describe them; verbalize them.</p>
+
+<p>For example, if you’re writing a function with some parameters, you’ll probably run the function with a bunch of different arguments with different values and maybe different datatypes.</p>
+
+<ul>
+  <li><strong>Numbers:</strong> negative values, 0, 1, odd vs even, really big numbers, decimals</li>
+  <li><strong>Strings:</strong> upper vs lower case, single character, numeric characters, punctuation and non-alphanumeric characters.</li>
+  <li><strong>Object Literals:</strong> check for weird keys (much like <em>Strings</em>)</li>
+  <li><strong>Collections &amp; Data Structures:</strong> empty collections, only 1 item, several items, check for mutation side-effects, ascending order, descending order, random order, nested objects/arrays/other data structures.</li>
+</ul>
+
+<h1 id="where-did-these-steps-come-from">Where Did These Steps Come From?</h1>
+
+<p>I came up with these 7 steps based on…</p>
+
+<ul>
+  <li><a href="/blog/2014/05/31/dev-job-search-tips-from-the-coding-interview-guru/">advice from Gayle Laakmann McDowell</a></li>
+  <li><a href="/blog/2014/05/11/hackr-diary-weeks-11-12-and-beyond/">advice from Hack Reactor instructors</a></li>
+  <li>my experience interviewing for jobs</li>
+  <li>my experience conducting a handful of mock interviews for Hack Reactor grads</li>
+  <li>my experience conducting interviews where I work (10+ so far)</li>
+</ul>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Communication for Engineers 101: We Have A Problem]]></title>
+    <link href="http://RebootJeff.github.io/blog/2014/09/02/communication-for-engineers-101-we-have-a-problem/"/>
+    <updated>2014-09-02T12:01:00-07:00</updated>
+    <id>http://RebootJeff.github.io/blog/2014/09/02/communication-for-engineers-101-we-have-a-problem</id>
+    <content type="html"><![CDATA[<p>Software Engineers are hot shit right now. Recruiters pander to us by calling us rockstars, ninjas, and gurus. We are revered for our intellect, our problem solving skills, our powerful working memory, our familiarity with mysterious tech –but not for our communication skills. <strong>Why is this ok?</strong> If we’re expected to be smart, shouldn’t we be expected to grasp effective information exchange with <em>fellow humans</em>? Why is modern society still excusing coding “rockstars” from having to come equipped with high quality communication skills?</p>
+
+<p><img src="/images/20140902/tin_can_walkies.jpg" alt="Tin Can Tech" /></p>
+
+<p class="my-caption">Photo by <a href="http://gratisography.com/">Gratisography</a></p>
+
+<p>How do I know that software engineers aren’t expected to have stellar communication abilities? While I don’t have hard data, I have met, worked with, or listened to a lot of engineers who have sub-par comm skills. And no one makes a big fuss of it, which makes me think no one has high standards for the skills I’m talking about.</p>
+
+<p>On top of that, job interviews target coding skills, web tech trivia, and algorithms with minimal examination of proficiency in structuring arguments, explaining complex concepts, and intelligent discussion. There’s a <a href="http://qz.com/258066/this-is-why-you-dont-hire-good-developers/">pretty great article</a> by the CTO of npm that drills into this topic.</p>
+
+<p>Maybe it’s all rooted by the tendency for engineering schools to suck at emphasizing communication in their curricula. My time in college certainly didn’t include any lessons on effective speaking. You often hear schools talk about the importance of group projects and working together, but they never explain what good teamwork looks like, what common pitfalls plague discussions/meeting, etc. Instead, they focus on teaching the hard sciences and math. Then class after class of students walk away with little or no appreciation for the subtleties and subjective nuances of conveying ideas to one another.</p>
+
+<p>{% blockquote David Heinemeier Hansson, Creator of Ruby on Rails, https://www.youtube.com/watch?v=9LfmrkyP81M?t=18m30s RailsConf 2014 Keynote: Writing Software %}
+I find it so funny that programmers laugh at all these subjective fields of endeavor when that is what they do.
+{% endblockquote %}</p>
+
+<p>The ability to “work well with others” is often mentioned as a requirement in job descriptions for programming positions, but how many interviewers and interviewees really know wtf that means? Does it mean employees are expected to avoid conflict like their lives depend on it? Is it benchmarked by low quantum of drama? Should it be deeply linked to “likeability”?</p>
+
+<p>No. It’s about empathy, open-mindedness with regards to homo sapiens, and communication skills (among other things).</p>
+
+<h3 id="who-died-and-made-you-king-of-communication-skills">Who died and made you king of communication skills?</h3>
+
+<p>My point is that it’s time to stop letting engineers off the hook for lacking skills in listening, speaking, presenting, asking, writing, and critiquing. I’m no master in these subjects. My own skills are far from honed, but you don’t need to be a master to have some ideas on how to improve. Also, it can be fun to explore communication issues just like how it can be fun to solve mysteries in web app development. Besides, as engineers, we pride ourselves in being good at what we do, so shouldn’t we put some effort into gaining communication skills that make us even better at what we do?</p>
+
+<p><strong>If you’re pondering my motivation for making such a big deal out of all this</strong>, then let me just say that impatience is a potent impetus. I started analyzing communication when I started noticing miscommunication and the toll it took on my patience. I’m not just talking about miscommunication during meetings at work. I’m also referring to poor presentations at meetups, chatting at networking events, conversing during job interviews, writing open-source documentation, writing test descriptions, etc.</p>
+
+<p>When I don’t understand someone, I tend to wonder, “Wtf is this person even saying?” Then that little voice in my head chimes in, “Don’t be so harsh, Jeff. Maybe you’re just too dumb to understand.” After that, another inner commentator adds, “Fellas. Shut up. Let’s use our detail-oriented brain to brainstorm reasons why communication has fallen apart here.”</p>
+
+<h1 id="lets-do-this">Let’s Do This</h1>
+
+<p>We engineers are problem-solvers, right? Well here’s a problem: miscommunication. So let’s solve it. What’s the first step for solving stuff? Comprehend the problem space. Break it down. Then divide and conquer.</p>
+
+<h2 id="breaking-it-down">Breaking it Down</h2>
+
+<p>We’ve confirmed miscommunication. Now what are the root causes? There are too many possibilities to cover now, but here are a few:</p>
+
+<ul>
+  <li><strong>Knowledge Imbalance:</strong> Person A knows something person B doesn’t know. The imbalance results in lack of context or incorrect assumptions.</li>
+  <li><strong>Ambiguity:</strong> Is the person talking about this? Or is the speaker talking about that? What is this? What is that? Maybe we’re referring to different things. Perhaps less ambiguous nouns are needed.</li>
+  <li><strong>Suboptimal Terminology:</strong> Lack of or misuse of terminology and jargon is pretty common in programming. For example, does everyone know what you mean when you say “collection”? Are you referring to an object literal that has a bunch of properties, an array with a bunch of elements, a MongoDB collection, or a more abstract thingamabob that “collects” stuff?</li>
+</ul>
+
+<h2 id="divide-and-conquer">Divide and Conquer</h2>
+
+<p><em>If X, then Y.</em></p>
+
+<ul>
+  <li>If there is a knowledge imbalance, then identify who needs what info and let the glorious sharing of knowledge begin.</li>
+  <li>If something is ambiguous, then ask clarifying questions.</li>
+</ul>
+
+<p>Et cetera. One at a time. We can get through this together! Let’s hold hands! –or not. Because even the nicest people fail to wash their hands frequently enough to earn hand-holding privileges. Don’t let your guard down.</p>
+
+<h1 id="whats-next">What’s Next?</h1>
+
+<p>The next blog post in my <a href="/blog/categories/communication-for-engineers/">Communication for Engineers</a> series will focus on tips for presenting a tech talk. I’m oddly excited about it. I haven’t done any big tech talks, but I’ve attended plenty. There are some easy ways they could be better. There are common issues that are easy to solve. That said, I’m also working on a blog post covering web security fundamentals. In due time, I will write tips for:</p>
+
+<ul>
+  <li>Presenting a tech talk</li>
+  <li>Conversation (with emphasis on listening)</li>
+  <li>Asking Questions</li>
+</ul>
+
+<p>If I’m not burnt out from writing about communication skills, I will also blog about:</p>
+
+<ul>
+  <li>Giving &amp; Getting Feedback</li>
+  <li>Writing (with emphasis on concision)</li>
 </ul>
 ]]></content>
   </entry>
