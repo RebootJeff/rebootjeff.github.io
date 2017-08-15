@@ -4,7 +4,7 @@
   <title><![CDATA[Category: engineering | RebootJeff.com]]></title>
   <link href="http://RebootJeff.github.io/blog/categories/engineering/atom.xml" rel="self"/>
   <link href="http://RebootJeff.github.io/"/>
-  <updated>2016-04-25T19:04:51-07:00</updated>
+  <updated>2017-08-14T23:18:57-07:00</updated>
   <id>http://RebootJeff.github.io/</id>
   <author>
     <name><![CDATA[Jeff Lee]]></name>
@@ -12,6 +12,61 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[What's the Point of One-on-Ones with Your Manager?]]></title>
+    <link href="http://RebootJeff.github.io/blog/2017/08/14/one-on-ones-with-manager/"/>
+    <updated>2017-08-14T22:38:00-07:00</updated>
+    <id>http://RebootJeff.github.io/blog/2017/08/14/one-on-ones-with-manager</id>
+    <content type="html"><![CDATA[<p>I’ve heard some newbies and even not-so-newbies wonder about what to do in 1:1 meetings with their managers. As a result, I gave some advice, and I listened to others’ advice. After collecting some thoughts, here’s the not-so-short overview…</p>
+
+<h2 id="the-easy-stuff">The Easy Stuff</h2>
+
+<h3 id="company-inquiries">Company Inquiries</h3>
+<p>Ask for clarifications or details on the company’s roadmap. How’s the business side of things? How is the engineering dept progressing towards meeting roadmap goals? How is the roadmap changing? What factors might cause it to change?</p>
+
+<h3 id="company-improvement">Company Improvement</h3>
+<p>Bring up any pain points. Talk about possible improvements in company processes (PTO, food, etc) or technical process (git practices, code reviews, hiring, dev environment, deployment, tech stack).</p>
+
+<h3 id="self-improvement">Self Improvement</h3>
+<p>How can you improve your value to the company?
+Are there any upcoming training opportunities. What do you want to learn? What does the company want you to learn? What can the company help you learn via training classes and conferences?</p>
+
+<h2 id="the-tough-stuff-get-feedback">The Tough Stuff (Get Feedback!)</h2>
+<p>But make try to get specific feedback. Asking “How am I doing?” is imprecise, and therefore, it could be less helpful. Unless you’re screwing up something big, most managers probably don’t have a solid response ready (they’ve got other things on their minds –like other meetings they have that day). More precise: “What skills should I focus on? How can I help more? Are there new projects in the roadmap that I can really add value to? What goals does the company has for my role?”</p>
+
+<p>Anyway, one of the biggest things I focus on in my 1:1s is training/learning opportunities. For example, “What’s the company’s training budget/policy? Is there any training I could take that would benefit the company directly? What about training that I’m personally interested in? Can I go to conference A, B, and/or C? Can I attend workshop D, E, and/or F? There’s a meetup I want to attend, but I’d have to leave work early every Tuesday; is that ok?”</p>
+
+<p>I also like to discuss new hotness. For example, “I’ve been interested in technology X; can I give a presentation to the team about it even if we can’t use it any time soon? Can we possibly start using it?”</p>
+
+<p>And suggestions for process improvements. For example, “Here are my thoughts re: onboarding, hiring, story planning, etc”.</p>
+
+<p>Sometimes, I discuss team issues (personnel or process). For example, personnel issues: “Person X tends to interrupt me a lot. I’ve tried A, B, and C. So things have gotten better, but there’s still room for improvement. Can you help?” For example, process issues: “We need a better convention for git branching/merging.”</p>
+
+<p>After the first 2 or 3 1:1 meetings, a decent chunk of time is dedicated to just reflect on the topics brought up in the previous meeting.</p>
+
+<p>You can also talk about a lot of initiatives outside of the day-to-day. You can express desire to: spearhead company culture stuff, organize team events, be a mentor, start an internship program, organize meetups, volunteer at recruiting events, etc.</p>
+
+<p>So I guess it’s a mutual feedback session: I want to discuss ways for me to grow + ways for company/team to grow.</p>
+
+<p>Less directly, it’s a good way to see if your interests are still aligned with the team. For example, through the 1:1s, if you express concerns that are never addressed or if you express desire to work on something but you never get the opportunity –then the 1:1s help you learn it’s time to switch teams or even jobs :(</p>
+
+<h2 id="the-bonus-stuff-get-perspective">The Bonus Stuff (Get Perspective)</h2>
+<p>Ask your manager about their experiences. How many meetings do they attend on a typical (and atypical) week? What goals do they have for themselves? What do they like/dislike about the job? What did it take for them to achieve their own career goals?</p>
+
+<p>You gain a lot of insight by learning about your manager, their perspectives, and their typical day (outside of directly interacting with you and your team). You gain insight on what it’s like to be in a formal leadership role, how content/stressed your manager is (look out for burnout), etc. This insight can help you better approach your manager with new ideas and even help make sure there are no major signs that the manager might be unhappy at the company. If the manager leaves, that could have a huge impact on your job.</p>
+
+<h2 id="what-not-to-do">What NOT To Do</h2>
+
+<p>It’s not a status meeting, code review session, etc.</p>
+
+<p>This isn’t a time for simply recapping “so what have you been working on?” If your manager doesn’t already know the answer to that question, that’s a bad sign or your organization isn’t properly structured to give your managers the time/opportunity to understand direct reports’ work.</p>
+
+<p>In other words, the 1-on-1 shouldn’t just be used as a more in-depth SCRUM/status meeting.</p>
+
+<p>I’ve also heard that 1-on-1s could be used for in-depth code reviews, but if your organization doesn’t do proper code reviews as part of the usual process of development, that’s another bad sign.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[[Example] Refactoring to Functional JS - Combine Keyed Lists]]></title>
@@ -30,29 +85,33 @@
 
 <h3 id="example-inputoutput">Example Input/Output</h3>
 
-<p>{% coderay lang:JavaScript Example Input/Output Data %}
-// example input
-var usersBySocialNetwork = {
-  twitter: [
-    { name: ‘@RebootJeff’ },
-    { name: ‘@doitwithalambda’ },
-    null
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption class='code-header' style='margin-bottom:-5px;'><span>Example Input/Output Data </span></figcaption>
+ <div class="CodeRay">
+  <div class="code"><pre>
+<span class="comment">// example input</span>
+<span class="keyword">var</span> usersBySocialNetwork = {
+  <span class="key">twitter</span>: [
+    { <span class="key">name</span>: <span class="error">‘</span><span class="error">@</span>RebootJeff<span class="error">’</span> },
+    { <span class="key">name</span>: <span class="error">‘</span><span class="error">@</span>doitwithalambda<span class="error">’</span> },
+    <span class="predefined-constant">null</span>
   ],
-  facebook: [
-    null,
-    { name: ‘Kevin’ },
-    { name: ‘Bianca’ },
+  <span class="key">facebook</span>: [
+    <span class="predefined-constant">null</span>,
+    { <span class="key">name</span>: <span class="error">‘</span>Kevin<span class="error">’</span> },
+    { <span class="key">name</span>: <span class="error">‘</span>Bianca<span class="error">’</span> },
   ]
-};</p>
+};&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">p&gt;
 
-<p>// expected output
-var users = [
-  { name: ‘@RebootJeff’ },
-  { name: ‘@doitwithalambda’ },
-  { name: ‘Kevin’ },
-  { name: ‘Bianca’ }
+&lt;p&gt;</span><span class="delimiter">/</span></span>/ expected output
+<span class="keyword">var</span> users = [
+  { <span class="key">name</span>: <span class="error">‘</span><span class="error">@</span>RebootJeff<span class="error">’</span> },
+  { <span class="key">name</span>: <span class="error">‘</span><span class="error">@</span>doitwithalambda<span class="error">’</span> },
+  { <span class="key">name</span>: <span class="error">‘</span>Kevin<span class="error">’</span> },
+  { <span class="key">name</span>: <span class="error">‘</span>Bianca<span class="error">’</span> }
 ];
-{% endcoderay %}</p>
+</pre></div>
+</div>
+ </figure></notextile></div></p>
 
 <p>The output has the <code>null</code>s removed. We can pretty much assume we only want to see user objects in the output array; no other kinds of elements.</p>
 
@@ -60,23 +119,27 @@ var users = [
 
 <p>The following code snippet is a slightly modified version of someone else’s work. I’ve changed the variable names and comments, but the core logic/algorithm is the same.</p>
 
-<p>{% coderay lang:JavaScript Original Solution %}
-var _ = require(‘lodash’);</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption class='code-header' style='margin-bottom:-5px;'><span>Original Solution </span></figcaption>
+ <div class="CodeRay">
+  <div class="code"><pre>
+<span class="keyword">var</span> _ = require(<span class="error">‘</span>lodash<span class="error">’</span>);&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">p&gt;
 
-<p>function combineKeyedArrays(keyedArrays){
-  var flattened = [];</p>
+&lt;p&gt;function combineKeyedArrays(keyedArrays){
+  var flattened = [];&lt;</span><span class="delimiter">/</span></span>p&gt;
 
-<p>// produce a flat Array from an Object with values that are arrays
+<span class="tag">&lt;p&gt;</span>// produce a flat Array from an Object with values that are arrays
   _.each(keyedArrays, function(array){
     flattened = flattened.concat(array);
-  });</p>
+  });<span class="tag">&lt;/p&gt;</span>
 
-<p>// only return the truthy elements of flat Array
-  return _.filter(flattened, function(element) {
-    return Boolean(element);
+&lt;p&gt;<span class="comment">// only return the truthy elements of flat Array</span>
+  <span class="keyword">return</span> _.filter(flattened, <span class="keyword">function</span>(element) {
+    <span class="keyword">return</span> Boolean(element);
   });
 }
-{% endcoderay %}</p>
+</pre></div>
+</div>
+ </figure></notextile></div></p>
 
 <ul>
   <li>The combination of <code>_.each</code> and <code>Array.prototype.concat</code> creates one big array from all the arrays within the input object called <code>keyedArrays</code>.</li>
@@ -87,20 +150,24 @@ var _ = require(‘lodash’);</p>
 
 <h3 id="refactor-1---using-lodashs-chain">Refactor 1 - Using Lodash’s Chain</h3>
 
-<p>{% coderay lang:JavaScript Refactored Version 1 %}
-var _ = require(‘lodash’);</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption class='code-header' style='margin-bottom:-5px;'><span>Refactored Version 1 </span></figcaption>
+ <div class="CodeRay">
+  <div class="code"><pre>
+<span class="keyword">var</span> _ = require(<span class="error">‘</span>lodash<span class="error">’</span>);&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">p&gt;
 
-<p>function combineKeyedArrays(keyedArrays){
+&lt;p&gt;function combineKeyedArrays(keyedArrays){
   return _.chain(keyedArrays)
     .reduce(concatArray, [])
     .filter(Boolean)
     .value();
-}</p>
+}&lt;</span><span class="delimiter">/</span></span>p&gt;
 
-<p>function concatArray(arr, val) {
-  return arr.concat(val);
+&lt;p&gt;<span class="keyword">function</span> <span class="function">concatArray</span>(arr, val) {
+  <span class="keyword">return</span> arr.concat(val);
 }
-{% endcoderay %}</p>
+</pre></div>
+</div>
+ </figure></notextile></div></p>
 
 <p>Sadly, we need to create our own <code>concatArray</code> because Lodash doesn’t have such a utility method (I swear it used to exist in an earlier version …maybe).</p>
 
@@ -108,15 +175,19 @@ var _ = require(‘lodash’);</p>
 
 <h3 id="refactor-2---using-lodashs-flow">Refactor 2 - Using Lodash’s Flow</h3>
 
-<p>{% coderay lang:JavaScript Refactored Version 2 %}
-var _ = require(‘lodash’);</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption class='code-header' style='margin-bottom:-5px;'><span>Refactored Version 2 </span></figcaption>
+ <div class="CodeRay">
+  <div class="code"><pre>
+<span class="keyword">var</span> _ = require(<span class="error">‘</span>lodash<span class="error">’</span>);&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">p&gt;
 
-<p>var combineKeyedArrays = _.flow(
+&lt;p&gt;var combineKeyedArrays = _.flow(
   _.values,
   _.flatten,
   _.compact
 );
-{% endcoderay %}</p>
+</span></span></pre></div>
+</div>
+ </figure></notextile></div></p>
 
 <p>Now we use <a href="https://github.com/MostlyAdequate/mostly-adequate-guide/blob/master/ch5.md">function composition</a> via <code>flow</code>, which uses left-to-right direction. Standard function composition via <code>compose</code> would read from right-to-left, but I prefer LTR for a more familiar aesthetic. My friends who are more advanced in <a href="/blog/categories/functional-programming/">functional programming</a> assure me I’ll get used to the RTL direction if I give it a shot, but for now, I protest (i.e., I’m lazy).</p>
 
@@ -148,15 +219,19 @@ var _ = require(‘lodash’);</p>
 
 <p>Now, let’s translate from Lodash to <a href="http://ramdajs.com/">Ramda</a>, a utility library that is much more aligned with the functional programming style. I’ve covered how to get started with Ramda in <a href="/blog/2015/06/14/refactoring-towards-functional-programming-in-javascript/">an earlier blog post that one friend labeled as an “excellent summary”</a>. I must be pretty awesome <a href="https://duckduckgo.com/?q=awesome+smiley+face&amp;iax=1&amp;ia=images&amp;iai=http%3A%2F%2Fannawrites.com%2Fblog%2Fwp-content%2Fuploads%2F2012%2F03%2Fawesome-smiley.jpg">:D</a>.</p>
 
-<p>{% coderay lang:JavaScript Refactored Version 3 %}
-var R = require(‘ramda’);</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption class='code-header' style='margin-bottom:-5px;'><span>Refactored Version 3 </span></figcaption>
+ <div class="CodeRay">
+  <div class="code"><pre>
+<span class="keyword">var</span> R = require(<span class="error">‘</span>ramda<span class="error">’</span>);&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">p&gt;
 
-<p>var combineKeyedArrays = R.pipe(
+&lt;p&gt;var combineKeyedArrays = R.pipe(
   R.values,
   R.unnest,
   R.filter(Boolean)
 );
-{% endcoderay %}</p>
+</span></span></pre></div>
+</div>
+ </figure></notextile></div></p>
 
 <p>Notes:</p>
 
@@ -180,18 +255,22 @@ var R = require(‘ramda’);</p>
 
 <p>By the way, possible documentation for our refactored, pointfree <code>combineKeyedArrays</code> involves a type signature as a comment, but admittedly, I’m still learning how to do proper, FP-style type signatures. Also, keep in mind that the names of your functions should help tell others what it does, and the fact that it’s composed of 3 easy-to-read methods is quite helpful as well.</p>
 
-<p>{% coderay lang:JavaScript Refactored Version 3 with comment for documentation %}
-var R = require(‘ramda’);</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption class='code-header' style='margin-bottom:-5px;'><span>Refactored Version 3 with comment for documentation </span></figcaption>
+ <div class="CodeRay">
+  <div class="code"><pre>
+<span class="keyword">var</span> R = require(<span class="error">‘</span>ramda<span class="error">’</span>);&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">p&gt;
 
-<p>// Object<array> --&gt; Array (more old-fashioned)
-// ...or...maybe...
-// {k: [v]} --&gt; [v] (similar to Ramda docs)
-var combineKeyedArrays = R.pipe(
+&lt;p&gt;</span><span class="delimiter">/</span></span>/ Object&lt;array&gt; --&amp;gt; Array (more old-fashioned)
+<span class="comment">// ...or...maybe...</span>
+<span class="comment">// {k: [v]} --&amp;gt; [v] (similar to Ramda docs)</span>
+<span class="keyword">var</span> combineKeyedArrays = R.pipe(
   R.values,
   R.unnest,
   R.filter(Boolean)
 );
-{% endcoderay %}</array></p>
+</pre></div>
+</div>
+ </figure></notextile></div></array></p>
 
 <p>Why don’t we say something more specific such as <code>// {k: [user]} --&gt; [user]</code>? Because <code>combineKeyedArrays</code> clearly works with any type of element inside the arrays. It could even be considered as a utility function and added to an internal library of helpers. Whoooaaaaaa…</p>
 
@@ -345,55 +424,63 @@ var combineKeyedArrays = R.pipe(
 
 <h3 id="ex-filtering-an-array">Ex: Filtering an array</h3>
 
-<p>{% coderay lang:JavaScript Example - Filtering for odd numbers and multiples of 6 %}
-var originalArray = [1, 2, 3, 4];</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption class='code-header' style='margin-bottom:-5px;'><span>Example - Filtering for odd numbers and multiples of 6 </span></figcaption>
+ <div class="CodeRay">
+  <div class="code"><pre>
+<span class="keyword">var</span> originalArray = [<span class="integer">1</span>, <span class="integer">2</span>, <span class="integer">3</span>, <span class="integer">4</span>];&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">p&gt;
 
-<p>// Bad - using a for-loop to mutate a new array
-var filteredArray = [];
-for(var i = 0; i &lt; originalArray.length; i++) {
-  var number = originalArray[i];
-  if(number % 2 || number % 6 === 0) {
+&lt;p&gt;</span><span class="delimiter">/</span></span>/ Bad - using a <span class="keyword">for</span>-loop to mutate a <span class="keyword">new</span> array
+<span class="keyword">var</span> filteredArray = [];
+<span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="integer">0</span>; i &amp;lt; originalArray.length; i++) {
+  <span class="keyword">var</span> number = originalArray[i];
+  <span class="keyword">if</span>(number % <span class="integer">2</span> || number % <span class="integer">6</span> === <span class="integer">0</span>) {
     filteredArray.push(number);
   }
-}</p>
+}&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">p&gt;
 
-<p>// Better - using the native Array filter method with a typical anonymous function
-var filteredArray = originalArray.filter(function(number) {
-  return number % 2 || number % 6 === 0;
-});</p>
+&lt;p&gt;</span><span class="delimiter">/</span></span>/ Better - using the <span class="reserved">native</span> Array filter method <span class="keyword">with</span> a typical anonymous <span class="keyword">function</span>
+<span class="keyword">var</span> filteredArray = originalArray.filter(<span class="keyword">function</span>(number) {
+  <span class="keyword">return</span> number % <span class="integer">2</span> || number % <span class="integer">6</span> === <span class="integer">0</span>;
+});&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">p&gt;
 
-<p>// Most Functional - using predicates with a filter method
-var isOdd = function(number) {
-  return number % 2;
+&lt;p&gt;</span><span class="delimiter">/</span></span>/ Most Functional - using predicates <span class="keyword">with</span> a filter method
+<span class="keyword">var</span> <span class="function">isOdd</span> = <span class="keyword">function</span>(number) {
+  <span class="keyword">return</span> number % <span class="integer">2</span>;
 };
-var isDivisibleBySix = function(number) {
-  return number % 6 === 0;
+<span class="keyword">var</span> <span class="function">isDivisibleBySix</span> = <span class="keyword">function</span>(number) {
+  <span class="keyword">return</span> number % <span class="integer">6</span> === <span class="integer">0</span>;
 };
-var isValid = R.allPass([isOdd, isDivisibleBySix]);
-var filteredArray = R.filter(isValid, originalArray);
-{% endcoderay %}</p>
+<span class="keyword">var</span> isValid = R.allPass([isOdd, isDivisibleBySix]);
+<span class="keyword">var</span> filteredArray = R.filter(isValid, originalArray);
+</pre></div>
+</div>
+ </figure></notextile></div></p>
 
 <p>The “most functional” technique may seem unappealling because it requires so many lines of code, but it’s vital to remember that predicates serve as re-usable, easily testable utilities. Also, <code>R.allPass([isOdd, isDivisibleBySix])</code> is more expressive than <code>number % 2 || number % 6 === 0</code>. In the latter case, readers must remember how <code>%</code> works and how the result is a number that gets coerced into a boolean value for truthiness/falsiness.</p>
 
 <h3 id="ex-debugging-via-consolelog">Ex: Debugging via console.log</h3>
 
-<p>{% coderay lang:JavaScript Example - Adding a logger for debugging %}
-// Let’s try to debug the following function
-var processData = R.compose(calculateStuff, sortByDate, filterByStatus);</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption class='code-header' style='margin-bottom:-5px;'><span>Example - Adding a logger for debugging </span></figcaption>
+ <div class="CodeRay">
+  <div class="code"><pre>
+<span class="comment">// Let’s try to debug the following function</span>
+<span class="keyword">var</span> processData = R.compose(calculateStuff, sortByDate, filterByStatus);&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">p&gt;
 
-<p>// First, we need an FP-friendly logger that works with composition
-function log(note, input) {
-  console.log(note + ‘ — ‘ + input);
-  return input; // this return is vital
-}</p>
+&lt;p&gt;</span><span class="delimiter">/</span></span>/ First, we need an FP-friendly logger that works <span class="keyword">with</span> composition
+<span class="keyword">function</span> <span class="function">log</span>(note, input) {
+  console.log(note + <span class="error">‘</span> <span class="error">—</span> <span class="error">‘</span> + input);
+  <span class="keyword">return</span> input; <span class="comment">// this return is vital</span>
+}&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">p&gt;
 
-<p>// Second, we insert the logger into the composition to check if filtering worked
-var processData = R.compose(calculateStuff, sortByDate, log(‘filtered data’), filterByStatus);</p>
+&lt;p&gt;</span><span class="delimiter">/</span></span>/ Second, we insert the logger into the composition to check <span class="keyword">if</span> filtering worked
+<span class="keyword">var</span> processData = R.compose(calculateStuff, sortByDate, log(<span class="error">‘</span>filtered data<span class="error">’</span>), filterByStatus);&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">p&gt;
 
-<p>// Then we run processData with some data, check the log output, and adjust
-// the placement of the log within the composition until we find where
-// things go wrong.
-{% endcoderay %}</p>
+&lt;p&gt;</span><span class="delimiter">/</span></span>/ Then we run processData <span class="keyword">with</span> some data, check the log output, and adjust
+<span class="comment">// the placement of the log within the composition until we find where</span>
+<span class="comment">// things go wrong.</span>
+</pre></div>
+</div>
+ </figure></notextile></div></p>
 
 <p>Once again, it may seem a tad painful. You’re being forced to create a special logger function. But much like in the previous example, keep in mind that you’re being forced to create specialized functions that will probably be useful enough to be part of your project’s internal library of utilities and helpers.</p>
 
@@ -403,35 +490,39 @@ First, we query our database of animals.
 Second, we use our query results to get more info from a 3rd-party animal API.
 Third, we use some part of that info to search for relevant photos from the Flickr API.</p>
 
-<p>{% coderay lang:JavaScript Example - Writing promise chains %}
-// Bad - using typical anonymous function boilerplate
-function getAnimalData() {
-  return getAnimalInfoFromDatabase().then(function(response1) {
-    return getRelevantInfoFrom3rdPartyAPI(response1);
-  }).then(function(response2) {
-    return getRelevantPhotoFromFlickrAPI(response2);
-  }).then(function(response3) {
-    return response3;
-    // Note: This last part of the promise chain is actually unnecessary, but
-    // newbies tend to include it.
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption class='code-header' style='margin-bottom:-5px;'><span>Example - Writing promise chains </span></figcaption>
+ <div class="CodeRay">
+  <div class="code"><pre>
+<span class="comment">// Bad - using typical anonymous function boilerplate</span>
+<span class="keyword">function</span> <span class="function">getAnimalData</span>() {
+  <span class="keyword">return</span> getAnimalInfoFromDatabase().then(<span class="keyword">function</span>(response1) {
+    <span class="keyword">return</span> getRelevantInfoFrom3rdPartyAPI(response1);
+  }).then(<span class="keyword">function</span>(response2) {
+    <span class="keyword">return</span> getRelevantPhotoFromFlickrAPI(response2);
+  }).then(<span class="keyword">function</span>(response3) {
+    <span class="keyword">return</span> response3;
+    <span class="comment">// Note: This last part of the promise chain is actually unnecessary, but</span>
+    <span class="comment">// newbies tend to include it.</span>
   });
-}</p>
+}&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">p&gt;
 
-<p>// Better - using pointfree style
-function getAnimalData() {
-  return getAnimalInfoFromDatabase()
+&lt;p&gt;</span><span class="delimiter">/</span></span>/ Better - using pointfree style
+<span class="keyword">function</span> <span class="function">getAnimalData</span>() {
+  <span class="keyword">return</span> getAnimalInfoFromDatabase()
     .then(getRelevantInfoFrom3rdPartyAPI)
     .then(getRelevantPhotoFromFlickrAPI);
-}</p>
+}&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">p&gt;
 
-<p>// Most Radtastic - using Ramda’s promise composer
-var getAnimalData = R.composeP(
+&lt;p&gt;</span><span class="delimiter">/</span></span>/ Most Radtastic - using Ramda<span class="error">’</span>s promise composer
+<span class="keyword">var</span> getAnimalData = R.composeP(
   getRelevantPhotoFromFlickrAPI,
   getRelevantInfoFrom3rdPartyAPI,
   getAnimalInfoFromDatabase
 );
-// Notice how the order of composition goes from right to left.
-{% endcoderay %}</p>
+<span class="comment">// Notice how the order of composition goes from right to left.</span>
+</pre></div>
+</div>
+ </figure></notextile></div></p>
 ]]></content>
   </entry>
   

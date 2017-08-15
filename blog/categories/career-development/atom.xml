@@ -4,7 +4,7 @@
   <title><![CDATA[Category: career development | RebootJeff.com]]></title>
   <link href="http://RebootJeff.github.io/blog/categories/career-development/atom.xml" rel="self"/>
   <link href="http://RebootJeff.github.io/"/>
-  <updated>2016-04-25T19:04:51-07:00</updated>
+  <updated>2017-08-14T23:18:57-07:00</updated>
   <id>http://RebootJeff.github.io/</id>
   <author>
     <name><![CDATA[Jeff Lee]]></name>
@@ -12,6 +12,61 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[What's the Point of One-on-Ones with Your Manager?]]></title>
+    <link href="http://RebootJeff.github.io/blog/2017/08/14/one-on-ones-with-manager/"/>
+    <updated>2017-08-14T22:38:00-07:00</updated>
+    <id>http://RebootJeff.github.io/blog/2017/08/14/one-on-ones-with-manager</id>
+    <content type="html"><![CDATA[<p>I’ve heard some newbies and even not-so-newbies wonder about what to do in 1:1 meetings with their managers. As a result, I gave some advice, and I listened to others’ advice. After collecting some thoughts, here’s the not-so-short overview…</p>
+
+<h2 id="the-easy-stuff">The Easy Stuff</h2>
+
+<h3 id="company-inquiries">Company Inquiries</h3>
+<p>Ask for clarifications or details on the company’s roadmap. How’s the business side of things? How is the engineering dept progressing towards meeting roadmap goals? How is the roadmap changing? What factors might cause it to change?</p>
+
+<h3 id="company-improvement">Company Improvement</h3>
+<p>Bring up any pain points. Talk about possible improvements in company processes (PTO, food, etc) or technical process (git practices, code reviews, hiring, dev environment, deployment, tech stack).</p>
+
+<h3 id="self-improvement">Self Improvement</h3>
+<p>How can you improve your value to the company?
+Are there any upcoming training opportunities. What do you want to learn? What does the company want you to learn? What can the company help you learn via training classes and conferences?</p>
+
+<h2 id="the-tough-stuff-get-feedback">The Tough Stuff (Get Feedback!)</h2>
+<p>But make try to get specific feedback. Asking “How am I doing?” is imprecise, and therefore, it could be less helpful. Unless you’re screwing up something big, most managers probably don’t have a solid response ready (they’ve got other things on their minds –like other meetings they have that day). More precise: “What skills should I focus on? How can I help more? Are there new projects in the roadmap that I can really add value to? What goals does the company has for my role?”</p>
+
+<p>Anyway, one of the biggest things I focus on in my 1:1s is training/learning opportunities. For example, “What’s the company’s training budget/policy? Is there any training I could take that would benefit the company directly? What about training that I’m personally interested in? Can I go to conference A, B, and/or C? Can I attend workshop D, E, and/or F? There’s a meetup I want to attend, but I’d have to leave work early every Tuesday; is that ok?”</p>
+
+<p>I also like to discuss new hotness. For example, “I’ve been interested in technology X; can I give a presentation to the team about it even if we can’t use it any time soon? Can we possibly start using it?”</p>
+
+<p>And suggestions for process improvements. For example, “Here are my thoughts re: onboarding, hiring, story planning, etc”.</p>
+
+<p>Sometimes, I discuss team issues (personnel or process). For example, personnel issues: “Person X tends to interrupt me a lot. I’ve tried A, B, and C. So things have gotten better, but there’s still room for improvement. Can you help?” For example, process issues: “We need a better convention for git branching/merging.”</p>
+
+<p>After the first 2 or 3 1:1 meetings, a decent chunk of time is dedicated to just reflect on the topics brought up in the previous meeting.</p>
+
+<p>You can also talk about a lot of initiatives outside of the day-to-day. You can express desire to: spearhead company culture stuff, organize team events, be a mentor, start an internship program, organize meetups, volunteer at recruiting events, etc.</p>
+
+<p>So I guess it’s a mutual feedback session: I want to discuss ways for me to grow + ways for company/team to grow.</p>
+
+<p>Less directly, it’s a good way to see if your interests are still aligned with the team. For example, through the 1:1s, if you express concerns that are never addressed or if you express desire to work on something but you never get the opportunity –then the 1:1s help you learn it’s time to switch teams or even jobs :(</p>
+
+<h2 id="the-bonus-stuff-get-perspective">The Bonus Stuff (Get Perspective)</h2>
+<p>Ask your manager about their experiences. How many meetings do they attend on a typical (and atypical) week? What goals do they have for themselves? What do they like/dislike about the job? What did it take for them to achieve their own career goals?</p>
+
+<p>You gain a lot of insight by learning about your manager, their perspectives, and their typical day (outside of directly interacting with you and your team). You gain insight on what it’s like to be in a formal leadership role, how content/stressed your manager is (look out for burnout), etc. This insight can help you better approach your manager with new ideas and even help make sure there are no major signs that the manager might be unhappy at the company. If the manager leaves, that could have a huge impact on your job.</p>
+
+<h2 id="what-not-to-do">What NOT To Do</h2>
+
+<p>It’s not a status meeting, code review session, etc.</p>
+
+<p>This isn’t a time for simply recapping “so what have you been working on?” If your manager doesn’t already know the answer to that question, that’s a bad sign or your organization isn’t properly structured to give your managers the time/opportunity to understand direct reports’ work.</p>
+
+<p>In other words, the 1-on-1 shouldn’t just be used as a more in-depth SCRUM/status meeting.</p>
+
+<p>I’ve also heard that 1-on-1s could be used for in-depth code reviews, but if your organization doesn’t do proper code reviews as part of the usual process of development, that’s another bad sign.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[How to Talk While Coding and Whiteboarding in 7 Steps]]></title>
@@ -64,11 +119,13 @@
 
 <p>In other words, write modular code by using a breadth-first mindset. Everyone knows it’s a good idea to write several small functions rather than one giant function, so apply that approach to your communication too. When you explain how a computer works, you start the explanation at a high level (e.g., “hard drives store data, CPUs crunch data, …”) rather than starting at a low level (e.g., “the flow of electrons is controlled by gates known as transistors”).</p>
 
-<p>{% coderay lang:JavaScript Example - Breadth-First Coding %}
-// Challenge (aka Prompt) - Write a function that determines the average number of
-// retweets for a given user after a given cut off date.</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption class='code-header' style='margin-bottom:-5px;'><span>Example - Breadth-First Coding </span></figcaption>
+ <div class="CodeRay">
+  <div class="code"><pre>
+<span class="comment">// Challenge (aka Prompt) - Write a function that determines the average number of</span>
+<span class="comment">// retweets for a given user after a given cut off date.&lt;/p&gt;</span>
 
-<p>// Phase 0 - Psuedocode (optional)
+<span class="tag">&lt;p&gt;</span>// Phase 0 - Psuedocode (optional)
 function getRetweetAverage(username, cutOffDate) {
   /**
    * 1. Fetch tweets via Twiter API
@@ -76,17 +133,17 @@ function getRetweetAverage(username, cutOffDate) {
    * 3. Calculate avg count of retweets from filtered data
    * 4. Return a promise that resolves to the answer
   **/
-}</p>
+}<span class="tag">&lt;/p&gt;</span>
 
-<p>// Phase 1 - Coding with declarative helper functions
+<span class="tag">&lt;p&gt;</span>// Phase 1 - Coding with declarative helper functions
 function getRetweetAverage(username, cutOffDate) {
   return fetchTweets(username).then(function(tweets) {
     var recentTweets = filterTweetsByDate(tweets, cutOffDate);
     return calculateAverageRetweets(recentTweets);
   });
-}</p>
+}<span class="tag">&lt;/p&gt;</span>
 
-<p>// Phase 2 - Implement low-level helper functions
+<span class="tag">&lt;p&gt;</span>// Phase 2 - Implement low-level helper functions
 function fetchTweets(username) {
   // Let’s pretend we’re using AngularJS’s HTTP request service, which uses promises.
   var params = {
@@ -94,23 +151,25 @@ function fetchTweets(username) {
     count: 200 // FYI this is the max allowed by Twitter’s API
   };
   return $http.get(‘https://api.twitter.com/1.1/statuses/user_timeline.json’, params);
-}</p>
+}<span class="tag">&lt;/p&gt;</span>
 
-<p>function filterTweetsByDate(tweets, cutOffDate) {
+<span class="tag">&lt;p&gt;</span>function filterTweetsByDate(tweets, cutOffDate) {
   return tweets.filter(function(tweet) {
     // Convert tweet’s String date into a JS Date object before comparing.
     var createdAt = new Date(tweet.created_at);
-    return createdAt &gt; cutOffDate;
+    return createdAt <span class="entity">&amp;gt;</span> cutOffDate;
   });
-}</p>
+}<span class="tag">&lt;/p&gt;</span>
 
-<p>function calculateAverageRetweets(tweets) {
-  var totalRetweets = tweets.reduce(function(sum, tweet) {
-    return sum + tweet.retweet_count;
-  }, 0);
-  return totalRetweets / tweets.length;
+&lt;p&gt;<span class="keyword">function</span> <span class="function">calculateAverageRetweets</span>(tweets) {
+  <span class="keyword">var</span> totalRetweets = tweets.reduce(<span class="keyword">function</span>(sum, tweet) {
+    <span class="keyword">return</span> sum + tweet.retweet_count;
+  }, <span class="integer">0</span>);
+  <span class="keyword">return</span> totalRetweets / tweets.length;
 }
-{% endcoderay %}</p>
+</pre></div>
+</div>
+ </figure></notextile></div></p>
 
 <p>In the example above, you should write code one “phase” at a time. Starting with psuedocode is optional, but it might be a good idea to at least verbalize it if you don’t plan on writing it. Then write the code in a declarative style as seen in “Phase 1”. Lastly, flesh out the functionality of your solution by writing the code that actually makes things work.</p>
 
@@ -191,9 +250,7 @@ function fetchTweets(username) {
 
 <p>Maybe it’s all rooted by the tendency for engineering schools to suck at emphasizing communication in their curricula. My time in college certainly didn’t include any lessons on effective speaking. You often hear schools talk about the importance of group projects and working together, but they never explain what good teamwork looks like, what common pitfalls plague discussions/meeting, etc. Instead, they focus on teaching the hard sciences and math. Then class after class of students walk away with little or no appreciation for the subtleties and subjective nuances of conveying ideas to one another.</p>
 
-<p>{% blockquote David Heinemeier Hansson, Creator of Ruby on Rails, https://www.youtube.com/watch?v=9LfmrkyP81M?t=18m30s RailsConf 2014 Keynote: Writing Software %}
-I find it so funny that programmers laugh at all these subjective fields of endeavor when that is what they do.
-{% endblockquote %}</p>
+<p><blockquote><p>I find it so funny that programmers laugh at all these subjective fields of endeavor when that is what they do.</p><footer><strong>David Heinemeier Hansson, Creator of Ruby on Rails,</strong> <cite><a href='https://www.youtube.com/watch?v=9LfmrkyP81M?t=18m30s'>RailsConf 2014 Keynote: Writing Software</a></cite></footer></blockquote></p>
 
 <p>The ability to “work well with others” is often mentioned as a requirement in job descriptions for programming positions, but how many interviewers and interviewees really know wtf that means? Does it mean employees are expected to avoid conflict like their lives depend on it? Is it benchmarked by low quantum of drama? Should it be deeply linked to “likeability”?</p>
 
@@ -416,107 +473,6 @@ I find it so funny that programmers laugh at all these subjective fields of ende
 <p>Check back (somewhat) soon for more opinions and anecdotes on software developer job search sites. In part 2 of this Dev Job Searching Tools Roundup, I will ramble about Readyforce, The Muse, The Sourcery, AngelList, VC job listings, and more.</p>
 
 <p>In future blog posts, I will cover other software engineering job hunting topics. I’m particularly excited to discuss my impressions from the other side of interview process. Also on my to-blog list: inheritance in JavaScript and lots of AngularJS best practices / app architecture patterns.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[[HackR Diary] [Dev Job Search] Tips from the Coding Interview Guru]]></title>
-    <link href="http://RebootJeff.github.io/blog/2014/05/31/dev-job-search-tips-from-the-coding-interview-guru/"/>
-    <updated>2014-05-31T20:37:00-07:00</updated>
-    <id>http://RebootJeff.github.io/blog/2014/05/31/dev-job-search-tips-from-the-coding-interview-guru</id>
-    <content type="html"><![CDATA[<blockquote class="twitter-tweet" lang="en"><p>Author of Cracking the Coding Interview, <a href="https://twitter.com/gayle">@gayle</a> , talking to <a href="https://twitter.com/HackReactor">@hackreactor</a> <a href="http://t.co/aVbcohgqSG">pic.twitter.com/aVbcohgqSG</a></p>&mdash; Jeff Lee (@RebootJeff) <a href="https://twitter.com/RebootJeff/statuses/423949825587945472">January 16, 2014</a></blockquote>
-<script async="" src="http://RebootJeff.github.io//platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-<p>In a <a href="/blog/2014/05/11/hackr-diary-weeks-11-12-and-beyond/#overtime-support">previous post</a>, I mentioned that attended a talk given by <a href="http://www.technologywoman.com">Gayle Laakmann McDowell</a> when she visited Hack Reactor. She’s the author of the famous <em>Cracking the Coding Interview</em>, which is a book that helps developers perform better when interviewed for a new job. Her text mostly focuses on algorithm challenges, but there’s also a lot of content that has more to do with coaching up interview candidates.</p>
-
-<p>I really liked McDowell’s presentation at Hack Reactor. There were plenty of intriguing anecdotes, and of course, there was plenty of good advice. Plus, she included a lot of insight into the hiring process. Many of her stories and comments provided the Hack Reactor community with a “behind the scenes” sort of perspective.</p>
-
-<p>Keep in mind that she worked for companies like Apple, Microsoft, and Google, so <strong>her advice comes from the perspective of giant companies</strong>. I doubt her tips apply equally to smaller employers. For example, McDowell heavily emphasized the importance to study certain algorithms (e.g., various sorting and searching algos) and data structures (e.g., trees, hashes, etc). In my experience mostly interviewing with smaller companies (fewer than 500 employees; as few as 5 employees), studying textbook algorithms and data structures wouldn’t have helped me as much as studying more web-specific skills.</p>
-
-<p>That said, I still want to share some of the more interesting takeaways from McDowell’s talk.</p>
-
-<h1 id="interviewers-process--employers-perspective">Interviewers’ Process / Employers’ Perspective</h1>
-
-<ul>
-  <li>Your performance is evaluated relative to other candidates (so you’re not just being judged based on fixed benchmarks).</li>
-  <li>Resumes are barely read. You must make yours easy to skim within 15 seconds.</li>
-  <li>Unless it’s a warm-up question, you are not expected to get the solution right away.</li>
-  <li>Employers judge your GitHub and public repos based on coding style (<a href="https://github.com/airbnb/javascript">do you violate any major no-nos?</a>) and use of <a href="http://addyosmani.com/resources/essentialjsdesignpatterns/book/">design patterns</a>. They don’t have much time to judge app architecture.
-    <ul>
-      <li><em>My 2 Cents:</em> Perhaps this falls under “design patterns”, but I would like to add that there is time to judge your use of a framework. If the employer is familiar with the frameworks you used, they will notice when you fail to follow the framework’s more important conventions. For example, for AngularJS apps, I will notice if you put too much logic in the views, if you abuse $rootScope (which is akin to relying on global scope variables as a crutch), if you create bloated controllers, if you lack services/factories/providers, etc. I will be extra happy if I see you use multiple modules, if I see tests, if I see usage of Angular best practices, etc.</li>
-    </ul>
-  </li>
-  <li>Only the interviewer knows how well you did in the interview. You may think you aced it. You may think you bombed it. <a href="http://www.technologywoman.com/2011/03/31/why-your-interview-performance-is-impossible-to-judge/">But you don’t really know</a>.</li>
-</ul>
-
-<p>{% blockquote –Gayle L. McDowell %}
-When I was at Google, I referred a number of candidates, and ran a little (informal) experiment. How well could people judge their performance?
-After each candidate completed their interview, I’d ask them how they did. Then, I’d look up their actual performance. And guess what? There was no correlation. None. Zip. Zero. Zilch.
-{% endblockquote %}</p>
-
-<h1 id="interview-coaching--advice">Interview Coaching / Advice</h1>
-
-<ul>
-  <li>When answering a behavioral/experience question, you should tell a story. Your story-telling should use the following format: Premise, Situation, Action, Result. The “premise” is a quick, 1-sentence intro like “One time, I had to do X for an app.” The “situation” is the context of your story. The “action” and “result” are pretty self-explanatory. I imagine Laackmann’s motivation for this advice is that interviewees usually leave out at least one of these four parts when discussing valuable past experience.</li>
-  <li>For each major experience you include on your resume, you should be prepared to discuss what you liked, what you disliked, what was challenging, and how you solved difficult problems/bugs.</li>
-  <li>Always follow up with interviewers afterwards. Send them thank-you emails and ask about next steps.</li>
-</ul>
-
-<h2 id="what-to-worry-about">What to Worry About</h2>
-
-<ul>
-  <li>Your conversational skills don’t need to be great because employers are desperate for technical skills.
-    <ul>
-      <li><em>My 2 Cents:</em> I think this is dangerous advice. It might apply to a giant company, but if you’re joining a smaller team, you need to be decent at chatting. Culture fit is also a bigger concern for smaller companies, and most company cultures include “must be decently articulate” as a core component.</li>
-    </ul>
-  </li>
-  <li>Worry less about super advanced algorithms, but you should worry a lot about the common algorithms and data structures such as: hashes, trees (and common tree methods such as depth/breadth-first search), binary search, merge sort, and quick sort.
-    <ul>
-      <li><em>My 2 Cents:</em> I disagree. If you’re aiming for a back-end job, then maybe you need to be more of an algo+data structures expert. But if you’re aiming for a front-end or full-stack job, then there are more practical concerns that you will be quizzed on. I’m happy I know tree search methods, but this kind of knowledge only helped me in a few of many interviews I did during my job search. This topic of “advanced algorithms vs practical concerns” is commonly debated, but I have my reasons, which I hope to discuss in a future blog post. For the record, I’ve conducted interviews at my current job. I ask practical questions that most candidates struggle with.</li>
-    </ul>
-  </li>
-  <li>You must know Big-O, recursion, and maybe even bit-wise.
-    <ul>
-      <li><em>My 2 Cents:</em> I disagree about the bit-wise stuff (although, I suppose it’s impressive if you can bust it out with ease).</li>
-    </ul>
-  </li>
-</ul>
-
-<h2 id="whiteboarding-tips">Whiteboarding Tips</h2>
-
-<ul>
-  <li>If you are asked a trivia question, and you don’t know the answer, consider reasoning the answer by imagining how things should work. For example, if asked a question about CSS, imagine you created CSS. How would you implement a given rule?
-    <ul>
-      <li><em>My 2 Cents:</em> This one’s iffy because a lot of trivia questions are meant to focus on unintuitive situations. A quick aside for a quick example: <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/margin_collapsing">margin collapsing</a>. If there are two sibling <code>&lt;div&gt;</code> elements, and they both have <code>margin: 10px;</code>, then how much space is between them? You’d expect there to be 20px of space between them, but instead, there is only 10px thanks to margin collapsing.</li>
-    </ul>
-  </li>
-  <li>When solving an algorithm question, come up with some test cases (including edge cases!).</li>
-  <li>Think out loud when trying to solve an algorithm question. Don’t just write code.
-    <ul>
-      <li><em>My 2 Cents:</em> As someone who has interviewed dev candidates, I can’t stress this enough.</li>
-    </ul>
-  </li>
-  <li>When whiteboarding, be conscious of your handwriting, alignment, etc.</li>
-  <li>It’s ok to…
-    <ul>
-      <li>start solving a problem via pseudocode before writing real code. Just let your interviewer(s) know your plan.</li>
-      <li>write <code>TODO</code> comments in your code for important-but-tangential stuff like input validation</li>
-      <li>create proper variable names at first and then switch to abbreviated versions</li>
-    </ul>
-  </li>
-  <li>Use “breadth-first coding”: write your code to use helper functions that may not exist. Write the helper functions later as needed. Think of it like writing an outline before writing an essay so then other people can quickly get a grasp of your overall approach rather than waiting and awkwardly watching for several minutes while you write out everything.
-    <ul>
-      <li><em>My 2 Cents:</em> This sounds like a no-brainer, but you’d be surprised how many people don’t do this. To be fair, this is like writing modular code BEFORE refactoring.</li>
-    </ul>
-  </li>
-  <li>Beware of common bugs you might make regardless of how awesome you are. Examples:
-    <ul>
-      <li>off-by-one errors</li>
-      <li>bad comparison operators in if-statements, loops, and other conditionals</li>
-      <li>math where you must perform a check before performing the operation to prevent edge cases from making your program explode. E.g., it might be good to perform a check before performing division so then you stop divide-by-zero errors.</li>
-    </ul>
-  </li>
-</ul>
 ]]></content>
   </entry>
   

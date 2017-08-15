@@ -4,7 +4,7 @@
   <title><![CDATA[Category: software development | RebootJeff.com]]></title>
   <link href="http://RebootJeff.github.io/blog/categories/software-development/atom.xml" rel="self"/>
   <link href="http://RebootJeff.github.io/"/>
-  <updated>2016-04-25T19:04:51-07:00</updated>
+  <updated>2017-08-14T23:18:57-07:00</updated>
   <id>http://RebootJeff.github.io/</id>
   <author>
     <name><![CDATA[Jeff Lee]]></name>
@@ -91,10 +91,14 @@
 
 <p>First, I change the keyboard shortcuts for cycling through open tabs. The default behavior is based on your usage history (most recently viewed tabs), but I prefer just cycling from left to right. There’s actually another key binding that can cycle tabs from left to right, but I prefer using <code>Ctrl+Tab</code>.Therefore, I edited my key bindings like so…</p>
 
-<p>{% coderay lang:json Preferences &gt; Key Bindings – User %}
-{ “keys”: [“ctrl+tab”], “command”: “next_view” },
-{ “keys”: [“ctrl+shift+tab”], “command”: “prev_view” },
-{% endcoderay %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption class='code-header' style='margin-bottom:-5px;'><span>Preferences &gt; Key Bindings – User </span></figcaption>
+ <div class="CodeRay">
+  <div class="code"><pre>
+{ <span class="error">“</span><span class="error">k</span><span class="error">e</span><span class="error">y</span><span class="error">s</span><span class="error">”</span>: [<span class="error">“</span><span class="error">c</span><span class="error">t</span><span class="error">r</span><span class="error">l</span><span class="error">+</span><span class="error">t</span><span class="error">a</span><span class="error">b</span><span class="error">”</span>], <span class="error">“</span><span class="error">c</span><span class="error">o</span><span class="error">m</span><span class="error">m</span><span class="error">a</span><span class="error">n</span><span class="error">d</span><span class="error">”</span>: <span class="error">“</span><span class="error">n</span><span class="error">e</span><span class="error">x</span><span class="error">t</span><span class="error">_</span><span class="error">v</span><span class="error">i</span><span class="error">e</span><span class="error">w</span><span class="error">”</span> },
+{ <span class="error">“</span><span class="error">k</span><span class="error">e</span><span class="error">y</span><span class="error">s</span><span class="error">”</span>: [<span class="error">“</span><span class="error">c</span><span class="error">t</span><span class="error">r</span><span class="error">l</span><span class="error">+</span><span class="error">s</span><span class="error">h</span><span class="error">i</span><span class="error">f</span><span class="error">t</span><span class="error">+</span><span class="error">t</span><span class="error">a</span><span class="error">b</span><span class="error">”</span>], <span class="error">“</span><span class="error">c</span><span class="error">o</span><span class="error">m</span><span class="error">m</span><span class="error">a</span><span class="error">n</span><span class="error">d</span><span class="error">”</span>: <span class="error">“</span><span class="error">p</span><span class="error">r</span><span class="error">e</span><span class="error">v</span><span class="error">_</span><span class="error">v</span><span class="error">i</span><span class="error">e</span><span class="error">w</span><span class="error">”</span> },
+</pre></div>
+</div>
+ </figure></notextile></div></p>
 
 <h2 id="settings">Settings</h2>
 
@@ -102,17 +106,21 @@
 
 <p>I also configure Sublime Text to automatically add a new line at the end of every file whenever I save. It won’t add a new line if one already exists at EOF. I personally never suffer from lack of new line at EOF, but <a href="http://stackoverflow.com/questions/729692/why-should-files-end-with-a-newline">some UNIX tools won’t work without them</a>, and I know lots of hardcore coders out there like using such tools. I don’t want to screw them over. With that said, allow me to present my ST2 settings…</p>
 
-<p>{% coderay lang:js Preferences &gt; Settings – User %}
-// The number of spaces a tab is considered equal to
-  “tab_size”: 2,</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption class='code-header' style='margin-bottom:-5px;'><span>Preferences &gt; Settings – User </span></figcaption>
+ <div class="CodeRay">
+  <div class="code"><pre>
+<span class="comment">// The number of spaces a tab is considered equal to</span>
+  <span class="error">“</span>tab_size<span class="error">”</span>: <span class="integer">2</span>,&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">p&gt;
 
-<p>// Set to true to insert spaces when tab is pressed
-  “translate_tabs_to_spaces”: true,</p>
+&lt;p&gt;</span><span class="delimiter">/</span></span>/ Set to <span class="predefined-constant">true</span> to insert spaces when tab is pressed
+  <span class="error">“</span>translate_tabs_to_spaces<span class="error">”</span>: <span class="predefined-constant">true</span>,&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">p&gt;
 
-<p>// Set to true to ensure the last line of the file ends in a newline
-// character when saving
-  “ensure_newline_at_eof_on_save”: true,
-{% endcoderay %}</p>
+&lt;p&gt;</span><span class="delimiter">/</span></span>/ Set to <span class="predefined-constant">true</span> to ensure the last line of the file ends <span class="keyword">in</span> a newline
+<span class="comment">// character when saving</span>
+  <span class="error">“</span>ensure_newline_at_eof_on_save<span class="error">”</span>: <span class="predefined-constant">true</span>,
+</pre></div>
+</div>
+ </figure></notextile></div></p>
 
 <h1 id="theme-ui-skin">Theme (UI Skin)</h1>
 
@@ -133,35 +141,43 @@
 <h3 id="alignment">Alignment</h3>
 <p>Prettify your code by aligning multiple lines of variable definitions and hash objects. For example…</p>
 
-<p>{% coderay lang:js Before and After using the Alignment package %}
-// this stuff…
-var x = 123;
-var foo = ‘bar’;
-var exampleObj = {
-  my: x,
-  name: 99,
-  is: ‘Jeff’
-};</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption class='code-header' style='margin-bottom:-5px;'><span>Before and After using the Alignment package </span></figcaption>
+ <div class="CodeRay">
+  <div class="code"><pre>
+<span class="comment">// this stuff…</span>
+<span class="keyword">var</span> x = <span class="integer">123</span>;
+<span class="keyword">var</span> foo = <span class="error">‘</span>bar<span class="error">’</span>;
+<span class="keyword">var</span> exampleObj = {
+  <span class="key">my</span>: x,
+  <span class="key">name</span>: <span class="integer">99</span>,
+  <span class="key">is</span>: <span class="error">‘</span>Jeff<span class="error">’</span>
+};&lt;<span class="regexp"><span class="delimiter">/</span><span class="content">p&gt;
 
-<p>// would turn into this stuff…
-var x          = 123;
-var foo        = ‘bar’;
-var exampleObj = {
-  my  : x,
-  name: 99,
-  is  : ‘Jeff’
+&lt;p&gt;</span><span class="delimiter">/</span></span>/ would turn into <span class="local-variable">this</span> stuff<span class="error">…</span>
+<span class="keyword">var</span> x          = <span class="integer">123</span>;
+<span class="keyword">var</span> foo        = <span class="error">‘</span>bar<span class="error">’</span>;
+<span class="keyword">var</span> exampleObj = {
+  <span class="key">my</span>  : x,
+  <span class="key">name</span>: <span class="integer">99</span>,
+  <span class="key">is</span>  : <span class="error">‘</span>Jeff<span class="error">’</span>
 };
-{% endcoderay %}</p>
+</pre></div>
+</div>
+ </figure></notextile></div></p>
 
 <p>This may look stupid to you, but I don’t use it all the time. The main place I like to use it is with multiple <code>var example = require('npm package name here');</code> statements at the top of a JS file. By the way, I had to edit the package settings to get alignment for object literals. I added the <code>":"</code> seen below…</p>
 
-<p>{% coderay lang:js Preferences &gt; Package Settings &gt; Alignment &gt; Settings – User %}
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption class='code-header' style='margin-bottom:-5px;'><span>Preferences &gt; Package Settings &gt; Alignment &gt; Settings – User </span></figcaption>
+ <div class="CodeRay">
+  <div class="code"><pre>
 {
-  // The mid-line characters to align in a multi-line selection, changing
-  // this to an empty array will disable mid-line alignment
-  “alignment_chars”: [”=”, “:”]
+  <span class="comment">// The mid-line characters to align in a multi-line selection, changing</span>
+  <span class="comment">// this to an empty array will disable mid-line alignment</span>
+  <span class="error">“</span>alignment_chars<span class="error">”</span>: [<span class="error">”</span>=<span class="error">”</span>, <span class="error">“</span>:<span class="error">”</span>]
 }
-{% endcoderay %}</p>
+</pre></div>
+</div>
+ </figure></notextile></div></p>
 
 <h3 id="gitgutter">GitGutter</h3>
 <p>Add indicators in your gutter so then you can see which lines of code have been changed since the last git commit. See the left edge of this screenshot:

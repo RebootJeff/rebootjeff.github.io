@@ -4,7 +4,7 @@
   <title><![CDATA[Category: development tools | RebootJeff.com]]></title>
   <link href="http://RebootJeff.github.io/blog/categories/development-tools/atom.xml" rel="self"/>
   <link href="http://RebootJeff.github.io/"/>
-  <updated>2016-04-25T19:04:51-07:00</updated>
+  <updated>2017-08-14T23:18:57-07:00</updated>
   <id>http://RebootJeff.github.io/</id>
   <author>
     <name><![CDATA[Jeff Lee]]></name>
@@ -45,11 +45,15 @@
 
 <p>Everyone wants to use command line tools. In fact, PhoneGap wants to use some commands for Android development, but SURPRISE! Those commands are not available until you manually edit your .bash_profile file. You may have to do some searching to find where your .bash_profile sleeps at night, but mine was in my home directory (aka ~/.bash_profile). Keep in mind that it is a hidden file, so you need to enable viewing hidden files (in case you didn’t know). I created a Development folder for my Android dev tools. Then I added the following lines to my .bash_profile (make sure you replace my filepath with your filepath):</p>
 
-<p>{% coderay .bash_profile %}
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption class='code-header' style='margin-bottom:-5px;'><span>.bash_profile </span></figcaption>
+ <div class="CodeRay">
+  <div class="code"><pre>
 # Adds Android SDK tools to command line
-export PATH=$PATH:/home/myUserName/Development/adt-bundle-linux-x86<em>64-20131030/sdk/tools
-export PATH=$PATH:/home/myUserName/Development/adt-bundle-linux-x86</em>64-20131030/sdk/platform-tools
-{% endcoderay %}</p>
+export PATH=$PATH:/home/myUserName/Development/adt-bundle-linux-x86&lt;em&gt;64-20131030/sdk/tools
+export PATH=$PATH:/home/myUserName/Development/adt-bundle-linux-x86&lt;/em&gt;64-20131030/sdk/platform-tools
+</pre></div>
+</div>
+ </figure></notextile></div></p>
 
 <p>Now, you’re finally set to begin development with PhoneGap. However, if you want certain features to work, you may have to modify some XML files. Read on, my relative from a common-and-super-old ancestor.</p>
 
@@ -59,19 +63,27 @@ export PATH=$PATH:/home/myUserName/Development/adt-bundle-linux-x86</em>64-20131
 
 <p>Here’s a snippet from my config file:</p>
 
-<p>{% coderay config.xml %}
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption class='code-header' style='margin-bottom:-5px;'><span>config.xml </span></figcaption>
+ <div class="CodeRay">
+  <div class="code"><pre>
 # Adds Android SDK tools to command line
-<access origin="http://yourserver.com">
-<feature name="http://api.phonegap.com/1.0/geolocation" />
-{% endcoderay %}</access></p>
+<span class="tag">&lt;access</span> <span class="attribute-name">origin</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">http://yourserver.com</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+<span class="tag">&lt;feature</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">http://api.phonegap.com/1.0/geolocation</span><span class="delimiter">&quot;</span></span> <span class="tag">/&gt;</span>
+</pre></div>
+</div>
+ </figure></notextile></div></access></p>
 
 <p>By the way, it’s best practice to declare what kind of voodoo your app is utilizing. In case of GPS usage, modify your <code>/platforms/android/AndroidManifest.xml</code> file as follows:</p>
 
-<p>{% coderay /platforms/android/AndroidManifest.xml %}
-<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
-{% endcoderay %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption class='code-header' style='margin-bottom:-5px;'><span>/platforms/android/AndroidManifest.xml </span></figcaption>
+ <div class="CodeRay">
+  <div class="code"><pre>
+<span class="tag">&lt;uses-permission</span> <span class="attribute-name">android:name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">android.permission.ACCESS_COARSE_LOCATION</span><span class="delimiter">&quot;</span></span> <span class="tag">/&gt;</span>
+<span class="tag">&lt;uses-permission</span> <span class="attribute-name">android:name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">android.permission.ACCESS_FINE_LOCATION</span><span class="delimiter">&quot;</span></span> <span class="tag">/&gt;</span>
+<span class="tag">&lt;uses-permission</span> <span class="attribute-name">android:name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">android.permission.ACCESS_LOCATION_EXTRA_COMMANDS</span><span class="delimiter">&quot;</span></span> <span class="tag">/&gt;</span>
+</pre></div>
+</div>
+ </figure></notextile></div></p>
 
 <h1 id="down-the-rabbit-hole">Down the Rabbit Hole</h1>
 
