@@ -15,7 +15,9 @@ I've heard some newbies and even not-so-newbies wonder about what to do in 1:1 m
 ### Company Inquiries
 Ask for clarifications or details on the company's roadmap. How’s the business side of things? How is the engineering dept progressing towards meeting roadmap goals? How is the roadmap changing? What factors might cause it to change?
 
-### Company Improvement
+Keep in mind that this topic depends on your company's size. A smaller company means your manager is more likely to have more knowledge about the company's direction and decision-making.
+
+### Team Improvement
 Bring up any pain points. Talk about possible improvements in company processes (PTO, food, etc) or technical process (git practices, code reviews, hiring, dev environment, deployment, tech stack).
 
 ### Self Improvement
@@ -55,3 +57,8 @@ This isn’t a time for simply recapping “so what have you been working on?”
 In other words, the 1-on-1 shouldn’t just be used as a more in-depth SCRUM/status meeting.
 
 I’ve also heard that 1-on-1s could be used for in-depth code reviews, but if your organization doesn’t do proper code reviews as part of the usual process of development, that’s another bad sign.
+
+## Remember: Have a Plan and Get Takeaways
+Go into the 1-on-1 meeting with some kind of agenda, plan, questions, etc. Don't just go into the meeting empty handed.
+
+Based on the conversation, take some notes. Use them as reference, but also use them to track your own progress towards meeting any goals or action items discussed in previous meetings.
