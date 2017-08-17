@@ -4,7 +4,7 @@
   <title><![CDATA[Category: engineering | RebootJeff.com]]></title>
   <link href="http://RebootJeff.github.io/blog/categories/engineering/atom.xml" rel="self"/>
   <link href="http://RebootJeff.github.io/"/>
-  <updated>2017-08-14T23:43:07-07:00</updated>
+  <updated>2017-08-16T23:12:57-07:00</updated>
   <id>http://RebootJeff.github.io/</id>
   <author>
     <name><![CDATA[Jeff Lee]]></name>
@@ -25,7 +25,9 @@
 <h3 id="company-inquiries">Company Inquiries</h3>
 <p>Ask for clarifications or details on the company’s roadmap. How’s the business side of things? How is the engineering dept progressing towards meeting roadmap goals? How is the roadmap changing? What factors might cause it to change?</p>
 
-<h3 id="company-improvement">Company Improvement</h3>
+<p>Keep in mind that this topic depends on your company’s size. A smaller company means your manager is more likely to have more knowledge about the company’s direction and decision-making.</p>
+
+<h3 id="team-improvement">Team Improvement</h3>
 <p>Bring up any pain points. Talk about possible improvements in company processes (PTO, food, etc) or technical process (git practices, code reviews, hiring, dev environment, deployment, tech stack).</p>
 
 <h3 id="self-improvement">Self Improvement</h3>
@@ -65,6 +67,11 @@ Are there any upcoming training opportunities. What do you want to learn? What d
 <p>In other words, the 1-on-1 shouldn’t just be used as a more in-depth SCRUM/status meeting.</p>
 
 <p>I’ve also heard that 1-on-1s could be used for in-depth code reviews, but if your organization doesn’t do proper code reviews as part of the usual process of development, that’s another bad sign.</p>
+
+<h2 id="remember-have-a-plan-and-get-takeaways">Remember: Have a Plan and Get Takeaways</h2>
+<p>Go into the 1-on-1 meeting with some kind of agenda, plan, questions, etc. Don’t just go into the meeting empty handed.</p>
+
+<p>Based on the conversation, take some notes. Use them as reference, but also use them to track your own progress towards meeting any goals or action items discussed in previous meetings.</p>
 ]]></content>
   </entry>
   
